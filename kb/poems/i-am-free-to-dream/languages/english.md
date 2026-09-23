@@ -31,8 +31,6 @@ music_theme: quiet-joy-indie-folk-v1
 
 ## Poem / arranged lyrics
 
-Copy only the following block into the Lyrics field. The title above is not an extra sung line.
-
 ```text
 [Intro — softly]
 I am free to dream,
@@ -100,7 +98,7 @@ Regional colour stays occasional and secondary. Use one answering instrument at 
 
 Begin with sparse voice and guitar. Add warmth through the verses without accelerating. Preserve the gathering breath and the fuller potter pause, with soft instruments sustaining underneath. Let the refrain bloom through a little harmony rather than louder drums or a dramatic crescendo. Keep the mountain invitation open and affectionate, then finish the dream-weaving lines softly with peaceful, hopeful contentment. The ending should feel fulfilled rather than sorrowful.
 
-## Suno Style prompt
+## Style prompt
 
 ```text
 English indie-folk ballad with warm youthful male vocals, intimate soulful delivery, and clear natural English pronunciation. Quiet joy, affection, wonder, and peaceful contentment. Gentle, unhurried 6/8 sway with spacious phrasing. Earthy acoustic production: fingerpicked guitar, mellow bamboo flute, rounded acoustic bass, delicate hand percussion, and soft sustained strings. Subtle Nashville colour: a few warm pedal-steel replies; natural accent. Sparse voice-and-guitar opening; gradually add warmth and gently blooming refrain harmonies while maintaining the same relaxed pace. Leave a breath after “Piece by piece” and a full pause after “I am a potter,” with instruments sustaining underneath. End softly with warmth and hope. Restrained vocal ornamentation and gentle dynamics throughout.

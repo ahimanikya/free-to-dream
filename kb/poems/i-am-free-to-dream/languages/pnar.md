@@ -129,7 +129,7 @@ Regional colour stays occasional and secondary. Use one answering instrument at 
 
 Begin with sparse voice and guitar. Add warmth through the verses without accelerating. Preserve the gathering breath and the fuller potter pause, with soft instruments sustaining underneath. Let the refrain bloom through a little harmony rather than louder drums or a dramatic crescendo. Keep the mountain invitation open and affectionate, then finish the dream-weaving lines softly with peaceful, hopeful contentment. The ending should feel fulfilled rather than sorrowful.
 
-## Suno Style prompt
+## Style prompt
 
 Prepared for use once reviewed native-language lyrics are available.
 
