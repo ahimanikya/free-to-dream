@@ -19,7 +19,8 @@ status: draft
 generated:
   by: process:collection-import
   at: '2026-09-23T02:00:25+00:00'
-music_theme: quiet-joy-indie-folk-v1
+music_theme: local-voice-quiet-joy-v2
+music_review_status: musician-review-pending
 ---
 # I Am Free to Dream — Sora / Saora adaptation brief
 
@@ -27,7 +28,7 @@ music_theme: quiet-joy-indie-folk-v1
 **Original poem and lyrics:** Ahimanikya Satapathy  
 **Status:** Native-language title and lyrics pending; musical design and source poem supplied  
 **Script:** Sora Sompeng, Odia, Telugu or another agreed working orthography  
-**Musical direction:** Calm, soulful indie-folk · quiet joy · gentle 6/8 sway
+**Musical direction:** Sora contemporary lyric with a work-song-informed shared pulse
 
 ## Title and poem status
 
@@ -103,47 +104,50 @@ Keep Intro → Verse 1 → Verse 2 → Chorus → Bridge → Final Chorus → So
 
 ## Why this musical direction
 
-A calm, soulful indie-folk sound carries quiet happiness, affection and the freedom to dream. Keep the warmth and spaciousness without becoming brisk, mournful or grand. Differences between languages should be small changes in diction, melodic phrasing or instrumental colour.
+The act of gathering and the potter’s making can carry a modest repeated pulse. Begin with one person speaking through melody, then let a second voice make the final promise shared. The musical rhythm must be rebuilt around the selected Sora variety rather than inherited from the Odia version.
 
-Use the shared acoustic palette for now. A fluent community collaborator may suggest one quiet instrumental accent; do not invent a traditional ensemble or named song form.
+The shared feeling is calm, soulful joy: affection, wonder and the freedom to dream. Local vocal phrasing and melody lead the arrangement. Rhythm and instrumentation can vary with the chosen setting while the pace remains unhurried.
 
 ## Cultural grounding
 
-This is a shared contemporary studio arrangement, not a claim that 6/8, acoustic guitar or these instruments represent every tradition in this language. The language’s natural phrasing and the collaborator’s regional knowledge come first. Optional accents are proposals inherited from the collection’s earlier musical research and still need musician review.
+Smithsonian Folkways’ Music of the Saoras includes documented work songs, love songs and a historical ballad. Those catalogue descriptions suggest several possible narrative approaches. This new song uses a restrained shared-work idea; the archive recordings have not been acoustically analysed for this audit.
 
-Use the shared acoustic palette for now. A fluent community collaborator may suggest one quiet instrumental accent; do not invent a traditional ensemble or named song form.
+Musical reference: [Smithsonian Folkways — Music of the Saoras](https://folkways.si.edu/music-of-the-saoras/india-world/album/smithsonian).
 
-Background references retained for collaborators; these do not validate the new arrangement or require it to reproduce the referenced genre:
-
-- [Smithsonian Folkways — Music of the Saoras](https://folkways.si.edu/music-of-the-saoras/india-world/album/smithsonian)
+The reference supports the context described above. The new melody, tempo and ensemble still need musician review.
 
 ## Voice, rhythm and arrangement
 
-Warm youthful male lead, intimate soulful delivery and clear natural pronunciation. Fingerpicked acoustic guitar, mellow bamboo flute, rounded acoustic bass, delicate hand percussion and soft sustained strings form the common palette. Use a gentle, unhurried 6/8 sway: a relaxed two-part rocking feel, not a brisk waltz or dance groove. Keep complete words and natural stresses intact; allow phrase lengths to breathe across the accompaniment.
+Choose the Sora variety with the adapter; let complete phrases and a late answer develop a gentle shared-work motif.
 
-No extra regional instrument is required. Use the shared acoustic palette for now. A fluent community collaborator may suggest one quiet instrumental accent; do not invent a traditional ensemble or named song form.
+Warm lead, a sparse low drum, short plucked-string notes and a quiet answering voice. This small modern ensemble is a proposal, not a transcription of the archive recording. Keep the repeated figure light enough for whole sentences to breathe; reserve vocal responses for supplied refrain words.
 
-Regional colour stays occasional and secondary. Use one answering instrument at a time; do not crowd the voice. Where melody affects intelligibility, a fluent singer should adjust the contour while retaining the common calm character.
+Use a warm youthful male lead. Choose the rhythm around the reviewed lyric; there is no collection-wide requirement for 6/8. Keep one answering instrument or voice prominent at a time, with percussion below the words.
 
 ## Emotional shape
 
-Begin with sparse voice and guitar. Add warmth through the verses without accelerating. Preserve the gathering breath and the fuller potter pause, with soft instruments sustaining underneath. Let the refrain bloom through a little harmony rather than louder drums or a dramatic crescendo. Keep the mountain invitation open and affectionate, then finish the dream-weaving lines softly with peaceful, hopeful contentment. The ending should feel fulfilled rather than sorrowful.
+Start with voice alone. Gathering introduces the pulse, the potter declaration suspends it, and the mountain invitation opens the range. Let the second voice join the final woven-dreams line before a quiet solo close. Keep a distinct gathering breath and a fuller potter pause, with soft instruments sustaining underneath. Add warmth without accelerating or building a dramatic crescendo. End in peaceful, hopeful contentment.
 
 ## Style prompt
 
-Prepared for use once reviewed native-language lyrics are available.
-
 ```text
-Sora / Saora indie-folk ballad with warm youthful male vocals, intimate soulful delivery, and clear natural Sora / Saora pronunciation. Quiet joy, affection, wonder, and peaceful contentment. Gentle, unhurried 6/8 sway with spacious phrasing. Earthy acoustic production: fingerpicked guitar, mellow bamboo flute, rounded acoustic bass, delicate hand percussion, and soft sustained strings. Sparse voice-and-guitar opening; gradually add warmth and gently blooming refrain harmonies while maintaining the same relaxed pace. Leave a breath between repeated gathering phrases and a fuller pause after the potter declaration, with instruments sustaining underneath. End softly with warmth and hope. Restrained vocal ornamentation and gentle dynamics throughout.
+Tender contemporary Sora poetic song with a work-song-informed shared pulse. Warm intimate male lead, natural Sora diction, sparse low drum and short plucked-string notes. Complete conversational phrases, a small returning melodic figure and an answering voice entering late. Separate the gathering phrases and pause fully after the potter declaration, with a soft tone sustaining below. Begin almost alone, warm through gathering and making, open the mountain-and-moon invitation, then share the supplied final dream-weaving words. Gentle secular intimacy. Choose the Sora variety with the adapter; let complete phrases and a late answer develop a gentle shared-work motif. Warm youthful delivery; calm, soulful joy, affection and wonder. Keep the pace unhurried throughout; finish with peaceful hope. No mournful delivery, driving beat or dramatic crescendo.
 ```
 
 ## Working settings and listening checks
 
-Begin with the settings from your preferred take, changing only the language-specific style text for comparison. No new numeric preset is prescribed here. Record the settings with each generated take; the prompt alone cannot guarantee tempo, instruments or mood.
+This is a musical brief for a future native-language adaptation. Finish the title and lyrics with a fluent collaborator before judging a generated song in this language.
 
-Use a vocal song with the supplied lyrics. Keep the male lead warm and youthful, with additional voices limited to gently blooming refrain harmonies. Preserve pauses without stretching or splitting words.
+Start with the settings from a preferred take and change only the style prompt for the first comparison. Save the prompt and settings with each recording. A style label or instrument name does not verify the generated performance.
 
-Listen for quiet happiness, a calm soulful delivery and an unhurried sway. Reject a take that becomes brisk, mournful, overdramatic, or drops or invents words. Check the gathering breath and full potter pause. Musical fluency does not establish correct pronunciation; fluent-speaker and sung-delivery reviews remain necessary. Keep the text’s current review status until an actual review is recorded.
+For the listening review:
+
+1. Ask a fluent speaker to read the opening, gathering line, potter declaration and longest phrase naturally. Compare that phrasing with the sung version.
+2. Check that the local vocal cadence and melodic treatment are audible, and that the regional character comes through beyond instrument names. Choose the Sora variety with the adapter; let complete phrases and a late answer develop a gentle shared-work motif.
+3. Check the gathering breath and fuller potter pause. Listen for dropped syllables, added words, distorted pronunciation or an accompaniment that forces a sentence to hurry.
+4. Compare the opening, bridge and ending at similar playback volume. The arrangement may grow warmer, but should remain calm, soulful and quietly happy.
+
+Keep the current translation review status until a fluent speaker and singer have reviewed the actual wording and take.
 
 ## Language-specific review
 
