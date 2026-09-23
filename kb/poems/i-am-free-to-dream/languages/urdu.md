@@ -19,6 +19,7 @@ status: draft
 generated:
   by: process:collection-import
   at: '2026-09-23T02:00:25+00:00'
+music_theme: quiet-joy-indie-folk-v1
 ---
 # خواب دیکھنا منع نہیں
 
@@ -26,7 +27,7 @@ generated:
 **Original poem and lyrics:** Ahimanikya Satapathy  
 **Status:** Existing lyric draft; fluent-speaker review pending  
 **Script:** Urdu  
-**Musical direction:** Sung nazm with ghazal-informed intimacy
+**Musical direction:** Calm, soulful indie-folk · quiet joy · gentle 6/8 sway
 
 ## Poem / arranged lyrics
 
@@ -74,35 +75,45 @@ Copy only the following block into the Lyrics field. The title above is not an e
 
 ## Why this musical direction
 
-Urdu can linger on a thought before completing it. Give this version more silence and fewer regular accents than the Hindi geet version, retaining the original secular address to a beloved.
+The author’s final Telugu theme is the shared foundation across the collection: quiet happiness, affection and freedom to dream, carried by a calm, soulful voice. Keep the warmth and spaciousness without becoming brisk, mournful or grand. Differences between languages should be small changes in diction, melodic phrasing or instrumental colour.
+
+Retain clear whole phrases; do not turn the shared lilt into a named tala or a long ornamented passage.
 
 ## Cultural grounding
 
-The Sangeet Natak Akademi documents modern ghazal performance as part of Bhupinder Singh’s light-music practice. The supplied poem has a continuous narrative and is treated here as a nazm, without claiming ghazal form. [Sangeet Natak Akademi — Bhupinder Singh](https://www.sangeetnatak.gov.in/public/uploads/awardees/docs/Bhupinder_Singh.pdf)
+This is a shared contemporary studio arrangement, not a claim that 6/8, acoustic guitar or these instruments represent every tradition in this language. The language’s natural phrasing and the collaborator’s regional knowledge come first. Optional accents are proposals inherited from the collection’s earlier musical research and still need musician review.
 
-The arrangement below is a creative proposal for this poem. It is not a claim to represent every tradition in the language, or to reproduce a traditional composition. Regional instruments, phrasing and song forms overlap across communities.
+Retain clear whole phrases; do not turn the shared lilt into a named tala or a long ornamented passage.
+
+Background references retained for collaborators; these do not validate the new arrangement or require it to reproduce the referenced genre:
+
+- [Sangeet Natak Akademi — Bhupinder Singh](https://www.sangeetnatak.gov.in/public/uploads/awardees/docs/Bhupinder_Singh.pdf)
 
 ## Voice, rhythm and arrangement
 
-Close voice, soft harmonium, sarangi and occasional tabla. Rubato opening; a very light pulse later. Use delicate meend and complete phrases rather than long runs across a single word.
+Warm youthful male lead, intimate soulful delivery and clear natural pronunciation. Fingerpicked acoustic guitar, mellow bamboo flute, rounded acoustic bass, delicate hand percussion and soft sustained strings form the common palette. Use a gentle, unhurried 6/8 sway: a relaxed two-part rocking feel, not a brisk waltz or dance groove. Keep complete words and natural stresses intact; allow phrase lengths to breathe across the accompaniment.
+
+Faint harmonium, very light tabla touches and brief natural slides. Retain clear whole phrases; do not turn the shared lilt into a named tala or a long ornamented passage.
+
+Regional colour stays occasional and secondary. Use one answering instrument at a time; do not crowd the voice. Where melody affects intelligibility, a fluent singer should adjust the contour while retaining the common calm character.
 
 ## Emotional shape
 
-Hold the potter declaration in silence. Let the mountain invitation briefly open the register, then return to an almost spoken final weaving line.
+Begin with sparse voice and guitar. Add warmth through the verses without accelerating. Preserve the gathering breath and the fuller potter pause, with soft instruments sustaining underneath. Let the refrain bloom through a little harmony rather than louder drums or a dramatic crescendo. Keep the mountain invitation open and affectionate, then finish the dream-weaving lines softly with peaceful, hopeful contentment. The ending should feel fulfilled rather than sorrowful.
 
 ## Suno Style prompt
 
 ```text
-Intimate Urdu sung nazm with restrained ghazal-informed phrasing. Warm close male voice, clear Urdu diction, delicate meend and expressive silences. Soft harmonium, lyrical sarangi replies and very light tabla entering after a rubato opening. Let complete thoughts determine each phrase. Breathe between the repeated gathering phrases and pause fully after the potter declaration; instruments sustain beneath the silence. A modest melodic lift for mountains and moon, then an almost spoken tenderness in the final woven-dreams lines. Minimal, secular and reflective.
+Urdu indie-folk ballad with warm youthful male vocals, intimate soulful delivery, and clear natural Urdu pronunciation. Quiet joy, affection, wonder, and peaceful contentment. Gentle, unhurried 6/8 sway with spacious phrasing. Earthy acoustic production: fingerpicked guitar, mellow bamboo flute, rounded acoustic bass, delicate hand percussion, and soft sustained strings. Faint harmonium, very light tabla touches and brief natural slides. Sparse voice-and-guitar opening; gradually add warmth and gently blooming refrain harmonies while maintaining the same relaxed pace. Leave a breath between repeated gathering phrases and a fuller pause after the potter declaration, with instruments sustaining underneath. End softly with warmth and hope. Restrained vocal ornamentation and gentle dynamics throughout.
 ```
 
 ## Working settings and listening checks
 
-Keep **Style Influence 60** as the initial comparison point from the earlier Indian-language work. Keep other controls at your current preferred values while trying the new style. This is a continuity choice, not a culture-specific preset or a guarantee of the requested sound.
+Keep the controls used for your preferred calm Telugu take as the first comparison point, and change only the language-specific style text. No new numeric preset is prescribed here. Record the settings with each generated take; the prompt alone cannot guarantee tempo, instruments or mood.
 
-Use a vocal song with your own lyrics. The prompts request a male lead to retain the author’s speaker, with any additional voices limited to the described responses. Instrument names and pauses are creative requests: the generated result still needs listening checks.
+Use a vocal song with the supplied lyrics. Keep the male lead warm and youthful, with additional voices limited to gently blooming refrain harmonies. Preserve pauses without stretching or splitting words.
 
-Listen for complete words, natural stresses, a distinct gathering breath, the full potter pause, a gentle lift in the bridge and an unhurried ending. Reject a take that drops or invents lyrics. Musical fluency alone does not establish correct pronunciation. Where a specialist instrument matters, have a knowledgeable listener confirm the sound rather than relying on the prompt label.
+Listen for quiet happiness, a calm soulful delivery and an unhurried sway. Reject a take that becomes brisk, mournful, overdramatic, or drops or invents words. Check the gathering breath and full potter pause. Musical fluency does not establish correct pronunciation; fluent-speaker and sung-delivery reviews remain necessary. Keep the text’s current review status until an actual review is recorded.
 
 ## Language-specific review
 
@@ -110,4 +121,4 @@ Preserved AI-assisted lyric draft. Have a fluent reader check idiom, grammatical
 
 ---
 
-Collection prepared 22 September 2026. Original poem: Ahimanikya Satapathy. Translation drafts are AI-assisted except the author’s Odia source. Musical designs are newly proposed and have not been verified by listening to new generated recordings.
+Collection prepared 22 September 2026. Original poem: Ahimanikya Satapathy. Translation drafts are AI-assisted except the author’s Odia source. Musical direction updated 23 September 2026 to the author’s shared calm Telugu theme. These language-specific arrangements remain proposals, not verified performances.

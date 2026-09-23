@@ -19,6 +19,7 @@ status: draft
 generated:
   by: process:collection-import
   at: '2026-09-23T02:00:25+00:00'
+music_theme: quiet-joy-indie-folk-v1
 ---
 # I Am Free to Dream — Balti adaptation brief
 
@@ -26,7 +27,7 @@ generated:
 **Original poem and lyrics:** Ahimanikya Satapathy  
 **Status:** Native-language title and lyrics pending; musical design and source poem supplied  
 **Script:** Perso-Arabic, Tibetan or another agreed working transcription  
-**Musical direction:** Balti contemporary poetic chamber song with spacious melodic replies
+**Musical direction:** Calm, soulful indie-folk · quiet joy · gentle 6/8 sway
 
 ## Title and poem status
 
@@ -102,37 +103,47 @@ Keep Intro → Verse 1 → Verse 2 → Chorus → Bridge → Final Chorus → So
 
 ## Why this musical direction
 
-Give the North Star and the mountain invitation room to resonate without adding new scenery. An instrumental answer after each completed thought can connect yearning with reassurance. Keep the poem secular and intimate, with Balti phrasing determined by a collaborator from the intended audience.
+The author’s final Telugu theme is the shared foundation across the collection: quiet happiness, affection and freedom to dream, carried by a calm, soulful voice. Keep the warmth and spaciousness without becoming brisk, mournful or grand. Differences between languages should be small changes in diction, melodic phrasing or instrumental colour.
+
+A restrained bowed-string colour is a modern arrangement choice; a local collaborator may refine it.
 
 ## Cultural grounding
 
-The Ladakh administration’s account of a Kargil cultural programme documents a Balti video-album release and performances by Balti groups alongside other communities. This supports a living contemporary song context. The quiet chamber arrangement proposed here is not a transcription of a traditional Balti form. [Ladakh Administration — Kargil cultural programme and Balti album release](https://ladakh.gov.in/azadi-ka-amrit-mahotsav-iconic-week-celebrations-conclude-in-kargil-cec-feroz-khan-e-launches-2nd-edition-of-kargil-nama-inaugurates-book-fair-cum-membership-registration-desk-at-district-librar/)
+This is a shared contemporary studio arrangement, not a claim that 6/8, acoustic guitar or these instruments represent every tradition in this language. The language’s natural phrasing and the collaborator’s regional knowledge come first. Optional accents are proposals inherited from the collection’s earlier musical research and still need musician review.
 
-The arrangement below is a creative proposal for this poem. It is not a claim to represent every tradition in the language, or to reproduce a traditional composition. Regional instruments, phrasing and song forms overlap across communities.
+A restrained bowed-string colour is a modern arrangement choice; a local collaborator may refine it.
+
+Background references retained for collaborators; these do not validate the new arrangement or require it to reproduce the referenced genre:
+
+- [Ladakh Administration — Kargil cultural programme and Balti album release](https://ladakh.gov.in/azadi-ka-amrit-mahotsav-iconic-week-celebrations-conclude-in-kargil-cec-feroz-khan-e-launches-2nd-edition-of-kargil-nama-inaugurates-book-fair-cum-membership-registration-desk-at-district-librar/)
 
 ## Voice, rhythm and arrangement
 
-Warm solo voice, sparse plucked strings, a sustained bowed-string reply and a quiet hand-drum pulse entering late. This is a modern acoustic palette, not an identification of a traditional Balti ensemble. Keep ornaments brief and the returning melody patient.
+Warm youthful male lead, intimate soulful delivery and clear natural pronunciation. Fingerpicked acoustic guitar, mellow bamboo flute, rounded acoustic bass, delicate hand percussion and soft sustained strings form the common palette. Use a gentle, unhurried 6/8 sway: a relaxed two-part rocking feel, not a brisk waltz or dance groove. Keep complete words and natural stresses intact; allow phrase lengths to breathe across the accompaniment.
+
+A few soft bowed-string replies between phrases. A restrained bowed-string colour is a modern arrangement choice; a local collaborator may refine it.
+
+Regional colour stays occasional and secondary. Use one answering instrument at a time; do not crowd the voice. Where melody affects intelligibility, a fluent singer should adjust the contour while retaining the common calm character.
 
 ## Emotional shape
 
-Begin with voice and one plucked note. Add resonance through gathering, hold the potter pause over a sustained tone, and let the bridge open in range. Remove the pulse at the end so the woven dreams settle into a quiet instrumental reply.
+Begin with sparse voice and guitar. Add warmth through the verses without accelerating. Preserve the gathering breath and the fuller potter pause, with soft instruments sustaining underneath. Let the refrain bloom through a little harmony rather than louder drums or a dramatic crescendo. Keep the mountain invitation open and affectionate, then finish the dream-weaving lines softly with peaceful, hopeful contentment. The ending should feel fulfilled rather than sorrowful.
 
 ## Suno Style prompt
 
 Prepared for use once reviewed native-language lyrics are available.
 
 ```text
-Intimate contemporary Balti poetic chamber song, warm natural male voice and clear Balti diction. Sparse plucked strings, sustained bowed-string replies and a quiet hand-drum pulse entering late. Patient returning melody, spacious complete thoughts and restrained ornaments. Separate the gathering phrases and pause fully after the potter declaration, with a soft tone sustaining below. Begin sparsely, warm the verses, open the mountain-and-moon invitation through range, then remove the pulse for a tender woven-dreams ending. Secular acoustic intimacy.
+Balti indie-folk ballad with warm youthful male vocals, intimate soulful delivery, and clear natural Balti pronunciation. Quiet joy, affection, wonder, and peaceful contentment. Gentle, unhurried 6/8 sway with spacious phrasing. Earthy acoustic production: fingerpicked guitar, mellow bamboo flute, rounded acoustic bass, delicate hand percussion, and soft sustained strings. A few soft bowed-string replies between phrases. Sparse voice-and-guitar opening; gradually add warmth and gently blooming refrain harmonies while maintaining the same relaxed pace. Leave a breath between repeated gathering phrases and a fuller pause after the potter declaration, with instruments sustaining underneath. End softly with warmth and hope. Restrained vocal ornamentation and gentle dynamics throughout.
 ```
 
 ## Working settings and listening checks
 
-Keep **Style Influence 60** as the initial comparison point from the earlier Indian-language work. Keep other controls at your current preferred values while trying the new style. This is a continuity choice, not a culture-specific preset or a guarantee of the requested sound.
+Keep the controls used for your preferred calm Telugu take as the first comparison point, and change only the language-specific style text. No new numeric preset is prescribed here. Record the settings with each generated take; the prompt alone cannot guarantee tempo, instruments or mood.
 
-Use a vocal song with your own lyrics. The prompts request a male lead to retain the author’s speaker, with any additional voices limited to the described responses. Instrument names and pauses are creative requests: the generated result still needs listening checks.
+Use a vocal song with the supplied lyrics. Keep the male lead warm and youthful, with additional voices limited to gently blooming refrain harmonies. Preserve pauses without stretching or splitting words.
 
-Listen for complete words, natural stresses, a distinct gathering breath, the full potter pause, a gentle lift in the bridge and an unhurried ending. Reject a take that drops or invents lyrics. Musical fluency alone does not establish correct pronunciation. Where a specialist instrument matters, have a knowledgeable listener confirm the sound rather than relying on the prompt label.
+Listen for quiet happiness, a calm soulful delivery and an unhurried sway. Reject a take that becomes brisk, mournful, overdramatic, or drops or invents words. Check the gathering breath and full potter pause. Musical fluency does not establish correct pronunciation; fluent-speaker and sung-delivery reviews remain necessary. Keep the text’s current review status until an actual review is recorded.
 
 ## Language-specific review
 
@@ -140,4 +151,4 @@ Native title and adaptation pending. Choose the intended Balti variety, such as 
 
 ---
 
-Collection prepared 22 September 2026. Original poem: Ahimanikya Satapathy. Translation drafts are AI-assisted except the author’s Odia source. Musical designs are newly proposed and have not been verified by listening to new generated recordings.
+Collection prepared 22 September 2026. Original poem: Ahimanikya Satapathy. Translation drafts are AI-assisted except the author’s Odia source. Musical direction updated 23 September 2026 to the author’s shared calm Telugu theme. These language-specific arrangements remain proposals, not verified performances.

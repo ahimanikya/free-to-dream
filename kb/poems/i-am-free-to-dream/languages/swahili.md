@@ -19,6 +19,7 @@ status: draft
 generated:
   by: process:collection-import
   at: '2026-09-23T02:00:25+00:00'
+music_theme: quiet-joy-indie-folk-v1
 ---
 # Niko Huru Kuota Ndoto
 
@@ -26,7 +27,7 @@ generated:
 **Original poem and lyrics:** Ahimanikya Satapathy  
 **Status:** New AI-assisted lyric draft; fluent-speaker and sung review pending  
 **Script:** Latin; standard written Kiswahili  
-**Musical direction:** Contemporary Swahili poetic ballad with restrained coastal taarab influence
+**Musical direction:** Calm, soulful indie-folk · quiet joy · gentle 6/8 sway
 
 ## Poem / arranged lyrics
 
@@ -76,35 +77,45 @@ ndani ya ndoto zangu.
 
 ## Why this musical direction
 
-The poem’s affectionate address and layered images suit a lyrical setting with space between complete thoughts. Let a violin answer carry feeling after the words, while oud gently connects the verses. Swahili broadens the collection through an African language with regional reach; the coastal reference is one deliberate artistic choice within its many musical worlds.
+The author’s final Telugu theme is the shared foundation across the collection: quiet happiness, affection and freedom to dream, carried by a calm, soulful voice. Keep the warmth and spaciousness without becoming brisk, mournful or grand. Differences between languages should be small changes in diction, melodic phrasing or instrumental colour.
+
+Use clear Swahili phrasing and the shared 6/8 feel. The oud is an optional colour, not a claim to represent all Swahili music.
 
 ## Cultural grounding
 
-Hilda Kiel’s research on Zanzibar taarab describes a Swahili coastal tradition shaped by several musical exchanges, with older small ensembles including oud, violin and percussion. This supplies a specific reference for the proposed intimate ensemble. It does not represent every Swahili-speaking region or claim a traditional taarab composition. [Hilda Kiel — Travel on a Song: The Roots of Zanzibar Taarab](https://journal.ru.ac.za/index.php/africanmusic/article/download/1805/898)
+This is a shared contemporary studio arrangement, not a claim that 6/8, acoustic guitar or these instruments represent every tradition in this language. The language’s natural phrasing and the collaborator’s regional knowledge come first. Optional accents are proposals inherited from the collection’s earlier musical research and still need musician review.
 
-The arrangement below is a creative proposal for this poem. It is not a claim to represent every tradition in the language, or to reproduce a traditional composition. Regional instruments, phrasing and song forms overlap across communities.
+Use clear Swahili phrasing and the shared 6/8 feel. The oud is an optional colour, not a claim to represent all Swahili music.
+
+Background references retained for collaborators; these do not validate the new arrangement or require it to reproduce the referenced genre:
+
+- [Hilda Kiel — Travel on a Song: The Roots of Zanzibar Taarab](https://journal.ru.ac.za/index.php/africanmusic/article/download/1805/898)
 
 ## Voice, rhythm and arrangement
 
-Warm close male lead, delicate oud, a single violin answering complete phrases, rounded bass and very soft hand percussion. Keep a gentle four-beat sway with modest ornament at phrase endings. Avoid accelerating the longer words to fit a fixed melody; the native-reviewed lyric should shape the rhythm.
+Warm youthful male lead, intimate soulful delivery and clear natural pronunciation. Fingerpicked acoustic guitar, mellow bamboo flute, rounded acoustic bass, delicate hand percussion and soft sustained strings form the common palette. Use a gentle, unhurried 6/8 sway: a relaxed two-part rocking feel, not a brisk waltz or dance groove. Keep complete words and natural stresses intact; allow phrase lengths to breathe across the accompaniment.
+
+A few soft oud replies between complete phrases. Use clear Swahili phrasing and the shared 6/8 feel. The oud is an optional colour, not a claim to represent all Swahili music.
+
+Regional colour stays occasional and secondary. Use one answering instrument at a time; do not crowd the voice. Where melody affects intelligibility, a fluent singer should adjust the contour while retaining the common calm character.
 
 ## Emotional shape
 
-Begin with voice and oud alone. Add violin warmth through gathering, hold the full potter pause over a quiet resonance, and lift the mountain-and-moon invitation through melodic range. Let the final dream-weaving words settle back into voice and a short violin reply.
+Begin with sparse voice and guitar. Add warmth through the verses without accelerating. Preserve the gathering breath and the fuller potter pause, with soft instruments sustaining underneath. Let the refrain bloom through a little harmony rather than louder drums or a dramatic crescendo. Keep the mountain invitation open and affectionate, then finish the dream-weaving lines softly with peaceful, hopeful contentment. The ending should feel fulfilled rather than sorrowful.
 
 ## Suno Style prompt
 
 ```text
-Tender contemporary Kiswahili poetic ballad with restrained coastal taarab influence. Warm intimate male voice, clear natural Swahili diction, delicate oud, lyrical solo violin replies, rounded bass and very soft hand percussion. Gentle four-beat sway, complete flowing phrases and brief ornaments at line endings. Separate Naukusanya phrases with a breath; pause fully after Mimi ni mfinyanzi while a soft tone sustains. Begin sparsely, warm the verses, open the mountain-and-moon invitation, then close tenderly on ndoto zako ndani ya ndoto zangu. Quiet secular affection and an unhurried ending.
+Swahili / Kiswahili indie-folk ballad with warm youthful male vocals, intimate soulful delivery, and clear natural Swahili / Kiswahili pronunciation. Quiet joy, affection, wonder, and peaceful contentment. Gentle, unhurried 6/8 sway with spacious phrasing. Earthy acoustic production: fingerpicked guitar, mellow bamboo flute, rounded acoustic bass, delicate hand percussion, and soft sustained strings. A few soft oud replies between complete phrases. Sparse voice-and-guitar opening; gradually add warmth and gently blooming refrain harmonies while maintaining the same relaxed pace. Leave a breath between repeated gathering phrases and a fuller pause after the potter declaration, with instruments sustaining underneath. End softly with warmth and hope. Restrained vocal ornamentation and gentle dynamics throughout.
 ```
 
 ## Working settings and listening checks
 
-Start with **Style Influence 60** for continuity with the collection and keep other controls at your preferred values. This is a creative audition starting point, not an established preset for this language. Judge the take by complete words, natural phrasing and its emotional arc; fluent-speaker review is still pending.
+Keep the controls used for your preferred calm Telugu take as the first comparison point, and change only the language-specific style text. No new numeric preset is prescribed here. Record the settings with each generated take; the prompt alone cannot guarantee tempo, instruments or mood.
 
-Use a vocal song with your own lyrics. The prompts request a male lead to retain the author’s speaker, with any additional voices limited to the described responses. Instrument names and pauses are creative requests: the generated result still needs listening checks.
+Use a vocal song with the supplied lyrics. Keep the male lead warm and youthful, with additional voices limited to gently blooming refrain harmonies. Preserve pauses without stretching or splitting words.
 
-Listen for complete words, natural stresses, a distinct gathering breath, the full potter pause, a gentle lift in the bridge and an unhurried ending. Reject a take that drops or invents lyrics. Musical fluency alone does not establish correct pronunciation. Where a specialist instrument matters, have a knowledgeable listener confirm the sound rather than relying on the prompt label.
+Listen for quiet happiness, a calm soulful delivery and an unhurried sway. Reject a take that becomes brisk, mournful, overdramatic, or drops or invents words. Check the gathering breath and full potter pause. Musical fluency does not establish correct pronunciation; fluent-speaker and sung-delivery reviews remain necessary. Keep the text’s current review status until an actual review is recorded.
 
 ## Language-specific review
 
@@ -112,4 +123,4 @@ New AI-assisted Kiswahili lyric draft; fluent-speaker and sung review pending. N
 
 ---
 
-Collection prepared 22 September 2026. Original poem: Ahimanikya Satapathy. Translation drafts are AI-assisted except the author’s Odia source. Musical designs are newly proposed and have not been verified by listening to new generated recordings.
+Collection prepared 22 September 2026. Original poem: Ahimanikya Satapathy. Translation drafts are AI-assisted except the author’s Odia source. Musical direction updated 23 September 2026 to the author’s shared calm Telugu theme. These language-specific arrangements remain proposals, not verified performances.

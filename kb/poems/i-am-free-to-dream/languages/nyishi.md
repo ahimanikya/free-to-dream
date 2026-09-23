@@ -19,6 +19,7 @@ status: draft
 generated:
   by: process:collection-import
   at: '2026-09-23T02:00:25+00:00'
+music_theme: quiet-joy-indie-folk-v1
 ---
 # I Am Free to Dream — Nyishi adaptation brief
 
@@ -26,7 +27,7 @@ generated:
 **Original poem and lyrics:** Ahimanikya Satapathy  
 **Status:** Native-language title and lyrics pending; musical design and source poem supplied  
 **Script:** Reviewed Nyishi orthography to be agreed  
-**Musical direction:** Nyishi contemporary lyric with speech-led verses and a walking pulse
+**Musical direction:** Calm, soulful indie-folk · quiet joy · gentle 6/8 sway
 
 ## Title and poem status
 
@@ -102,37 +103,47 @@ Keep Intro → Verse 1 → Verse 2 → Chorus → Bridge → Final Chorus → So
 
 ## Why this musical direction
 
-Give the assurance of being free to dream a direct, grounded delivery. In contrast to the Adi concept’s broad narrative lines, the Nyishi proposal uses compact phrases with an easy forward motion, subject to the final language and a local singer’s judgment.
+The author’s final Telugu theme is the shared foundation across the collection: quiet happiness, affection and freedom to dream, carried by a calm, soulful voice. Keep the warmth and spaciousness without becoming brisk, mournful or grand. Differences between languages should be small changes in diction, melodic phrasing or instrumental colour.
+
+Use the shared acoustic palette for now. A fluent community collaborator may suggest one quiet instrumental accent; do not invent a traditional ensemble or named song form.
 
 ## Cultural grounding
 
-Arunachal’s Indigenous Affairs documentation treats Nyishi performance as a distinct community tradition. This is a cultural reference for choosing collaborators; it does not establish a fixed scale, beat or instrument set for the new song. [Arunachal Department of Indigenous Affairs — Performance documentation](https://indigenous.arunachal.gov.in/videos)
+This is a shared contemporary studio arrangement, not a claim that 6/8, acoustic guitar or these instruments represent every tradition in this language. The language’s natural phrasing and the collaborator’s regional knowledge come first. Optional accents are proposals inherited from the collection’s earlier musical research and still need musician review.
 
-The arrangement below is a creative proposal for this poem. It is not a claim to represent every tradition in the language, or to reproduce a traditional composition. Regional instruments, phrasing and song forms overlap across communities.
+Use the shared acoustic palette for now. A fluent community collaborator may suggest one quiet instrumental accent; do not invent a traditional ensemble or named song form.
+
+Background references retained for collaborators; these do not validate the new arrangement or require it to reproduce the referenced genre:
+
+- [Arunachal Department of Indigenous Affairs — Performance documentation](https://indigenous.arunachal.gov.in/videos)
 
 ## Voice, rhythm and arrangement
 
-Warm lead, sparse plucked accompaniment, one low hand-played pulse and room between phrases. Let the verse sit near speech; a slightly longer melodic arc carries the refrain. The palette is a contemporary suggestion, not a traditional ensemble claim.
+Warm youthful male lead, intimate soulful delivery and clear natural pronunciation. Fingerpicked acoustic guitar, mellow bamboo flute, rounded acoustic bass, delicate hand percussion and soft sustained strings form the common palette. Use a gentle, unhurried 6/8 sway: a relaxed two-part rocking feel, not a brisk waltz or dance groove. Keep complete words and natural stresses intact; allow phrase lengths to breathe across the accompaniment.
+
+No extra regional instrument is required. Use the shared acoustic palette for now. A fluent community collaborator may suggest one quiet instrumental accent; do not invent a traditional ensemble or named song form.
+
+Regional colour stays occasional and secondary. Use one answering instrument at a time; do not crowd the voice. Where melody affects intelligibility, a fluent singer should adjust the contour while retaining the common calm character.
 
 ## Emotional shape
 
-Begin with a short vocal phrase and answer it instrumentally. Let the gathering motif create motion, stop the pulse for the potter declaration, and allow the final refrain to settle into free timing.
+Begin with sparse voice and guitar. Add warmth through the verses without accelerating. Preserve the gathering breath and the fuller potter pause, with soft instruments sustaining underneath. Let the refrain bloom through a little harmony rather than louder drums or a dramatic crescendo. Keep the mountain invitation open and affectionate, then finish the dream-weaving lines softly with peaceful, hopeful contentment. The ending should feel fulfilled rather than sorrowful.
 
 ## Suno Style prompt
 
 Prepared for use once reviewed native-language lyrics are available.
 
 ```text
-Tender contemporary Nyishi poetic song, warm close male voice and natural Nyishi diction. Compact speech-led verses, sparse plucked acoustic accompaniment and a gentle low walking pulse. A longer hopeful melodic arc opens the refrain. Separate the repeated gathering phrases and pause fully after the potter declaration, with a soft held note underneath. Gradually warm the verses, open the mountain-and-moon invitation, then relax the pulse for an unhurried final weaving of dreams. Small acoustic ensemble, restrained ornament and clear complete words.
+Nyishi indie-folk ballad with warm youthful male vocals, intimate soulful delivery, and clear natural Nyishi pronunciation. Quiet joy, affection, wonder, and peaceful contentment. Gentle, unhurried 6/8 sway with spacious phrasing. Earthy acoustic production: fingerpicked guitar, mellow bamboo flute, rounded acoustic bass, delicate hand percussion, and soft sustained strings. Sparse voice-and-guitar opening; gradually add warmth and gently blooming refrain harmonies while maintaining the same relaxed pace. Leave a breath between repeated gathering phrases and a fuller pause after the potter declaration, with instruments sustaining underneath. End softly with warmth and hope. Restrained vocal ornamentation and gentle dynamics throughout.
 ```
 
 ## Working settings and listening checks
 
-Keep **Style Influence 60** as the initial comparison point from the earlier Indian-language work. Keep other controls at your current preferred values while trying the new style. This is a continuity choice, not a culture-specific preset or a guarantee of the requested sound.
+Keep the controls used for your preferred calm Telugu take as the first comparison point, and change only the language-specific style text. No new numeric preset is prescribed here. Record the settings with each generated take; the prompt alone cannot guarantee tempo, instruments or mood.
 
-Use a vocal song with your own lyrics. The prompts request a male lead to retain the author’s speaker, with any additional voices limited to the described responses. Instrument names and pauses are creative requests: the generated result still needs listening checks.
+Use a vocal song with the supplied lyrics. Keep the male lead warm and youthful, with additional voices limited to gently blooming refrain harmonies. Preserve pauses without stretching or splitting words.
 
-Listen for complete words, natural stresses, a distinct gathering breath, the full potter pause, a gentle lift in the bridge and an unhurried ending. Reject a take that drops or invents lyrics. Musical fluency alone does not establish correct pronunciation. Where a specialist instrument matters, have a knowledgeable listener confirm the sound rather than relying on the prompt label.
+Listen for quiet happiness, a calm soulful delivery and an unhurried sway. Reject a take that becomes brisk, mournful, overdramatic, or drops or invents words. Check the gathering breath and full potter pause. Musical fluency does not establish correct pronunciation; fluent-speaker and sung-delivery reviews remain necessary. Keep the text’s current review status until an actual review is recorded.
 
 ## Language-specific review
 
@@ -140,4 +151,4 @@ Native title and adaptation pending in an agreed Nyishi orthography. A fluent co
 
 ---
 
-Collection prepared 22 September 2026. Original poem: Ahimanikya Satapathy. Translation drafts are AI-assisted except the author’s Odia source. Musical designs are newly proposed and have not been verified by listening to new generated recordings.
+Collection prepared 22 September 2026. Original poem: Ahimanikya Satapathy. Translation drafts are AI-assisted except the author’s Odia source. Musical direction updated 23 September 2026 to the author’s shared calm Telugu theme. These language-specific arrangements remain proposals, not verified performances.

@@ -19,6 +19,7 @@ status: draft
 generated:
   by: process:collection-import
   at: '2026-09-23T02:00:25+00:00'
+music_theme: quiet-joy-indie-folk-v1
 ---
 # I Am Free to Dream — Kuvi adaptation brief
 
@@ -26,7 +27,7 @@ generated:
 **Original poem and lyrics:** Ahimanikya Satapathy  
 **Status:** Native-language title and lyrics pending; musical design and source poem supplied  
 **Script:** Odia, Telugu or another community-preferred transcription  
-**Musical direction:** Kuvi contemporary lyric with free verses and a gently returning invitation
+**Musical direction:** Calm, soulful indie-folk · quiet joy · gentle 6/8 sway
 
 ## Title and poem status
 
@@ -102,37 +103,47 @@ Keep Intro → Verse 1 → Verse 2 → Chorus → Bridge → Final Chorus → So
 
 ## Why this musical direction
 
-Make the invitation the melodic centre: longer verse thoughts can wander freely, then the refrain offers a calm return. Keep the mountain image because it belongs to the original poem. A Kuvi adapter should determine local phrase lengths before the melody is fixed; the existing Kui text is not a substitute.
+The author’s final Telugu theme is the shared foundation across the collection: quiet happiness, affection and freedom to dream, carried by a calm, soulful voice. Keep the warmth and spaciousness without becoming brisk, mournful or grand. Differences between languages should be small changes in diction, melodic phrasing or instrumental colour.
+
+Let a fluent community collaborator choose the drum and any melodic adjustment; no specific traditional ensemble is assumed.
 
 ## Cultural grounding
 
-CIIL’s Kuvi collection and Kuvi-Oriya-English Dictionary provide a specific language reference for adaptation. They do not prescribe a musical style. The arrangement here is a contemporary proposal awaiting a Kuvi-speaking musical collaborator, rather than an authenticated traditional form. [Central Institute of Indian Languages — Kuvi-Oriya-English Dictionary](https://sanchika.ciil.org/items/44e96322-9774-4a4e-a456-687fd171b273)
+This is a shared contemporary studio arrangement, not a claim that 6/8, acoustic guitar or these instruments represent every tradition in this language. The language’s natural phrasing and the collaborator’s regional knowledge come first. Optional accents are proposals inherited from the collection’s earlier musical research and still need musician review.
 
-The arrangement below is a creative proposal for this poem. It is not a claim to represent every tradition in the language, or to reproduce a traditional composition. Regional instruments, phrasing and song forms overlap across communities.
+Let a fluent community collaborator choose the drum and any melodic adjustment; no specific traditional ensemble is assumed.
+
+Background references retained for collaborators; these do not validate the new arrangement or require it to reproduce the referenced genre:
+
+- [Central Institute of Indian Languages — Kuvi-Oriya-English Dictionary](https://sanchika.ciil.org/items/44e96322-9774-4a4e-a456-687fd171b273)
 
 ## Voice, rhythm and arrangement
 
-Warm solo voice, a few acoustic plucks, a held tone and brief flute answers. Begin without a fixed beat and introduce a soft two-part pulse only when the refrain returns. These are arrangement choices, not claims about a uniform Kuvi ensemble or scale.
+Warm youthful male lead, intimate soulful delivery and clear natural pronunciation. Fingerpicked acoustic guitar, mellow bamboo flute, rounded acoustic bass, delicate hand percussion and soft sustained strings form the common palette. Use a gentle, unhurried 6/8 sway: a relaxed two-part rocking feel, not a brisk waltz or dance groove. Keep complete words and natural stresses intact; allow phrase lengths to breathe across the accompaniment.
+
+A softly played local drum may colour the light percussion. Let a fluent community collaborator choose the drum and any melodic adjustment; no specific traditional ensemble is assumed.
+
+Regional colour stays occasional and secondary. Use one answering instrument at a time; do not crowd the voice. Where melody affects intelligibility, a fluent singer should adjust the contour while retaining the common calm character.
 
 ## Emotional shape
 
-The North Star receives a free vocal ending. Gathering adds instrumental warmth, followed by a full still pause after the potter line. Let the bridge become the melodic high point and return gently to shared dreams.
+Begin with sparse voice and guitar. Add warmth through the verses without accelerating. Preserve the gathering breath and the fuller potter pause, with soft instruments sustaining underneath. Let the refrain bloom through a little harmony rather than louder drums or a dramatic crescendo. Keep the mountain invitation open and affectionate, then finish the dream-weaving lines softly with peaceful, hopeful contentment. The ending should feel fulfilled rather than sorrowful.
 
 ## Suno Style prompt
 
 Prepared for use once reviewed native-language lyrics are available.
 
 ```text
-Intimate contemporary Kuvi poetic ballad, warm natural male voice and clear Kuvi diction. Free spacious verses, sparse acoustic plucks, a soft held tone and brief flute answers. A gentle pulse enters with the returning refrain; longer phrases retain their natural breathing. Separate the gathering phrases and pause fully after the potter declaration, sustaining softly beneath. Begin sparsely, warm through the verses, make the mountain-and-moon invitation the melodic high point, then settle into a tender woven-dreams ending. Restrained secular acoustic setting.
+Kuvi indie-folk ballad with warm youthful male vocals, intimate soulful delivery, and clear natural Kuvi pronunciation. Quiet joy, affection, wonder, and peaceful contentment. Gentle, unhurried 6/8 sway with spacious phrasing. Earthy acoustic production: fingerpicked guitar, mellow bamboo flute, rounded acoustic bass, delicate hand percussion, and soft sustained strings. A softly played local drum may colour the light percussion. Sparse voice-and-guitar opening; gradually add warmth and gently blooming refrain harmonies while maintaining the same relaxed pace. Leave a breath between repeated gathering phrases and a fuller pause after the potter declaration, with instruments sustaining underneath. End softly with warmth and hope. Restrained vocal ornamentation and gentle dynamics throughout.
 ```
 
 ## Working settings and listening checks
 
-Keep **Style Influence 60** as the initial comparison point from the earlier Indian-language work. Keep other controls at your current preferred values while trying the new style. This is a continuity choice, not a culture-specific preset or a guarantee of the requested sound.
+Keep the controls used for your preferred calm Telugu take as the first comparison point, and change only the language-specific style text. No new numeric preset is prescribed here. Record the settings with each generated take; the prompt alone cannot guarantee tempo, instruments or mood.
 
-Use a vocal song with your own lyrics. The prompts request a male lead to retain the author’s speaker, with any additional voices limited to the described responses. Instrument names and pauses are creative requests: the generated result still needs listening checks.
+Use a vocal song with the supplied lyrics. Keep the male lead warm and youthful, with additional voices limited to gently blooming refrain harmonies. Preserve pauses without stretching or splitting words.
 
-Listen for complete words, natural stresses, a distinct gathering breath, the full potter pause, a gentle lift in the bridge and an unhurried ending. Reject a take that drops or invents lyrics. Musical fluency alone does not establish correct pronunciation. Where a specialist instrument matters, have a knowledgeable listener confirm the sound rather than relying on the prompt label.
+Listen for quiet happiness, a calm soulful delivery and an unhurried sway. Reject a take that becomes brisk, mournful, overdramatic, or drops or invents words. Check the gathering breath and full potter pause. Musical fluency does not establish correct pronunciation; fluent-speaker and sung-delivery reviews remain necessary. Keep the text’s current review status until an actual review is recorded.
 
 ## Language-specific review
 
@@ -140,4 +151,4 @@ Native title and lyrics pending. Agree the Kuvi variety and Odia, Telugu or othe
 
 ---
 
-Collection prepared 22 September 2026. Original poem: Ahimanikya Satapathy. Translation drafts are AI-assisted except the author’s Odia source. Musical designs are newly proposed and have not been verified by listening to new generated recordings.
+Collection prepared 22 September 2026. Original poem: Ahimanikya Satapathy. Translation drafts are AI-assisted except the author’s Odia source. Musical direction updated 23 September 2026 to the author’s shared calm Telugu theme. These language-specific arrangements remain proposals, not verified performances.

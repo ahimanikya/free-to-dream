@@ -19,6 +19,7 @@ status: draft
 generated:
   by: process:collection-import
   at: '2026-09-23T02:00:25+00:00'
+music_theme: quiet-joy-indie-folk-v1
 ---
 # I Am Free to Dream — Saurashtra adaptation brief
 
@@ -26,7 +27,7 @@ generated:
 **Original poem and lyrics:** Ahimanikya Satapathy  
 **Status:** Native-language title and lyrics pending; musical design and source poem supplied  
 **Script:** Saurashtra script or an adapter-approved orthography  
-**Musical direction:** Saurashtra lyrical chamber song with restrained Carnatic colour
+**Musical direction:** Calm, soulful indie-folk · quiet joy · gentle 6/8 sway
 
 ## Title and poem status
 
@@ -102,37 +103,47 @@ Keep Intro → Verse 1 → Verse 2 → Chorus → Bridge → Final Chorus → So
 
 ## Why this musical direction
 
-Keep the language’s own phrasing within a small melodic chamber setting. A few plucked and bowed replies can connect the craft imagery with the poem’s growing warmth. Saurashtra here names the language, not a requirement to use the Carnatic raga of the same name.
+The author’s final Telugu theme is the shared foundation across the collection: quiet happiness, affection and freedom to dream, carried by a calm, soulful voice. Keep the warmth and spaciousness without becoming brisk, mournful or grand. Differences between languages should be small changes in diction, melodic phrasing or instrumental colour.
+
+Keep veena a quiet answering colour; avoid expanding into a classical instrumental passage.
 
 ## Cultural grounding
 
-The Journal of the Music Academy, Madras documents kirtanas composed in the Saurashtra language. This provides evidence of a language-specific composed-song tradition; it does not require this new secular poem to become a devotional composition. [Music Academy, Madras — Journal, Volume 51, 1980](https://musicacademymadras.in/catalogue/files/journals/Vol.51_1980.pdf)
+This is a shared contemporary studio arrangement, not a claim that 6/8, acoustic guitar or these instruments represent every tradition in this language. The language’s natural phrasing and the collaborator’s regional knowledge come first. Optional accents are proposals inherited from the collection’s earlier musical research and still need musician review.
 
-The arrangement below is a creative proposal for this poem. It is not a claim to represent every tradition in the language, or to reproduce a traditional composition. Regional instruments, phrasing and song forms overlap across communities.
+Keep veena a quiet answering colour; avoid expanding into a classical instrumental passage.
+
+Background references retained for collaborators; these do not validate the new arrangement or require it to reproduce the referenced genre:
+
+- [Music Academy, Madras — Journal, Volume 51, 1980](https://musicacademymadras.in/catalogue/files/journals/Vol.51_1980.pdf)
 
 ## Voice, rhythm and arrangement
 
-Warm lead, delicate veena-like plucks, lyrical violin answers and restrained mridangam. Keep most words syllabic, using small melodic turns only where a fluent singer finds them natural. Let the bridge widen without a long classical improvisation.
+Warm youthful male lead, intimate soulful delivery and clear natural pronunciation. Fingerpicked acoustic guitar, mellow bamboo flute, rounded acoustic bass, delicate hand percussion and soft sustained strings form the common palette. Use a gentle, unhurried 6/8 sway: a relaxed two-part rocking feel, not a brisk waltz or dance groove. Keep complete words and natural stresses intact; allow phrase lengths to breathe across the accompaniment.
+
+Subtle veena accents between complete phrases. Keep veena a quiet answering colour; avoid expanding into a classical instrumental passage.
+
+Regional colour stays occasional and secondary. Use one answering instrument at a time; do not crowd the voice. Where melody affects intelligibility, a fluent singer should adjust the contour while retaining the common calm character.
 
 ## Emotional shape
 
-A short plucked motif opens the song. Violin enters after gathering and rests at the potter declaration. Let the bridge create the widest melodic arc, then return to a close voice and sparse plucks.
+Begin with sparse voice and guitar. Add warmth through the verses without accelerating. Preserve the gathering breath and the fuller potter pause, with soft instruments sustaining underneath. Let the refrain bloom through a little harmony rather than louder drums or a dramatic crescendo. Keep the mountain invitation open and affectionate, then finish the dream-weaving lines softly with peaceful, hopeful contentment. The ending should feel fulfilled rather than sorrowful.
 
 ## Suno Style prompt
 
 Prepared for use once reviewed native-language lyrics are available.
 
 ```text
-Intimate Saurashtra-language poetic chamber ballad with restrained Carnatic melodic colour. Warm clear male voice, natural Saurashtra diction, delicate veena-like plucks, lyrical violin answers and soft mridangam. Mostly syllabic singing with small graceful phrase-ending turns. Separate the gathering phrases and pause fully after the potter declaration, sustaining softly beneath it. Begin spare, widen the mountain-and-moon bridge, then close with voice and a few plucked notes on weaving dreams together. A new secular lyric, unhurried and affectionate.
+Saurashtra indie-folk ballad with warm youthful male vocals, intimate soulful delivery, and clear natural Saurashtra pronunciation. Quiet joy, affection, wonder, and peaceful contentment. Gentle, unhurried 6/8 sway with spacious phrasing. Earthy acoustic production: fingerpicked guitar, mellow bamboo flute, rounded acoustic bass, delicate hand percussion, and soft sustained strings. Subtle veena accents between complete phrases. Sparse voice-and-guitar opening; gradually add warmth and gently blooming refrain harmonies while maintaining the same relaxed pace. Leave a breath between repeated gathering phrases and a fuller pause after the potter declaration, with instruments sustaining underneath. End softly with warmth and hope. Restrained vocal ornamentation and gentle dynamics throughout.
 ```
 
 ## Working settings and listening checks
 
-Keep **Style Influence 60** as the initial comparison point from the earlier Indian-language work. Keep other controls at your current preferred values while trying the new style. This is a continuity choice, not a culture-specific preset or a guarantee of the requested sound.
+Keep the controls used for your preferred calm Telugu take as the first comparison point, and change only the language-specific style text. No new numeric preset is prescribed here. Record the settings with each generated take; the prompt alone cannot guarantee tempo, instruments or mood.
 
-Use a vocal song with your own lyrics. The prompts request a male lead to retain the author’s speaker, with any additional voices limited to the described responses. Instrument names and pauses are creative requests: the generated result still needs listening checks.
+Use a vocal song with the supplied lyrics. Keep the male lead warm and youthful, with additional voices limited to gently blooming refrain harmonies. Preserve pauses without stretching or splitting words.
 
-Listen for complete words, natural stresses, a distinct gathering breath, the full potter pause, a gentle lift in the bridge and an unhurried ending. Reject a take that drops or invents lyrics. Musical fluency alone does not establish correct pronunciation. Where a specialist instrument matters, have a knowledgeable listener confirm the sound rather than relying on the prompt label.
+Listen for quiet happiness, a calm soulful delivery and an unhurried sway. Reject a take that becomes brisk, mournful, overdramatic, or drops or invents words. Check the gathering breath and full potter pause. Musical fluency does not establish correct pronunciation; fluent-speaker and sung-delivery reviews remain necessary. Keep the text’s current review status until an actual review is recorded.
 
 ## Language-specific review
 
@@ -140,4 +151,4 @@ Native title and adaptation pending in Saurashtra script or an adapter-approved 
 
 ---
 
-Collection prepared 22 September 2026. Original poem: Ahimanikya Satapathy. Translation drafts are AI-assisted except the author’s Odia source. Musical designs are newly proposed and have not been verified by listening to new generated recordings.
+Collection prepared 22 September 2026. Original poem: Ahimanikya Satapathy. Translation drafts are AI-assisted except the author’s Odia source. Musical direction updated 23 September 2026 to the author’s shared calm Telugu theme. These language-specific arrangements remain proposals, not verified performances.
