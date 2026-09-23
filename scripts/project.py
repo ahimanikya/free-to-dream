@@ -162,9 +162,20 @@ def share_controls(title, filename, config, local=False, media=None, media_url=N
     live = bool(config.get('site_url')) and published and not local
     url = config['site_url'].rstrip('/') + '/' + filename if live else ''
     caption = f'{title} — World is One, India is One! Original poem by Ahimanikya Satapathy.'
+    if media:
+        caption += ' ' + ' · '.join(f'{key.replace("_", " ").title()}: {value}' for key,value in media.get('credits', {}).items() if key != 'poem')
     buttons = f'<button type="button" data-action="share-link" {"" if live else "disabled"}>Share</button><button type="button" data-action="copy-link" {"" if live else "disabled"}>Copy link</button><button type="button" data-action="copy-caption">Copy caption &amp; credits</button>'
+    instagram = ''
     if live:
         buttons += f'<a class="action" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/sharer/sharer.php?{urlencode({"u":url})}">Facebook ↗</a><a class="action" target="_blank" rel="noopener noreferrer" href="https://wa.me/?{urlencode({"text":caption+" "+url})}">WhatsApp ↗</a>'
+        x_text = 'I Am Free to Dream — one poem, many languages. Original poem by Ahimanikya Satapathy.'
+        buttons += f'<a class="action" target="_blank" rel="noopener noreferrer" href="https://twitter.com/intent/tweet?{esc(urlencode({"text":x_text,"url":url}), quote=True)}">X ↗</a><a class="action" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/sharing/share-offsite/?{urlencode({"url":url})}">LinkedIn ↗</a><a class="action" href="#instagram-sharing">Instagram · how to share ↓</a>'
+        media_step = 'Save the cover image below for a photo post. To share the song itself, choose a published video version when one is available.'
+        if media and media_url and media['kind'] == 'video':
+            media_step = 'Use “Download / open video” above to save the video, then upload it in Instagram. If “Share file” is available, you can also try selecting Instagram from your device’s share menu.'
+        elif media and media_url:
+            media_step = 'Save the cover image below for a photo post. To include the audio in a Reel, first combine it with an image or video in a video editor; an MP3 alone is not a video post.'
+        instagram = f'''<section id="instagram-sharing" class="upload-explainer" aria-label="Share on Instagram"><h3>Share on Instagram</h3><p>Prepare your post here, then finish it in Instagram. This does not post automatically.</p><ol><li>{media_step}</li><li>Copy the caption and credits, then paste them into your post.</li><li>Copy this page’s link for a Story link sticker or your profile link, where available.</li></ol><div class="action-row"><a class="action" href="media/images/cover.png" download="free-to-dream-cover.png">Save cover image</a><button type="button" data-action="copy-caption">Copy Instagram caption &amp; credits</button><button type="button" data-action="copy-link">Copy page link</button><a class="action" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/">Open Instagram ↗</a></div><p class="small">For LinkedIn, use Copy caption &amp; credits above and paste it into the sharing window.</p></section>'''
     if media and media_url:
         buttons += f'<a class="action" href="{esc(media_url, quote=True)}" download>Download / open {media["kind"]}</a>'
         if published and media.get('allow_file_sharing', False):
@@ -175,9 +186,7 @@ def share_controls(title, filename, config, local=False, media=None, media_url=N
         extension = '.mp4' if media and media['kind'] == 'video' else '.mp3'
     mime = mimetypes.guess_type('file'+extension)[0] or 'application/octet-stream'
     file_name = (media['id'] + extension) if media else ''
-    if media:
-        caption += ' ' + ' · '.join(f'{key.replace("_", " ").title()}: {value}' for key,value in media.get('credits', {}).items() if key != 'poem')
-    return f'<section class="sharing" data-share-url="{esc(url, quote=True)}" data-share-title="{esc(title, quote=True)}" data-caption="{esc(caption, quote=True)}" data-media-url="{esc(media_url or "", quote=True)}" data-media-kind="{media["kind"] if media else ""}" data-file-name="{esc(file_name, quote=True)}" data-mime="{mime}"><div class="action-row">{buttons}</div>{note}<p class="share-result" role="status" aria-live="polite"></p></section>'
+    return f'<section class="sharing" data-share-url="{esc(url, quote=True)}" data-share-title="{esc(title, quote=True)}" data-caption="{esc(caption, quote=True)}" data-media-url="{esc(media_url or "", quote=True)}" data-media-kind="{media["kind"] if media else ""}" data-file-name="{esc(file_name, quote=True)}" data-mime="{mime}"><div class="action-row">{buttons}</div>{note}{instagram}<p class="share-result" role="status" aria-live="polite"></p></section>'
 
 
 def collaboration_panel(meta, config):
