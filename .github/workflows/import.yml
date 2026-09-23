@@ -1,0 +1,33 @@
+name: Import prepared project
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Restore verified project files
+        run: |
+          python3 - <<'PYCODE'
+          from pathlib import Path
+          import hashlib, zipfile
+          archive = Path('free-to-dream-source.zip')
+          if not archive.exists():
+              raise SystemExit('Project already imported; no archive remains.')
+          assert hashlib.sha256(archive.read_bytes()).hexdigest() == 'e445fb9d4ed9c18d052f01f3049b8956668704e74e6fe0943772b74310219442'
+          with zipfile.ZipFile(archive) as bundle:
+              for entry in bundle.infolist():
+                  path = Path(entry.filename)
+                  if path.is_absolute() or '..' in path.parts:
+                      raise ValueError('Unsafe archive path')
+                  if entry.filename.startswith('.github/workflows/'):
+                      continue
+                  bundle.extract(entry)
+          archive.unlink()
+          PYCODE
+          git add --all
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m "Import multilingual knowledge base and collaboration site"
+          git push origin HEAD:main
+
