@@ -20,7 +20,7 @@ status: draft
 generated:
   by: process:collection-import
   at: '2026-09-23T02:00:25+00:00'
-music_theme: quiet-joy-indie-folk-v1
+music_theme: quiet-joy-cultural-setting-v1
 ---
 # لي أن أحلم
 
@@ -28,7 +28,7 @@ music_theme: quiet-joy-indie-folk-v1
 **Original poem and lyrics:** Ahimanikya Satapathy  
 **Status:** New AI-assisted lyric draft; fluent-speaker and sung review pending  
 **Script:** Arabic; Modern Standard Arabic with selective pronunciation marks  
-**Musical direction:** Calm, soulful indie-folk · quiet joy · gentle 6/8 sway
+**Musical direction:** Oud-led Arabic chamber song · poetry-led melody · gentle modal phrasing
 
 ## Poem / arranged lyrics
 
@@ -75,45 +75,35 @@ music_theme: quiet-joy-indie-folk-v1
 
 ## Why this musical direction
 
-A calm, soulful indie-folk sound carries quiet happiness, affection and the freedom to dream. Keep the warmth and spaciousness without becoming brisk, mournful or grand. Differences between languages should be small changes in diction, melodic phrasing or instrumental colour.
-
-Use clear Modern Standard Arabic and restrained ornament. This shared 6/8 song is not a specified maqam or traditional rhythmic cycle.
+An intimate oud-led chamber setting lets the Arabic poem lead the melody. The oud, airy ney and a few sustained violin notes can make the pauses expressive while keeping the song warm, affectionate and quietly hopeful.
 
 ## Cultural grounding
 
-This is a shared contemporary studio arrangement, not a claim that 6/8, acoustic guitar or these instruments represent every tradition in this language. The language’s natural phrasing and the collaborator’s regional knowledge come first. Optional accents are proposals inherited from the collection’s earlier musical research and still need musician review.
+The instrumental reference is the small Arabic ensemble tradition. The Metropolitan Museum’s presentation of the Alwan ensemble describes the importance of poetry, vocal melody and maqam, alongside instruments such as oud, nay and riqq. A collaborating musician can choose a suitable maqam and rhythmic cycle after working with the lyric; this prompt leaves those decisions open.
 
-Use clear Modern Standard Arabic and restrained ornament. This shared 6/8 song is not a specified maqam or traditional rhythmic cycle.
-
-Background references retained for collaborators; these do not validate the new arrangement or require it to reproduce the referenced genre:
-
-- [UNESCO — Crafting and playing the Oud](https://ich.unesco.org/en/RL/crafting-and-playing-the-oud-01867)
+[The Metropolitan Museum of Art — Alwan Arab Music Ensemble programme](https://www.metmuseum.org/ko/press-releases/concerts-november-2011-2011-news)
 
 ## Voice, rhythm and arrangement
 
-Warm youthful male lead, intimate soulful delivery and clear natural pronunciation. Fingerpicked acoustic guitar, mellow bamboo flute, rounded acoustic bass, delicate hand percussion and soft sustained strings form the common palette. Use a gentle, unhurried 6/8 sway: a relaxed two-part rocking feel, not a brisk waltz or dance groove. Keep complete words and natural stresses intact; allow phrase lengths to breathe across the accompaniment.
-
-Soft oud accents; airy ney may replace bamboo flute. Use clear Modern Standard Arabic and restrained ornament. This shared 6/8 song is not a specified maqam or traditional rhythmic cycle.
-
-Regional colour stays occasional and secondary. Use one answering instrument at a time; do not crowd the voice. Where melody affects intelligibility, a fluent singer should adjust the contour while retaining the common calm character.
+Use a warm youthful male lead singing clear Modern Standard Arabic. Let oud support the vocal line, with ney answering between phrases, restrained violin sustains and a very light riqq pulse. Start freely, then settle into a gentle measured flow that accommodates the words. Use modest, purposeful ornamentation. Keep the voice and melodic replies central; let ensemble resonance provide the refrain’s warmth without requiring stacked chordal vocals.
 
 ## Emotional shape
 
-Begin with sparse voice and guitar. Add warmth through the verses without accelerating. Preserve the gathering breath and the fuller potter pause, with soft instruments sustaining underneath. Let the refrain bloom through a little harmony rather than louder drums or a dramatic crescendo. Keep the mountain invitation open and affectionate, then finish the dream-weaving lines softly with peaceful, hopeful contentment. The ending should feel fulfilled rather than sorrowful.
+Begin with voice and soft oud. Add warmth through the verses without accelerating. Preserve a breath between the repeated gathering phrases and a fuller pause after the potter declaration, with soft instrumental resonance underneath. Let the refrain bloom through airy ney replies and restrained violin sustains. Keep the mountain invitation open and affectionate, then finish the dream-weaving lines softly with peaceful, hopeful contentment.
 
 ## Style prompt
 
 ```text
-Arabic indie-folk ballad with warm youthful male vocals, intimate soulful delivery, and clear natural Arabic pronunciation. Quiet joy, affection, wonder, and peaceful contentment. Gentle, unhurried 6/8 sway with spacious phrasing. Earthy acoustic production: fingerpicked guitar, mellow bamboo flute, rounded acoustic bass, delicate hand percussion, and soft sustained strings. Soft oud accents; airy ney may replace bamboo flute. Sparse voice-and-guitar opening; gradually add warmth and gently blooming refrain harmonies while maintaining the same relaxed pace. Leave a breath between repeated gathering phrases and a fuller pause after the potter declaration, with instruments sustaining underneath. End softly with warmth and hope. Restrained vocal ornamentation and gentle dynamics throughout.
+Intimate oud-led Arabic acoustic chamber song in clear Modern Standard Arabic. Warm youthful male voice, soulful expressive delivery, natural word stress and restrained Arabic melodic ornamentation. Quiet joy, affection, wonder and freedom to dream. Soft oud, airy ney replies, restrained violin sustains and a very light riqq pulse. Poetry-led modal melody; spacious opening settling into a gentle, unhurried measured flow. Keep the lead voice central, with delicate instrumental responses. Gradually add warmth without accelerating. Leave a breath between the repeated gathering phrases and a fuller pause after the potter declaration, with soft instruments sustaining underneath. End in peaceful, hopeful contentment. No driving beat, dense vocal stacks, dramatic crescendo or mournful delivery.
 ```
 
 ## Working settings and listening checks
 
-Begin with the settings from your preferred take, changing only the language-specific style text for comparison. No new numeric preset is prescribed here. Record the settings with each generated take; the prompt alone cannot guarantee tempo, instruments or mood.
+Begin with the settings from your preferred take and change the style prompt first, keeping the lyrics fixed for comparison. Record the settings with each generated take; the prompt alone cannot guarantee tempo, instruments or mood.
 
-Use a vocal song with the supplied lyrics. Keep the male lead warm and youthful, with additional voices limited to gently blooming refrain harmonies. Preserve pauses without stretching or splitting words.
+Use a vocal song with the supplied lyrics and the arrangement described above. Preserve pauses without stretching or splitting words. Ask a fluent Arabic singer to check vowel lengths, consonants and phrase endings. Have a musician review the modal phrasing and percussion together; a genre label alone does not establish a coherent maqam performance.
 
-Listen for quiet happiness, a calm soulful delivery and an unhurried sway. Reject a take that becomes brisk, mournful, overdramatic, or drops or invents words. Check the gathering breath and full potter pause. Musical fluency does not establish correct pronunciation; fluent-speaker and sung-delivery reviews remain necessary. Keep the text’s current review status until an actual review is recorded.
+Listen for quiet happiness, calm soulful delivery and an unhurried flow. Reject a take that becomes brisk, mournful, overdramatic, or drops or invents words. Check the gathering breath and full potter pause. Keep the text’s current review status until fluent-speaker and sung-delivery reviews are recorded.
 
 ## Language-specific review
 

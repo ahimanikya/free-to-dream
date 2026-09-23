@@ -19,7 +19,7 @@ status: draft
 generated:
   by: process:collection-import
   at: '2026-09-23T02:00:25+00:00'
-music_theme: quiet-joy-indie-folk-v1
+music_theme: quiet-joy-cultural-setting-v1
 ---
 # 我有做梦的自由
 
@@ -27,7 +27,7 @@ music_theme: quiet-joy-indie-folk-v1
 **Original poem and lyrics:** Ahimanikya Satapathy  
 **Status:** New AI-assisted lyric draft; fluent-speaker and sung review pending  
 **Script:** Simplified Chinese; Mandarin pronunciation  
-**Musical direction:** Calm, soulful indie-folk · quiet joy · gentle 6/8 sway
+**Musical direction:** Contemporary Mandarin poetic ballad · guqin and piano · spacious calm
 
 ## Poem / arranged lyrics
 
@@ -75,45 +75,35 @@ music_theme: quiet-joy-indie-folk-v1
 
 ## Why this musical direction
 
-A calm, soulful indie-folk sound carries quiet happiness, affection and the freedom to dream. Keep the warmth and spaciousness without becoming brisk, mournful or grand. Differences between languages should be small changes in diction, melodic phrasing or instrumental colour.
-
-Use the instrument only as a quiet accent. Have a fluent singer check intelligibility and melodic contour rather than mechanically copying spoken tones.
+A spacious Mandarin poetic ballad can give the North Star, mountains and moon room to unfold. Sparse guqin plucks and soft piano create a reflective setting, while the voice carries the poem with quiet happiness and clear words.
 
 ## Cultural grounding
 
-This is a shared contemporary studio arrangement, not a claim that 6/8, acoustic guitar or these instruments represent every tradition in this language. The language’s natural phrasing and the collaborator’s regional knowledge come first. Optional accents are proposals inherited from the collection’s earlier musical research and still need musician review.
+The guqin is the specific cultural reference here. The Metropolitan Museum describes its association with Chinese literati and outdoor settings, including moonlit scenes. This proposal is a contemporary Mandarin song with guqin colour; its melody and accompaniment should be shaped around the actual lyric.
 
-Use the instrument only as a quiet accent. Have a fluent singer check intelligibility and melodic contour rather than mechanically copying spoken tones.
-
-Background references retained for collaborators; these do not validate the new arrangement or require it to reproduce the referenced genre:
-
-- [The Metropolitan Museum of Art — Guqin](https://www.metmuseum.org/art/collection/search/506800)
+[The Metropolitan Museum of Art — Guqin](https://www.metmuseum.org/art/collection/search/506800)
 
 ## Voice, rhythm and arrangement
 
-Warm youthful male lead, intimate soulful delivery and clear natural pronunciation. Fingerpicked acoustic guitar, mellow bamboo flute, rounded acoustic bass, delicate hand percussion and soft sustained strings form the common palette. Use a gentle, unhurried 6/8 sway: a relaxed two-part rocking feel, not a brisk waltz or dance groove. Keep complete words and natural stresses intact; allow phrase lengths to breathe across the accompaniment.
-
-Sparse guqin-like plucks; clear Mandarin words before melodic ornament. Use the instrument only as a quiet accent. Have a fluent singer check intelligibility and melodic contour rather than mechanically copying spoken tones.
-
-Regional colour stays occasional and secondary. Use one answering instrument at a time; do not crowd the voice. Where melody affects intelligibility, a fluent singer should adjust the contour while retaining the common calm character.
+Use a warm youthful male lead with clear Mandarin pronunciation and complete, naturally grouped phrases. Begin with sparse piano and guqin replies; add soft bass and restrained sustained strings. Keep a slow, spacious 4/4 pulse with a little flexibility at line endings. Percussion can remain nearly absent. Let a fluent singer review word intelligibility in the melody rather than mechanically tracing spoken tones. Leave guqin resonance audible between phrases.
 
 ## Emotional shape
 
-Begin with sparse voice and guitar. Add warmth through the verses without accelerating. Preserve the gathering breath and the fuller potter pause, with soft instruments sustaining underneath. Let the refrain bloom through a little harmony rather than louder drums or a dramatic crescendo. Keep the mountain invitation open and affectionate, then finish the dream-weaving lines softly with peaceful, hopeful contentment. The ending should feel fulfilled rather than sorrowful.
+Begin with voice, sparse piano and a few guqin plucks. Add warmth through the verses without accelerating. Preserve a breath between the repeated gathering phrases and a fuller pause after the potter declaration, with soft instrumental resonance underneath. Let the refrain bloom through soft sustained strings and slightly fuller piano voicings. Keep the mountain invitation open and affectionate, then finish the dream-weaving lines softly with peaceful, hopeful contentment.
 
 ## Style prompt
 
 ```text
-Mandarin Chinese indie-folk ballad with warm youthful male vocals, intimate soulful delivery, and clear natural Mandarin Chinese pronunciation. Quiet joy, affection, wonder, and peaceful contentment. Gentle, unhurried 6/8 sway with spacious phrasing. Earthy acoustic production: fingerpicked guitar, mellow bamboo flute, rounded acoustic bass, delicate hand percussion, and soft sustained strings. Sparse guqin-like plucks; clear Mandarin words before melodic ornament. Sparse voice-and-guitar opening; gradually add warmth and gently blooming refrain harmonies while maintaining the same relaxed pace. Leave a breath between repeated gathering phrases and a fuller pause after the potter declaration, with instruments sustaining underneath. End softly with warmth and hope. Restrained vocal ornamentation and gentle dynamics throughout.
+Contemporary Mandarin Chinese poetic acoustic ballad. Warm youthful male vocal, intimate soulful delivery, clear Mandarin diction and natural phrase grouping. Quiet joy, affection, wonder and freedom to dream. Sparse guqin plucks, soft piano, rounded bass and restrained sustained strings; almost no percussion. Slow, spacious 4/4 with breathing room at line endings. A graceful, memorable melody with restrained ornamentation. Begin with voice, piano and guqin; gradually add warmth without accelerating. Leave a breath between the repeated gathering phrases and a fuller pause after the potter declaration, with soft resonance beneath the breaths. Let the refrain open gently and end in peaceful, hopeful contentment. No dramatic crescendo or mournful delivery.
 ```
 
 ## Working settings and listening checks
 
-Begin with the settings from your preferred take, changing only the language-specific style text for comparison. No new numeric preset is prescribed here. Record the settings with each generated take; the prompt alone cannot guarantee tempo, instruments or mood.
+Begin with the settings from your preferred take and change the style prompt first, keeping the lyrics fixed for comparison. Record the settings with each generated take; the prompt alone cannot guarantee tempo, instruments or mood.
 
-Use a vocal song with the supplied lyrics. Keep the male lead warm and youthful, with additional voices limited to gently blooming refrain harmonies. Preserve pauses without stretching or splitting words.
+Use a vocal song with the supplied lyrics and the arrangement described above. Preserve pauses without stretching or splitting words. Have a fluent Mandarin listener check intelligibility throughout, especially where a long phrase crosses several notes. Listen for lightness and hope beneath the spacious arrangement.
 
-Listen for quiet happiness, a calm soulful delivery and an unhurried sway. Reject a take that becomes brisk, mournful, overdramatic, or drops or invents words. Check the gathering breath and full potter pause. Musical fluency does not establish correct pronunciation; fluent-speaker and sung-delivery reviews remain necessary. Keep the text’s current review status until an actual review is recorded.
+Listen for quiet happiness, calm soulful delivery and an unhurried flow. Reject a take that becomes brisk, mournful, overdramatic, or drops or invents words. Check the gathering breath and full potter pause. Keep the text’s current review status until fluent-speaker and sung-delivery reviews are recorded.
 
 ## Language-specific review
 

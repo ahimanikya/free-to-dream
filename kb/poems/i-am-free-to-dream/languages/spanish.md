@@ -19,7 +19,7 @@ status: draft
 generated:
   by: process:collection-import
   at: '2026-09-23T02:00:25+00:00'
-music_theme: quiet-joy-indie-folk-v1
+music_theme: quiet-joy-cultural-setting-v1
 ---
 # Soy libre de soñar
 
@@ -27,7 +27,7 @@ music_theme: quiet-joy-indie-folk-v1
 **Original poem and lyrics:** Ahimanikya Satapathy  
 **Status:** New AI-assisted lyric draft; fluent-speaker and sung review pending  
 **Script:** Latin; broadly accessible Latin American Spanish  
-**Musical direction:** Calm, soulful indie-folk · quiet joy · gentle 6/8 sway
+**Musical direction:** Latin American acoustic bolero-inspired ballad · nylon guitar · tender 4/4
 
 ## Poem / arranged lyrics
 
@@ -75,45 +75,35 @@ tus sueños con los míos.
 
 ## Why this musical direction
 
-A calm, soulful indie-folk sound carries quiet happiness, affection and the freedom to dream. Keep the warmth and spaciousness without becoming brisk, mournful or grand. Differences between languages should be small changes in diction, melodic phrasing or instrumental colour.
-
-Keep the shared 6/8 pulse rather than the earlier bolero groove; allow natural Spanish stress and complete sentences.
+A gentle bolero-inspired setting gives the Spanish lyric tenderness, an easy melodic flow and space for its longer sentences. The emotion is affectionate and hopeful: gathering the world, offering a smile and sharing dreams.
 
 ## Cultural grounding
 
-This is a shared contemporary studio arrangement, not a claim that 6/8, acoustic guitar or these instruments represent every tradition in this language. The language’s natural phrasing and the collaborator’s regional knowledge come first. Optional accents are proposals inherited from the collection’s earlier musical research and still need musician review.
+The reference is the Cuban and Mexican bolero tradition, recognized by UNESCO for its relationship with emotion and poetry. This is one Latin American setting for the Spanish text. The small ensemble and quiet, hopeful mood are choices for this adaptation.
 
-Keep the shared 6/8 pulse rather than the earlier bolero groove; allow natural Spanish stress and complete sentences.
-
-Background references retained for collaborators; these do not validate the new arrangement or require it to reproduce the referenced genre:
-
-- [UNESCO — Bolero, identity, emotion and poetry turned into song](https://www.unesco.org/es/articles/el-bolero-es-inscrito-como-patrimonio-cultural-inmaterial-de-la-humanidad)
+[UNESCO — Bolero: identity, emotion and poetry turned into song](https://ich.unesco.org/en/RL/bolero-identity-emotion-and-poetry-turned-into-song-01990)
 
 ## Voice, rhythm and arrangement
 
-Warm youthful male lead, intimate soulful delivery and clear natural pronunciation. Fingerpicked acoustic guitar, mellow bamboo flute, rounded acoustic bass, delicate hand percussion and soft sustained strings form the common palette. Use a gentle, unhurried 6/8 sway: a relaxed two-part rocking feel, not a brisk waltz or dance groove. Keep complete words and natural stresses intact; allow phrase lengths to breathe across the accompaniment.
-
-Nylon-string fingerpicking with occasional soft requinto-style replies. Keep the shared 6/8 pulse rather than the earlier bolero groove; allow natural Spanish stress and complete sentences.
-
-Regional colour stays occasional and secondary. Use one answering instrument at a time; do not crowd the voice. Where melody affects intelligibility, a fluent singer should adjust the contour while retaining the common calm character.
+Use a warm youthful male lead with clear Latin American Spanish and natural word stress. Nylon-string guitar establishes a slow, relaxed 4/4 bolero-inspired pulse. Add melodic requinto replies, rounded acoustic bass and very soft hand percussion. Keep the repeated gathering words separate and let long sentences breathe across the accompaniment. Use a little close harmony in the refrain, keeping the lead clearly in front.
 
 ## Emotional shape
 
-Begin with sparse voice and guitar. Add warmth through the verses without accelerating. Preserve the gathering breath and the fuller potter pause, with soft instruments sustaining underneath. Let the refrain bloom through a little harmony rather than louder drums or a dramatic crescendo. Keep the mountain invitation open and affectionate, then finish the dream-weaving lines softly with peaceful, hopeful contentment. The ending should feel fulfilled rather than sorrowful.
+Begin with voice and nylon-string guitar. Add warmth through the verses without accelerating. Preserve a breath between the repeated gathering phrases and a fuller pause after the potter declaration, with soft instrumental resonance underneath. Let the refrain bloom through gentle requinto replies and a little close refrain harmony. Keep the mountain invitation open and affectionate, then finish the dream-weaving lines softly with peaceful, hopeful contentment.
 
 ## Style prompt
 
 ```text
-Spanish indie-folk ballad with warm youthful male vocals, intimate soulful delivery, and clear natural Spanish pronunciation. Quiet joy, affection, wonder, and peaceful contentment. Gentle, unhurried 6/8 sway with spacious phrasing. Earthy acoustic production: fingerpicked guitar, mellow bamboo flute, rounded acoustic bass, delicate hand percussion, and soft sustained strings. Nylon-string fingerpicking with occasional soft requinto-style replies. Sparse voice-and-guitar opening; gradually add warmth and gently blooming refrain harmonies while maintaining the same relaxed pace. Leave a breath between repeated gathering phrases and a fuller pause after the potter declaration, with instruments sustaining underneath. End softly with warmth and hope. Restrained vocal ornamentation and gentle dynamics throughout.
+Tender Latin American acoustic bolero-inspired ballad in Spanish, drawing on Cuban and Mexican bolero. Warm youthful male vocal, intimate soulful delivery, clear natural Latin American Spanish. Quiet joy, affection, wonder and freedom to dream. Nylon-string guitar, gentle requinto replies, rounded acoustic bass and very soft hand percussion. Slow, relaxed 4/4 with spacious phrasing and an easy, memorable melody. Start with voice and guitar; gradually add warmth and a little close refrain harmony without increasing pace. Leave a breath between the repeated gathering phrases and a fuller pause after the potter declaration, with soft instruments sustaining beneath. End in peaceful, hopeful contentment. No driving dance beat, theatrical belting or mournful delivery.
 ```
 
 ## Working settings and listening checks
 
-Begin with the settings from your preferred take, changing only the language-specific style text for comparison. No new numeric preset is prescribed here. Record the settings with each generated take; the prompt alone cannot guarantee tempo, instruments or mood.
+Begin with the settings from your preferred take and change the style prompt first, keeping the lyrics fixed for comparison. Record the settings with each generated take; the prompt alone cannot guarantee tempo, instruments or mood.
 
-Use a vocal song with the supplied lyrics. Keep the male lead warm and youthful, with additional voices limited to gently blooming refrain harmonies. Preserve pauses without stretching or splitting words.
+Use a vocal song with the supplied lyrics and the arrangement described above. Preserve pauses without stretching or splitting words. Keep Spanish word stress natural, especially in the longer sentences. Listen for tenderness and an easy bolero pulse without rushing the words.
 
-Listen for quiet happiness, a calm soulful delivery and an unhurried sway. Reject a take that becomes brisk, mournful, overdramatic, or drops or invents words. Check the gathering breath and full potter pause. Musical fluency does not establish correct pronunciation; fluent-speaker and sung-delivery reviews remain necessary. Keep the text’s current review status until an actual review is recorded.
+Listen for quiet happiness, calm soulful delivery and an unhurried flow. Reject a take that becomes brisk, mournful, overdramatic, or drops or invents words. Check the gathering breath and full potter pause. Keep the text’s current review status until fluent-speaker and sung-delivery reviews are recorded.
 
 ## Language-specific review
 

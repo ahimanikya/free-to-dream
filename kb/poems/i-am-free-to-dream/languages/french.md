@@ -19,7 +19,7 @@ status: draft
 generated:
   by: process:collection-import
   at: '2026-09-23T02:00:25+00:00'
-music_theme: quiet-joy-indie-folk-v1
+music_theme: quiet-joy-cultural-setting-v1
 ---
 # Libre de rêver
 
@@ -27,7 +27,7 @@ music_theme: quiet-joy-indie-folk-v1
 **Original poem and lyrics:** Ahimanikya Satapathy  
 **Status:** New AI-assisted lyric draft; fluent-speaker and sung review pending  
 **Script:** Latin; French  
-**Musical direction:** Calm, soulful indie-folk · quiet joy · gentle 6/8 sway
+**Musical direction:** Intimate French chanson · guitar and piano · conversational phrasing
 
 ## Poem / arranged lyrics
 
@@ -75,45 +75,35 @@ tes rêves dans les miens.
 
 ## Why this musical direction
 
-A calm, soulful indie-folk sound carries quiet happiness, affection and the freedom to dream. Keep the warmth and spaciousness without becoming brisk, mournful or grand. Differences between languages should be small changes in diction, melodic phrasing or instrumental colour.
-
-Natural French grouping and treatment of silent syllables take priority over a rigid melody; keep the same unhurried feel.
+An intimate chanson setting puts the French poem’s images and spoken flow at the centre. Small changes in melody, piano colour and vocal expression can carry the emotional build while preserving the calm, quietly joyful mood.
 
 ## Cultural grounding
 
-This is a shared contemporary studio arrangement, not a claim that 6/8, acoustic guitar or these instruments represent every tradition in this language. The language’s natural phrasing and the collaborator’s regional knowledge come first. Optional accents are proposals inherited from the collection’s earlier musical research and still need musician review.
+The reference is the poetic French chanson tradition. The Bibliothèque nationale de France’s account of Georges Brassens connects songwriting, poetry and intimate performance. This is a chosen setting within the wider Francophone musical world; the prompt uses no named performer’s vocal style.
 
-Natural French grouping and treatment of silent syllables take priority over a rigid melody; keep the same unhurried feel.
-
-Background references retained for collaborators; these do not validate the new arrangement or require it to reproduce the referenced genre:
-
-- [Bibliothèque nationale de France — Brassens dans Gallica](https://www.bnf.fr/fr/actualites/hommage-georges-brassens-brassens-dans-gallica)
+[Bibliothèque nationale de France — Brassens dans Gallica](https://www.bnf.fr/fr/actualites/hommage-georges-brassens-brassens-dans-gallica)
 
 ## Voice, rhythm and arrangement
 
-Warm youthful male lead, intimate soulful delivery and clear natural pronunciation. Fingerpicked acoustic guitar, mellow bamboo flute, rounded acoustic bass, delicate hand percussion and soft sustained strings form the common palette. Use a gentle, unhurried 6/8 sway: a relaxed two-part rocking feel, not a brisk waltz or dance groove. Keep complete words and natural stresses intact; allow phrase lengths to breathe across the accompaniment.
-
-Nylon-string fingerpicking with a little soft piano. Natural French grouping and treatment of silent syllables take priority over a rigid melody; keep the same unhurried feel.
-
-Regional colour stays occasional and secondary. Use one answering instrument at a time; do not crowd the voice. Where melody affects intelligibility, a fluent singer should adjust the contour while retaining the common calm character.
+Use a warm youthful male lead with conversational French phrasing. Nylon-string guitar and soft piano support a slow, flexible 4/4 pulse; light bass and occasional cello add depth. Keep percussion minimal. Let line endings breathe and let French phrase groups determine emphasis. A fluent singer should decide liaisons and the sung treatment of mute e. Keep the refrain centred on the solo voice, with only light harmony if it helps.
 
 ## Emotional shape
 
-Begin with sparse voice and guitar. Add warmth through the verses without accelerating. Preserve the gathering breath and the fuller potter pause, with soft instruments sustaining underneath. Let the refrain bloom through a little harmony rather than louder drums or a dramatic crescendo. Keep the mountain invitation open and affectionate, then finish the dream-weaving lines softly with peaceful, hopeful contentment. The ending should feel fulfilled rather than sorrowful.
+Begin with voice and nylon-string guitar. Add warmth through the verses without accelerating. Preserve a breath between the repeated gathering phrases and a fuller pause after the potter declaration, with soft instrumental resonance underneath. Let the refrain bloom through soft piano and a few sustained cello notes. Keep the mountain invitation open and affectionate, then finish the dream-weaving lines softly with peaceful, hopeful contentment.
 
 ## Style prompt
 
 ```text
-French indie-folk ballad with warm youthful male vocals, intimate soulful delivery, and clear natural French pronunciation. Quiet joy, affection, wonder, and peaceful contentment. Gentle, unhurried 6/8 sway with spacious phrasing. Earthy acoustic production: fingerpicked guitar, mellow bamboo flute, rounded acoustic bass, delicate hand percussion, and soft sustained strings. Nylon-string fingerpicking with a little soft piano. Sparse voice-and-guitar opening; gradually add warmth and gently blooming refrain harmonies while maintaining the same relaxed pace. Leave a breath between repeated gathering phrases and a fuller pause after the potter declaration, with instruments sustaining underneath. End softly with warmth and hope. Restrained vocal ornamentation and gentle dynamics throughout.
+Intimate French chanson with a warm youthful male voice, soulful conversational delivery and clear natural French diction. Quiet joy, affection, wonder and freedom to dream. Nylon-string acoustic guitar, soft piano, gentle bass and occasional sustained cello; minimal brushed percussion. Slow, flexible 4/4, spacious phrase endings and a graceful, memorable melody shaped by the French words. Begin sparsely with voice and guitar; gradually add warmth while keeping the solo voice central and the pace unhurried. Leave a breath between the repeated gathering phrases and a fuller pause after the potter declaration, with soft instruments sustaining underneath. End in peaceful, hopeful contentment. No theatrical belting, driving beat, dramatic crescendo or mournful delivery.
 ```
 
 ## Working settings and listening checks
 
-Begin with the settings from your preferred take, changing only the language-specific style text for comparison. No new numeric preset is prescribed here. Record the settings with each generated take; the prompt alone cannot guarantee tempo, instruments or mood.
+Begin with the settings from your preferred take and change the style prompt first, keeping the lyrics fixed for comparison. Record the settings with each generated take; the prompt alone cannot guarantee tempo, instruments or mood.
 
-Use a vocal song with the supplied lyrics. Keep the male lead warm and youthful, with additional voices limited to gently blooming refrain harmonies. Preserve pauses without stretching or splitting words.
+Use a vocal song with the supplied lyrics and the arrangement described above. Preserve pauses without stretching or splitting words. Listen for natural French phrase grouping, clear liaisons and comfortable handling of mute e. The delivery should feel personal and lightly hopeful.
 
-Listen for quiet happiness, a calm soulful delivery and an unhurried sway. Reject a take that becomes brisk, mournful, overdramatic, or drops or invents words. Check the gathering breath and full potter pause. Musical fluency does not establish correct pronunciation; fluent-speaker and sung-delivery reviews remain necessary. Keep the text’s current review status until an actual review is recorded.
+Listen for quiet happiness, calm soulful delivery and an unhurried flow. Reject a take that becomes brisk, mournful, overdramatic, or drops or invents words. Check the gathering breath and full potter pause. Keep the text’s current review status until fluent-speaker and sung-delivery reviews are recorded.
 
 ## Language-specific review
 
