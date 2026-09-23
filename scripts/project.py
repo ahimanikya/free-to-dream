@@ -189,6 +189,30 @@ def collaboration_panel(meta, config):
     return f'''<section class="collaborate" aria-label="Collaborate on this language"><div><div class="eyebrow">MAKE THIS VERSION YOUR OWN</div><h2>Bring your language to life.</h2><p>Suggest a phrase, explain a musical tradition, or contribute your own performance.</p></div><div class="action-row"><a class="button" href="contribute.html?language={quote(slug)}&amp;type=lyrics">Suggest a change</a><a class="button secondary" href="contribute.html?language={quote(slug)}&amp;type=recording">Submit your version</a><a class="action" href="contribute.html?language={quote(slug)}&amp;type=feedback">Review a recording</a>{threads}</div><p class="small">Contributions continue on GitHub. New versions are reviewed before joining the collection.</p></section>'''
 
 
+def translation_check_panel(meta):
+    slug = meta['slug']
+    if slug == 'odia':
+        context = 'This is the original Odia source. Check transcription and sung delivery; discuss changes to the source wording with the author.'
+    elif meta['lyric_status'] == 'Adaptation pending':
+        context = 'Lyrics are still pending. Use this checklist when preparing the first adaptation; the brief is not a verified translation.'
+    else:
+        context = 'Use this checklist alongside the review status above. A fluent review of the text and a listening review are separate steps.'
+    return f'''<section id="translation-check" class="collaborate" aria-labelledby="translation-check-title">
+<div class="eyebrow">QUICK REFERENCE</div><h2 id="translation-check-title">How to validate this translation</h2>
+<p>{context}</p>
+<p>Keep the <a href="poems--i-am-free-to-dream--original.html">original Odia poem</a> and <a href="poems--i-am-free-to-dream--meaning.html">meaning &amp; poetic intent</a> beside you.</p>
+<ol>
+<li><strong>Compare the meaning.</strong> Paraphrase each stanza in plain English or Odia and compare it with the source. Preserve freedom to dream and lose the way, the North Star, gathering and embracing the world, the potter, sowing a smile, mountains and moon, clouds and rain, and weaving your dreams into mine. Flag omissions, additions or changed relationships.</li>
+<li><strong>Read it aloud.</strong> Ask a fluent speaker of the intended dialect to check grammar, idioms, spelling, script and natural poetic phrasing. A literal word-for-word match is not the goal.</li>
+<li><strong>Check cultural fit.</strong> Confirm that imagery, terms of affection and musical suggestions suit the chosen region and tradition. Explain any intentional adaptation without changing the poem’s tenderness or meaning.</li>
+<li><strong>Check the sung version, if available.</strong> Listen against the exact lyrics for skipped or added words, pronunciation and unnatural word breaks. Keep a breath between the repeated gathering phrases and a fuller pause after “I am a potter.” Label extra repetitions as song arrangement.</li>
+<li><strong>Leave a review others can use.</strong> Quote the line, suggest a replacement, give its literal meaning and explain why. Include your dialect, name to credit, the version reviewed and any unresolved doubts; add timestamps only for audio you actually heard.</li>
+</ol>
+<p class="small">AI suggestions and back-translation can help find questions; neither proves accuracy. Keep drafts marked for review until a fluent speaker has checked them and the author or a designated maintainer has accepted the changes. Note exactly what was reviewed.</p>
+<div class="action-row"><a class="action" href="contribute.html?language={quote(slug)}&amp;type=lyrics">Share a translation review →</a><a href="guides--contributing.html">Full review process</a></div>
+</section>'''
+
+
 def contribution_page(languages, config):
     options = ''.join(f'<option value="{esc(x["slug"],quote=True)}">{esc(x["language"])}</option>' for x in languages)
     setup = '' if config.get('repository_url') else '<p class="setup-notice">Preview: the GitHub repository has not been connected yet. You can prepare and save a proposal here; submission will open once it is connected.</p>'
@@ -244,7 +268,7 @@ def build(local=False):
         if path.parent == LANGUAGES and path.name != 'index.md':
             slug = meta['slug']
             extras = f'<div class="eyebrow">{esc(meta["language"])} / I AM FREE TO DREAM</div><p class="status">{esc(meta["lyric_status"])} · {esc(meta["review_status"].replace("-", " "))}</p>'
-            extras += '<div class="page-actions"><a class="button" href="contribute.html?language='+quote(slug)+'&amp;type=lyrics">Suggest a change</a><a class="button secondary" href="contribute.html?language='+quote(slug)+'&amp;type=recording">Submit your version</a><a href="#poem-text">Read the lyrics ↓</a></div>'
+            extras += '<div class="page-actions"><a class="button" href="contribute.html?language='+quote(slug)+'&amp;type=lyrics">Suggest a change</a><a class="button secondary" href="contribute.html?language='+quote(slug)+'&amp;type=recording">Submit your version</a><a href="#poem-text">Read the lyrics ↓</a><a href="#translation-check">Translation check ↓</a></div>'
             media = available.get(slug, [])
             if media:
                 extras += '<section class="listening" aria-label="Listen and watch"><h2>Listen &amp; watch</h2>'
@@ -264,6 +288,7 @@ def build(local=False):
             rendered = rendered.replace('<pre>', '<pre dir="rtl">', 1)
         content = '<a class="back" href="index.html#collection">← Browse languages</a>' + extras + f'<article id="poem-text">{rendered}</article>'
         if path.parent == LANGUAGES and path.name != 'index.md':
+            content += translation_check_panel(meta)
             content += share_controls(meta['language']+' · '+meta['title'], page_name(path), config, local)
             content += collaboration_panel(meta, config)
         (output / page_name(path)).write_text(shell(title, content, config, local, page_name(path)), encoding='utf-8')
