@@ -75,7 +75,7 @@ music_theme: quiet-joy-indie-folk-v1
 
 ## Why this musical direction
 
-The author’s final Telugu theme is the shared foundation across the collection: quiet happiness, affection and freedom to dream, carried by a calm, soulful voice. Keep the warmth and spaciousness without becoming brisk, mournful or grand. Differences between languages should be small changes in diction, melodic phrasing or instrumental colour.
+A calm, soulful indie-folk sound carries quiet happiness, affection and the freedom to dream. Keep the warmth and spaciousness without becoming brisk, mournful or grand. Differences between languages should be small changes in diction, melodic phrasing or instrumental colour.
 
 Use clear Modern Standard Arabic and restrained ornament. This shared 6/8 song is not a specified maqam or traditional rhythmic cycle.
 
@@ -109,7 +109,7 @@ Arabic indie-folk ballad with warm youthful male vocals, intimate soulful delive
 
 ## Working settings and listening checks
 
-Keep the controls used for your preferred calm Telugu take as the first comparison point, and change only the language-specific style text. No new numeric preset is prescribed here. Record the settings with each generated take; the prompt alone cannot guarantee tempo, instruments or mood.
+Begin with the settings from your preferred take, changing only the language-specific style text for comparison. No new numeric preset is prescribed here. Record the settings with each generated take; the prompt alone cannot guarantee tempo, instruments or mood.
 
 Use a vocal song with the supplied lyrics. Keep the male lead warm and youthful, with additional voices limited to gently blooming refrain harmonies. Preserve pauses without stretching or splitting words.
 
@@ -121,4 +121,4 @@ New AI-assisted Modern Standard Arabic draft; fluent review pending. Title لي 
 
 ---
 
-Collection prepared 22 September 2026. Original poem: Ahimanikya Satapathy. Translation drafts are AI-assisted except the author’s Odia source. Musical direction updated 23 September 2026 to the author’s shared calm Telugu theme. These language-specific arrangements remain proposals, not verified performances.
+Collection prepared 22 September 2026. Original poem: Ahimanikya Satapathy. Translation drafts are AI-assisted except the author’s Odia source. Musical direction updated 23 September 2026. These language-specific arrangements remain proposals, not verified performances.
