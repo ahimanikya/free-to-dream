@@ -140,7 +140,7 @@ def render_markdown(body, path):
     return bleach.clean(output, tags=tags, attributes={'a':['href','title'], '*':['id'], 'code':['class']}, protocols=['https','http','mailto'], strip=True)
 
 
-def shell(title, content, config, local=False, filename='index.html', description=None):
+def shell(title, content, config, local=False, filename='index.html', description=None, media=None):
     preview = '<div class="preview">Local listening preview · recordings still need review</div>' if local else ''
     description = description or 'One poem, a hundred language journeys. Read, listen and help shape each adaptation.'
     metadata = ''
@@ -148,6 +148,13 @@ def shell(title, content, config, local=False, filename='index.html', descriptio
         canonical = config['site_url'].rstrip('/') + '/' + filename
         cover = config['site_url'].rstrip('/') + '/media/images/cover.png'
         metadata = f'<link rel="canonical" href="{esc(canonical, quote=True)}"><meta property="og:url" content="{esc(canonical, quote=True)}"><meta property="og:image" content="{esc(cover, quote=True)}"><meta name="twitter:card" content="summary_large_image">'
+    if not local and media and media.get('publish') and safe_url(media.get('public_url') or ''):
+        kind = media['kind']
+        source = media['public_url']
+        mime = mimetypes.guess_type(urlparse(source).path)[0]
+        metadata += f'<meta property="og:{kind}" content="{esc(source, quote=True)}"><meta property="og:{kind}:secure_url" content="{esc(source, quote=True)}">'
+        if mime and mime.startswith(kind + '/'):
+            metadata += f'<meta property="og:{kind}:type" content="{esc(mime, quote=True)}">'
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{esc(description, quote=True)}"><meta property="og:title" content="{esc(title, quote=True)} · World is One"><meta property="og:description" content="{esc(description, quote=True)}"><meta property="og:type" content="website">{metadata}
@@ -181,6 +188,8 @@ def share_controls(title, filename, config, local=False, media=None, media_url=N
         if published and media.get('allow_file_sharing', False):
             buttons += '<button type="button" data-action="prepare-file">Prepare file to share</button><button type="button" data-action="share-file" hidden>Share file…</button><a class="action prepared-download" hidden>Save file</a>'
     note = '' if live else '<p class="share-note">Public sharing becomes available when this page is published.</p>'
+    if live:
+        note += '<p class="share-note">For video playback in a social feed, download the MP4 and upload it with your post. Sharing a page link does not upload its media. Autoplay and sound depend on the platform and each viewer’s settings.</p>'
     extension = Path(urlparse(media_url or '').path).suffix.lower()
     if extension not in ('.mp3','.mp4','.m4a','.wav','.ogg','.webm'):
         extension = '.mp4' if media and media['kind'] == 'video' else '.mp3'
@@ -220,6 +229,23 @@ def translation_check_panel(meta):
 <p class="small">AI suggestions and back-translation can help find questions; neither proves accuracy. Keep drafts marked for review until a fluent speaker has checked them and the author or a designated maintainer has accepted the changes. Note exactly what was reviewed.</p>
 <div class="action-row"><a class="action" href="contribute.html?language={quote(slug)}&amp;type=lyrics">Share a translation review →</a><a href="guides--contributing.html">Full review process</a></div>
 </section>'''
+
+
+def resource_panel(meta, items):
+    counts = {kind: sum(item['kind'] == kind for item, _ in items) for kind in ('audio', 'video')}
+    content = f'<section id="resources" class="listening" aria-labelledby="resources-title"><div class="eyebrow">LISTEN, WATCH &amp; DOWNLOAD</div><h2 id="resources-title">Available resources</h2><p>{counts["audio"]} audio · {counts["video"]} video · poem / brief · shared cover image</p>'
+    for item, url in items:
+        kind = item['kind']
+        suffix = Path(urlparse(url).path).suffix.lower()
+        formats = {'.mp3':'MP3', '.mp4':'MP4', '.m4a':'M4A', '.wav':'WAV', '.ogg':'OGG', '.webm':'WebM'}
+        label = formats.get(suffix, kind.title())
+        video_attrs = ' playsinline poster="media/images/cover.png"' if kind == 'video' else ''
+        content += f'<div class="recording"><p class="eyebrow">{label} · {"PUBLISHED" if item["publish"] else "LOCAL REVIEW COPY"}</p><h3>{esc(item["title"])}</h3><{kind} controls preload="metadata"{video_attrs} src="{esc(url, quote=True)}">Playback unavailable. Use the download link below.</{kind}><p>{esc(item["notes"])}</p><div class="action-row"><a class="action" href="{esc(url, quote=True)}" download>Download / open {label}</a><a class="action" href="recording--{item["id"]}.html">Share this version &amp; credits →</a></div></div>'
+    if not items:
+        content += '<p>No MP3 or MP4 is published for this language yet. Available recordings will appear here with inline players.</p>'
+    content += f'<div class="recording"><h3>Poem &amp; musical direction</h3><div class="action-row"><a class="action" href="#poem-text">Read on this page</a><a class="action" href="kb/poems/i-am-free-to-dream/languages/{quote(meta["slug"])}.md" download>Download text (Markdown)</a></div></div>'
+    content += '<div class="recording"><h3>Shared collection cover · PNG</h3><a href="media/images/cover.png"><img src="media/images/cover.png" width="160" loading="lazy" alt="Collection cover: hands shaping a pot beneath a moonlit mountain landscape"></a><p>This artwork is shared across the collection.</p><a class="action" href="media/images/cover.png" download="free-to-dream-cover.png">Save cover image</a></div></section>'
+    return content
 
 
 def contribution_page(languages, config):
@@ -263,13 +289,13 @@ def build(local=False):
         for item, url in items:
             filename = f'recording--{item["id"]}.html'
             tag = item['kind']
-            poster = ' poster="media/images/cover.png"' if tag == 'video' else ''
+            poster = ' playsinline poster="media/images/cover.png"' if tag == 'video' else ''
             credits = ''.join(f'<dt>{esc(key.replace("_", " ").title())}</dt><dd>{esc(value)}</dd>' for key,value in item.get('credits',{}).items())
             content = f'<a class="back" href="{page_name(LANGUAGES/(slug+".md"))}">← All {esc(language_map[slug]["language"])} versions and lyrics</a><section class="recording-detail"><div class="eyebrow">{esc(language_map[slug]["language"])} · {"PUBLISHED VERSION" if item["publish"] else "REVIEW COPY"}</div><h1>{esc(item["title"])}</h1><{tag} controls preload="metadata"{poster} src="{esc(url,quote=True)}"></{tag}><p>{esc(item["notes"])}</p><dl class="credits">{credits}</dl>'
             content += share_controls(item['title'], filename, config, local, item, url)
             content += f'<p><a href="contribute.html?language={quote(slug)}&amp;type=feedback&amp;recording={quote(item["id"])}">Leave a listening note for this version</a></p></section>'
             content += collaboration_panel(language_map[slug], config)
-            (output/filename).write_text(shell(item['title'], content, config, local, filename, f'{language_map[slug]["language"]} {tag} version of I Am Free to Dream. Listen, share and explore the lyrics.'), encoding='utf-8')
+            (output/filename).write_text(shell(item['title'], content, config, local, filename, f'{language_map[slug]["language"]} {tag} version of I Am Free to Dream. Listen, share and explore the lyrics.', media=item), encoding='utf-8')
     for path in sorted(KB.rglob('*.md')):
         meta, body = read_concept(path)
         title = meta.get('title', path.parent.name if path.name == 'index.md' else path.stem)
@@ -278,16 +304,8 @@ def build(local=False):
             slug = meta['slug']
             extras = f'<div class="eyebrow">{esc(meta["language"])} / I AM FREE TO DREAM</div><p class="status">{esc(meta["lyric_status"])} · {esc(meta["review_status"].replace("-", " "))}</p>'
             extras += '<div class="page-actions"><a class="button" href="contribute.html?language='+quote(slug)+'&amp;type=lyrics">Suggest a change</a><a class="button secondary" href="contribute.html?language='+quote(slug)+'&amp;type=recording">Submit your version</a><a href="#poem-text">Read the lyrics ↓</a><a href="#translation-check">Translation check ↓</a></div>'
-            media = available.get(slug, [])
-            if media:
-                extras += '<section class="listening" aria-label="Listen and watch"><h2>Listen &amp; watch</h2>'
-                for item, url in media:
-                    tag = item['kind']
-                    poster = ' poster="media/images/cover.png"' if tag == 'video' else ''
-                    extras += f'<div class="recording"><h3>{esc(item["title"])}</h3><{tag} controls preload="metadata"{poster} src="{esc(url, quote=True)}">Your browser does not support this player.</{tag}><p>{esc(item["notes"])}</p><a class="action" href="recording--{item["id"]}.html">Version, credits &amp; sharing →</a></div>'
-                extras += '</section>'
-            else:
-                extras += '<div class="empty">No recording published here yet. The lyrics and musical direction are ready to explore below.</div>'
+            extras += '<p><a class="action" href="#resources">Available resources ↓</a></p>'
+            extras += resource_panel(meta, available.get(slug, []))
             if slug == 'odia':
                 extras += f'<p><a href="{esc(config["preferred_odia_suno_url"], quote=True)}">Listen to the author’s selected Odia take on Suno ↗</a></p>'
             if config.get('repository_url'):
