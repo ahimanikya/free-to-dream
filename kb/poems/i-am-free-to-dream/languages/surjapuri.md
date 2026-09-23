@@ -1,0 +1,143 @@
+---
+type: Language adaptation
+title: I Am Free to Dream — Surjapuri adaptation brief
+language: Surjapuri
+slug: surjapuri
+collection_order: 83
+poem: i-am-free-to-dream
+lyric_status: Adaptation pending
+review_status: needs-native-review
+description: Surjapuri lyrics, cultural references and musical direction.
+tags:
+- i-am-free-to-dream
+- language-adaptation
+sources:
+- resource: /poems/i-am-free-to-dream/original.md
+  title: Author-supplied Odia poem
+script: Audience-preferred script or transcription to be agreed
+status: draft
+generated:
+  by: process:collection-import
+  at: '2026-09-23T02:00:25+00:00'
+---
+# I Am Free to Dream — Surjapuri adaptation brief
+
+**Language:** Surjapuri  
+**Original poem and lyrics:** Ahimanikya Satapathy  
+**Status:** Native-language title and lyrics pending; musical design and source poem supplied  
+**Script:** Audience-preferred script or transcription to be agreed  
+**Musical direction:** Surjapuri contemporary conversational ballad with open phrase endings
+
+## Title and poem status
+
+The English heading is a working collection label, not a translated title. A proper native-language adaptation is still needed. The Odia source and English meaning guide below preserve the poem for that work; neither is a finished lyric in this language.
+
+## Original Odia poem
+
+Author-supplied wording; spelling retained.
+
+```text
+ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ
+ମନା ନାହିଁ ମଝି ରାସ୍ତାରେ ହଜି ଜିବାକୁ
+ଧୃବତାରା ଖୋଜିଦେବ ରାସ୍ତା ।
+
+ସାଉଁଟି ସାଉଁଟି ଜାବୁଡି ଧରିଛି ସଂସାରକୁ
+ଜୋଡି ଦେବାର ଆଶାରେ,
+ସଜେଇ ଦେବାର ଆଶାରେ ।
+
+କୁଂଭକାର ମୁଁ, ଗଠିଦେବା ସିଖିଛି
+ରଂଗେଈ ଦେଈ,
+ତୁମ ମୁଖରେ ହସ ବୁଣିବା ସିଖିଛି ।
+
+ଆସ ପାହାଡ ଚଢିବା
+ଆସ ଜନ୍ହ ଦେଖିବା
+ବାଦଲ ସାଂଗେ କାଂଧ ମିଳେଈ
+ଝଡିବାର ମଂତ୍ର ସିଖିବା ।
+
+ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ ।
+ମନା ନାହିଁ ଗୁଂଥିଦେବାକୁ
+ତୁମ ସପ୍ନକୁ ମୋ ସପ୍ନରେ ।
+```
+
+## English meaning guide for the adapter
+
+This is a meaning scaffold, not a replacement poem to sing. “Rain” interprets the falling/shedding image in its cloud context. Preserve its feeling of release and generosity.
+
+```text
+[Intro]
+I am free to dream, and to lose my way along the road.
+The North Star will show the way.
+
+[Verse 1]
+Gathering the world, piece by piece, I hold it close,
+hoping to join or mend it, hoping to make it beautiful.
+
+[Verse 2]
+I am a potter.
+
+I have learned to give form and colour,
+and to sow a smile upon your face.
+
+[Chorus]
+Repeat the opening stanza about dreaming, losing the way, and the North Star.
+
+[Bridge]
+Come, let us climb mountains and look at the moon.
+Shoulder to shoulder with the clouds,
+let us learn the mantra of falling or shedding as rain.
+
+[Final Chorus]
+I am free to dream,
+free to weave your dreams into mine.
+
+[Soft Outro]
+Repeat the final dream-weaving image.
+```
+
+## Adaptation brief
+
+Preserve the freedom to dream and become lost, the guiding North Star, gathering and embracing the world, the potter giving form and colour, sowing a smile, mountains and moon, standing beside clouds and learning to fall as rain, and finally weaving the beloved’s dreams into the speaker’s. Keep the address intimate and secular. Prefer natural local idiom over word-for-word English syntax; do not add new scenery, religious figures or unrelated imagery.
+
+Keep Intro → Verse 1 → Verse 2 → Chorus → Bridge → Final Chorus → Soft Outro. The chorus repeats the opening thought; the outro repeats the final dream-weaving image. Keep a distinct breath between the two gathering phrases where repetition works naturally, and a full blank line after the potter declaration.
+
+## Why this musical direction
+
+Let the poem sound like an affectionate conversation, with each image completed before the accompaniment answers. A freer verse and a more settled refrain distinguish this proposal from the Rajbanshi bhawaiya-informed setting. The final melody must follow reviewed Surjapuri words rather than an assumed neighbouring-language tune.
+
+## Cultural grounding
+
+Khagesh Singha’s study places Surjapuri folk culture in the specific multilingual setting of Islampur in Uttar Dinajpur. That regional study provides context, not a prescribed musical form. The conversational arrangement below is a proposal to develop with a Surjapuri singer. [Khagesh Singha — Folk Culture of the Surjapuri People in Islampur](https://www.jhsr.in/published_volumes/folk-culture-of-the-surjapuri-people-in-islampur-subdivision-of-uttar-dinajpur-of-west-bengalan-assessment/)
+
+The arrangement below is a creative proposal for this poem. It is not a claim to represent every tradition in the language, or to reproduce a traditional composition. Regional instruments, phrasing and song forms overlap across communities.
+
+## Voice, rhythm and arrangement
+
+Close warm lead, a faint harmonium bed, sparse plucked notes and short flute answers after whole phrases. Add a soft hand-drum pulse only beneath the returning refrain at first. Keep the longest verse lines flexible and avoid filling every silence with ornament.
+
+## Emotional shape
+
+Begin almost as spoken melody. Gathering gains warmth without rushing its repetition, and the potter statement gets a full rest. The mountain invitation opens into longer notes; the final refrain settles gently before a brief flute answer.
+
+## Suno Style prompt
+
+Prepared for use once reviewed native-language lyrics are available.
+
+```text
+Intimate contemporary Surjapuri poetic ballad, warm conversational male voice and natural local diction. Flexible verse timing, open phrase endings, faint harmonium, sparse plucked notes and short flute answers after complete thoughts. A soft hand drum enters beneath the returning refrain. Separate the gathering phrases and pause fully after the potter declaration with a quiet sustained chord. Begin sparsely, gradually warm the verses, open the mountain invitation into longer notes, then settle tenderly on weaving dreams together. Understated secular lyric setting.
+```
+
+## Working settings and listening checks
+
+Keep **Style Influence 60** as the initial comparison point from the earlier Indian-language work. Keep other controls at your current preferred values while trying the new style. This is a continuity choice, not a culture-specific preset or a guarantee of the requested sound.
+
+Use a vocal song with your own lyrics. The prompts request a male lead to retain the author’s speaker, with any additional voices limited to the described responses. Instrument names and pauses are creative requests: the generated result still needs listening checks.
+
+Listen for complete words, natural stresses, a distinct gathering breath, the full potter pause, a gentle lift in the bridge and an unhurried ending. Reject a take that drops or invents lyrics. Musical fluency alone does not establish correct pronunciation. Where a specialist instrument matters, have a knowledgeable listener confirm the sound rather than relying on the prompt label.
+
+## Language-specific review
+
+Native title and lyrics pending. Agree the target Surjapuri variety and audience-preferred script or transcription, including Devanagari or Bengali where appropriate. Check idiom and pronunciation with a fluent adapter; a blend of Hindi, Bengali and Maithili is not a verified Surjapuri translation. Local musical review should guide any further traditional influence.
+
+---
+
+Collection prepared 22 September 2026. Original poem: Ahimanikya Satapathy. Translation drafts are AI-assisted except the author’s Odia source. Musical designs are newly proposed and have not been verified by listening to new generated recordings.

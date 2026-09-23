@@ -1,0 +1,74 @@
+[
+  {
+    "id": "odia-audio-01",
+    "language": "odia",
+    "poem": "i-am-free-to-dream",
+    "kind": "audio",
+    "title": "Odia · imported recording",
+    "local_path": "local-assets/3f4c46806d226e0a.mp3",
+    "public_url": null,
+    "publish": false,
+    "review_status": "needs-review",
+    "notes": "Review candidate. Mapping to the preferred Suno take has not been verified.",
+    "credits": {
+      "poem": "Ahimanikya Satapathy",
+      "music_and_vocals": "Generated using Suno AI",
+      "other": "Other production credits to be confirmed before release"
+    },
+    "rights_status": "release-details-to-confirm"
+  },
+  {
+    "id": "tamil-audio-01",
+    "language": "tamil",
+    "poem": "i-am-free-to-dream",
+    "kind": "audio",
+    "title": "Tamil · preferred track",
+    "local_path": "local-assets/13ee1ef7bc4bcd3b.mp3",
+    "public_url": null,
+    "publish": false,
+    "review_status": "needs-review",
+    "notes": "The user identified this Tamil track as a preferred take. Pronunciation review remains open.",
+    "credits": {
+      "poem": "Ahimanikya Satapathy",
+      "music_and_vocals": "Generated using Suno AI",
+      "other": "Other production credits to be confirmed before release"
+    },
+    "rights_status": "release-details-to-confirm"
+  },
+  {
+    "id": "odia-video-05",
+    "language": "odia",
+    "poem": "i-am-free-to-dream",
+    "kind": "video",
+    "title": "Odia · lyric video v5",
+    "local_path": "local-assets/03df5a3060fa97cf.mp4",
+    "public_url": null,
+    "publish": false,
+    "review_status": "needs-review",
+    "notes": "Working export. The conversation reported lyric timing problems; synchronization is not certified.",
+    "credits": {
+      "poem": "Ahimanikya Satapathy",
+      "music_and_vocals": "Generated using Suno AI",
+      "other": "Other production credits to be confirmed before release"
+    },
+    "rights_status": "release-details-to-confirm"
+  },
+  {
+    "id": "tamil-video-01",
+    "language": "tamil",
+    "poem": "i-am-free-to-dream",
+    "kind": "video",
+    "title": "Tamil · existing video with Tamil audio",
+    "local_path": "local-assets/776e4e3c8ec66f3d.mp4",
+    "public_url": null,
+    "publish": false,
+    "review_status": "needs-review",
+    "notes": "Working export. Review visual fit and any on-screen Odia text before publication.",
+    "credits": {
+      "poem": "Ahimanikya Satapathy",
+      "music_and_vocals": "Generated using Suno AI",
+      "other": "Other production credits to be confirmed before release"
+    },
+    "rights_status": "release-details-to-confirm"
+  }
+]

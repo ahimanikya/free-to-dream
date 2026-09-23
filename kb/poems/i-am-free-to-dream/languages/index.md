@@ -1,0 +1,102 @@
+# Languages
+
+- [Adi](adi.md) — Adaptation pending.
+- [Ahirani](ahirani.md) — Adaptation pending.
+- [Angika](angika.md) — Adaptation pending.
+- [Ao](ao.md) — Adaptation pending.
+- [Apatani](apatani.md) — Adaptation pending.
+- [Arabic — Modern Standard Arabic](arabic.md) — Lyric draft.
+- [Assamese](assamese.md) — Lyric draft.
+- [Awadhi](awadhi.md) — Adaptation pending.
+- [Badaga](badaga.md) — Adaptation pending.
+- [Bagheli](bagheli.md) — Adaptation pending.
+- [Balti](balti.md) — Adaptation pending.
+- [Bengali](bengali.md) — Lyric draft.
+- [Bhili — variety to be selected](bhili.md) — Adaptation pending.
+- [Bhojpuri](bhojpuri.md) — Lyric draft.
+- [Bodo](bodo.md) — Adaptation pending.
+- [Braj Bhasha](braj.md) — Adaptation pending.
+- [Bundeli](bundeli.md) — Adaptation pending.
+- [Car Nicobarese](car-nicobarese.md) — Adaptation pending.
+- [Chakma](chakma.md) — Adaptation pending.
+- [Chhattisgarhi](chhattisgarhi.md) — Adaptation pending.
+- [Dimasa](dimasa.md) — Adaptation pending.
+- [Dogri](dogri.md) — Lyric draft.
+- [English](english.md) — English adaptation.
+- [French](french.md) — Lyric draft.
+- [Galo](galo.md) — Adaptation pending.
+- [Garhwali](garhwali.md) — Adaptation pending.
+- [Garo](garo.md) — Adaptation pending.
+- [Gojri](gojri.md) — Adaptation pending.
+- [Gondi](gondi.md) — Adaptation pending.
+- [Gujarati](gujarati.md) — Lyric draft.
+- [Halbi](halbi.md) — Adaptation pending.
+- [Haryanvi](haryanvi.md) — Lyric draft.
+- [Hindi](hindi.md) — Lyric draft.
+- [Ho](ho.md) — Adaptation pending.
+- [Jeseri / Dweep Bhasha](jeseri.md) — Adaptation pending.
+- [Kangri](kangri.md) — Adaptation pending.
+- [Kannada](kannada.md) — Lyric draft.
+- [Karbi](karbi.md) — Adaptation pending.
+- [Kashmiri](kashmiri.md) — Adaptation pending.
+- [Kharia](kharia.md) — Adaptation pending.
+- [Khasi](khasi.md) — Adaptation pending.
+- [Khortha](khortha.md) — Adaptation pending.
+- [Kodava](kodava.md) — Adaptation pending.
+- [Kokborok](kokborok.md) — Adaptation pending.
+- [Konkani](konkani.md) — Lyric draft.
+- [Konyak](konyak.md) — Adaptation pending.
+- [Korku](korku.md) — Adaptation pending.
+- [Koya](koya.md) — Adaptation pending.
+- [Kui](kui.md) — Adaptation pending.
+- [Kumaoni](kumaoni.md) — Adaptation pending.
+- [Kurmali](kurmali.md) — Adaptation pending.
+- [Kurukh](kurukh.md) — Adaptation pending.
+- [Kutchi](kutchi.md) — Adaptation pending.
+- [Kuvi](kuvi.md) — Adaptation pending.
+- [Ladakhi](ladakhi.md) — Adaptation pending.
+- [Lambadi / Banjara](lambadi.md) — Adaptation pending.
+- [Lepcha](lepcha.md) — Adaptation pending.
+- [Limbu](limbu.md) — Adaptation pending.
+- [Lotha](lotha.md) — Adaptation pending.
+- [Magahi](magahi.md) — Adaptation pending.
+- [Mahl](mahl.md) — Adaptation pending.
+- [Maithili](maithili.md) — Lyric draft.
+- [Malayalam](malayalam.md) — Lyric draft.
+- [Malvi](malvi.md) — Adaptation pending.
+- [Mandarin Chinese](mandarin.md) — Lyric draft.
+- [Manipuri (Meitei)](manipuri.md) — Adaptation pending.
+- [Marathi](marathi.md) — Lyric draft.
+- [Marwari](marwari.md) — Adaptation pending.
+- [Mewari](mewari.md) — Adaptation pending.
+- [Mising](mising.md) — Adaptation pending.
+- [Mizo](mizo.md) — Adaptation pending.
+- [Mundari](mundari.md) — Adaptation pending.
+- [Nagpuri / Sadri](nagpuri.md) — Adaptation pending.
+- [Nepali](nepali.md) — Lyric draft.
+- [Nimadi](nimadi.md) — Adaptation pending.
+- [Nyishi](nyishi.md) — Adaptation pending.
+- [Odia](odia.md) — Original.
+- [Pnar](pnar.md) — Adaptation pending.
+- [Portuguese — Brazilian setting](portuguese.md) — Lyric draft.
+- [Punjabi](punjabi.md) — Lyric draft.
+- [Rabha](rabha.md) — Adaptation pending.
+- [Rajbanshi](rajbanshi.md) — Adaptation pending.
+- [Sambalpuri](sambalpuri.md) — Lyric draft.
+- [Sanskrit](sanskrit.md) — Lyric draft.
+- [Santali](santali.md) — Adaptation pending.
+- [Saurashtra](saurashtra.md) — Adaptation pending.
+- [Sikkimese Bhutia](sikkimese-bhutia.md) — Adaptation pending.
+- [Sindhi](sindhi.md) — Lyric draft.
+- [Sora / Saora](sora.md) — Adaptation pending.
+- [Spanish](spanish.md) — Lyric draft.
+- [Sumi](sumi.md) — Adaptation pending.
+- [Surjapuri](surjapuri.md) — Adaptation pending.
+- [Swahili / Kiswahili](swahili.md) — Lyric draft.
+- [Tamil](tamil.md) — Lyric draft.
+- [Tangkhul](tangkhul.md) — Adaptation pending.
+- [Telugu](telugu.md) — Lyric draft.
+- [Tenyidie](tenyidie.md) — Adaptation pending.
+- [Tulu](tulu.md) — Adaptation pending.
+- [Urdu](urdu.md) — Lyric draft.
+- [Warli](warli.md) — Adaptation pending.

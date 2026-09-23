@@ -1,0 +1,203 @@
+[
+  {
+    "sha256": "c0d0a14c4a2e510e2fe28c7c57343dc83cee29b9b62e101c144840ac4c3c7e5a",
+    "local_path": "local-assets/c0d0a14c4a2e510e.png",
+    "bytes": 2677107,
+    "source_names": [
+      "odia-poem-cover.png"
+    ],
+    "role": "working-asset",
+    "published": false
+  },
+  {
+    "sha256": "81193651164ad96b40958e3cecb9a5b19f9019c6c2d8c9a74ebac153f217b2d6",
+    "local_path": "local-assets/81193651164ad96b.jpg",
+    "bytes": 545118,
+    "source_names": [
+      "odia-poem-facebook-cover.jpg"
+    ],
+    "role": "working-asset",
+    "published": false
+  },
+  {
+    "sha256": "03df5a3060fa97cf980fda7253e28c61e87754d63192667881605feb093222c3",
+    "local_path": "local-assets/03df5a3060fa97cf.mp4",
+    "bytes": 34203663,
+    "source_names": [
+      "odia-poem-facebook-v5.mp4"
+    ],
+    "role": "working-asset",
+    "published": false
+  },
+  {
+    "sha256": "c3909a7002b9e42d6a22f038334bbc839f6be4a5c2d14b05b9a258a6472e2ed3",
+    "local_path": "local-assets/c3909a7002b9e42d.mp4",
+    "bytes": 33820826,
+    "source_names": [
+      "odia-poem-lyric-video-v2.mp4"
+    ],
+    "role": "working-asset",
+    "published": false
+  },
+  {
+    "sha256": "8306589efad0626d3c37fedb924bd04ea4e39e2c72d026355dbca0c14d053c75",
+    "local_path": "local-assets/8306589efad0626d.mp4",
+    "bytes": 34067879,
+    "source_names": [
+      "odia-poem-lyric-video-v3.mp4"
+    ],
+    "role": "working-asset",
+    "published": false
+  },
+  {
+    "sha256": "f0fd69747b9ec6ecaeea49b4e36c9fed9aba0c8c94fc409a744ab96d8d109ae7",
+    "local_path": "local-assets/f0fd69747b9ec6ec.mp4",
+    "bytes": 34352098,
+    "source_names": [
+      "odia-poem-lyric-video-v4.mp4",
+      "ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ.mp4"
+    ],
+    "role": "working-asset",
+    "published": false
+  },
+  {
+    "sha256": "d7dd0c97d06d9109ea2c7e1bf7e0af9d1f985bf96b70bdaf0a8a492be8af6aa5",
+    "local_path": "local-assets/d7dd0c97d06d9109.mp4",
+    "bytes": 34169060,
+    "source_names": [
+      "odia-poem-lyric-video.mp4"
+    ],
+    "role": "working-asset",
+    "published": false
+  },
+  {
+    "sha256": "517cc17a42ea299a7019d76a183eb4f128ca186eaadadfcaca0e730dac624259",
+    "local_path": "local-assets/517cc17a42ea299a.jpg",
+    "bytes": 274408,
+    "source_names": [
+      "odia-poem-video-preview.jpg"
+    ],
+    "role": "working-asset",
+    "published": false
+  },
+  {
+    "sha256": "5335be3e1d546d01f6f496e0a6fca8d940f12bc6f7cecd1ddbef54fad4bbb7cc",
+    "local_path": "local-assets/5335be3e1d546d01.txt",
+    "bytes": 22815,
+    "source_names": [
+      "page-snapshot.txt"
+    ],
+    "role": "private-reference",
+    "published": false
+  },
+  {
+    "sha256": "e6fb5c5facf2b6f1fffee99d932ebcfec8a85baaee24b0d0ca7006d1f8e136ef",
+    "local_path": "local-assets/e6fb5c5facf2b6f1.jpg",
+    "bytes": 61652,
+    "source_names": [
+      "poem-and-title.jpg"
+    ],
+    "role": "private-reference",
+    "published": false
+  },
+  {
+    "sha256": "e78bdc395df45e9d0ad0811fabcda2a09cb9e5cd3c09ccfe0b259683bf1bb8db",
+    "local_path": "local-assets/e78bdc395df45e9d.jpg",
+    "bytes": 41804,
+    "source_names": [
+      "publication-credit.jpg"
+    ],
+    "role": "private-reference",
+    "published": false
+  },
+  {
+    "sha256": "743a9087016c7c2ddfb46a12729fd83c03e08421c86bfdef8385fb48357dc354",
+    "local_path": "local-assets/743a9087016c7c2d.md",
+    "bytes": 3307,
+    "source_names": [
+      "publication-record.md"
+    ],
+    "role": "private-reference",
+    "published": false
+  },
+  {
+    "sha256": "776e4e3c8ec66f3dddabdd7a871f10000f76aafc4cf0a41c50e73bca651a025f",
+    "local_path": "local-assets/776e4e3c8ec66f3d.mp4",
+    "bytes": 78515123,
+    "source_names": [
+      "கனவு காண எனக்குத் தடையில்லை.mp4"
+    ],
+    "role": "working-asset",
+    "published": false
+  },
+  {
+    "sha256": "be6da160e4687fd32d4977ae33203ffe21ac4b143ef5321eb6cc4f38d2e7b4d2",
+    "local_path": "local-assets/be6da160e4687fd3.jpg",
+    "bytes": 1315408,
+    "source_names": [
+      "Ahi Social Profile.jpg"
+    ],
+    "role": "private-reference",
+    "published": false
+  },
+  {
+    "sha256": "3c18cfe26a4e86efcd9a8a02c581e09a384bd05ba526291c168bd018f92447ed",
+    "local_path": "local-assets/3c18cfe26a4e86ef.mp4",
+    "bytes": 114748855,
+    "source_names": [
+      "ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ-V2.mp4"
+    ],
+    "role": "working-asset",
+    "published": false
+  },
+  {
+    "sha256": "a7b3c2b4091ba3d0057bbd24ddd03b30e9b03687ca68a359fba91c401245e574",
+    "local_path": "local-assets/a7b3c2b4091ba3d0.mp4",
+    "bytes": 6493873,
+    "source_names": [
+      "ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ-old.mp4"
+    ],
+    "role": "working-asset",
+    "published": false
+  },
+  {
+    "sha256": "3f4c46806d226e0a061872d8f86625c98689ba9ad11a6b87ec1d999fcc3980f8",
+    "local_path": "local-assets/3f4c46806d226e0a.mp3",
+    "bytes": 4757719,
+    "source_names": [
+      "ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ.mp3"
+    ],
+    "role": "working-asset",
+    "published": false
+  },
+  {
+    "sha256": "83de15a4357123eea9d400cdf489c698fee2a02462632cdf9f97312f80653c8f",
+    "local_path": "local-assets/83de15a4357123ee.m4a",
+    "bytes": 2718117,
+    "source_names": [
+      "கனவு காண எனக்குத் தடையில்லை.m4a"
+    ],
+    "role": "working-asset",
+    "published": false
+  },
+  {
+    "sha256": "13ee1ef7bc4bcd3b61293a0b90f120de5a6786cc1622f740af9765be0297c5a6",
+    "local_path": "local-assets/13ee1ef7bc4bcd3b.mp3",
+    "bytes": 3496001,
+    "source_names": [
+      "கனவு காண எனக்குத் தடையில்லை.mp3"
+    ],
+    "role": "working-asset",
+    "published": false
+  },
+  {
+    "sha256": "8b186a72b3a66ed9cb91de89ba1c129aa4ddf34fc2142e4d47ad99051463e8e6",
+    "local_path": "local-assets/8b186a72b3a66ed9.wav",
+    "bytes": 29197840,
+    "source_names": [
+      "கனவு காண எனக்குத் தடையில்லை.wav"
+    ],
+    "role": "working-asset",
+    "published": false
+  }
+]
