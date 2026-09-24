@@ -1,12 +1,28 @@
 <section id="index-player" class="index-player" aria-label="Collection player" hidden>
- <div class="index-now"><span class="eyebrow">NOW PLAYING <span id="index-position"></span></span><a id="index-track-link"></a></div>
- <label class="index-playlist">Playlist<select id="index-playlist" data-playlist aria-label="Playlist track"><option value="">Choose a track…</option></select></label>
- <audio id="index-audio" controls preload="none" aria-label="Collection audio player"></audio>
- <div class="playlist-controls" role="group" aria-label="Playlist controls">
-  <button id="index-previous" type="button" aria-label="Previous track" disabled>←</button>
-  <button id="index-next" type="button" aria-label="Next track" disabled>→</button>
-  <label class="auto-next"><input id="index-auto" type="checkbox">Auto-next</label>
+ <div class="player-heading">
+  <img class="player-cover" src="media/images/cover.png" alt="" width="44" height="44">
+  <div class="player-title">
+   <span class="eyebrow">NOW PLAYING <span id="index-position"></span></span>
+   <label class="track-picker"><span class="visually-hidden">Choose a track</span><select id="index-playlist" data-playlist aria-label="Playlist track"><option value="">Choose a track…</option></select><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></label>
+  </div>
  </div>
- <button id="index-close" type="button" aria-label="Close player">×</button>
+ <div class="playlist-controls" role="group" aria-label="Playback controls">
+  <button id="index-previous" class="player-icon" type="button" aria-label="Previous track" title="Previous track" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5v14M18 5l-9 7 9 7Z"/></svg></button>
+  <button id="index-toggle" class="player-icon player-toggle" type="button" aria-label="Play" title="Play"><svg id="index-play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 11 7-11 7Z"/></svg><svg id="index-pause-icon" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M8 5v14M16 5v14"/></svg></button>
+  <button id="index-next" class="player-icon" type="button" aria-label="Next track" title="Next track" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 5v14M6 5l9 7-9 7Z"/></svg></button>
+ </div>
+ <button id="index-close" class="player-icon" type="button" aria-label="Close player" title="Close player"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 10M17 7 7 17"/></svg></button>
+ <div class="player-timeline">
+  <output id="index-elapsed" aria-live="off" aria-label="Elapsed time">0:00</output>
+  <input id="index-seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Seek in song" disabled>
+  <output id="index-duration" aria-live="off" aria-label="Song duration">0:00</output>
+  <button id="index-mute" class="player-icon" type="button" aria-label="Mute" title="Mute" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9Z"/><path class="speaker-wave" d="M17 8a6 6 0 0 1 0 8"/><path class="speaker-muted" d="m17 9 5 6m0-6-5 6"/></svg></button>
+ </div>
+ <div class="player-meta">
+  <label class="auto-next"><input id="index-auto" type="checkbox">Auto-next</label>
+  <div class="player-links"><a id="index-lyrics-link">Read lyrics</a><a id="index-track-link">Track details ↗</a></div>
+ </div>
+ <p id="index-lyric" class="player-lyric" dir="auto" hidden></p>
+ <audio id="index-audio" preload="none" aria-label="Collection audio player" hidden></audio>
  <p id="index-play-status" class="small" role="status"></p>
 </section>

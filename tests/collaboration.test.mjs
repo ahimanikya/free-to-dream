@@ -144,14 +144,14 @@ test('The listening journey includes alternate styles but skips archived takes a
   assert.equal(adjacentTrack(testTracks,'or',-1),null);
   assert.equal(adjacentTrack(testTracks,'en-jazz'),null);
 });
-function playerFixture(load=async()=>testTracks) {
+function playerFixture(load=async()=>testTracks, loadLyrics=async()=>[]) {
   class Element {
     constructor(){this.listeners={};this.attributes={};this.dataset={};this.classList={contains:()=>false,toggle(){},add(){},remove(){}};this.options=[];this.parentElement={};this.paused=true;this.checked=false;this.hidden=true;this.textContent='';}
     addEventListener(name,fn){(this.listeners[name]??=[]).push(fn);}
     async emit(name){for(const fn of this.listeners[name]||[])await fn({});}
     setAttribute(k,v){this.attributes[k]=v;}
     getAttribute(k){return this.attributes[k];}
-    removeAttribute(k){delete this[k];}
+    removeAttribute(k){delete this[k];delete this.attributes[k];}
     querySelector(){return this.label??=new Element();}
     replaceChildren(){this.options=[];}
     append(option){this.options.push(option);}
@@ -159,11 +159,11 @@ function playerFixture(load=async()=>testTracks) {
     pause(){this.paused=true;this.emit('pause');}
     load(){}
   }
-  const ids=['index-player','index-audio','index-playlist','index-track-link','index-play-status','index-previous','index-next','index-auto','index-position','index-close'];
+  const ids=['index-player','index-audio','index-playlist','index-track-link','index-play-status','index-previous','index-next','index-auto','index-position','index-close','index-toggle','index-play-icon','index-pause-icon','index-seek','index-elapsed','index-duration','index-mute','index-lyrics-link','index-lyric'];
   const nodes=Object.fromEntries(ids.map(id=>[id,new Element()]));
   const button=new Element();button.dataset.playRecording='or';button.attributes['aria-label']='Play Odia';
   const doc={querySelector:q=>nodes[q.slice(1)],querySelectorAll:q=>q==='[data-playlist]'?[nodes['index-playlist']]:[button],createElement:()=>new Element(),body:new Element()};
-  const controller=setupIndexPlayer(doc,load);
+  const controller=setupIndexPlayer(doc,load,loadLyrics);
   return {nodes,button,controller};
 }
 test('Auto-next is opt-in; next/previous and playlist selection update the playing track',async()=>{
@@ -193,4 +193,41 @@ test('Blocked autoplay offers a manual continuation and close cancels a pending 
   release(testTracks);await click;
   assert.equal(pending.nodes['index-player'].hidden,true);
   assert.equal(pending.nodes['index-audio'].src,undefined);
+});
+
+
+test('The custom player seeks by audio time, formats duration, pauses and mutes',async()=>{
+  const {nodes:n,button,controller}=playerFixture();await controller.ready;
+  await button.emit('click');
+  const audio=n['index-audio'];
+  audio.duration=180;audio.currentTime=61.5;await audio.emit('loadedmetadata');
+  assert.equal(n['index-elapsed'].textContent,'1:01');
+  assert.equal(n['index-duration'].textContent,'3:00');
+  assert.equal(n['index-seek'].disabled,false);
+  n['index-seek'].value='90';await n['index-seek'].emit('input');
+  assert.equal(audio.currentTime,90);assert.equal(n['index-elapsed'].textContent,'1:30');
+  await n['index-toggle'].emit('click');assert.equal(audio.paused,true);
+  assert.equal(n['index-toggle'].getAttribute('aria-label'),'Play');
+  assert.equal(n['index-play-icon'].getAttribute('hidden'),undefined);
+  assert.equal(n['index-pause-icon'].getAttribute('hidden'),'');
+  await n['index-toggle'].emit('click');assert.equal(audio.paused,false);
+  await n['index-mute'].emit('click');assert.equal(audio.muted,true);
+  assert.equal(n['index-mute'].getAttribute('aria-label'),'Unmute');
+});
+test('Timed lines follow the current recording and seeking; late lyrics cannot replace the next song',async()=>{
+  let deliver;
+  const tracks=testTracks.map(t=>({...t,...(t.id==='or'?{lyrics_url:'or.json'}:{})}));
+  const {nodes:n,button,controller}=playerFixture(async()=>tracks,()=>new Promise(resolve=>deliver=resolve));
+  await controller.ready;await button.emit('click');
+  const cues=[{start:1000,end:2000,text:'A first line'},{start:3000,end:4000,text:'A second line'}];
+  deliver(cues);await Promise.resolve();
+  n['index-audio'].currentTime=1.2;await n['index-audio'].emit('timeupdate');
+  assert.equal(n['index-lyric'].textContent,'A first line');
+  n['index-audio'].currentTime=3.5;await n['index-audio'].emit('seeked');
+  assert.equal(n['index-lyric'].textContent,'A second line');
+  await n['index-next'].emit('click');assert.equal(n['index-lyric'].hidden,true);
+  await button.emit('click');
+  await n['index-next'].emit('click');deliver(cues);await Promise.resolve();
+  n['index-audio'].currentTime=1.2;await n['index-audio'].emit('timeupdate');
+  assert.equal(n['index-lyric'].textContent,'');assert.equal(n['index-lyric'].hidden,true);
 });
