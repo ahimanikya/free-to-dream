@@ -253,3 +253,23 @@ article.language-card { height:420px; min-height:420px; padding:20px; }
 }
 @media(max-width:600px) { .featured-grid { grid-auto-columns:calc(100% - 24px); gap:14px; } }
 @media(prefers-reduced-motion:reduce) { .button,.card-play,.card-scroll-controls button { transition:none; } }
+
+/* A poem without borders, with a quiet listening queue. */
+.brand span { font-size:9px; letter-spacing:.13em; white-space:nowrap; }
+header { gap:24px; }
+.playlist-controls { display:flex; gap:8px; align-items:center; }
+.playlist-controls button { min-width:34px; padding:5px 9px; }
+.playlist-controls button:disabled { opacity:.35; cursor:default; }
+.auto-next { display:flex; align-items:center; gap:6px; white-space:nowrap; font-size:12px; font-weight:400; }
+.auto-next input { width:16px; height:16px; margin:0; accent-color:var(--ink); }
+#index-position { letter-spacing:0; font-weight:400; margin-left:8px; color:var(--muted); }
+.playlist-start { margin-top:10px; font-size:12px; }
+.index-now { min-width:0; }
+.index-now a { overflow-wrap:anywhere; }
+@media(max-width:760px) { header { flex-wrap:wrap; gap:18px; } .brand span { font-size:8px; letter-spacing:.1em; } }
+@media(max-width:600px) {
+ .playlist-controls { order:4; flex-basis:100%; }
+ .index-version { order:5; }
+ .has-index-player { padding-bottom:310px; }
+ .index-player { max-height:65vh; overflow-y:auto; }
+}

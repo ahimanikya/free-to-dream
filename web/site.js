@@ -1,3 +1,4 @@
+import {setupBackNavigation} from './navigation.mjs';
 import {attachLyrics} from './lyrics.mjs';
 import {setupLanguageCarousel} from './carousel.mjs';
 import {buildProposal, githubSubmission, publicMediaURL} from './collaboration.mjs';
@@ -16,8 +17,16 @@ function update() {
   }
   document.querySelector('#result-count').textContent = `${count} ${count === 1 ? 'language' : 'languages'}`;
   document.querySelector('#no-results').hidden = count > 0;
+  const url = new URL(location.href);
+  if (search.value) url.searchParams.set('q', search.value); else url.searchParams.delete('q');
+  if (filter.value !== 'all') url.searchParams.set('show', filter.value); else url.searchParams.delete('show');
+  history.replaceState(null, '', url);
 }
 if (search && filter) {
+  const params = new URLSearchParams(location.search);
+  search.value = params.get('q') || '';
+  if ([...filter.options].some(option => option.value === params.get('show'))) filter.value = params.get('show');
+  update();
   search.addEventListener('input', update);
   filter.addEventListener('change', update);
 }
@@ -181,3 +190,5 @@ if (copyLyricsPrompt) copyLyricsPrompt.addEventListener('click', async () => {
     status.textContent = 'The lyrics are selected. Copy them using your browser’s copy command.';
   }
 });
+
+setupBackNavigation();

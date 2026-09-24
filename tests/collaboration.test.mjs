@@ -115,3 +115,79 @@ test('Loop rebasing preserves the visible languages and never duplicates a card'
   }
   assert.equal(rebasePlan(15000,viewport,step,count,size),0);
 });
+
+import {backDestination} from '../web/navigation.mjs';
+import {playlistTracks, adjacentTrack, setupIndexPlayer} from '../web/index-player.mjs';
+const site='https://example.org/free-to-dream/';
+test('Back navigation returns to a useful parent, including direct contribution and timing links',()=>{
+  const lang='poems--i-am-free-to-dream--languages--odia.html';
+  assert.equal(backDestination(site+lang,site+'index.html#collection','languages.html').url,site+'index.html#collection');
+  assert.equal(backDestination(site+lang,site+'languages.html?q=odia','languages.html').url,site+'languages.html?q=odia');
+  assert.equal(backDestination(site+'contribute.html?language=odia',site+lang,'languages.html').url,site+lang);
+  assert.equal(backDestination(site+'contribute.html?language=odia','','languages.html').url,site+lang);
+  assert.equal(backDestination(site+'timing.html?recording=odia-audio-01','','languages.html').url,site+'recording--odia-audio-01.html');
+  for(const previous of ['https://elsewhere.org/index.html', 'https://example.org/other/index.html',site+'contribute.html',site+lang]) {
+    const result=backDestination(site+lang,previous,'languages.html');
+    assert.equal(result.url,site+'languages.html'); assert.equal(result.fromPrevious,false);
+  }
+});
+const testTracks=[
+  {id:'or',language:'odia',language_name:'Odia',title:'Odia song',url:'or.mp3',page:'or.html'},
+  {id:'old',language:'odia',title:'Old take',url:'old.mp3',archived:true},
+  {id:'en-country',language:'english',language_name:'English',title:'Country',url:'country.mp3',page:'country.html'},
+  {id:'en-jazz',language:'english',language_name:'English',title:'Jazz',url:'jazz.mp3',page:'jazz.html'}
+];
+test('The listening journey includes alternate styles but skips archived takes and stops at both ends',()=>{
+  assert.deepEqual(playlistTracks(testTracks).map(t=>t.id),['or','en-country','en-jazz']);
+  assert.equal(adjacentTrack(testTracks,'or').id,'en-country');
+  assert.equal(adjacentTrack(testTracks,'en-country',-1).id,'or');
+  assert.equal(adjacentTrack(testTracks,'or',-1),null);
+  assert.equal(adjacentTrack(testTracks,'en-jazz'),null);
+});
+function playerFixture(load=async()=>testTracks) {
+  class Element {
+    constructor(){this.listeners={};this.attributes={};this.dataset={};this.classList={contains:()=>false,toggle(){},add(){},remove(){}};this.options=[];this.parentElement={};this.paused=true;this.checked=false;this.hidden=true;this.textContent='';}
+    addEventListener(name,fn){(this.listeners[name]??=[]).push(fn);}
+    async emit(name){for(const fn of this.listeners[name]||[])await fn({});}
+    setAttribute(k,v){this.attributes[k]=v;}
+    getAttribute(k){return this.attributes[k];}
+    removeAttribute(k){delete this[k];}
+    querySelector(){return this.label??=new Element();}
+    replaceChildren(){this.options=[];}
+    append(option){this.options.push(option);}
+    async play(){if(this.blocked)throw Error('Playback blocked');this.paused=false;await this.emit('play');}
+    pause(){this.paused=true;this.emit('pause');}
+    load(){}
+  }
+  const ids=['index-player','index-audio','index-version','index-track-link','index-play-status','index-previous','index-next','index-auto','index-position','index-close'];
+  const nodes=Object.fromEntries(ids.map(id=>[id,new Element()]));
+  const button=new Element();button.dataset.playRecording='or';button.attributes['aria-label']='Play Odia';
+  const doc={querySelector:q=>nodes[q.slice(1)],querySelectorAll:()=>[button],createElement:()=>new Element(),body:new Element()};
+  const controller=setupIndexPlayer(doc,load);
+  return {nodes,button,controller};
+}
+test('Auto-next is opt-in; next/previous and version selection update the playing track',async()=>{
+  const {nodes:n,button,controller}=playerFixture();await controller.ready;
+  assert.equal(n['index-audio'].src,undefined);
+  await button.emit('click');assert.equal(n['index-audio'].src,'or.mp3');
+  await n['index-audio'].emit('ended');assert.equal(n['index-audio'].src,'or.mp3');
+  n['index-auto'].checked=true;await n['index-audio'].emit('ended');
+  assert.equal(n['index-audio'].src,'country.mp3');assert.equal(n['index-version'].options.length,2);
+  assert.equal(n['index-position'].textContent,'Track 2 of 3');
+  n['index-version'].value='en-jazz';await n['index-version'].emit('change');
+  assert.equal(n['index-audio'].src,'jazz.mp3');assert.equal(n['index-next'].disabled,true);
+  await n['index-audio'].emit('ended');assert.match(n['index-play-status'].textContent,/end of/);
+  await n['index-previous'].emit('click');assert.equal(n['index-audio'].src,'country.mp3');
+  await n['index-close'].emit('click');assert.equal(n['index-player'].hidden,true);assert.equal(n['index-auto'].checked,false);
+});
+test('Blocked autoplay offers a manual continuation and close cancels a pending catalog request',async()=>{
+  const {nodes:n,button,controller}=playerFixture();await controller.ready;
+  await button.emit('click');n['index-audio'].blocked=true;n['index-auto'].checked=true;
+  await n['index-audio'].emit('ended');await Promise.resolve();
+  assert.equal(n['index-audio'].src,'country.mp3');assert.match(n['index-play-status'].textContent,/Press play/);
+  let release;const pending=playerFixture(()=>new Promise(resolve=>release=resolve));
+  const click=pending.button.emit('click');await pending.nodes['index-close'].emit('click');
+  release(testTracks);await click;
+  assert.equal(pending.nodes['index-player'].hidden,true);
+  assert.equal(pending.nodes['index-audio'].src,undefined);
+});

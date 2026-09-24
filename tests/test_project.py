@@ -202,12 +202,14 @@ class CollectionTests(unittest.TestCase):
         expected = {'odia':(1,6), 'tamil':(1,1), 'telugu':(4,4), 'english':(2,2), 'filipino':(1,1)}
         for language, (audio_count, video_count) in expected.items():
             page=(output/f'poems--i-am-free-to-dream--languages--{language}.html').read_text()
-            self.assertEqual(page.count('<audio '), audio_count)
+            self.assertEqual(page.count('<audio '), audio_count+1)
+            self.assertEqual(page.count('id="index-player"'),1)
+            self.assertIn('id="index-auto" type="checkbox"',page)
             self.assertEqual(page.count('<video '), video_count)
             self.assertIn('Working recordings', page)
             self.assertNotIn('LOCAL REVIEW COPY', page)
             self.assertNotIn('autoplay', page)
-            self.assertEqual(page.count('preload="none"'), audio_count+video_count)
+            self.assertEqual(page.count('preload="none"'), audio_count+video_count+1)
             self.assertIn('https://media.githubusercontent.com/media/', page)
             for item in (x for x in app.records() if x['language']==language):
                 detail=(output/f'recording--{item["id"]}.html').read_text()

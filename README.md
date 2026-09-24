@@ -1,4 +1,4 @@
-# World is One, India is One!
+# World is One — A Poem Without Borders
 
 **One poem. Many voices. Shared dreams.**
 
@@ -106,3 +106,5 @@ The homepage tells the story of the author’s college-era poem and introduces a
 Language pages separate **Read**, **Listen** and **Watch**. Reading hides standalone arrangement labels without changing the source lyrics or stanza spacing. The full text, including song sections, is available under **Lyrics prompt · view & copy**. Odia continues to show the author’s original poem.
 
 The author bio uses background supplied by the author. Profile links are configured in `site-config.json` under `author_links`; add only confirmed public profiles. Motion is user-controlled and respects reduced-motion preferences.
+
+The collection identity is **World is One — A Poem Without Borders**. The listening player offers Previous and Next across current audio recordings, including alternate styles. Auto-next is off by default and stops at the final track. Language and recording pages offer “Play in playlist” alongside their inline players. Back links follow a valid parent page when possible and keep useful destinations for direct visits.

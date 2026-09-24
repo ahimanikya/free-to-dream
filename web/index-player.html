@@ -1,7 +1,12 @@
 <section id="index-player" class="index-player" aria-label="Collection player" hidden>
- <div class="index-now"><span class="eyebrow">NOW PLAYING</span><a id="index-track-link"></a></div>
+ <div class="index-now"><span class="eyebrow">NOW PLAYING <span id="index-position"></span></span><a id="index-track-link"></a></div>
  <label class="index-version">Version<select id="index-version" aria-label="Recording version"></select></label>
  <audio id="index-audio" controls preload="none" aria-label="Collection audio player"></audio>
+ <div class="playlist-controls" role="group" aria-label="Playlist controls">
+  <button id="index-previous" type="button" aria-label="Previous track" disabled>←</button>
+  <button id="index-next" type="button" aria-label="Next track" disabled>→</button>
+  <label class="auto-next"><input id="index-auto" type="checkbox">Auto-next</label>
+ </div>
  <button id="index-close" type="button" aria-label="Close player">×</button>
  <p id="index-play-status" class="small" role="status"></p>
 </section>

@@ -1,13 +1,13 @@
 ---
 type: Project
-title: World is One, India is One!
+title: World is One — A Poem Without Borders
 description: One poem. Many voices. Shared dreams.
 status: draft
 generated:
   by: process:collection-import
   at: '2026-09-23T02:00:25+00:00'
 ---
-# World is One, India is One!
+# World is One — A Poem Without Borders
 
 One poem. Many voices. Shared dreams.
 

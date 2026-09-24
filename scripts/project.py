@@ -288,16 +288,16 @@ def shell(title, content, config, local=False, filename='index.html', descriptio
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{esc(description, quote=True)}"><meta property="og:title" content="{esc(title, quote=True)} · World is One"><meta property="og:description" content="{esc(description, quote=True)}"><meta property="og:type" content="website">{metadata}
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https:; img-src 'self'; media-src 'self' https: blob:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
-<title>{esc(title)} · World is One</title><link rel="stylesheet" href="assets/style.css"><script type="module" src="assets/site.js"></script></head>
-<body data-repository="{esc(config.get('repository_url', ''), quote=True)}" data-site-url="{esc(config.get('site_url', ''), quote=True)}">{preview}<header><a class="brand" href="index.html"><img src="assets/odia-lotus.svg" alt="" width="38" height="38" aria-hidden="true">WORLD IS ONE<span>INDIA IS ONE</span></a><nav aria-label="Main navigation"><a href="languages.html">Languages</a><a href="poems--i-am-free-to-dream--original.html">The poem</a><a href="contribute.html">Contribute</a></nav></header>
-<main>{content}</main><footer>Original poem © Ahimanikya Satapathy · AI-assisted adaptations and generated recordings are identified on their pages.<br><a href="guides--rights.html">Credits &amp; rights</a> · <a href="guides--artwork.html">Art of the site</a> · <a href="contribute.html?type=recording">Submit your version</a> · <a href="kb/index.md">Knowledge base</a></footer></body></html>'''
+<title>{esc(title)} · World is One</title><link rel="stylesheet" href="assets/style.css?v={config.get("_asset_version","1")}"><script type="module" src="assets/site.js?v={config.get("_asset_version","1")}"></script></head>
+<body data-repository="{esc(config.get('repository_url', ''), quote=True)}" data-site-url="{esc(config.get('site_url', ''), quote=True)}">{preview}<header><a class="brand" href="index.html"><img src="assets/odia-lotus.svg" alt="" width="38" height="38" aria-hidden="true">WORLD IS ONE<span>A POEM WITHOUT BORDERS</span></a><nav aria-label="Main navigation"><a href="languages.html">Languages</a><a href="poems--i-am-free-to-dream--original.html">The poem</a><a href="contribute.html">Contribute</a></nav></header>
+<main>{content}</main>{(ROOT/"web/index-player.html").read_text() if config.get("_has_audio") else ""}<footer>Original poem © Ahimanikya Satapathy · AI-assisted adaptations and generated recordings are identified on their pages.<br><a href="guides--rights.html">Credits &amp; rights</a> · <a href="guides--artwork.html">Art of the site</a> · <a href="contribute.html?type=recording">Submit your version</a> · <a href="kb/index.md">Knowledge base</a></footer></body></html>'''
 
 
 def share_controls(title, filename, config, local=False, media=None, media_url=None):
     published = not media or publicly_available(media)
     live = bool(config.get('site_url')) and published and not local
     url = config['site_url'].rstrip('/') + '/' + filename if live else ''
-    caption = f'{title} — World is One, India is One! Original poem by Ahimanikya Satapathy.'
+    caption = f'{title} — World is One — A Poem Without Borders. Original poem by Ahimanikya Satapathy.'
     if media:
         if not media['publish']: caption += ' Review copy; pronunciation and timing review open.'
         caption += ' ' + ' · '.join(f'{key.replace("_", " ").title()}: {value}' for key,value in media.get('credits', {}).items() if key != 'poem')
@@ -369,7 +369,8 @@ def resource_panel(meta, items):
     def card(item, url):
         label = Path(urlparse(url).path).suffix.lstrip('.').upper()
         title = re.sub(r'^(?:I Am Free to Dream|'+re.escape(meta['language'])+r')\s*[·–—-]\s*', '', item['title'])
-        return f'<div class="recording"><h4>{esc(title)}</h4>{player_markup(item, url)}<div class="recording-links"><a href="{esc(url, quote=True)}" download>Download {label}</a><a href="recording--{item["id"]}.html">Details &amp; share ↗</a></div></div>'
+        playlist = f'<button type="button" class="playlist-start" data-play-recording="{item["id"]}" aria-label="Play {esc(item["title"],quote=True)}" aria-pressed="false"><span class="play-label">▶ Play</span> in playlist</button>' if item['kind']=='audio' and not item.get('archived') else ''
+        return f'<div class="recording"><h4>{esc(title)}</h4>{player_markup(item, url)}{playlist}<div class="recording-links"><a href="{esc(url, quote=True)}" download>Download {label}</a><a href="recording--{item["id"]}.html">Details &amp; share ↗</a></div></div>'
     for kind, heading, target in [('audio', 'Listen', 'listen'), ('video', 'Watch', 'watch')]:
         current = [(item, url) for item, url in items if item['kind'] == kind and not item.get('archived')]
         older = [(item, url) for item, url in items if item['kind'] == kind and item.get('archived')]
@@ -454,10 +455,17 @@ def contribution_page(languages, config):
 def build(local=False):
     languages = validate()
     config = json.loads((ROOT / 'site-config.json').read_text())
+    config['_has_audio'] = any(item['kind']=='audio' and (publicly_available(item) or (local and item.get('repo_path'))) for item in records())
     output = ROOT / ('site' if local else 'site-public')
     if output.exists(): shutil.rmtree(output)
     output.mkdir()
     shutil.copytree(ROOT / 'web', output / 'assets', ignore=shutil.ignore_patterns('*.html'))
+    asset_version = hashlib.sha256(b''.join(p.read_bytes() for p in sorted((ROOT/'web').iterdir()) if p.is_file())).hexdigest()[:12]
+    config['_asset_version'] = asset_version
+    for asset in (output/'assets').iterdir():
+        if asset.suffix in ('.js','.mjs'):
+            asset.write_text(re.sub(r"(['\"])(\./[a-z-]+\.mjs)\1", lambda match: match[1]+match[2]+'?v='+asset_version+match[1], asset.read_text()))
+
     # Only explicitly authorized previews/releases are embedded remotely.
     # Never ship archive binaries or unhydrated pointers in the Pages build.
     shutil.copytree(ROOT / 'media', output / 'media', ignore=shutil.ignore_patterns(*(f'*{ext}' for ext in MEDIA_EXTENSIONS), '*.srt', '*.vtt'))
@@ -494,7 +502,10 @@ def build(local=False):
             poster = ' playsinline poster="media/images/cover.png"' if tag == 'video' else ''
             credits = ''.join(f'<dt>{esc(key.replace("_", " ").title())}</dt><dd>{esc(value)}</dd>' for key,value in item.get('credits',{}).items())
             content = f'<a class="back" href="{page_name(LANGUAGES/(slug+".md"))}">← All {esc(language_map[slug]["language"])} versions and lyrics</a><section class="recording-detail"><div class="eyebrow">{esc(language_map[slug]["language"])} · {esc(recording_label(item))}</div><h1>{esc(item["title"])}</h1>{player_markup(item, url)}<p>{esc(item["notes"])}</p><dl class="credits">{credits}</dl>'
-            if tag == 'audio': content += f'<p><a href="timing.html?recording={quote(item["id"])}">Add or adjust timed lyrics →</a></p>'
+            if tag == 'audio':
+                if not item.get('archived'):
+                    content += f'<button type="button" class="playlist-start" data-play-recording="{item["id"]}" aria-label="Play {esc(item["title"],quote=True)}" aria-pressed="false"><span class="play-label">▶ Play</span> in playlist</button>'
+                content += f'<p><a href="timing.html?recording={quote(item["id"])}">Add or adjust timed lyrics →</a></p>'
             content += share_controls(item['title'], filename, config, local, item, url)
             content += f'<p><a href="contribute.html?language={quote(slug)}&amp;type=feedback&amp;recording={quote(item["id"])}">Leave a listening note for this version</a></p></section>'
             content += collaboration_panel(language_map[slug], config)
@@ -506,9 +517,9 @@ def build(local=False):
             content = language_content(meta, body, path, available.get(meta['slug'], []), config, local)
         elif path == KB/'poems/i-am-free-to-dream/original.md':
             odia_meta, odia_body = read_concept(LANGUAGES/'odia.md')
-            content = language_content(odia_meta, odia_body, LANGUAGES/'odia.md', available.get('odia', []), config, local)
+            content = language_content(odia_meta, odia_body, LANGUAGES/'odia.md', available.get('odia', []), config, local).replace('<a class="back" href="languages.html">← All languages</a>', '<a class="back" href="index.html">← Home</a>')
         else:
-            content = '<a class="back" href="languages.html">← Browse languages</a><article>'+render_markdown(body,path)+'</article>'
+            content = '<a class="back" href="index.html">← Home</a><article>'+render_markdown(body,path)+'</article>'
         (output / page_name(path)).write_text(shell(title, content, config, local, page_name(path)), encoding='utf-8')
     lyric_count = sum(has_lyrics(x) for x in languages)
     cards = {}
@@ -542,9 +553,8 @@ def build(local=False):
             audio_catalog.append({'id':record['id'],'language':slug,'language_name':language_map[slug]['language'],'title':record['title'],'url':url,'page':f'recording--{record["id"]}.html','duration_seconds':record.get('duration_seconds'),'draft':draft[1] if draft else '', 'archived':record.get('archived',False), 'srt_url':f'media/lyrics/{record["id"]}.srt' if record.get('timed_lyrics') else None})
     (output/'assets/listening.json').write_text(json.dumps(audio_catalog,ensure_ascii=False),encoding='utf-8')
     (output/'timing.html').write_text(shell('Time the lyrics', (ROOT/'web/timing.html').read_text(), config, local, 'timing.html'),encoding='utf-8')
-    player = (ROOT/'web/index-player.html').read_text() if audio_catalog else ''
     directory = f'''<section id="collection" class="language-directory"><div class="section-heading"><a class="back" href="index.html">← Home</a><div class="eyebrow">THE LIVING COLLECTION</div><h1>Find your language.</h1><p>Explore all {len(languages)} language journeys. Listen, read, or help an adaptation find its natural voice.</p></div><div class="filters"><label for="search">Search languages or titles<input id="search" type="search" placeholder="Try Odia, Tamil, Sanskrit…"></label><label for="filter">Show<select id="filter"><option value="all">All languages</option><option value="listen">Ready to listen</option><option value="lyrics">Lyrics available</option><option value="brief">Adaptation briefs</option></select></label></div><p id="result-count" role="status" aria-live="polite">{len(languages)} languages</p><div class="language-grid">{''.join(cards.values())}</div><p id="no-results" hidden>No matching language. Try another name or clear the filter.</p></section>'''
-    (output/'languages.html').write_text(shell('Explore the languages', directory+player, config, local, 'languages.html'), encoding='utf-8')
+    (output/'languages.html').write_text(shell('Explore the languages', directory, config, local, 'languages.html'), encoding='utf-8')
     featured_slugs = ['odia', 'english', 'tamil', 'telugu', 'filipino', 'sambalpuri']
     journey_order = [slug for slug in featured_slugs if slug in cards] + [slug for slug in cards if slug not in featured_slugs]
     featured = ''.join(cards[slug] for slug in journey_order)
@@ -555,7 +565,7 @@ def build(local=False):
 <section class="origin-story" id="story" aria-labelledby="story-title"><div class="story-copy"><div class="eyebrow"><span class="north-star" aria-hidden="true">✧</span> WHERE THE DREAM BEGAN</div><h2 id="story-title">The canvas changes.<br>The dream stays.</h2><p>My first AI post asked, “AI makes more. Who decides what matters?” For this experiment, the answer started with an old poem I still cared about.</p><p>I wrote it in Odia during my college years, before 1993, and later shared my poetry on <a href="https://kabitaprusta.blogspot.com/">Ahimanikya Kabita Prusta</a>. With help from AI, words that had reached only a few readers became a song and a video. They found a form I hadn’t been able to give them before.</p><p>This is why I made this page: to invite others into that possibility. Each language brings its own memories, music and ways of speaking. Together, we can help the poem travel while keeping its tenderness, quiet joy and freedom to dream.</p></div><aside class="author-bio" aria-labelledby="author-name"><div class="eyebrow">THE PERSON BEHIND THE POEM</div><h3 id="author-name">Ahimanikya Satapathy</h3><p>I’m an entrepreneur and technologist who has kept a place for poetry and art. I once thought of coding as painting with a different canvas. My Odia poems and the artwork I signed in 1993 belong to that same creative journey.</p><p>Now the canvas has changed again. This collection explores what becomes possible when human imagination, AI and the care of a community meet.</p><nav class="author-links" aria-label="Connect with Ahimanikya">{author_links}</nav></aside></section>
 <div class="dream-thread" aria-hidden="true"><span>✧</span></div><blockquote class="dream-quote"><p>“free to weave your dreams with mine.”</p><cite>From the English adaptation of <em>I Am Free to Dream</em></cite></blockquote>
 <section class="invitation" id="invitation"><div class="invitation-copy"><div class="eyebrow">THIS IS AN INVITATION</div><h2>A language is a living culture.</h2><p>Bring the language you call home. Offer a phrase that feels more natural, share a listening note, or sing the poem in your own way. We’ll shape each version together, with care and credit for every contribution.</p><div class="action-row"><a class="button" href="contribute.html">Suggest a change →</a><a class="button secondary" href="contribute.html?type=recording">Submit your version →</a></div></div><figure class="author-artwork"><a href="media/images/ahimanikya-artwork-1993.png" aria-label="View the full artwork by Ahimanikya Satapathy"><img src="media/images/ahimanikya-artwork-1993.png" width="347" height="640" alt="Hand-painted profile looking upward, in charcoal and blue-grey tones on cream paper; signed by Ahimanikya Satapathy, 1993"></a><figcaption>Artwork by Ahimanikya Satapathy · 1993</figcaption></figure></section>'''
-    (output / 'index.html').write_text(shell('I Am Free to Dream', content+player, config, local), encoding='utf-8')
+    (output / 'index.html').write_text(shell('I Am Free to Dream', content, config, local), encoding='utf-8')
     (output / '.nojekyll').touch()
     print(f'Built {output.name}: {len(languages)} languages; {sum(map(len, available.values()))} playable media items')
 
@@ -603,7 +613,7 @@ def export_wiki():
     dest = ROOT / 'wiki-export'
     dest.mkdir(exist_ok=True)
     pages = list(KB.rglob('*.md'))
-    home = ['# World is One, India is One!\n\nOne poem. Many voices. Shared dreams.\n']
+    home = ['# World is One — A Poem Without Borders\n\nOne poem. Many voices. Shared dreams.\n']
     for path in pages:
         meta, body = read_concept(path)
         filename = page_name(path).removesuffix('.html')
