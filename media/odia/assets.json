@@ -1,0 +1,72 @@
+[
+  {
+    "repo_path": "media/odia/i-am-free-to-dream-odia.mp3",
+    "sha256": "3f4c46806d226e0a061872d8f86625c98689ba9ad11a6b87ec1d999fcc3980f8",
+    "bytes": 4757719,
+    "source_name": "3f4c46806d226e0a.mp3",
+    "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/odia--i-am-free-to-dream-odia.mp3",
+    "title": "Odia audio",
+    "status": "working",
+    "notes": "Imported recording; preferred-take mapping has not been independently verified."
+  },
+  {
+    "repo_path": "media/odia/lyric-video-v1.mp4",
+    "sha256": "d7dd0c97d06d9109ea2c7e1bf7e0af9d1f985bf96b70bdaf0a8a492be8af6aa5",
+    "bytes": 34169060,
+    "source_name": "odia-poem-lyric-video.mp4",
+    "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/odia--lyric-video-v1.mp4",
+    "title": "Odia lyric video v1",
+    "status": "historical-draft",
+    "notes": "Preserved revision; lyric timing issues were reported during development."
+  },
+  {
+    "repo_path": "media/odia/lyric-video-v2.mp4",
+    "sha256": "c3909a7002b9e42d6a22f038334bbc839f6be4a5c2d14b05b9a258a6472e2ed3",
+    "bytes": 33820826,
+    "source_name": "odia-poem-lyric-video-v2.mp4",
+    "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/odia--lyric-video-v2.mp4",
+    "title": "Odia lyric video v2",
+    "status": "historical-draft",
+    "notes": "Preserved revision; lyric timing issues were reported during development."
+  },
+  {
+    "repo_path": "media/odia/lyric-video-v3.mp4",
+    "sha256": "8306589efad0626d3c37fedb924bd04ea4e39e2c72d026355dbca0c14d053c75",
+    "bytes": 34067879,
+    "source_name": "odia-poem-lyric-video-v3.mp4",
+    "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/odia--lyric-video-v3.mp4",
+    "title": "Odia lyric video v3",
+    "status": "historical-draft",
+    "notes": "Preserved revision; lyric timing issues were reported during development."
+  },
+  {
+    "repo_path": "media/odia/lyric-video-v4.mp4",
+    "sha256": "f0fd69747b9ec6ecaeea49b4e36c9fed9aba0c8c94fc409a744ab96d8d109ae7",
+    "bytes": 34352098,
+    "source_name": "odia-poem-lyric-video-v4.mp4",
+    "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/odia--lyric-video-v4.mp4",
+    "title": "Odia lyric video v4",
+    "status": "historical-draft",
+    "notes": "Preserved revision; lyric timing issues were reported during development."
+  },
+  {
+    "repo_path": "media/odia/lyric-video-v5.mp4",
+    "sha256": "03df5a3060fa97cf980fda7253e28c61e87754d63192667881605feb093222c3",
+    "bytes": 34203663,
+    "source_name": "odia-poem-facebook-v5.mp4",
+    "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/odia--lyric-video-v5.mp4",
+    "title": "Odia lyric video v5",
+    "status": "historical-draft",
+    "notes": "Preserved revision; lyric timing issues were reported during development."
+  },
+  {
+    "repo_path": "media/odia/source/melodicpal-original.mp4",
+    "sha256": "3c18cfe26a4e86efcd9a8a02c581e09a384bd05ba526291c168bd018f92447ed",
+    "bytes": 114748855,
+    "source_name": "3c18cfe26a4e86ef.mp4",
+    "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/odia--source--melodicpal-original.mp4",
+    "title": "Original Melodicpal visual source",
+    "status": "source",
+    "notes": "Original supplied visual sequence; reused for the Tamil, Telugu, English and Filipino videos."
+  }
+]

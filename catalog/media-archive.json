@@ -1,0 +1,239 @@
+{
+  "storage": "git-lfs",
+  "assets": [
+    {
+      "repo_path": "media/odia/i-am-free-to-dream-odia.mp3",
+      "sha256": "3f4c46806d226e0a061872d8f86625c98689ba9ad11a6b87ec1d999fcc3980f8",
+      "bytes": 4757719,
+      "source_name": "3f4c46806d226e0a.mp3",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/odia--i-am-free-to-dream-odia.mp3",
+      "title": "Odia audio",
+      "status": "working",
+      "notes": "Imported recording; preferred-take mapping has not been independently verified."
+    },
+    {
+      "repo_path": "media/odia/lyric-video-v1.mp4",
+      "sha256": "d7dd0c97d06d9109ea2c7e1bf7e0af9d1f985bf96b70bdaf0a8a492be8af6aa5",
+      "bytes": 34169060,
+      "source_name": "odia-poem-lyric-video.mp4",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/odia--lyric-video-v1.mp4",
+      "title": "Odia lyric video v1",
+      "status": "historical-draft",
+      "notes": "Preserved revision; lyric timing issues were reported during development."
+    },
+    {
+      "repo_path": "media/odia/lyric-video-v2.mp4",
+      "sha256": "c3909a7002b9e42d6a22f038334bbc839f6be4a5c2d14b05b9a258a6472e2ed3",
+      "bytes": 33820826,
+      "source_name": "odia-poem-lyric-video-v2.mp4",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/odia--lyric-video-v2.mp4",
+      "title": "Odia lyric video v2",
+      "status": "historical-draft",
+      "notes": "Preserved revision; lyric timing issues were reported during development."
+    },
+    {
+      "repo_path": "media/odia/lyric-video-v3.mp4",
+      "sha256": "8306589efad0626d3c37fedb924bd04ea4e39e2c72d026355dbca0c14d053c75",
+      "bytes": 34067879,
+      "source_name": "odia-poem-lyric-video-v3.mp4",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/odia--lyric-video-v3.mp4",
+      "title": "Odia lyric video v3",
+      "status": "historical-draft",
+      "notes": "Preserved revision; lyric timing issues were reported during development."
+    },
+    {
+      "repo_path": "media/odia/lyric-video-v4.mp4",
+      "sha256": "f0fd69747b9ec6ecaeea49b4e36c9fed9aba0c8c94fc409a744ab96d8d109ae7",
+      "bytes": 34352098,
+      "source_name": "odia-poem-lyric-video-v4.mp4",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/odia--lyric-video-v4.mp4",
+      "title": "Odia lyric video v4",
+      "status": "historical-draft",
+      "notes": "Preserved revision; lyric timing issues were reported during development."
+    },
+    {
+      "repo_path": "media/odia/lyric-video-v5.mp4",
+      "sha256": "03df5a3060fa97cf980fda7253e28c61e87754d63192667881605feb093222c3",
+      "bytes": 34203663,
+      "source_name": "odia-poem-facebook-v5.mp4",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/odia--lyric-video-v5.mp4",
+      "title": "Odia lyric video v5",
+      "status": "historical-draft",
+      "notes": "Preserved revision; lyric timing issues were reported during development."
+    },
+    {
+      "repo_path": "media/odia/source/melodicpal-original.mp4",
+      "sha256": "3c18cfe26a4e86efcd9a8a02c581e09a384bd05ba526291c168bd018f92447ed",
+      "bytes": 114748855,
+      "source_name": "3c18cfe26a4e86ef.mp4",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/odia--source--melodicpal-original.mp4",
+      "title": "Original Melodicpal visual source",
+      "status": "source",
+      "notes": "Original supplied visual sequence; reused for the Tamil, Telugu, English and Filipino videos."
+    },
+    {
+      "repo_path": "media/tamil/i-am-free-to-dream-tamil.mp3",
+      "sha256": "13ee1ef7bc4bcd3b61293a0b90f120de5a6786cc1622f740af9765be0297c5a6",
+      "bytes": 3496001,
+      "source_name": "13ee1ef7bc4bcd3b.mp3",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/tamil--i-am-free-to-dream-tamil.mp3",
+      "title": "Tamil audio",
+      "status": "working",
+      "notes": ""
+    },
+    {
+      "repo_path": "media/tamil/i-am-free-to-dream-tamil.mp4",
+      "sha256": "776e4e3c8ec66f3dddabdd7a871f10000f76aafc4cf0a41c50e73bca651a025f",
+      "bytes": 78515123,
+      "source_name": "கனவு காண எனக்குத் தடையில்லை.mp4",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/tamil--i-am-free-to-dream-tamil.mp4",
+      "title": "Tamil video",
+      "status": "working",
+      "notes": ""
+    },
+    {
+      "repo_path": "media/telugu/v1/i-am-free-to-dream-telugu-v1.m4a",
+      "sha256": "d1c20f64c1e794c337c3a51515d7a7662f906a9c88f396e950e71a7137aabe41",
+      "bytes": 6767390,
+      "source_name": "telugu-v1-recovered.m4a",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/telugu--v1--i-am-free-to-dream-telugu-v1.m4a",
+      "title": "Telugu v1 audio",
+      "status": "historical-draft",
+      "notes": "AAC soundtrack extracted without re-encoding from the v1 video; the original v1 MP3 was overwritten and is unavailable."
+    },
+    {
+      "repo_path": "media/telugu/v1/i-am-free-to-dream-telugu-v1.mp4",
+      "sha256": "7a8ab5a9f4a4448e75c2a5bd7d24921223d7a123ab9f798791003792d1dab2b5",
+      "bytes": 95859269,
+      "source_name": "కలలు కనడానికి నాకు అడ్డులేదు.mp4",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/telugu--v1--i-am-free-to-dream-telugu-v1.mp4",
+      "title": "Telugu v1 video",
+      "status": "historical-draft",
+      "notes": ""
+    },
+    {
+      "repo_path": "media/telugu/v2/i-am-free-to-dream-telugu-v2.mp3",
+      "sha256": "6c89bb23d2d3567f7ab8c4c6ea9c3c89dc0469b3289c416db0ec21e16d1537f3",
+      "bytes": 4299245,
+      "source_name": "updated-telugu.mp3",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/telugu--v2--i-am-free-to-dream-telugu-v2.mp3",
+      "title": "Telugu v2 audio",
+      "status": "historical-draft",
+      "notes": ""
+    },
+    {
+      "repo_path": "media/telugu/v2/i-am-free-to-dream-telugu-v2.mp4",
+      "sha256": "e808056da19676531ff9b78ea5bb5e342f9a3e683c2e22492809c66250ec55de",
+      "bytes": 88763813,
+      "source_name": "కలలు కనడానికి నాకు అడ్డులేదు-v2.mp4",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/telugu--v2--i-am-free-to-dream-telugu-v2.mp4",
+      "title": "Telugu v2 video",
+      "status": "historical-draft",
+      "notes": ""
+    },
+    {
+      "repo_path": "media/telugu/v3/i-am-free-to-dream-telugu-v3.mp3",
+      "sha256": "576c550c369324ad2087f158c1123221a1ba46e33835a70263460a970e4ae407",
+      "bytes": 4276523,
+      "source_name": "updated-telugu.mp3",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/telugu--v3--i-am-free-to-dream-telugu-v3.mp3",
+      "title": "Telugu v3 audio",
+      "status": "historical-draft",
+      "notes": ""
+    },
+    {
+      "repo_path": "media/telugu/v3/i-am-free-to-dream-telugu-v3.mp4",
+      "sha256": "fa1b294825930d2c03d4683477d16a7ae7d0da891830c446864a1428ddbab404",
+      "bytes": 88888935,
+      "source_name": "కలలు కనడానికి నాకు అడ్డులేదు-v3.mp4",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/telugu--v3--i-am-free-to-dream-telugu-v3.mp4",
+      "title": "Telugu v3 video",
+      "status": "historical-draft",
+      "notes": ""
+    },
+    {
+      "repo_path": "media/telugu/v4/i-am-free-to-dream-telugu-v4.mp3",
+      "sha256": "475fe4e807fe236ce802b9fa5ee0e54da675770d4b839142c6d88e3dc96b1b98",
+      "bytes": 3901641,
+      "source_name": "updated-telugu.mp3",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/telugu--v4--i-am-free-to-dream-telugu-v4.mp3",
+      "title": "Telugu v4 audio",
+      "status": "working",
+      "notes": ""
+    },
+    {
+      "repo_path": "media/telugu/v4/i-am-free-to-dream-telugu-v4.mp4",
+      "sha256": "0ce124b06f22027668020cfee08e091164e1219bafa2770c5ad48b23e236a946",
+      "bytes": 82021981,
+      "source_name": "కలలు కనడానికి నాకు అడ్డులేదు-v4.mp4",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/telugu--v4--i-am-free-to-dream-telugu-v4.mp4",
+      "title": "Telugu v4 video",
+      "status": "working",
+      "notes": ""
+    },
+    {
+      "repo_path": "media/english/country/i-am-free-to-dream-english-country.mp3",
+      "sha256": "175a28e9233902f7ef60e8ee0070af580b674a17962057dd9e96fa57b73bdfc3",
+      "bytes": 4396129,
+      "source_name": "I Am Free to Dream - Country.mp3",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/recordings-2026-09-23/i-am-free-to-dream-english-country.mp3",
+      "title": "I Am Free to Dream - Country",
+      "status": "working",
+      "notes": ""
+    },
+    {
+      "repo_path": "media/english/country/i-am-free-to-dream-english-country.mp4",
+      "sha256": "d1313e4e40716fc9916bc807f80dbdd9c0543e13d8ab5c68e322a025f34055b6",
+      "bytes": 88787468,
+      "source_name": "I Am Free to Dream - Country.mp4",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/recordings-2026-09-23/i-am-free-to-dream-english-country.mp4",
+      "title": "I Am Free to Dream - Country",
+      "status": "working",
+      "notes": ""
+    },
+    {
+      "repo_path": "media/english/jazz/i-am-free-to-dream-english-jazz.mp3",
+      "sha256": "ae1f30e9c628bbcf2b5f334f0f2ae4de34e78eeead30c16d874b75b97f70fd95",
+      "bytes": 4716277,
+      "source_name": "I Am Free to Dream - Jazz.mp3",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/recordings-2026-09-23/i-am-free-to-dream-english-jazz.mp3",
+      "title": "I Am Free to Dream - Jazz",
+      "status": "working",
+      "notes": ""
+    },
+    {
+      "repo_path": "media/english/jazz/i-am-free-to-dream-english-jazz.mp4",
+      "sha256": "d5a23fb43ba572215a06fde38fc7a423007ade462aa32250e61126f9d8d6b01d",
+      "bytes": 92910505,
+      "source_name": "I Am Free to Dream - Jazz.mp4",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/recordings-2026-09-23/i-am-free-to-dream-english-jazz.mp4",
+      "title": "I Am Free to Dream - Jazz",
+      "status": "working",
+      "notes": ""
+    },
+    {
+      "repo_path": "media/filipino/malaya-akong-mangarap-filipino.mp3",
+      "sha256": "5c43c223ebfff2cb8d710dd09c5cf35d8b0ea097a71b9d626fa02e68a1fc5dc5",
+      "bytes": 4756287,
+      "source_name": "Malaya Akong Mangarap.mp3",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/recordings-2026-09-23/malaya-akong-mangarap-filipino.mp3",
+      "title": "Malaya Akong Mangarap",
+      "status": "working",
+      "notes": ""
+    },
+    {
+      "repo_path": "media/filipino/malaya-akong-mangarap-filipino.mp4",
+      "sha256": "f0ab86067d1c1c6e495458c346162cfced6e27790eaa83bc23f62762b4ba230b",
+      "bytes": 93339914,
+      "source_name": "Malaya Akong Mangarap.mp4",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/recordings-2026-09-23/malaya-akong-mangarap-filipino.mp4",
+      "title": "Malaya Akong Mangarap",
+      "status": "working",
+      "notes": ""
+    }
+  ],
+  "unavailable_originals": [
+    "Two early Odia MP3 takes named with (1) and (2) are no longer present at their supplied paths.",
+    "The original Telugu v1 MP3 is unavailable; its encoded soundtrack is preserved as M4A extracted from the v1 video."
+  ]
+}

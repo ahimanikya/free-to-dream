@@ -27,7 +27,9 @@
       "odia-poem-facebook-v5.mp4"
     ],
     "role": "working-asset",
-    "published": false
+    "published": true,
+    "repo_path": "media/odia/lyric-video-v5.mp4",
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/odia--lyric-video-v5.mp4"
   },
   {
     "sha256": "c3909a7002b9e42d6a22f038334bbc839f6be4a5c2d14b05b9a258a6472e2ed3",
@@ -37,7 +39,9 @@
       "odia-poem-lyric-video-v2.mp4"
     ],
     "role": "working-asset",
-    "published": false
+    "published": true,
+    "repo_path": "media/odia/lyric-video-v2.mp4",
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/odia--lyric-video-v2.mp4"
   },
   {
     "sha256": "8306589efad0626d3c37fedb924bd04ea4e39e2c72d026355dbca0c14d053c75",
@@ -47,7 +51,9 @@
       "odia-poem-lyric-video-v3.mp4"
     ],
     "role": "working-asset",
-    "published": false
+    "published": true,
+    "repo_path": "media/odia/lyric-video-v3.mp4",
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/odia--lyric-video-v3.mp4"
   },
   {
     "sha256": "f0fd69747b9ec6ecaeea49b4e36c9fed9aba0c8c94fc409a744ab96d8d109ae7",
@@ -58,7 +64,9 @@
       "ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ.mp4"
     ],
     "role": "working-asset",
-    "published": false
+    "published": true,
+    "repo_path": "media/odia/lyric-video-v4.mp4",
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/odia--lyric-video-v4.mp4"
   },
   {
     "sha256": "d7dd0c97d06d9109ea2c7e1bf7e0af9d1f985bf96b70bdaf0a8a492be8af6aa5",
@@ -68,7 +76,9 @@
       "odia-poem-lyric-video.mp4"
     ],
     "role": "working-asset",
-    "published": false
+    "published": true,
+    "repo_path": "media/odia/lyric-video-v1.mp4",
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/odia--lyric-video-v1.mp4"
   },
   {
     "sha256": "517cc17a42ea299a7019d76a183eb4f128ca186eaadadfcaca0e730dac624259",
@@ -128,7 +138,9 @@
       "கனவு காண எனக்குத் தடையில்லை.mp4"
     ],
     "role": "working-asset",
-    "published": false
+    "published": true,
+    "repo_path": "media/tamil/i-am-free-to-dream-tamil.mp4",
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/tamil--i-am-free-to-dream-tamil.mp4"
   },
   {
     "sha256": "be6da160e4687fd32d4977ae33203ffe21ac4b143ef5321eb6cc4f38d2e7b4d2",
@@ -148,7 +160,9 @@
       "ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ-V2.mp4"
     ],
     "role": "working-asset",
-    "published": false
+    "published": true,
+    "repo_path": "media/odia/source/melodicpal-original.mp4",
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/odia--source--melodicpal-original.mp4"
   },
   {
     "sha256": "a7b3c2b4091ba3d0057bbd24ddd03b30e9b03687ca68a359fba91c401245e574",
@@ -168,7 +182,9 @@
       "ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ.mp3"
     ],
     "role": "working-asset",
-    "published": false
+    "published": true,
+    "repo_path": "media/odia/i-am-free-to-dream-odia.mp3",
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/odia--i-am-free-to-dream-odia.mp3"
   },
   {
     "sha256": "83de15a4357123eea9d400cdf489c698fee2a02462632cdf9f97312f80653c8f",
@@ -188,7 +204,9 @@
       "கனவு காண எனக்குத் தடையில்லை.mp3"
     ],
     "role": "working-asset",
-    "published": false
+    "published": true,
+    "repo_path": "media/tamil/i-am-free-to-dream-tamil.mp3",
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/tamil--i-am-free-to-dream-tamil.mp3"
   },
   {
     "sha256": "8b186a72b3a66ed9cb91de89ba1c129aa4ddf34fc2142e4d47ad99051463e8e6",
@@ -210,7 +228,8 @@
     "role": "working-asset",
     "published": true,
     "language": "english",
-    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/recordings-2026-09-23/i-am-free-to-dream-english-country.mp3"
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/recordings-2026-09-23/i-am-free-to-dream-english-country.mp3",
+    "repo_path": "media/english/country/i-am-free-to-dream-english-country.mp3"
   },
   {
     "sha256": "d1313e4e40716fc9916bc807f80dbdd9c0543e13d8ab5c68e322a025f34055b6",
@@ -222,7 +241,8 @@
     "role": "working-asset",
     "published": true,
     "language": "english",
-    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/recordings-2026-09-23/i-am-free-to-dream-english-country.mp4"
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/recordings-2026-09-23/i-am-free-to-dream-english-country.mp4",
+    "repo_path": "media/english/country/i-am-free-to-dream-english-country.mp4"
   },
   {
     "sha256": "ae1f30e9c628bbcf2b5f334f0f2ae4de34e78eeead30c16d874b75b97f70fd95",
@@ -234,7 +254,8 @@
     "role": "working-asset",
     "published": true,
     "language": "english",
-    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/recordings-2026-09-23/i-am-free-to-dream-english-jazz.mp3"
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/recordings-2026-09-23/i-am-free-to-dream-english-jazz.mp3",
+    "repo_path": "media/english/jazz/i-am-free-to-dream-english-jazz.mp3"
   },
   {
     "sha256": "d5a23fb43ba572215a06fde38fc7a423007ade462aa32250e61126f9d8d6b01d",
@@ -246,7 +267,8 @@
     "role": "working-asset",
     "published": true,
     "language": "english",
-    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/recordings-2026-09-23/i-am-free-to-dream-english-jazz.mp4"
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/recordings-2026-09-23/i-am-free-to-dream-english-jazz.mp4",
+    "repo_path": "media/english/jazz/i-am-free-to-dream-english-jazz.mp4"
   },
   {
     "sha256": "5c43c223ebfff2cb8d710dd09c5cf35d8b0ea097a71b9d626fa02e68a1fc5dc5",
@@ -258,7 +280,8 @@
     "role": "working-asset",
     "published": true,
     "language": "filipino",
-    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/recordings-2026-09-23/malaya-akong-mangarap-filipino.mp3"
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/recordings-2026-09-23/malaya-akong-mangarap-filipino.mp3",
+    "repo_path": "media/filipino/malaya-akong-mangarap-filipino.mp3"
   },
   {
     "sha256": "f0ab86067d1c1c6e495458c346162cfced6e27790eaa83bc23f62762b4ba230b",
@@ -270,6 +293,95 @@
     "role": "working-asset",
     "published": true,
     "language": "filipino",
-    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/recordings-2026-09-23/malaya-akong-mangarap-filipino.mp4"
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/recordings-2026-09-23/malaya-akong-mangarap-filipino.mp4",
+    "repo_path": "media/filipino/malaya-akong-mangarap-filipino.mp4"
+  },
+  {
+    "sha256": "d1c20f64c1e794c337c3a51515d7a7662f906a9c88f396e950e71a7137aabe41",
+    "repo_path": "media/telugu/v1/i-am-free-to-dream-telugu-v1.m4a",
+    "bytes": 6767390,
+    "source_names": [
+      "telugu-v1-recovered.m4a"
+    ],
+    "role": "working-asset",
+    "published": true,
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/telugu--v1--i-am-free-to-dream-telugu-v1.m4a"
+  },
+  {
+    "sha256": "7a8ab5a9f4a4448e75c2a5bd7d24921223d7a123ab9f798791003792d1dab2b5",
+    "repo_path": "media/telugu/v1/i-am-free-to-dream-telugu-v1.mp4",
+    "bytes": 95859269,
+    "source_names": [
+      "కలలు కనడానికి నాకు అడ్డులేదు.mp4"
+    ],
+    "role": "working-asset",
+    "published": true,
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/telugu--v1--i-am-free-to-dream-telugu-v1.mp4"
+  },
+  {
+    "sha256": "6c89bb23d2d3567f7ab8c4c6ea9c3c89dc0469b3289c416db0ec21e16d1537f3",
+    "repo_path": "media/telugu/v2/i-am-free-to-dream-telugu-v2.mp3",
+    "bytes": 4299245,
+    "source_names": [
+      "updated-telugu.mp3"
+    ],
+    "role": "working-asset",
+    "published": true,
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/telugu--v2--i-am-free-to-dream-telugu-v2.mp3"
+  },
+  {
+    "sha256": "e808056da19676531ff9b78ea5bb5e342f9a3e683c2e22492809c66250ec55de",
+    "repo_path": "media/telugu/v2/i-am-free-to-dream-telugu-v2.mp4",
+    "bytes": 88763813,
+    "source_names": [
+      "కలలు కనడానికి నాకు అడ్డులేదు-v2.mp4"
+    ],
+    "role": "working-asset",
+    "published": true,
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/telugu--v2--i-am-free-to-dream-telugu-v2.mp4"
+  },
+  {
+    "sha256": "576c550c369324ad2087f158c1123221a1ba46e33835a70263460a970e4ae407",
+    "repo_path": "media/telugu/v3/i-am-free-to-dream-telugu-v3.mp3",
+    "bytes": 4276523,
+    "source_names": [
+      "updated-telugu.mp3"
+    ],
+    "role": "working-asset",
+    "published": true,
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/telugu--v3--i-am-free-to-dream-telugu-v3.mp3"
+  },
+  {
+    "sha256": "fa1b294825930d2c03d4683477d16a7ae7d0da891830c446864a1428ddbab404",
+    "repo_path": "media/telugu/v3/i-am-free-to-dream-telugu-v3.mp4",
+    "bytes": 88888935,
+    "source_names": [
+      "కలలు కనడానికి నాకు అడ్డులేదు-v3.mp4"
+    ],
+    "role": "working-asset",
+    "published": true,
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/telugu--v3--i-am-free-to-dream-telugu-v3.mp4"
+  },
+  {
+    "sha256": "475fe4e807fe236ce802b9fa5ee0e54da675770d4b839142c6d88e3dc96b1b98",
+    "repo_path": "media/telugu/v4/i-am-free-to-dream-telugu-v4.mp3",
+    "bytes": 3901641,
+    "source_names": [
+      "updated-telugu.mp3"
+    ],
+    "role": "working-asset",
+    "published": true,
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/telugu--v4--i-am-free-to-dream-telugu-v4.mp3"
+  },
+  {
+    "sha256": "0ce124b06f22027668020cfee08e091164e1219bafa2770c5ad48b23e236a946",
+    "repo_path": "media/telugu/v4/i-am-free-to-dream-telugu-v4.mp4",
+    "bytes": 82021981,
+    "source_names": [
+      "కలలు కనడానికి నాకు అడ్డులేదు-v4.mp4"
+    ],
+    "role": "working-asset",
+    "published": true,
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/telugu--v4--i-am-free-to-dream-telugu-v4.mp4"
   }
 ]

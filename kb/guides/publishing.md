@@ -15,7 +15,7 @@ The project has two complementary views: an editable Markdown knowledge base and
 1. Create an empty repository in your Git account and push this local project when ready. A remote has not been configured by this scaffold.
 2. Confirm the repository visibility and contribution/reuse terms. The collection contains AI-assisted drafts, clearly marked as such.
 3. Set `repository_url` and `site_url` in `site-config.json` to your actual repository and eventual HTTPS site address. Leave them blank until known.
-4. Complete recording credits and review. Choose a stable media host for MP3/MP4 files; do not commit those binaries to ordinary Git. The collection already includes an imported source video larger than 100 MB.
+4. Track source recordings under `media/<language>/` with Git LFS. Complete recording credits and review, then use stable direct hosted URLs for the website players. Archive storage and website release status are separate; the public build excludes archived binaries and LFS pointers.
 
 ## Publish on GitHub Pages
 

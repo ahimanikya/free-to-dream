@@ -1,0 +1,82 @@
+[
+  {
+    "repo_path": "media/telugu/v1/i-am-free-to-dream-telugu-v1.m4a",
+    "sha256": "d1c20f64c1e794c337c3a51515d7a7662f906a9c88f396e950e71a7137aabe41",
+    "bytes": 6767390,
+    "source_name": "telugu-v1-recovered.m4a",
+    "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/telugu--v1--i-am-free-to-dream-telugu-v1.m4a",
+    "title": "Telugu v1 audio",
+    "status": "historical-draft",
+    "notes": "AAC soundtrack extracted without re-encoding from the v1 video; the original v1 MP3 was overwritten and is unavailable."
+  },
+  {
+    "repo_path": "media/telugu/v1/i-am-free-to-dream-telugu-v1.mp4",
+    "sha256": "7a8ab5a9f4a4448e75c2a5bd7d24921223d7a123ab9f798791003792d1dab2b5",
+    "bytes": 95859269,
+    "source_name": "కలలు కనడానికి నాకు అడ్డులేదు.mp4",
+    "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/telugu--v1--i-am-free-to-dream-telugu-v1.mp4",
+    "title": "Telugu v1 video",
+    "status": "historical-draft",
+    "notes": ""
+  },
+  {
+    "repo_path": "media/telugu/v2/i-am-free-to-dream-telugu-v2.mp3",
+    "sha256": "6c89bb23d2d3567f7ab8c4c6ea9c3c89dc0469b3289c416db0ec21e16d1537f3",
+    "bytes": 4299245,
+    "source_name": "updated-telugu.mp3",
+    "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/telugu--v2--i-am-free-to-dream-telugu-v2.mp3",
+    "title": "Telugu v2 audio",
+    "status": "historical-draft",
+    "notes": ""
+  },
+  {
+    "repo_path": "media/telugu/v2/i-am-free-to-dream-telugu-v2.mp4",
+    "sha256": "e808056da19676531ff9b78ea5bb5e342f9a3e683c2e22492809c66250ec55de",
+    "bytes": 88763813,
+    "source_name": "కలలు కనడానికి నాకు అడ్డులేదు-v2.mp4",
+    "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/telugu--v2--i-am-free-to-dream-telugu-v2.mp4",
+    "title": "Telugu v2 video",
+    "status": "historical-draft",
+    "notes": ""
+  },
+  {
+    "repo_path": "media/telugu/v3/i-am-free-to-dream-telugu-v3.mp3",
+    "sha256": "576c550c369324ad2087f158c1123221a1ba46e33835a70263460a970e4ae407",
+    "bytes": 4276523,
+    "source_name": "updated-telugu.mp3",
+    "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/telugu--v3--i-am-free-to-dream-telugu-v3.mp3",
+    "title": "Telugu v3 audio",
+    "status": "historical-draft",
+    "notes": ""
+  },
+  {
+    "repo_path": "media/telugu/v3/i-am-free-to-dream-telugu-v3.mp4",
+    "sha256": "fa1b294825930d2c03d4683477d16a7ae7d0da891830c446864a1428ddbab404",
+    "bytes": 88888935,
+    "source_name": "కలలు కనడానికి నాకు అడ్డులేదు-v3.mp4",
+    "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/telugu--v3--i-am-free-to-dream-telugu-v3.mp4",
+    "title": "Telugu v3 video",
+    "status": "historical-draft",
+    "notes": ""
+  },
+  {
+    "repo_path": "media/telugu/v4/i-am-free-to-dream-telugu-v4.mp3",
+    "sha256": "475fe4e807fe236ce802b9fa5ee0e54da675770d4b839142c6d88e3dc96b1b98",
+    "bytes": 3901641,
+    "source_name": "updated-telugu.mp3",
+    "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/telugu--v4--i-am-free-to-dream-telugu-v4.mp3",
+    "title": "Telugu v4 audio",
+    "status": "working",
+    "notes": ""
+  },
+  {
+    "repo_path": "media/telugu/v4/i-am-free-to-dream-telugu-v4.mp4",
+    "sha256": "0ce124b06f22027668020cfee08e091164e1219bafa2770c5ad48b23e236a946",
+    "bytes": 82021981,
+    "source_name": "కలలు కనడానికి నాకు అడ్డులేదు-v4.mp4",
+    "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/telugu--v4--i-am-free-to-dream-telugu-v4.mp4",
+    "title": "Telugu v4 video",
+    "status": "working",
+    "notes": ""
+  }
+]

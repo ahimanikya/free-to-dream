@@ -15,7 +15,8 @@
       "music_and_vocals": "Generated using Suno AI",
       "other": "Other production credits to be confirmed before release"
     },
-    "rights_status": "release-details-to-confirm"
+    "rights_status": "release-details-to-confirm",
+    "repo_path": "media/odia/i-am-free-to-dream-odia.mp3"
   },
   {
     "id": "tamil-audio-01",
@@ -33,7 +34,8 @@
       "music_and_vocals": "Generated using Suno AI",
       "other": "Other production credits to be confirmed before release"
     },
-    "rights_status": "release-details-to-confirm"
+    "rights_status": "release-details-to-confirm",
+    "repo_path": "media/tamil/i-am-free-to-dream-tamil.mp3"
   },
   {
     "id": "odia-video-05",
@@ -51,7 +53,8 @@
       "music_and_vocals": "Generated using Suno AI",
       "other": "Other production credits to be confirmed before release"
     },
-    "rights_status": "release-details-to-confirm"
+    "rights_status": "release-details-to-confirm",
+    "repo_path": "media/odia/lyric-video-v5.mp4"
   },
   {
     "id": "tamil-video-01",
@@ -69,6 +72,7 @@
       "music_and_vocals": "Generated using Suno AI",
       "other": "Other production credits to be confirmed before release"
     },
-    "rights_status": "release-details-to-confirm"
+    "rights_status": "release-details-to-confirm",
+    "repo_path": "media/tamil/i-am-free-to-dream-tamil.mp4"
   }
 ]

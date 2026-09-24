@@ -30,7 +30,7 @@ class CollectionTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.root = Path(self.temp.name)
         for folder in ('kb','catalog','web','media'):
-            shutil.copytree(PROJECT/folder, self.root/folder)
+            shutil.copytree(PROJECT/folder, self.root/folder, ignore=shutil.ignore_patterns(*(f'*{ext}' for ext in app.MEDIA_EXTENSIONS)))
         shutil.copy2(PROJECT/'site-config.json', self.root/'site-config.json')
         self.overrides = patch.multiple(app, ROOT=self.root, KB=self.root/'kb', LANGUAGES=self.root/'kb/poems/i-am-free-to-dream/languages')
         self.overrides.start()
@@ -80,9 +80,31 @@ class CollectionTests(unittest.TestCase):
         app.add_media(args)
         item = app.records()[-1]
         self.assertFalse(item['publish'])
-        self.assertEqual((self.root/item['local_path']).read_bytes(), source.read_bytes())
+        self.assertTrue(item['repo_path'].startswith('media/hindi/'))
+        self.assertEqual((self.root/item['repo_path']).read_bytes(), source.read_bytes())
         with self.assertRaisesRegex(ValueError, 'already exists'): app.add_media(args)
         with self.assertRaises(ValueError): app.confined('../private.txt')
+
+    def test_public_build_excludes_archive_media_and_lfs_pointers(self):
+        folder=self.root/'media/odia'; folder.mkdir(exist_ok=True)
+        (folder/'archive.mp4').write_bytes(b'UNRELEASED ARCHIVE VIDEO')
+        (folder/'pointer.mp3').write_text('version https://git-lfs.github.com/spec/v1\noid sha256:'+'a'*64+'\nsize 100\n')
+        app.build(False)
+        self.assertFalse((self.root/'site-public/media/odia/archive.mp4').exists())
+        self.assertFalse((self.root/'site-public/media/odia/pointer.mp3').exists())
+
+    def test_local_build_plays_hydrated_archive_but_skips_lfs_pointer(self):
+        folder=self.root/'media/odia'; folder.mkdir(exist_ok=True)
+        path=folder/'review.mp3'
+        items=app.records()
+        items[0].update(repo_path='media/odia/review.mp3',local_path=None)
+        (self.root/'catalog/recordings.json').write_text(json.dumps(items))
+        path.write_text('version https://git-lfs.github.com/spec/v1\noid sha256:'+'a'*64+'\nsize 100\n')
+        app.build(True)
+        self.assertFalse((self.root/'site/recording--odia-audio-01.html').exists())
+        path.write_bytes(b'HYDRATED TEST AUDIO')
+        app.build(True)
+        self.assertEqual((self.root/'site/media/recordings/odia-audio-01.mp3').read_bytes(),b'HYDRATED TEST AUDIO')
 
     def test_wiki_export_links_to_listening_site(self):
         config = json.loads((self.root/'site-config.json').read_text())

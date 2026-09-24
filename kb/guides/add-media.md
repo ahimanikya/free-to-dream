@@ -20,7 +20,7 @@ python scripts/project.py build --local-media
 python scripts/project.py serve
 ```
 
-For video, use `--kind video` and an MP4 file. Language slugs match the filenames under `kb/poems/i-am-free-to-dream/languages/`. The command copies the file into the ignored local archive, records its checksum and creates a review draft. Existing takes are retained. Use a new ID for a new take.
+For video, use `--kind video` and an MP4 file. Language slugs match the filenames under `kb/poems/i-am-free-to-dream/languages/`. The command copies the file into `media/<language>/`, records its checksum and `repo_path`, and creates a review draft. These folders are tracked with Git LFS. Install Git LFS (`git lfs install`) before staging/committing, then commit the media and catalog changes and push. Existing takes are retained; use a new ID for a new take. Run `git lfs pull` after cloning to retrieve the full recordings.
 
 Audio options accepted: MP3, M4A, WAV, OGG. Video: MP4, WebM. MP3 and MP4 are practical preview formats; keep lossless audio masters in your archive. Actual playback depends on the codec and browser.
 
@@ -44,4 +44,4 @@ Put a reasonably sized JPG, PNG or WebP under `media/images/`. Record its creato
 
 ## Backups
 
-Git does not back up ignored media. Keep a separate backup of `local-assets/` and your masters. `catalog/asset-inventory.json` records hashes and original filenames so copies can be identified and deduplicated.
+Files under `media/<language>/` are backed by Git LFS; `catalog/media-archive.json` records the initial archive, and `catalog/asset-inventory.json` records hashes and original filenames. GitHub Releases provide additional full-file downloads. Keep a separate backup of ignored `local-assets/` private references and local working copies. Source ZIPs may contain LFS pointers; use an LFS-enabled clone for the complete archive.

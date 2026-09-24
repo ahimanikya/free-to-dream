@@ -1,11 +1,11 @@
-# English · Jazz recordings
+# Tamil recordings
 
 The actual audio and video files in this folder are tracked by Git LFS.
 
 | Recording | File in Git | Status | Backup download |
 |---|---|---|---|
-| I Am Free to Dream - Jazz | [i-am-free-to-dream-english-jazz.mp3](i-am-free-to-dream-english-jazz.mp3) | working | [Download](https://github.com/ahimanikya/free-to-dream/releases/download/recordings-2026-09-23/i-am-free-to-dream-english-jazz.mp3) |
-| I Am Free to Dream - Jazz | [i-am-free-to-dream-english-jazz.mp4](i-am-free-to-dream-english-jazz.mp4) | working | [Download](https://github.com/ahimanikya/free-to-dream/releases/download/recordings-2026-09-23/i-am-free-to-dream-english-jazz.mp4) |
+| Tamil audio | [i-am-free-to-dream-tamil.mp3](i-am-free-to-dream-tamil.mp3) | working | [Download](https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/tamil--i-am-free-to-dream-tamil.mp3) |
+| Tamil video | [i-am-free-to-dream-tamil.mp4](i-am-free-to-dream-tamil.mp4) | working | [Download](https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/tamil--i-am-free-to-dream-tamil.mp4) |
 
 Use `git lfs install` before cloning, or run `git lfs pull` in an existing clone, to download the full media files. GitHub Releases remain a second download option.
 

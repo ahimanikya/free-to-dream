@@ -20,7 +20,7 @@ A language is not a single musical style. Explain the region, form or instrument
 
 ## Media and credits
 
-Use the [media guide](kb/guides/add-media.md). Give each take a new ID; retain the old take’s provenance. Do not add MP3, MP4 or WAV masters to normal Git commits. Reference recordings with direct hosted URLs when ready to release.
+Use the [media guide](kb/guides/add-media.md). Give each take a new ID; retain the old take’s provenance. Track audio/video files under their `media/<language>/` folders using Git LFS. Keep earlier versions under distinct names; do not replace them silently. Ordinary large binary Git blobs and private references are rejected by the repository check. Use direct hosted URLs for released website players.
 
 Do not submit material you are not entitled to share. If any part is someone else’s work, identify the source and applicable permission. Reuse and distribution terms for contributions must be agreed before release; this repository has no blanket open-content license. See [RIGHTS.md](RIGHTS.md).
 

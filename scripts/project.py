@@ -21,6 +21,14 @@ ROOT = Path(__file__).resolve().parents[1]
 KB = ROOT / 'kb'
 LANGUAGES = KB / 'poems/i-am-free-to-dream/languages'
 esc = html.escape
+MEDIA_EXTENSIONS = ('.mp3', '.mp4', '.m4a', '.wav', '.ogg', '.mov', '.webm')
+
+
+def media_is_available(path):
+    if not path.is_file():
+        return False
+    with path.open('rb') as stream:
+        return not stream.read(128).startswith(b'version https://git-lfs.github.com/spec/v1\n')
 
 
 def read_concept(path):
@@ -40,7 +48,9 @@ def records():
     return json.loads((ROOT / 'catalog/recordings.json').read_text())
 
 
-def confined(relative, base=ROOT):
+def confined(relative, base=None):
+    if base is None:
+        base = ROOT
     path = (base / relative).resolve()
     if not path.is_relative_to(base.resolve()):
         raise ValueError(f'Path escapes project: {relative}')
@@ -105,6 +115,10 @@ def validate():
                 confined(item['local_path'])
                 if not item['local_path'].startswith('local-assets/'):
                     raise ValueError('Local recordings belong in local-assets/')
+            if item.get('repo_path'):
+                confined(item['repo_path'])
+                if not item['repo_path'].startswith('media/') or Path(item['repo_path']).suffix.lower() not in MEDIA_EXTENSIONS:
+                    raise ValueError('Tracked recordings belong under media/ with a supported extension')
             if item.get('public_url') and not safe_url(item['public_url']):
                 raise ValueError('Public media URL must use HTTPS without embedded credentials')
             if item['publish']:
@@ -268,15 +282,18 @@ def build(local=False):
     if output.exists(): shutil.rmtree(output)
     output.mkdir()
     shutil.copytree(ROOT / 'web', output / 'assets')
-    shutil.copytree(ROOT / 'media', output / 'media')
+    # LFS archives include historical drafts. Publish only explicitly released
+    # remote recordings; never ship archive binaries or unhydrated pointers.
+    shutil.copytree(ROOT / 'media', output / 'media', ignore=shutil.ignore_patterns(*(f'*{ext}' for ext in MEDIA_EXTENSIONS)))
     shutil.copytree(KB, output / 'kb')
     (output / 'contribute.html').write_text(shell('Contribute your voice', contribution_page(languages, config), config, local, 'contribute.html'), encoding='utf-8')
     available = {}
     for item in records():
         url = item.get('public_url') if item['publish'] else None
-        if local and item.get('local_path'):
-            source = confined(item['local_path'])
-            if source.is_file():
+        if local and (item.get('repo_path') or item.get('local_path')):
+            candidates = [confined(item[key]) for key in ('repo_path', 'local_path') if item.get(key)]
+            source = next((path for path in candidates if media_is_available(path)), None)
+            if source is not None:
                 relative = f'media/recordings/{item["id"]}{source.suffix.lower()}'
                 target = output / relative
                 target.parent.mkdir(parents=True, exist_ok=True)
@@ -343,7 +360,7 @@ def add_media(args):
     items = records()
     if any(x['id'] == args.id for x in items): raise ValueError('Recording ID already exists; use a new version ID')
     entry = {'id':args.id, 'language':args.language, 'poem':'i-am-free-to-dream', 'kind':args.kind,
-             'title':args.title, 'local_path':None, 'public_url':None, 'publish':False,
+             'title':args.title, 'local_path':None, 'repo_path':None, 'public_url':None, 'publish':False,
              'allow_file_sharing':False,
              'review_status':'needs-review', 'notes':'New upload; review pronunciation, completeness, timing and credits.',
              'credits':{'poem':'Ahimanikya Satapathy','music_and_vocals':'To be supplied'}, 'rights_status':'release-details-to-confirm'}
@@ -355,18 +372,20 @@ def add_media(args):
         allowed = ('.mp3','.m4a','.wav','.ogg') if args.kind == 'audio' else ('.mp4','.webm')
         if source.suffix.lower() not in allowed: raise ValueError(f'Expected one of {allowed}')
         digest = hashlib.sha256(source.read_bytes()).hexdigest()
-        relative = f'local-assets/{digest[:16]}{source.suffix.lower()}'
+        relative = f'media/{args.language}/{args.id}{source.suffix.lower()}'
         target = ROOT / relative
-        target.parent.mkdir(exist_ok=True)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        if target.exists() and hashlib.sha256(target.read_bytes()).hexdigest() != digest:
+            raise ValueError('Target already exists with different content; use a new version ID')
         if source != target: shutil.copy2(source, target)
-        entry['local_path'] = relative
+        entry['repo_path'] = relative
         inventory = json.loads((ROOT / 'catalog/asset-inventory.json').read_text())
-        if not any(x['sha256'] == digest for x in inventory):
-            inventory.append({'sha256':digest,'local_path':relative,'bytes':source.stat().st_size,'source_names':[source.name],'role':'working-asset','published':False})
+        if not any(x.get('repo_path') == relative for x in inventory):
+            inventory.append({'sha256':digest,'repo_path':relative,'bytes':source.stat().st_size,'source_names':[source.name],'role':'working-asset','published':False})
             (ROOT / 'catalog/asset-inventory.json').write_text(json.dumps(inventory, ensure_ascii=False, indent=2)+'\n')
     items.append(entry)
     (ROOT / 'catalog/recordings.json').write_text(json.dumps(items, ensure_ascii=False, indent=2)+'\n')
-    print(f'Added {args.id} as a review draft. Rebuild the local preview to listen.')
+    print(f'Added {args.id} as a review draft. Files under media/ are tracked with Git LFS when committed. Rebuild the local preview to listen.')
 
 
 def export_wiki():

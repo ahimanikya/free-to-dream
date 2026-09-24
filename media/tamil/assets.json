@@ -1,0 +1,22 @@
+[
+  {
+    "repo_path": "media/tamil/i-am-free-to-dream-tamil.mp3",
+    "sha256": "13ee1ef7bc4bcd3b61293a0b90f120de5a6786cc1622f740af9765be0297c5a6",
+    "bytes": 3496001,
+    "source_name": "13ee1ef7bc4bcd3b.mp3",
+    "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/tamil--i-am-free-to-dream-tamil.mp3",
+    "title": "Tamil audio",
+    "status": "working",
+    "notes": ""
+  },
+  {
+    "repo_path": "media/tamil/i-am-free-to-dream-tamil.mp4",
+    "sha256": "776e4e3c8ec66f3dddabdd7a871f10000f76aafc4cf0a41c50e73bca651a025f",
+    "bytes": 78515123,
+    "source_name": "கனவு காண எனக்குத் தடையில்லை.mp4",
+    "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/tamil--i-am-free-to-dream-tamil.mp4",
+    "title": "Tamil video",
+    "status": "working",
+    "notes": ""
+  }
+]
