@@ -199,5 +199,77 @@
     ],
     "role": "working-asset",
     "published": false
+  },
+  {
+    "sha256": "175a28e9233902f7ef60e8ee0070af580b674a17962057dd9e96fa57b73bdfc3",
+    "local_path": "local-assets/english/country/I Am Free to Dream - Country.mp3",
+    "bytes": 4396129,
+    "source_names": [
+      "I Am Free to Dream - Country.mp3"
+    ],
+    "role": "working-asset",
+    "published": true,
+    "language": "english",
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/recordings-2026-09-23/i-am-free-to-dream-english-country.mp3"
+  },
+  {
+    "sha256": "d1313e4e40716fc9916bc807f80dbdd9c0543e13d8ab5c68e322a025f34055b6",
+    "local_path": "local-assets/english/country/I Am Free to Dream - Country.mp4",
+    "bytes": 88787468,
+    "source_names": [
+      "I Am Free to Dream - Country.mp4"
+    ],
+    "role": "working-asset",
+    "published": true,
+    "language": "english",
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/recordings-2026-09-23/i-am-free-to-dream-english-country.mp4"
+  },
+  {
+    "sha256": "ae1f30e9c628bbcf2b5f334f0f2ae4de34e78eeead30c16d874b75b97f70fd95",
+    "local_path": "local-assets/english/jazz/I Am Free to Dream - Jazz.mp3",
+    "bytes": 4716277,
+    "source_names": [
+      "I Am Free to Dream -Jazz.mp3"
+    ],
+    "role": "working-asset",
+    "published": true,
+    "language": "english",
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/recordings-2026-09-23/i-am-free-to-dream-english-jazz.mp3"
+  },
+  {
+    "sha256": "d5a23fb43ba572215a06fde38fc7a423007ade462aa32250e61126f9d8d6b01d",
+    "local_path": "local-assets/english/jazz/I Am Free to Dream - Jazz.mp4",
+    "bytes": 92910505,
+    "source_names": [
+      "I Am Free to Dream - Jazz.mp4"
+    ],
+    "role": "working-asset",
+    "published": true,
+    "language": "english",
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/recordings-2026-09-23/i-am-free-to-dream-english-jazz.mp4"
+  },
+  {
+    "sha256": "5c43c223ebfff2cb8d710dd09c5cf35d8b0ea097a71b9d626fa02e68a1fc5dc5",
+    "local_path": "local-assets/filipino/Malaya Akong Mangarap.mp3",
+    "bytes": 4756287,
+    "source_names": [
+      "Malaya Akong Mangarap.mp3"
+    ],
+    "role": "working-asset",
+    "published": true,
+    "language": "filipino",
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/recordings-2026-09-23/malaya-akong-mangarap-filipino.mp3"
+  },
+  {
+    "sha256": "f0ab86067d1c1c6e495458c346162cfced6e27790eaa83bc23f62762b4ba230b",
+    "local_path": "local-assets/filipino/Malaya Akong Mangarap.mp4",
+    "bytes": 93339914,
+    "source_names": [
+      "Malaya Akong Mangarap.mp4"
+    ],
+    "role": "working-asset",
+    "published": true,
+    "language": "filipino",
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/recordings-2026-09-23/malaya-akong-mangarap-filipino.mp4"
   }
 ]
