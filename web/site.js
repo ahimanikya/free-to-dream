@@ -161,3 +161,6 @@ for (const panel of document.querySelectorAll('.sharing')) {
 }
 
 for (const container of document.querySelectorAll('[data-lyrics-url]')) attachLyrics(container);
+
+if (document.querySelector('#index-player')) import('./index-player.mjs').then(({setupIndexPlayer})=>setupIndexPlayer());
+if (document.querySelector('#timing-workspace')) import('./timing-editor.mjs').then(({setupTimingEditor})=>setupTimingEditor());

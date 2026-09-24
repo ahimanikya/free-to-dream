@@ -20,7 +20,8 @@
     "public_preview": true,
     "preview_authorization": "Author requested embedded audio and video on each language page on 2026-09-24.",
     "allow_file_sharing": false,
-    "archived": false
+    "archived": false,
+    "duration_seconds": 180.0
   },
   {
     "id": "english-audio-country",
@@ -42,7 +43,8 @@
     "public_preview": true,
     "preview_authorization": "Author requested embedded audio and video on each language page on 2026-09-24.",
     "allow_file_sharing": false,
-    "archived": false
+    "archived": false,
+    "duration_seconds": 183.5
   },
   {
     "id": "english-audio-jazz",
@@ -64,7 +66,8 @@
     "public_preview": true,
     "preview_authorization": "Author requested embedded audio and video on each language page on 2026-09-24.",
     "allow_file_sharing": false,
-    "archived": false
+    "archived": false,
+    "duration_seconds": 203.95
   },
   {
     "id": "english-video-country",
@@ -132,7 +135,8 @@
     "public_preview": true,
     "preview_authorization": "Author requested embedded audio and video on each language page on 2026-09-24.",
     "allow_file_sharing": false,
-    "archived": false
+    "archived": false,
+    "duration_seconds": 202.82
   },
   {
     "id": "filipino-video-01",
@@ -317,7 +321,8 @@
     "public_preview": true,
     "preview_authorization": "Author requested embedded audio and video on each language page on 2026-09-24.",
     "allow_file_sharing": false,
-    "archived": false
+    "archived": false,
+    "duration_seconds": 152.04
   },
   {
     "id": "tamil-video-01",
@@ -363,7 +368,8 @@
     "public_preview": true,
     "preview_authorization": "Author requested embedded audio and video on each language page on 2026-09-24.",
     "allow_file_sharing": false,
-    "archived": false
+    "archived": false,
+    "duration_seconds": 162.02
   },
   {
     "id": "telugu-video-v4",
@@ -408,7 +414,8 @@
     "public_preview": true,
     "preview_authorization": "Author requested embedded audio and video on each language page on 2026-09-24.",
     "allow_file_sharing": false,
-    "archived": true
+    "archived": true,
+    "duration_seconds": 214.76
   },
   {
     "id": "telugu-audio-v2",
@@ -430,7 +437,8 @@
     "public_preview": true,
     "preview_authorization": "Author requested embedded audio and video on each language page on 2026-09-24.",
     "allow_file_sharing": false,
-    "archived": true
+    "archived": true,
+    "duration_seconds": 181.22
   },
   {
     "id": "telugu-audio-v3",
@@ -452,7 +460,8 @@
     "public_preview": true,
     "preview_authorization": "Author requested embedded audio and video on each language page on 2026-09-24.",
     "allow_file_sharing": false,
-    "archived": true
+    "archived": true,
+    "duration_seconds": 182.42
   },
   {
     "id": "telugu-video-v1",

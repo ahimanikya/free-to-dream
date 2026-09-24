@@ -431,6 +431,8 @@ def language_content(meta, body, path, items, config, local=False):
     notes_link = f'contribute.html?language={quote(slug)}&amp;type=feedback'
     action = f'<a href="contribute.html?language={quote(slug)}&amp;type=recording">Submit a recording</a><a href="{notes_link}">Leave a listening note</a>'
     if not original: action += f'<a href="contribute.html?language={quote(slug)}&amp;type=lyrics">Suggest a wording change</a>'
+    timing_record = next((record for record, _ in items if record['kind']=='audio' and not record.get('archived')), None)
+    if timing_record: action += f'<a href="timing.html?recording={quote(timing_record["id"])}">Time the lyrics</a>'
     if original and config.get('preferred_odia_suno_url'):
         action += f'<a href="{esc(config["preferred_odia_suno_url"],quote=True)}">Selected take on Suno ↗</a>'
     content += f'<div class="quiet-contribute"><h2>{contributor}</h2><div class="reading-links">{action}</div></div></section>'
@@ -456,7 +458,7 @@ def build(local=False):
     output = ROOT / ('site' if local else 'site-public')
     if output.exists(): shutil.rmtree(output)
     output.mkdir()
-    shutil.copytree(ROOT / 'web', output / 'assets')
+    shutil.copytree(ROOT / 'web', output / 'assets', ignore=shutil.ignore_patterns('*.html'))
     # Only explicitly authorized previews/releases are embedded remotely.
     # Never ship archive binaries or unhydrated pointers in the Pages build.
     shutil.copytree(ROOT / 'media', output / 'media', ignore=shutil.ignore_patterns(*(f'*{ext}' for ext in MEDIA_EXTENSIONS), '*.srt', '*.vtt'))
@@ -493,6 +495,7 @@ def build(local=False):
             poster = ' playsinline poster="media/images/cover.png"' if tag == 'video' else ''
             credits = ''.join(f'<dt>{esc(key.replace("_", " ").title())}</dt><dd>{esc(value)}</dd>' for key,value in item.get('credits',{}).items())
             content = f'<a class="back" href="{page_name(LANGUAGES/(slug+".md"))}">← All {esc(language_map[slug]["language"])} versions and lyrics</a><section class="recording-detail"><div class="eyebrow">{esc(language_map[slug]["language"])} · {esc(recording_label(item))}</div><h1>{esc(item["title"])}</h1>{player_markup(item, url)}<p>{esc(item["notes"])}</p><dl class="credits">{credits}</dl>'
+            if tag == 'audio': content += f'<p><a href="timing.html?recording={quote(item["id"])}">Add or adjust timed lyrics →</a></p>'
             content += share_controls(item['title'], filename, config, local, item, url)
             content += f'<p><a href="contribute.html?language={quote(slug)}&amp;type=feedback&amp;recording={quote(item["id"])}">Leave a listening note for this version</a></p></section>'
             content += collaboration_panel(language_map[slug], config)
@@ -514,12 +517,38 @@ def build(local=False):
         slug = item['slug']
         listening = slug in available
         status = 'lyrics' if has_lyrics(item) else 'brief'
-        label = 'Listen & explore' if listening else ('Read the lyrics' if status == 'lyrics' else 'Help shape this version')
-        cards.append(f'''<a class="language-card" data-search="{esc(item['language']+' '+item['title'], quote=True)}" data-status="{status}" data-listen="{str(listening).lower()}" href="{page_name(LANGUAGES / (slug+'.md'))}"><span class="card-top">{item['collection_order']:03d}<span>{'♫ LISTEN' if listening else ('LYRICS' if status == 'lyrics' else 'OPEN INVITATION')}</span></span><h3>{esc(item['language'])}</h3><p dir="auto">{esc(item['title'])}</p><span class="card-action">{label} <span aria-hidden="true">↗</span></span></a>''')
+        page = page_name(LANGUAGES/(slug+'.md'))
+        current = [(record, url) for record, url in available.get(slug, []) if not record.get('archived')]
+        audio = [(record, url) for record, url in current if record['kind']=='audio']
+        video_count = sum(record['kind']=='video' for record, _ in current)
+        _, body = read_concept(LANGUAGES/(slug+'.md'))
+        direction = re.search(r'\*\*Musical direction:\*\* ([^\n]+)',body)
+        direction = direction[1].split(' · ')[0].strip() if direction else 'Musical direction awaiting listening review'
+        readiness = 'Odia original' if slug=='odia' else ('Lyrics · review welcome' if status=='lyrics' else ('Transcription pending' if item['lyric_status']=='Transcription pending' else 'Adaptation invited'))
+        availability = f'{len(audio)} audio · {video_count} video' if current else 'Recording to come'
+        play = ''
+        if audio:
+            record, url = audio[0]
+            seconds = int(record.get('duration_seconds',0))
+            duration = f'{seconds//60}:{seconds%60:02}' if seconds else ''
+            play = f'<button class="card-play" type="button" data-play-recording="{record["id"]}" aria-label="Play {esc(item["language"],quote=True)}" aria-pressed="false"><span class="play-label">▶ Play</span> <span>{duration}</span></button>'
+        cards.append(f'''<article class="language-card" data-search="{esc(item['language']+' '+item['title']+' '+direction, quote=True)}" data-status="{status}" data-listen="{str(listening).lower()}"><div class="card-top"><span>{item['collection_order']:03d}</span><span>{esc(readiness)}</span></div><h3><a href="{page}">{esc(item['language'])}</a></h3><p class="card-poem" dir="auto">{esc(item['title'])}</p><p class="card-direction">{esc(direction)}</p><p class="card-availability">{availability}</p><div class="card-bottom">{play}<a href="{page}">Read &amp; explore ↗</a></div></article>''')
+    audio_catalog = []
+    for slug, entries in available.items():
+        _, body = read_concept(LANGUAGES/(slug+'.md'))
+        section = re.search(r'## Poem / arranged lyrics\n(.*?)(?=\n## |\Z)',body,re.S)
+        draft = re.search(r'```(?:text)?\n(.*?)\n```',section[1],re.S) if section else None
+        for record, url in entries:
+            if record['kind']!='audio': continue
+            audio_catalog.append({'id':record['id'],'language':slug,'language_name':language_map[slug]['language'],'title':record['title'],'url':url,'page':f'recording--{record["id"]}.html','duration_seconds':record.get('duration_seconds'),'draft':draft[1] if draft else '', 'archived':record.get('archived',False), 'srt_url':f'media/lyrics/{record["id"]}.srt' if record.get('timed_lyrics') else None})
+    (output/'assets/listening.json').write_text(json.dumps(audio_catalog,ensure_ascii=False),encoding='utf-8')
+    (output/'timing.html').write_text(shell('Time the lyrics', (ROOT/'web/timing.html').read_text(), config, local, 'timing.html'),encoding='utf-8')
     content = f'''<section class="hero"><div><div class="eyebrow">A POEM WITHOUT BORDERS</div><h1>I am free<br>to <em>dream.</em></h1><p class="original-title" lang="or">ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ</p><p class="intro">One poem. Many voices. Shared dreams.<br>An invitation to carry an Odia poem into the languages and musical traditions we call home.</p><a class="button" href="#collection">Explore the collection ↓</a><p class="byline">A poem by Ahimanikya Satapathy</p></div><figure><img src="media/images/cover.png" alt="Hands shaping a clay pot beneath a dreamlike moonlit mountain landscape"><figcaption>Gathering the world. Giving dreams a form.</figcaption></figure></section>
 <section class="stats" aria-label="Collection status"><div><strong>{len(languages)}</strong><span>language journeys</span></div><div><strong>{lyric_count}</strong><span>original &amp; adapted texts</span></div><div><strong>{len(languages)-lyric_count}</strong><span>texts awaiting contributions</span></div><div><strong>{len(available)}</strong><span>languages with {'local media' if local else 'playable media'}</span></div></section>
 <section id="collection"><div class="section-heading"><div class="eyebrow">THE LIVING COLLECTION</div><h2>Find your language.<br>Bring your voice.</h2><p>Read the poem, explore its musical direction, or help an adaptation find its natural voice. Drafts remain marked until reviewed.</p></div><div class="filters"><label for="search">Search languages or titles<input id="search" type="search" placeholder="Try Odia, Tamil, Sanskrit…"></label><label for="filter">Show<select id="filter"><option value="all">All languages</option><option value="listen">Ready to listen</option><option value="lyrics">Lyrics available</option><option value="brief">Adaptation briefs</option></select></label></div><p id="result-count" role="status" aria-live="polite">{len(languages)} languages</p><div class="language-grid">{''.join(cards)}</div><p id="no-results" hidden>No matching language. Try another name or clear the filter.</p></section>
 <section class="invitation"><div class="eyebrow">THIS IS AN INVITATION</div><h2>A language is a living culture.</h2><p>Suggest a lyric change, share a listening note, or submit your own song. Collaborate through GitHub; accepted versions join the collection with credits and a shareable page.</p><div class="action-row"><a class="button" href="contribute.html">Suggest a change →</a><a class="button secondary" href="contribute.html?type=recording">Submit your version →</a></div></section>'''
+    if audio_catalog:
+        content += (ROOT/'web/index-player.html').read_text()
     (output / 'index.html').write_text(shell('I Am Free to Dream', content, config, local), encoding='utf-8')
     (output / '.nojekyll').touch()
     print(f'Built {output.name}: {len(languages)} languages; {sum(map(len, available.values()))} playable media items')

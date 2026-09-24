@@ -53,7 +53,7 @@ class CollectionTests(unittest.TestCase):
         for page in output.glob('*.html'):
             text = page.read_text()
             self.assertNotIn('PRIVATE SENTINEL', text)
-            self.assertNotIn('<audio ', text)
+            if page.name != 'timing.html': self.assertNotIn('<audio ', text)
             links = Links(); links.feed(text)
             for target in links.targets:
                 url = urlparse(target)
@@ -266,6 +266,33 @@ class CollectionTests(unittest.TestCase):
         self.assertIn('நான் ஒரு குயவன்.',tamil)
         for heading in ['Style prompt','Cultural grounding','Working settings and listening checks']:
             self.assertIn(heading,tamil)
+
+    def test_index_cards_and_timing_data_only_offer_available_audio(self):
+        app.build(False)
+        self.assertEqual(json.loads((self.root/'site-public/assets/listening.json').read_text()), [])
+        page=(self.root/'site-public/index.html').read_text()
+        self.assertNotIn('data-play-recording=',page)
+        shutil.copy2(PROJECT/'catalog/recordings.json',self.root/'catalog/recordings.json')
+        app.build(False)
+        page=(self.root/'site-public/index.html').read_text()
+        self.assertEqual(page.count('data-play-recording='),5)
+        self.assertEqual(page.count('<article class="language-card"'),101)
+        self.assertNotIn('<a class="language-card"',page)
+        self.assertIn('data-play-recording="english-audio-country"',page)
+        self.assertIn('Contemporary Nashville country-folk',page)
+        self.assertIn('2 audio · 2 video',page)
+        self.assertIn('Odia original',page)
+        self.assertIn('id="index-player"',page)
+        tracks=json.loads((self.root/'site-public/assets/listening.json').read_text())
+        self.assertEqual(len(tracks),9)
+        self.assertTrue(all(x['duration_seconds'] > 0 for x in tracks))
+        odia=next(x for x in tracks if x['id']=='odia-audio-01')
+        self.assertIn('ସାଉଁଟି',odia['draft'])
+        self.assertIsNone(odia['srt_url'])
+        editor=(self.root/'site-public/timing.html').read_text()
+        self.assertIn('No timestamps are estimated automatically',editor)
+        self.assertIn('Download SRT',editor)
+        self.assertNotIn('local-assets/',editor)
 
     def test_media_server_supports_byte_ranges(self):
         (self.root/'sample.mp3').write_bytes(bytes(range(256)))

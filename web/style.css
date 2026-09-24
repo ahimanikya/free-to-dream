@@ -105,3 +105,43 @@ summary:focus-visible { outline:3px solid var(--orange); outline-offset:4px; }
 .language-heading:after { width:138px; height:108px; background-image:url('odia-manuscript.svg'); opacity:.85; }
 @media(max-width:700px) { .language-heading:after { width:65px; height:48px; top:-3px; } .language-heading .eyebrow { padding-right:75px; } }
 @media(max-width:440px) { header { flex-wrap:wrap; gap:14px; } header nav { flex:1 0 100%; justify-content:space-between; } }
+
+/* Readable collection cards and one shared, user-started audio player. */
+article.language-card { margin:0; max-width:none; min-width:0; min-height:320px; }
+.language-card h3 a { text-decoration:none; }
+.language-card .card-poem { margin-bottom:14px; min-height:2.7em; }
+.language-card .card-direction { font-size:12px; line-height:1.65; padding-top:12px; border-top:1px solid var(--line); margin-bottom:10px; }
+.language-card .card-availability { font-size:11px; margin:0 0 15px; }
+.card-bottom { margin-top:auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; }
+.card-bottom > a { font-size:12px; }
+.card-play { background:var(--ink); color:var(--white); border:1px solid var(--ink); padding:8px 11px; }
+.card-play span { opacity:.8; margin-left:5px; font-size:11px; }
+.card-play:hover,.card-play.is-playing { color:var(--white); background:var(--orange); }
+.has-index-player { padding-bottom:145px; }
+.index-player { position:fixed; bottom:16px; left:50%; transform:translateX(-50%); z-index:20; width:min(1120px,calc(100% - 32px)); display:flex; gap:18px; align-items:center; flex-wrap:wrap; padding:16px 20px; border:1px solid var(--line); border-radius:5px; background:var(--white); box-shadow:0 4px 30px #293c3626; }
+.index-now { display:flex; flex-direction:column; flex:1 1 180px; font-size:13px; }
+.index-player audio { flex:2 1 260px; width:260px; }
+.index-version { flex:1 1 160px; }
+.index-version select { padding:8px; margin-top:3px; font-size:12px; }
+#index-play-status { margin:0; flex-basis:100%; }
+#index-play-status:empty { display:none; }
+#index-close { padding:5px 10px; font-size:21px; }
+.timing-workspace { max-width:1000px; margin:0 auto 70px; }
+.timing-workspace h1 { font-size:clamp(36px,5vw,58px); }
+.timing-workspace > p { max-width:740px; color:var(--muted); }
+.timing-player { position:sticky; top:0; z-index:4; margin:25px 0; padding:16px; border:1px solid var(--line); background:var(--white); }
+.timing-toolbar { display:flex; gap:20px; align-items:center; justify-content:space-between; margin-top:10px; }
+.timing-toolbar label { display:flex; gap:10px; align-items:center; }
+.timing-toolbar select { padding:5px 10px; width:auto; margin:0; font-size:13px; }
+#timing-clock { font-variant-numeric:tabular-nums; font-size:15px; }
+.timing-player .current-lyric { min-height:2.5em; margin:12px 0 0; padding:4px 12px; font-size:17px; }
+.timing-input summary,.timing-shift summary { cursor:pointer; padding:15px 0; }
+.timing-input .action input { max-width:210px; padding:0; border:0; margin-top:6px; font-size:11px; }
+.timing-row { display:grid; grid-template-columns:minmax(150px,1fr) 125px 125px; gap:12px; padding:20px 0; border-bottom:1px solid var(--line); }
+.timing-row-actions { grid-column:1/-1; display:flex; flex-wrap:wrap; gap:10px; }
+.timing-row input { padding:10px; font-variant-numeric:tabular-nums; }
+.timing-row textarea { margin-top:7px; }
+.timing-export { margin-top:25px; }
+.timing-export > a { font-size:13px; }
+@media(max-width:600px) { .index-player { gap:10px; padding:12px; bottom:8px; } .index-player audio { order:3; flex-basis:100%; } .index-version { flex-basis:100%; order:4; } #index-close { margin-left:auto; } .has-index-player { padding-bottom:245px; } .timing-row { grid-template-columns:1fr 1fr; } .timing-row > label:first-child { grid-column:1/-1; } .timing-toolbar { gap:8px; } .timing-toolbar label { font-size:11px; gap:5px; } }
+.card-play .play-label { font-size:13px; opacity:1; margin-left:0; }

@@ -65,3 +65,31 @@ test('Player events display plain text safely and lyric download failure leaves 
     assert.match(display.textContent,/could not load/);
   } finally {globalThis.fetch=originalFetch;}
 });
+
+const timing=await import('../web/timing.mjs');
+test('SRT round-trip preserves Unicode and millisecond timings',()=>{
+  const cues=[{start:1234,end:2345,text:'ସାଉଁଟି\nସାଉଁଟି'},{start:3000,end:6000,text:'நான் ஒரு குயவன்.'}];
+  assert.deepEqual(timing.parseSrt(timing.serializeSrt(cues)),cues);
+  assert.equal(timing.parseTime('01:02.345'),62345);
+  assert.equal(timing.parseTime('1:02:03,456'),3723456);
+  assert.equal(timing.clock(3723456),'62:03.456');
+  assert.deepEqual(timing.lyricLines('[Intro]\n\nସାଉଁଟି\nସାଉଁଟି\n[Verse 1]\nhello'),['ସାଉଁଟି','ସାଉଁଟି','hello']);
+});
+test('No invented, overlapping, out-of-range or invalid lyric timestamps are exported',()=>{
+  for(const value of ['', '-1', '1:99', 'no time'])assert.throws(()=>timing.parseTime(value));
+  for(const cues of [[],[{start:NaN,end:NaN,text:'pending'}],[{start:1000,end:500,text:'reverse'}],[{start:0,end:2000,text:'first'},{start:1000,end:3000,text:'overlap'}],[{start:0,end:1000,text:'one\n\ntwo'}]])assert.throws(()=>timing.serializeSrt(cues));
+  assert.throws(()=>timing.serializeSrt([{start:0,end:2100,text:'too long'}],2000));
+  assert.throws(()=>timing.parseSrt('2\n00:00:00,000 --> 00:00:01,000\nwrong number'));
+});
+test('Offsets and gradual drift corrections retain the exact words and validate before changing',()=>{
+  const cues=[{start:1000,end:2000,text:'first'},{start:6000,end:7000,text:'middle'},{start:11000,end:12000,text:'last'}];
+  const shifted=timing.retimeCues(cues,2,2);
+  assert.deepEqual(shifted.map(c=>c.start),[3000,8000,13000]);
+  const stretched=timing.retimeCues(cues,0,3);
+  assert.deepEqual(stretched.map(c=>c.start),[1000,7500,14000]);
+  assert.deepEqual(stretched.map(c=>c.text),cues.map(c=>c.text));
+  assert.equal(cues[2].start,11000);
+  assert.throws(()=>timing.retimeCues(cues,-2,-2));
+  assert.throws(()=>timing.retimeCues(cues,10,-10));
+  assert.throws(()=>timing.retimeCues(cues,0,3,13000));
+});

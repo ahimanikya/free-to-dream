@@ -38,6 +38,8 @@ Language pages put the poem beside compact audio/video players. Sharing, musical
 
 Original decorative drawings reference Odisha’s Pattachitra and palm-leaf traditions. See [Art of the site](kb/guides/artwork.md) for the design references. The collection cover remains on the home page, video posters and social previews.
 
+The index cards show lyric status, musical direction, current audio/video availability and a play button where audio exists. A shared player offers alternate takes without leaving the index. The [timing workspace](https://ahimanikya.github.io/free-to-dream/timing.html) lets contributors mark or correct lyric cues and export an SRT for review.
+
 ## Audio-first collection
 
 Use **MP3 or M4A + cover artwork + a separate SRT for each take**. Audio remains in Git LFS; poems, credits and SRTs use ordinary Git. The site generates WebVTT and displays timed lyrics using the audio player’s position. Missing timings are clearly marked. See the [timed lyrics guide](kb/guides/timed-lyrics.md).
