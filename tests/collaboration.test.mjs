@@ -93,3 +93,25 @@ test('Offsets and gradual drift corrections retain the exact words and validate 
   assert.throws(()=>timing.retimeCues(cues,10,-10));
   assert.throws(()=>timing.retimeCues(cues,0,3,13000));
 });
+
+import {cardsPerPage, rebasePlan} from '../web/carousel.mjs';
+test('Carousel arrows advance a complete visible group on phones and desktops',()=>{
+  assert.equal(cardsPerPage(350,326,14,101),1);
+  assert.equal(cardsPerPage(1160,300,16,101),3);
+  assert.equal(cardsPerPage(620,300,16,101),2);
+  assert.equal(cardsPerPage(1160,300,16,2),2);
+});
+test('Loop rebasing preserves the visible languages and never duplicates a card',()=>{
+  const step=316, viewport=1160, count=101, size=3;
+  for(const position of [0,316,316*96,316*97]) {
+    const order=Array.from({length:count},(_,i)=>i);
+    const visible=order.slice(Math.round(position/step),Math.round(position/step)+size);
+    const shift=rebasePlan(position,viewport,step,count,size);
+    assert.notEqual(shift,0);
+    const rotated=[...order.slice(shift),...order.slice(0,shift)];
+    const after=(position-shift*step)/step;
+    assert.deepEqual(rotated.slice(after,after+size),visible);
+    assert.equal(new Set(rotated).size,count);
+  }
+  assert.equal(rebasePlan(15000,viewport,step,count,size),0);
+});

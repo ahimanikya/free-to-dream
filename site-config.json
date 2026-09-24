@@ -4,5 +4,19 @@
   "author": "Ahimanikya Satapathy",
   "repository_url": "https://github.com/ahimanikya/free-to-dream",
   "site_url": "https://ahimanikya.github.io/free-to-dream",
-  "preferred_odia_suno_url": "https://suno.com/s/Cogg59buwC9JPIix"
+  "preferred_odia_suno_url": "https://suno.com/s/Cogg59buwC9JPIix",
+  "author_links": [
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/ahimanikya/"
+    },
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/ahimanikya/"
+    },
+    {
+      "label": "Poetry blog",
+      "url": "https://kabitaprusta.blogspot.com/"
+    }
+  ]
 }

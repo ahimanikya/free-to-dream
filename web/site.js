@@ -1,4 +1,5 @@
 import {attachLyrics} from './lyrics.mjs';
+import {setupLanguageCarousel} from './carousel.mjs';
 import {buildProposal, githubSubmission, publicMediaURL} from './collaboration.mjs';
 
 const search = document.querySelector('#search');
@@ -165,28 +166,7 @@ for (const container of document.querySelectorAll('[data-lyrics-url]')) attachLy
 if (document.querySelector('#index-player')) import('./index-player.mjs').then(({setupIndexPlayer})=>setupIndexPlayer());
 if (document.querySelector('#timing-workspace')) import('./timing-editor.mjs').then(({setupTimingEditor})=>setupTimingEditor());
 
-// The featured shelf remains scrollable without JavaScript; buttons add mouse access.
-const featuredShelf = document.querySelector('#featured-cards');
-if (featuredShelf) {
-  const previous = document.querySelector('#cards-previous');
-  const next = document.querySelector('#cards-next');
-  document.querySelector('.card-scroll-controls').hidden = false;
-  const updateShelf = () => {
-    previous.disabled = featuredShelf.scrollLeft <= 2;
-    next.disabled = featuredShelf.scrollLeft + featuredShelf.clientWidth >= featuredShelf.scrollWidth - 2;
-  };
-  const moveShelf = direction => {
-    const card = featuredShelf.querySelector('.language-card');
-    if (!card) return;
-    const distance = card.getBoundingClientRect().width + (parseFloat(getComputedStyle(featuredShelf).columnGap) || 0);
-    featuredShelf.scrollBy({left: direction * distance, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
-  };
-  previous.addEventListener('click', () => moveShelf(-1));
-  next.addEventListener('click', () => moveShelf(1));
-  featuredShelf.addEventListener('scroll', updateShelf, {passive:true});
-  window.addEventListener('resize', updateShelf);
-  updateShelf();
-}
+setupLanguageCarousel();
 
 const copyLyricsPrompt = document.querySelector('#copy-lyrics-prompt');
 if (copyLyricsPrompt) copyLyricsPrompt.addEventListener('click', async () => {
