@@ -230,6 +230,26 @@
       "title": "Malaya Akong Mangarap",
       "status": "working",
       "notes": ""
+    },
+    {
+      "repo_path": "media/malayalam/i-am-free-to-dream-malayalam.mp3",
+      "sha256": "de058c5c72d229f02deaa7cd843b4e3aaa5b28fb59583fcc6de6d23da85b8eb5",
+      "bytes": 3926878,
+      "source_name": "സ്വപ്നം കാണാൻ എനിക്ക് വിലക്കില്ല.mp3",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/malayalam-2026-09-24/i-am-free-to-dream-malayalam.mp3",
+      "title": "Malayalam audio",
+      "status": "working",
+      "notes": "Author-selected Malayalam recording."
+    },
+    {
+      "repo_path": "media/malayalam/i-am-free-to-dream-malayalam.mp4",
+      "sha256": "7084132fdb52335be6db36631e7698fd627fed6378391eec52c18a6824bf6532",
+      "bytes": 81706229,
+      "source_name": "സ്വപ്നം കാണാൻ എനിക്ക് വിലക്കില്ല.mp4",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/malayalam-2026-09-24/i-am-free-to-dream-malayalam.mp4",
+      "title": "Malayalam video",
+      "status": "working",
+      "notes": "Full Malayalam soundtrack; the video uses the shared visual sequence fitted to the track duration."
     }
   ],
   "unavailable_originals": [

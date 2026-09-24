@@ -531,5 +531,52 @@
     "preview_authorization": "Author requested embedded audio and video on each language page on 2026-09-24.",
     "allow_file_sharing": false,
     "archived": true
+  },
+  {
+    "id": "malayalam-audio-01",
+    "language": "malayalam",
+    "poem": "i-am-free-to-dream",
+    "kind": "audio",
+    "title": "സ്വപ്നം കാണാൻ എനിക്ക് വിലക്കില്ല",
+    "local_path": null,
+    "repo_path": "media/malayalam/i-am-free-to-dream-malayalam.mp3",
+    "publish": false,
+    "review_status": "needs-review",
+    "rights_status": "release-details-to-confirm",
+    "notes": "Shared for listening and feedback. Pronunciation and timing review remains open.",
+    "credits": {
+      "poem": "Ahimanikya Satapathy",
+      "music_and_vocals": "Generated using Suno AI"
+    },
+    "public_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/main/media/malayalam/i-am-free-to-dream-malayalam.mp3",
+    "public_preview": true,
+    "preview_authorization": "Author requested adding the Malayalam recording and video to the project on 2026-09-24.",
+    "allow_file_sharing": false,
+    "archived": false,
+    "duration_seconds": 162.52
+  },
+  {
+    "id": "malayalam-video-01",
+    "language": "malayalam",
+    "poem": "i-am-free-to-dream",
+    "kind": "video",
+    "title": "സ്വപ്നം കാണാൻ എനിക്ക് വിലക്കില്ല",
+    "local_path": null,
+    "repo_path": "media/malayalam/i-am-free-to-dream-malayalam.mp4",
+    "publish": false,
+    "review_status": "needs-review",
+    "rights_status": "release-details-to-confirm",
+    "notes": "Shared for listening and feedback. Pronunciation and timing review remains open.",
+    "credits": {
+      "poem": "Ahimanikya Satapathy",
+      "music_and_vocals": "Generated using Suno AI",
+      "visuals": "Shared visual source created using Melodicpal"
+    },
+    "public_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/main/media/malayalam/i-am-free-to-dream-malayalam.mp4",
+    "public_preview": true,
+    "preview_authorization": "Author requested adding the Malayalam recording and video to the project on 2026-09-24.",
+    "allow_file_sharing": false,
+    "archived": false,
+    "duration_seconds": 162.54
   }
 ]
