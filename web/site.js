@@ -187,3 +187,17 @@ if (featuredShelf) {
   window.addEventListener('resize', updateShelf);
   updateShelf();
 }
+
+const copyLyricsPrompt = document.querySelector('#copy-lyrics-prompt');
+if (copyLyricsPrompt) copyLyricsPrompt.addEventListener('click', async () => {
+  const lyrics = document.querySelector('#lyrics-prompt-text');
+  const status = document.querySelector('#lyrics-copy-status');
+  try {
+    await navigator.clipboard.writeText(lyrics.value);
+    status.textContent = 'Lyrics prompt copied, including song sections.';
+  } catch {
+    lyrics.focus();
+    lyrics.select();
+    status.textContent = 'The lyrics are selected. Copy them using your browser’s copy command.';
+  }
+});

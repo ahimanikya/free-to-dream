@@ -3,6 +3,8 @@ from functools import partial
 from html.parser import HTMLParser
 import importlib.util
 import json
+import re
+from html import unescape
 from pathlib import Path
 import shutil
 import tempfile
@@ -215,7 +217,8 @@ class CollectionTests(unittest.TestCase):
         telugu=(output/'poems--i-am-free-to-dream--languages--telugu.html').read_text()
         self.assertIn('Earlier video versions (3)', telugu)
         hindi=(output/'poems--i-am-free-to-dream--languages--hindi.html').read_text()
-        self.assertIn('A voice for this poem is still to come.',hindi)
+        self.assertIn('A recording is still to come.',hindi)
+        self.assertIn('A video is still to come.',hindi)
         self.assertNotIn('<video ', hindi)
         self.assertFalse((output/'media/recordings').exists())
 
@@ -248,12 +251,29 @@ class CollectionTests(unittest.TestCase):
             self.assertIn('class="page-share"',page)
             self.assertIn('assets/odia-lotus.svg',page)
             self.assertNotIn('<details open',page)
+            for target in ['poem-text','listen','watch']:
+                self.assertIn(f'href="#{target}"',page)
+                self.assertIn(f'id="{target}"',page)
+            reading=re.search(r'<article id="poem-text".*?</article>',page,re.S)[0]
+            self.assertNotRegex(unescape(reading),r'(?m)^\s*\[[^\]\n]+\]\s*$')
+            _, body=app.read_concept(app.LANGUAGES/(meta['slug']+'.md'))
+            section=re.search(r'## Poem / arranged lyrics\n(.*?)(?=\n## |\Z)',body,re.S)
+            prompt=re.search(r'```(?:text)?\n(.*?)\n```',section[1],re.S) if section else None
+            if prompt:
+                copied=re.search(r'<textarea id="lyrics-prompt-text"[^>]*>(.*?)</textarea>',page,re.S)
+                self.assertEqual(unescape(copied[1]),prompt[1])
+                if meta['slug']!='odia':
+                    displayed=re.search(r'<pre[^>]*><code[^>]*>(.*?)</code></pre>',reading,re.S)[1]
+                    expected=re.sub(r'(?m)^[ \t]*\[[^\]\n]+\][ \t]*\n?', '',prompt[1])
+                    self.assertEqual(unescape(displayed).strip(),expected.strip())
+            else:
+                self.assertNotIn('id="copy-lyrics-prompt"',page)
         odia=(output/'poems--i-am-free-to-dream--languages--odia.html').read_text()
         self.assertIn('Odia · the original',odia)
         self.assertNotIn('How to validate this translation',odia)
         self.assertNotIn('Translation &amp; collaboration',odia)
         self.assertNotIn('needs native review',odia)
-        self.assertIn('<summary>Song arrangement</summary>',odia)
+        self.assertIn('<summary>Lyrics prompt · view &amp; copy</summary>',odia)
         _, original=app.read_concept(app.KB/'poems/i-am-free-to-dream/original.md')
         source=original.split('```text\n')[1].split('\n```')[0]
         self.assertIn(source,odia)

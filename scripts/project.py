@@ -363,20 +363,19 @@ def translation_check_panel(meta):
 
 
 def resource_panel(meta, items):
-    content = '<aside id="resources" class="listening compact-listening" aria-label="Listen and watch"><div class="eyebrow">THE POEM IN SONG</div><h2>Listen &amp; watch</h2>'
-    if not items:
-        return content + f'<p class="media-empty">A voice for this poem is still to come.</p><a class="text-link" href="contribute.html?language={quote(meta["slug"])}&amp;type=recording">Share a recording →</a></aside>'
+    content = '<aside id="resources" class="listening compact-listening" aria-label="Listen and watch">'
     if any(not item['publish'] for item, _ in items):
         content += '<p class="media-status">Working recordings · feedback welcome</p>'
     def card(item, url):
         label = Path(urlparse(url).path).suffix.lstrip('.').upper()
         title = re.sub(r'^(?:I Am Free to Dream|'+re.escape(meta['language'])+r')\s*[·–—-]\s*', '', item['title'])
         return f'<div class="recording"><h4>{esc(title)}</h4>{player_markup(item, url)}<div class="recording-links"><a href="{esc(url, quote=True)}" download>Download {label}</a><a href="recording--{item["id"]}.html">Details &amp; share ↗</a></div></div>'
-    for kind, heading in [('audio', 'Audio'), ('video', 'Video')]:
+    for kind, heading, target in [('audio', 'Listen', 'listen'), ('video', 'Watch', 'watch')]:
         current = [(item, url) for item, url in items if item['kind'] == kind and not item.get('archived')]
         older = [(item, url) for item, url in items if item['kind'] == kind and item.get('archived')]
-        if not current and not older: continue
-        content += f'<section class="media-group" aria-label="{heading}"><h3>{heading}</h3>'
+        content += f'<section id="{target}" class="media-group" aria-label="{heading}"><h2>{heading}</h2>'
+        if not current and not older:
+            content += '<p class="media-empty">'+('A recording is still to come.' if kind=='audio' else 'A video is still to come.')+'</p>'
         if current:
             content += card(*current[0])
             if len(current) > 1:
@@ -384,6 +383,8 @@ def resource_panel(meta, items):
         if older:
             content += f'<details class="earlier-recordings"><summary>Earlier {kind} versions ({len(older)})</summary>' + ''.join(card(*pair) for pair in older) + '</details>'
         content += '</section>'
+    if not items:
+        content += f'<a class="text-link" href="contribute.html?language={quote(meta["slug"])}&amp;type=recording">Share a recording →</a>'
     return content + '</aside>'
 
 
@@ -397,29 +398,27 @@ def language_content(meta, body, path, items, config, local=False):
     language_name = 'Odia · the original' if original else meta['language']
     status = 'Original poem' if original else ('Adaptation · review welcome' if has_lyrics(meta) else meta['lyric_status'])
     source_link = '' if original else '<a href="poems--i-am-free-to-dream--languages--odia.html">Read the Odia original ↗</a>'
-    header = f'<section class="language-heading"><div class="eyebrow">{esc(language_name)}</div><h1 dir="auto">{esc(meta["title"])}</h1><p class="poet-credit">A poem by Ahimanikya Satapathy <span aria-hidden="true">·</span> {esc(status)}</p><div class="reading-links"><a href="#poem-text">Read</a><a href="#resources">Listen &amp; watch</a>{source_link}</div><details class="page-share"><summary>Share this poem</summary>{share_controls(meta["language"]+" · "+meta["title"], page_name(path), config, local)}</details></section>'
+    header = f'<section class="language-heading"><div class="eyebrow">{esc(language_name)}</div><h1 dir="auto">{esc(meta["title"])}</h1><p class="poet-credit">A poem by Ahimanikya Satapathy <span aria-hidden="true">·</span> {esc(status)}</p><div class="reading-links"><a href="#poem-text">Read</a><a href="#listen">Listen</a><a href="#watch">Watch</a>{source_link}</div><details class="page-share"><summary>Share this poem</summary>{share_controls(meta["language"]+" · "+meta["title"], page_name(path), config, local)}</details></section>'
     if original:
         _, source_body = read_concept(KB/'poems/i-am-free-to-dream/original.md')
         poem = re.search(r'```(?:text)?\n(.*?)\n```', source_body, re.S)
         primary = '```text\n'+poem[1]+'\n```' if poem else source_body
-        poem_heading = 'The original poem'
     elif has_lyrics(meta) and 'Poem / arranged lyrics' in by_heading:
-        primary = by_heading['Poem / arranged lyrics']
-        poem_heading = 'The poem'
+        primary = re.sub(r'(?m)^[ \t]*\[[^\]\n]+\][ \t]*\n?', '', by_heading['Poem / arranged lyrics'])
     elif meta['lyric_status'] == 'Transcription pending':
         primary = 'Listen to this version while we prepare a checked transcription of the words sung. A fluent speaker can help bring the text to this page.'
-        poem_heading = 'The words are on their way'
     else:
         primary = 'This language’s poem is still taking shape. Read the [Odia original](odia.md) and help carry its feeling into your language. The adaptation brief is available below.'
-        poem_heading = 'An invitation to your language'
     primary_html = render_markdown(primary, path)
     if slug in ('arabic','urdu','sindhi','kashmiri','balti'):
         primary_html = primary_html.replace('<pre>', '<pre dir="rtl">')
-    reading = f'<article id="poem-text" class="poem-reading"><h2 class="reading-caption">{poem_heading}</h2>{primary_html}<a class="poem-download" href="kb/poems/i-am-free-to-dream/languages/{quote(slug)}.md" download>Download poem &amp; notes ↓</a></article>'
+    reading = f'<article id="poem-text" class="poem-reading"><h2 class="reading-caption">Read</h2>{primary_html}<a class="poem-download" href="kb/poems/i-am-free-to-dream/languages/{quote(slug)}.md" download>Download poem &amp; notes ↓</a></article>'
     content = header + '<div class="language-layout">'+reading+resource_panel(meta, items)+'</div>'
     content += '<section class="language-notes" aria-label="About this version">'
-    if original and by_heading.get('Poem / arranged lyrics'):
-        content += '<details><summary>Song arrangement</summary><div class="detail-body">'+render_markdown(by_heading['Poem / arranged lyrics'], path)+'</div></details>'
+    prompt = re.search(r'```(?:text)?\n(.*?)\n```', by_heading.get('Poem / arranged lyrics', ''), re.S)
+    if prompt:
+        direction = 'rtl' if slug in ('arabic','urdu','sindhi','kashmiri','balti') else 'auto'
+        content += f'<details class="lyrics-prompt"><summary>Lyrics prompt · view &amp; copy</summary><div class="detail-body"><label for="lyrics-prompt-text">Lyrics with song sections</label><textarea id="lyrics-prompt-text" rows="16" readonly dir="{direction}">{esc(prompt[1])}</textarea><button type="button" id="copy-lyrics-prompt">Copy lyrics prompt</button><p id="lyrics-copy-status" class="small" role="status" aria-live="polite"></p></div></details>'
     music_names = {'Why this musical direction','Cultural grounding','Voice, rhythm and arrangement','Emotional shape','Style prompt','Working settings and listening checks','Musical direction'}
     music = '\n\n'.join('## '+heading+'\n\n'+text for heading,text in sections if heading in music_names)
     if music:

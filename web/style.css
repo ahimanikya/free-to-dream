@@ -192,3 +192,11 @@ article.language-card { height:420px; min-height:420px; padding:20px; }
  .featured-grid { grid-auto-columns:calc(100% - 24px); gap:14px; }
  .collection-actions { width:100%; justify-content:space-between; }
 }
+
+/* Reading stays free of arrangement labels; the exact lyrics prompt is optional. */
+.compact-listening .media-group:first-of-type { margin-top:0; }
+.compact-listening .media-group + .media-group { border-top:1px solid var(--line); padding-top:22px; }
+.compact-listening .media-group h2 { font:400 27px/1.3 Georgia,serif; margin:0 0 16px; }
+#poem-text, #listen, #watch { scroll-margin-top:24px; }
+.lyrics-prompt textarea { font:15px/1.9 system-ui,sans-serif; resize:vertical; margin-bottom:16px; }
+#lyrics-copy-status:empty { display:none; }
