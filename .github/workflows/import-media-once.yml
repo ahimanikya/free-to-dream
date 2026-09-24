@@ -26,9 +26,9 @@ jobs:
           python - <<'PY'
           import base64, concurrent.futures, hashlib, json, pathlib, shutil, urllib.request
           root=pathlib.Path.cwd().resolve()
-          url='https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/import-plan.json'
+          url='https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/import-plan-v2.json'
           with urllib.request.urlopen(url,timeout=90) as r: raw=r.read()
-          assert hashlib.sha256(raw).hexdigest()=='13bce46e76c26a6686d2d454d0d4adab2fc0da88b31ce09c9f616b5dbaf4bdbe'
+          assert hashlib.sha256(raw).hexdigest()=='f1a4f4231d438a5015f68519b72ba6510e661e858d9c2a96000efe3c90110f40'
           plan=json.loads(raw)
           def confined(name):
               p=(root/name).resolve()
@@ -71,9 +71,8 @@ jobs:
           python -m unittest discover -s tests -v
           node --test tests/collaboration.test.mjs
           python scripts/project.py build
-      - name: Commit archive and remove this one-time workflow
+      - name: Commit Git LFS archive
         run: |
-          git rm .github/workflows/import-media-once.yml
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git commit -m 'Track complete recording archive with Git LFS'
