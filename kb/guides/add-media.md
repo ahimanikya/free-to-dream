@@ -22,7 +22,7 @@ python scripts/project.py serve
 
 Language slugs match the filenames under `kb/poems/i-am-free-to-dream/languages/`. The command copies the file into `media/<language>/`, records its checksum and `repo_path`, and creates a review draft. These folders are tracked with Git LFS. Install Git LFS (`git lfs install`) before staging/committing, then commit the media and catalog changes and push. Existing takes are retained; use a new ID for a new take. Run `git lfs pull` after cloning to retrieve the full recordings.
 
-New recordings accept MP3 or M4A. Keep the original format; do not convert MP3 to M4A just to duplicate it. Existing videos remain in the Git LFS archive and are excluded from the active listening catalog. Keep lossless masters in a separate backup. Actual playback depends on the codec and browser.
+New recordings accept MP3 or M4A. Keep the original format; do not convert MP3 to M4A just to duplicate it. Existing videos remain in Git LFS and can be embedded alongside audio; earlier versions are grouped separately. Keep lossless masters in a separate backup. Actual playback depends on the codec and browser.
 
 ## Add timed lyrics
 
@@ -40,7 +40,15 @@ The example URL is a placeholder. A normal Suno, Drive or YouTube sharing page i
 
 In `catalog/recordings.json`, complete the credits and notes. After actual review and release checks, set `review_status` to `approved`, `rights_status` to `confirmed`, and `publish` to `true`. These are deliberate maintainer decisions; the import tool never applies them automatically.
 
-Rebuild with `python scripts/project.py build` to see the public version. The public build embeds only release-approved remote media and never copies `local-assets/`.
+Rebuild with `python scripts/project.py build` to see the public version. The public build embeds only author-authorized previews or release-approved remote media and never copies `local-assets/`.
+
+## Share a review copy with inline players
+
+When the author or designated maintainer explicitly requests a public listening preview, set `public_preview: true`, supply a stable direct HTTPS `public_url`, and record that authorization in `preview_authorization`. Keep `publish: false` and the actual review/rights statuses until release checks are complete. The website labels it as a review copy, offers playback and a shareable page, and does not imply translation or pronunciation approval.
+
+Every language page has **Listen** and **Watch** sections. Authorized audio/video recordings appear automatically; `archived: true` groups a take under **Earlier versions** without deleting its files. Unlisted/private records remain hidden from the public site. Set `allow_file_sharing` separately only when redistribution terms are established.
+
+The existing collection uses Git LFS media URLs pinned to the commit containing each take. Keep an MP3/M4A URL and MP4 URL as separate catalog records; a GitHub blob page or LFS pointer is not a playable recording. Test play and seek in a browser before publishing a new host URL.
 
 ## Add an image
 

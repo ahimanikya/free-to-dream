@@ -35,7 +35,7 @@ SRT stays in ordinary Git beside its matching audio. The website derives WebVTT 
 
 Place each file under its language folder with a new version name. Run `git add` and `git commit` with Git LFS installed, then push. The `.gitattributes` rules route MP3, MP4, M4A, WAV, OGG, MOV and WebM files under `media/` through LFS. The repository check rejects accidentally committed ordinary media blobs.
 
-The listening website only embeds explicitly published recordings; archiving a historical draft does not select it as the current take.
+The listening website embeds explicitly authorized previews and approved releases. Historical takes appear under Earlier versions; archiving does not delete a take or certify it as a release.
 
 ## Unavailable originals
 

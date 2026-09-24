@@ -34,7 +34,7 @@ Keep contributor submissions separate from releases until reviewed. A public Git
 
 ## File attachments and hosted recordings
 
-Follow the attachment formats and size limit shown by GitHub for your account. If MP3, M4A or SRT cannot be attached directly, provide a hosted recording link and submit the SRT through a pull request. Keep each take separate and identify its exact recording ID. Existing MP4 files remain archive material.
+Follow the attachment formats and size limit shown by GitHub for your account. If MP3, M4A or SRT cannot be attached directly, provide a hosted recording link and submit the SRT through a pull request. Keep each take separate and identify its exact recording ID. Existing MP4 files can be embedded as authorized previews; earlier takes retain their archive labels.
 
 For files intended for public playback, test the final URL in the actual site. A storage host must allow playback; preparing a file for native sharing additionally needs browser cross-origin access. Do not use expiring links or private access tokens. An attachment link is not a guarantee of permanent hosting; retain source backups.
 

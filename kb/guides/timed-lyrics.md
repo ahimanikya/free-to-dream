@@ -15,7 +15,7 @@ An SRT is a text file containing lyrics and their start/end times. It does not c
 4. Attach the SRT to the exact recording ID:
 
 ```sh
-python scripts/project.py add-lyrics --id english-country-01 --file "/path/to/checked-lyrics.srt"
+python scripts/project.py add-lyrics --id english-audio-country --file "/path/to/checked-lyrics.srt"
 python scripts/project.py build --local-media
 python scripts/project.py serve
 ```

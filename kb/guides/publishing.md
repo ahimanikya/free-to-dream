@@ -17,13 +17,15 @@ The project has two complementary views: an editable Markdown knowledge base and
 3. Set `repository_url` and `site_url` in `site-config.json` to your actual repository and eventual HTTPS site address. Leave them blank until known.
 4. Track source recordings under `media/<language>/` with Git LFS. Complete recording credits and review, then use stable direct hosted URLs for the website players. Archive storage and website release status are separate; the public build excludes archived binaries and LFS pointers.
 
+For author-authorized listening drafts, use `public_preview` and record `preview_authorization` as described in the [media guide](add-media.md). This makes audio/video playable without changing linguistic review or formal release status. Each language page shows current recordings first and older takes under expandable sections.
+
 ## Publish on GitHub Pages
 
 1. In the repository’s Pages settings, choose **GitHub Actions** as the build source.
 2. Run the manual **Publish listening wiki** workflow in the Actions tab.
 3. Open its deployment URL and verify the language pages, mobile layout and each released player in a signed-out browser.
 
-The regular check workflow builds without deploying. After Pages is enabled, the Pages workflow also deploys changes pushed or merged to `main`, so accepted contributions reach the site. Local recordings remain excluded from every public build. Before a release URL is supplied, the page states that no recording is published; the Odia page also links to the author’s chosen Suno take.
+The regular check workflow builds without deploying. After Pages is enabled, the Pages workflow also deploys changes pushed or merged to `main`, so accepted contributions reach the site. Local recordings remain excluded from every public build. When no authorized preview or release URL is supplied, the page states that no recording is available; the Odia page also links to the author’s chosen Suno take.
 
 Enable Issues and set the actual `repository_url` to activate the contribution forms. The site prepares an issue; the visitor signs in and submits it on GitHub. See the [collaboration guide](collaboration.md) for reviewing suggestions, accepting uploaded recordings and enabling media sharing.
 

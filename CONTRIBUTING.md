@@ -20,7 +20,7 @@ A language is not a single musical style. Explain the region, form or instrument
 
 ## Media and credits
 
-Use the [media guide](kb/guides/add-media.md). Give each take a new ID; retain the old take’s provenance. Track MP3/M4A files under their `media/<language>/` folders using Git LFS. Keep version-specific UTF-8 SRT lyrics beside their audio in ordinary Git; the site generates WebVTT. Existing videos are preserved as archived exports. Keep earlier versions under distinct names; do not replace them silently. Ordinary large binary Git blobs and private references are rejected by the repository check. Use direct hosted URLs for released website players.
+Use the [media guide](kb/guides/add-media.md). Give each take a new ID; retain the old take’s provenance. Track MP3/M4A files under their `media/<language>/` folders using Git LFS. Keep version-specific UTF-8 SRT lyrics beside their audio in ordinary Git; the site generates WebVTT. Existing videos are preserved and may be embedded as explicitly authorized previews. Keep earlier versions under distinct names; do not replace them silently. Ordinary large binary Git blobs and private references are rejected by the repository check. Use direct hosted URLs for released website players.
 
 Do not submit material you are not entitled to share. If any part is someone else’s work, identify the source and applicable permission. Reuse and distribution terms for contributions must be agreed before release; this repository has no blanket open-content license. See [RIGHTS.md](RIGHTS.md).
 

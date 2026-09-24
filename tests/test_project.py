@@ -34,6 +34,11 @@ class CollectionTests(unittest.TestCase):
         shutil.copy2(PROJECT/'site-config.json', self.root/'site-config.json')
         self.overrides = patch.multiple(app, ROOT=self.root, KB=self.root/'kb', LANGUAGES=self.root/'kb/poems/i-am-free-to-dream/languages')
         self.overrides.start()
+        # Default fixtures stay private; integration tests opt in to the real catalog.
+        items = app.records()
+        for item in items:
+            item.update(public_preview=False, public_url=None)
+        (self.root/'catalog/recordings.json').write_text(json.dumps(items))
 
     def tearDown(self):
         self.overrides.stop(); self.temp.cleanup()
@@ -145,7 +150,7 @@ class CollectionTests(unittest.TestCase):
 
     def test_archived_videos_stay_out_of_players_and_new_uploads_are_audio(self):
         items = app.records()
-        video = next(x for x in items if x['kind']=='video')
+        video = next(x for x in items if x['kind']=='video' and x.get('archived'))
         self.assertTrue(video['archived'])
         (self.root/video['repo_path']).write_bytes(b'ARCHIVE VIDEO')
         app.build(True)
@@ -187,6 +192,49 @@ class CollectionTests(unittest.TestCase):
         self.assertIn('data-share-url=""',controls)
         self.assertIn('data-action="share-link" disabled',controls)
         self.assertNotIn('data-action="prepare-file"',controls)
+
+    def test_all_existing_languages_embed_remote_audio_and_video_with_honest_labels(self):
+        shutil.copy2(PROJECT/'catalog/recordings.json', self.root/'catalog/recordings.json')
+        app.build(False)
+        output = self.root/'site-public'
+        expected = {'odia':(1,6), 'tamil':(1,1), 'telugu':(4,4), 'english':(2,2), 'filipino':(1,1)}
+        for language, (audio_count, video_count) in expected.items():
+            page=(output/f'poems--i-am-free-to-dream--languages--{language}.html').read_text()
+            self.assertEqual(page.count('<audio '), audio_count)
+            self.assertEqual(page.count('<video '), video_count)
+            self.assertIn('Review copy', page)
+            self.assertNotIn('LOCAL REVIEW COPY', page)
+            self.assertNotIn('autoplay', page)
+            self.assertEqual(page.count('preload="none"'), audio_count+video_count)
+            self.assertIn('https://media.githubusercontent.com/media/', page)
+            for item in (x for x in app.records() if x['language']==language):
+                detail=(output/f'recording--{item["id"]}.html').read_text()
+                self.assertIn(f'data-share-url="https://ahimanikya.github.io/free-to-dream/recording--{item["id"]}.html"', detail)
+                self.assertNotIn('PUBLISHED VERSION', detail)
+                self.assertNotIn('data-action="prepare-file"', detail)
+        telugu=(output/'poems--i-am-free-to-dream--languages--telugu.html').read_text()
+        self.assertIn('Earlier video versions (3)', telugu)
+        hindi=(output/'poems--i-am-free-to-dream--languages--hindi.html').read_text()
+        self.assertIn('No audio recording is available',hindi)
+        self.assertIn('No video recording is available',hindi)
+        self.assertNotIn('<video ', hindi)
+        self.assertFalse((output/'media/recordings').exists())
+
+    def test_public_preview_requires_explicit_authorization_without_faking_approval(self):
+        items=app.records()
+        item=items[0]
+        item.update(public_preview=True, public_url='https://example.org/draft.mp3')
+        item.pop('preview_authorization', None)
+        (self.root/'catalog/recordings.json').write_text(json.dumps(items))
+        with self.assertRaisesRegex(ValueError, 'authorization'): app.validate()
+        item['preview_authorization']='Author requested public preview'
+        (self.root/'catalog/recordings.json').write_text(json.dumps(items))
+        app.validate()
+        self.assertEqual(item['review_status'],'needs-review')
+        self.assertEqual(item['rights_status'],'release-details-to-confirm')
+        item['publish']=True
+        (self.root/'catalog/recordings.json').write_text(json.dumps(items))
+        with self.assertRaisesRegex(ValueError, 'approved review'): app.validate()
 
     def test_media_server_supports_byte_ranges(self):
         (self.root/'sample.mp3').write_bytes(bytes(range(256)))

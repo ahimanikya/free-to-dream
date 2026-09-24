@@ -4,7 +4,7 @@
 
 A collaborative home for Ahimanikya Satapathy’s Odia poem **“ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ” / “I Am Free to Dream”** and its language adaptations, musical directions and recordings.
 
-The starting collection has **100 language entries: 28 original/adapted lyric texts and 72 adaptation briefs**. They are not 100 finished songs. AI-assisted drafts need native-speaker review; musical prompts are creative proposals, not verified performances.
+The collection has **101 language entries: 28 original/adapted lyric texts, 72 adaptation briefs and a Filipino recording awaiting a checked transcription**. They are not 101 finished songs. AI-assisted drafts need native-speaker review; musical prompts are creative proposals, not verified performances.
 
 ## Start here
 
@@ -36,7 +36,7 @@ This uses GitHub for sign-in, discussions and attachment storage. There are no r
 
 Use **MP3 or M4A + cover artwork + a separate SRT for each take**. Audio remains in Git LFS; poems, credits and SRTs use ordinary Git. The site generates WebVTT and displays timed lyrics using the audio player’s position. Missing timings are clearly marked. See the [timed lyrics guide](kb/guides/timed-lyrics.md).
 
-Existing MP4s are preserved as archived exports and excluded from active players. A dedicated media host can be connected later for public streaming; no storage migration is configured yet.
+Language pages embed the available audio and video recordings. Earlier takes appear under expandable “Earlier versions” sections; all original files remain preserved. A dedicated media host can be connected later for public streaming; no storage migration is configured yet.
 
 ## Listen locally
 
@@ -50,9 +50,11 @@ python scripts/project.py build --local-media
 python scripts/project.py serve
 ```
 
-Open **http://127.0.0.1:8765**. Search for a language, choose **Ready to listen**, and open its page. Native audio/video players support seeking. Odia and Tamil currently have local recordings; other entries clearly show when no recording is available.
+Open **http://127.0.0.1:8765**. Search for a language, choose **Ready to listen**, and open its page. Native audio/video players support seeking. Odia, Tamil, Telugu, English (country and jazz), and Filipino / Tagalog have embedded recordings. Other pages show separate audio/video availability messages.
 
-The audio/video archive is tracked with **Git LFS** in language folders under [`media/`](media/README.md). Install Git LFS before cloning, or run `git lfs pull` in an existing checkout, to retrieve the full files. The ignored `local-assets/` folder retains private references and local working copies. Public listening pages still use explicitly approved recording URLs; archived drafts are not automatically promoted to releases.
+The audio/video archive is tracked with **Git LFS** in language folders under [`media/`](media/README.md). Install Git LFS before cloning, or run `git lfs pull` in an existing checkout, to retrieve the full files. The ignored `local-assets/` folder retains private references and local working copies. Public players use explicitly authorized review-copy URLs or approved release URLs. Sharing a review copy does not mark its translation, pronunciation or release checks complete.
+
+The existing 9 audio files and 14 videos are available as author-authorized review copies. The site streams them from version-pinned Git LFS URLs; loading starts when the visitor presses play. No media binaries are copied into the Pages deployment.
 
 ## Where things live
 
@@ -83,7 +85,7 @@ node --test tests/collaboration.test.mjs
 python scripts/project.py build
 ```
 
-`build` without `--local-media` makes a public-safe site: it excludes archive recordings, LFS pointers, private reference photographs and publication evidence. Only recording entries explicitly approved for release are embedded remotely. Cover artwork and the language drafts remain part of the public build.
+`build` without `--local-media` makes a public-safe site: it excludes archive recordings, LFS pointers, private reference photographs and publication evidence. Only recording entries explicitly authorized as public previews or approved for release are embedded remotely. Cover artwork and the language drafts remain part of the public build.
 
 The GitHub check workflow validates changes and builds the public site. After Pages is enabled, the deployment workflow runs on pushes/merges to `main` and can also be run manually. Nothing is uploaded merely by preparing this repository locally. JavaScript tests require Node.js 18 or later; the website itself is static HTML/CSS/JavaScript.
 

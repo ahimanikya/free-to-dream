@@ -145,7 +145,7 @@ def add_lyrics(args):
 def player_markup(item, url):
     kind = item['kind']
     attrs = ' playsinline poster="media/images/cover.png"' if kind == 'video' else ''
-    player = f'<{kind} controls preload="metadata"{attrs} src="{esc(url, quote=True)}"></{kind}>'
+    player = f'<{kind} controls preload="none" aria-label="{esc(item["title"], quote=True)}"{attrs} src="{esc(url, quote=True)}"></{kind}>'
     if kind != 'audio': return player
     base = f'media/lyrics/{item["id"]}'
     timing = bool(item.get('timed_lyrics'))
@@ -153,6 +153,19 @@ def player_markup(item, url):
     text = 'Play to follow the lyrics.' if timing else 'Timed lyrics are not available for this take yet.'
     downloads = f'<div class="action-row"><a href="{base}.srt" download>Download SRT</a><a href="{base}.vtt" download>Download WebVTT</a></div>' if timing else ''
     return f'<div class="audio-lyrics"{data}><img class="audio-cover" src="media/images/cover.png" width="160" alt="Shared collection cover" loading="lazy">{player}<p class="current-lyric" dir="auto">{text}</p>{downloads}</div>'
+
+
+def publicly_available(item):
+    return bool(item.get('publish') or item.get('public_preview'))
+
+
+def recording_label(item):
+    if item.get('publish'): return 'Published version'
+    return 'Review copy · pronunciation and timing review open'
+
+
+def has_lyrics(meta):
+    return meta['lyric_status'] not in ('Adaptation pending', 'Transcription pending')
 
 
 def validate(skip_timing_id=None):
@@ -216,6 +229,12 @@ def validate(skip_timing_id=None):
                 raise ValueError('Public media URL must use HTTPS without embedded credentials')
             if type(item.get('archived', False)) is not bool: raise ValueError('archived must be boolean')
             if ident != skip_timing_id: timed_cues(item)
+            if type(item.get('public_preview', False)) is not bool:
+                raise ValueError('public_preview must be boolean')
+            if item.get('public_preview'):
+                if not item.get('public_url'): raise ValueError('Public preview needs a public_url')
+                if not item.get('preview_authorization'): raise ValueError('Public preview needs recorded maintainer authorization')
+                if not item.get('credits', {}).get('poem'): raise ValueError('Public preview needs poem credit')
             if item['publish']:
                 if not item.get('public_url'): raise ValueError('Publication needs a public_url')
                 if item.get('review_status') != 'approved': raise ValueError('Publication needs approved review')
@@ -257,7 +276,7 @@ def shell(title, content, config, local=False, filename='index.html', descriptio
         canonical = config['site_url'].rstrip('/') + '/' + filename
         cover = config['site_url'].rstrip('/') + '/media/images/cover.png'
         metadata = f'<link rel="canonical" href="{esc(canonical, quote=True)}"><meta property="og:url" content="{esc(canonical, quote=True)}"><meta property="og:image" content="{esc(cover, quote=True)}"><meta name="twitter:card" content="summary_large_image">'
-    if not local and media and media.get('publish') and safe_url(media.get('public_url') or ''):
+    if not local and media and publicly_available(media) and safe_url(media.get('public_url') or ''):
         kind = media['kind']
         source = media['public_url']
         mime = mimetypes.guess_type(urlparse(source).path)[0]
@@ -274,11 +293,12 @@ def shell(title, content, config, local=False, filename='index.html', descriptio
 
 
 def share_controls(title, filename, config, local=False, media=None, media_url=None):
-    published = not media or media['publish']
+    published = not media or publicly_available(media)
     live = bool(config.get('site_url')) and published and not local
     url = config['site_url'].rstrip('/') + '/' + filename if live else ''
     caption = f'{title} — World is One, India is One! Original poem by Ahimanikya Satapathy.'
     if media:
+        if not media['publish']: caption += ' Review copy; pronunciation and timing review open.'
         caption += ' ' + ' · '.join(f'{key.replace("_", " ").title()}: {value}' for key,value in media.get('credits', {}).items() if key != 'poem')
     buttons = f'<button type="button" data-action="share-link" {"" if live else "disabled"}>Share</button><button type="button" data-action="copy-link" {"" if live else "disabled"}>Copy link</button><button type="button" data-action="copy-caption">Copy caption &amp; credits</button>'
     instagram = ''
@@ -320,6 +340,8 @@ def translation_check_panel(meta):
     slug = meta['slug']
     if slug == 'odia':
         context = 'This is the original Odia source. Check transcription and sung delivery; discuss changes to the source wording with the author.'
+    elif meta['lyric_status'] == 'Transcription pending':
+        context = 'The recording is available; a checked transcription is still needed. Write out the words actually sung, then compare their meaning with the source poem.'
     elif meta['lyric_status'] == 'Adaptation pending':
         context = 'Lyrics are still pending. Use this checklist when preparing the first adaptation; the brief is not a verified translation.'
     else:
@@ -343,15 +365,20 @@ def translation_check_panel(meta):
 def resource_panel(meta, items):
     counts = {kind: sum(item['kind'] == kind for item, _ in items) for kind in ('audio', 'video')}
     content = f'<section id="resources" class="listening" aria-labelledby="resources-title"><div class="eyebrow">LISTEN, WATCH &amp; DOWNLOAD</div><h2 id="resources-title">Available resources</h2><p>{counts["audio"]} audio · {counts["video"]} video · poem / brief · shared cover image</p>'
-    for item, url in items:
-        kind = item['kind']
+    def card(item, url):
         suffix = Path(urlparse(url).path).suffix.lower()
-        formats = {'.mp3':'MP3', '.mp4':'MP4', '.m4a':'M4A', '.wav':'WAV', '.ogg':'OGG', '.webm':'WebM'}
-        label = formats.get(suffix, kind.title())
-        video_attrs = ' playsinline poster="media/images/cover.png"' if kind == 'video' else ''
-        content += f'<div class="recording"><p class="eyebrow">{label} · {"PUBLISHED" if item["publish"] else "LOCAL REVIEW COPY"}</p><h3>{esc(item["title"])}</h3>{player_markup(item, url)}<p>{esc(item["notes"])}</p><div class="action-row"><a class="action" href="{esc(url, quote=True)}" download>Download / open {label}</a><a class="action" href="recording--{item["id"]}.html">Share this version &amp; credits →</a></div></div>'
-    if not items:
-        content += '<p>No MP3 or M4A is published for this language yet. Available recordings will appear here with inline players.</p>'
+        label = {'.mp3':'MP3', '.mp4':'MP4', '.m4a':'M4A', '.wav':'WAV', '.ogg':'OGG', '.webm':'WebM'}.get(suffix, item['kind'].title())
+        return f'<div class="recording"><p class="eyebrow">{label} · {esc(recording_label(item))}</p><h4>{esc(item["title"])}</h4>{player_markup(item, url)}<p>{esc(item["notes"])}</p><div class="action-row"><a class="action" href="{esc(url, quote=True)}" download>Download / open {label}</a><a class="action" href="recording--{item["id"]}.html">Share this version &amp; credits →</a></div></div>'
+    for kind, heading in [('audio', 'Listen'), ('video', 'Watch')]:
+        content += f'<section class="media-group" aria-labelledby="{kind}-heading"><h3 id="{kind}-heading">{heading}</h3>'
+        current = [(item, url) for item, url in items if item['kind'] == kind and not item.get('archived')]
+        older = [(item, url) for item, url in items if item['kind'] == kind and item.get('archived')]
+        content += ''.join(card(item, url) for item, url in current)
+        if older:
+            content += f'<details class="earlier-recordings"><summary>Earlier {kind} versions ({len(older)})</summary>' + ''.join(card(item, url) for item, url in older) + '</details>'
+        if not current and not older:
+            content += f'<p>No {kind} recording is available for this language yet.</p><a href="contribute.html?language={quote(meta["slug"])}&amp;type=recording">Contribute a version →</a>'
+        content += '</section>'
     content += f'<div class="recording"><h3>Poem &amp; musical direction</h3><div class="action-row"><a class="action" href="#poem-text">Read on this page</a><a class="action" href="kb/poems/i-am-free-to-dream/languages/{quote(meta["slug"])}.md" download>Download text (Markdown)</a></div></div>'
     content += '<div class="recording"><h3>Shared collection cover · PNG</h3><a href="media/images/cover.png"><img src="media/images/cover.png" width="160" loading="lazy" alt="Collection cover: hands shaping a pot beneath a moonlit mountain landscape"></a><p>This artwork is shared across the collection.</p><a class="action" href="media/images/cover.png" download="free-to-dream-cover.png">Save cover image</a></div></section>'
     return content
@@ -377,15 +404,15 @@ def build(local=False):
     if output.exists(): shutil.rmtree(output)
     output.mkdir()
     shutil.copytree(ROOT / 'web', output / 'assets')
-    # LFS archives include historical drafts. Publish only explicitly released
-    # remote recordings; never ship archive binaries or unhydrated pointers.
+    # Only explicitly authorized previews/releases are embedded remotely.
+    # Never ship archive binaries or unhydrated pointers in the Pages build.
     shutil.copytree(ROOT / 'media', output / 'media', ignore=shutil.ignore_patterns(*(f'*{ext}' for ext in MEDIA_EXTENSIONS), '*.srt', '*.vtt'))
     shutil.copytree(KB, output / 'kb')
     (output / 'contribute.html').write_text(shell('Contribute your voice', contribution_page(languages, config), config, local, 'contribute.html'), encoding='utf-8')
     available = {}
     for item in records():
-        if item.get('archived', False): continue
-        url = item.get('public_url') if item['publish'] else None
+        if item.get('archived', False) and not publicly_available(item): continue
+        url = item.get('public_url') if publicly_available(item) else None
         if local and (item.get('repo_path') or item.get('local_path')):
             candidates = [confined(item[key]) for key in ('repo_path', 'local_path') if item.get(key)]
             source = next((path for path in candidates if media_is_available(path)), None)
@@ -412,7 +439,7 @@ def build(local=False):
             tag = item['kind']
             poster = ' playsinline poster="media/images/cover.png"' if tag == 'video' else ''
             credits = ''.join(f'<dt>{esc(key.replace("_", " ").title())}</dt><dd>{esc(value)}</dd>' for key,value in item.get('credits',{}).items())
-            content = f'<a class="back" href="{page_name(LANGUAGES/(slug+".md"))}">← All {esc(language_map[slug]["language"])} versions and lyrics</a><section class="recording-detail"><div class="eyebrow">{esc(language_map[slug]["language"])} · {"PUBLISHED VERSION" if item["publish"] else "REVIEW COPY"}</div><h1>{esc(item["title"])}</h1>{player_markup(item, url)}<p>{esc(item["notes"])}</p><dl class="credits">{credits}</dl>'
+            content = f'<a class="back" href="{page_name(LANGUAGES/(slug+".md"))}">← All {esc(language_map[slug]["language"])} versions and lyrics</a><section class="recording-detail"><div class="eyebrow">{esc(language_map[slug]["language"])} · {esc(recording_label(item))}</div><h1>{esc(item["title"])}</h1>{player_markup(item, url)}<p>{esc(item["notes"])}</p><dl class="credits">{credits}</dl>'
             content += share_controls(item['title'], filename, config, local, item, url)
             content += f'<p><a href="contribute.html?language={quote(slug)}&amp;type=feedback&amp;recording={quote(item["id"])}">Leave a listening note for this version</a></p></section>'
             content += collaboration_panel(language_map[slug], config)
@@ -440,16 +467,16 @@ def build(local=False):
             content += share_controls(meta['language']+' · '+meta['title'], page_name(path), config, local)
             content += collaboration_panel(meta, config)
         (output / page_name(path)).write_text(shell(title, content, config, local, page_name(path)), encoding='utf-8')
-    lyric_count = sum(x['lyric_status'] != 'Adaptation pending' for x in languages)
+    lyric_count = sum(has_lyrics(x) for x in languages)
     cards = []
     for item in languages:
         slug = item['slug']
         listening = slug in available
-        status = 'lyrics' if item['lyric_status'] != 'Adaptation pending' else 'brief'
+        status = 'lyrics' if has_lyrics(item) else 'brief'
         label = 'Listen & explore' if listening else ('Read the lyrics' if status == 'lyrics' else 'Help shape this version')
         cards.append(f'''<a class="language-card" data-search="{esc(item['language']+' '+item['title'], quote=True)}" data-status="{status}" data-listen="{str(listening).lower()}" href="{page_name(LANGUAGES / (slug+'.md'))}"><span class="card-top">{item['collection_order']:03d}<span>{'♫ LISTEN' if listening else ('LYRICS' if status == 'lyrics' else 'OPEN INVITATION')}</span></span><h3>{esc(item['language'])}</h3><p dir="auto">{esc(item['title'])}</p><span class="card-action">{label} <span aria-hidden="true">↗</span></span></a>''')
     content = f'''<section class="hero"><div><div class="eyebrow">A POEM WITHOUT BORDERS</div><h1>I am free<br>to <em>dream.</em></h1><p class="original-title" lang="or">ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ</p><p class="intro">One poem. Many voices. Shared dreams.<br>An invitation to carry an Odia poem into the languages and musical traditions we call home.</p><a class="button" href="#collection">Explore the collection ↓</a><p class="byline">A poem by Ahimanikya Satapathy</p></div><figure><img src="media/images/cover.png" alt="Hands shaping a clay pot beneath a dreamlike moonlit mountain landscape"><figcaption>Gathering the world. Giving dreams a form.</figcaption></figure></section>
-<section class="stats" aria-label="Collection status"><div><strong>{len(languages)}</strong><span>language journeys</span></div><div><strong>{lyric_count}</strong><span>original &amp; adapted texts</span></div><div><strong>{len(languages)-lyric_count}</strong><span>briefs awaiting voices</span></div><div><strong>{len(available)}</strong><span>languages with {'local media' if local else 'published media'}</span></div></section>
+<section class="stats" aria-label="Collection status"><div><strong>{len(languages)}</strong><span>language journeys</span></div><div><strong>{lyric_count}</strong><span>original &amp; adapted texts</span></div><div><strong>{len(languages)-lyric_count}</strong><span>texts awaiting contributions</span></div><div><strong>{len(available)}</strong><span>languages with {'local media' if local else 'playable media'}</span></div></section>
 <section id="collection"><div class="section-heading"><div class="eyebrow">THE LIVING COLLECTION</div><h2>Find your language.<br>Bring your voice.</h2><p>Read the poem, explore its musical direction, or help an adaptation find its natural voice. Drafts remain marked until reviewed.</p></div><div class="filters"><label for="search">Search languages or titles<input id="search" type="search" placeholder="Try Odia, Tamil, Sanskrit…"></label><label for="filter">Show<select id="filter"><option value="all">All languages</option><option value="listen">Ready to listen</option><option value="lyrics">Lyrics available</option><option value="brief">Adaptation briefs</option></select></label></div><p id="result-count" role="status" aria-live="polite">{len(languages)} languages</p><div class="language-grid">{''.join(cards)}</div><p id="no-results" hidden>No matching language. Try another name or clear the filter.</p></section>
 <section class="invitation"><div class="eyebrow">THIS IS AN INVITATION</div><h2>A language is a living culture.</h2><p>Suggest a lyric change, share a listening note, or submit your own song. Collaborate through GitHub; accepted versions join the collection with credits and a shareable page.</p><div class="action-row"><a class="button" href="contribute.html">Suggest a change →</a><a class="button secondary" href="contribute.html?type=recording">Submit your version →</a></div></section>'''
     (output / 'index.html').write_text(shell('I Am Free to Dream', content, config, local), encoding='utf-8')

@@ -25,3 +25,9 @@ textarea{display:block;width:100%;padding:13px 15px;border:1px solid #aeb8a5;bor
 .current-lyric { min-height: 4em; padding: 1rem; border-left: 2px solid var(--gold, #a58550); white-space: pre-line; overflow-wrap: anywhere; font-size: 1.15rem; line-height: 1.8; }
 
 .audio-cover { display: block; width: 160px; max-width: 100%; height: auto; margin: 0 0 1rem; border-radius: 8px; }
+
+.media-group { margin-block: 2rem; }
+.media-group h3 { font-size: 1.5rem; }
+.media-group h4 { font-size: 1.2rem; margin: .6rem 0 1rem; }
+.earlier-recordings { margin-block: 1.25rem; }
+.earlier-recordings summary { cursor: pointer; padding: .8rem 0; font-weight: 600; }
