@@ -11,7 +11,7 @@ export function setupIndexPlayer(doc = document, load = () => fetch('assets/list
   const panel = doc.querySelector('#index-player');
   if (!panel) return;
   const player = doc.querySelector('#index-audio');
-  const version = doc.querySelector('#index-version');
+  const pickers = [...doc.querySelectorAll('[data-playlist]')];
   const link = doc.querySelector('#index-track-link');
   const status = doc.querySelector('#index-play-status');
   const previous = doc.querySelector('#index-previous');
@@ -21,7 +21,20 @@ export function setupIndexPlayer(doc = document, load = () => fetch('assets/list
   const buttons = [...doc.querySelectorAll('[data-play-recording]')];
   const labels = new Map(buttons.map(b => [b, b.getAttribute('aria-label').replace(/^Play /, '')]));
   let items = [], current = null, request = 0, intent = 0;
-  const ready = load().then(data => { items = data; });
+  const ready = load().then(data => {
+    items = data;
+    for (const picker of pickers) {
+      picker.replaceChildren();
+      const placeholder = doc.createElement('option');
+      placeholder.value = ''; placeholder.disabled = true; placeholder.textContent = 'Choose a track…'; picker.append(placeholder);
+      for (const take of playlistTracks(items)) {
+        const option = doc.createElement('option'); option.value = take.id;
+        option.textContent = take.language_name + ' · ' + take.title;
+        picker.append(option);
+      }
+      picker.value = '';
+    }
+  });
   ready.catch(() => {});
   const sync = () => {
     for (const button of buttons) {
@@ -40,11 +53,7 @@ export function setupIndexPlayer(doc = document, load = () => fetch('assets/list
     const token = ++request;
     current = item; panel.hidden = false; doc.body.classList.add('has-index-player');
     link.textContent = item.language_name + ' · ' + item.title; link.href = item.page;
-    version.replaceChildren();
-    for (const take of playlistTracks(items).filter(x => x.language === item.language)) {
-      const option = doc.createElement('option'); option.value = take.id; option.textContent = take.title; version.append(option);
-    }
-    version.value = item.id; version.parentElement.hidden = version.options.length < 2;
+    for (const picker of pickers) picker.value = item.id;
     const queue = playlistTracks(items), at = queue.findIndex(x => x.id === item.id);
     position.textContent = at >= 0 ? 'Track ' + (at + 1) + ' of ' + queue.length : 'Earlier version';
     player.src = item.url; status.textContent = ''; sync();
@@ -78,8 +87,8 @@ export function setupIndexPlayer(doc = document, load = () => fetch('assets/list
   };
   previous.addEventListener('click', () => advance(-1));
   next.addEventListener('click', () => advance(1));
-  version.addEventListener('change', () => {
-    const item = items.find(x => x.id === version.value);
+  for (const picker of pickers) picker.addEventListener('change', () => {
+    const item = playlistTracks(items).find(x => x.id === picker.value);
     if (item) { ++intent; start(item); }
   });
   player.addEventListener('ended', () => {
@@ -90,7 +99,7 @@ export function setupIndexPlayer(doc = document, load = () => fetch('assets/list
   doc.querySelector('#index-close').addEventListener('click', () => {
     ++intent; ++request; current = null;
     player.pause(); player.removeAttribute('src'); player.load();
-    panel.hidden = true; auto.checked = false; sync(); doc.body.classList.remove('has-index-player');
+    panel.hidden = true; auto.checked = false; for (const picker of pickers) picker.value = ''; sync(); doc.body.classList.remove('has-index-player');
   });
   for (const event of ['play', 'pause', 'ended']) player.addEventListener(event, sync);
   player.addEventListener('error', () => {

@@ -159,22 +159,25 @@ function playerFixture(load=async()=>testTracks) {
     pause(){this.paused=true;this.emit('pause');}
     load(){}
   }
-  const ids=['index-player','index-audio','index-version','index-track-link','index-play-status','index-previous','index-next','index-auto','index-position','index-close'];
+  const ids=['index-player','index-audio','index-playlist','index-track-link','index-play-status','index-previous','index-next','index-auto','index-position','index-close'];
   const nodes=Object.fromEntries(ids.map(id=>[id,new Element()]));
   const button=new Element();button.dataset.playRecording='or';button.attributes['aria-label']='Play Odia';
-  const doc={querySelector:q=>nodes[q.slice(1)],querySelectorAll:()=>[button],createElement:()=>new Element(),body:new Element()};
+  const doc={querySelector:q=>nodes[q.slice(1)],querySelectorAll:q=>q==='[data-playlist]'?[nodes['index-playlist']]:[button],createElement:()=>new Element(),body:new Element()};
   const controller=setupIndexPlayer(doc,load);
   return {nodes,button,controller};
 }
-test('Auto-next is opt-in; next/previous and version selection update the playing track',async()=>{
+test('Auto-next is opt-in; next/previous and playlist selection update the playing track',async()=>{
   const {nodes:n,button,controller}=playerFixture();await controller.ready;
   assert.equal(n['index-audio'].src,undefined);
+  n['index-playlist'].value='en-jazz';await n['index-playlist'].emit('change');
+  assert.equal(n['index-audio'].src,'jazz.mp3');
   await button.emit('click');assert.equal(n['index-audio'].src,'or.mp3');
   await n['index-audio'].emit('ended');assert.equal(n['index-audio'].src,'or.mp3');
   n['index-auto'].checked=true;await n['index-audio'].emit('ended');
-  assert.equal(n['index-audio'].src,'country.mp3');assert.equal(n['index-version'].options.length,2);
+  assert.equal(n['index-audio'].src,'country.mp3');assert.equal(n['index-playlist'].options.length,4);
+  assert.equal(n['index-playlist'].value,'en-country');
   assert.equal(n['index-position'].textContent,'Track 2 of 3');
-  n['index-version'].value='en-jazz';await n['index-version'].emit('change');
+  n['index-playlist'].value='en-jazz';await n['index-playlist'].emit('change');
   assert.equal(n['index-audio'].src,'jazz.mp3');assert.equal(n['index-next'].disabled,true);
   await n['index-audio'].emit('ended');assert.match(n['index-play-status'].textContent,/end of/);
   await n['index-previous'].emit('click');assert.equal(n['index-audio'].src,'country.mp3');
