@@ -10,7 +10,7 @@ generated:
 
 Original Odia poem and lyrics: **Ahimanikya Satapathy**. Original wording is retained in the source-poem page. The author reports writing it during college, before 1993; the precise composition date is not recorded here.
 
-Translation drafts and musical directions in the initial import are AI-assisted. The generated recordings use music and vocals generated with Suno AI. The song cover artwork is AI-generated. The homepage artwork is by Ahimanikya Satapathy, signed 1993, and is credited separately. Additional video, image, translation and performance credits should be completed per asset before release.
+Translation drafts and musical directions in the initial import are AI-assisted. The generated recordings use music and vocals generated with Suno AI. The song cover artwork is AI-generated. The artwork in the closing invitation is by Ahimanikya Satapathy, signed 1993, and is credited separately. Additional video, image, translation and performance credits should be completed per asset before release.
 
 No blanket open-source or open-content license has been applied to this repository. Public visibility and an invitation to suggest changes should not be presented as permission to redistribute or commercially reuse all poems, adaptations and media. Decide and document the intended terms separately for text, software, artwork and recordings before inviting broad reuse.
 

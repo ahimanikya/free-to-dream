@@ -101,4 +101,4 @@ The GitHub check workflow validates changes and builds the public site. After Pa
 
 Preserve the original; adapt with care; credit the people who help. Each musical setting should name its chosen cultural references while leaving room for other traditions in the same language.
 
-The homepage introduces six featured languages, with a horizontal swipe section on small screens. The full searchable collection lives at `languages.html`. Cards share a fixed height, and the author’s signed 1993 artwork opens the collection with its signature intact.
+The homepage introduces six featured languages, in one horizontally scrolling row below the statistics, with swipe, keyboard and arrow-button navigation. The full searchable collection lives at `languages.html`. Cards share a fixed height, and the potter artwork opens the collection. The author’s signed 1993 artwork sits to the right of the closing invitation, with its signature intact.
