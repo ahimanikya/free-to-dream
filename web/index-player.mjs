@@ -33,11 +33,13 @@ export function setupIndexPlayer(doc = document, load = () => fetch('assets/list
   const lyric = doc.querySelector('#index-lyric');
   const previous = doc.querySelector('#index-previous');
   const next = doc.querySelector('#index-next');
-  const auto = doc.querySelector('#index-auto');
+  const stop = doc.querySelector('#index-stop');
+  const volume = doc.querySelector('#index-volume');
+  const state = doc.querySelector('#index-state');
   const position = doc.querySelector('#index-position');
   const buttons = [...doc.querySelectorAll('[data-play-recording]')];
   const labels = new Map(buttons.map(b => [b, b.getAttribute('aria-label').replace(/^Play /, '')]));
-  let items = [], cues = [], current = null, request = 0, intent = 0;
+  let items = [], cues = [], current = null, request = 0, intent = 0, continuePlayback = false, stopped = false, lastVolume = 1;
   const ready = load().then(data => {
     items = data;
     for (const picker of pickers) {
@@ -62,6 +64,7 @@ export function setupIndexPlayer(doc = document, load = () => fetch('assets/list
     seek.disabled = !length;
     seek.max = String(length);
     seek.value = String(Math.min(time, length));
+    seek.style.setProperty('--progress', (length ? Math.min(time / length, 1) * 100 : 0) + '%');
     seek.setAttribute('aria-valuetext', playbackTime(time) + ' of ' + duration.textContent);
     lyric.textContent = player.ended ? '' : lyricAt(cues, time);
     lyric.hidden = !cues.length;
@@ -77,7 +80,9 @@ export function setupIndexPlayer(doc = document, load = () => fetch('assets/list
   }
   const sync = () => {
     const playing = Boolean(current && !player.paused && !player.ended);
-    toggle.disabled = !current;
+    toggle.disabled = stop.disabled = !current;
+    panel.classList.toggle('is-playing', playing);
+    state.textContent = !current ? 'READY' : stopped ? 'STOPPED' : playing ? 'PLAYING' : player.ended ? 'FINISHED' : 'PAUSED';
     toggle.setAttribute('aria-label', playing ? 'Pause' : 'Play');
     toggle.setAttribute('title', playing ? 'Pause' : 'Play');
     if (playing) { playIcon.setAttribute('hidden', ''); pauseIcon.removeAttribute('hidden'); }
@@ -96,7 +101,7 @@ export function setupIndexPlayer(doc = document, load = () => fetch('assets/list
   };
   async function start(item) {
     const token = ++request;
-    current = item; panel.hidden = false; doc.body.classList.add('has-index-player');
+    current = item; continuePlayback = true; stopped = false; panel.hidden = false; doc.body.classList.add('has-index-player');
     link.href = item.page;
     lyricsLink.href = item.lyric_page || 'poems--i-am-free-to-dream--languages--' + item.language + '.html#poem-text';
     lyricsLink.textContent = item.language === 'filipino' ? 'Poem page' : 'Read lyrics';
@@ -105,11 +110,12 @@ export function setupIndexPlayer(doc = document, load = () => fetch('assets/list
     const queue = playlistTracks(items), at = queue.findIndex(x => x.id === item.id);
     position.textContent = at >= 0 ? 'Track ' + (at + 1) + ' of ' + queue.length : 'Earlier version';
     player.src = item.url; status.textContent = '';
+    seek.style.setProperty('--progress', '0%');
     seek.value = '0'; seek.max = '0'; seek.disabled = true;
     elapsed.textContent = '0:00'; duration.textContent = playbackTime(item.duration_seconds || 0);
     sync(); prepareLyrics(item, token);
     try { await player.play(); }
-    catch { if (token === request) status.textContent = 'Press play to continue listening.'; }
+    catch { if (token === request && continuePlayback) status.textContent = 'Press play to continue listening.'; }
     if (token === request) sync();
   }
   for (const button of buttons) button.addEventListener('click', async () => {
@@ -121,7 +127,7 @@ export function setupIndexPlayer(doc = document, load = () => fetch('assets/list
       if (!item) throw Error();
       const same = button.classList.contains('card-play') ? current?.language === item.language : current?.id === item.id;
       if (same) {
-        if (player.paused) await player.play(); else player.pause();
+        if (player.paused) { continuePlayback = true; stopped = false; await player.play(); } else { continuePlayback = false; player.pause(); }
         sync(); return;
       }
       await start(item);
@@ -139,12 +145,20 @@ export function setupIndexPlayer(doc = document, load = () => fetch('assets/list
   toggle.addEventListener('click', async () => {
     if (!current) return;
     const token = request;
-    if (!player.paused) player.pause();
+    if (!player.paused) { continuePlayback = false; player.pause(); }
     else {
+      continuePlayback = true; stopped = false;
       try { await player.play(); if (token === request) status.textContent = ''; }
-      catch { if (token === request) status.textContent = 'Could not play this track. Try Next or open Track details.'; }
+      catch { if (token === request && continuePlayback) status.textContent = 'Could not play this track. Try Next or open Track details.'; }
     }
     sync();
+  });
+  stop.addEventListener('click', () => {
+    ++intent; continuePlayback = false; stopped = true;
+    player.pause();
+    if (current) player.currentTime = 0;
+    status.textContent = '';
+    updateTimeline(); sync();
   });
   seek.addEventListener('input', () => {
     const value = Number(seek.value);
@@ -154,12 +168,27 @@ export function setupIndexPlayer(doc = document, load = () => fetch('assets/list
     }
   });
   function syncMute() {
+    if (player.volume > 0) lastVolume = player.volume;
     mute.setAttribute('aria-label', player.muted ? 'Unmute' : 'Mute');
     mute.setAttribute('title', player.muted ? 'Unmute' : 'Mute');
     mute.setAttribute('aria-pressed', String(Boolean(player.muted)));
     mute.classList.toggle('is-muted', Boolean(player.muted));
+    volume.value = String(player.muted ? 0 : player.volume);
+    volume.style.setProperty('--progress', (player.muted ? 0 : player.volume * 100) + '%');
   }
-  mute.addEventListener('click', () => { player.muted = !player.muted; syncMute(); });
+  volume.addEventListener('input', () => {
+    const value = Number(volume.value);
+    if (!Number.isFinite(value)) return;
+    player.volume = Math.max(0, Math.min(1, value)); player.muted = player.volume === 0;
+    syncMute();
+  });
+  mute.addEventListener('click', () => {
+    if (player.muted || player.volume === 0) {
+      player.muted = false;
+      if (player.volume === 0) player.volume = lastVolume;
+    } else player.muted = true;
+    syncMute();
+  });
   player.addEventListener('volumechange', syncMute);
   for (const event of ['timeupdate','loadedmetadata','durationchange','seeking','seeked','ended']) player.addEventListener(event, updateTimeline);
   previous.addEventListener('click', () => advance(-1));
@@ -172,14 +201,14 @@ export function setupIndexPlayer(doc = document, load = () => fetch('assets/list
     }
   });
   player.addEventListener('ended', () => {
-    if (!auto.checked || !current) return;
+    if (!continuePlayback || !current) return;
     if (adjacentTrack(items, current.id)) advance(1);
-    else status.textContent = 'You’ve reached the end of this listening journey.';
+    else { continuePlayback = false; status.textContent = 'You’ve reached the end of this listening journey.'; }
   });
   doc.querySelector('#index-close').addEventListener('click', () => {
-    ++intent; ++request; current = null; cues = []; lyric.textContent = ''; lyric.hidden = true;
+    ++intent; ++request; continuePlayback = false; stopped = false; current = null; cues = []; lyric.textContent = ''; lyric.hidden = true;
     player.pause(); player.removeAttribute('src'); player.load();
-    panel.hidden = true; auto.checked = false; for (const picker of pickers) picker.value = ''; sync(); doc.body.classList.remove('has-index-player');
+    panel.hidden = true; for (const picker of pickers) picker.value = ''; sync(); doc.body.classList.remove('has-index-player');
   });
   for (const event of ['play', 'pause', 'ended']) player.addEventListener(event, sync);
   player.addEventListener('error', () => {

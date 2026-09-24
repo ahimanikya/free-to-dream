@@ -146,7 +146,7 @@ test('The listening journey includes alternate styles but skips archived takes a
 });
 function playerFixture(load=async()=>testTracks, loadLyrics=async()=>[]) {
   class Element {
-    constructor(){this.listeners={};this.attributes={};this.dataset={};this.classList={contains:()=>false,toggle(){},add(){},remove(){}};this.options=[];this.parentElement={};this.paused=true;this.checked=false;this.hidden=true;this.textContent='';}
+    constructor(){this.listeners={};this.attributes={};this.dataset={};this.classList={contains:()=>false,toggle(){},add(){},remove(){}};this.options=[];this.style={setProperty(){}};this.volume=1;this.parentElement={};this.paused=true;this.checked=false;this.hidden=true;this.textContent='';}
     addEventListener(name,fn){(this.listeners[name]??=[]).push(fn);}
     async emit(name){for(const fn of this.listeners[name]||[])await fn({});}
     setAttribute(k,v){this.attributes[k]=v;}
@@ -159,21 +159,20 @@ function playerFixture(load=async()=>testTracks, loadLyrics=async()=>[]) {
     pause(){this.paused=true;this.emit('pause');}
     load(){}
   }
-  const ids=['index-player','index-audio','index-playlist','index-track-link','index-play-status','index-previous','index-next','index-auto','index-position','index-close','index-toggle','index-play-icon','index-pause-icon','index-seek','index-elapsed','index-duration','index-mute','index-lyrics-link','index-lyric'];
+  const ids=['index-player','index-audio','index-playlist','index-track-link','index-play-status','index-previous','index-next','index-stop','index-volume','index-state','index-position','index-close','index-toggle','index-play-icon','index-pause-icon','index-seek','index-elapsed','index-duration','index-mute','index-lyrics-link','index-lyric'];
   const nodes=Object.fromEntries(ids.map(id=>[id,new Element()]));
   const button=new Element();button.dataset.playRecording='or';button.attributes['aria-label']='Play Odia';
   const doc={querySelector:q=>nodes[q.slice(1)],querySelectorAll:q=>q==='[data-playlist]'?[nodes['index-playlist']]:[button],createElement:()=>new Element(),body:new Element()};
   const controller=setupIndexPlayer(doc,load,loadLyrics);
   return {nodes,button,controller};
 }
-test('Auto-next is opt-in; next/previous and playlist selection update the playing track',async()=>{
+test('The playlist automatically advances after starting; navigation and track selection stay in sync',async()=>{
   const {nodes:n,button,controller}=playerFixture();await controller.ready;
   assert.equal(n['index-audio'].src,undefined);
   n['index-playlist'].value='en-jazz';await n['index-playlist'].emit('change');
   assert.equal(n['index-audio'].src,'jazz.mp3');
   await button.emit('click');assert.equal(n['index-audio'].src,'or.mp3');
-  await n['index-audio'].emit('ended');assert.equal(n['index-audio'].src,'or.mp3');
-  n['index-auto'].checked=true;await n['index-audio'].emit('ended');
+  await n['index-audio'].emit('ended');
   assert.equal(n['index-audio'].src,'country.mp3');assert.equal(n['index-playlist'].options.length,4);
   assert.equal(n['index-playlist'].value,'en-country');
   assert.equal(n['index-position'].textContent,'Track 2 of 3');
@@ -181,11 +180,11 @@ test('Auto-next is opt-in; next/previous and playlist selection update the playi
   assert.equal(n['index-audio'].src,'jazz.mp3');assert.equal(n['index-next'].disabled,true);
   await n['index-audio'].emit('ended');assert.match(n['index-play-status'].textContent,/end of/);
   await n['index-previous'].emit('click');assert.equal(n['index-audio'].src,'country.mp3');
-  await n['index-close'].emit('click');assert.equal(n['index-player'].hidden,true);assert.equal(n['index-auto'].checked,false);
+  await n['index-close'].emit('click');assert.equal(n['index-player'].hidden,true);
 });
 test('Blocked autoplay offers a manual continuation and close cancels a pending catalog request',async()=>{
   const {nodes:n,button,controller}=playerFixture();await controller.ready;
-  await button.emit('click');n['index-audio'].blocked=true;n['index-auto'].checked=true;
+  await button.emit('click');n['index-audio'].blocked=true;
   await n['index-audio'].emit('ended');await Promise.resolve();
   assert.equal(n['index-audio'].src,'country.mp3');assert.match(n['index-play-status'].textContent,/Press play/);
   let release;const pending=playerFixture(()=>new Promise(resolve=>release=resolve));
@@ -230,4 +229,18 @@ test('Timed lines follow the current recording and seeking; late lyrics cannot r
   await n['index-next'].emit('click');deliver(cues);await Promise.resolve();
   n['index-audio'].currentTime=1.2;await n['index-audio'].emit('timeupdate');
   assert.equal(n['index-lyric'].textContent,'');assert.equal(n['index-lyric'].hidden,true);
+});
+
+test('Stop returns to the beginning without advancing; Play resumes and volume remains adjustable',async()=>{
+  const {nodes:n,button,controller}=playerFixture();await controller.ready;await button.emit('click');
+  const audio=n['index-audio'];audio.duration=180;audio.currentTime=70;
+  await n['index-stop'].emit('click');
+  assert.equal(audio.paused,true);assert.equal(audio.currentTime,0);
+  assert.equal(n['index-elapsed'].textContent,'0:00');assert.equal(n['index-state'].textContent,'STOPPED');
+  await audio.emit('ended');assert.equal(audio.src,'or.mp3');
+  await n['index-toggle'].emit('click');assert.equal(audio.paused,false);
+  n['index-volume'].value='0.4';await n['index-volume'].emit('input');assert.equal(audio.volume,0.4);
+  n['index-volume'].value='0';await n['index-volume'].emit('input');assert.equal(audio.muted,true);
+  await n['index-mute'].emit('click');assert.equal(audio.muted,false);assert.equal(audio.volume,0.4);
+  await audio.emit('ended');assert.equal(audio.src,'country.mp3');
 });
