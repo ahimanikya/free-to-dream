@@ -62,7 +62,100 @@ def safe_url(url):
     return parsed.scheme == 'https' and bool(parsed.netloc) and not parsed.username and not parsed.password
 
 
-def validate():
+def parse_srt(text):
+    """Read plain UTF-8 SRT, rejecting ambiguous or overlapping lyric cues."""
+    text = text.lstrip('\ufeff').replace('\r\n', '\n').replace('\r', '\n').strip()
+    if not text: raise ValueError('SRT must contain timed lyrics')
+    stamp = r'(\d{2,}):([0-5]\d):([0-5]\d),(\d{3})'
+    cues = []
+    for number, block in enumerate(re.split(r'\n[ \t]*\n', text), 1):
+        lines = block.splitlines()
+        if len(lines) < 3 or lines[0].strip() != str(number):
+            raise ValueError('SRT cues must be numbered consecutively starting at 1')
+        match = re.fullmatch(stamp + r' --> ' + stamp, lines[1].strip())
+        if not match: raise ValueError('Use SRT timestamps HH:MM:SS,mmm --> HH:MM:SS,mmm')
+        values = list(map(int, match.groups()))
+        def milliseconds(parts):
+            h, m, sec, ms = parts
+            return ((h * 60 + m) * 60 + sec) * 1000 + ms
+        start, end = milliseconds(values[:4]), milliseconds(values[4:])
+        lyric = '\n'.join(lines[2:]).strip()
+        if end <= start or (cues and start < cues[-1]['end']):
+            raise ValueError('SRT cues must have positive duration and must not overlap or run backwards')
+        if not lyric or '-->' in lyric or any(ord(c) < 32 and c not in '\n\t' for c in lyric):
+            raise ValueError('SRT cue needs plain lyric text')
+        cues.append({'start': start, 'end': end, 'text': lyric})
+    return cues
+
+
+def vtt_timestamp(ms):
+    seconds, ms = divmod(ms, 1000)
+    minutes, seconds = divmod(seconds, 60)
+    hours, minutes = divmod(minutes, 60)
+    return f'{hours:02}:{minutes:02}:{seconds:02}.{ms:03}'
+
+
+def make_vtt(cues):
+    return 'WEBVTT\n\n' + '\n\n'.join(
+        f'{i}\n{vtt_timestamp(c["start"])} --> {vtt_timestamp(c["end"])}\n{esc(c["text"], quote=False)}'
+        for i, c in enumerate(cues, 1)) + '\n'
+
+
+def recording_digest(item):
+    relative = item.get('repo_path')
+    if not relative: raise ValueError('Timed lyrics need an audio file in media/ to identify the exact take')
+    source = confined(relative)
+    with source.open('rb') as stream:
+        header = stream.read(256)
+    if header.startswith(b'version https://git-lfs.github.com/spec/v1\n'):
+        match = re.search(rb'oid sha256:([a-f0-9]{64})\n', header)
+        if not match: raise ValueError('Invalid audio LFS pointer')
+        return match[1].decode()
+    return hashlib.sha256(source.read_bytes()).hexdigest()
+
+
+def timed_cues(item):
+    timing = item.get('timed_lyrics')
+    if not timing: return None
+    if item['kind'] != 'audio': raise ValueError('Timed lyrics belong to an audio take')
+    expected = str(Path(item['repo_path']).with_suffix('.srt'))
+    if timing.get('srt_path') != expected: raise ValueError('SRT must sit beside its audio with the same filename stem')
+    if timing.get('audio_sha256') != recording_digest(item):
+        raise ValueError('Audio changed: retime and reattach the SRT for this take')
+    return parse_srt(confined(expected).read_text(encoding='utf-8-sig'))
+
+
+def add_lyrics(args):
+    validate(skip_timing_id=args.id)
+    items = records()
+    item = next((x for x in items if x['id'] == args.id), None)
+    if not item or item['kind'] != 'audio': raise ValueError('Choose an existing audio recording ID')
+    source = Path(args.file).expanduser().resolve()
+    if source.suffix.lower() != '.srt': raise ValueError('Expected a UTF-8 .srt file')
+    text = source.read_text(encoding='utf-8-sig')
+    parse_srt(text)
+    digest = recording_digest(item)
+    target = confined(str(Path(item['repo_path']).with_suffix('.srt')))
+    target.write_text(text.replace('\r\n', '\n').replace('\r', '\n').strip()+'\n', encoding='utf-8')
+    item['timed_lyrics'] = {'srt_path': str(target.relative_to(ROOT.resolve())), 'audio_sha256': digest}
+    (ROOT/'catalog/recordings.json').write_text(json.dumps(items, ensure_ascii=False, indent=2)+'\n')
+    print(f'Attached SRT to {args.id}. Check its timing against this exact recording in the local preview.')
+
+
+def player_markup(item, url):
+    kind = item['kind']
+    attrs = ' playsinline poster="media/images/cover.png"' if kind == 'video' else ''
+    player = f'<{kind} controls preload="metadata"{attrs} src="{esc(url, quote=True)}"></{kind}>'
+    if kind != 'audio': return player
+    base = f'media/lyrics/{item["id"]}'
+    timing = bool(item.get('timed_lyrics'))
+    data = f' data-lyrics-url="{base}.json"' if timing else ''
+    text = 'Play to follow the lyrics.' if timing else 'Timed lyrics are not available for this take yet.'
+    downloads = f'<div class="action-row"><a href="{base}.srt" download>Download SRT</a><a href="{base}.vtt" download>Download WebVTT</a></div>' if timing else ''
+    return f'<div class="audio-lyrics"{data}><img class="audio-cover" src="media/images/cover.png" width="160" alt="Shared collection cover" loading="lazy">{player}<p class="current-lyric" dir="auto">{text}</p>{downloads}</div>'
+
+
+def validate(skip_timing_id=None):
     errors = []
     config = json.loads((ROOT / 'site-config.json').read_text())
     for name in ('site_url', 'repository_url', 'preferred_odia_suno_url'):
@@ -121,12 +214,14 @@ def validate():
                     raise ValueError('Tracked recordings belong under media/ with a supported extension')
             if item.get('public_url') and not safe_url(item['public_url']):
                 raise ValueError('Public media URL must use HTTPS without embedded credentials')
+            if type(item.get('archived', False)) is not bool: raise ValueError('archived must be boolean')
+            if ident != skip_timing_id: timed_cues(item)
             if item['publish']:
                 if not item.get('public_url'): raise ValueError('Publication needs a public_url')
                 if item.get('review_status') != 'approved': raise ValueError('Publication needs approved review')
                 if item.get('rights_status') != 'confirmed': raise ValueError('Publication needs confirmed release details')
                 if not item.get('credits', {}).get('poem'): raise ValueError('Publication needs poem credit')
-        except (ValueError, KeyError) as error:
+        except (ValueError, KeyError, OSError) as error:
             errors.append(f'Recording {item.get("id", "?")}: {error}')
     if errors: raise ValueError('\n'.join(errors))
     return sorted(languages, key=lambda x: x['collection_order'])
@@ -254,9 +349,9 @@ def resource_panel(meta, items):
         formats = {'.mp3':'MP3', '.mp4':'MP4', '.m4a':'M4A', '.wav':'WAV', '.ogg':'OGG', '.webm':'WebM'}
         label = formats.get(suffix, kind.title())
         video_attrs = ' playsinline poster="media/images/cover.png"' if kind == 'video' else ''
-        content += f'<div class="recording"><p class="eyebrow">{label} · {"PUBLISHED" if item["publish"] else "LOCAL REVIEW COPY"}</p><h3>{esc(item["title"])}</h3><{kind} controls preload="metadata"{video_attrs} src="{esc(url, quote=True)}">Playback unavailable. Use the download link below.</{kind}><p>{esc(item["notes"])}</p><div class="action-row"><a class="action" href="{esc(url, quote=True)}" download>Download / open {label}</a><a class="action" href="recording--{item["id"]}.html">Share this version &amp; credits →</a></div></div>'
+        content += f'<div class="recording"><p class="eyebrow">{label} · {"PUBLISHED" if item["publish"] else "LOCAL REVIEW COPY"}</p><h3>{esc(item["title"])}</h3>{player_markup(item, url)}<p>{esc(item["notes"])}</p><div class="action-row"><a class="action" href="{esc(url, quote=True)}" download>Download / open {label}</a><a class="action" href="recording--{item["id"]}.html">Share this version &amp; credits →</a></div></div>'
     if not items:
-        content += '<p>No MP3 or MP4 is published for this language yet. Available recordings will appear here with inline players.</p>'
+        content += '<p>No MP3 or M4A is published for this language yet. Available recordings will appear here with inline players.</p>'
     content += f'<div class="recording"><h3>Poem &amp; musical direction</h3><div class="action-row"><a class="action" href="#poem-text">Read on this page</a><a class="action" href="kb/poems/i-am-free-to-dream/languages/{quote(meta["slug"])}.md" download>Download text (Markdown)</a></div></div>'
     content += '<div class="recording"><h3>Shared collection cover · PNG</h3><a href="media/images/cover.png"><img src="media/images/cover.png" width="160" loading="lazy" alt="Collection cover: hands shaping a pot beneath a moonlit mountain landscape"></a><p>This artwork is shared across the collection.</p><a class="action" href="media/images/cover.png" download="free-to-dream-cover.png">Save cover image</a></div></section>'
     return content
@@ -266,9 +361,9 @@ def contribution_page(languages, config):
     options = ''.join(f'<option value="{esc(x["slug"],quote=True)}">{esc(x["language"])}</option>' for x in languages)
     setup = '' if config.get('repository_url') else '<p class="setup-notice">Preview: the GitHub repository has not been connected yet. You can prepare and save a proposal here; submission will open once it is connected.</p>'
     return f'''<section class="contribution-intro"><a class="back" href="index.html#collection">← Browse languages</a><div class="eyebrow">ONE POEM. YOUR VOICE.</div><h1>Help a language<br>find its song.</h1><p>Share a better phrase, a listening note, or a new performance. You do not need to edit code.</p><ol class="steps"><li><strong>Prepare</strong><span>Choose a language and describe your contribution.</span></li><li><strong>Submit on GitHub</strong><span>Sign in, attach your file or link, and submit.</span></li><li><strong>Review together</strong><span>Discuss changes; accepted versions receive credits and a place in the collection.</span></li></ol></section>
-{setup}<form id="contribution-form" class="contribution-form"><div class="form-grid"><label for="contribution-language">Language<select required id="contribution-language" name="language"><option value="">Choose a language</option>{options}</select></label><label for="contribution-type">I would like to<select id="contribution-type" name="type"><option value="lyrics">Suggest a lyric change</option><option value="recording">Submit my song or video</option><option value="feedback">Review a recording</option><option value="culture">Suggest a musical direction</option></select></label></div>
+{setup}<form id="contribution-form" class="contribution-form"><div class="form-grid"><label for="contribution-language">Language<select required id="contribution-language" name="language"><option value="">Choose a language</option>{options}</select></label><label for="contribution-type">I would like to<select id="contribution-type" name="type"><option value="lyrics">Suggest a lyric change</option><option value="recording">Submit my song</option><option value="feedback">Review a recording</option><option value="culture">Suggest a musical direction</option></select></label></div>
 <label for="contribution-title">A short title<input id="contribution-title" name="title" required maxlength="100" placeholder="A more natural phrase, a new acoustic version…"></label>
-<div id="recording-fields" hidden><p class="upload-explainer"><strong>Have an MP3, WAV or video?</strong> Attach it in the GitHub submission box on the next step. If your video is too large, paste a public listening link below. Nothing is uploaded from this form.</p><label for="recording-link">Recording link (optional if attaching a file on GitHub)<input type="url" id="recording-link" name="recording_link" placeholder="https://…"></label><label for="recording-credits">Music, voice and production credits<textarea id="recording-credits" name="credits" rows="3" maxlength="2500" placeholder="Who sang, translated or arranged it? Name any AI tools used."></textarea></label></div>
+<div id="recording-fields" hidden><p class="upload-explainer"><strong>Have an MP3 or M4A recording?</strong> Attach it in the GitHub submission box on the next step. If its format or size is not accepted, paste a public listening link below. Nothing is uploaded from this form.</p><label for="recording-link">Recording link (optional if attaching a file on GitHub)<input type="url" id="recording-link" name="recording_link" placeholder="https://…"></label><label for="recording-credits">Music, voice and production credits<textarea id="recording-credits" name="credits" rows="3" maxlength="2500" placeholder="Who sang, translated or arranged it? Name any AI tools used."></textarea></label></div>
 <div id="lyric-fields"><label for="current-phrase">Current wording or passage<textarea id="current-phrase" name="current" rows="3" maxlength="4000" dir="auto"></textarea></label><label for="proposed-phrase">Suggested wording<textarea id="proposed-phrase" name="proposed" rows="3" maxlength="4000" dir="auto"></textarea></label></div>
 <label for="contribution-details">Your notes and reason<textarea id="contribution-details" name="details" required rows="5" maxlength="6000" placeholder="Explain the meaning or tradition. For listening feedback, include the version and timestamps you checked."></textarea></label><div class="form-grid"><label for="contribution-dialect">Dialect or region (optional)<input id="contribution-dialect" name="dialect" maxlength="150"></label><label for="contribution-credit">Name to credit (optional)<input id="contribution-credit" name="credit" maxlength="150"></label></div>
 <p class="small">Your proposal will be visible on GitHub after you submit it. Keep personal contact details out of it. For recordings, identify the creators and permission to share.</p><button class="button" type="submit">Prepare GitHub submission →</button><p id="contribution-status" role="status" aria-live="polite"></p>
@@ -284,11 +379,12 @@ def build(local=False):
     shutil.copytree(ROOT / 'web', output / 'assets')
     # LFS archives include historical drafts. Publish only explicitly released
     # remote recordings; never ship archive binaries or unhydrated pointers.
-    shutil.copytree(ROOT / 'media', output / 'media', ignore=shutil.ignore_patterns(*(f'*{ext}' for ext in MEDIA_EXTENSIONS)))
+    shutil.copytree(ROOT / 'media', output / 'media', ignore=shutil.ignore_patterns(*(f'*{ext}' for ext in MEDIA_EXTENSIONS), '*.srt', '*.vtt'))
     shutil.copytree(KB, output / 'kb')
     (output / 'contribute.html').write_text(shell('Contribute your voice', contribution_page(languages, config), config, local, 'contribute.html'), encoding='utf-8')
     available = {}
     for item in records():
+        if item.get('archived', False): continue
         url = item.get('public_url') if item['publish'] else None
         if local and (item.get('repo_path') or item.get('local_path')):
             candidates = [confined(item[key]) for key in ('repo_path', 'local_path') if item.get(key)]
@@ -300,7 +396,15 @@ def build(local=False):
                 try: os.link(source, target)
                 except OSError: shutil.copy2(source, target)
                 url = relative
-        if url: available.setdefault(item['language'], []).append((item, url))
+        if url:
+            available.setdefault(item['language'], []).append((item, url))
+            cues = timed_cues(item)
+            if cues is not None:
+                base = output / f'media/lyrics/{item["id"]}'
+                base.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(confined(item['timed_lyrics']['srt_path']), base.with_suffix('.srt'))
+                base.with_suffix('.vtt').write_text(make_vtt(cues), encoding='utf-8')
+                base.with_suffix('.json').write_text(json.dumps(cues, ensure_ascii=False), encoding='utf-8')
     language_map = {x['slug']:x for x in languages}
     for slug, items in available.items():
         for item, url in items:
@@ -308,7 +412,7 @@ def build(local=False):
             tag = item['kind']
             poster = ' playsinline poster="media/images/cover.png"' if tag == 'video' else ''
             credits = ''.join(f'<dt>{esc(key.replace("_", " ").title())}</dt><dd>{esc(value)}</dd>' for key,value in item.get('credits',{}).items())
-            content = f'<a class="back" href="{page_name(LANGUAGES/(slug+".md"))}">← All {esc(language_map[slug]["language"])} versions and lyrics</a><section class="recording-detail"><div class="eyebrow">{esc(language_map[slug]["language"])} · {"PUBLISHED VERSION" if item["publish"] else "REVIEW COPY"}</div><h1>{esc(item["title"])}</h1><{tag} controls preload="metadata"{poster} src="{esc(url,quote=True)}"></{tag}><p>{esc(item["notes"])}</p><dl class="credits">{credits}</dl>'
+            content = f'<a class="back" href="{page_name(LANGUAGES/(slug+".md"))}">← All {esc(language_map[slug]["language"])} versions and lyrics</a><section class="recording-detail"><div class="eyebrow">{esc(language_map[slug]["language"])} · {"PUBLISHED VERSION" if item["publish"] else "REVIEW COPY"}</div><h1>{esc(item["title"])}</h1>{player_markup(item, url)}<p>{esc(item["notes"])}</p><dl class="credits">{credits}</dl>'
             content += share_controls(item['title'], filename, config, local, item, url)
             content += f'<p><a href="contribute.html?language={quote(slug)}&amp;type=feedback&amp;recording={quote(item["id"])}">Leave a listening note for this version</a></p></section>'
             content += collaboration_panel(language_map[slug], config)
@@ -347,7 +451,7 @@ def build(local=False):
     content = f'''<section class="hero"><div><div class="eyebrow">A POEM WITHOUT BORDERS</div><h1>I am free<br>to <em>dream.</em></h1><p class="original-title" lang="or">ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ</p><p class="intro">One poem. Many voices. Shared dreams.<br>An invitation to carry an Odia poem into the languages and musical traditions we call home.</p><a class="button" href="#collection">Explore the collection ↓</a><p class="byline">A poem by Ahimanikya Satapathy</p></div><figure><img src="media/images/cover.png" alt="Hands shaping a clay pot beneath a dreamlike moonlit mountain landscape"><figcaption>Gathering the world. Giving dreams a form.</figcaption></figure></section>
 <section class="stats" aria-label="Collection status"><div><strong>{len(languages)}</strong><span>language journeys</span></div><div><strong>{lyric_count}</strong><span>original &amp; adapted texts</span></div><div><strong>{len(languages)-lyric_count}</strong><span>briefs awaiting voices</span></div><div><strong>{len(available)}</strong><span>languages with {'local media' if local else 'published media'}</span></div></section>
 <section id="collection"><div class="section-heading"><div class="eyebrow">THE LIVING COLLECTION</div><h2>Find your language.<br>Bring your voice.</h2><p>Read the poem, explore its musical direction, or help an adaptation find its natural voice. Drafts remain marked until reviewed.</p></div><div class="filters"><label for="search">Search languages or titles<input id="search" type="search" placeholder="Try Odia, Tamil, Sanskrit…"></label><label for="filter">Show<select id="filter"><option value="all">All languages</option><option value="listen">Ready to listen</option><option value="lyrics">Lyrics available</option><option value="brief">Adaptation briefs</option></select></label></div><p id="result-count" role="status" aria-live="polite">{len(languages)} languages</p><div class="language-grid">{''.join(cards)}</div><p id="no-results" hidden>No matching language. Try another name or clear the filter.</p></section>
-<section class="invitation"><div class="eyebrow">THIS IS AN INVITATION</div><h2>A language is a living culture.</h2><p>Suggest a lyric change, share a listening note, or submit your own song or video. Collaborate through GitHub; accepted versions join the collection with credits and a shareable page.</p><div class="action-row"><a class="button" href="contribute.html">Suggest a change →</a><a class="button secondary" href="contribute.html?type=recording">Submit your version →</a></div></section>'''
+<section class="invitation"><div class="eyebrow">THIS IS AN INVITATION</div><h2>A language is a living culture.</h2><p>Suggest a lyric change, share a listening note, or submit your own song. Collaborate through GitHub; accepted versions join the collection with credits and a shareable page.</p><div class="action-row"><a class="button" href="contribute.html">Suggest a change →</a><a class="button secondary" href="contribute.html?type=recording">Submit your version →</a></div></section>'''
     (output / 'index.html').write_text(shell('I Am Free to Dream', content, config, local), encoding='utf-8')
     (output / '.nojekyll').touch()
     print(f'Built {output.name}: {len(languages)} languages; {sum(map(len, available.values()))} playable media items')
@@ -355,6 +459,7 @@ def build(local=False):
 
 def add_media(args):
     validate()
+    if args.kind != 'audio': raise ValueError('New recordings use MP3 or M4A audio; existing videos remain archived')
     if not (LANGUAGES / f'{args.language}.md').is_file(): raise ValueError('Unknown language slug')
     if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', args.id): raise ValueError('Use lowercase letters, numbers and hyphens for ID')
     items = records()
@@ -365,11 +470,11 @@ def add_media(args):
              'review_status':'needs-review', 'notes':'New upload; review pronunciation, completeness, timing and credits.',
              'credits':{'poem':'Ahimanikya Satapathy','music_and_vocals':'To be supplied'}, 'rights_status':'release-details-to-confirm'}
     if args.url:
-        if not safe_url(args.url): raise ValueError('Use a direct HTTPS media URL')
+        if not safe_url(args.url) or Path(urlparse(args.url).path).suffix.lower() not in ('.mp3', '.m4a'): raise ValueError('Use a direct HTTPS MP3 or M4A URL')
         entry['public_url'] = args.url
     else:
         source = Path(args.file).expanduser().resolve()
-        allowed = ('.mp3','.m4a','.wav','.ogg') if args.kind == 'audio' else ('.mp4','.webm')
+        allowed = ('.mp3', '.m4a')
         if source.suffix.lower() not in allowed: raise ValueError(f'Expected one of {allowed}')
         digest = hashlib.sha256(source.read_bytes()).hexdigest()
         relative = f'media/{args.language}/{args.id}{source.suffix.lower()}'
@@ -463,13 +568,16 @@ def main():
     commands.add_parser('export-wiki')
     media = commands.add_parser('add-media')
     for key in ('language','id','title'): media.add_argument('--'+key, required=True)
-    media.add_argument('--kind', choices=['audio','video'], required=True)
+    media.add_argument('--kind', choices=['audio'], default='audio')
     source = media.add_mutually_exclusive_group(required=True); source.add_argument('--file'); source.add_argument('--url')
+    lyrics = commands.add_parser('add-lyrics')
+    lyrics.add_argument('--id', required=True); lyrics.add_argument('--file', required=True)
     args = parser.parse_args()
     try:
         if args.command == 'validate': print(f'Validated {len(validate())} language concepts and {len(records())} recording records.')
         elif args.command == 'build': build(args.local_media)
         elif args.command == 'add-media': add_media(args)
+        elif args.command == 'add-lyrics': add_lyrics(args)
         elif args.command == 'export-wiki': export_wiki()
         elif args.command == 'serve':
             if not (ROOT/'site/index.html').is_file(): raise ValueError('Run build --local-media first')

@@ -1,3 +1,4 @@
+import {attachLyrics} from './lyrics.mjs';
 import {buildProposal, githubSubmission, publicMediaURL} from './collaboration.mjs';
 
 const search = document.querySelector('#search');
@@ -158,3 +159,5 @@ for (const panel of document.querySelectorAll('.sharing')) {
   });
   window.addEventListener('pagehide',()=>{if(preparedURL)URL.revokeObjectURL(preparedURL);});
 }
+
+for (const container of document.querySelectorAll('[data-lyrics-url]')) attachLyrics(container);

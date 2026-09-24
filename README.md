@@ -14,13 +14,13 @@ The starting collection has **100 language entries: 28 original/adapted lyric te
 - [Meaning and adaptation guide](kb/poems/i-am-free-to-dream/meaning.md)
 - [How to contribute](CONTRIBUTING.md)
 - [Audio and video files in Git](media/README.md)
-- [Add an audio or video recording](kb/guides/add-media.md)
+- [Add an audio recording](kb/guides/add-media.md)
 - [Publish the listening site and export a GitHub wiki](kb/guides/publishing.md)
 - [Credits and rights](RIGHTS.md)
 
 ## Collaborate through the website
 
-Each language page offers **Suggest a change**, **Submit your version**, and **Review a recording**. Visitors prepare a proposal on the site and continue to GitHub with its details filled in. They sign in there, attach an MP3/WAV/video or paste a hosted link, and submit. No coding or direct repository write access is required. Long proposals remain complete and use an explicit copy/paste step when they will not fit in a URL.
+Each language page offers **Suggest a change**, **Submit your version**, and **Review a recording**. Visitors prepare a proposal on the site and continue to GitHub with its details filled in. They sign in there, attach an MP3/M4A recording or paste a hosted link, and submit. No coding or direct repository write access is required. Long proposals remain complete and use an explicit copy/paste step when they will not fit in a URL.
 
 GitHub issues hold the conversation and submission history. Maintainers review contributions, merge lyric changes, and add accepted recordings to the catalog. The site is rebuilt after changes reach `main`. The source Markdown stays in `kb/`; contributors do not overwrite it by submitting a proposal.
 
@@ -30,7 +30,13 @@ Every available recording has its own page with a player, creator credits, a dow
 
 Set `repository_url` (for example, `https://github.com/YOUR-ACCOUNT/YOUR-REPOSITORY`) and `site_url` in `site-config.json`, enable GitHub Issues, and configure Pages to use GitHub Actions. Until these actual destinations are supplied, the local site lets you prepare and save proposals but does not pretend to submit them or offer public links to unpublished recordings.
 
-This uses GitHub for sign-in, discussions and attachment storage. There are no repository access tokens in the website and no custom upload backend. GitHub attachments have size limits; contributors with large videos can use a hosted link. See the [collaboration and release guide](kb/guides/collaboration.md).
+This uses GitHub for sign-in, discussions and attachment storage. There are no repository access tokens in the website and no custom upload backend. GitHub attachments have size limits; contributors with large recordings can use a hosted link. See the [collaboration and release guide](kb/guides/collaboration.md).
+
+## Audio-first collection
+
+Use **MP3 or M4A + cover artwork + a separate SRT for each take**. Audio remains in Git LFS; poems, credits and SRTs use ordinary Git. The site generates WebVTT and displays timed lyrics using the audio player’s position. Missing timings are clearly marked. See the [timed lyrics guide](kb/guides/timed-lyrics.md).
+
+Existing MP4s are preserved as archived exports and excluded from active players. A dedicated media host can be connected later for public streaming; no storage migration is configured yet.
 
 ## Listen locally
 

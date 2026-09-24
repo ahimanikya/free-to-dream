@@ -39,3 +39,29 @@ test('Reject credential-bearing file URLs and non-GitHub handoff destinations',(
   assert.throws(()=>githubSubmission('https://github.com.evil.example/owner/repo',buildProposal(fields)));
   assert.throws(()=>githubSubmission('https://github.com/owner/repo?secret=x',buildProposal(fields)));
 });
+
+const {lyricAt, attachLyrics} = await import('../web/lyrics.mjs');
+test('Lyric timing follows seeks, gaps, exact boundaries and replay', () => {
+  const cues = [{start:1000,end:2000,text:'ସାଉଁଟି'}, {start:3000,end:4500,text:'நான் ஒரு குயவன்.'}];
+  for (const [time,text] of [[0,''],[1,'ସାଉଁଟି'],[1.999,'ସାଉଁଟି'],[2,''],[3.5,'நான் ஒரு குயவன்.'],[1.5,'ସାଉଁଟି'],[4.5,'']]) {
+    assert.equal(lyricAt(cues,time),text);
+  }
+});
+test('Player events display plain text safely and lyric download failure leaves audio usable', async () => {
+  const originalFetch = globalThis.fetch;
+  try {
+    const events = {};
+    const player = {currentTime:1.5, ended:false, addEventListener:(name,fn)=>{events[name]=fn;}};
+    const display = {textContent:''};
+    const container = {dataset:{lyricsUrl:'lyrics.json'}, querySelector:selector=>selector==='audio'?player:display};
+    globalThis.fetch=async()=>({ok:true,json:async()=>[{start:1000,end:2000,text:'<script>literal lyric</script>'}]});
+    await attachLyrics(container);
+    assert.equal(display.textContent,'<script>literal lyric</script>');
+    player.currentTime=4; events.seeked(); assert.equal(display.textContent,'');
+    player.currentTime=1.1; events.play(); assert.equal(display.textContent,'<script>literal lyric</script>');
+    player.ended=true; events.ended(); assert.equal(display.textContent,'');
+    globalThis.fetch=async()=>({ok:false});
+    await attachLyrics(container);
+    assert.match(display.textContent,/could not load/);
+  } finally {globalThis.fetch=originalFetch;}
+});

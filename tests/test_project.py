@@ -106,6 +106,54 @@ class CollectionTests(unittest.TestCase):
         app.build(True)
         self.assertEqual((self.root/'site/media/recordings/odia-audio-01.mp3').read_bytes(),b'HYDRATED TEST AUDIO')
 
+    def test_srt_validation_and_safe_webvtt(self):
+        text = '1\n00:00:01,000 --> 00:00:02,500\nସାଉଁଟି\nସାଉଁଟି <script> &\n\n2\n00:00:03,000 --> 00:00:04,000\nநான் ஒரு குயவன்.\n'
+        cues = app.parse_srt('\ufeff' + text.replace('\n', '\r\n'))
+        self.assertEqual(cues[0]['start'], 1000)
+        self.assertIn('00:00:01.000 --> 00:00:02.500', app.make_vtt(cues))
+        self.assertIn('&lt;script&gt; &amp;', app.make_vtt(cues))
+        self.assertIn('நான் ஒரு குயவன்.', app.make_vtt(cues))
+        for bad in ['', text.replace('2\n00:', '4\n00:'), text.replace('00:00:03,000', '00:00:02,000'), text.replace('00:00:02,500','00:00:00,500'), text.replace('00:00:01,000','00:61:01,000')]:
+            with self.assertRaises(ValueError): app.parse_srt(bad)
+
+    def test_srt_belongs_to_exact_take_and_build_derives_downloads(self):
+        item = app.records()[0]
+        audio = self.root/item['repo_path']; audio.write_bytes(b'original take')
+        srt = self.root/'checked.srt'
+        srt.write_text('1\n00:00:01,000 --> 00:00:02,000\nମୋତେ ସପ୍ନ\n', encoding='utf-8')
+        args = Namespace(id=item['id'], file=str(srt))
+        app.add_lyrics(args)
+        app.build(True)
+        output = self.root/'site/media/lyrics'
+        self.assertTrue((output/'odia-audio-01.srt').is_file())
+        self.assertTrue((output/'odia-audio-01.vtt').read_text().startswith('WEBVTT\n'))
+        self.assertEqual(json.loads((output/'odia-audio-01.json').read_text())[0]['text'], 'ମୋତେ ସପ୍ନ')
+        page = (self.root/'site/recording--odia-audio-01.html').read_text()
+        self.assertIn('data-lyrics-url="media/lyrics/odia-audio-01.json"', page)
+        app.build(False)
+        self.assertFalse((self.root/'site-public/media/lyrics').exists())
+        self.assertFalse((self.root/'site-public'/audio.with_suffix('.srt').relative_to(self.root)).exists())
+        # LFS pointer checkouts validate against the same content identity.
+        digest = app.recording_digest(item)
+        audio.write_text('version https://git-lfs.github.com/spec/v1\noid sha256:'+digest+'\nsize 13\n')
+        app.validate()
+        audio.write_bytes(b'different take')
+        with self.assertRaisesRegex(ValueError, 'Audio changed'): app.validate()
+        # A checked replacement SRT can repair a stale binding.
+        app.add_lyrics(args)
+        app.validate()
+
+    def test_archived_videos_stay_out_of_players_and_new_uploads_are_audio(self):
+        items = app.records()
+        video = next(x for x in items if x['kind']=='video')
+        self.assertTrue(video['archived'])
+        (self.root/video['repo_path']).write_bytes(b'ARCHIVE VIDEO')
+        app.build(True)
+        self.assertFalse((self.root/'site'/f'recording--{video["id"]}.html').exists())
+        source = self.root/'new.wav'; source.write_bytes(b'master')
+        with self.assertRaisesRegex(ValueError, 'Expected one of'):
+            app.add_media(Namespace(language='hindi',id='new-take',kind='audio',title='Test',file=str(source),url=None))
+
     def test_wiki_export_links_to_listening_site(self):
         config = json.loads((self.root/'site-config.json').read_text())
         config['site_url']='https://example.org/world-is-one'

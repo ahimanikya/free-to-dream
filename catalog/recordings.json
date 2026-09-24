@@ -54,7 +54,8 @@
       "other": "Other production credits to be confirmed before release"
     },
     "rights_status": "release-details-to-confirm",
-    "repo_path": "media/odia/lyric-video-v5.mp4"
+    "repo_path": "media/odia/lyric-video-v5.mp4",
+    "archived": true
   },
   {
     "id": "tamil-video-01",
@@ -73,6 +74,7 @@
       "other": "Other production credits to be confirmed before release"
     },
     "rights_status": "release-details-to-confirm",
-    "repo_path": "media/tamil/i-am-free-to-dream-tamil.mp4"
+    "repo_path": "media/tamil/i-am-free-to-dream-tamil.mp4",
+    "archived": true
   }
 ]

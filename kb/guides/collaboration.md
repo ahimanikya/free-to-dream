@@ -15,7 +15,7 @@ Visitors choose a language, propose a change or submit a recording through the w
 1. Open a language page and choose **Suggest a change**, **Submit your version**, or **Review a recording**.
 2. Describe the contribution. Include meaning, dialect, credits and actual listening timestamps where relevant.
 3. Prepare the proposal, review the text, and continue on GitHub. Sign in or create your own GitHub account if needed.
-4. Attach an MP3, WAV or supported video in the GitHub issue box, or include a public hosted link. For a long proposal, copy and paste the complete prepared text first.
+4. Submit an MP3 or M4A recording, plus a version-specific UTF-8 SRT if checked timings are available. Attach supported files in the GitHub issue box, or include a public hosted link when the extension or size is not accepted. For a long proposal, copy and paste the complete prepared text first.
 5. Submit the issue and follow the conversation there. The language page links to its suggestions and submitted versions once the repository is connected.
 
 The website never asks for a GitHub password or access token. GitHub handles sign-in and uploads. There is no anonymous on-site upload service.
@@ -32,9 +32,9 @@ Maintainers discuss proposed changes with contributors. For lyrics, update the c
 
 Keep contributor submissions separate from releases until reviewed. A public GitHub attachment is already public even before a maintainer adds it to the site; the moderation gate controls inclusion in this collection, not visibility of the issue itself.
 
-## Upload limits and large videos
+## File attachments and hosted recordings
 
-GitHub's documented limits currently include 25 MB for non-image/video attachments, 10 MB videos on free repositories, and 100 MB videos on paid repositories, with additional account requirements for some larger uploads. MP3 and WAV attachments are supported in repository issue/comment contexts. Contributors should follow the limit GitHub shows for their account; a hosted media link is the fallback for a large video.
+Follow the attachment formats and size limit shown by GitHub for your account. If MP3, M4A or SRT cannot be attached directly, provide a hosted recording link and submit the SRT through a pull request. Keep each take separate and identify its exact recording ID. Existing MP4 files remain archive material.
 
 For files intended for public playback, test the final URL in the actual site. A storage host must allow playback; preparing a file for native sharing additionally needs browser cross-origin access. Do not use expiring links or private access tokens. An attachment link is not a guarantee of permanent hosting; retain source backups.
 
