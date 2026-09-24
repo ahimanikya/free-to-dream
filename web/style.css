@@ -31,3 +31,77 @@ textarea{display:block;width:100%;padding:13px 15px;border:1px solid #aeb8a5;bor
 .media-group h4 { font-size: 1.2rem; margin: .6rem 0 1rem; }
 .earlier-recordings { margin-block: 1.25rem; }
 .earlier-recordings summary { cursor: pointer; padding: .8rem 0; font-weight: 600; }
+
+/* A quiet reading edition, with original Odisha-inspired line ornaments. */
+:root { --paper:#f8f3e8; --white:#fffdf7; --ink:#293c36; --orange:#98462f; --line:#d9cebb; --muted:#676c60; }
+body { background-image: radial-gradient(#aa82500c .6px, transparent .6px); background-size:5px 5px; }
+header { position:relative; border-bottom:0; padding-bottom:32px; }
+header:after { content:""; position:absolute; bottom:0; left:40px; right:40px; height:9px; background:url('odia-border.svg') repeat-x center / 72px 9px; opacity:.65; }
+.brand { position:relative; padding-left:49px; }
+.brand img { position:absolute; left:0; top:1px; }
+.hero figure { padding:12px; border:1px solid var(--line); background:var(--white); }
+.hero figure img { border-radius:0; }
+.language-page { max-width:1060px; margin:0 auto 64px; }
+.language-page .language-heading { position:relative; padding:8px 140px 30px 0; border-bottom:1px solid var(--line); }
+.language-heading:after { content:""; position:absolute; right:8px; top:12px; width:100px; height:100px; background:url('odia-lotus.svg') center/contain no-repeat; opacity:.65; }
+.language-heading h1 { font:400 clamp(29px,3.1vw,43px)/1.55 Georgia,"Noto Sans",serif; letter-spacing:-.015em; margin:12px 0; overflow-wrap:anywhere; }
+.poet-credit { color:var(--muted); font-size:13px; margin:0 0 18px; }
+.poet-credit span { margin:0 8px; }
+.reading-links { display:flex; flex-wrap:wrap; gap:12px 24px; font-size:13px; }
+.page-share { margin-top:14px; font-size:13px; }
+.page-share summary { cursor:pointer; width:fit-content; color:var(--orange); }
+.page-share .sharing { margin:18px 0 0; }
+.page-share .share-note { max-width:640px; }
+.language-layout { display:grid; grid-template-columns:minmax(0,1fr) 330px; align-items:start; gap:64px; padding:32px 0; }
+article.poem-reading { margin:0; max-width:none; min-width:0; }
+.poem-reading .reading-caption { font:600 11px/1.6 system-ui,sans-serif; text-transform:uppercase; letter-spacing:.16em; color:var(--orange); margin:0 0 20px; }
+.poem-reading pre { border:0; background:transparent; padding:0; margin:0 0 26px; border-radius:0; line-height:2.05; }
+.poem-reading pre code { font-family:Georgia,"Noto Sans",serif; font-size:19px; }
+.poem-reading .poem-download { font-size:12px; color:var(--muted); }
+.listening.compact-listening { width:100%; margin:0; padding:24px; background:#f0e9da; border:1px solid var(--line); border-radius:2px; }
+.compact-listening h2 { font-size:27px; margin:8px 0 12px; }
+.compact-listening .media-status { font-size:11px; color:var(--muted); margin:0; }
+.compact-listening .media-group { margin:22px 0 0; }
+.compact-listening .media-group h3 { font:600 11px/1.5 system-ui,sans-serif; text-transform:uppercase; letter-spacing:.12em; margin:0 0 8px; color:var(--orange); }
+.compact-listening .recording h4 { font-size:14px; font-weight:500; margin:0 0 12px; }
+.recording-links { display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; margin:10px 0 0; }
+.compact-listening .recording-links a { font-size:11px; }
+.compact-listening video { max-height:220px; border-radius:2px; }
+.compact-listening .recording + .recording { margin-top:20px; padding-top:18px; }
+.compact-listening .more-recordings, .compact-listening .earlier-recordings { margin:12px 0 0; font-size:12px; }
+.compact-listening summary { padding:7px 0; cursor:pointer; font-weight:500; }
+.compact-listening details[open] summary { margin-bottom:12px; }
+.compact-listening .media-empty { font-size:14px; color:var(--muted); }
+.text-link { font-size:13px; }
+.language-notes { border-top:1px solid var(--line); }
+.language-notes > details { border-bottom:1px solid var(--line); padding:0 4px; }
+.language-notes > details > summary { padding:19px 0; cursor:pointer; font-size:14px; }
+.detail-body { max-width:800px; padding:0 0 26px; font-size:15px; overflow-wrap:anywhere; }
+.detail-body h2 { font-size:25px; margin:28px 0 14px; }
+.detail-body pre { white-space:pre-wrap; overflow-wrap:anywhere; padding:18px; background:var(--white); border:1px solid var(--line); }
+.detail-body code { font:inherit; }
+.detail-body .collaborate { padding:0; border:0; background:none; margin:0 0 24px; }
+.detail-body .collaborate .eyebrow { display:none; }
+.quiet-contribute { padding:25px 0 0; }
+.quiet-contribute h2 { font-size:22px; margin:0 0 16px; }
+summary:focus-visible { outline:3px solid var(--orange); outline-offset:4px; }
+@media(max-width:900px) { .language-layout { gap:30px; grid-template-columns:minmax(0,1fr) 300px; } }
+@media(max-width:700px) {
+ header:after { left:20px; right:20px; }
+ .language-heading:after { width:48px; height:48px; right:0; top:3px; }
+ .language-page .language-heading { padding:0 0 24px; }
+ .language-heading .eyebrow { padding-right:60px; }
+ .language-heading h1 { font-size:29px; line-height:1.65; padding-right:0; margin-top:22px; }
+ .language-layout { grid-template-columns:1fr; gap:32px; padding:28px 0; }
+ .poem-reading pre code { font-size:18px; }
+ .listening.compact-listening { max-width:100%; }
+ .compact-listening video { max-height:300px; }
+ .brand { padding-left:37px; }
+ .brand img { width:28px; height:28px; }
+}
+
+.language-page[data-language="odia"] .poem-reading pre code { font-family:"Noto Sans Oriya",system-ui,sans-serif; font-size:22px; }
+@media(max-width:700px) { .language-page[data-language="odia"] .poem-reading pre code { font-size:20px; } }
+.language-heading:after { width:138px; height:108px; background-image:url('odia-manuscript.svg'); opacity:.85; }
+@media(max-width:700px) { .language-heading:after { width:65px; height:48px; top:-3px; } .language-heading .eyebrow { padding-right:75px; } }
+@media(max-width:440px) { header { flex-wrap:wrap; gap:14px; } header nav { flex:1 0 100%; justify-content:space-between; } }

@@ -28,7 +28,7 @@ Commit the SRT and catalog update through a pull request. Text changes are visib
 
 The build generates WebVTT (`.vtt`) and playback cues from the SRT. The player displays the current lyric using the audio’s playback time, including after seeking or changing playback speed. SRT and WebVTT downloads appear beside each available timed recording. Generated files are not edited or committed separately.
 
-Without an SRT, the player remains usable and shows that timed lyrics are pending. Timings must be measured against the recording; do not estimate them from poem length or another language’s video. No verified SRTs have been added yet.
+Without an SRT, the player remains usable alongside the poem; synchronized lines and subtitle download links appear only when a timing file is available. Timings must be measured against the recording; do not estimate them from poem length or another language’s video. No verified SRTs have been added yet.
 
 ## Files and hosting
 

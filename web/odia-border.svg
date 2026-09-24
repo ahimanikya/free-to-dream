@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 30" fill="none">
+ <g stroke="#98462f" stroke-width=".8">
+  <path d="M0 3H240M0 27H240M0 15H240"/>
+  <path id="leaf" d="M0 15Q10 1 20 15Q10 29 0 15ZM20 15Q30 1 40 15Q30 29 20 15ZM40 15Q50 1 60 15Q50 29 40 15Z"/>
+  <use href="#leaf" x="60"/><use href="#leaf" x="120"/><use href="#leaf" x="180"/>
+ </g>
+ <g fill="#b9844c"><circle cx="10" cy="15" r="1.7"/><circle cx="30" cy="15" r="1.7"/><circle cx="50" cy="15" r="1.7"/><circle cx="70" cy="15" r="1.7"/><circle cx="90" cy="15" r="1.7"/><circle cx="110" cy="15" r="1.7"/><circle cx="130" cy="15" r="1.7"/><circle cx="150" cy="15" r="1.7"/><circle cx="170" cy="15" r="1.7"/><circle cx="190" cy="15" r="1.7"/><circle cx="210" cy="15" r="1.7"/><circle cx="230" cy="15" r="1.7"/></g>
+</svg>

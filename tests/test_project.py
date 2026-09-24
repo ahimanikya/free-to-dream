@@ -202,7 +202,7 @@ class CollectionTests(unittest.TestCase):
             page=(output/f'poems--i-am-free-to-dream--languages--{language}.html').read_text()
             self.assertEqual(page.count('<audio '), audio_count)
             self.assertEqual(page.count('<video '), video_count)
-            self.assertIn('Review copy', page)
+            self.assertIn('Working recordings', page)
             self.assertNotIn('LOCAL REVIEW COPY', page)
             self.assertNotIn('autoplay', page)
             self.assertEqual(page.count('preload="none"'), audio_count+video_count)
@@ -215,8 +215,7 @@ class CollectionTests(unittest.TestCase):
         telugu=(output/'poems--i-am-free-to-dream--languages--telugu.html').read_text()
         self.assertIn('Earlier video versions (3)', telugu)
         hindi=(output/'poems--i-am-free-to-dream--languages--hindi.html').read_text()
-        self.assertIn('No audio recording is available',hindi)
-        self.assertIn('No video recording is available',hindi)
+        self.assertIn('A voice for this poem is still to come.',hindi)
         self.assertNotIn('<video ', hindi)
         self.assertFalse((output/'media/recordings').exists())
 
@@ -235,6 +234,38 @@ class CollectionTests(unittest.TestCase):
         item['publish']=True
         (self.root/'catalog/recordings.json').write_text(json.dumps(items))
         with self.assertRaisesRegex(ValueError, 'approved review'): app.validate()
+
+    def test_reading_pages_are_quiet_and_odia_is_the_original(self):
+        shutil.copy2(PROJECT/'catalog/recordings.json', self.root/'catalog/recordings.json')
+        app.build(False)
+        output=self.root/'site-public'
+        for meta in app.validate():
+            page=(output/f'poems--i-am-free-to-dream--languages--{meta["slug"]}.html').read_text()
+            self.assertEqual(page.count('<h1'),1)
+            self.assertNotIn('Shared collection cover · PNG',page)
+            self.assertNotIn('class="audio-cover"',page)
+            self.assertNotIn('Timed lyrics are not available',page)
+            self.assertIn('class="page-share"',page)
+            self.assertIn('assets/odia-lotus.svg',page)
+            self.assertNotIn('<details open',page)
+        odia=(output/'poems--i-am-free-to-dream--languages--odia.html').read_text()
+        self.assertIn('Odia · the original',odia)
+        self.assertNotIn('How to validate this translation',odia)
+        self.assertNotIn('Translation &amp; collaboration',odia)
+        self.assertNotIn('needs native review',odia)
+        self.assertIn('<summary>Song arrangement</summary>',odia)
+        _, original=app.read_concept(app.KB/'poems/i-am-free-to-dream/original.md')
+        source=original.split('```text\n')[1].split('\n```')[0]
+        self.assertIn(source,odia)
+        alias=(output/'poems--i-am-free-to-dream--original.html').read_text()
+        self.assertIn('Odia · the original',alias)
+        self.assertNotIn('How to validate this translation',alias)
+        tamil=(output/'poems--i-am-free-to-dream--languages--tamil.html').read_text()
+        self.assertIn('<summary>Translation &amp; collaboration</summary>',tamil)
+        self.assertIn('How to validate this translation',tamil)
+        self.assertIn('நான் ஒரு குயவன்.',tamil)
+        for heading in ['Style prompt','Cultural grounding','Working settings and listening checks']:
+            self.assertIn(heading,tamil)
 
     def test_media_server_supports_byte_ranges(self):
         (self.root/'sample.mp3').write_bytes(bytes(range(256)))

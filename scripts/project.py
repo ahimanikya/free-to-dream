@@ -150,9 +150,10 @@ def player_markup(item, url):
     base = f'media/lyrics/{item["id"]}'
     timing = bool(item.get('timed_lyrics'))
     data = f' data-lyrics-url="{base}.json"' if timing else ''
-    text = 'Play to follow the lyrics.' if timing else 'Timed lyrics are not available for this take yet.'
+    text = 'Play to follow the lyrics.' if timing else ''
     downloads = f'<div class="action-row"><a href="{base}.srt" download>Download SRT</a><a href="{base}.vtt" download>Download WebVTT</a></div>' if timing else ''
-    return f'<div class="audio-lyrics"{data}><img class="audio-cover" src="media/images/cover.png" width="160" alt="Shared collection cover" loading="lazy">{player}<p class="current-lyric" dir="auto">{text}</p>{downloads}</div>'
+    lyric = f'<p class="current-lyric" dir="auto">{text}</p>' if timing else ''
+    return f'<div class="audio-lyrics"{data}>{player}{lyric}{downloads}</div>'
 
 
 def publicly_available(item):
@@ -288,8 +289,8 @@ def shell(title, content, config, local=False, filename='index.html', descriptio
 <meta name="description" content="{esc(description, quote=True)}"><meta property="og:title" content="{esc(title, quote=True)} · World is One"><meta property="og:description" content="{esc(description, quote=True)}"><meta property="og:type" content="website">{metadata}
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https:; img-src 'self'; media-src 'self' https: blob:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <title>{esc(title)} · World is One</title><link rel="stylesheet" href="assets/style.css"><script type="module" src="assets/site.js"></script></head>
-<body data-repository="{esc(config.get('repository_url', ''), quote=True)}" data-site-url="{esc(config.get('site_url', ''), quote=True)}">{preview}<header><a class="brand" href="index.html">WORLD IS ONE<span>INDIA IS ONE</span></a><nav aria-label="Main navigation"><a href="index.html#collection">Languages</a><a href="poems--i-am-free-to-dream--original.html">The poem</a><a href="contribute.html">Contribute</a></nav></header>
-<main>{content}</main><footer>Original poem © Ahimanikya Satapathy · AI-assisted adaptations and generated recordings are identified on their pages.<br><a href="guides--rights.html">Credits &amp; rights</a> · <a href="contribute.html?type=recording">Submit your version</a> · <a href="kb/index.md">Knowledge base</a></footer></body></html>'''
+<body data-repository="{esc(config.get('repository_url', ''), quote=True)}" data-site-url="{esc(config.get('site_url', ''), quote=True)}">{preview}<header><a class="brand" href="index.html"><img src="assets/odia-lotus.svg" alt="" width="38" height="38" aria-hidden="true">WORLD IS ONE<span>INDIA IS ONE</span></a><nav aria-label="Main navigation"><a href="index.html#collection">Languages</a><a href="poems--i-am-free-to-dream--original.html">The poem</a><a href="contribute.html">Contribute</a></nav></header>
+<main>{content}</main><footer>Original poem © Ahimanikya Satapathy · AI-assisted adaptations and generated recordings are identified on their pages.<br><a href="guides--rights.html">Credits &amp; rights</a> · <a href="guides--artwork.html">Art of the site</a> · <a href="contribute.html?type=recording">Submit your version</a> · <a href="kb/index.md">Knowledge base</a></footer></body></html>'''
 
 
 def share_controls(title, filename, config, local=False, media=None, media_url=None):
@@ -338,9 +339,8 @@ def collaboration_panel(meta, config):
 
 def translation_check_panel(meta):
     slug = meta['slug']
-    if slug == 'odia':
-        context = 'This is the original Odia source. Check transcription and sung delivery; discuss changes to the source wording with the author.'
-    elif meta['lyric_status'] == 'Transcription pending':
+    if slug == 'odia': return ''
+    if meta['lyric_status'] == 'Transcription pending':
         context = 'The recording is available; a checked transcription is still needed. Write out the words actually sung, then compare their meaning with the source poem.'
     elif meta['lyric_status'] == 'Adaptation pending':
         context = 'Lyrics are still pending. Use this checklist when preparing the first adaptation; the brief is not a verified translation.'
@@ -363,25 +363,78 @@ def translation_check_panel(meta):
 
 
 def resource_panel(meta, items):
-    counts = {kind: sum(item['kind'] == kind for item, _ in items) for kind in ('audio', 'video')}
-    content = f'<section id="resources" class="listening" aria-labelledby="resources-title"><div class="eyebrow">LISTEN, WATCH &amp; DOWNLOAD</div><h2 id="resources-title">Available resources</h2><p>{counts["audio"]} audio · {counts["video"]} video · poem / brief · shared cover image</p>'
+    content = '<aside id="resources" class="listening compact-listening" aria-label="Listen and watch"><div class="eyebrow">THE POEM IN SONG</div><h2>Listen &amp; watch</h2>'
+    if not items:
+        return content + f'<p class="media-empty">A voice for this poem is still to come.</p><a class="text-link" href="contribute.html?language={quote(meta["slug"])}&amp;type=recording">Share a recording →</a></aside>'
+    if any(not item['publish'] for item, _ in items):
+        content += '<p class="media-status">Working recordings · feedback welcome</p>'
     def card(item, url):
-        suffix = Path(urlparse(url).path).suffix.lower()
-        label = {'.mp3':'MP3', '.mp4':'MP4', '.m4a':'M4A', '.wav':'WAV', '.ogg':'OGG', '.webm':'WebM'}.get(suffix, item['kind'].title())
-        return f'<div class="recording"><p class="eyebrow">{label} · {esc(recording_label(item))}</p><h4>{esc(item["title"])}</h4>{player_markup(item, url)}<p>{esc(item["notes"])}</p><div class="action-row"><a class="action" href="{esc(url, quote=True)}" download>Download / open {label}</a><a class="action" href="recording--{item["id"]}.html">Share this version &amp; credits →</a></div></div>'
-    for kind, heading in [('audio', 'Listen'), ('video', 'Watch')]:
-        content += f'<section class="media-group" aria-labelledby="{kind}-heading"><h3 id="{kind}-heading">{heading}</h3>'
+        label = Path(urlparse(url).path).suffix.lstrip('.').upper()
+        title = re.sub(r'^(?:I Am Free to Dream|'+re.escape(meta['language'])+r')\s*[·–—-]\s*', '', item['title'])
+        return f'<div class="recording"><h4>{esc(title)}</h4>{player_markup(item, url)}<div class="recording-links"><a href="{esc(url, quote=True)}" download>Download {label}</a><a href="recording--{item["id"]}.html">Details &amp; share ↗</a></div></div>'
+    for kind, heading in [('audio', 'Audio'), ('video', 'Video')]:
         current = [(item, url) for item, url in items if item['kind'] == kind and not item.get('archived')]
         older = [(item, url) for item, url in items if item['kind'] == kind and item.get('archived')]
-        content += ''.join(card(item, url) for item, url in current)
+        if not current and not older: continue
+        content += f'<section class="media-group" aria-label="{heading}"><h3>{heading}</h3>'
+        if current:
+            content += card(*current[0])
+            if len(current) > 1:
+                content += f'<details class="more-recordings"><summary>More {kind} versions ({len(current)-1})</summary>' + ''.join(card(*pair) for pair in current[1:]) + '</details>'
         if older:
-            content += f'<details class="earlier-recordings"><summary>Earlier {kind} versions ({len(older)})</summary>' + ''.join(card(item, url) for item, url in older) + '</details>'
-        if not current and not older:
-            content += f'<p>No {kind} recording is available for this language yet.</p><a href="contribute.html?language={quote(meta["slug"])}&amp;type=recording">Contribute a version →</a>'
+            content += f'<details class="earlier-recordings"><summary>Earlier {kind} versions ({len(older)})</summary>' + ''.join(card(*pair) for pair in older) + '</details>'
         content += '</section>'
-    content += f'<div class="recording"><h3>Poem &amp; musical direction</h3><div class="action-row"><a class="action" href="#poem-text">Read on this page</a><a class="action" href="kb/poems/i-am-free-to-dream/languages/{quote(meta["slug"])}.md" download>Download text (Markdown)</a></div></div>'
-    content += '<div class="recording"><h3>Shared collection cover · PNG</h3><a href="media/images/cover.png"><img src="media/images/cover.png" width="160" loading="lazy" alt="Collection cover: hands shaping a pot beneath a moonlit mountain landscape"></a><p>This artwork is shared across the collection.</p><a class="action" href="media/images/cover.png" download="free-to-dream-cover.png">Save cover image</a></div></section>'
-    return content
+    return content + '</aside>'
+
+
+def language_content(meta, body, path, items, config, local=False):
+    """A reading surface with the full source notes available on demand."""
+    slug = meta['slug']
+    original = slug == 'odia'
+    parts = re.split(r'(?m)^## (.+)\n', body)
+    sections = [(parts[i], parts[i+1].split('\n---\n')[0].strip()) for i in range(1, len(parts), 2)]
+    by_heading = dict(sections)
+    language_name = 'Odia · the original' if original else meta['language']
+    status = 'Original poem' if original else ('Adaptation · review welcome' if has_lyrics(meta) else meta['lyric_status'])
+    source_link = '' if original else '<a href="poems--i-am-free-to-dream--languages--odia.html">Read the Odia original ↗</a>'
+    header = f'<section class="language-heading"><div class="eyebrow">{esc(language_name)}</div><h1 dir="auto">{esc(meta["title"])}</h1><p class="poet-credit">A poem by Ahimanikya Satapathy <span aria-hidden="true">·</span> {esc(status)}</p><div class="reading-links"><a href="#poem-text">Read</a><a href="#resources">Listen &amp; watch</a>{source_link}</div><details class="page-share"><summary>Share this poem</summary>{share_controls(meta["language"]+" · "+meta["title"], page_name(path), config, local)}</details></section>'
+    if original:
+        _, source_body = read_concept(KB/'poems/i-am-free-to-dream/original.md')
+        poem = re.search(r'```(?:text)?\n(.*?)\n```', source_body, re.S)
+        primary = '```text\n'+poem[1]+'\n```' if poem else source_body
+        poem_heading = 'The original poem'
+    elif has_lyrics(meta) and 'Poem / arranged lyrics' in by_heading:
+        primary = by_heading['Poem / arranged lyrics']
+        poem_heading = 'The poem'
+    elif meta['lyric_status'] == 'Transcription pending':
+        primary = 'Listen to this version while we prepare a checked transcription of the words sung. A fluent speaker can help bring the text to this page.'
+        poem_heading = 'The words are on their way'
+    else:
+        primary = 'This language’s poem is still taking shape. Read the [Odia original](odia.md) and help carry its feeling into your language. The adaptation brief is available below.'
+        poem_heading = 'An invitation to your language'
+    primary_html = render_markdown(primary, path)
+    if slug in ('arabic','urdu','sindhi','kashmiri','balti'):
+        primary_html = primary_html.replace('<pre>', '<pre dir="rtl">')
+    reading = f'<article id="poem-text" class="poem-reading"><h2 class="reading-caption">{poem_heading}</h2>{primary_html}<a class="poem-download" href="kb/poems/i-am-free-to-dream/languages/{quote(slug)}.md" download>Download poem &amp; notes ↓</a></article>'
+    content = header + '<div class="language-layout">'+reading+resource_panel(meta, items)+'</div>'
+    content += '<section class="language-notes" aria-label="About this version">'
+    if original and by_heading.get('Poem / arranged lyrics'):
+        content += '<details><summary>Song arrangement</summary><div class="detail-body">'+render_markdown(by_heading['Poem / arranged lyrics'], path)+'</div></details>'
+    music_names = {'Why this musical direction','Cultural grounding','Voice, rhythm and arrangement','Emotional shape','Style prompt','Working settings and listening checks','Musical direction'}
+    music = '\n\n'.join('## '+heading+'\n\n'+text for heading,text in sections if heading in music_names)
+    if music:
+        content += '<details><summary>Musical direction &amp; style prompt</summary><div class="detail-body">'+render_markdown(music,path)+'</div></details>'
+    if not original:
+        extra = '\n\n'.join('## '+heading+'\n\n'+text for heading,text in sections if heading not in music_names and heading != 'Poem / arranged lyrics')
+        content += '<details id="translation-check"><summary>Translation &amp; collaboration</summary><div class="detail-body">'+translation_check_panel(meta).replace('id="translation-check"','id="translation-reference"')+render_markdown(extra,path)+'</div></details>'
+    contributor = 'Share a performance or a listening note' if original else 'Help this version grow'
+    notes_link = f'contribute.html?language={quote(slug)}&amp;type=feedback'
+    action = f'<a href="contribute.html?language={quote(slug)}&amp;type=recording">Submit a recording</a><a href="{notes_link}">Leave a listening note</a>'
+    if not original: action += f'<a href="contribute.html?language={quote(slug)}&amp;type=lyrics">Suggest a wording change</a>'
+    if original and config.get('preferred_odia_suno_url'):
+        action += f'<a href="{esc(config["preferred_odia_suno_url"],quote=True)}">Selected take on Suno ↗</a>'
+    content += f'<div class="quiet-contribute"><h2>{contributor}</h2><div class="reading-links">{action}</div></div></section>'
+    return f'<a class="back" href="index.html#collection">← All languages</a><div class="language-page" data-language="{esc(slug,quote=True)}">'+content+'</div>'
 
 
 def contribution_page(languages, config):
@@ -447,25 +500,13 @@ def build(local=False):
     for path in sorted(KB.rglob('*.md')):
         meta, body = read_concept(path)
         title = meta.get('title', path.parent.name if path.name == 'index.md' else path.stem)
-        extras = ''
         if path.parent == LANGUAGES and path.name != 'index.md':
-            slug = meta['slug']
-            extras = f'<div class="eyebrow">{esc(meta["language"])} / I AM FREE TO DREAM</div><p class="status">{esc(meta["lyric_status"])} · {esc(meta["review_status"].replace("-", " "))}</p>'
-            extras += '<div class="page-actions"><a class="button" href="contribute.html?language='+quote(slug)+'&amp;type=lyrics">Suggest a change</a><a class="button secondary" href="contribute.html?language='+quote(slug)+'&amp;type=recording">Submit your version</a><a href="#poem-text">Read the lyrics ↓</a><a href="#translation-check">Translation check ↓</a></div>'
-            extras += '<p><a class="action" href="#resources">Available resources ↓</a></p>'
-            extras += resource_panel(meta, available.get(slug, []))
-            if slug == 'odia':
-                extras += f'<p><a href="{esc(config["preferred_odia_suno_url"], quote=True)}">Listen to the author’s selected Odia take on Suno ↗</a></p>'
-            if config.get('repository_url'):
-                extras += f'<p><a href="{esc(config["repository_url"].rstrip("/") + "/issues", quote=True)}">Suggest a change or share a review ↗</a></p>'
-        rendered = render_markdown(body, path)
-        if meta.get('slug') in ('arabic','urdu','sindhi'):
-            rendered = rendered.replace('<pre>', '<pre dir="rtl">', 1)
-        content = '<a class="back" href="index.html#collection">← Browse languages</a>' + extras + f'<article id="poem-text">{rendered}</article>'
-        if path.parent == LANGUAGES and path.name != 'index.md':
-            content += translation_check_panel(meta)
-            content += share_controls(meta['language']+' · '+meta['title'], page_name(path), config, local)
-            content += collaboration_panel(meta, config)
+            content = language_content(meta, body, path, available.get(meta['slug'], []), config, local)
+        elif path == KB/'poems/i-am-free-to-dream/original.md':
+            odia_meta, odia_body = read_concept(LANGUAGES/'odia.md')
+            content = language_content(odia_meta, odia_body, LANGUAGES/'odia.md', available.get('odia', []), config, local)
+        else:
+            content = '<a class="back" href="index.html#collection">← Browse languages</a><article>'+render_markdown(body,path)+'</article>'
         (output / page_name(path)).write_text(shell(title, content, config, local, page_name(path)), encoding='utf-8')
     lyric_count = sum(has_lyrics(x) for x in languages)
     cards = []

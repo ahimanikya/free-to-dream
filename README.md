@@ -32,6 +32,12 @@ Set `repository_url` (for example, `https://github.com/YOUR-ACCOUNT/YOUR-REPOSIT
 
 This uses GitHub for sign-in, discussions and attachment storage. There are no repository access tokens in the website and no custom upload backend. GitHub attachments have size limits; contributors with large recordings can use a hosted link. See the [collaboration and release guide](kb/guides/collaboration.md).
 
+## Reading experience
+
+Language pages put the poem beside compact audio/video players. Sharing, musical direction, alternate takes and translation guidance open on demand. The Odia page presents the author’s original poem, with its sung arrangement available separately and no translation checklist.
+
+Original decorative drawings reference Odisha’s Pattachitra and palm-leaf traditions. See [Art of the site](kb/guides/artwork.md) for the design references. The collection cover remains on the home page, video posters and social previews.
+
 ## Audio-first collection
 
 Use **MP3 or M4A + cover artwork + a separate SRT for each take**. Audio remains in Git LFS; poems, credits and SRTs use ordinary Git. The site generates WebVTT and displays timed lyrics using the audio player’s position. Missing timings are clearly marked. See the [timed lyrics guide](kb/guides/timed-lyrics.md).
