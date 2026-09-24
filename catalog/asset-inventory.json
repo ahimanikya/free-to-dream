@@ -383,5 +383,17 @@
     "role": "working-asset",
     "published": true,
     "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/media-archive-2026-09-23/telugu--v4--i-am-free-to-dream-telugu-v4.mp4"
+  },
+  {
+    "sha256": "b1264a536d7d79c0d9e78c8f2e29af042f31274d09bfb27c65fa914fdf41d2db",
+    "repo_path": "media/images/ahimanikya-artwork-1993.png",
+    "bytes": 321630,
+    "source_names": [
+      "Author-supplied artwork, signed 1993"
+    ],
+    "role": "author-artwork",
+    "published": true,
+    "creator": "Ahimanikya Satapathy",
+    "permission": "Author requested inclusion in this collection on 2026-09-24."
   }
 ]

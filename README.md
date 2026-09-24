@@ -100,3 +100,5 @@ The GitHub check workflow validates changes and builds the public site. After Pa
 ## Working principle
 
 Preserve the original; adapt with care; credit the people who help. Each musical setting should name its chosen cultural references while leaving room for other traditions in the same language.
+
+The homepage introduces six featured languages, with a horizontal swipe section on small screens. The full searchable collection lives at `languages.html`. Cards share a fixed height, and the author’s signed 1993 artwork opens the collection with its signature intact.
