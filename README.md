@@ -4,7 +4,7 @@
 
 A collaborative home for Ahimanikya Satapathy’s Odia poem **“ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ” / “I Am Free to Dream”** and its language adaptations, musical directions and recordings.
 
-The collection has **101 language entries: 28 original/adapted lyric texts, 72 adaptation briefs and a Filipino recording awaiting a checked transcription**. They are not 101 finished songs. AI-assisted drafts need native-speaker review; musical prompts are creative proposals, not verified performances.
+The collection has **101 language entries: 29 original/adapted lyric texts and 72 adaptation briefs**. They are not 101 finished songs. AI-assisted drafts need native-speaker review; musical prompts are creative proposals, not verified performances.
 
 ## Start here
 
@@ -58,7 +58,7 @@ python scripts/project.py build --local-media
 python scripts/project.py serve
 ```
 
-Open **http://127.0.0.1:8765**. Search for a language, choose **Ready to listen**, and open its page. Native audio/video players support seeking. Odia, Tamil, Telugu, English (country and jazz), and Filipino / Tagalog have embedded recordings. Other pages show separate audio/video availability messages.
+Open **http://127.0.0.1:8765**. Search for a language, choose **Ready to listen**, and open its page. Native audio/video players support seeking. Odia, Tamil, Telugu, Malayalam, English (country and jazz), and Filipino / Tagalog have embedded recordings. Other pages show separate audio/video availability messages.
 
 The audio/video archive is tracked with **Git LFS** in language folders under [`media/`](media/README.md). Install Git LFS before cloning, or run `git lfs pull` in an existing checkout, to retrieve the full files. The ignored `local-assets/` folder retains private references and local working copies. Public players use explicitly authorized review-copy URLs or approved release URLs. Sharing a review copy does not mark its translation, pronunciation or release checks complete.
 

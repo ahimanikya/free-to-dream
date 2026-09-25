@@ -13,7 +13,7 @@ One poem. Many voices. Shared dreams.
 
 An invitation to carry Ahimanikya Satapathy’s Odia poem, *I Am Free to Dream*, into different languages, with the people who speak them helping shape each adaptation and musical setting.
 
-The initial collection contains **100 language entries: 28 original/adapted lyric texts and 72 adaptation briefs**. These are not 100 completed or verified songs. Translation drafts are AI-assisted; native-speaker review is still needed. Recordings have their own review and publication status.
+The collection contains **101 language entries: 29 original/adapted lyric texts and 72 adaptation briefs**. These are not 101 completed or verified songs. Translation drafts are AI-assisted; native-speaker review is still needed. Recordings have their own review and publication status.
 
 Each language page includes a proposed musical direction and its cultural references. These are choices for this poem, not a claim that one arrangement represents an entire culture. Contributors may propose alternatives and identify dialect, region and tradition precisely.
 

@@ -104,7 +104,7 @@ export function setupIndexPlayer(doc = document, load = () => fetch('assets/list
     current = item; continuePlayback = true; stopped = false; panel.hidden = false; doc.body.classList.add('has-index-player');
     link.href = item.page;
     lyricsLink.href = item.lyric_page || 'poems--i-am-free-to-dream--languages--' + item.language + '.html#poem-text';
-    lyricsLink.textContent = item.language === 'filipino' ? 'Poem page' : 'Read lyrics';
+    lyricsLink.textContent = 'Read lyrics';
     cues = []; lyric.textContent = ''; lyric.hidden = true;
     for (const picker of pickers) picker.value = item.id;
     const queue = playlistTracks(items), at = queue.findIndex(x => x.id === item.id);

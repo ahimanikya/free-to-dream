@@ -100,4 +100,4 @@
 - [Tulu](tulu.md) — Adaptation pending.
 - [Urdu](urdu.md) — Lyric draft.
 - [Warli](warli.md) — Adaptation pending.
-- [Filipino / Tagalog](filipino.md) — Recording available; checked transcription pending.
+- [Filipino / Tagalog](filipino.md) — Lyrics and recording available; native-speaker review pending.
