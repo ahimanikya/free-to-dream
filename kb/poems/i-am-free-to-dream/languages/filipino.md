@@ -25,39 +25,47 @@ sources:
 [Intro]
 Malaya akong mangarap
 Malaya akong mangarap
+
 [Verse 1]
 Maaari ring maligaw
 Sa gitna ng paglalakbay
 Ang Tala sa Hilaga
 Ang magtuturo ng daan
+
 [Verse 2]
 Tinitipon…
 Tinitipon…
 Yakap kong mahigpit ang mundo
 Sa pag-asang pagdugtungin
 Sa pag-asang pagandahin
+
 [Chorus]
 Malaya akong mangarap
 Kahit maligaw sa daan
 May talang aakay sa akin
 Malaya akong mangarap
+
 [Verse 3]
 Ako'y magpapalayok.
+
 Natutuhan kong humubog
 At magbigay ng kulay
 Natutuhan kong magpunla
 Ng ngiti sa iyong mukha
+
 [Bridge]
 Halika, akyatin natin ang bundok
 Halika, pagmasdan natin ang buwan
 Makisabay sa mga ulap
 Matuto tayong bumuhos
 Gaya ng ulan
+
 [Final Chorus]
 Malaya akong mangarap
 Malaya kong maihahabi
 Ang pangarap mo sa pangarap ko
 Malaya akong mangarap
+
 [Outro]
 Ang pangarap mo…
 Sa pangarap ko…
@@ -66,9 +74,9 @@ Dahan-dahan kong ihahabi
 
 ## Lyric source
 
-These lyrics were recovered unchanged from the embedded metadata of the author-supplied recording, *Malaya Akong Mangarap*, generated on 23 September 2026. [Source song on Suno](https://suno.com/song/94f6f863-c98f-40c6-9fca-47c7018c37cc).
+These lyrics were recovered from the embedded metadata of the author-supplied recording, *Malaya Akong Mangarap*, generated on 23 September 2026. [Source song on Suno](https://suno.com/song/94f6f863-c98f-40c6-9fca-47c7018c37cc).
 
-This preserves the saved lyric draft; it is not a verified transcription of the sung performance. A fluent Filipino / Tagalog speaker should check the adaptation and confirm the words against the recording.
+The wording and song sections are preserved, with blank lines added between stanzas and after the potter declaration to match the collection’s reading format. This preserves the saved lyric draft; it is not a verified transcription of the sung performance. A fluent Filipino / Tagalog speaker should check the adaptation and confirm the words against the recording.
 
 ## Translation review
 
