@@ -1,6 +1,6 @@
 # Audio recordings and video archive
 
-The actual song and video files are tracked in these folders using Git LFS. The archive currently contains **28 files: 12 audio files and 16 videos**, including previous revisions and the shared visual source. Historical drafts are labeled in each folder.
+The actual song and video files are tracked in these folders using Git LFS. The archive currently contains **29 files: 12 audio files and 17 videos**, including previous revisions and the shared visual source. Historical drafts are labeled in each folder.
 
 - [Odia](odia/README.md)
 - [Bengali](bengali/README.md)
@@ -32,9 +32,9 @@ GitHub Releases provide separate download links. A source ZIP may contain LFS po
 
 ## Add future versions
 
-The active workflow uses **MP3 or M4A + cover artwork + version-specific SRT**. Follow the [audio import guide](../kb/guides/add-media.md) and [timed lyrics guide](../kb/guides/timed-lyrics.md). Existing MP4s remain archival exports in their current folders. No files or history have been deleted.
+The author’s [production workflow](../kb/guides/music-pipeline.md) uses **one selected MP3 + a matching MP4**, with cover artwork and checked version-specific SRT when available. Community recordings can also use M4A. Follow the [audio import guide](../kb/guides/add-media.md) and [timed lyrics guide](../kb/guides/timed-lyrics.md). New matching MP4s and earlier exports remain in their language folders. No files or history have been deleted.
 
-SRT stays in ordinary Git beside its matching audio. The website derives WebVTT and follows audio playback time; each country, jazz or regenerated take needs its own timings. Audio uploads default to MP3/M4A; the broader LFS rules below preserve the older archive.
+SRT stays in ordinary Git beside its matching audio. The website derives WebVTT and follows audio playback time; each country, jazz or regenerated take needs its own timings. Suno downloads default to MP3 only; the broader LFS rules below preserve the older archive.
 
 Place each file under its language folder with a new version name. Run `git add` and `git commit` with Git LFS installed, then push. The `.gitattributes` rules route MP3, MP4, M4A, WAV, OGG, MOV and WebM files under `media/` through LFS. The repository check rejects accidentally committed ordinary media blobs.
 

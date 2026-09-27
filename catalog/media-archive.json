@@ -280,6 +280,16 @@
       "title": "Bengali audio",
       "status": "working",
       "notes": "Author-selected Take 2, 2:41; native-speaker review remains open."
+    },
+    {
+      "repo_path": "media/bengali/i-am-free-to-dream-bengali.mp4",
+      "sha256": "8eef15b3bef9c0cd68d019f78b1a404a5f205933d89563e517616ec1449a90d6",
+      "bytes": 81270809,
+      "source_name": "স্বপ্ন দেখতে আমার মানা নেই.mp4",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/bengali-2026-09-26/i-am-free-to-dream-bengali.mp4",
+      "title": "Bengali video",
+      "status": "working",
+      "notes": "Video using author-selected Bengali Take 2 and shared visuals; native-speaker review remains open."
     }
   ],
   "unavailable_originals": [

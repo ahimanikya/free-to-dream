@@ -22,7 +22,7 @@ python scripts/project.py serve
 
 Language slugs match the filenames under `kb/poems/i-am-free-to-dream/languages/`. The command copies the file into `media/<language>/`, records its checksum and `repo_path`, and creates a review draft. These folders are tracked with Git LFS. Install Git LFS (`git lfs install`) before staging/committing, then commit the media and catalog changes and push. Existing takes are retained; use a new ID for a new take. Run `git lfs pull` after cloning to retrieve the full recordings.
 
-New recordings accept MP3 or M4A. Keep the original format; do not convert MP3 to M4A just to duplicate it. Existing videos remain in Git LFS and can be embedded alongside audio; earlier versions are grouped separately. Keep lossless masters in a separate backup. Actual playback depends on the codec and browser.
+New recordings accept MP3 or M4A. Keep the original format; do not convert MP3 to M4A just to duplicate it. The author’s [production workflow](music-pipeline.md) downloads one selected MP3 and creates a matching MP4 from the shared visuals. Audio and video are published together; earlier versions are grouped separately. Keep lossless masters in a separate backup. Actual playback depends on the codec and browser.
 
 ## Add timed lyrics
 

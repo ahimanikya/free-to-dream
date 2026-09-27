@@ -18,3 +18,5 @@
 - Added the author-selected 2:33 Italian recording and matching video as listening previews. The shared visual sequence fits the complete soundtrack without changing the music’s speed or pitch; no unverified lyric timings were added.
 
 - Added the author-selected Bengali Take 2 (2:41) as a listening preview and playlist entry. The lyric draft and native-speaker review status are unchanged.
+
+- Added the matching Bengali Take 2 video and the agreed language-by-language production workflow: author chooses a language, reviews candidates, then selects a take to publish as both MP3 and locally rendered MP4. Added a reusable renderer with soundtrack validation.

@@ -662,5 +662,31 @@
       "max_mode": false,
       "personalize": false
     }
+  },
+  {
+    "id": "bengali-video-01",
+    "language": "bengali",
+    "poem": "i-am-free-to-dream",
+    "kind": "video",
+    "title": "স্বপ্ন দেখতে আমার মানা নেই",
+    "local_path": null,
+    "repo_path": "media/bengali/i-am-free-to-dream-bengali.mp4",
+    "publish": false,
+    "review_status": "needs-review",
+    "rights_status": "release-details-to-confirm",
+    "notes": "Video with author-selected Bengali Take 2. Shared visuals fit the full soundtrack at its original speed and pitch. Native-speaker review remains open.",
+    "credits": {
+      "poem": "Ahimanikya Satapathy",
+      "music_and_vocals": "Generated using Suno AI",
+      "visuals": "Shared visual source created using Melodicpal"
+    },
+    "public_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/main/media/bengali/i-am-free-to-dream-bengali.mp4",
+    "public_preview": true,
+    "preview_authorization": "Author requested the Bengali video and selected-take audio/video publication pipeline on 2026-09-26.",
+    "allow_file_sharing": false,
+    "archived": false,
+    "duration_seconds": 160.8,
+    "source_url": "https://suno.com/song/b216df41-663e-4df3-a465-616fdcb03544",
+    "audio_recording_id": "bengali-audio-01"
   }
 ]

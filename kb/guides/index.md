@@ -7,3 +7,5 @@
 - [Language collaboration and recording releases](collaboration.md) — contributor and maintainer workflow.
 - [Timed lyrics for each recording](timed-lyrics.md) — SRT, WebVTT and version matching.
 - [Art of the site](artwork.md) — visual references and original decorative drawings.
+
+- [From language to song and video](music-pipeline.md) — author selection, MP3 download, MP4 creation and publication.

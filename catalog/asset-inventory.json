@@ -431,5 +431,17 @@
     "published": true,
     "repo_path": "media/bengali/i-am-free-to-dream-bengali.mp3",
     "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/bengali-2026-09-26/i-am-free-to-dream-bengali.mp3"
+  },
+  {
+    "sha256": "8eef15b3bef9c0cd68d019f78b1a404a5f205933d89563e517616ec1449a90d6",
+    "local_path": null,
+    "bytes": 81270809,
+    "source_names": [
+      "স্বপ্ন দেখতে আমার মানা নেই.mp4"
+    ],
+    "role": "working-asset",
+    "published": true,
+    "repo_path": "media/bengali/i-am-free-to-dream-bengali.mp4",
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/bengali-2026-09-26/i-am-free-to-dream-bengali.mp4"
   }
 ]
