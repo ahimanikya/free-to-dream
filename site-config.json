@@ -20,7 +20,9 @@
     }
   ],
   "analytics": {
-    "provider": "none",
-    "measurement_id": ""
+    "provider": "ga4",
+    "measurement_id": "G-GHF6GM8X6F",
+    "account_id": "409658719",
+    "property_id": "556135543"
   }
 }

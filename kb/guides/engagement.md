@@ -7,7 +7,9 @@ status: stable
 
 The [engagement workspace](https://ahimanikya.github.io/free-to-dream/engagement.html) brings together the reporting setup and public GitHub inbox. Private analytics remain in the account you connect. This is a public static page, not a password-protected admin dashboard.
 
-**Current state:** tracking is prepared, analytics is not connected. The owner chose to connect an account later. No historical play or share totals exist, and blank counters do not mean zero visits.
+**Current state:** a dedicated **World is One** GA4 account and **World is One — Free to Dream** property were configured on 27 September 2026. The web stream uses measurement ID `G-GHF6GM8X6F`. Reporting uses India time and INR. Optional account data sharing and enhanced measurement are off; the site supplies its explicitly scoped events after visitor consent. Visits and plays before connection are not backfilled.
+
+[Open World is One in Google Analytics](https://analytics.google.com/analytics/web/#/a409658719p556135543/reports/intelligenthome). Sign in with the owner’s Google account; the reports are private.
 
 ## What a number means
 
@@ -24,7 +26,7 @@ The [engagement workspace](https://ahimanikya.github.io/free-to-dream/engagement
 
 Audio and video use separate recording IDs and `media_kind` values. Count `play_start` or `play_30s` explicitly; do not add both and call the result plays. A repeat cycle is a new play. Metrics describe playback observed by the browser, including muted playback; they cannot prove someone heard it. Review copies retain their review status regardless of popularity.
 
-## Connect Google Analytics 4 later
+## Connection and report setup
 
 1. Create or choose a GA4 web property you control and a web data stream for the public site. The standard Analytics product can collect custom events; no analytics credentials belong in this repository.
 2. In `site-config.json`, set `analytics.provider` to `ga4` and `analytics.measurement_id` to the stream’s public `G-…` identifier. Keep it `none` until the account is ready. The measurement ID is public; a reporting API secret or service-account key is not.

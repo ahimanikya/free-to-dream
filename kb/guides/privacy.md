@@ -5,9 +5,9 @@ status: stable
 ---
 # Privacy and listening statistics
 
-**Visitor analytics is currently not connected.** Playing a song, reading a poem or using a share link does not require accepting analytics. The project has prepared optional measurement for a future Google Analytics 4 connection; no measurement ID is currently configured.
+**Optional Google Analytics 4 is connected.** Playing a song, reading a poem or using a share link does not require accepting analytics. Measurement starts only after you choose to allow it. The project uses a dedicated World is One Analytics account.
 
-## If optional analytics is connected later
+## Optional analytics
 
 The site asks before loading the Google Analytics tag. If you allow it, page views, recording IDs, language, media type, listening milestones, share-button clicks and download clicks can be sent to Google Analytics. Google Analytics uses analytics cookies and processes technical request data according to its own terms. Advertising storage, ad personalization and Google signals are disabled in the project configuration. Browser Do Not Track and Global Privacy Control requests keep this tracking off.
 

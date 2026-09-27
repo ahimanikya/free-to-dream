@@ -122,6 +122,10 @@ class CollectionTests(unittest.TestCase):
         self.assertIn("'sha256-"+digest+"'",text)
 
     def test_engagement_is_disconnected_and_dashboard_is_not_indexed(self):
+        config_path=self.root/'site-config.json'
+        disconnected=json.loads(config_path.read_text())
+        disconnected['analytics']={'provider':'none','measurement_id':''}
+        config_path.write_text(json.dumps(disconnected))
         app.build(False)
         out=self.root/'site-public'
         home=(out/'index.html').read_text()
