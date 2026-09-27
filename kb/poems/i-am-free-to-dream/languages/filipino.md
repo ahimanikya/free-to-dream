@@ -85,3 +85,15 @@ Preserve the freedom to dream, the North Star, gathering the world, the potter, 
 ## Musical direction
 
 The shared foundation is calm, soulful music expressing quiet joy and the freedom to dream. Musical descriptions of this recording await listening review; its style is not inferred from the filename.
+
+## Why this musical direction
+
+The first-person promise and the invitation to weave dreams together suit an intimate delivery, with room for natural Tagalog phrase endings. Quiet joy is the intended feeling. The shared recording is the author's chosen starting point; its specific genre, instruments and vocal arrangement have not yet been documented through listening review. We are leaving those details open rather than assigning a tradition after the fact.
+
+A Filipino / Tagalog singer can help identify the recording's actual phrasing and musical references, then explain which local approach best supports this lyric. The language name alone is not enough to choose one style for the Philippines.
+
+## Arrangement decisions and review
+
+**Vocal choice — solo baseline for new arrangements.** Keep the existing author-selected recording as the reference. Its actual vocal format needs listening review; no duet has been selected here as the default.
+
+**What remains open.** Document what is heard before attributing a style or tradition. A fluent singer should check word stress, complete phrases, the potter pause and the calm emotional flow, then identify any local musical influence with a reference. A second voice can be proposed with its own reason and reviewed separately.

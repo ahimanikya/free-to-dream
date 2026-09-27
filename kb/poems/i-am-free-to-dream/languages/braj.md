@@ -108,6 +108,14 @@ The invitation to share dreams can support an affectionate melodic exchange. Bor
 
 The shared feeling is calm, soulful joy: affection, wonder and the freedom to dream. Local vocal phrasing and melody lead the arrangement. Rhythm and instrumentation can vary with the chosen setting while the pace remains unhurried.
 
+## Arrangement decisions and review
+
+**Status — proposal awaiting adaptation.** These notes explain a possible setting, not a completed song or a verified traditional form. Final phrasing, melody and pulse must follow the reviewed words in the chosen local variety.
+
+**Vocal choice — solo by default.** One lead keeps the poem’s first-person voice and long thoughts connected. Any second voice, shared refrain or harmony suggested in the arrangement notes is an optional variation to discuss with the author before generation; it is not required by the language.
+
+**What to validate.** Keep Braj speech cadence audible; let restrained rasiya-inspired exchanges answer only complete supplied refrain words. Check whether the cited context supports the chosen influence and whether the musical choices serve the poem. Distinguish a documented practice from our new arrangement. Suggest corrections with the local variety, a source or performance example, and a timestamp when reviewing audio.
+
 ## Cultural grounding
 
 Research on the regional North Indian music industry documents Braj genres including rasiya and languriya and their continuing adaptation to new media. Braj musical life includes more than a single devotional setting.

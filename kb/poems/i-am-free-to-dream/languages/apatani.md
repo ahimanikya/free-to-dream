@@ -108,6 +108,14 @@ Treat the poem as a sequence of connected images rather than forcing every stanz
 
 The shared feeling is calm, soulful joy: affection, wonder and the freedom to dream. Local vocal phrasing and melody lead the arrangement. Rhythm and instrumentation can vary with the chosen setting while the pace remains unhurried.
 
+## Arrangement decisions and review
+
+**Status — proposal awaiting adaptation.** These notes explain a possible setting, not a completed song or a verified traditional form. Final phrasing, melody and pulse must follow the reviewed words in the chosen local variety.
+
+**Vocal choice — solo by default.** One lead keeps the poem’s first-person voice and long thoughts connected. Any second voice, shared refrain or harmony suggested in the arrangement notes is an optional variation to discuss with the author before generation; it is not required by the language.
+
+**What to validate.** Let long Apatani sentences remain connected; build melodic warmth over sustained notes before adding a light pulse. Check whether the cited context supports the chosen influence and whether the musical choices serve the poem. Distinguish a documented practice from our new arrangement. Suggest corrections with the local variety, a source or performance example, and a timestamp when reviewing audio.
+
 ## Cultural grounding
 
 The Apatani research volume discusses song categories and describes Daminda in its Dree festival context. That establishes a particular narrative and ceremonial reference. This new secular chamber lyric uses its own melody and arrangement, with a local singer shaping the long phrases.

@@ -108,6 +108,14 @@ Let the cloud-and-rain stanza become the melodic centre. A gentle seasonal-song 
 
 The shared feeling is calm, soulful joy: affection, wonder and the freedom to dream. Local vocal phrasing and melody lead the arrangement. Rhythm and instrumentation can vary with the chosen setting while the pace remains unhurried.
 
+## Arrangement decisions and review
+
+**Status — proposal awaiting adaptation.** These notes explain a possible setting, not a completed song or a verified traditional form. Final phrasing, melody and pulse must follow the reviewed words in the chosen local variety.
+
+**Vocal choice — solo by default.** One lead keeps the poem’s first-person voice and long thoughts connected. Any second voice, shared refrain or harmony suggested in the arrangement notes is an optional variation to discuss with the author before generation; it is not required by the language.
+
+**What to validate.** Give Bagheli sentences an unhurried melodic resolution; let the cloud-and-rain image fall gently into a hopeful refrain. Check whether the cited context supports the chosen influence and whether the musical choices serve the poem. Distinguish a documented practice from our new arrangement. Suggest corrections with the local variety, a source or performance example, and a timestamp when reviewing audio.
+
 ## Cultural grounding
 
 Hindwi’s Bagheli language introduction identifies several regional folk-song forms, including kajri, and discusses the place of nature in local literature. The forms have different social functions and should not be treated as interchangeable.

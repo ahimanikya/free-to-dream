@@ -108,6 +108,14 @@ Make the invitation the melodic centre: longer verse thoughts can wander freely,
 
 The shared feeling is calm, soulful joy: affection, wonder and the freedom to dream. Local vocal phrasing and melody lead the arrangement. Rhythm and instrumentation can vary with the chosen setting while the pace remains unhurried.
 
+## Arrangement decisions and review
+
+**Status — proposal awaiting adaptation.** These notes explain a possible setting, not a completed song or a verified traditional form. Final phrasing, melody and pulse must follow the reviewed words in the chosen local variety.
+
+**Vocal choice — solo by default.** One lead keeps the poem’s first-person voice and long thoughts connected. Any second voice, shared refrain or harmony suggested in the arrangement notes is an optional variation to discuss with the author before generation; it is not required by the language.
+
+**What to validate.** Build a Kuvi-specific melody from reviewed speech; let free verses lead into a soft returning invitation. Check whether the cited context supports the chosen influence and whether the musical choices serve the poem. Distinguish a documented practice from our new arrangement. Suggest corrections with the local variety, a source or performance example, and a timestamp when reviewing audio.
+
 ## Cultural grounding
 
 CIIL’s Kuvi collection and Kuvi-Oriya-English Dictionary provide a specific language reference for adaptation. They do not prescribe a musical style. The arrangement here is a contemporary proposal awaiting a Kuvi-speaking musical collaborator, rather than an authenticated traditional form.

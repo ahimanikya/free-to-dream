@@ -77,6 +77,14 @@ tes rêves dans les miens.
 
 An intimate chanson setting puts the French poem’s images and spoken flow at the centre. Small changes in melody, piano colour and vocal expression can carry the emotional build while preserving the calm, quietly joyful mood.
 
+## Arrangement decisions and review
+
+**Status — proposed setting for the lyric draft.** The reasoning on this page is a creative direction to test with a fluent singer and musician, not a verified description of a recording.
+
+**Vocal choice — solo by default.** One lead keeps the poem’s first-person voice and long thoughts connected. Any second voice, shared refrain or harmony suggested in the arrangement notes is an optional variation to discuss with the author before generation; it is not required by the language.
+
+**What to validate.** Use a warm youthful male lead with conversational French phrasing. Check whether the cited context supports the chosen influence and whether the musical choices serve the poem. Distinguish a documented practice from our new arrangement. Suggest corrections with the local variety, a source or performance example, and a timestamp when reviewing audio.
+
 ## Cultural grounding
 
 The reference is the poetic French chanson tradition. The Bibliothèque nationale de France’s account of Georges Brassens connects songwriting, poetry and intimate performance. This is a chosen setting within the wider Francophone musical world; the prompt uses no named performer’s vocal style.

@@ -78,6 +78,14 @@ seus sonhos nos meus.
 
 A gentle bossa nova-inspired setting fits the Brazilian Portuguese wording and gives the song a light, quietly happy movement. Soft syncopation can make it flow without sacrificing the spacious, soulful delivery.
 
+## Arrangement decisions and review
+
+**Status — proposed setting for the lyric draft.** The reasoning on this page is a creative direction to test with a fluent singer and musician, not a verified description of a recording.
+
+**Vocal choice — solo by default.** One lead keeps the poem’s first-person voice and long thoughts connected. Any second voice, shared refrain or harmony suggested in the arrangement notes is an optional variation to discuss with the author before generation; it is not required by the language.
+
+**What to validate.** Use a warm youthful male lead with intimate Brazilian Portuguese diction. Check whether the cited context supports the chosen influence and whether the musical choices serve the poem. Distinguish a documented practice from our new arrangement. Suggest corrections with the local variety, a source or performance example, and a timestamp when reviewing audio.
+
 ## Cultural grounding
 
 This setting draws specifically on Brazilian bossa nova. Berklee’s anniversary programme highlights the Brazilian tradition and the guitar and piano musicians associated with it. The lyric already uses Brazilian Portuguese; collaborators may later propose other Lusophone settings as separate versions.

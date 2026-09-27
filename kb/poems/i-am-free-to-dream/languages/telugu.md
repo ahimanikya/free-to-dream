@@ -74,9 +74,17 @@ music_review_status: musician-review-pending
 
 ## Why this musical direction
 
-Use the warmth and continuity of the Telugu lines as the organising principle. Unlike the Tamil version’s plucked replies, this version lets a bowed violin carry the feeling between stanzas.
+Use the warmth and continuity of the Telugu lines as the organising principle. Retain the preferred voice-and-fingerpicked-guitar intimacy, with breathy flute and occasional veena replies leaving long sentences room to finish. These choices support the potter's gentle making and the invitation to share dreams.
 
 The shared feeling is calm, soulful joy: affection, wonder and the freedom to dream. Local vocal phrasing and melody lead the arrangement. Rhythm and instrumentation can vary with the chosen setting while the pace remains unhurried.
+
+## Arrangement decisions and review
+
+**Status — musical intention with a listening reference.** A recording is available above. These notes describe the intended choices; a prompt does not establish what was actually sung or played. Keep the author-selected take as the reference and identify any proposed change separately.
+
+**Vocal choice — solo by default.** One lead keeps the poem’s first-person voice and long thoughts connected. Any second voice, shared refrain or harmony suggested in the arrangement notes is an optional variation to discuss with the author before generation; it is not required by the language.
+
+**What to validate.** Let long Telugu phrases flow comfortably; sustain vowels without swallowing consonants or hurrying endings. Check whether the cited context supports the chosen influence and whether the musical choices serve the poem. Distinguish a documented practice from our new arrangement. Suggest corrections with the local variety, a source or performance example, and a timestamp when reviewing audio.
 
 ## Cultural grounding
 

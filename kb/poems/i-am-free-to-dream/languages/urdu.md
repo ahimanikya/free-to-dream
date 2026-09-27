@@ -78,6 +78,14 @@ Urdu can linger on a thought before completing it. Give this version more silenc
 
 The shared feeling is calm, soulful joy: affection, wonder and the freedom to dream. Local vocal phrasing and melody lead the arrangement. Rhythm and instrumentation can vary with the chosen setting while the pace remains unhurried.
 
+## Arrangement decisions and review
+
+**Status — proposed setting for the lyric draft.** The reasoning on this page is a creative direction to test with a fluent singer and musician, not a verified description of a recording.
+
+**Vocal choice — solo by default.** One lead keeps the poem’s first-person voice and long thoughts connected. Any second voice, shared refrain or harmony suggested in the arrangement notes is an optional variation to discuss with the author before generation; it is not required by the language.
+
+**What to validate.** Carry each Urdu thought across the line; use delicate slides after clear consonants and resolve with quiet assurance. Check whether the cited context supports the chosen influence and whether the musical choices serve the poem. Distinguish a documented practice from our new arrangement. Suggest corrections with the local variety, a source or performance example, and a timestamp when reviewing audio.
+
 ## Cultural grounding
 
 NCPA discusses the relationship between Urdu ghazal poetry and its musical treatment. Here the continuous poem is treated as a sung nazm with restrained ghazal-informed delivery. The adaptation does not acquire the formal verse structure of a ghazal simply through its accompaniment.

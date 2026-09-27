@@ -77,6 +77,14 @@ ndani ya ndoto zangu.
 
 A small taarab-inspired ensemble gives the Swahili lyric a distinctive coastal setting, with room for its images and long phrases. Gentle oud and violin responses can carry affection, wonder and an inviting sense of shared dreams.
 
+## Arrangement decisions and review
+
+**Status — proposed setting for the lyric draft.** The reasoning on this page is a creative direction to test with a fluent singer and musician, not a verified description of a recording.
+
+**Vocal choice — solo by default.** One lead keeps the poem’s first-person voice and long thoughts connected. Any second voice, shared refrain or harmony suggested in the arrangement notes is an optional variation to discuss with the author before generation; it is not required by the language.
+
+**What to validate.** Use a warm youthful male lead with clear Kiswahili and natural word stress. Check whether the cited context supports the chosen influence and whether the musical choices serve the poem. Distinguish a documented practice from our new arrangement. Suggest corrections with the local variety, a source or performance example, and a timestamp when reviewing audio.
+
 ## Cultural grounding
 
 The reference is Zanzibar taarab. Hilda Kiel’s fieldwork describes its poetic song tradition and smaller ensembles using oud, violin and percussion. This adaptation takes that small-ensemble inspiration and a calm, hopeful mood; a Swahili musician can refine the melodic and rhythmic language.

@@ -425,12 +425,16 @@ def language_content(meta, body, path, items, config, local=False):
     if prompt:
         direction = 'rtl' if slug in ('arabic','urdu','sindhi','kashmiri','balti') else 'auto'
         content += f'<details class="lyrics-prompt"><summary>Lyrics prompt · view &amp; copy</summary><div class="detail-body"><label for="lyrics-prompt-text">Lyrics with song sections</label><textarea id="lyrics-prompt-text" rows="16" readonly dir="{direction}">{esc(prompt[1])}</textarea><button type="button" id="copy-lyrics-prompt">Copy lyrics prompt</button><p id="lyrics-copy-status" class="small" role="status" aria-live="polite"></p></div></details>'
-    music_names = {'Why this musical direction','Cultural grounding','Voice, rhythm and arrangement','Emotional shape','Style prompt','Working settings and listening checks','Musical direction'}
+    reason_names = {'Why this musical direction', 'Arrangement decisions and review', 'Cultural grounding'}
+    reasons = '\n\n'.join('## '+heading+'\n\n'+text for heading,text in sections if heading in reason_names)
+    if reasons:
+        content += '<details id="musical-choices"><summary>Why this version sounds this way</summary><div class="detail-body">'+render_markdown(reasons,path)+f'<p><a class="text-link" href="contribute.html?language={quote(slug)}&amp;type=culture">Review these musical choices →</a></p></div></details>'
+    music_names = {'Voice, rhythm and arrangement','Emotional shape','Style prompt','Working settings and listening checks','Musical direction'}
     music = '\n\n'.join('## '+heading+'\n\n'+text for heading,text in sections if heading in music_names)
     if music:
         content += '<details><summary>Musical direction &amp; style prompt</summary><div class="detail-body">'+render_markdown(music,path)+'</div></details>'
     if not original:
-        extra = '\n\n'.join('## '+heading+'\n\n'+text for heading,text in sections if heading not in music_names and heading != 'Poem / arranged lyrics')
+        extra = '\n\n'.join('## '+heading+'\n\n'+text for heading,text in sections if heading not in music_names | reason_names and heading != 'Poem / arranged lyrics')
         content += '<details id="translation-check"><summary>Translation &amp; collaboration</summary><div class="detail-body">'+translation_check_panel(meta).replace('id="translation-check"','id="translation-reference"')+render_markdown(extra,path)+'</div></details>'
     contributor = 'Share a performance or a listening note' if original else 'Help this version grow'
     notes_link = f'contribute.html?language={quote(slug)}&amp;type=feedback'

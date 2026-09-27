@@ -74,9 +74,17 @@ music_review_status: musician-review-pending
 
 ## Why this musical direction
 
-Its identity should begin with Sambalpuri speech rhythm. Keep the compact word endings audible, then introduce a little communal lift as the poem turns from “I” to “come.”
+Its identity begins with Sambalpuri speech rhythm: compact word endings, short connected melodic turns and a gently lilting regional pulse. Bamboo-flute replies and lightly played dhol keep that direction audible; quiet guitar and bass provide contemporary support. The softer pace is our choice for this poem's calm joy.
+
+The author chose a male lead with soft female answering phrases and a tender close-harmony ending. The invitation to climb and see the moon gives the second voice a poetic purpose; the final weaving of two dreams brings the voices together. The duet reference is the exchange between voices in Sambalpuri songs such as *Rangabati*. We take that conversational idea as inspiration, while asking for this poem's own tune and words. The soft female role and close harmony are choices for our arrangement, not a prescription for Sambalpuri music generally.
 
 The shared feeling is calm, soulful joy: affection, wonder and the freedom to dream. Local vocal phrasing and melody lead the arrangement. Rhythm and instrumentation can vary with the chosen setting while the pace remains unhurried.
+
+## Arrangement decisions and review
+
+**Vocal choice — author-selected soft duet.** The [selected recording](https://suno.com/song/a2b3ded1-b0a2-4e02-917e-66a8b4815ced) is the musical reference. Preserve its Sambalpuri variation when refining the voices. Solo remains the starting point for new arrangements elsewhere; this duet is a deliberate exception.
+
+**Why and what to check.** A local singer should assess the speech cadence, compact endings and gentle folk pulse, then check whether female replies support the male narrative and whether the final harmony keeps every word clear. Compare the invitation and dream-weaving ending with the solo verses. Confirm the actual performance with timestamps; the author's selection does not replace pronunciation or musician review.
 
 ## Cultural grounding
 
@@ -84,7 +92,9 @@ Sambalpur district documents distinctive local language, folk songs and instrume
 
 Musical reference: [Sambalpur District — Culture and Heritage](https://sambalpur.odisha.gov.in/en/tourism/culture-Heritage).
 
-The reference supports the context described above. The new melody, tempo and ensemble still need musician review.
+The Government of India's [profile of Krishna Patel](https://static.pib.gov.in/WriteReadData/specificdocs/documents/2023/apr/doc202345178301.pdf) identifies *Rangabati* as a Sambalpuri duet sung with Jitendra Haripal. This supports a specific duet reference. Solo singing is also part of the region's practice: the [Odisha Culture Department's Rangabati festival programme](https://culture.odisha.gov.in/sites/default/files/2021-06/activities_report_culture_2012_13.pdf) lists solo vocal, choral and group performances.
+
+These sources establish context. They do not validate our generated melody, local pronunciation, soft-response balance or close-harmony ending; those still need listening review.
 
 ## Voice, rhythm and arrangement
 

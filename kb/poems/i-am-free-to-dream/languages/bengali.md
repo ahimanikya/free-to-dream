@@ -78,6 +78,14 @@ Borrow the sense of a long breath travelling across space for the North Star and
 
 The shared feeling is calm, soulful joy: affection, wonder and the freedom to dream. Local vocal phrasing and melody lead the arrangement. Rhythm and instrumentation can vary with the chosen setting while the pace remains unhurried.
 
+## Arrangement decisions and review
+
+**Status — musical intention with a listening reference.** A recording is available above. These notes describe the intended choices; a prompt does not establish what was actually sung or played. Keep the author-selected take as the reference and identify any proposed change separately.
+
+**Vocal choice — solo by default.** One lead keeps the poem’s first-person voice and long thoughts connected. Any second voice, shared refrain or harmony suggested in the arrangement notes is an optional variation to discuss with the author before generation; it is not required by the language. The author has requested soft-answer duet trials; those remain review candidates, not the default or a replacement for the published version.
+
+**What to validate.** Use long, connected Bengali lines and gentle descending resolutions; keep the spacious delivery quietly happy. Check whether the cited context supports the chosen influence and whether the musical choices serve the poem. Distinguish a documented practice from our new arrangement. Suggest corrections with the local variety, a source or performance example, and a timestamp when reviewing audio.
+
 ## Cultural grounding
 
 Sahapedia’s discussion of northern Bengal’s folk songs distinguishes bhawaiya from the expansive river-song world of bhatiyali. These are particular traditions, not interchangeable names for Bengali music.

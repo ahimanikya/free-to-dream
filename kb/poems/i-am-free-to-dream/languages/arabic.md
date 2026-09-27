@@ -77,6 +77,14 @@ music_theme: quiet-joy-cultural-setting-v1
 
 An intimate oud-led chamber setting lets the Arabic poem lead the melody. The oud, airy ney and a few sustained violin notes can make the pauses expressive while keeping the song warm, affectionate and quietly hopeful.
 
+## Arrangement decisions and review
+
+**Status — proposed setting for the lyric draft.** The reasoning on this page is a creative direction to test with a fluent singer and musician, not a verified description of a recording.
+
+**Vocal choice — solo by default.** One lead keeps the poem’s first-person voice and long thoughts connected. Any second voice, shared refrain or harmony suggested in the arrangement notes is an optional variation to discuss with the author before generation; it is not required by the language.
+
+**What to validate.** Use a warm youthful male lead singing clear Modern Standard Arabic. Check whether the cited context supports the chosen influence and whether the musical choices serve the poem. Distinguish a documented practice from our new arrangement. Suggest corrections with the local variety, a source or performance example, and a timestamp when reviewing audio.
+
 ## Cultural grounding
 
 The instrumental reference is the small Arabic ensemble tradition. The Metropolitan Museum’s presentation of the Alwan ensemble describes the importance of poetry, vocal melody and maqam, alongside instruments such as oud, nay and riqq. A collaborating musician can choose a suitable maqam and rhythmic cycle after working with the lyric; this prompt leaves those decisions open.

@@ -26,6 +26,18 @@ The original Odia source must remain intact. Discuss any proposed source correct
 
 A language is not a single musical style. Explain the region, form or instruments you propose and include a reliable reference where possible. Avoid presenting a prompt as proof that a generated track follows the tradition.
 
+## Explain a musical variation
+
+Each language page includes “Why this version sounds this way.” Keep its explanation current when proposing a new arrangement:
+
+1. Identify the local variety or musical influence and the reference that supports it.
+2. Explain why the vocal phrasing, melodic shape, rhythm and instruments serve a particular image or movement in this poem. Separate documented practice from a new creative choice.
+3. State the vocal choice. Solo is the default for new arrangements; duet, answering voices and group singing are optional proposals for the author to choose. Keep already selected versions as references.
+4. Label the variation as proposed, author-selected or checked in a named recording. Give a reason for the change rather than rewriting the language's whole musical direction.
+5. Tell a fluent singer or musician what to validate, with the exact take and timestamps when audio exists. Record corrections and the scope of any review.
+
+For example, the Sambalpuri version draws on a specific duet reference and the poem's invitation to share dreams. That explains this arrangement; it does not imply that every Sambalpuri song is a duet. A suggested harmony on another page likewise remains optional until chosen.
+
 ## Media and credits
 
 Use the [media guide](add-media.md). Give each take a new ID; retain the old take’s provenance. Track MP3/M4A files under their `media/<language>/` folders using Git LFS. Keep version-specific UTF-8 SRT lyrics beside their audio in ordinary Git; the site generates WebVTT. Existing videos are preserved and may be embedded as explicitly authorized previews. Keep earlier versions under distinct names; do not replace them silently. Ordinary large binary Git blobs and private references are rejected by the repository check. Use direct hosted URLs for released website players.

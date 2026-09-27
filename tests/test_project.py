@@ -259,6 +259,12 @@ class CollectionTests(unittest.TestCase):
                 self.assertIn(f'id="{target}"',page)
             reading=re.search(r'<article id="poem-text".*?</article>',page,re.S)[0]
             self.assertNotRegex(unescape(reading),r'(?m)^\s*\[[^\]\n]+\]\s*$')
+            choices=re.search(r'<details id="musical-choices">(.*?)</details>',page,re.S)
+            self.assertIsNotNone(choices, meta['slug'])
+            self.assertIn('Arrangement decisions and review', choices[1])
+            self.assertIn(f'contribute.html?language={meta["slug"]}&amp;type=culture', choices[1])
+            self.assertNotIn('Arrangement decisions and review', reading)
+            self.assertEqual(page.count('id="musical-choices"'), 1)
             _, body=app.read_concept(app.LANGUAGES/(meta['slug']+'.md'))
             section=re.search(r'## Poem / arranged lyrics\n(.*?)(?=\n## |\Z)',body,re.S)
             prompt=re.search(r'```(?:text)?\n(.*?)\n```',section[1],re.S) if section else None

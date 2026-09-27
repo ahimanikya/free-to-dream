@@ -78,6 +78,14 @@ Choose a soft, melodious Tamil song with restrained Carnatic shading. The tactil
 
 The shared feeling is calm, soulful joy: affection, wonder and the freedom to dream. Local vocal phrasing and melody lead the arrangement. Rhythm and instrumentation can vary with the chosen setting while the pace remains unhurried.
 
+## Arrangement decisions and review
+
+**Status — musical intention with a listening reference.** A recording is available above. These notes describe the intended choices; a prompt does not establish what was actually sung or played. Keep the author-selected take as the reference and identify any proposed change separately.
+
+**Vocal choice — solo by default.** One lead keeps the poem’s first-person voice and long thoughts connected. Any second voice, shared refrain or harmony suggested in the arrangement notes is an optional variation to discuss with the author before generation; it is not required by the language. A soft-answer duet is an author-requested experiment here; preserve the published Tamil melody and backing as its reference, and select a take before replacing the solo version.
+
+**What to validate.** Keep Tamil vowel lengths and doubled consonants clear; place small melodic turns after complete phrases. Check whether the cited context supports the chosen influence and whether the musical choices serve the poem. Distinguish a documented practice from our new arrangement. Suggest corrections with the local variety, a source or performance example, and a timestamp when reviewing audio.
+
 ## Cultural grounding
 
 Tanjavur musician and scholar Rama Kausalya describes a musical world of Tamil and Telugu compositions, veena and violin traditions. That shared classical background allows several contemporary Tamil song approaches.

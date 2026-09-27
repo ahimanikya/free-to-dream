@@ -77,6 +77,14 @@ music_theme: quiet-joy-cultural-setting-v1
 
 A spacious Mandarin poetic ballad can give the North Star, mountains and moon room to unfold. Sparse guqin plucks and soft piano create a reflective setting, while the voice carries the poem with quiet happiness and clear words.
 
+## Arrangement decisions and review
+
+**Status — proposed setting for the lyric draft.** The reasoning on this page is a creative direction to test with a fluent singer and musician, not a verified description of a recording.
+
+**Vocal choice — solo by default.** One lead keeps the poem’s first-person voice and long thoughts connected. Any second voice, shared refrain or harmony suggested in the arrangement notes is an optional variation to discuss with the author before generation; it is not required by the language.
+
+**What to validate.** Use a warm youthful male lead with clear Mandarin pronunciation and complete, naturally grouped phrases. Check whether the cited context supports the chosen influence and whether the musical choices serve the poem. Distinguish a documented practice from our new arrangement. Suggest corrections with the local variety, a source or performance example, and a timestamp when reviewing audio.
+
 ## Cultural grounding
 
 The guqin is the specific cultural reference here. The Metropolitan Museum describes its association with Chinese literati and outdoor settings, including moonlit scenes. This proposal is a contemporary Mandarin song with guqin colour; its melody and accompaniment should be shaped around the actual lyric.

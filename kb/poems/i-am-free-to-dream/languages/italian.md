@@ -80,6 +80,14 @@ intrecciati ai miei.
 
 Let the Italian lyric sound like a personal conversation that finds a melody. The long vowels and flowing sentences can carry a gentle, lyrical refrain while the potter declaration remains plain and intimate. Quiet joy, affection and wonder guide the arrangement.
 
+## Arrangement decisions and review
+
+**Status — musical intention with a listening reference.** A recording is available above. These notes describe the intended choices; a prompt does not establish what was actually sung or played. Keep the author-selected take as the reference and identify any proposed change separately.
+
+**Vocal choice — solo by default.** One lead keeps the poem’s first-person voice and long thoughts connected. Any second voice, shared refrain or harmony suggested in the arrangement notes is an optional variation to discuss with the author before generation; it is not required by the language.
+
+**What to validate.** Use a warm youthful male voice in clear Italian, with conversational phrasing and natural word stress. Check whether the cited context supports the chosen influence and whether the musical choices serve the poem. Distinguish a documented practice from our new arrangement. Suggest corrections with the local variety, a source or performance example, and a timestamp when reviewing audio.
+
 ## Cultural grounding
 
 The chosen reference is Italian canzone d’autore. Treccani describes the cantautore as a singer who also authors the songs they perform. For this adaptation, that connection between writing and singing inspires an intimate storytelling approach. It describes the musical reference; the proposed AI-generated performer is not the poem’s author.

@@ -78,6 +78,14 @@ A narrative voice and bowed replies suit the poem’s journey from wandering to 
 
 The shared feeling is calm, soulful joy: affection, wonder and the freedom to dream. Local vocal phrasing and melody lead the arrangement. Rhythm and instrumentation can vary with the chosen setting while the pace remains unhurried.
 
+## Arrangement decisions and review
+
+**Status — proposed setting for the lyric draft.** The reasoning on this page is a creative direction to test with a fluent singer and musician, not a verified description of a recording.
+
+**Vocal choice — solo by default.** One lead keeps the poem’s first-person voice and long thoughts connected. Any second voice, shared refrain or harmony suggested in the arrangement notes is an optional variation to discuss with the author before generation; it is not required by the language.
+
+**What to validate.** Let Nepali storytelling lead the sarangi responses; hold the final vowel comfortably without blurring the whole word. Check whether the cited context supports the chosen influence and whether the musical choices serve the poem. Distinguish a documented practice from our new arrangement. Suggest corrections with the local variety, a source or performance example, and a timestamp when reviewing audio.
+
 ## Cultural grounding
 
 Smithsonian’s Gaines of Nepal recording documents sarangi-based singing by a particular musician community. The proposed contemporary arrangement acknowledges that lineage rather than treating it as the whole of Nepali musical culture.
