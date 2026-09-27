@@ -443,5 +443,29 @@
     "published": true,
     "repo_path": "media/bengali/i-am-free-to-dream-bengali.mp4",
     "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/bengali-2026-09-26/i-am-free-to-dream-bengali.mp4"
+  },
+  {
+    "sha256": "adfaa5d4239b2720c1c2e3c7aecdc9fd4154070bec2aa889ca262c598f0fece4",
+    "local_path": null,
+    "bytes": 3594168,
+    "source_names": [
+      "ମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ.mp3"
+    ],
+    "role": "working-asset",
+    "published": true,
+    "repo_path": "media/sambalpuri/i-am-free-to-dream-sambalpuri.mp3",
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/sambalpuri-2026-09-27/i-am-free-to-dream-sambalpuri.mp3"
+  },
+  {
+    "sha256": "799dc7b604b67868d7bdb0d406baba4fc3c8ca3efc5c4ba100ef2ee19f0ecb26",
+    "local_path": null,
+    "bytes": 77888015,
+    "source_names": [
+      "ମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ.mp4"
+    ],
+    "role": "working-asset",
+    "published": true,
+    "repo_path": "media/sambalpuri/i-am-free-to-dream-sambalpuri.mp4",
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/sambalpuri-2026-09-27/i-am-free-to-dream-sambalpuri.mp4"
   }
 ]

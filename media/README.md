@@ -1,8 +1,9 @@
 # Audio recordings and video archive
 
-The actual song and video files are tracked in these folders using Git LFS. The archive currently contains **29 files: 12 audio files and 17 videos**, including previous revisions and the shared visual source. Historical drafts are labeled in each folder.
+The actual song and video files are tracked in these folders using Git LFS. The archive currently contains **31 files: 13 audio files and 18 videos**, including previous revisions and the shared visual source. Historical drafts are labeled in each folder.
 
 - [Odia](odia/README.md)
+- [Sambalpuri](sambalpuri/README.md)
 - [Bengali](bengali/README.md)
 - [Italian](italian/README.md)
 - [Malayalam](malayalam/README.md)

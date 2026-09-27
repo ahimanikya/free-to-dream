@@ -33,41 +33,41 @@ music_review_status: musician-review-pending
 ## Poem / arranged lyrics
 
 ```text
-[Intro]
+[Intro - Male Solo]
 ମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ,
 ମଝି ବାଟେ ହଜିଯିବାକେ ବି ମନା ନାଇଁ।
 ଧ୍ରୁବତାରା ବାଟ୍ ଦେଖେଇଦେବା।
 
-[Verse 1]
+[Verse 1 - Male Solo]
 ସାଉଁଟି... ସାଉଁଟି...
-ସଂସାର୍‌କେ ଜାବ୍‌ଡ଼ି ଧରିଛେ—
+ସଂସାର୍‌କେ ଜାବ୍‌ଡ଼ି ଧରିଛେଁ—
 ଜୁଡ଼ିଦେବାର୍ ଆଶାନେ,
 ସଜେଇଦେବାର୍ ଆଶାନେ।
 
-[Verse 2]
+[Verse 2 - Male Solo]
 କୁମ୍ଭାର୍ ମୁଇଁ।
 
-ଗଢ଼ିଦେବାର୍ ସିଖିଛେ,
+ଗଢ଼ିଦେବାର୍ ସିଖିଛେଁ,
 ରଙ୍ଗ୍ ଲଗେଇ,
-ତୋର୍ ମୁହେଁ ହସ୍ ବୁନ୍‌ବାର୍ ସିଖିଛେ।
+ତୋର୍ ମୁହେଁ ହସ୍ ବୁନ୍‌ବାର୍ ସିଖିଛେଁ।
 
-[Chorus]
+[Chorus - Male Lead]
 ମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ,
 ମଝି ବାଟେ ହଜିଯିବାକେ ବି ମନା ନାଇଁ।
 ଧ୍ରୁବତାରା ବାଟ୍ ଦେଖେଇଦେବା।
 
-[Bridge]
+[Bridge - Male Lead, Soft Female Responses]
 ଆ, ପାହାଡ଼୍ ଚଢ଼୍‌ମା।
 ଆ, ଜନ୍ ଦେଖ୍‌ମା।
 ବାଦଲ୍ ସାଙ୍ଗେ କାନ୍ଧ୍ ମିଲେଇ,
 ବର୍ଷା ହେଇ ଝର୍‌ବାର୍ ମନ୍ତର୍ ସିଖ୍‌ମା।
 
-[Final Chorus]
+[Final Chorus - Male and Female Duet]
 ମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ।
 ତୋର୍ ସପନ୍‌କେ ମୋର୍ ସପନ୍‌ନେ
 ଗୁଁଥିଦେବାକେ ବି ମନା ନାଇଁ।
 
-[Soft Outro]
+[Soft Outro - Both Voices]
 ତୋର୍ ସପନ୍‌କେ ମୋର୍ ସପନ୍‌ନେ...
 ଗୁଁଥିଦେବାକେ ବି ମନା ନାଇଁ।
 ```
@@ -88,20 +88,18 @@ The reference supports the context described above. The new melody, tempo and en
 
 ## Voice, rhythm and arrangement
 
-Let Sambalpuri speech cadence shape short melodic turns; keep compact word endings clear and the refrain gently buoyant.
+Let Sambalpuri speech cadence lead short, connected melodic turns. Keep compact word endings audible. Use bamboo flute and a lightly played dhol as answering voices, with soft bass and quiet acoustic guitar underneath. Let a local musician refine a restrained regional pulse around the lyric.
 
-Let Sambalpuri speech cadence lead short, connected melodic turns. Keep compact word endings audible. Use bamboo flute and a lightly played dhol as answering voices; guitar may provide quiet support. Let a local musician shape a restrained regional pulse around the lyric. Keep the bridge at the same easy pace and reserve a soft unison answer for the existing final refrain.
-
-Use a warm youthful male lead. Choose the rhythm around the reviewed lyric; there is no collection-wide requirement for 6/8. Keep one answering instrument or voice prominent at a time, with percussion below the words.
+Begin with a warm youthful male solo. Introduce soft female answering phrases at the invitation, then bring both voices together on the final refrain and outro. Keep one answering instrument or voice prominent at a time, with percussion below the words. Use only the supplied lyric words.
 
 ## Emotional shape
 
-Begin with the solo voice and a short flute answer. Let dhol enter gently during gathering, then suspend its strokes for the potter declaration. Open the invitation through melodic range while holding the same pace. A quiet response on the existing final refrain makes the shared dreams feel welcoming. Keep a distinct gathering breath and a fuller potter pause, with soft instruments sustaining underneath. Add warmth without accelerating or building a dramatic crescendo. End in peaceful, hopeful contentment.
+Begin sparsely with the solo voice and a short flute answer. Let the arrangement grow warmer through gathering, then make room for the potter declaration. Open the invitation through melodic range while holding the same pace. The final duet makes the shared dreams feel welcoming. Keep a distinct gathering breath and a fuller potter pause, with soft instruments sustaining underneath. End in peaceful, hopeful contentment.
 
 ## Style prompt
 
 ```text
-Calm Sambalpuri contemporary folk ballad with warm youthful male vocals and clear local diction. Short connected melodic turns, a gently buoyant refrain and an unhurried regional pulse shaped around the words. Bamboo-flute replies, lightly played dhol and quiet supporting acoustic guitar. Spacious solo verses; a soft unison answer only on supplied final refrain words. Leave a distinct breath between ସାଉଁଟି... ସାଉଁଟି... and a full pause after କୁମ୍ଭାର୍ ମୁଇଁ, with soft instrumental sustain. Gradually add warmth without speeding up; end in peaceful contentment. Let Sambalpuri speech cadence shape short melodic turns; keep compact word endings clear and the refrain gently buoyant. Warm youthful delivery; calm, soulful joy, affection and wonder. Keep the pace unhurried throughout; finish with peaceful hope. No mournful delivery, driving beat or dramatic crescendo.
+Sambalpuri folk ballad, gently lilting and unhurried, bamboo-flute replies over lightly played dhol, soft bass and quiet acoustic guitar; instruments sustain through clear breaths between gathering phrases and a fuller pause after the potter declaration. The bridge opens warmly without speeding up, the refrain blooms into quiet communal joy, and the duet outro settles tenderly. Warm youthful male lead with natural Sambalpuri pronunciation, affectionate conversational delivery, solo opening and verses, soft female answering phrases in the bridge, then close male-female duet.
 ```
 
 ## Working settings and listening checks
@@ -121,8 +119,10 @@ Keep the current translation review status until a fluent speaker and singer hav
 
 ## Language-specific review
 
+The selected arrangement uses nasalised first-person forms in “ଧରିଛେଁ” and “ସିଖିଛେଁ”. Check these endings with a fluent speaker against the intended local variety. See [Agreement in Sambalpuri, pp. 55–56](https://www.oiirj.org/oiirj/aug2021-special-issue/08.pdf). This grammatical reference does not certify the whole adaptation or sung pronunciation.
+
 Provisional Sambalpuri draft. Review local speech variety, first-person verb forms, nasalisation and spelling rather than normalising everything toward standard Odia.
 
 ---
 
-Collection prepared 22 September 2026. Original poem: Ahimanikya Satapathy. Translation drafts are AI-assisted except the author’s Odia source. Musical direction updated 23 September 2026. These language-specific arrangements remain proposals, not verified performances.
+Collection prepared 22 September 2026. Original poem: Ahimanikya Satapathy. Translation drafts are AI-assisted except the author’s Odia source. Sambalpuri arrangement updated 27 September 2026 to match the author-selected duet. These language-specific arrangements remain proposals, not verified performances.

@@ -20,3 +20,7 @@
 - Added the author-selected Bengali Take 2 (2:41) as a listening preview and playlist entry. The lyric draft and native-speaker review status are unchanged.
 
 - Added the matching Bengali Take 2 video and the agreed language-by-language production workflow: author chooses a language, reviews candidates, then selects a take to publish as both MP3 and locally rendered MP4. Added a reusable renderer with soundtrack validation.
+
+## 2026-09-27
+
+- Added the author-selected 2:31 Sambalpuri duet and matching video as listening previews and added the audio to the playlist. Updated the lyric arrangement with first-person nasal endings and the selected duet directions. The shared visuals fit the full soundtrack without changing its speed or pitch; fluent-speaker review and checked subtitle timings remain open.

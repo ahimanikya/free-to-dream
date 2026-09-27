@@ -61,11 +61,11 @@ python scripts/project.py build --local-media
 python scripts/project.py serve
 ```
 
-Open **http://127.0.0.1:8765**. Search for a language, choose **Ready to listen**, and open its page. Native audio/video players support seeking. Odia, Tamil, Telugu, Malayalam, English (country and jazz), Filipino / Tagalog, Italian, and Bengali have embedded recordings. Other pages show separate audio/video availability messages.
+Open **http://127.0.0.1:8765**. Search for a language, choose **Ready to listen**, and open its page. Native audio/video players support seeking. Odia, Tamil, Telugu, Malayalam, English (country and jazz), Filipino / Tagalog, Italian, Bengali, and Sambalpuri have embedded recordings. Other pages show separate audio/video availability messages.
 
 The audio/video archive is tracked with **Git LFS** in language folders under [`media/`](media/README.md). Install Git LFS before cloning, or run `git lfs pull` in an existing checkout, to retrieve the full files. The ignored `local-assets/` folder retains private references and local working copies. Public players use explicitly authorized review-copy URLs or approved release URLs. Sharing a review copy does not mark its translation, pronunciation or release checks complete.
 
-The existing 12 audio files and 17 videos are available as author-authorized review copies. The site streams them from version-pinned Git LFS URLs; loading starts when the visitor presses play. No media binaries are copied into the Pages deployment.
+The existing 13 audio files and 18 videos are available as author-authorized review copies. The site streams them from version-pinned Git LFS URLs; loading starts when the visitor presses play. No media binaries are copied into the Pages deployment.
 
 ## Where things live
 

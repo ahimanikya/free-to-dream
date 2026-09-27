@@ -688,5 +688,58 @@
     "duration_seconds": 160.8,
     "source_url": "https://suno.com/song/b216df41-663e-4df3-a465-616fdcb03544",
     "audio_recording_id": "bengali-audio-01"
+  },
+  {
+    "id": "sambalpuri-audio-01",
+    "language": "sambalpuri",
+    "poem": "i-am-free-to-dream",
+    "kind": "audio",
+    "title": "ମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ",
+    "local_path": null,
+    "repo_path": "media/sambalpuri/i-am-free-to-dream-sambalpuri.mp3",
+    "publish": false,
+    "review_status": "needs-review",
+    "rights_status": "release-details-to-confirm",
+    "notes": "Author-selected Sambalpuri duet. Shared for listening and feedback; fluent-speaker review remains open.",
+    "credits": {
+      "poem": "Ahimanikya Satapathy",
+      "music_and_vocals": "Generated using Suno AI"
+    },
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/sambalpuri-2026-09-27/i-am-free-to-dream-sambalpuri.mp3",
+    "public_preview": true,
+    "preview_authorization": "Author selected this Sambalpuri recording on 2026-09-27 under the agreed MP3 and matching MP4 publication workflow.",
+    "allow_file_sharing": false,
+    "archived": false,
+    "duration_seconds": 151.2,
+    "source_url": "https://suno.com/song/a2b3ded1-b0a2-4e02-917e-66a8b4815ced",
+    "generation_settings": {
+      "model": "v6"
+    }
+  },
+  {
+    "id": "sambalpuri-video-01",
+    "language": "sambalpuri",
+    "poem": "i-am-free-to-dream",
+    "kind": "video",
+    "title": "ମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ",
+    "local_path": null,
+    "repo_path": "media/sambalpuri/i-am-free-to-dream-sambalpuri.mp4",
+    "publish": false,
+    "review_status": "needs-review",
+    "rights_status": "release-details-to-confirm",
+    "notes": "Video with the author-selected Sambalpuri duet. Shared visuals fit the full soundtrack at its original speed and pitch. Fluent-speaker review remains open.",
+    "credits": {
+      "poem": "Ahimanikya Satapathy",
+      "music_and_vocals": "Generated using Suno AI",
+      "visuals": "Shared visual source created using Melodicpal"
+    },
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/sambalpuri-2026-09-27/i-am-free-to-dream-sambalpuri.mp4",
+    "public_preview": true,
+    "preview_authorization": "Author selected this Sambalpuri recording on 2026-09-27 under the agreed MP3 and matching MP4 publication workflow.",
+    "allow_file_sharing": false,
+    "archived": false,
+    "duration_seconds": 151.2,
+    "source_url": "https://suno.com/song/a2b3ded1-b0a2-4e02-917e-66a8b4815ced",
+    "audio_recording_id": "sambalpuri-audio-01"
   }
 ]

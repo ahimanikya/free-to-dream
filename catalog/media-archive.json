@@ -290,6 +290,26 @@
       "title": "Bengali video",
       "status": "working",
       "notes": "Video using author-selected Bengali Take 2 and shared visuals; native-speaker review remains open."
+    },
+    {
+      "repo_path": "media/sambalpuri/i-am-free-to-dream-sambalpuri.mp3",
+      "sha256": "adfaa5d4239b2720c1c2e3c7aecdc9fd4154070bec2aa889ca262c598f0fece4",
+      "bytes": 3594168,
+      "source_name": "ମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ.mp3",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/sambalpuri-2026-09-27/i-am-free-to-dream-sambalpuri.mp3",
+      "title": "Sambalpuri audio",
+      "status": "working",
+      "notes": "Author-selected duet, 2:31; fluent-speaker review remains open."
+    },
+    {
+      "repo_path": "media/sambalpuri/i-am-free-to-dream-sambalpuri.mp4",
+      "sha256": "799dc7b604b67868d7bdb0d406baba4fc3c8ca3efc5c4ba100ef2ee19f0ecb26",
+      "bytes": 77888015,
+      "source_name": "ମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ.mp4",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/sambalpuri-2026-09-27/i-am-free-to-dream-sambalpuri.mp4",
+      "title": "Sambalpuri video",
+      "status": "working",
+      "notes": "Author-selected duet, 2:31; fluent-speaker review remains open."
     }
   ],
   "unavailable_originals": [
