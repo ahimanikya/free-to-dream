@@ -53,5 +53,31 @@
   "actual_submissions": 1,
   "submitted_at": "2026-09-27T15:50:22.393Z",
   "completed_at": "2026-09-27T15:51:50.136Z",
-  "review_status": "Author listening and take selection pending; no direct listening assessment by the assistant."
+  "review_status": "Author listening and take selection pending; no direct listening assessment by the assistant.",
+  "author_listening_feedback": {
+    "date": "2026-09-27",
+    "vocal_blend_reference": {
+      "url": "https://suno.com/song/081ca235-b828-44de-93be-e0b79ed779bb",
+      "shared_url": "https://suno.com/s/Rwk6CWgd7U89ftyp",
+      "author_observation": "Liked how the soft female voice was mixed."
+    },
+    "tune_reference": {
+      "url": "https://suno.com/song/d1db3fb3-5aa2-484d-8475-0f9d84bff282",
+      "shared_url": "https://suno.com/s/RcdZiOOZgp7PX5pR",
+      "author_observation": "New cover maintains the original tune, which is good, but the soft female voice mixing went away."
+    },
+    "desired_result": "Preserve the original tune while bringing back the soft female vocal blending of the earlier duet.",
+    "source": "Author listening report; not independently heard or acoustically assessed by the assistant.",
+    "release_selection": false,
+    "next_trial_proposal": {
+      "status": "Proposed only; no additional generation authorized or submitted.",
+      "preserve": "Original published Tamil audio reference, musical style, sung words, potter pause, Weirdness 30, Style Influence 65, Audio Influence 75.",
+      "vocal_changes": [
+        "Restore first chorus direction from Male Solo to Male Lead so a gentle supporting voice is permitted.",
+        "Make the female answering phrases soft but clearly audible; retain male-led verses and tender close harmony at the end.",
+        "Replace the restrictive sentence Female voice stays gentle and secondary until the ending with Soft female responses should remain clearly audible beneath the male lead."
+      ],
+      "reasoning": "The author reports tune retention at Audio Influence 75. Change vocal instructions first to avoid changing the successful reference strength at the same time. The newer Male Solo chorus and restrictive female direction are possible contributors, not a verified diagnosis."
+    }
+  }
 }
