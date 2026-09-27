@@ -1,0 +1,16 @@
+{
+  "name": "Free to Dream production workspace",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "postCreateCommand": "python -m pip install -r requirements.txt && git lfs install --local",
+  "forwardPorts": [
+    8765
+  ],
+  "portsAttributes": {
+    "8765": {
+      "label": "Listening site",
+      "onAutoForward": "notify"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "language": "sambalpuri",
+  "poem": "i-am-free-to-dream",
+  "stage": "selection-pending",
+  "source": "kb/poems/i-am-free-to-dream/languages/sambalpuri.md",
+  "source_sha256": "86344e7c09b443e75365770f34f25b62b192a982679ea5a2cd8da449db977266",
+  "title": "ମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ",
+  "lyrics": "[Intro - Male Solo]\nମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ,\nମଝି ବାଟେ ହଜିଯିବାକେ ବି ମନା ନାଇଁ।\nଧ୍ରୁବତାରା ବାଟ୍ ଦେଖେଇଦେବା।\n\n[Verse 1 - Male Solo]\nସାଉଁଟି... ସାଉଁଟି...\nସଂସାର୍‌କେ ଜାବ୍‌ଡ଼ି ଧରିଛେଁ—\nଜୁଡ଼ିଦେବାର୍ ଆଶାନେ,\nସଜେଇଦେବାର୍ ଆଶାନେ।\n\n[Verse 2 - Male Solo]\nକୁମ୍ଭାର୍ ମୁଇଁ।\n\nଗଢ଼ିଦେବାର୍ ସିଖିଛେଁ,\nରଙ୍ଗ୍ ଲଗେଇ,\nତୋର୍ ମୁହେଁ ହସ୍ ବୁନ୍‌ବାର୍ ସିଖିଛେଁ।\n\n[Chorus - Male Lead]\nମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ,\nମଝି ବାଟେ ହଜିଯିବାକେ ବି ମନା ନାଇଁ।\nଧ୍ରୁବତାରା ବାଟ୍ ଦେଖେଇଦେବା।\n\n[Bridge - Male Lead, Soft Female Responses]\nଆ, ପାହାଡ଼୍ ଚଢ଼୍‌ମା।\nଆ, ଜନ୍ ଦେଖ୍‌ମା।\nବାଦଲ୍ ସାଙ୍ଗେ କାନ୍ଧ୍ ମିଲେଇ,\nବର୍ଷା ହେଇ ଝର୍‌ବାର୍ ମନ୍ତର୍ ସିଖ୍‌ମା।\n\n[Final Chorus - Male and Female Duet]\nମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ।\nତୋର୍ ସପନ୍‌କେ ମୋର୍ ସପନ୍‌ନେ\nଗୁଁଥିଦେବାକେ ବି ମନା ନାଇଁ।\n\n[Soft Outro - Both Voices]\nତୋର୍ ସପନ୍‌କେ ମୋର୍ ସପନ୍‌ନେ...\nଗୁଁଥିଦେବାକେ ବି ମନା ନାଇଁ।",
+  "style": "Soulful Sambalpuri folk ballad with affectionate conversational singing and a gently lilting folk pulse. Warm youthful male lead with natural Sambalpuri pronunciation; solo opening and verses, soft female answering phrases entering at the invitation, both voices together in the final refrain. Use only supplied lyric words. Original memorable melody shaped by local speech cadence, short expressive turns and restrained ornamentation. Bamboo-flute replies, lightly played dhol, soft bass and quiet acoustic guitar. Spacious unhurried verses; refrain blooms with quiet communal joy. Clear breath between the repeated gathering phrases and a fuller pause after the potter declaration, with instruments sustaining underneath. Open the bridge warmly without speeding up. End tenderly with two dreams coming together. No driving dance beat, mournful delivery, dramatic crescendo or added lyrics.",
+  "submission_limit": 1,
+  "expected_candidates": 2,
+  "lyric_review_status": "author-review-pending",
+  "changes": [
+    "First-person nasal endings in one holding and two learning forms",
+    "Section directions for gradual male-female duet; no added sung words"
+  ],
+  "settings": {
+    "model": "v6",
+    "mode": "Advanced",
+    "style_influence": 65,
+    "weirdness": 50,
+    "variety": "Normal",
+    "max_mode": false,
+    "personalize": false,
+    "duration": "Auto",
+    "vocal_gender": "Unselected; male lead and female responses specified in lyrics/style",
+    "exclude_styles": ""
+  },
+  "selected_candidate": null,
+  "publication_authorized": false,
+  "input_verified": true,
+  "submission_started_at": "2026-09-27T09:30:41.180459+00:00",
+  "submitted_at": "2026-09-27T09:31:42.985864+00:00",
+  "generated_at": "2026-09-27T09:32:26.611674+00:00",
+  "candidates": [
+    {
+      "take": 1,
+      "id": "d49141d9-620d-4bc2-a3b6-a18ccc599d7b",
+      "url": "https://suno.com/song/d49141d9-620d-4bc2-a3b6-a18ccc599d7b",
+      "status": "available-for-review",
+      "duration_display": "2:32"
+    },
+    {
+      "take": 2,
+      "id": "69d27d32-00f1-42bd-8274-f6e60265dd42",
+      "url": "https://suno.com/song/69d27d32-00f1-42bd-8274-f6e60265dd42",
+      "status": "available-for-review",
+      "duration_display": "2:28"
+    }
+  ],
+  "history_note": "Migrated production snapshot; reconcile with current direction and catalog before resuming. No new generation authorized."
+}

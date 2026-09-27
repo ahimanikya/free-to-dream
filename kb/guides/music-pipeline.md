@@ -31,7 +31,7 @@ python scripts/render_song_video.py \
   --language ben
 ```
 
-Pass `--ffmpeg /path/to/ffmpeg` if FFmpeg is not on PATH. The renderer refuses to overwrite an existing output, preserves the full audio, exports three frames for visual inspection and writes a validation report. Keep work folders and private run manifests out of Git.
+Pass `--ffmpeg /path/to/ffmpeg` if FFmpeg is not on PATH. The renderer refuses to overwrite an existing output, preserves the full audio, exports three frames for visual inspection and writes a validation report. Keep scratch work folders out of Git. Save portable prompts, settings, take selections and validation results in tracked `production/` records; exclude private account evidence. See [portable workspace](portable-workspace.md) for cloud setup and project memory.
 
 This visual source belongs to this poem. A different poem or a request for new visual storytelling needs an appropriate visual choice rather than automatically reusing it.
 

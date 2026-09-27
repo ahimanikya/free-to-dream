@@ -1,0 +1,64 @@
+{
+  "language": "bengali",
+  "poem": "i-am-free-to-dream",
+  "stage": "published",
+  "source": "kb/poems/i-am-free-to-dream/languages/bengali.md",
+  "source_sha256": "05457e3bff8c9bcb4e88fd0b585d6ef69a6cc0685edbcca20f984ff40b48f699",
+  "title": "স্বপ্ন দেখতে আমার মানা নেই",
+  "lyrics": "[Intro]\nস্বপ্ন দেখতে আমার মানা নেই,\nপথের মাঝে হারিয়ে যেতেও মানা নেই।\nধ্রুবতারা পথ দেখাবে।\n\n[Verse 1]\nকুড়িয়ে... কুড়িয়ে...\nসংসারটাকে বুকে জড়িয়ে রেখেছি—\nজুড়ে দেওয়ার আশায়,\nসাজিয়ে দেওয়ার আশায়।\n\n[Verse 2]\nআমি এক কুমোর।\n\nগড়ে তুলতে শিখেছি,\nরঙে রাঙিয়ে,\nতোমার মুখে হাসি ফোটাতে শিখেছি।\n\n[Chorus]\nস্বপ্ন দেখতে আমার মানা নেই,\nপথের মাঝে হারিয়ে যেতেও মানা নেই।\nধ্রুবতারা পথ দেখাবে।\n\n[Bridge]\nএসো, পাহাড়ে উঠি।\nএসো, চাঁদ দেখি।\nমেঘের সঙ্গে কাঁধ মিলিয়ে,\nবৃষ্টি হয়ে ঝরার মন্ত্র শিখি।\n\n[Final Chorus]\nস্বপ্ন দেখতে আমার মানা নেই।\nতোমার স্বপ্ন আমার স্বপ্নের সঙ্গে\nবুনে দিতেও মানা নেই।\n\n[Soft Outro]\nতোমার স্বপ্ন আমার স্বপ্নের সঙ্গে...\nবুনে দিতেও মানা নেই।",
+  "style": "Dreamy Bengali poetic folk ballad with bhatiyali-inspired spacious phrasing. Warm intimate male voice, natural Bengali diction, long breathing lines and gently descending endings. Dotara, airy bamboo flute and sparse soft hand percussion, an elastic relaxed pulse. Breath between কুড়িয়ে... কুড়িয়ে... and a full pause after আমি এক কুমোর. Keep instrumental notes floating beneath the silence. Gradually open from a solitary verse to a quietly hopeful refrain; broaden the mountain-and-cloud bridge, then return to a tender close voice for weaving dreams together. Use long, connected Bengali lines and gentle descending resolutions; keep the spacious delivery quietly happy. Warm youthful delivery; calm, soulful joy, affection and wonder. Keep the pace unhurried throughout; finish with peaceful hope. No mournful delivery, driving beat or dramatic crescendo.",
+  "submission_limit": 1,
+  "expected_candidates": 2,
+  "settings": {
+    "model": "v6",
+    "mode": "Advanced",
+    "vocal_gender": "Male",
+    "duration": "Auto",
+    "style_influence": 65,
+    "weirdness": 50,
+    "variety": "Normal",
+    "max_mode": false,
+    "personalize": false
+  },
+  "selected_candidate": "b216df41-663e-4df3-a465-616fdcb03544",
+  "publication_authorized": true,
+  "submitted_at": "2026-09-27T06:07:13.824Z",
+  "input_verified": true,
+  "generated_at": "2026-09-27T06:08:40.389Z",
+  "audio_sha256": "079a222320d0a72bf051fb2a535f9355c199f6d778b17ea2c168a5ab25555b6d",
+  "audio_bytes": 3874216,
+  "duration_seconds": 160.82,
+  "release_url": "https://github.com/ahimanikya/free-to-dream/releases/tag/bengali-2026-09-26",
+  "media_commit": "7564db2a152cdeef9094f90fab0a441123f738b7",
+  "website_commit": "20d03e50bcd89cc806b29d6e93076b1c6e9e14dd",
+  "page_url": "https://ahimanikya.github.io/free-to-dream/poems--i-am-free-to-dream--languages--bengali.html",
+  "video_publication_authorized": true,
+  "video_public_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/c462b59b27a2edac3fa166b12c3b10766bd5c452/media/bengali/i-am-free-to-dream-bengali.mp4",
+  "video_media_commit": "c462b59b27a2edac3fa166b12c3b10766bd5c452",
+  "candidates": [
+    {
+      "take": 1,
+      "id": "d4a618de-00e6-4b26-bbbe-aef72feaf7a3",
+      "url": "https://suno.com/song/d4a618de-00e6-4b26-bbbe-aef72feaf7a3",
+      "duration_display": "2:57"
+    },
+    {
+      "take": 2,
+      "id": "b216df41-663e-4df3-a465-616fdcb03544",
+      "url": "https://suno.com/song/b216df41-663e-4df3-a465-616fdcb03544",
+      "duration_display": "2:41"
+    }
+  ],
+  "video_validation": {
+    "full_decode": "passed",
+    "audio_sha256": "079a222320d0a72bf051fb2a535f9355c199f6d778b17ea2c168a5ab25555b6d",
+    "source_audio_seconds": 160.8,
+    "output_audio_seconds": 160.81075,
+    "video_source_sha256": "3c18cfe26a4e86efcd9a8a02c581e09a384bd05ba526291c168bd018f92447ed",
+    "video_time_factor": 0.8930852540960844,
+    "audio_correlation": 0.9999073419330154,
+    "output_bytes": 81270809,
+    "output_sha256": "8eef15b3bef9c0cd68d019f78b1a404a5f205933d89563e517616ec1449a90d6"
+  },
+  "history_note": "Migrated production snapshot; reconcile with current direction and catalog before resuming. No new generation authorized."
+}

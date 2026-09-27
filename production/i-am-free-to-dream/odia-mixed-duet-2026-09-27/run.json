@@ -1,0 +1,55 @@
+{
+  "language": "odia",
+  "poem": "i-am-free-to-dream",
+  "variant": "mixed-duet",
+  "stage": "selection-pending",
+  "source": "kb/poems/i-am-free-to-dream/languages/odia.md",
+  "source_sha256": "5ef99c6883f09fd420d2a6c9aedf56314cf014814448850bac3f45339b95789e",
+  "title": "ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ — Mixed Duet",
+  "lyrics": "[Intro - Male Lead]\nମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ\nମନା ନାହିଁ ମଝି ରାସ୍ତାରେ ହଜି ଜିବାକୁ\nଧୃବତାରା ଖୋଜିଦେବ ରାସ୍ତା ।\n\n[Verse 1 - Female Lead]\nସାଉଁଟି... ସାଉଁଟି...\nଜାବୁଡି ଧରିଛି ସଂସାରକୁ\nଜୋଡି ଦେବାର ଆଶାରେ,\nସଜେଇ ଦେବାର ଆଶାରେ ।\n\n[Verse 2 - Male Lead]\nକୁଂଭକାର ମୁଁ ।\n\nଗଠିଦେବା ସିଖିଛି\nରଂଗେଈ ଦେଈ,\nତୁମ ମୁଖରେ ହସ ବୁଣିବା ସିଖିଛି ।\n\n[Chorus - Male and Female Together]\nମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ\nମନା ନାହିଁ ମଝି ରାସ୍ତାରେ ହଜି ଜିବାକୁ\nଧୃବତାରା ଖୋଜିଦେବ ରାସ୍ତା ।\n\n[Bridge - Alternating Male and Female Lines]\nଆସ ପାହାଡ ଚଢିବା\nଆସ ଜନ୍ହ ଦେଖିବା\nବାଦଲ ସାଂଗେ କାଂଧ ମିଳେଈ\nଝଡିବାର ମଂତ୍ର ସିଖିବା ।\n\n[Final Chorus - Male and Female Duet]\nମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ ।\nମନା ନାହିଁ ଗୁଂଥିଦେବାକୁ\nତୁମ ସପ୍ନକୁ ମୋ ସପ୍ନରେ ।\n\n[Soft Outro - Both Voices, Soft Harmony]\nମନା ନାହିଁ ଗୁଂଥିଦେବାକୁ\nତୁମ ସପ୍ନକୁ ମୋ ସପ୍ନରେ ।",
+  "style": "Warm youthful male-female duet with two distinct, equally present voices. Male opens, female leads gathering verse, male sings potter verse; alternate complete lines in the invitation, join in tender chorus harmonies and a shared ending. Odia indie-folk lyric ballad; natural Odia diction, whole thoughts shaping the melody, brief Odissi-informed turns after complete phrases. Quiet acoustic guitar, bamboo flute, soft bass, restrained mardala. Calm soulful joy, affection and wonder. Unhurried pulse, spacious phrasing, sparse opening; gradually add warmth without speeding up. Breath between repeated ସାଉଁଟି phrases; full pause after କୁଂଭକାର ମୁଁ, soft instruments sustaining beneath. Let long lines finish naturally. Keep words clear in duet passages; only supplied lyrics. Peaceful hopeful dream-weaving outro. No driving beat, mournful delivery, dramatic crescendo or elaborate vocal runs.",
+  "settings": {
+    "model": "v6",
+    "mode": "Advanced",
+    "weirdness": 30,
+    "style_influence": 65,
+    "duration": "Auto",
+    "max_mode": false,
+    "personalize": false,
+    "variety": "Normal",
+    "vocal_gender": "Unselected; duet directed in lyrics and style",
+    "exclude_styles": ""
+  },
+  "submission_limit": 1,
+  "expected_candidates": 2,
+  "actual_submissions": 1,
+  "selected_candidate": null,
+  "publication_authorized": false,
+  "changes": [
+    "Section vocal directions only; sung words unchanged",
+    "Female lead verse and shared choruses for a more evenly mixed duet; retain local musical phrasing"
+  ],
+  "input_verified": true,
+  "submission_started_at": "2026-09-27T14:36:07.832Z",
+  "submitted_at": "2026-09-27T14:36:09.480Z",
+  "completed_at": "2026-09-27T14:38:03.885Z",
+  "candidates": [
+    {
+      "take": 1,
+      "id": "d4bd986d-1d85-40bd-b028-5e95ca5c22cc",
+      "url": "https://suno.com/song/d4bd986d-1d85-40bd-b028-5e95ca5c22cc",
+      "status": "ready-for-review",
+      "duration_display": "2:27",
+      "duration_source": "Suno create list"
+    },
+    {
+      "take": 2,
+      "id": "897a19de-3c2e-4c0d-ae00-1cac90b5375b",
+      "url": "https://suno.com/song/897a19de-3c2e-4c0d-ae00-1cac90b5375b",
+      "status": "ready-for-review",
+      "duration_display": "2:36",
+      "duration_source": "Suno create list"
+    }
+  ],
+  "history_note": "Migrated production snapshot; reconcile with current direction and catalog before resuming. No new generation authorized."
+}

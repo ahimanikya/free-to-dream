@@ -1,0 +1,56 @@
+{
+  "lyrics": "[Intro - Male Solo]\nମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ,\nମଝି ବାଟେ ହଜିଯିବାକେ ବି ମନା ନାଇଁ।\nଧ୍ରୁବତାରା ବାଟ୍ ଦେଖେଇଦେବା।\n\n[Verse 1 - Male Solo]\nସାଉଁଟି... ସାଉଁଟି...\nସଂସାର୍‌କେ ଜାବ୍‌ଡ଼ି ଧରିଛେଁ—\nଜୁଡ଼ିଦେବାର୍ ଆଶାନେ,\nସଜେଇଦେବାର୍ ଆଶାନେ।\n\n[Verse 2 - Male Solo]\nକୁମ୍ଭାର୍ ମୁଇଁ।\n\nଗଢ଼ିଦେବାର୍ ସିଖିଛେଁ,\nରଙ୍ଗ୍ ଲଗେଇ,\nତୋର୍ ମୁହେଁ ହସ୍ ବୁନ୍‌ବାର୍ ସିଖିଛେଁ।\n\n[Chorus - Male Lead]\nମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ,\nମଝି ବାଟେ ହଜିଯିବାକେ ବି ମନା ନାଇଁ।\nଧ୍ରୁବତାରା ବାଟ୍ ଦେଖେଇଦେବା।\n\n[Bridge - Male Lead, Soft Female Responses]\nଆ, ପାହାଡ଼୍ ଚଢ଼୍‌ମା।\nଆ, ଜନ୍ ଦେଖ୍‌ମା।\nବାଦଲ୍ ସାଙ୍ଗେ କାନ୍ଧ୍ ମିଲେଇ,\nବର୍ଷା ହେଇ ଝର୍‌ବାର୍ ମନ୍ତର୍ ସିଖ୍‌ମା।\n\n[Final Chorus - Male and Female Duet]\nମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ।\nତୋର୍ ସପନ୍‌କେ ମୋର୍ ସପନ୍‌ନେ\nଗୁଁଥିଦେବାକେ ବି ମନା ନାଇଁ।\n\n[Soft Outro - Both Voices]\nତୋର୍ ସପନ୍‌କେ ମୋର୍ ସପନ୍‌ନେ...\nଗୁଁଥିଦେବାକେ ବି ମନା ନାଇଁ।",
+  "settings": {
+    "model": "v6",
+    "mode": "Advanced",
+    "style_influence": 65,
+    "weirdness": 30,
+    "variety": "Normal",
+    "max_mode": false,
+    "personalize": false,
+    "duration": "Auto",
+    "vocal_gender": "Unselected; male lead and female responses specified in lyrics/style",
+    "exclude_styles": ""
+  },
+  "language": "sambalpuri",
+  "poem": "i-am-free-to-dream",
+  "variant": "soft-answer-duet",
+  "stage": "selection-pending",
+  "source": "kb/poems/i-am-free-to-dream/languages/sambalpuri.md",
+  "source_sha256": "00c085b862d0f77d14f556ab0a9da7433ba9ced9f2e61892efbb98cb554d7fe7",
+  "title": "ମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ — Soft Duet",
+  "style": "Warm youthful male solo with soft female answering phrases, tender close-harmony duet at the end. Male sings the opening, all verses and first chorus. Female enters softly only at the mountain-and-moon invitation, offering brief replies behind the lead. Keep her delicate and supportive until the final refrain, when both voices blend intimately. Sambalpuri folk ballad, natural local speech cadence, clear compact endings and short expressive turns. Bamboo flute, lightly played dhol, soft bass and quiet acoustic guitar; gently lilting pulse. Calm soulful joy, affection and wonder. Spacious unhurried phrasing, sparse opening, gradually add warmth without speeding up. Distinct breath between the repeated gathering phrases; full pause after the potter declaration, soft instruments sustaining beneath. Use only supplied lyric words. Peaceful hopeful outro. No female-led verse, alternating lead verses, busy vocal counterpoint, driving beat, mournful delivery or dramatic crescendo.",
+  "submission_limit": 1,
+  "expected_candidates": 2,
+  "actual_submissions": 1,
+  "selected_candidate": null,
+  "publication_authorized": false,
+  "changes": [
+    "Restore male solo verses and first chorus, soft female answering phrases only at invitation, close-harmony duet at end",
+    "Sung words unchanged"
+  ],
+  "author_direction": "male solo with soft female answering phrases, tender close-harmony duet at the end",
+  "input_verified": true,
+  "submission_started_at": "2026-09-27T14:46:00.525Z",
+  "submitted_at": "2026-09-27T14:46:01.968Z",
+  "completed_at": "2026-09-27T14:47:08.140Z",
+  "candidates": [
+    {
+      "take": 1,
+      "id": "b5586377-fc04-4687-8d9d-41957e5c7668",
+      "url": "https://suno.com/song/b5586377-fc04-4687-8d9d-41957e5c7668",
+      "status": "ready-for-review",
+      "duration_display": "2:32",
+      "duration_source": "Suno create list"
+    },
+    {
+      "take": 2,
+      "id": "17480101-d04f-47de-aa80-85e29a94e043",
+      "url": "https://suno.com/song/17480101-d04f-47de-aa80-85e29a94e043",
+      "status": "ready-for-review",
+      "duration_display": "2:07",
+      "duration_source": "Suno create list"
+    }
+  ],
+  "history_note": "Migrated production snapshot; reconcile with current direction and catalog before resuming. No new generation authorized."
+}

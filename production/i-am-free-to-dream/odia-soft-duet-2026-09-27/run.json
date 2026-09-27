@@ -1,0 +1,56 @@
+{
+  "lyrics": "[Intro - Male Solo]\nମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ\nମନା ନାହିଁ ମଝି ରାସ୍ତାରେ ହଜି ଜିବାକୁ\nଧୃବତାରା ଖୋଜିଦେବ ରାସ୍ତା ।\n\n[Verse 1 - Male Solo]\nସାଉଁଟି... ସାଉଁଟି...\nଜାବୁଡି ଧରିଛି ସଂସାରକୁ\nଜୋଡି ଦେବାର ଆଶାରେ,\nସଜେଇ ଦେବାର ଆଶାରେ ।\n\n[Verse 2 - Male Solo]\nକୁଂଭକାର ମୁଁ ।\n\nଗଠିଦେବା ସିଖିଛି\nରଂଗେଈ ଦେଈ,\nତୁମ ମୁଖରେ ହସ ବୁଣିବା ସିଖିଛି ।\n\n[Chorus - Male Lead]\nମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ\nମନା ନାହିଁ ମଝି ରାସ୍ତାରେ ହଜି ଜିବାକୁ\nଧୃବତାରା ଖୋଜିଦେବ ରାସ୍ତା ।\n\n[Bridge - Male Lead, Soft Female Responses]\nଆସ ପାହାଡ ଚଢିବା\nଆସ ଜନ୍ହ ଦେଖିବା\nବାଦଲ ସାଂଗେ କାଂଧ ମିଳେଈ\nଝଡିବାର ମଂତ୍ର ସିଖିବା ।\n\n[Final Chorus - Male and Female Duet]\nମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ ।\nମନା ନାହିଁ ଗୁଂଥିଦେବାକୁ\nତୁମ ସପ୍ନକୁ ମୋ ସପ୍ନରେ ।\n\n[Soft Outro - Both Voices]\nମନା ନାହିଁ ଗୁଂଥିଦେବାକୁ\nତୁମ ସପ୍ନକୁ ମୋ ସପ୍ନରେ ।",
+  "settings": {
+    "model": "v6",
+    "mode": "Advanced",
+    "weirdness": 30,
+    "style_influence": 65,
+    "duration": "Auto",
+    "max_mode": false,
+    "personalize": false,
+    "variety": "Normal",
+    "vocal_gender": "Unselected; duet directed in lyrics and style",
+    "exclude_styles": ""
+  },
+  "language": "odia",
+  "poem": "i-am-free-to-dream",
+  "variant": "soft-answer-duet",
+  "stage": "selection-pending",
+  "source": "kb/poems/i-am-free-to-dream/languages/odia.md",
+  "source_sha256": "5ef99c6883f09fd420d2a6c9aedf56314cf014814448850bac3f45339b95789e",
+  "title": "ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ — Soft Duet",
+  "style": "Warm youthful male solo with soft female answering phrases, tender close-harmony duet at the end. Male sings the opening, all verses and first chorus. Female enters softly only at the mountain-and-moon invitation, offering brief replies behind the lead. Keep her delicate and supportive until the final refrain, when both voices blend intimately. Odia indie-folk ballad, natural Odia diction and complete words, flowing phrases with brief subtle Odissi-informed turns. Quiet acoustic guitar, bamboo flute, soft bass and restrained mardala. Calm soulful joy, affection and wonder. Spacious unhurried phrasing, sparse opening, gradually add warmth without speeding up. Distinct breath between the repeated gathering phrases; full pause after the potter declaration, soft instruments sustaining beneath. Use only supplied lyric words. Peaceful hopeful outro. No female-led verse, alternating lead verses, busy vocal counterpoint, driving beat, mournful delivery or dramatic crescendo.",
+  "submission_limit": 1,
+  "expected_candidates": 2,
+  "actual_submissions": 1,
+  "selected_candidate": null,
+  "publication_authorized": false,
+  "changes": [
+    "Restore male solo verses and first chorus, soft female answering phrases only at invitation, close-harmony duet at end",
+    "Sung words unchanged"
+  ],
+  "author_direction": "male solo with soft female answering phrases, tender close-harmony duet at the end",
+  "input_verified": true,
+  "submission_started_at": "2026-09-27T14:45:41.478Z",
+  "submitted_at": "2026-09-27T14:45:42.926Z",
+  "completed_at": "2026-09-27T14:47:08.139Z",
+  "candidates": [
+    {
+      "take": 1,
+      "id": "b067e08b-df3f-4cb3-ab27-0b5c8f84ce9e",
+      "url": "https://suno.com/song/b067e08b-df3f-4cb3-ab27-0b5c8f84ce9e",
+      "status": "ready-for-review",
+      "duration_display": "2:52",
+      "duration_source": "Suno create list"
+    },
+    {
+      "take": 2,
+      "id": "3e516c34-3f1e-49c2-99aa-651c16dc625e",
+      "url": "https://suno.com/song/3e516c34-3f1e-49c2-99aa-651c16dc625e",
+      "status": "ready-for-review",
+      "duration_display": "2:29",
+      "duration_source": "Suno create list"
+    }
+  ],
+  "history_note": "Migrated production snapshot; reconcile with current direction and catalog before resuming. No new generation authorized."
+}

@@ -1,0 +1,47 @@
+{
+  "stage": "published",
+  "language": "italian",
+  "submission_limit": 1,
+  "intended_candidates": 2,
+  "publication_authorized": true,
+  "selected_candidate": "96fc5deb-114c-4140-ade4-94c0bfb9b67d",
+  "submission_started_at": "2026-09-27T00:58:46.648Z",
+  "settings": {
+    "model": "v6",
+    "mode": "Advanced",
+    "vocal_gender": "Male",
+    "duration": "Auto",
+    "max_mode": false,
+    "weirdness": 50,
+    "style_influence": 65,
+    "variety": "Normal",
+    "personalize": false
+  },
+  "lyrics": "[Intro]\nSono libero di sognare,\ndi perdermi a metà del cammino.\nLa Stella Polare mi guiderà.\n\n[Verse 1]\nRaccolgo… raccolgo…\nil mondo, e lo stringo a me,\ncon la speranza di unirlo,\ndi renderlo più bello.\n\n[Verse 2]\nSono un vasaio.\n\nHo imparato a dare forma,\na dare colore,\na seminare un sorriso\nsul tuo viso.\n\n[Chorus]\nSono libero di sognare,\ndi perdermi a metà del cammino.\nLa Stella Polare mi guiderà.\nSono libero di sognare.\n\n[Bridge]\nVieni, saliamo sulle montagne.\nVieni, guardiamo la luna.\nFianco a fianco con le nuvole,\nimpariamo il segreto\ndi cadere come pioggia.\n\n[Final Chorus]\nSono libero di sognare,\nlibero di intrecciare\ni tuoi sogni ai miei.\nSono libero di sognare.\n\n[Soft Outro]\nI tuoi sogni…\nintrecciati ai miei.",
+  "style": "Intimate Italian acoustic cantautore ballad, warm youthful male storytelling vocal, clear Italian diction and natural word stress. Calm, soulful quiet joy, affection, wonder and freedom to dream. Gentle unhurried 6/8 sway, softly fingerpicked acoustic guitar, sparse lyrical piano, rounded acoustic bass, delicate brushes and restrained sustained strings. Spacious conversational verses and a graceful, memorable refrain with subtle close harmonies. Begin with voice and guitar; gradually add warmth without increasing pace. Leave a breath between “Raccolgo… raccolgo…” and a fuller pause after “Sono un vasaio.” Let soft instruments sustain beneath these breaths. End in peaceful, hopeful contentment. No driving beat, mournful delivery, operatic projection, dramatic crescendo or excessive vocal ornamentation.",
+  "submitted_at": "2026-09-27T00:59:05.282Z",
+  "review_status": "awaiting-author-selection",
+  "release_url": "https://github.com/ahimanikya/free-to-dream/releases/tag/italian-2026-09-26",
+  "media_commit": "02087b0129efa3cbd43971476d18c280a09a9fee",
+  "website_commit": "e11acc7",
+  "page_url": "https://ahimanikya.github.io/free-to-dream/poems--i-am-free-to-dream--languages--italian.html",
+  "poem": "i-am-free-to-dream",
+  "candidates": [
+    {
+      "take": 1,
+      "id": "96fc5deb-114c-4140-ade4-94c0bfb9b67d",
+      "url": "https://suno.com/song/96fc5deb-114c-4140-ade4-94c0bfb9b67d",
+      "sha256": "e07948081957122a6403e0e956604388cff6b4a418956cc5db48d759185dc016",
+      "duration_seconds": 152.76,
+      "bytes": 3504962,
+      "decode_check": "passed"
+    },
+    {
+      "take": 2,
+      "id": "160908d2-19b0-4fee-bf3a-35553317ad3e",
+      "url": "https://suno.com/song/160908d2-19b0-4fee-bf3a-35553317ad3e",
+      "duration_display": "2:29"
+    }
+  ],
+  "history_note": "Migrated production snapshot; reconcile with current direction and catalog before resuming. No new generation authorized."
+}

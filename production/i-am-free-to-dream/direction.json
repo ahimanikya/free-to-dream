@@ -1,0 +1,28 @@
+{
+  "updated_at": "2026-09-27T14:51:02.054221+00:00",
+  "stage": "direction-confirmed",
+  "generation_submissions": 0,
+  "tamil": {
+    "reference_recording_id": "tamil-audio-01",
+    "reference_repo_path": "media/tamil/i-am-free-to-dream-tamil.mp3",
+    "reference_duration_seconds": 152.04,
+    "request": "Preserve published Tamil melody and backing while applying the specified soft female replies and final harmony.",
+    "do_not_replace_published_recording": true,
+    "preserve": "The previously published recording’s melody and language-specific musical arrangement; change only vocal treatment.",
+    "vocal_direction": "male solo with soft female answering phrases, tender close-harmony duet at the end",
+    "implementation_note": "Use the approved recording as the musical reference. A fresh text-only generation does not establish preservation of its melody or backing. Verify an appropriate audio-based editing workflow before generating."
+  },
+  "sambalpuri": {
+    "reference_song_url": "https://suno.com/song/a2b3ded1-b0a2-4e02-917e-66a8b4815ced",
+    "reference_style": "Sambalpuri folk ballad, gently lilting and unhurried, bamboo-flute replies over lightly played dhol, soft bass and quiet acoustic guitar; instruments sustain through clear breaths between gathering phrases and a fuller pause after the potter declaration. The bridge opens warmly without speeding up, the refrain blooms into quiet communal joy, and the duet outro settles tenderly. Warm youthful male lead with natural Sambalpuri pronunciation, affectionate conversational delivery, solo opening and verses, soft female answering phrases in the bridge, then close male-female duet.",
+    "direction": "Retain the author-selected Sambalpuri musical variation exactly as the baseline; only refine vocal treatment.",
+    "do_not_replace_published_recording": true,
+    "preserve": "The previously published recording’s melody and language-specific musical arrangement; change only vocal treatment.",
+    "vocal_direction": "male solo with soft female answering phrases, tender close-harmony duet at the end",
+    "implementation_note": "Use the approved recording as the musical reference. A fresh text-only generation does not establish preservation of its melody or backing. Verify an appropriate audio-based editing workflow before generating.",
+    "style_edit_scope": "Only the vocal-arrangement sentence changed from the selected take’s recorded style; all other wording retained."
+  },
+  "author_direction": "male solo with soft female answering phrases, tender close-harmony duet at the end",
+  "default_for_new_arrangements": "solo; optional duet requires author choice",
+  "scope_note": "Tamil and Sambalpuri instructions preserve selected references for an optional vocal refinement. No new generation authorized."
+}

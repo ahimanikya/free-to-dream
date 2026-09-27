@@ -1,0 +1,55 @@
+{
+  "language": "sambalpuri",
+  "poem": "i-am-free-to-dream",
+  "variant": "mixed-duet",
+  "stage": "selection-pending",
+  "source": "kb/poems/i-am-free-to-dream/languages/sambalpuri.md",
+  "source_sha256": "00c085b862d0f77d14f556ab0a9da7433ba9ced9f2e61892efbb98cb554d7fe7",
+  "title": "ମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ — Mixed Duet",
+  "lyrics": "[Intro - Male Lead]\nମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ,\nମଝି ବାଟେ ହଜିଯିବାକେ ବି ମନା ନାଇଁ।\nଧ୍ରୁବତାରା ବାଟ୍ ଦେଖେଇଦେବା।\n\n[Verse 1 - Female Lead]\nସାଉଁଟି... ସାଉଁଟି...\nସଂସାର୍‌କେ ଜାବ୍‌ଡ଼ି ଧରିଛେଁ—\nଜୁଡ଼ିଦେବାର୍ ଆଶାନେ,\nସଜେଇଦେବାର୍ ଆଶାନେ।\n\n[Verse 2 - Male Lead]\nକୁମ୍ଭାର୍ ମୁଇଁ।\n\nଗଢ଼ିଦେବାର୍ ସିଖିଛେଁ,\nରଙ୍ଗ୍ ଲଗେଇ,\nତୋର୍ ମୁହେଁ ହସ୍ ବୁନ୍‌ବାର୍ ସିଖିଛେଁ।\n\n[Chorus - Male and Female Together]\nମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ,\nମଝି ବାଟେ ହଜିଯିବାକେ ବି ମନା ନାଇଁ।\nଧ୍ରୁବତାରା ବାଟ୍ ଦେଖେଇଦେବା।\n\n[Bridge - Alternating Male and Female Lines]\nଆ, ପାହାଡ଼୍ ଚଢ଼୍‌ମା।\nଆ, ଜନ୍ ଦେଖ୍‌ମା।\nବାଦଲ୍ ସାଙ୍ଗେ କାନ୍ଧ୍ ମିଲେଇ,\nବର୍ଷା ହେଇ ଝର୍‌ବାର୍ ମନ୍ତର୍ ସିଖ୍‌ମା।\n\n[Final Chorus - Male and Female Duet]\nମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ।\nତୋର୍ ସପନ୍‌କେ ମୋର୍ ସପନ୍‌ନେ\nଗୁଁଥିଦେବାକେ ବି ମନା ନାଇଁ।\n\n[Soft Outro - Both Voices, Soft Harmony]\nତୋର୍ ସପନ୍‌କେ ମୋର୍ ସପନ୍‌ନେ...\nଗୁଁଥିଦେବାକେ ବି ମନା ନାଇଁ।",
+  "style": "Warm youthful male-female duet with two distinct, equally present voices. Male opens, female leads gathering verse, male sings potter verse; alternate complete lines in the invitation, join in tender chorus harmonies and a shared ending. Sambalpuri folk ballad; natural western-Odisha speech cadence, compact word endings and short connected melodic turns. Bamboo flute, lightly played dhol, soft bass and quiet acoustic guitar; gently lilting regional pulse. Calm soulful joy, affection and wonder. Unhurried pulse, spacious phrasing, sparse opening; gradually add warmth without speeding up. Breath between repeated ସାଉଁଟି phrases; full pause after କୁମ୍ଭାର୍ ମୁଇଁ, soft instruments sustaining beneath. Let long lines finish naturally. Keep words clear in duet passages; only supplied lyrics. Peaceful hopeful dream-weaving outro. No driving beat, mournful delivery, dramatic crescendo or elaborate vocal runs.",
+  "settings": {
+    "model": "v6",
+    "mode": "Advanced",
+    "weirdness": 30,
+    "style_influence": 65,
+    "duration": "Auto",
+    "max_mode": false,
+    "personalize": false,
+    "variety": "Normal",
+    "vocal_gender": "Unselected; duet directed in lyrics and style",
+    "exclude_styles": ""
+  },
+  "submission_limit": 1,
+  "expected_candidates": 2,
+  "actual_submissions": 1,
+  "selected_candidate": null,
+  "publication_authorized": false,
+  "changes": [
+    "Section vocal directions only; sung words unchanged",
+    "Female lead verse and shared choruses for a more evenly mixed duet; retain local musical phrasing"
+  ],
+  "input_verified": true,
+  "submission_started_at": "2026-09-27T14:36:41.497Z",
+  "submitted_at": "2026-09-27T14:36:42.580Z",
+  "completed_at": "2026-09-27T14:38:03.886Z",
+  "candidates": [
+    {
+      "take": 1,
+      "id": "cfa5b145-8a37-4b41-bd1d-2f3548451cc6",
+      "url": "https://suno.com/song/cfa5b145-8a37-4b41-bd1d-2f3548451cc6",
+      "status": "ready-for-review",
+      "duration_display": "2:11",
+      "duration_source": "Suno create list"
+    },
+    {
+      "take": 2,
+      "id": "5544ab7d-8d01-4e24-92ca-31091e5e966a",
+      "url": "https://suno.com/song/5544ab7d-8d01-4e24-92ca-31091e5e966a",
+      "status": "ready-for-review",
+      "duration_display": "1:50",
+      "duration_source": "Suno create list"
+    }
+  ],
+  "history_note": "Migrated production snapshot; reconcile with current direction and catalog before resuming. No new generation authorized."
+}

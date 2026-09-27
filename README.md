@@ -14,6 +14,8 @@ The collection has **102 language entries: 30 original/adapted lyric texts and 7
 - [Meaning and adaptation guide](kb/poems/i-am-free-to-dream/meaning.md)
 - [How to contribute](CONTRIBUTING.md)
 - [Audio and video files in Git](media/README.md)
+- [Work from any computer or a cloud workspace](kb/guides/portable-workspace.md)
+- [Project skill](skills/poetry-to-music/SKILL.md) · [Production history](production/README.md)
 - [Language-to-song-and-video workflow](kb/guides/music-pipeline.md)
 - [Add an audio recording](kb/guides/add-media.md)
 - [Publish the listening site and export a GitHub wiki](kb/guides/publishing.md)
@@ -79,6 +81,9 @@ The existing 13 audio files and 18 videos are available as author-authorized rev
 | `media/<language>/` | Audio/video files tracked with Git LFS, version notes and checksums |
 | `media/images/` | Shared cover images and their prompt |
 | `local-assets/` | Ignored working media, masters and private reference material |
+| `skills/` | Maintained project skill, references and preparation helper |
+| `production/` | Portable prompts, settings, candidate history and decisions |
+| `.devcontainer/` | Cloud/development-container setup |
 | `web/` | Listening-site design and search behavior |
 | `scripts/` | Validation, site generation, media registration and wiki export |
 | `site/` | Generated local listening preview; ignored |

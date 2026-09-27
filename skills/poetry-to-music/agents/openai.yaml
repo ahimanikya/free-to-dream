@@ -1,0 +1,4 @@
+interface:
+  display_name: "Poetry to Music"
+  short_description: "Turn poetry into Suno songs and publish the collection"
+  default_prompt: "Use $poetry-to-music to prepare the next batch of poems or translations for Suno, track the takes, and publish selected recordings to GitHub."

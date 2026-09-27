@@ -1,0 +1,56 @@
+{
+  "lyrics": "[Intro - Male Solo]\nস্বপ্ন দেখতে আমার মানা নেই,\nপথের মাঝে হারিয়ে যেতেও মানা নেই।\nধ্রুবতারা পথ দেখাবে।\n\n[Verse 1 - Male Solo]\nকুড়িয়ে... কুড়িয়ে...\nসংসারটাকে বুকে জড়িয়ে রেখেছি—\nজুড়ে দেওয়ার আশায়,\nসাজিয়ে দেওয়ার আশায়।\n\n[Verse 2 - Male Solo]\nআমি এক কুমোর।\n\nগড়ে তুলতে শিখেছি,\nরঙে রাঙিয়ে,\nতোমার মুখে হাসি ফোটাতে শিখেছি।\n\n[Chorus - Male Lead]\nস্বপ্ন দেখতে আমার মানা নেই,\nপথের মাঝে হারিয়ে যেতেও মানা নেই।\nধ্রুবতারা পথ দেখাবে।\n\n[Bridge - Male Lead, Soft Female Responses]\nএসো, পাহাড়ে উঠি।\nএসো, চাঁদ দেখি।\nমেঘের সঙ্গে কাঁধ মিলিয়ে,\nবৃষ্টি হয়ে ঝরার মন্ত্র শিখি।\n\n[Final Chorus - Male and Female Duet]\nস্বপ্ন দেখতে আমার মানা নেই।\nতোমার স্বপ্ন আমার স্বপ্নের সঙ্গে\nবুনে দিতেও মানা নেই।\n\n[Soft Outro - Both Voices]\nতোমার স্বপ্ন আমার স্বপ্নের সঙ্গে...\nবুনে দিতেও মানা নেই।",
+  "settings": {
+    "model": "v6",
+    "mode": "Advanced",
+    "weirdness": 30,
+    "style_influence": 65,
+    "duration": "Auto",
+    "max_mode": false,
+    "personalize": false,
+    "variety": "Normal",
+    "vocal_gender": "Unselected; duet directed in lyrics and style",
+    "exclude_styles": ""
+  },
+  "language": "bengali",
+  "poem": "i-am-free-to-dream",
+  "variant": "soft-answer-duet",
+  "stage": "selection-pending",
+  "source": "kb/poems/i-am-free-to-dream/languages/bengali.md",
+  "source_sha256": "05457e3bff8c9bcb4e88fd0b585d6ef69a6cc0685edbcca20f984ff40b48f699",
+  "title": "স্বপ্ন দেখতে আমার মানা নেই — Soft Duet",
+  "style": "Warm youthful male solo with soft female answering phrases, tender close-harmony duet at the end. Male sings the opening, all verses and first chorus. Female enters softly only at the mountain-and-moon invitation, offering brief replies behind the lead. Keep her delicate and supportive until the final refrain, when both voices blend intimately. Bengali poetic folk with bhatiyali-inspired spacious phrasing, natural diction, long connected breathing lines and gentle descending endings. Dotara, airy bamboo flute, soft bass, sparse hand percussion. Calm soulful joy, affection and wonder. Spacious unhurried phrasing, sparse opening, gradually add warmth without speeding up. Distinct breath between the repeated gathering phrases; full pause after the potter declaration, soft instruments sustaining beneath. Use only supplied lyric words. Peaceful hopeful outro. No female-led verse, alternating lead verses, busy vocal counterpoint, driving beat, mournful delivery or dramatic crescendo.",
+  "submission_limit": 1,
+  "expected_candidates": 2,
+  "actual_submissions": 1,
+  "selected_candidate": null,
+  "publication_authorized": false,
+  "changes": [
+    "Restore male solo verses and first chorus, soft female answering phrases only at invitation, close-harmony duet at end",
+    "Sung words unchanged"
+  ],
+  "author_direction": "male solo with soft female answering phrases, tender close-harmony duet at the end",
+  "input_verified": true,
+  "submission_started_at": "2026-09-27T14:45:24.281Z",
+  "submitted_at": "2026-09-27T14:45:25.431Z",
+  "completed_at": "2026-09-27T14:47:08.138Z",
+  "candidates": [
+    {
+      "take": 1,
+      "id": "750fc863-7954-4931-9a11-d66b7176ed4e",
+      "url": "https://suno.com/song/750fc863-7954-4931-9a11-d66b7176ed4e",
+      "status": "ready-for-review",
+      "duration_display": "2:19",
+      "duration_source": "Suno create list"
+    },
+    {
+      "take": 2,
+      "id": "164e5a83-418b-4f29-a85f-bb413b03d074",
+      "url": "https://suno.com/song/164e5a83-418b-4f29-a85f-bb413b03d074",
+      "status": "ready-for-review",
+      "duration_display": "2:13",
+      "duration_source": "Suno create list"
+    }
+  ],
+  "history_note": "Migrated production snapshot; reconcile with current direction and catalog before resuming. No new generation authorized."
+}

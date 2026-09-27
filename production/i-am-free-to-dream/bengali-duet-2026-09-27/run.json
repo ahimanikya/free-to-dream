@@ -1,0 +1,52 @@
+{
+  "language": "bengali",
+  "poem": "i-am-free-to-dream",
+  "variant": "duet",
+  "stage": "selection-pending",
+  "source": "kb/poems/i-am-free-to-dream/languages/bengali.md",
+  "source_sha256": "05457e3bff8c9bcb4e88fd0b585d6ef69a6cc0685edbcca20f984ff40b48f699",
+  "title": "স্বপ্ন দেখতে আমার মানা নেই — Duet",
+  "lyrics": "[Intro - Male Solo]\nস্বপ্ন দেখতে আমার মানা নেই,\nপথের মাঝে হারিয়ে যেতেও মানা নেই।\nধ্রুবতারা পথ দেখাবে।\n\n[Verse 1 - Male Solo]\nকুড়িয়ে... কুড়িয়ে...\nসংসারটাকে বুকে জড়িয়ে রেখেছি—\nজুড়ে দেওয়ার আশায়,\nসাজিয়ে দেওয়ার আশায়।\n\n[Verse 2 - Male Solo]\nআমি এক কুমোর।\n\nগড়ে তুলতে শিখেছি,\nরঙে রাঙিয়ে,\nতোমার মুখে হাসি ফোটাতে শিখেছি।\n\n[Chorus - Male Lead]\nস্বপ্ন দেখতে আমার মানা নেই,\nপথের মাঝে হারিয়ে যেতেও মানা নেই।\nধ্রুবতারা পথ দেখাবে।\n\n[Bridge - Male Lead, Soft Female Responses]\nএসো, পাহাড়ে উঠি।\nএসো, চাঁদ দেখি।\nমেঘের সঙ্গে কাঁধ মিলিয়ে,\nবৃষ্টি হয়ে ঝরার মন্ত্র শিখি।\n\n[Final Chorus - Male and Female Duet]\nস্বপ্ন দেখতে আমার মানা নেই।\nতোমার স্বপ্ন আমার স্বপ্নের সঙ্গে\nবুনে দিতেও মানা নেই।\n\n[Soft Outro - Both Voices]\nতোমার স্বপ্ন আমার স্বপ্নের সঙ্গে...\nবুনে দিতেও মানা নেই।",
+  "style": "Dreamy Bengali poetic folk duet ballad with bhatiyali-inspired spacious phrasing, calm soulful joy and affection. Warm youthful male solo opening and verses; soft female answers enter at the mountain-and-moon invitation, both voices meet in the final refrain. Natural Bengali diction, long connected breathing lines and gentle descending endings. Dotara figures, airy bamboo-flute replies, soft bass and sparse light hand percussion. Elastic unhurried pulse, gradual warmth without speeding up. Leave a breath between কুড়িয়ে... কুড়িয়ে... and a full pause after আমি এক কুমোর, with soft instrumental sustain. Female responses remain brief and separate from the lead; fuller harmony only at the ending. Use only supplied lyric words. Original memorable melody, tender dream-weaving outro and peaceful hopeful contentment. No mournful delivery, driving dance beat, dramatic crescendo, elaborate vocal runs or added lyrics.",
+  "settings": {
+    "model": "v6",
+    "mode": "Advanced",
+    "weirdness": 30,
+    "style_influence": 65,
+    "duration": "Auto",
+    "max_mode": false,
+    "personalize": false,
+    "variety": "Normal",
+    "vocal_gender": "Unselected; duet directed in lyrics and style",
+    "exclude_styles": ""
+  },
+  "submission_limit": 1,
+  "expected_candidates": 2,
+  "selected_candidate": null,
+  "publication_authorized": false,
+  "changes": [
+    "Section directions only; sung words unchanged",
+    "Language-specific duet style"
+  ],
+  "input_verified": true,
+  "submission_started_at": "2026-09-27T14:04:56.316666+00:00",
+  "submitted_at": "2026-09-27T14:05:34.078609+00:00",
+  "generated_at": "2026-09-27T14:06:11.775158+00:00",
+  "candidates": [
+    {
+      "take": 1,
+      "id": "9fa573f8-4289-4662-905f-fc9b821743c8",
+      "url": "https://suno.com/song/9fa573f8-4289-4662-905f-fc9b821743c8",
+      "status": "available-for-review",
+      "duration_display": "2:30"
+    },
+    {
+      "take": 2,
+      "id": "f8ac6c42-3c10-40b9-af6f-3531ab7943cb",
+      "url": "https://suno.com/song/f8ac6c42-3c10-40b9-af6f-3531ab7943cb",
+      "status": "available-for-review",
+      "duration_display": "2:37"
+    }
+  ],
+  "history_note": "Migrated production snapshot; reconcile with current direction and catalog before resuming. No new generation authorized."
+}

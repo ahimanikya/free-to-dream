@@ -1,0 +1,43 @@
+{
+  "language": "sambalpuri",
+  "poem": "i-am-free-to-dream",
+  "stage": "published",
+  "selected_song_id": "a2b3ded1-b0a2-4e02-917e-66a8b4815ced",
+  "source_url": "https://suno.com/s/IrqMCCMtXgd0RCli",
+  "canonical_url": "https://suno.com/song/a2b3ded1-b0a2-4e02-917e-66a8b4815ced",
+  "selected_by": "author",
+  "selected_at": "2026-09-27",
+  "generation_settings": {
+    "model": "v6",
+    "other_settings": "not independently verified"
+  },
+  "lyrics": "[Intro - Male Solo]\nମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ,\nମଝି ବାଟେ ହଜିଯିବାକେ ବି ମନା ନାଇଁ।\nଧ୍ରୁବତାରା ବାଟ୍ ଦେଖେଇଦେବା।\n\n[Verse 1 - Male Solo]\nସାଉଁଟି... ସାଉଁଟି...\nସଂସାର୍‌କେ ଜାବ୍‌ଡ଼ି ଧରିଛେଁ—\nଜୁଡ଼ିଦେବାର୍ ଆଶାନେ,\nସଜେଇଦେବାର୍ ଆଶାନେ।\n\n[Verse 2 - Male Solo]\nକୁମ୍ଭାର୍ ମୁଇଁ।\n\nଗଢ଼ିଦେବାର୍ ସିଖିଛେଁ,\nରଙ୍ଗ୍ ଲଗେଇ,\nତୋର୍ ମୁହେଁ ହସ୍ ବୁନ୍‌ବାର୍ ସିଖିଛେଁ।\n\n[Chorus - Male Lead]\nମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ,\nମଝି ବାଟେ ହଜିଯିବାକେ ବି ମନା ନାଇଁ।\nଧ୍ରୁବତାରା ବାଟ୍ ଦେଖେଇଦେବା।\n\n[Bridge - Male Lead, Soft Female Responses]\nଆ, ପାହାଡ଼୍ ଚଢ଼୍‌ମା।\nଆ, ଜନ୍ ଦେଖ୍‌ମା।\nବାଦଲ୍ ସାଙ୍ଗେ କାନ୍ଧ୍ ମିଲେଇ,\nବର୍ଷା ହେଇ ଝର୍‌ବାର୍ ମନ୍ତର୍ ସିଖ୍‌ମା।\n\n[Final Chorus - Male and Female Duet]\nମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ।\nତୋର୍ ସପନ୍‌କେ ମୋର୍ ସପନ୍‌ନେ\nଗୁଁଥିଦେବାକେ ବି ମନା ନାଇଁ।\n\n[Soft Outro - Both Voices]\nତୋର୍ ସପନ୍‌କେ ମୋର୍ ସପନ୍‌ନେ...\nଗୁଁଥିଦେବାକେ ବି ମନା ନାଇଁ।",
+  "style": "Sambalpuri folk ballad, gently lilting and unhurried, bamboo-flute replies over lightly played dhol, soft bass and quiet acoustic guitar; instruments sustain through clear breaths between gathering phrases and a fuller pause after the potter declaration. The bridge opens warmly without speeding up, the refrain blooms into quiet communal joy, and the duet outro settles tenderly. Warm youthful male lead with natural Sambalpuri pronunciation, affectionate conversational delivery, solo opening and verses, soft female answering phrases in the bridge, then close male-female duet.",
+  "visual_frames_reviewed": [
+    "opening",
+    "middle",
+    "ending"
+  ],
+  "release_url": "https://github.com/ahimanikya/free-to-dream/releases/tag/sambalpuri-2026-09-27",
+  "media_commit": "421ab214c41ff356d02a8b74189d52fcdb585af8",
+  "catalog_commit": "1ec5b34b6b9b57bb44f97fc108a29484438238cd",
+  "page_url": "https://ahimanikya.github.io/free-to-dream/poems--i-am-free-to-dream--languages--sambalpuri.html",
+  "website_commit": "34d211f06f137f8674cd39be8f45c6caee601e94",
+  "video_validation": {
+    "full_decode": "passed",
+    "audio_sha256": "adfaa5d4239b2720c1c2e3c7aecdc9fd4154070bec2aa889ca262c598f0fece4",
+    "source_audio_seconds": 151.2,
+    "output_audio_seconds": 151.21075,
+    "video_source_sha256": "3c18cfe26a4e86efcd9a8a02c581e09a384bd05ba526291c168bd018f92447ed",
+    "video_time_factor": 0.8397667314634822,
+    "audio_correlation": 0.9998856853420509,
+    "output_bytes": 77888015,
+    "output_sha256": "799dc7b604b67868d7bdb0d406baba4fc3c8ca3efc5c4ba100ef2ee19f0ecb26"
+  },
+  "download": {
+    "path": "media/sambalpuri/i-am-free-to-dream-sambalpuri.mp3",
+    "sha256": "adfaa5d4239b2720c1c2e3c7aecdc9fd4154070bec2aa889ca262c598f0fece4",
+    "bytes": 3594168
+  },
+  "history_note": "Migrated production snapshot; reconcile with current direction and catalog before resuming. No new generation authorized."
+}

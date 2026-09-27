@@ -1,0 +1,55 @@
+{
+  "language": "tamil",
+  "poem": "i-am-free-to-dream",
+  "variant": "duet",
+  "stage": "selection-pending",
+  "source": "kb/poems/i-am-free-to-dream/languages/tamil.md",
+  "source_sha256": "e366ef9efff6c411cd7a017eb3ce96d0b1cd24df309527f3963e864b6ebe60bf",
+  "title": "கனவு காண எனக்குத் தடையில்லை — Duet",
+  "lyrics": "[Intro - Male Solo]\nஎனக்குக் கனவு காணத் தடையில்லை,\nநடுவழியில் தொலைந்து போகவும் தடையில்லை.\nதுருவ நட்சத்திரம் வழிகாட்டும்.\n\n[Verse 1 - Male Solo]\nசிறிது சிறிதாய்ச் சேர்த்து,\nஉலகை இறுக அணைத்திருக்கிறேன்—\nஅதை ஒன்றுசேர்க்கும் நம்பிக்கையில்,\nஅழகுபடுத்தும் நம்பிக்கையில்.\n\n[Verse 2 - Male Solo]\nநான் ஒரு குயவன்.\n\nஉருவம் தரக் கற்றிருக்கிறேன்,\nவண்ணம் தீட்டி,\nஉன் முகத்தில் புன்னகை விதைக்கக் கற்றிருக்கிறேன்.\n\n[Chorus - Male Lead]\nஎனக்குக் கனவு காணத் தடையில்லை,\nநடுவழியில் தொலைந்து போகவும் தடையில்லை.\nதுருவ நட்சத்திரம் வழிகாட்டும்.\n\n[Bridge - Male Lead, Soft Female Responses]\nவா, மலை ஏறுவோம்.\nவா, நிலவைப் பார்ப்போம்.\nமேகங்களோடு தோள் சேர்த்து,\nமழையாய்ப் பொழியும் மந்திரம் கற்போம்.\n\n[Final Chorus - Male and Female Duet]\nஎனக்குக் கனவு காணத் தடையில்லை.\nஉன் கனவுகளை என் கனவுகளோடு\nபின்னிச் சேர்க்கவும் தடையில்லை.\n\n[Soft Outro - Both Voices]\nஉன் கனவுகளை என் கனவுகளோடு...\nபின்னிச் சேர்க்கவும் தடையில்லை.",
+  "style": "Tender Tamil mellisai-inspired indie-folk duet ballad, calm soulful joy, affection and wonder. Warm youthful male solo opening and verses; soft female answers enter at the mountain-and-moon invitation, both voices join tenderly in the final refrain. Natural Tamil diction, clear vowel lengths and doubled consonants; lyrical flowing melody with restrained Carnatic inflections and small turns after complete phrases. Delicate veena replies, soft bamboo flute, quiet acoustic guitar, soft bass and very light mridangam. Unhurried pulse and spacious phrasing; let long lines finish naturally. Breath after the gathering phrase; full pause after நான் ஒரு குயவன், instruments sustaining underneath. Gradually add warmth without speeding up. Keep answering phrases separate from the lead; close harmony at the ending. Use only supplied lyric words. Peaceful, hopeful dream-weaving outro. No driving beat, mournful delivery, dramatic crescendo or elaborate vocal runs.",
+  "settings": {
+    "model": "v6",
+    "mode": "Advanced",
+    "weirdness": 30,
+    "style_influence": 65,
+    "duration": "Auto",
+    "max_mode": false,
+    "personalize": false,
+    "variety": "Normal",
+    "vocal_gender": "Unselected; duet directed in lyrics and style",
+    "exclude_styles": ""
+  },
+  "submission_limit": 1,
+  "expected_candidates": 2,
+  "selected_candidate": null,
+  "publication_authorized": false,
+  "changes": [
+    "Section directions only; sung words unchanged",
+    "Tamil-specific duet style"
+  ],
+  "input_verified": true,
+  "submission_started_at": "2026-09-27T14:27:12.065584+00:00",
+  "submitted_at": "2026-09-27T14:27:37.167006+00:00",
+  "actual_submissions": 1,
+  "completed_at": "2026-09-27T14:30:13.878155+00:00",
+  "candidates": [
+    {
+      "take": 1,
+      "id": "081ca235-b828-44de-93be-e0b79ed779bb",
+      "url": "https://suno.com/song/081ca235-b828-44de-93be-e0b79ed779bb",
+      "duration_display": "2:58",
+      "status": "ready-for-review",
+      "duration_source": "Suno create list"
+    },
+    {
+      "take": 2,
+      "id": "c1d36a8a-a025-428c-b32e-bd605c262409",
+      "url": "https://suno.com/song/c1d36a8a-a025-428c-b32e-bd605c262409",
+      "duration_display": "2:52",
+      "status": "ready-for-review",
+      "duration_source": "Suno create list"
+    }
+  ],
+  "history_note": "Migrated production snapshot; reconcile with current direction and catalog before resuming. No new generation authorized."
+}

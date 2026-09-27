@@ -1,0 +1,55 @@
+{
+  "language": "bengali",
+  "poem": "i-am-free-to-dream",
+  "variant": "mixed-duet",
+  "stage": "selection-pending",
+  "source": "kb/poems/i-am-free-to-dream/languages/bengali.md",
+  "source_sha256": "05457e3bff8c9bcb4e88fd0b585d6ef69a6cc0685edbcca20f984ff40b48f699",
+  "title": "স্বপ্ন দেখতে আমার মানা নেই — Mixed Duet",
+  "lyrics": "[Intro - Male Lead]\nস্বপ্ন দেখতে আমার মানা নেই,\nপথের মাঝে হারিয়ে যেতেও মানা নেই।\nধ্রুবতারা পথ দেখাবে।\n\n[Verse 1 - Female Lead]\nকুড়িয়ে... কুড়িয়ে...\nসংসারটাকে বুকে জড়িয়ে রেখেছি—\nজুড়ে দেওয়ার আশায়,\nসাজিয়ে দেওয়ার আশায়।\n\n[Verse 2 - Male Lead]\nআমি এক কুমোর।\n\nগড়ে তুলতে শিখেছি,\nরঙে রাঙিয়ে,\nতোমার মুখে হাসি ফোটাতে শিখেছি।\n\n[Chorus - Male and Female Together]\nস্বপ্ন দেখতে আমার মানা নেই,\nপথের মাঝে হারিয়ে যেতেও মানা নেই।\nধ্রুবতারা পথ দেখাবে।\n\n[Bridge - Alternating Male and Female Lines]\nএসো, পাহাড়ে উঠি।\nএসো, চাঁদ দেখি।\nমেঘের সঙ্গে কাঁধ মিলিয়ে,\nবৃষ্টি হয়ে ঝরার মন্ত্র শিখি।\n\n[Final Chorus - Male and Female Duet]\nস্বপ্ন দেখতে আমার মানা নেই।\nতোমার স্বপ্ন আমার স্বপ্নের সঙ্গে\nবুনে দিতেও মানা নেই।\n\n[Soft Outro - Both Voices, Soft Harmony]\nতোমার স্বপ্ন আমার স্বপ্নের সঙ্গে...\nবুনে দিতেও মানা নেই।",
+  "style": "Warm youthful male-female duet with two distinct, equally present voices. Male opens, female leads gathering verse, male sings potter verse; alternate complete lines in the invitation, join in tender chorus harmonies and a shared ending. Bengali poetic folk, bhatiyali-inspired spacious melodic phrasing; natural Bengali diction, long connected lines, gently descending endings. Dotara, airy bamboo flute, soft bass, sparse hand percussion. Calm soulful joy, affection and wonder. Unhurried pulse, spacious phrasing, sparse opening; gradually add warmth without speeding up. Breath between repeated কুড়িয়ে phrases; full pause after আমি এক কুমোর, soft instruments sustaining beneath. Let long lines finish naturally. Keep words clear in duet passages; only supplied lyrics. Peaceful hopeful dream-weaving outro. No driving beat, mournful delivery, dramatic crescendo or elaborate vocal runs.",
+  "settings": {
+    "model": "v6",
+    "mode": "Advanced",
+    "weirdness": 30,
+    "style_influence": 65,
+    "duration": "Auto",
+    "max_mode": false,
+    "personalize": false,
+    "variety": "Normal",
+    "vocal_gender": "Unselected; duet directed in lyrics and style",
+    "exclude_styles": ""
+  },
+  "submission_limit": 1,
+  "expected_candidates": 2,
+  "actual_submissions": 1,
+  "selected_candidate": null,
+  "publication_authorized": false,
+  "changes": [
+    "Section vocal directions only; sung words unchanged",
+    "Female lead verse and shared choruses for a more evenly mixed duet; retain local musical phrasing"
+  ],
+  "input_verified": true,
+  "submission_started_at": "2026-09-27T14:35:35.857Z",
+  "submitted_at": "2026-09-27T14:35:37.286Z",
+  "completed_at": "2026-09-27T14:38:03.883Z",
+  "candidates": [
+    {
+      "take": 1,
+      "id": "9d21e132-6a0d-4d13-b377-d90c640b15eb",
+      "url": "https://suno.com/song/9d21e132-6a0d-4d13-b377-d90c640b15eb",
+      "status": "ready-for-review",
+      "duration_display": "2:02",
+      "duration_source": "Suno create list"
+    },
+    {
+      "take": 2,
+      "id": "f186e835-1a44-4245-9bcc-5f9f05ce5d65",
+      "url": "https://suno.com/song/f186e835-1a44-4245-9bcc-5f9f05ce5d65",
+      "status": "ready-for-review",
+      "duration_display": "1:49",
+      "duration_source": "Suno create list"
+    }
+  ],
+  "history_note": "Migrated production snapshot; reconcile with current direction and catalog before resuming. No new generation authorized."
+}
