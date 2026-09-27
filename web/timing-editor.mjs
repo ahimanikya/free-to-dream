@@ -114,7 +114,7 @@ export async function setupTimingEditor(doc=document) {
   });
   window.addEventListener('beforeunload',event=>{if(dirty){event.preventDefault();event.returnValue='';}});
   try {
-    const r=await fetch('assets/listening.json');if(!r.ok)throw Error();tracks=await r.json();
+    const r=await fetch('assets/listening.json', {cache: 'no-cache'});if(!r.ok)throw Error();tracks=await r.json();
     choice.replaceChildren();
     for(const item of tracks){const option=doc.createElement('option');option.value=item.id;option.textContent=item.title+(item.archived?' · earlier take':'');choice.append(option);}
     const requested=new URLSearchParams(location.search).get('recording');

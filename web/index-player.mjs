@@ -9,7 +9,7 @@ export function playbackTime(seconds) {
   if (!Number.isFinite(seconds) || seconds < 0) return '0:00';
   return Math.floor(seconds / 60) + ':' + String(Math.floor(seconds % 60)).padStart(2, '0');
 }
-export function setupIndexPlayer(doc = document, load = () => fetch('assets/listening.json').then(r => {
+export function setupIndexPlayer(doc = document, load = () => fetch('assets/listening.json', {cache: 'no-cache'}).then(r => {
   if (!r.ok) throw Error('Could not load recordings');
   return r.json();
 }), loadLyrics = url => fetch(url).then(response => {
