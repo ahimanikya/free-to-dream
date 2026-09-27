@@ -270,6 +270,16 @@
       "title": "Italian video",
       "status": "working",
       "notes": "Author-selected 2:33 take; native-speaker review remains open."
+    },
+    {
+      "repo_path": "media/bengali/i-am-free-to-dream-bengali.mp3",
+      "sha256": "079a222320d0a72bf051fb2a535f9355c199f6d778b17ea2c168a5ab25555b6d",
+      "bytes": 3874216,
+      "source_name": "স্বপ্ন দেখতে আমার মানা নেই.mp3",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/bengali-2026-09-26/i-am-free-to-dream-bengali.mp3",
+      "title": "Bengali audio",
+      "status": "working",
+      "notes": "Author-selected Take 2, 2:41; native-speaker review remains open."
     }
   ],
   "unavailable_originals": [

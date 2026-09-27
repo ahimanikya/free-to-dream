@@ -627,5 +627,40 @@
     "archived": false,
     "duration_seconds": 152.74,
     "source_url": "https://suno.com/song/96fc5deb-114c-4140-ade4-94c0bfb9b67d"
+  },
+  {
+    "id": "bengali-audio-01",
+    "language": "bengali",
+    "poem": "i-am-free-to-dream",
+    "kind": "audio",
+    "title": "স্বপ্ন দেখতে আমার মানা নেই",
+    "local_path": null,
+    "repo_path": "media/bengali/i-am-free-to-dream-bengali.mp3",
+    "publish": false,
+    "review_status": "needs-review",
+    "rights_status": "release-details-to-confirm",
+    "notes": "Author-selected Take 2. Shared for listening and feedback; native-speaker review remains open.",
+    "credits": {
+      "poem": "Ahimanikya Satapathy",
+      "music_and_vocals": "Generated using Suno AI"
+    },
+    "public_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/main/media/bengali/i-am-free-to-dream-bengali.mp3",
+    "public_preview": true,
+    "preview_authorization": "Author selected Bengali Take 2 and requested updating GitHub on 2026-09-26.",
+    "allow_file_sharing": false,
+    "archived": false,
+    "duration_seconds": 160.82,
+    "source_url": "https://suno.com/song/b216df41-663e-4df3-a465-616fdcb03544",
+    "generation_settings": {
+      "model": "v6",
+      "mode": "Advanced",
+      "vocal_gender": "Male",
+      "duration": "Auto",
+      "style_influence": 65,
+      "weirdness": 50,
+      "variety": "Normal",
+      "max_mode": false,
+      "personalize": false
+    }
   }
 ]

@@ -419,5 +419,17 @@
     "published": true,
     "repo_path": "media/italian/i-am-free-to-dream-italian.mp4",
     "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/italian-2026-09-26/i-am-free-to-dream-italian.mp4"
+  },
+  {
+    "sha256": "079a222320d0a72bf051fb2a535f9355c199f6d778b17ea2c168a5ab25555b6d",
+    "local_path": null,
+    "bytes": 3874216,
+    "source_names": [
+      "স্বপ্ন দেখতে আমার মানা নেই.mp3"
+    ],
+    "role": "working-asset",
+    "published": true,
+    "repo_path": "media/bengali/i-am-free-to-dream-bengali.mp3",
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/bengali-2026-09-26/i-am-free-to-dream-bengali.mp3"
   }
 ]
