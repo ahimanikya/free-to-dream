@@ -97,3 +97,9 @@ A Filipino / Tagalog singer can help identify the recording's actual phrasing an
 **Vocal choice — solo baseline for new arrangements.** Keep the existing author-selected recording as the reference. Its actual vocal format needs listening review; no duet has been selected here as the default.
 
 **What remains open.** Document what is heard before attributing a style or tradition. A fluent singer should check word stress, complete phrases, the potter pause and the calm emotional flow, then identify any local musical influence with a reference. A second voice can be proposed with its own reason and reviewed separately.
+
+## Working settings and listening checks
+
+Use the [shared generation settings](../../../guides/generation-settings.md) for this poem, including Max Mode Off and the common exclusions. Keep this language’s musical direction and listening checks; record any author-approved settings exception with the take.
+
+The shared controls do not supply the missing style prompt. Document and review this recording’s musical direction before generating another take.

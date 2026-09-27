@@ -7,6 +7,8 @@ status: stable
 
 The author directs one language at a time. This is the agreed workflow for **I Am Free to Dream**.
 
+Every new run uses the [shared generation settings](generation-settings.md), including Max Mode Off and the common exclusions, unless the author requests a documented exception. Preserve each language’s musical direction. The prepared settings are intentions; verify and save the actual controls before submitting.
+
 1. **Choose a language.** Check that its lyric adaptation and cultural style prompt exist. A pending adaptation brief is not a finished translation. Prepare one Suno submission, normally two candidate takes, using the existing Pro account.
 2. **Review the audio.** Share the candidate links and actual settings. Wait for the author to choose a take before downloading or publishing. Do not generate the next language automatically.
 3. **Select a take.** The author's selection authorizes the remaining steps below for this project. A later request such as “audio only,” “hold publication” or “change the visuals” overrides the default.

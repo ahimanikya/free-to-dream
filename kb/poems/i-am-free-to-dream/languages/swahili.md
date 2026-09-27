@@ -107,7 +107,7 @@ Zanzibar taarab-inspired intimate acoustic song in Kiswahili. Warm youthful male
 
 ## Working settings and listening checks
 
-Begin with the settings from your preferred take and change the style prompt first, keeping the lyrics fixed for comparison. Record the settings with each generated take; the prompt alone cannot guarantee tempo, instruments or mood.
+Use the [shared generation settings](../../../guides/generation-settings.md) for this poem, including Max Mode Off and the common exclusions. Keep this language’s musical direction and listening checks; record any author-approved settings exception with the take.
 
 Use a vocal song with the supplied lyrics and the arrangement described above. Preserve pauses without stretching or splitting words. Ask a fluent Kiswahili singer to check natural stress and long word sequences. A taarab musician should review the ensemble phrasing and rhythmic character; keep the solo poetry clearly audible.
 

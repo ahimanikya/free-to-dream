@@ -1,5 +1,7 @@
 # Production memory
 
+Future-run controls: [shared settings policy](i-am-free-to-dream/settings.json) and [human-readable guide](../kb/guides/generation-settings.md). Verify the current policy against the UI; historical runs retain their actual values.
+
 Current review: [soft-answer duet candidates, 27 September 2026](i-am-free-to-dream/duet-review-2026-09-27.md). Eight candidates await author selection; published recordings remain unchanged.
 
 These records let another maintainer resume without the author's laptop or previous chat.

@@ -108,7 +108,7 @@ Contemporary Nashville acoustic country-folk ballad. Warm youthful male storytel
 
 ## Working settings and listening checks
 
-Begin with the settings from your preferred take and change the style prompt first, keeping the lyrics fixed for comparison. Record the settings with each generated take; the prompt alone cannot guarantee tempo, instruments or mood.
+Use the [shared generation settings](../../../guides/generation-settings.md) for this poem, including Max Mode Off and the common exclusions. Keep this language’s musical direction and listening checks; record any author-approved settings exception with the take.
 
 Use a vocal song with the supplied lyrics and the arrangement described above. Preserve pauses without stretching or splitting words. Listen for an easy storytelling voice, gentle country phrasing and warm steel replies. Keep the country character without turning the song into a lament.
 

@@ -8,11 +8,13 @@ Confirm the visible profile matches the intended account (`ahimanikya` in the es
 
 Check packet source hashes against current Markdown. Reconcile updated user text before generating. Keep the lyrics fixed during style comparisons unless the user requested an arrangement change.
 
+For *I Am Free to Dream*, resolve intended controls from `production/i-am-free-to-dream/settings.json`, including its shared exclusion list. Load the current revision rather than copying a historical run. Reference covers apply the policy's cover override only after the author chooses that workflow and the exact source is attached. Explicit author instructions can override the baseline; document the exception before spending. Do not silently turn Max Mode on or change model. Record unavailable controls honestly and resolve any material mismatch before submitting.
+
 ## One submission
 
 1. Locate custom/advanced creation in the live UI. Use observed fields, not assumed historical selectors.
 2. Enter title, complete lyrics, style and chosen controls. Preserve native-script punctuation and stanza breaks. Check actual field contents and limits before submitting. Shorten an over-limit style carefully; do not silently truncate lyrics or invoke lyric rewriting.
-3. Record submitted text, model, visible settings, time and intended output count. Record defaults as defaults, not as author preferences.
+3. Compare every applicable visible control with the packet after the final form change: model/mode, Weirdness, Style Influence, Max Mode, Personalize, Variety, duration, Vocal Gender, exclusions and Audio Influence when a reference is attached. Record the verified actual values, policy revision/hash, any exception, submitted text, time and intended output count. Never treat browser defaults or retained settings as verification. Record UI defaults as defaults, not as author preferences.
 4. Click Create once. A submission may generate multiple candidates; discover its actual results.
 5. Record candidate links/IDs and visible completion/error states. On an ambiguous result, inspect the library before retrying. If still uncertain, stop that item and preserve its state rather than add duplicate charges.
 6. Preserve earlier takes. Identify recordings by poem, language and take ID rather than title alone.

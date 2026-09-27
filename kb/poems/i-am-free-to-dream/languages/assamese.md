@@ -116,7 +116,7 @@ Modern Assamese poetic indie-folk ballad, warm intimate male voice and natural A
 
 Use the existing arranged lyric for comparison. Keep its words, section order and pauses intact; log any later wording changes separately.
 
-Start with the settings from a preferred take and change only the style prompt for the first comparison. Save the prompt and settings with each recording. A style label or instrument name does not verify the generated performance.
+Use the [shared generation settings](../../../guides/generation-settings.md) for this poem, including Max Mode Off and the common exclusions. Keep this language’s musical direction and listening checks; record any author-approved settings exception with the take.
 
 For the listening review:
 

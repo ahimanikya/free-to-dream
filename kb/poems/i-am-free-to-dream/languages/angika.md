@@ -146,7 +146,7 @@ Tender Angika contemporary poetic folk song, warm intimate male voice with natur
 
 This is a musical brief for a future native-language adaptation. Finish the title and lyrics with a fluent collaborator before judging a generated song in this language.
 
-Start with the settings from a preferred take and change only the style prompt for the first comparison. Save the prompt and settings with each recording. A style label or instrument name does not verify the generated performance.
+Use the [shared generation settings](../../../guides/generation-settings.md) for this poem, including Max Mode Off and the common exclusions. Keep this language’s musical direction and listening checks; record any author-approved settings exception with the take.
 
 For the listening review:
 

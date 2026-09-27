@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "poem": "i-am-free-to-dream",
+  "revision": "2026-09-27-1",
+  "scope": "Default intended settings for future runs, including solo, optional duet, Country and Jazz. Historical actual settings remain unchanged.",
+  "defaults": {
+    "model": "v6",
+    "mode": "Advanced",
+    "weirdness": 30,
+    "style_influence": 65,
+    "max_mode": false,
+    "personalize": false,
+    "variety": "Normal",
+    "duration": "Auto",
+    "vocal_gender": "Unselected; voice directed in the language prompt",
+    "audio_influence": null,
+    "exclude_styles": "EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals"
+  },
+  "reference_cover_overrides": {
+    "audio_influence": 75
+  },
+  "exception_rule": "Use an explicit author-requested exception or a documented author-approved comparison; record changed values, reason and approval in that run. No silent model, Max Mode or inherited browser-setting changes."
+}

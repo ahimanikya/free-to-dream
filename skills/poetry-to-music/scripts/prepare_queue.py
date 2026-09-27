@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Export exact Suno input packets from the collection without generating music."""
 import argparse
+from copy import deepcopy
 from collections import Counter
 from datetime import datetime, timezone
 import hashlib
@@ -31,6 +32,53 @@ def fenced(body, heading):
     return match[1] if match else ''
 
 
+def settings_policy(repo, poem):
+    path = repo / 'production' / poem / 'settings.json'
+    if not path.exists():
+        if poem == 'i-am-free-to-dream':
+            raise ValueError('Missing shared generation settings; restore the policy before preparing this poem.')
+        return None
+    raw = path.read_bytes()
+    policy = json.loads(raw)
+    if policy.get('schema_version') != 1 or policy.get('poem') != poem or not policy.get('revision'):
+        raise ValueError('Invalid settings policy identity or revision')
+    defaults = policy.get('defaults', {})
+    required = {'model', 'mode', 'weirdness', 'style_influence', 'max_mode',
+                'personalize', 'variety', 'duration', 'vocal_gender', 'audio_influence', 'exclude_styles'}
+    if set(defaults) != required:
+        raise ValueError('Shared settings must name every supported control explicitly')
+    for field in ('max_mode', 'personalize'):
+        if type(defaults[field]) is not bool:
+            raise ValueError(f'{field} must explicitly be true or false')
+    for field in ('weirdness', 'style_influence'):
+        if type(defaults[field]) is not int or not 0 <= defaults[field] <= 100:
+            raise ValueError(f'{field} must be a percentage from 0 to 100')
+    if defaults['audio_influence'] is not None:
+        raise ValueError('The text-prompt baseline must have no audio reference influence')
+    for field in ('model', 'mode', 'variety', 'duration', 'vocal_gender', 'exclude_styles'):
+        if not isinstance(defaults[field], str) or not defaults[field].strip():
+            raise ValueError(f'{field} must be explicit and nonempty')
+    cover = policy.get('reference_cover_overrides', {})
+    if set(cover) != {'audio_influence'} or type(cover['audio_influence']) is not int or not 0 <= cover['audio_influence'] <= 100:
+        raise ValueError('Reference cover policy must explicitly name its audio influence')
+    return dict(policy, source=str(path.relative_to(repo)), source_sha256=hashlib.sha256(raw).hexdigest())
+
+
+def settings_text(policy, listening_checks):
+    if not policy:
+        return listening_checks
+    lines = ['Intended text-prompt settings; verify in Suno before submission.',
+             'Policy: ' + policy['source'] + ' @ ' + policy['revision'], '']
+    for key, value in policy['defaults'].items():
+        display = 'Not applicable without a reference' if value is None else ('On' if value is True else 'Off' if value is False else str(value))
+        lines.append(f'{key}: {display}')
+    lines += ['', 'For an author-approved reference cover only: audio_influence ' +
+              str(policy['reference_cover_overrides']['audio_influence']) +
+              '. Attach the exact reference and preserve its approved prompt/lyrics.',
+              'Record any author-approved settings exception in the run.', '', listening_checks]
+    return '\n'.join(lines)
+
+
 def prepare(repo, poem, languages=None, include_recorded=False):
     repo = Path(repo).resolve()
     if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', poem):
@@ -38,6 +86,7 @@ def prepare(repo, poem, languages=None, include_recorded=False):
     folder = repo / 'kb' / 'poems' / poem / 'languages'
     if not folder.is_dir():
         raise ValueError(f'Language source folder not found: {folder}')
+    policy = settings_policy(repo, poem)
     recordings = json.loads((repo / 'catalog/recordings.json').read_text(encoding='utf-8'))
     audio = {r['language'] for r in recordings if r.get('poem') == poem and r.get('kind') == 'audio' and not r.get('archived')}
     entries, known = [], set()
@@ -69,12 +118,14 @@ def prepare(repo, poem, languages=None, include_recorded=False):
             source=str(path.relative_to(repo)), source_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
             lyric_status=meta.get('lyric_status'), review_status=meta.get('review_status'),
             existing_audio=slug in audio, status=state, lyrics=lyrics if not pending else '',
-            style=style, settings=section(body, 'Working settings and listening checks'),
+            style=style, settings=settings_text(policy, section(body, 'Working settings and listening checks')),
+            generation_settings=deepcopy(policy['defaults']) if policy else None,
             candidates=[], selected_candidate=None))
     if languages and languages - known:
         raise ValueError('Unknown language slugs: ' + ', '.join(sorted(languages - known)))
     entries.sort(key=lambda x: (x['order'], x['language']))
-    return dict(schema_version=1, poem=poem, prepared_at=datetime.now(timezone.utc).isoformat(),
+    return dict(schema_version=2, poem=poem, prepared_at=datetime.now(timezone.utc).isoformat(),
+                settings_policy=policy,
                 counts=dict(Counter(x['status'] for x in entries)), entries=entries)
 
 
@@ -94,6 +145,13 @@ def export(report, out):
         packet.mkdir()
         for name in ('title', 'lyrics', 'style', 'settings'):
             (packet / (name + '.txt')).write_text(entry[name] + '\n', encoding='utf-8')
+        if report.get('settings_policy'):
+            policy = report['settings_policy']
+            planned = dict(status='prepared-not-submitted', settings=entry['generation_settings'],
+                           policy_source=policy['source'], policy_revision=policy['revision'],
+                           policy_sha256=policy['source_sha256'],
+                           reference_cover_overrides=policy['reference_cover_overrides'])
+            (packet / 'settings.json').write_text(json.dumps(planned, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     (out / 'queue.md').write_text('\n'.join(lines) + '\n', encoding='utf-8')
 
 

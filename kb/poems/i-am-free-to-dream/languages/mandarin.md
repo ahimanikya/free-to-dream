@@ -107,7 +107,7 @@ Contemporary Mandarin Chinese poetic acoustic ballad. Warm youthful male vocal, 
 
 ## Working settings and listening checks
 
-Begin with the settings from your preferred take and change the style prompt first, keeping the lyrics fixed for comparison. Record the settings with each generated take; the prompt alone cannot guarantee tempo, instruments or mood.
+Use the [shared generation settings](../../../guides/generation-settings.md) for this poem, including Max Mode Off and the common exclusions. Keep this language’s musical direction and listening checks; record any author-approved settings exception with the take.
 
 Use a vocal song with the supplied lyrics and the arrangement described above. Preserve pauses without stretching or splitting words. Have a fluent Mandarin listener check intelligibility throughout, especially where a long phrase crosses several notes. Listen for lightness and hope beneath the spacious arrangement.
 

@@ -112,7 +112,7 @@ Intimate Italian acoustic cantautore ballad, warm youthful male storytelling voc
 
 ## Working settings and listening checks
 
-Use the supplied Italian lyrics with the style prompt above. Keep this text fixed when comparing musical takes. Begin with the controls from a preferred calm, soulful take and record the actual model and settings with each generation; a style prompt cannot guarantee pace or phrasing.
+Use the supplied Italian lyrics with the style prompt above. Keep this text fixed when comparing musical takes. Use the [shared generation settings](../../../guides/generation-settings.md) for this poem, including Max Mode Off and the common exclusions. Keep this language’s musical direction and listening checks; record any author-approved settings exception with the take.
 
 Listen for relaxed storytelling, clear words, an unhurried refrain and a sense of quiet happiness. Check the gathering breath and the full potter pause. The longer phrases should flow naturally without hurried syllables or excessive stretching. Any future recording should be reviewed against its exact sung words before lyric timings are added.
 
