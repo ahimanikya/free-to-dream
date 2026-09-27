@@ -1,0 +1,28 @@
+name: Route contribution attention
+on:
+  issues:
+    types: [opened, reopened, closed]
+  issue_comment:
+    types: [created]
+permissions:
+  contents: read
+  issues: write
+concurrency:
+  group: contribution-attention-${{ github.event.issue.number }}
+  cancel-in-progress: false
+jobs:
+  triage:
+    if: github.event.issue.pull_request == null && github.event.sender.type != 'Bot'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/github-script@v8
+        env:
+          PROJECT_MAINTAINER: ${{ github.repository_owner }}
+        with:
+          script: |
+            const {triage} = require('./scripts/engagement-triage.cjs');
+            await triage({github, context, maintainer:process.env.PROJECT_MAINTAINER});
