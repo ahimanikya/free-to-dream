@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """Build the listening wiki from the OKF bundle; no external services required."""
 import argparse
+import base64
+import importlib.util
+import subprocess
+from xml.etree import ElementTree as ET
 from functools import partial
 import hashlib
 import html
@@ -21,6 +25,18 @@ ROOT = Path(__file__).resolve().parents[1]
 KB = ROOT / 'kb'
 LANGUAGES = KB / 'poems/i-am-free-to-dream/languages'
 esc = html.escape
+# Load the same resolver used by generation packets; never duplicate policy logic.
+_queue_spec = importlib.util.spec_from_file_location('music_queue', Path(__file__).resolve().parents[1] / 'skills/poetry-to-music/scripts/prepare_queue.py')
+music_queue = importlib.util.module_from_spec(_queue_spec)
+_queue_spec.loader.exec_module(music_queue)
+CONTENT_LICENSE = 'https://creativecommons.org/licenses/by/4.0/'
+# Only verified codes for completed text; no invented code for an unreviewed variety.
+TEXT_LANGUAGES = {'odia':'or', 'english':'en', 'tamil':'ta', 'telugu':'te', 'bengali':'bn',
+    'hindi':'hi', 'malayalam':'ml', 'kannada':'kn', 'marathi':'mr', 'bhojpuri':'bho',
+    'haryanvi':'bgc', 'gujarati':'gu', 'punjabi':'pa', 'assamese':'as', 'urdu':'ur',
+    'konkani':'kok', 'maithili':'mai', 'nepali':'ne', 'sindhi':'sd', 'dogri':'doi',
+    'sanskrit':'sa', 'sambalpuri':'spv', 'mandarin':'zh', 'spanish':'es', 'arabic':'ar',
+    'french':'fr', 'portuguese':'pt-BR', 'swahili':'sw', 'filipino':'fil', 'italian':'it'}
 MEDIA_EXTENSIONS = ('.mp3', '.mp4', '.m4a', '.wav', '.ogg', '.mov', '.webm')
 
 
@@ -273,14 +289,139 @@ def render_markdown(body, path):
     return bleach.clean(output, tags=tags, attributes={'a':['href','title'], '*':['id'], 'code':['class']}, protocols=['https','http','mailto'], strip=True)
 
 
-def shell(title, content, config, local=False, filename='index.html', description=None, media=None):
+
+def effective_settings_panel(slug, config):
+    policy = config.get('_settings_policy')
+    if not policy:
+        return ''
+    values, overrides = music_queue.resolve_settings(policy, slug)
+    rows = ''.join(f'<tr><th scope="row">{esc(key.replace("_", " ").title())}</th><td>{esc("Not applicable" if value is None else "On" if value is True else "Off" if value is False else str(value))}</td></tr>' for key, value in values.items())
+    reasons = ''.join(f'<p><strong>{esc(x["key"])}</strong>: {esc(x["reason"])} · Decision: {esc(x["decision_reference"])}</p>' for x in overrides)
+    if not overrides:
+        reasons = '<p>No adopted language control overrides. This language’s musical prompt and reasoning remain specific to its chosen setting.</p>'
+    proposal = policy.get('language_overrides', {}).get(slug)
+    if proposal and proposal['status'] == 'proposed':
+        reasons += f'<p><strong>Proposed, not applied</strong>: {esc(proposal["reason"])}<br>{esc(json.dumps(proposal["settings"], ensure_ascii=False))}</p>'
+    alternatives = {key: value for key, value in policy.get('arrangement_overrides', {}).items() if key.startswith(slug + '/')}
+    for key, override in alternatives.items():
+        reasons += f'<p><strong>{esc(key)}</strong> · {esc(override["status"])}: {esc(override["reason"])}<br>{esc(json.dumps(override["settings"], ensure_ascii=False))}</p>'
+    return f'<details id="generation-baseline"><summary>Production baseline &amp; local overrides</summary><div class="detail-body"><p>Intended settings for a future recording, not measured properties of the tracks above. Policy {esc(policy["revision"])}.</p><table><thead><tr><th>Control</th><th>Starting value</th></tr></thead><tbody>{rows}</tbody></table>{reasons}<p><a href="guides--generation-settings.html">How to adapt this baseline</a> · <a href="guides--public-reference.html">Use the collection in your work</a></p></div></details>'
+
+
+def page_metadata(title, description, config, filename, language=None, media=None):
+    """Describe visible content without inventing reviews, upload dates or licenses."""
+    base = config.get('site_url', '').rstrip('/') + '/'
+    site_id, author_id = base + '#website', base + '#author'
+    canonical = base + filename
+    page = {'@type':'WebPage', '@id':canonical + '#page', 'url':canonical, 'name':title,
+            'description':description, 'inLanguage':'en', 'isPartOf':{'@id':site_id}}
+    graph = [{'@type':'WebSite', '@id':site_id, 'url':base, 'name':'World is One — A Poem Without Borders', 'creator':{'@id':author_id}},
+             {'@type':'Person', '@id':author_id, 'name':config.get('author', 'Ahimanikya Satapathy'),
+              'sameAs':[x['url'] for x in config.get('author_links', []) if safe_url(x.get('url',''))]}, page]
+    if filename in ('index.html', 'languages.html'):
+        page['@type'] = 'CollectionPage'
+    if language:
+        page['about'] = {'@type':'Language', 'name':language['language']}
+        if has_lyrics(language):
+            work = {'@type':'CreativeWork', '@id':canonical + '#poem', 'name':language['title'],
+                    'url':canonical + '#poem-text', 'inLanguage':TEXT_LANGUAGES.get(language['slug'], {'@type':'Language','name':language['language']}),
+                    'creativeWorkStatus':language['lyric_status'] + '; ' + language['review_status'],
+                    'license':CONTENT_LICENSE, 'isAccessibleForFree':True}
+            if language['slug'] == 'odia':
+                work['author'] = {'@id':author_id}
+            else:
+                work['isBasedOn'] = {'@type':'CreativeWork', '@id':base+'poems--i-am-free-to-dream--languages--odia.html#poem', 'name':'I Am Free to Dream', 'author':{'@id':author_id}}
+            page['mainEntity'] = {'@id':work['@id']}
+            graph.append(work)
+    if media and publicly_available(media) and safe_url(media.get('public_url','')):
+        obj = {'@type':'AudioObject' if media['kind']=='audio' else 'VideoObject',
+               '@id':canonical+'#recording', 'name':media['title'], 'description':media['notes'],
+               'contentUrl':media['public_url'], 'url':canonical, 'isAccessibleForFree':True,
+               'creativeWorkStatus':recording_label(media), 'creditText':'; '.join(f'{k}: {v}' for k,v in media.get('credits',{}).items())}
+        if media.get('duration_seconds'):
+            obj['duration'] = 'PT' + str(media['duration_seconds']) + 'S'
+        if media['kind'] == 'video':
+            obj['thumbnailUrl'] = base+'media/images/cover.png'
+        page['mainEntity'] = {'@id':obj['@id']}
+        graph.append(obj)
+    return {'@context':'https://schema.org', '@graph':graph}
+
+
+def export_reference(output, languages, config, local):
+    base = config.get('site_url', '').rstrip('/') + '/'
+    policy = config['_settings_policy']
+    try:
+        revision = subprocess.run(['git','rev-parse','HEAD'], cwd=ROOT, capture_output=True, text=True, check=True).stdout.strip()
+    except (OSError, subprocess.CalledProcessError):
+        revision = None
+    entries = []
+    for meta in languages:
+        slug = meta['slug']; path = LANGUAGES/(slug+'.md')
+        _, body = read_concept(path)
+        effective, overrides = music_queue.resolve_settings(policy, slug)
+        source = 'kb/poems/i-am-free-to-dream/languages/' + slug + '.md'
+        public_media = []
+        for record in records():
+            if record['language'] != slug or record.get('archived') or not publicly_available(record):
+                continue
+            public_media.append({key:record.get(key) for key in ('id','title','kind','public_url','duration_seconds','variation','credits','review_status','rights_status')})
+            public_media[-1].update(page=base+'recording--'+record['id']+'.html', reuse_terms=base+'guides--rights.html', content_license_applies=False)
+        entries.append(dict(language=meta['language'], slug=slug, title=meta['title'],
+            lyric_status=meta['lyric_status'], review_status=meta['review_status'], has_target_lyrics=has_lyrics(meta),
+            page=base+page_name(path), markdown=base+source,
+            source_url=config['repository_url']+'/blob/'+(revision or 'main')+'/'+source,
+            source_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
+            lyrics=music_queue.fenced(body, 'Poem / arranged lyrics') if has_lyrics(meta) else None,
+            style_prompt=music_queue.fenced(body,'Style prompt'),
+            musical_reasoning={heading:music_queue.section(body,heading) for heading in ('Why this musical direction','Arrangement decisions and review','Cultural grounding') if music_queue.section(body,heading)},
+            intended_settings=effective, applied_overrides=overrides, proposed_language_override=policy.get('language_overrides',{}).get(slug) if policy.get('language_overrides',{}).get(slug,{}).get('status')=='proposed' else None,
+            arrangement_overrides={key:value for key,value in policy.get('arrangement_overrides',{}).items() if key.startswith(slug+'/')},
+            license_scope=base+'guides--rights.html', recordings=public_media))
+    data = dict(schema_version=1, title='World is One — A Poem Without Borders', source_revision=revision,
+        author=config['author'], purpose='A public reference for multilingual poetry, music and film adaptation.',
+        status_note='Drafts need fluent review; briefs are not translations. Intended settings and prompts do not certify performances.',
+        rights=dict(content_license=CONTENT_LICENSE, scope=base+'guides--rights.html', recordings='Separate permissions; not covered by the content license'),
+        counts=dict(language_entries=len(entries), original_or_adapted_texts=sum(x['has_target_lyrics'] for x in entries)),
+        settings_policy=policy, languages=entries)
+    (output/'reference.json').write_text(json.dumps(data, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+    links = ['# World is One — A Poem Without Borders', '', '> I Am Free to Dream, an Odia poem by Ahimanikya Satapathy, becoming a multilingual music and adaptation reference.', '',
+        'Draft translations require fluent review. Pending briefs are not target-language poems. Prompts describe creative intentions, not verified performances.',
+        'Author-controlled text and artwork: CC BY 4.0 with attribution. Code: MIT. Recordings and third-party material have separate terms; read the rights guide.', '', '## Start here',
+        f'- [Public reference guide]({base}kb/guides/public-reference.md)', f'- [Original Odia poem]({base}kb/poems/i-am-free-to-dream/original.md)',
+        f'- [Meaning and adaptation]({base}kb/poems/i-am-free-to-dream/meaning.md)', f'- [Baseline and overrides]({base}kb/guides/generation-settings.md)',
+        f'- [Reuse and attribution]({base}kb/guides/rights.md)', f'- [Machine-readable collection]({base}reference.json)', '', '## Language sources']
+    links += [f'- [{x["language"]}]({x["markdown"]}): {x["lyric_status"]}; {x["review_status"]}.' for x in entries]
+    (output/'llms.txt').write_text('\n'.join(links)+'\n',encoding='utf-8')
+    ET.register_namespace('', 'http://www.sitemaps.org/schemas/sitemap/0.9')
+    root = ET.Element('{http://www.sitemaps.org/schemas/sitemap/0.9}urlset')
+    if not local:
+        for page in sorted(output.glob('*.html')):
+            text = page.read_text()
+            if 'name="robots" content="noindex' in text:
+                continue
+            canonical = re.search(r'<link rel="canonical" href="([^"]+)"',text)
+            if canonical and html.unescape(canonical[1]) == base+page.name:
+                node = ET.SubElement(root, '{http://www.sitemaps.org/schemas/sitemap/0.9}url')
+                ET.SubElement(node,'{http://www.sitemaps.org/schemas/sitemap/0.9}loc').text=base+page.name
+    ET.ElementTree(root).write(output/'sitemap.xml', encoding='utf-8', xml_declaration=True)
+
+
+def shell(title, content, config, local=False, filename='index.html', description=None, media=None, language=None, source=None, canonical_filename=None):
     preview = '<div class="preview">Local listening preview · recordings still need review</div>' if local else ''
-    description = description or 'One poem, a hundred language journeys. Read, listen and help shape each adaptation.'
+    description = description or ('I Am Free to Dream: an Odia poem by Ahimanikya Satapathy, shared through multilingual adaptations, songs and an open creative reference.' if filename == 'index.html' else f'{title}: explore the World is One collection, its creative decisions, sources and collaboration guidance.')
     metadata = ''
     if config.get('site_url'):
-        canonical = config['site_url'].rstrip('/') + '/' + filename
+        canonical = config['site_url'].rstrip('/') + '/' + (canonical_filename or filename)
         cover = config['site_url'].rstrip('/') + '/media/images/cover.png'
         metadata = f'<link rel="canonical" href="{esc(canonical, quote=True)}"><meta property="og:url" content="{esc(canonical, quote=True)}"><meta property="og:image" content="{esc(cover, quote=True)}"><meta name="twitter:card" content="summary_large_image">'
+    if local or filename in ('timing.html', 'contribute.html'):
+        metadata += '<meta name="robots" content="noindex,follow">'
+    if source:
+        metadata += f'<link rel="alternate" type="text/markdown" href="{esc(source,quote=True)}">'
+    metadata += '<link rel="describedby" type="text/plain" href="llms.txt">'
+    data = json.dumps(page_metadata(title, description, config, canonical_filename or filename, language, None if local else media), ensure_ascii=False, separators=(',',':')).replace('<','\\u003c').replace('>','\\u003e').replace('&','\\u0026')
+    data_hash = base64.b64encode(hashlib.sha256(data.encode('utf-8')).digest()).decode('ascii')
+    metadata += '<script type="application/ld+json">'+data+'</script>'
     if not local and media and publicly_available(media) and safe_url(media.get('public_url') or ''):
         kind = media['kind']
         source = media['public_url']
@@ -291,10 +432,10 @@ def shell(title, content, config, local=False, filename='index.html', descriptio
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{esc(description, quote=True)}"><meta property="og:title" content="{esc(title, quote=True)} · World is One"><meta property="og:description" content="{esc(description, quote=True)}"><meta property="og:type" content="website">{metadata}
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https:; img-src 'self'; media-src 'self' https: blob:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https:; img-src 'self'; media-src 'self' https: blob:; style-src 'self'; script-src 'self' 'sha256-{data_hash}'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <title>{esc(title)} · World is One</title><link rel="stylesheet" href="assets/style.css?v={config.get("_asset_version","1")}"><script type="module" src="assets/site.js?v={config.get("_asset_version","1")}"></script></head>
-<body data-repository="{esc(config.get('repository_url', ''), quote=True)}" data-site-url="{esc(config.get('site_url', ''), quote=True)}">{preview}<header><a class="brand" href="index.html"><img src="assets/odia-lotus.svg" alt="" width="38" height="38" aria-hidden="true">WORLD IS ONE<span>A POEM WITHOUT BORDERS</span></a><nav aria-label="Main navigation"><a href="languages.html">Languages</a><a href="poems--i-am-free-to-dream--original.html">The poem</a><a href="contribute.html">Contribute</a></nav></header>
-<main>{content}</main>{(ROOT/"web/index-player.html").read_text() if config.get("_has_audio") else ""}<footer>Original poem © Ahimanikya Satapathy · AI-assisted adaptations and generated recordings are identified on their pages.<br><a href="guides--rights.html">Credits &amp; rights</a> · <a href="guides--artwork.html">Art of the site</a> · <a href="contribute.html?type=recording">Submit your version</a> · <a href="kb/index.md">Knowledge base</a></footer></body></html>'''
+<body data-repository="{esc(config.get('repository_url', ''), quote=True)}" data-site-url="{esc(config.get('site_url', ''), quote=True)}">{preview}<header><a class="brand" href="index.html"><img src="assets/odia-lotus.svg" alt="" width="38" height="38" aria-hidden="true">WORLD IS ONE<span>A POEM WITHOUT BORDERS</span></a><nav aria-label="Main navigation"><a href="languages.html">Languages</a><a href="poems--i-am-free-to-dream--original.html">The poem</a><a href="guides--public-reference.html">Reference</a><a href="contribute.html">Contribute</a></nav></header>
+<main>{content}</main>{(ROOT/"web/index-player.html").read_text() if config.get("_has_audio") else ""}<footer>Original poem © Ahimanikya Satapathy · AI-assisted adaptations and generated recordings are identified on their pages.<br><a href="guides--rights.html">Credits &amp; rights</a> · <a href="guides--artwork.html">Art of the site</a> · <a href="contribute.html?type=recording">Submit your version</a> · <a href="kb/index.md">Knowledge base</a> · <a href="reference.json">Reference data</a><br>Poem, author artwork &amp; project reference text: <a href="guides--rights.html">CC BY 4.0</a> · Recordings have separate terms.</footer></body></html>'''
 
 
 def share_controls(title, filename, config, local=False, media=None, media_url=None):
@@ -433,6 +574,8 @@ def language_content(meta, body, path, items, config, local=False):
     primary_html = render_markdown(primary, path)
     if slug in ('arabic','urdu','sindhi','kashmiri','balti'):
         primary_html = primary_html.replace('<pre>', '<pre dir="rtl">')
+    if has_lyrics(meta) and slug in TEXT_LANGUAGES:
+        primary_html = f'<div lang="{TEXT_LANGUAGES[slug]}">{primary_html}</div>'
     reading = f'<article id="poem-text" class="poem-reading"><h2 class="reading-caption">Read</h2>{primary_html}<a class="poem-download" href="kb/poems/i-am-free-to-dream/languages/{quote(slug)}.md" download>Download poem &amp; notes ↓</a></article>'
     content = header + '<div class="language-layout">'+reading+resource_panel(meta, items)+'</div>'
     content += '<section class="language-notes" aria-label="About this version">'
@@ -451,6 +594,7 @@ def language_content(meta, body, path, items, config, local=False):
     if not original:
         extra = '\n\n'.join('## '+heading+'\n\n'+text for heading,text in sections if heading not in music_names | reason_names and heading != 'Poem / arranged lyrics')
         content += '<details id="translation-check"><summary>Translation &amp; collaboration</summary><div class="detail-body">'+translation_check_panel(meta).replace('id="translation-check"','id="translation-reference"')+render_markdown(extra,path)+'</div></details>'
+    content += effective_settings_panel(slug, config)
     contributor = 'Share a performance or a listening note' if original else 'Help this version grow'
     notes_link = f'contribute.html?language={quote(slug)}&amp;type=feedback'
     action = f'<a href="contribute.html?language={quote(slug)}&amp;type=recording">Submit a recording</a><a href="{notes_link}">Leave a listening note</a>'
@@ -479,6 +623,7 @@ def contribution_page(languages, config):
 def build(local=False):
     languages = validate()
     config = json.loads((ROOT / 'site-config.json').read_text())
+    config['_settings_policy'] = music_queue.settings_policy(ROOT, 'i-am-free-to-dream')
     config['_has_audio'] = any(item['kind']=='audio' and (publicly_available(item) or (local and item.get('repo_path'))) for item in records())
     output = ROOT / ('site' if local else 'site-public')
     if output.exists(): shutil.rmtree(output)
@@ -494,6 +639,11 @@ def build(local=False):
     # Never ship archive binaries or unhydrated pointers in the Pages build.
     shutil.copytree(ROOT / 'media', output / 'media', ignore=shutil.ignore_patterns(*(f'*{ext}' for ext in MEDIA_EXTENSIONS), '*.srt', '*.vtt'))
     shutil.copytree(KB, output / 'kb')
+    # Validate override language keys before rendering public policy summaries.
+    known = {item['slug'] for item in languages}
+    policy_languages = set(config['_settings_policy'].get('language_overrides', {})) | {key.split('/')[0] for key in config['_settings_policy'].get('arrangement_overrides', {})}
+    if policy_languages - known:
+        raise ValueError('Settings override names an unknown language')
     (output / 'contribute.html').write_text(shell('Contribute your voice', contribution_page(languages, config), config, local, 'contribute.html'), encoding='utf-8')
     available = {}
     for item in records():
@@ -536,14 +686,20 @@ def build(local=False):
     for path in sorted(KB.rglob('*.md')):
         meta, body = read_concept(path)
         title = meta.get('title', path.parent.name if path.name == 'index.md' else path.stem)
+        description, language_meta, canonical_filename = None, None, None
         if path.parent == LANGUAGES and path.name != 'index.md':
+            language_meta = meta
+            stage = 'original poem' if meta['slug']=='odia' else 'adaptation draft' if has_lyrics(meta) else 'adaptation brief'
+            title = f'{meta["language"]}: I Am Free to Dream — {meta["title"]}'
+            description = f'{meta["language"]} {stage} of I Am Free to Dream. Read the text, explore local musical choices and available recordings. Review status: {meta["review_status"]}.'
             content = language_content(meta, body, path, available.get(meta['slug'], []), config, local)
         elif path == KB/'poems/i-am-free-to-dream/original.md':
+            canonical_filename = 'poems--i-am-free-to-dream--languages--odia.html'
             odia_meta, odia_body = read_concept(LANGUAGES/'odia.md')
             content = language_content(odia_meta, odia_body, LANGUAGES/'odia.md', available.get('odia', []), config, local).replace('<a class="back" href="languages.html">← All languages</a>', '<a class="back" href="index.html">← Home</a>')
         else:
             content = '<a class="back" href="index.html">← Home</a><article>'+render_markdown(body,path)+'</article>'
-        (output / page_name(path)).write_text(shell(title, content, config, local, page_name(path)), encoding='utf-8')
+        (output / page_name(path)).write_text(shell(title, content, config, local, page_name(path), description=description, language=language_meta, source=str(path.relative_to(ROOT)), canonical_filename=canonical_filename), encoding='utf-8')
     lyric_count = sum(has_lyrics(x) for x in languages)
     cards = {}
     for item in languages:
@@ -586,9 +742,11 @@ def build(local=False):
 <section class="stats" aria-label="Collection status"><div><strong>{len(languages)}</strong><span>language journeys</span></div><div><strong>{lyric_count}</strong><span>original &amp; adapted texts</span></div><div><strong>{len(languages)-lyric_count}</strong><span>texts awaiting contributions</span></div><div><strong>{len(available)}</strong><span>languages with {'local media' if local else 'playable media'}</span></div></section>
 <section id="collection" class="featured-collection"><div class="featured-heading"><div><div class="eyebrow">FOLLOW THE THREAD</div><h2>Hear the dream travel.</h2><p class="collection-intro">Listen where a song has begun. Help another language find its voice.</p></div><div class="collection-actions"><a class="text-link" href="languages.html">All {len(languages)} languages →</a><div class="card-scroll-controls" hidden><button type="button" id="cards-previous" aria-label="Previous set of languages" aria-controls="featured-cards">←</button><button type="button" id="cards-next" aria-label="Next set of languages" aria-controls="featured-cards">→</button></div></div></div><div id="featured-cards" class="language-grid featured-grid" role="region" aria-label="Language journeys, scroll horizontally" aria-roledescription="carousel" tabindex="0">{featured}</div><p id="carousel-status" class="visually-hidden" role="status" aria-live="polite"></p></section>
 <section class="origin-story" id="story" aria-labelledby="story-title"><div class="story-copy"><div class="eyebrow"><span class="north-star" aria-hidden="true">✧</span> WHERE THE DREAM BEGAN</div><h2 id="story-title">The canvas changes.<br>The dream stays.</h2><p>I’ve always nurtured creativity in whatever I do. Shaping an organisation, building software, writing a poem or creating a space all come from the same impulse: to give an idea a form that people can experience.</p><p>A space can speak its own language. I’ve tried to make my office a place that makes people happy. Poetry reaches people in another way, carrying feelings that can bring us closer.</p><p>This poem began in Odia during my college years, before 1993. I later shared my writing on <a href="https://kabitaprusta.blogspot.com/">Ahimanikya Kabita Prusta</a>. With help from AI, the poem has found a new form in music and video. This page invites you to bring your language, your voice and your care to it—so the feeling can travel further.</p></div><aside class="author-bio" aria-labelledby="author-name"><div class="eyebrow">THE PERSON BEHIND THE POEM</div><h3 id="author-name">Ahimanikya Satapathy</h3><p>I’m an entrepreneur, technologist, poet and artist. Creativity runs through how I work and live: designing organisations, building software, writing poems and shaping spaces.</p><p>The form matters less to me than keeping that creativity alive. My college-era poems, my artwork from 1993, and this shared musical experiment are expressions of the same continuing creative life.</p><nav class="author-links" aria-label="Connect with Ahimanikya">{author_links}</nav></aside></section>
+<section class="public-reference-intro"><div class="eyebrow">A DREAM OTHERS CAN BUILD ON</div><h2>Let the feeling travel further.</h2><p>For poets, musicians and filmmakers: explore the words, cultural choices and production notes. Adapt the poem in your own way, with credit and care. The shared baseline leaves room for every language to find its voice.</p><a class="text-link" href="guides--public-reference.html">Explore the open reference →</a></section>
 <div class="dream-thread" aria-hidden="true"><span>✧</span></div><blockquote class="dream-quote"><p>“free to weave your dreams with mine.”</p><cite>From the English adaptation of <em>I Am Free to Dream</em></cite></blockquote>
 <section class="invitation" id="invitation"><div class="invitation-copy"><div class="eyebrow">THIS IS AN INVITATION</div><h2>A language is a living culture.</h2><p>Bring the language you call home. Offer a phrase that feels more natural, share a listening note, or sing the poem in your own way. We’ll shape each version together, with care and credit for every contribution.</p><div class="action-row"><a class="button" href="contribute.html">Suggest a change →</a><a class="button secondary" href="contribute.html?type=recording">Submit your version →</a></div></div><figure class="author-artwork"><a href="media/images/ahimanikya-artwork-1993.png" aria-label="View the full artwork by Ahimanikya Satapathy"><img src="media/images/ahimanikya-artwork-1993.png" width="347" height="640" alt="Hand-painted profile looking upward, in charcoal and blue-grey tones on cream paper; signed by Ahimanikya Satapathy, 1993"></a><figcaption>Artwork by Ahimanikya Satapathy · 1993</figcaption></figure></section>'''
     (output / 'index.html').write_text(shell('I Am Free to Dream', content, config, local), encoding='utf-8')
+    export_reference(output, languages, config, local)
     (output / '.nojekyll').touch()
     print(f'Built {output.name}: {len(languages)} languages; {sum(map(len, available.values()))} playable media items')
 

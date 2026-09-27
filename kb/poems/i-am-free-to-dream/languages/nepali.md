@@ -116,7 +116,7 @@ Warm Nepali contemporary folk ballad with intimate male storytelling vocals and 
 
 Use the existing arranged lyric for comparison. Keep its words, section order and pauses intact; log any later wording changes separately.
 
-Use the [shared generation settings](../../../guides/generation-settings.md) for this poem, including Max Mode Off and the common exclusions. Keep this language’s musical direction and listening checks; record any author-approved settings exception with the take.
+Start with the [shared generation baseline](../../../guides/generation-settings.md), then apply documented language or arrangement overrides. Preserve this language’s musical direction and listening checks. Explain each changed control, its musical reason and review status; record the actual settings with the take.
 
 For the listening review:
 

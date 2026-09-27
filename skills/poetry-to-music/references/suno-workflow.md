@@ -8,7 +8,7 @@ Confirm the visible profile matches the intended account (`ahimanikya` in the es
 
 Check packet source hashes against current Markdown. Reconcile updated user text before generating. Keep the lyrics fixed during style comparisons unless the user requested an arrangement change.
 
-For *I Am Free to Dream*, resolve intended controls from `production/i-am-free-to-dream/settings.json`, including its shared exclusion list. Load the current revision rather than copying a historical run. Reference covers apply the policy's cover override only after the author chooses that workflow and the exact source is attached. Explicit author instructions can override the baseline; document the exception before spending. Do not silently turn Max Mode on or change model. Record unavailable controls honestly and resolve any material mismatch before submitting.
+For *I Am Free to Dream*, resolve intended controls from `production/i-am-free-to-dream/settings.json`, resolving baseline → adopted language → adopted language/arrangement controls and exclusions. Load the current revision rather than copying a historical run. Reference covers apply the policy's cover override only after the author chooses that workflow and the exact source is attached. Explicit author instructions can override the baseline; document the exception before spending. Verify Max Mode against the resolved policy; do not inherit it from browser state or silently change model. Record unavailable controls honestly and resolve any material mismatch before submitting.
 
 ## One submission
 

@@ -373,3 +373,8 @@ header { gap:24px; }
 }
 
 .recording-variation + .recording-variation { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line); }
+
+.public-reference-intro { max-width: 48rem; margin: 3rem auto; padding: 2rem 0; border-top: 1px solid var(--line, #d8ccba); }
+.public-reference-intro h2 { margin: .6rem 0; }
+.public-reference-intro p { line-height: 1.8; }
+#generation-baseline th { text-align: left; }

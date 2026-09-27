@@ -100,6 +100,6 @@ A Filipino / Tagalog singer can help identify the recording's actual phrasing an
 
 ## Working settings and listening checks
 
-Use the [shared generation settings](../../../guides/generation-settings.md) for this poem, including Max Mode Off and the common exclusions. Keep this language’s musical direction and listening checks; record any author-approved settings exception with the take.
+Start with the [shared generation baseline](../../../guides/generation-settings.md), then apply documented language or arrangement overrides. Preserve this language’s musical direction and listening checks. Explain each changed control, its musical reason and review status; record the actual settings with the take.
 
 The shared controls do not supply the missing style prompt. Document and review this recording’s musical direction before generating another take.

@@ -31,7 +31,7 @@ class CollectionTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.root = Path(self.temp.name)
-        for folder in ('kb','catalog','web','media'):
+        for folder in ('kb','catalog','web','media','production'):
             shutil.copytree(PROJECT/folder, self.root/folder, ignore=shutil.ignore_patterns(*(f'*{ext}' for ext in app.MEDIA_EXTENSIONS)))
         shutil.copy2(PROJECT/'site-config.json', self.root/'site-config.json')
         self.overrides = patch.multiple(app, ROOT=self.root, KB=self.root/'kb', LANGUAGES=self.root/'kb/poems/i-am-free-to-dream/languages')
@@ -61,6 +61,65 @@ class CollectionTests(unittest.TestCase):
                 url = urlparse(target)
                 if not url.scheme and url.path:
                     self.assertTrue((page.parent/unquote(url.path)).is_file(), f'{page.name}: missing {target}')
+
+    def test_discovery_exports_truthful_status_sources_and_no_private_recordings(self):
+        app.build(False)
+        output = self.root/'site-public'
+        data = json.loads((output/'reference.json').read_text())
+        self.assertEqual(len(data['languages']), 102)
+        self.assertEqual(data['counts']['original_or_adapted_texts'], 30)
+        for entry in data['languages']:
+            self.assertEqual(entry['recordings'], [])
+            source = self.root/('kb/poems/i-am-free-to-dream/languages/'+entry['slug']+'.md')
+            self.assertEqual(entry['source_sha256'], app.hashlib.sha256(source.read_bytes()).hexdigest())
+            if not entry['has_target_lyrics']:
+                self.assertIsNone(entry['lyrics'])
+            self.assertNotIn('local_path', entry)
+        self.assertIn('rights', data)
+        self.assertIn('Pending briefs are not target-language poems', (output/'llms.txt').read_text())
+        self.assertFalse((output/'robots.txt').exists())
+
+    def test_structured_metadata_canonical_sitemap_and_native_text_agree(self):
+        app.build(False)
+        output = self.root/'site-public'
+        descriptions = set()
+        for meta in app.validate():
+            page = output/('poems--i-am-free-to-dream--languages--'+meta['slug']+'.html')
+            text = page.read_text()
+            payload = re.search(r'<script type="application/ld\+json">(.*?)</script>',text).group(1)
+            graph = json.loads(payload)['@graph']
+            work = [x for x in graph if x['@type']=='CreativeWork']
+            self.assertEqual(bool(work), app.has_lyrics(meta))
+            description = unescape(re.search(r'<meta name="description" content="([^"]+)"', text).group(1))
+            self.assertNotIn(description, descriptions)
+            descriptions.add(description)
+            if meta['slug']=='tamil':
+                self.assertIn('<div lang="ta">', text)
+                self.assertEqual(work[0]['inLanguage'], 'ta')
+            self.assertIn('Intended settings for a future recording',text)
+        ns = {'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+        locations = [x.text for x in app.ET.parse(output/'sitemap.xml').findall('.//s:loc',ns)]
+        self.assertTrue(locations)
+        for url in locations:
+            filename = url.rsplit('/',1)[1]
+            self.assertTrue((output/filename).is_file())
+            self.assertNotIn(filename, ('timing.html','contribute.html','poems--i-am-free-to-dream--original.html'))
+        self.assertIn('name="robots" content="noindex,follow"',(output/'timing.html').read_text())
+
+    def test_metadata_escapes_untrusted_titles_and_does_not_license_recordings(self):
+        config = json.loads((self.root/'site-config.json').read_text())
+        record = dict(id='sample',title='</script><script>alert(1)</script>', kind='audio',
+                      notes='A review copy',publish=False,public_preview=True,public_url='https://example.org/song.mp3')
+        text = app.shell(record['title'], '<p>A review copy</p>',config, filename='recording--sample.html',media=record)
+        payload = re.search(r'<script type="application/ld\+json">(.*?)</script>',text).group(1)
+        data = json.loads(payload)
+        obj = next(x for x in data['@graph'] if x['@type']=='AudioObject')
+        self.assertEqual(obj['name'],record['title'])
+        self.assertNotIn('license',obj)
+        self.assertNotIn('uploadDate',obj)
+        self.assertNotIn('</script>',payload)
+        digest = app.base64.b64encode(app.hashlib.sha256(payload.encode()).digest()).decode()
+        self.assertIn("'sha256-"+digest+"'",text)
 
     def test_release_requires_review_rights_and_https_url(self):
         items = app.records()

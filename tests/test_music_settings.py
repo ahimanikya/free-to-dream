@@ -46,6 +46,32 @@ class MusicSettingsTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 queue.settings_policy(root, 'i-am-free-to-dream')
 
+    def test_language_and_arrangement_overrides_are_scoped_and_proposals_stay_inactive(self):
+        policy = queue.settings_policy(ROOT, 'i-am-free-to-dream')
+        policy['language_overrides'] = {'english': {'status':'adopted', 'reason':'Test a closer arrangement', 'decision_reference':'test-only decision', 'settings':{'style_influence':70}}}
+        policy['arrangement_overrides'] = {
+            'english/country': {'status':'adopted', 'reason':'Test country phrasing', 'decision_reference':'test-only decision', 'settings':{'style_influence':75}},
+            'english/jazz': {'status':'proposed', 'reason':'An unreviewed comparison', 'settings':{'weirdness':40}}}
+        values, applied = queue.resolve_settings(policy, 'english', 'country')
+        self.assertEqual(values['style_influence'], 75)
+        self.assertEqual(len(applied), 2)
+        self.assertEqual(queue.resolve_settings(policy, 'english', 'jazz')[0]['weirdness'], policy['defaults']['weirdness'])
+        self.assertEqual(queue.resolve_settings(policy, 'tamil', 'country')[0], policy['defaults'])
+        self.assertEqual(policy['defaults']['style_influence'], 65)
+        self.assertTrue(policy['defaults']['max_mode'])
+
+    def test_override_rejects_unknown_controls_missing_reason_and_false_approval(self):
+        defaults = queue.settings_policy(ROOT, 'i-am-free-to-dream')['defaults']
+        cases = [
+            {'status':'adopted','settings':{'weirdness':40},'reason':'Try phrasing'},
+            {'status':'proposed','settings':{'weirdness':True},'reason':'Try phrasing'},
+            {'status':'proposed','settings':{'invented_control':1},'reason':'Try phrasing'},
+            {'status':'proposed','settings':{'weirdness':40},'reason':''},
+        ]
+        for case in cases:
+            with self.subTest(case=case), self.assertRaises(ValueError):
+                queue.validate_override(case, defaults)
+
     def test_unrelated_poem_does_not_inherit_this_poems_policy(self):
         with tempfile.TemporaryDirectory() as tmp:
             self.assertIsNone(queue.settings_policy(Path(tmp), 'another-poem'))

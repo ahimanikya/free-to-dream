@@ -9,3 +9,7 @@
 - [Art of the site](artwork.md) — visual references and original decorative drawings.
 
 - [From language to song and video](music-pipeline.md) — author selection, MP3 download, MP4 creation and publication.
+
+- [A dream others can build on](public-reference.md)
+- [Shared baseline and local overrides](generation-settings.md)
+- [Discovery, search and AI readers](discovery.md)

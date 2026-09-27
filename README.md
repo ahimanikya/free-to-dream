@@ -6,6 +6,12 @@ A collaborative home for Ahimanikya Satapathy’s Odia poem **“ମୋତେ �
 
 The collection has **102 language entries: 30 original/adapted lyric texts and 72 adaptation briefs**. They are not 102 finished songs. AI-assisted drafts need native-speaker review; musical prompts are creative proposals, not verified performances.
 
+## An open reference for the next creative work
+
+The poem, author artwork and author-controlled reference material are available under CC BY 4.0; code uses MIT. Recordings and third-party material retain separate terms. See [reuse and attribution](RIGHTS.md). The [public reference guide](kb/guides/public-reference.md) explains how to adapt the method for music and film. A shared settings baseline supports documented language and arrangement overrides without flattening cultural choices.
+
+The public build generates a sitemap, page-specific structured metadata, `llms.txt` and `reference.json`. Source text, review status and citations remain readable without JavaScript. Search or AI inclusion is not guaranteed.
+
 ## Start here
 
 - [Browse the knowledge base](kb/index.md)

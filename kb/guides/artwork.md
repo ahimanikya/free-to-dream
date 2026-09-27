@@ -13,7 +13,7 @@ The decorative SVG assets are stored in `web/odia-border.svg`, `web/odia-lotus.s
 
 ## The author’s artwork
 
-The invitation section pairs its text with an original artwork supplied by Ahimanikya Satapathy, signed and dated 1993. It is displayed in full, including the signature, with a separate credit. The uploaded image is preserved unchanged at `media/images/ahimanikya-artwork-1993.png`; it is not an AI-generated illustration. The author requested its inclusion in this collection.
+The invitation section pairs its text with an original artwork supplied by Ahimanikya Satapathy, signed and dated 1993. It is displayed in full, including the signature, with a separate credit. The uploaded image is preserved unchanged at `media/images/ahimanikya-artwork-1993.png`; it is not an AI-generated illustration. The author requested its inclusion in this collection and now offers this published artwork under [CC BY 4.0](rights.md), with attribution.
 
 The supplied image is 347 × 640 pixels. Keep the original artwork or a higher-resolution scan for a future printed edition. This website uses the supplied image without inventing additional detail.
 

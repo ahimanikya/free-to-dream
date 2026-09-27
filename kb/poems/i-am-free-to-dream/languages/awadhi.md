@@ -146,7 +146,7 @@ Tender Awadhi lyrical lok-geet with gentle Purab colour, warm intimate male voca
 
 This is a musical brief for a future native-language adaptation. Finish the title and lyrics with a fluent collaborator before judging a generated song in this language.
 
-Use the [shared generation settings](../../../guides/generation-settings.md) for this poem, including Max Mode Off and the common exclusions. Keep this language’s musical direction and listening checks; record any author-approved settings exception with the take.
+Start with the [shared generation baseline](../../../guides/generation-settings.md), then apply documented language or arrangement overrides. Preserve this language’s musical direction and listening checks. Explain each changed control, its musical reason and review status; record the actual settings with the take.
 
 For the listening review:
 

@@ -1,13 +1,33 @@
-# Credits and release details
+# Credits, reuse and attribution
 
-Original Odia poem and lyrics: **Ahimanikya Satapathy**. Original wording is retained in the source-poem page. The author reports writing it during college, before 1993; the precise composition date is not recorded here.
+**I am free to dream—and you are welcome to carry the dream further.** Ahimanikya Satapathy approved attributed reuse and adaptation of his poems and artwork on 27 September 2026.
 
-Translation drafts and musical directions in the initial import are AI-assisted. The imported recordings use music and vocals generated with Suno AI. Cover artwork is AI-generated. Additional video, image, translation and performance credits should be completed per asset before release.
+## What is open
 
-No blanket open-source or open-content license has been applied to this repository. Public visibility and an invitation to suggest changes should not be presented as permission to redistribute or commercially reuse all poems, adaptations and media. Decide and document the intended terms separately for text, software, artwork and recordings before inviting broad reuse.
+Except where a separate credit or notice says otherwise, the author-controlled poems, project-authored adaptation drafts, musical prompts, cultural reasoning and guides in this repository are licensed under **[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)**. This grant covers rights the author holds; it does not assert copyright over material that has no copyright protection. It applies to the public collection, not to unrelated work on the author’s blog.
 
-Each recording record has a `rights_status` field. `confirmed` means the project owner has checked the release details for that particular asset, including applicable service terms and contributor permissions. It is not a legal determination or a claim that every AI-generated element has copyright protection. `publish: true` also requires an approved recording review and a public media URL.
+The author’s original 1993 artwork at `media/images/ahimanikya-artwork-1993.png` is also CC BY 4.0. Keep its credit when reusing it. Project-authored decorative SVG artwork is CC BY 4.0. The AI-generated cover retains its AI credit; any rights held by the author in it are offered under the same terms, without claiming exclusive copyright in AI-generated elements.
 
-Local source scans, publication evidence, masters and the author's character-reference photograph stay in the ignored `local-assets/` archive. They are not copied to the public site. The source blog can be cited without publishing those private reference copies.
+You may share and adapt this licensed material, including for commercial work. Give appropriate credit, link the license and identify changes; do not imply endorsement. These permissions cannot be withdrawn for compliant uses. The [legal code](https://creativecommons.org/licenses/by/4.0/legalcode.en) governs; privacy, likeness, trademark and other rights may still apply.
 
-Before a public launch, choose contribution/reuse terms and complete the credits. Keep records of original drafts, generation dates, service subscription records and any contributor agreements outside the public site as appropriate.
+Project-authored software in `scripts/`, `skills/**/scripts/`, `web/` (HTML, CSS and JavaScript), and tests is licensed under the [MIT License](https://github.com/ahimanikya/free-to-dream/blob/main/LICENSE-CODE). Dependencies retain their own licenses. Documentation and SVG artwork in those folders use CC BY 4.0 instead.
+
+## Recordings and outside contributions
+
+**MP3, M4A, MP4, performances, generated music and vocals are not included in this blanket CC license.** Consult each recording’s credits and explicit reuse terms. Permission to stream or share a review copy is not a commercial soundtrack license; `rights_status: confirmed` records a release check, not an open license. Contact the project through a GitHub issue for uses not explicitly granted. Do not assume a linked reference, quoted material or a contributor’s work is owned by the project.
+
+Future text, guide, prompt and code contributions must explicitly agree to the applicable project license before acceptance. Media contributors state their own grant, sources, performers and permissions. Earlier external contributions retain their prior terms unless their holders agree otherwise. A maintainer must resolve unclear ownership before labeling content openly reusable.
+
+## Credit this work
+
+Suggested credit for an adaptation:
+
+> Based on “I Am Free to Dream” / “ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ” by Ahimanikya Satapathy, World is One — A Poem Without Borders. Source: https://ahimanikya.github.io/free-to-dream/ · CC BY 4.0: https://creativecommons.org/licenses/by/4.0/ · Adapted by [your name]; changes: [describe].
+
+Retain named translator, artist and reviewer credits where supplied. For research or production notes, cite the individual language page, its source revision/hash and your access date. Credit does not turn an unchecked draft into a verified translation.
+
+## Provenance and private evidence
+
+The author reports writing the original Odia poem during college, before 1993; a precise composition date is not recorded here. Original wording remains on the source-poem page. Initial adaptations and musical directions are AI-assisted. Suno music and vocals and AI-generated cover imagery are identified separately from the author’s signed 1993 painting.
+
+Private drafts, source scans, service records, character-reference photographs and publication evidence remain outside the public site. Opening the published poem and artwork does not authorize publishing these private files or using the author’s likeness.

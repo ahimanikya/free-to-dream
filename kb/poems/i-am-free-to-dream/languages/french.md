@@ -107,7 +107,7 @@ Intimate French chanson with a warm youthful male voice, soulful conversational 
 
 ## Working settings and listening checks
 
-Use the [shared generation settings](../../../guides/generation-settings.md) for this poem, including Max Mode Off and the common exclusions. Keep this language’s musical direction and listening checks; record any author-approved settings exception with the take.
+Start with the [shared generation baseline](../../../guides/generation-settings.md), then apply documented language or arrangement overrides. Preserve this language’s musical direction and listening checks. Explain each changed control, its musical reason and review status; record the actual settings with the take.
 
 Use a vocal song with the supplied lyrics and the arrangement described above. Preserve pauses without stretching or splitting words. Listen for natural French phrase grouping, clear liaisons and comfortable handling of mute e. The delivery should feel personal and lightly hopeful.
 

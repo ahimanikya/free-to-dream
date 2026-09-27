@@ -61,17 +61,71 @@ def settings_policy(repo, poem):
     cover = policy.get('reference_cover_overrides', {})
     if set(cover) != {'audio_influence'} or type(cover['audio_influence']) is not int or not 0 <= cover['audio_influence'] <= 100:
         raise ValueError('Reference cover policy must explicitly name its audio influence')
+    for layer in ('language_overrides', 'arrangement_overrides'):
+        mapping = policy.get(layer, {})
+        if not isinstance(mapping, dict):
+            raise ValueError(f'{layer} must be a mapping')
+        for key, override in mapping.items():
+            if not re.fullmatch(r'[a-z0-9-]+' + (r'/[a-z0-9-]+' if layer == 'arrangement_overrides' else ''), key):
+                raise ValueError(f'Invalid {layer} key: {key}')
+            validate_override(override, defaults)
     return dict(policy, source=str(path.relative_to(repo)), source_sha256=hashlib.sha256(raw).hexdigest())
 
 
-def settings_text(policy, listening_checks):
+
+def validate_override(override, defaults):
+    if not isinstance(override, dict) or override.get('status') not in ('proposed', 'adopted'):
+        raise ValueError('Override must be proposed or adopted')
+    if not isinstance(override.get('reason'), str) or not override['reason'].strip():
+        raise ValueError('Override needs a musical reason')
+    if override['status'] == 'adopted' and (not isinstance(override.get('decision_reference'), str) or not override['decision_reference'].strip()):
+        raise ValueError('Adopted override needs a decision reference')
+    changes = override.get('settings')
+    if not isinstance(changes, dict) or not changes or set(changes) - set(defaults):
+        raise ValueError('Override must name supported controls')
+    for key, value in changes.items():
+        if key in ('weirdness', 'style_influence', 'audio_influence'):
+            valid = (key == 'audio_influence' and value is None) or (type(value) is int and 0 <= value <= 100)
+        elif key in ('max_mode', 'personalize'):
+            valid = type(value) is bool
+        else:
+            valid = isinstance(value, str) and (bool(value.strip()) or key == 'exclude_styles')
+        if not valid:
+            raise ValueError(f'Invalid override value: {key}')
+
+
+def resolve_settings(policy, language, arrangement=None):
+    """Resolve only documented adopted overrides; proposals remain reviewable."""
+    if not policy:
+        return None, []
+    settings, applied = deepcopy(policy['defaults']), []
+    layers = [('language_overrides', language)]
+    if arrangement:
+        if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', arrangement):
+            raise ValueError('Invalid arrangement slug')
+        layers.append(('arrangement_overrides', language + '/' + arrangement))
+    for layer, key in layers:
+        override = policy.get(layer, {}).get(key)
+        if not override:
+            continue
+        validate_override(override, policy['defaults'])
+        if override['status'] == 'adopted':
+            settings.update(override['settings'])
+            applied.append(dict(layer=layer, key=key, **deepcopy(override)))
+    return settings, applied
+
+
+def settings_text(policy, listening_checks, effective=None, overrides=None):
     if not policy:
         return listening_checks
     lines = ['Intended text-prompt settings; verify in Suno before submission.',
              'Policy: ' + policy['source'] + ' @ ' + policy['revision'], '']
-    for key, value in policy['defaults'].items():
+    for key, value in (effective or policy['defaults']).items():
         display = 'Not applicable without a reference' if value is None else ('On' if value is True else 'Off' if value is False else str(value))
         lines.append(f'{key}: {display}')
+    for override in overrides or []:
+        lines += ['', 'Override: ' + override['key'], 'Reason: ' + override['reason'],
+                  'Decision: ' + override['decision_reference']]
     lines += ['', 'For an author-approved reference cover only: audio_influence ' +
               str(policy['reference_cover_overrides']['audio_influence']) +
               '. Attach the exact reference and preserve its approved prompt/lyrics.',
@@ -79,7 +133,7 @@ def settings_text(policy, listening_checks):
     return '\n'.join(lines)
 
 
-def prepare(repo, poem, languages=None, include_recorded=False):
+def prepare(repo, poem, languages=None, include_recorded=False, arrangement=None):
     repo = Path(repo).resolve()
     if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', poem):
         raise ValueError('Use a lowercase poem slug with letters, digits and hyphens.')
@@ -113,14 +167,19 @@ def prepare(repo, poem, languages=None, include_recorded=False):
             state = 'already-recorded'
         else:
             state = 'prepared'
+        effective, overrides = resolve_settings(policy, slug, arrangement)
         entries.append(dict(language=slug, language_name=meta.get('language', slug),
             title=meta.get('title', slug), order=meta.get('collection_order', 999),
             source=str(path.relative_to(repo)), source_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
             lyric_status=meta.get('lyric_status'), review_status=meta.get('review_status'),
             existing_audio=slug in audio, status=state, lyrics=lyrics if not pending else '',
-            style=style, settings=settings_text(policy, section(body, 'Working settings and listening checks')),
-            generation_settings=deepcopy(policy['defaults']) if policy else None,
+            style=style, settings=settings_text(policy, section(body, 'Working settings and listening checks'), effective, overrides),
+            generation_settings=effective, settings_overrides=overrides, arrangement=arrangement,
             candidates=[], selected_candidate=None))
+    if policy:
+        overrides_languages = set(policy.get('language_overrides', {})) | {key.split('/')[0] for key in policy.get('arrangement_overrides', {})}
+        if overrides_languages - known:
+            raise ValueError('Override names unknown language: ' + ', '.join(sorted(overrides_languages - known)))
     if languages and languages - known:
         raise ValueError('Unknown language slugs: ' + ', '.join(sorted(languages - known)))
     entries.sort(key=lambda x: (x['order'], x['language']))
@@ -150,7 +209,8 @@ def export(report, out):
             planned = dict(status='prepared-not-submitted', settings=entry['generation_settings'],
                            policy_source=policy['source'], policy_revision=policy['revision'],
                            policy_sha256=policy['source_sha256'],
-                           reference_cover_overrides=policy['reference_cover_overrides'])
+                           reference_cover_overrides=policy['reference_cover_overrides'],
+                           applied_overrides=entry['settings_overrides'], arrangement=entry['arrangement'])
             (packet / 'settings.json').write_text(json.dumps(planned, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     (out / 'queue.md').write_text('\n'.join(lines) + '\n', encoding='utf-8')
 
@@ -160,12 +220,13 @@ def main():
     parser.add_argument('--repo', type=Path, required=True)
     parser.add_argument('--poem', default='i-am-free-to-dream')
     parser.add_argument('--languages', help='Comma-separated language slugs')
+    parser.add_argument('--arrangement', help='Optional arrangement slug; selects documented control overrides, not different lyrics or style')
     parser.add_argument('--include-recorded', action='store_true')
     parser.add_argument('--out', type=Path, help='New directory for packets and a progress manifest')
     args = parser.parse_args()
     languages = {x.strip() for x in args.languages.split(',') if x.strip()} if args.languages else None
     try:
-        report = prepare(args.repo, args.poem, languages, args.include_recorded)
+        report = prepare(args.repo, args.poem, languages, args.include_recorded, args.arrangement)
         if args.out:
             export(report, args.out)
     except (ValueError, OSError) as exc:
