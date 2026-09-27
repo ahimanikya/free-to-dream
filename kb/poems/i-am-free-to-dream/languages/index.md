@@ -34,6 +34,7 @@
 - [Haryanvi](haryanvi.md) — Lyric draft.
 - [Hindi](hindi.md) — Lyric draft.
 - [Ho](ho.md) — Adaptation pending.
+- [Italian](italian.md) — Lyric draft; native-speaker review pending.
 - [Jeseri / Dweep Bhasha](jeseri.md) — Adaptation pending.
 - [Kangri](kangri.md) — Adaptation pending.
 - [Kannada](kannada.md) — Lyric draft.

@@ -10,3 +10,7 @@
 ## 2026-09-25
 
 - Restored the Filipino / Tagalog lyric draft from the existing recording’s embedded metadata, preserving its wording and song sections. The collection now has 29 lyric texts and 72 adaptation briefs across 101 languages. Native-speaker and sung-word verification remain pending.
+
+## 2026-09-26
+
+- Added the Italian lyric adaptation “Sono libero di sognare,” with an acoustic cantautore style prompt, stanza spacing, the potter pause and language-specific review guidance. There are now 102 language entries: 30 lyric texts and 72 adaptation briefs. Italian recording and native-speaker review remain pending.

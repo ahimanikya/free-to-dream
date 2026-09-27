@@ -301,7 +301,7 @@ class CollectionTests(unittest.TestCase):
         audio = [x for x in app.records() if x['kind'] == 'audio' and (x.get('public_preview') or x.get('publish'))]
         playing_languages = {x['language'] for x in audio if not x.get('archived')}
         self.assertEqual(page.count('data-play-recording='),len(playing_languages))
-        self.assertEqual(page.count('<article class="language-card"'),101)
+        self.assertEqual(page.count('<article class="language-card"'),len(app.validate()))
         self.assertIn('id="story"',page)
         self.assertIn('Ahimanikya Satapathy</h3>',page)
         self.assertIn('https://kabitaprusta.blogspot.com/',page)
@@ -312,7 +312,7 @@ class CollectionTests(unittest.TestCase):
         self.assertIn('media/images/ahimanikya-artwork-1993.png',page)
         self.assertIn('Artwork by Ahimanikya Satapathy · 1993',page)
         directory=(self.root/'site-public/languages.html').read_text()
-        self.assertEqual(directory.count('<article class="language-card"'),101)
+        self.assertEqual(directory.count('<article class="language-card"'),len(app.validate()))
         self.assertEqual(directory.count('data-play-recording='),len(playing_languages))
         self.assertIn('id="search"',directory)
         self.assertIn('id="index-player"',directory)

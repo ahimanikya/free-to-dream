@@ -4,7 +4,7 @@
 
 A collaborative home for Ahimanikya Satapathy’s Odia poem **“ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ” / “I Am Free to Dream”** and its language adaptations, musical directions and recordings.
 
-The collection has **101 language entries: 29 original/adapted lyric texts and 72 adaptation briefs**. They are not 101 finished songs. AI-assisted drafts need native-speaker review; musical prompts are creative proposals, not verified performances.
+The collection has **102 language entries: 30 original/adapted lyric texts and 72 adaptation briefs**. They are not 102 finished songs. AI-assisted drafts need native-speaker review; musical prompts are creative proposals, not verified performances.
 
 ## Start here
 
