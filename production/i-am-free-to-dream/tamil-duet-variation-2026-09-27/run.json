@@ -1,0 +1,57 @@
+{
+  "poem": "i-am-free-to-dream",
+  "language": "tamil",
+  "variant": "duet",
+  "stage": "selection-pending",
+  "title": "கனவு காண எனக்குத் தடையில்லை · Duet II",
+  "lyrics": "[Intro - Male Solo]\nஎனக்குக் கனவு காணத் தடையில்லை,\nநடுவழியில் தொலைந்து போகவும் தடையில்லை.\nதுருவ நட்சத்திரம் வழிகாட்டும்.\n\n[Verse 1 - Male Solo]\nசிறிது சிறிதாய்ச் சேர்த்து,\nஉலகை இறுக அணைத்திருக்கிறேன்—\nஅதை ஒன்றுசேர்க்கும் நம்பிக்கையில்,\nஅழகுபடுத்தும் நம்பிக்கையில்.\n\n[Verse 2 - Male Solo]\nநான் ஒரு குயவன்.\n\nஉருவம் தரக் கற்றிருக்கிறேன்,\nவண்ணம் தீட்டி,\nஉன் முகத்தில் புன்னகை விதைக்கக் கற்றிருக்கிறேன்.\n\n[Chorus - Male Solo]\nஎனக்குக் கனவு காணத் தடையில்லை,\nநடுவழியில் தொலைந்து போகவும் தடையில்லை.\nதுருவ நட்சத்திரம் வழிகாட்டும்.\n\n[Bridge - Male Lead, Soft Female Responses]\nவா, மலை ஏறுவோம்.\nவா, நிலவைப் பார்ப்போம்.\nமேகங்களோடு தோள் சேர்த்து,\nமழையாய்ப் பொழியும் மந்திரம் கற்போம்.\n\n[Final Chorus - Tender Close-Harmony Duet]\nஎனக்குக் கனவு காணத் தடையில்லை.\nஉன் கனவுகளை என் கனவுகளோடு\nபின்னிச் சேர்க்கவும் தடையில்லை.\n\n[Soft Outro - Both Voices, Gentle]\nஉன் கனவுகளை என் கனவுகளோடு...\nபின்னிச் சேர்க்கவும் தடையில்லை.",
+  "style": "Indie folk ballad, warm youthful male vocals with intimate expressive delivery and clear Tamil pronunciation; earthy acoustic production, sparse voice-and-guitar opening, gradual warmth, soft sustained instruments beneath the distinct pause, gently blooming refrain harmonies and hushed outro; fingerpicked acoustic guitar, mellow bamboo flute, subtle veena accents, rounded acoustic bass, delicate hand percussion, restrained strings; gentle unhurried 6/8 sway. Male solo opening, verses and first chorus; soft female answering phrases in the bridge; tender close-harmony duet at the end. Female voice stays gentle and secondary until the ending. Use only supplied words.",
+  "source": "kb/poems/i-am-free-to-dream/languages/tamil.md",
+  "source_sha256": "64d0761dd56daa1770e8ba4c4a4fe99b50859825797135e30a8c37d13d69dc1a",
+  "reference_song_url": "https://suno.com/song/46dc2eb2-547c-4719-97bb-af6a02715114",
+  "reference_media": "media/tamil/i-am-free-to-dream-tamil.mp3",
+  "reference_identification": "Song ID matched published MP3 WOAS and ID3 comment; native title and lyrics checked in source song page.",
+  "generation_method": "reference-based cover",
+  "reference_style": "Indie folk ballad, warm youthful male vocals with intimate expressive delivery and clear Tamil pronunciation; earthy acoustic production, sparse voice-and-guitar opening, gradual warmth, soft sustained instruments beneath the distinct pause, gently blooming refrain harmonies and hushed outro; fingerpicked acoustic guitar, mellow bamboo flute, subtle veena accents, rounded acoustic bass, delicate hand percussion, restrained strings; gentle unhurried 6/8 sway.",
+  "settings": {
+    "model": "v6",
+    "mode": "Advanced",
+    "weirdness": 30,
+    "style_influence": 65,
+    "audio_influence": 75,
+    "duration": "Auto",
+    "max_mode": false,
+    "personalize": false,
+    "variety": "Normal",
+    "vocal_gender": "Unselected; male-led soft duet directed in prompt",
+    "exclude_styles": "EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals"
+  },
+  "submission_limit": 1,
+  "expected_candidates": 2,
+  "candidates": [
+    {
+      "take": 1,
+      "id": "d1db3fb3-5aa2-484d-8475-0f9d84bff282",
+      "url": "https://suno.com/song/d1db3fb3-5aa2-484d-8475-0f9d84bff282",
+      "duration": "2:44"
+    },
+    {
+      "take": 2,
+      "id": "fac557ca-353b-4d00-aebf-610660434dfa",
+      "url": "https://suno.com/song/fac557ca-353b-4d00-aebf-610660434dfa",
+      "duration": "2:52"
+    }
+  ],
+  "selected_candidate": null,
+  "publication_authorized": false,
+  "author_request": "Author explicitly approved reference-based covers as separate duet variations; identical backing is not guaranteed.",
+  "changes": [
+    "Preserved the published recording style, excluded styles and all sung words. Added only vocal section labels and male-led soft-answer/final-harmony instruction. Preserved the blank line after நான் ஒரு குயவன்."
+  ],
+  "created_at": "2026-09-27T15:49:48.377Z",
+  "input_verified": true,
+  "actual_submissions": 1,
+  "submitted_at": "2026-09-27T15:50:22.393Z",
+  "completed_at": "2026-09-27T15:51:50.136Z",
+  "review_status": "Author listening and take selection pending; no direct listening assessment by the assistant."
+}

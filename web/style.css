@@ -371,3 +371,5 @@ header { gap:24px; }
  .player-links { gap:14px; font-size:10px; }
  #index-volume { width:56px; }
 }
+
+.recording-variation + .recording-variation { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line); }

@@ -37,3 +37,7 @@ If normal Git write authentication is unavailable, the previously used import pa
 Run validation, meaningful import tests, existing site/player tests, the site build and staged LFS check. Do not let a successful later shell command hide an earlier failed check. Verify final GitHub checks and Pages deployment.
 
 Check the live language page, active playlist entry and direct media bytes/seek support; test browser playback when feasible. Archived takes stay outside the active playlist. Refresh local previews if affected. Report exactly which stages finished and link the published pages; do not imply that a public review copy is a verified translation.
+
+## Additional variations
+
+For an author-requested additional duet, preserve the existing current arrangement. Register the selected audio/video pair with `variation: duet`, `variation_label: Duet`, a title suffix “ · Duet”, unique IDs and paths under `media/<language>/duet/`. Keep both variations active, as with English Country/Jazz; do not mark the existing version archived merely to feature a duet. Record the choice and cultural/poetic rationale. Candidate creation alone is not selection or publication.

@@ -36,3 +36,11 @@ Pass `--ffmpeg /path/to/ffmpeg` if FFmpeg is not on PATH. The renderer refuses t
 This visual source belongs to this poem. A different poem or a request for new visual storytelling needs an appropriate visual choice rather than automatically reusing it.
 
 See [media publishing](add-media.md) for catalog fields and [timed lyrics](timed-lyrics.md) for SRT handling.
+
+## Publish an additional musical variation
+
+A selected duet is an additional variation, like English Country and Jazz. Preserve the existing arrangement and its URLs; do not archive it simply because a duet was selected. Keep current variations available in the playlist. Archive only a superseded take within a variation when the author requests replacement.
+
+Store new duet media under `media/<language>/duet/`, with unique IDs and filenames. Give its audio and matching video `variation: duet`, `variation_label: Duet` and a title ending in “ · Duet”. Use the same source-song URL on the pair and link the video with `audio_recording_id`. Existing published files need not move to gain a variation label. The language page gives each available variation its own section under Listen and Watch; earlier takes remain separate.
+
+Only publish after the author selects a take. Candidate links and exact prompts remain in production history until then. Explain the vocal choice and local musical basis on the language page; record which source recording was used and whether the tune/backing preservation was actually verified. A cover may reinterpret the source and does not establish an identical backing track.

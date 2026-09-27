@@ -1,0 +1,54 @@
+{
+  "poem": "i-am-free-to-dream",
+  "language": "bengali",
+  "variant": "duet",
+  "stage": "selection-pending",
+  "title": "স্বপ্ন দেখতে আমার মানা নেই · Duet II",
+  "lyrics": "[Intro - Male Solo]\nস্বপ্ন দেখতে আমার মানা নেই,\nপথের মাঝে হারিয়ে যেতেও মানা নেই।\nধ্রুবতারা পথ দেখাবে।\n\n[Verse 1 - Male Solo]\nকুড়িয়ে... কুড়িয়ে...\nসংসারটাকে বুকে জড়িয়ে রেখেছি—\nজুড়ে দেওয়ার আশায়,\nসাজিয়ে দেওয়ার আশায়।\n\n[Verse 2 - Male Solo]\nআমি এক কুমোর।\n\nগড়ে তুলতে শিখেছি,\nরঙে রাঙিয়ে,\nতোমার মুখে হাসি ফোটাতে শিখেছি।\n\n[Chorus - Male Solo]\nস্বপ্ন দেখতে আমার মানা নেই,\nপথের মাঝে হারিয়ে যেতেও মানা নেই।\nধ্রুবতারা পথ দেখাবে।\n\n[Bridge - Male Lead, Soft Female Answering Phrases]\nএসো, পাহাড়ে উঠি।\nএসো, চাঁদ দেখি।\nমেঘের সঙ্গে কাঁধ মিলিয়ে,\nবৃষ্টি হয়ে ঝরার মন্ত্র শিখি।\n\n[Final Chorus - Tender Male and Female Close Harmony]\nস্বপ্ন দেখতে আমার মানা নেই।\nতোমার স্বপ্ন আমার স্বপ্নের সঙ্গে\nবুনে দিতেও মানা নেই।\n\n[Soft Outro - Tender Male and Female Close Harmony]\nতোমার স্বপ্ন আমার স্বপ্নের সঙ্গে...\nবুনে দিতেও মানা নেই।",
+  "style": "Dreamy Bengali poetic folk ballad with bhatiyali-inspired spacious phrasing. Warm intimate male voice, natural Bengali diction, long breathing lines and gently descending endings. Dotara, airy bamboo flute and sparse soft hand percussion, an elastic relaxed pulse. Breath between কুড়িয়ে... কুড়িয়ে... and a full pause after আমি এক কুমোর. Keep instrumental notes floating beneath the silence. Gradually open from a solitary verse to a quietly hopeful refrain; broaden the mountain-and-cloud bridge, then return to a tender close voice for weaving dreams together. Use long, connected Bengali lines and gentle descending resolutions; keep the spacious delivery quietly happy. Warm youthful delivery; calm, soulful joy. No mournful delivery, driving beat or dramatic crescendo. Male solo opening, verses and first chorus; soft female answering phrases in the bridge; tender close-harmony duet at the end. Use only supplied words.",
+  "source": "kb/poems/i-am-free-to-dream/languages/bengali.md",
+  "source_sha256": "c14f5ef744c47dc89c96419a1bfb6e11ca2d4ec73aad9feb8664dcb6ec651db1",
+  "settings": {
+    "model": "v6",
+    "mode": "Advanced",
+    "weirdness": 30,
+    "style_influence": 65,
+    "duration": "Auto",
+    "max_mode": false,
+    "personalize": false,
+    "variety": "Normal",
+    "vocal_gender": "Unselected; male-led soft duet directed in prompt"
+  },
+  "submission_limit": 1,
+  "expected_candidates": 2,
+  "candidates": [
+    {
+      "take": 1,
+      "id": "873b504f-c4bf-4e2d-b322-3d423b2f8d56",
+      "url": "https://suno.com/song/873b504f-c4bf-4e2d-b322-3d423b2f8d56",
+      "duration_display": "2:35",
+      "status": "ready-for-review"
+    },
+    {
+      "take": 2,
+      "id": "542a8bdd-a2c0-4fa8-a117-28270f619fcd",
+      "url": "https://suno.com/song/542a8bdd-a2c0-4fa8-a117-28270f619fcd",
+      "duration_display": "2:22",
+      "status": "ready-for-review"
+    }
+  ],
+  "selected_candidate": null,
+  "publication_authorized": false,
+  "author_request": "One new duet pair for the working languages; keep local musical variation and publish selected duets separately.",
+  "changes": [
+    "Only section directions changed in lyrics; sung words preserved.",
+    "Condensed repeated emotional guidance to keep local style plus optional vocal direction within the style field."
+  ],
+  "created_at": "2026-09-27T15:36:59.016864+00:00",
+  "input_verified": true,
+  "submission_started_at": "2026-09-27T15:40:26.430Z",
+  "actual_submissions": 1,
+  "submitted_at": "2026-09-27T15:40:29.729Z",
+  "completed_at": "2026-09-27T15:42:53.662Z",
+  "review_status": "Author listening and take selection pending; no direct listening assessment by the assistant."
+}

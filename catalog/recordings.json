@@ -44,7 +44,9 @@
     "preview_authorization": "Author requested embedded audio and video on each language page on 2026-09-24.",
     "allow_file_sharing": false,
     "archived": false,
-    "duration_seconds": 183.5
+    "duration_seconds": 183.5,
+    "variation": "country",
+    "variation_label": "Country"
   },
   {
     "id": "english-audio-jazz",
@@ -67,7 +69,9 @@
     "preview_authorization": "Author requested embedded audio and video on each language page on 2026-09-24.",
     "allow_file_sharing": false,
     "archived": false,
-    "duration_seconds": 203.95
+    "duration_seconds": 203.95,
+    "variation": "jazz",
+    "variation_label": "Jazz"
   },
   {
     "id": "english-video-country",
@@ -90,7 +94,9 @@
     "public_preview": true,
     "preview_authorization": "Author requested embedded audio and video on each language page on 2026-09-24.",
     "allow_file_sharing": false,
-    "archived": false
+    "archived": false,
+    "variation": "country",
+    "variation_label": "Country"
   },
   {
     "id": "english-video-jazz",
@@ -113,7 +119,9 @@
     "public_preview": true,
     "preview_authorization": "Author requested embedded audio and video on each language page on 2026-09-24.",
     "allow_file_sharing": false,
-    "archived": false
+    "archived": false,
+    "variation": "jazz",
+    "variation_label": "Jazz"
   },
   {
     "id": "filipino-audio-01",
@@ -694,7 +702,7 @@
     "language": "sambalpuri",
     "poem": "i-am-free-to-dream",
     "kind": "audio",
-    "title": "ମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ",
+    "title": "ମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ · Duet",
     "local_path": null,
     "repo_path": "media/sambalpuri/i-am-free-to-dream-sambalpuri.mp3",
     "publish": false,
@@ -714,14 +722,16 @@
     "source_url": "https://suno.com/song/a2b3ded1-b0a2-4e02-917e-66a8b4815ced",
     "generation_settings": {
       "model": "v6"
-    }
+    },
+    "variation": "duet",
+    "variation_label": "Duet"
   },
   {
     "id": "sambalpuri-video-01",
     "language": "sambalpuri",
     "poem": "i-am-free-to-dream",
     "kind": "video",
-    "title": "ମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ",
+    "title": "ମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ · Duet",
     "local_path": null,
     "repo_path": "media/sambalpuri/i-am-free-to-dream-sambalpuri.mp4",
     "publish": false,
@@ -740,6 +750,8 @@
     "archived": false,
     "duration_seconds": 151.2,
     "source_url": "https://suno.com/song/a2b3ded1-b0a2-4e02-917e-66a8b4815ced",
-    "audio_recording_id": "sambalpuri-audio-01"
+    "audio_recording_id": "sambalpuri-audio-01",
+    "variation": "duet",
+    "variation_label": "Duet"
   }
 ]

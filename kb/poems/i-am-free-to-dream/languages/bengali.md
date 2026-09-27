@@ -86,6 +86,8 @@ The shared feeling is calm, soulful joy: affection, wonder and the freedom to dr
 
 **What to validate.** Use long, connected Bengali lines and gentle descending resolutions; keep the spacious delivery quietly happy. Check whether the cited context supports the chosen influence and whether the musical choices serve the poem. Distinguish a documented practice from our new arrangement. Suggest corrections with the local variety, a source or performance example, and a timestamp when reviewing audio.
 
+The optional duet trial of 27 September retains bhatiyali-inspired space, long breath-connected lines, gently descending endings, dotara and airy flute. Soft female replies give the invitation an answering voice; close harmony at the end suggests two dreams woven together. This is a contemporary poetic choice, not a traditional duet requirement. These are new text-prompt candidates, not covers of the published recording. Before selecting an additional Duet version, check Bengali stresses and complete phrases, the male solo through the first chorus, the secondary female replies, and the gathering breath and potter pause. The original recording remains available.
+
 ## Cultural grounding
 
 Sahapedia’s discussion of northern Bengal’s folk songs distinguishes bhawaiya from the expansive river-song world of bhatiyali. These are particular traditions, not interchangeable names for Bengali music.

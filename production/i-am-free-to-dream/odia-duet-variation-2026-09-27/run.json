@@ -1,0 +1,52 @@
+{
+  "poem": "i-am-free-to-dream",
+  "language": "odia",
+  "variant": "duet",
+  "stage": "selection-pending",
+  "title": "ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ · Duet II",
+  "lyrics": "[Intro - Male Solo]\nମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ\nମନା ନାହିଁ ମଝି ରାସ୍ତାରେ ହଜି ଜିବାକୁ\nଧୃବତାରା ଖୋଜିଦେବ ରାସ୍ତା ।\n\n[Verse 1 - Male Solo]\nସାଉଁଟି... ସାଉଁଟି...\nଜାବୁଡି ଧରିଛି ସଂସାରକୁ\nଜୋଡି ଦେବାର ଆଶାରେ,\nସଜେଇ ଦେବାର ଆଶାରେ ।\n\n[Verse 2 - Male Solo]\nକୁଂଭକାର ମୁଁ ।\n\nଗଠିଦେବା ସିଖିଛି\nରଂଗେଈ ଦେଈ,\nତୁମ ମୁଖରେ ହସ ବୁଣିବା ସିଖିଛି ।\n\n[Chorus - Male Solo]\nମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ\nମନା ନାହିଁ ମଝି ରାସ୍ତାରେ ହଜି ଜିବାକୁ\nଧୃବତାରା ଖୋଜିଦେବ ରାସ୍ତା ।\n\n[Bridge - Male Lead, Soft Female Answering Phrases]\nଆସ ପାହାଡ ଚଢିବା\nଆସ ଜନ୍ହ ଦେଖିବା\nବାଦଲ ସାଂଗେ କାଂଧ ମିଳେଈ\nଝଡିବାର ମଂତ୍ର ସିଖିବା ।\n\n[Final Chorus - Tender Male and Female Close Harmony]\nମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ ।\nମନା ନାହିଁ ଗୁଂଥିଦେବାକୁ\nତୁମ ସପ୍ନକୁ ମୋ ସପ୍ନରେ ।\n\n[Soft Outro - Tender Male and Female Close Harmony]\nମନା ନାହିଁ ଗୁଂଥିଦେବାକୁ\nତୁମ ସପ୍ନକୁ ମୋ ସପ୍ନରେ ।",
+  "style": "Intimate Odia indie-folk lyric ballad, warm natural male voice, clear complete words, subtle Odissi-influenced melodic turns. Soft acoustic guitar, bamboo flute responses, restrained mardala and warm sustained bass. Unhurried flowing pulse, minimal opening, gradually warmer verses. Separate the repeated ସାଉଁଟି phrases with a breath; leave a full pause after କୁଂଭକାର ମୁଁ. Instruments sustain beneath the pauses. A quietly hopeful refrain, an open mountain-and-moon bridge, a tender dream-weaving ending. Keep ornaments brief and the poem prominent. Let whole Odia thoughts shape the melody; use brief Odissi-informed turns without fragmenting words. Warm youthful delivery; calm, soulful joy. No mournful delivery, driving beat or dramatic crescendo. Male solo opening, verses and first chorus; soft female answering phrases in the bridge; tender close-harmony duet at the end. Use only supplied words.",
+  "source": "kb/poems/i-am-free-to-dream/languages/odia.md",
+  "source_sha256": "6d6ebbf70d470ff6a75d4d6e009a87f1bfe525f08ec5b9370897e3a9720e737b",
+  "settings": {
+    "model": "v6",
+    "mode": "Advanced",
+    "weirdness": 30,
+    "style_influence": 65,
+    "duration": "Auto",
+    "max_mode": false,
+    "personalize": false,
+    "variety": "Normal",
+    "vocal_gender": "Unselected; male-led soft duet directed in prompt"
+  },
+  "submission_limit": 1,
+  "expected_candidates": 2,
+  "candidates": [
+    {
+      "take": 1,
+      "url": "https://suno.com/song/0f4e26db-10af-47de-a15f-75ce30c8b3b6",
+      "duration": "2:30",
+      "id": "0f4e26db-10af-47de-a15f-75ce30c8b3b6"
+    },
+    {
+      "take": 2,
+      "url": "https://suno.com/song/6761d13c-d332-43c1-b5fd-20bd38da44ce",
+      "duration": "2:26",
+      "id": "6761d13c-d332-43c1-b5fd-20bd38da44ce"
+    }
+  ],
+  "selected_candidate": null,
+  "publication_authorized": false,
+  "author_request": "One new duet pair for the working languages; keep local musical variation and publish selected duets separately.",
+  "changes": [
+    "Only section directions changed in lyrics; sung words preserved.",
+    "Condensed repeated emotional guidance to keep local style plus optional vocal direction within the style field."
+  ],
+  "created_at": "2026-09-27T15:36:59.018348+00:00",
+  "input_verified": true,
+  "submission_started_at": "2026-09-27T15:43:37.161Z",
+  "actual_submissions": 1,
+  "submitted_at": "2026-09-27T15:43:38.358Z",
+  "completed_at": "2026-09-27T15:46:49.558Z",
+  "review_status": "Author listening and take selection pending; no direct listening assessment by the assistant."
+}

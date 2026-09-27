@@ -1,0 +1,53 @@
+{
+  "poem": "i-am-free-to-dream",
+  "language": "sambalpuri",
+  "variant": "duet",
+  "stage": "selection-pending",
+  "title": "ମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ · Duet II",
+  "lyrics": "[Intro - Male Solo]\nମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ,\nମଝି ବାଟେ ହଜିଯିବାକେ ବି ମନା ନାଇଁ।\nଧ୍ରୁବତାରା ବାଟ୍ ଦେଖେଇଦେବା।\n\n[Verse 1 - Male Solo]\nସାଉଁଟି... ସାଉଁଟି...\nସଂସାର୍‌କେ ଜାବ୍‌ଡ଼ି ଧରିଛେଁ—\nଜୁଡ଼ିଦେବାର୍ ଆଶାନେ,\nସଜେଇଦେବାର୍ ଆଶାନେ।\n\n[Verse 2 - Male Solo]\nକୁମ୍ଭାର୍ ମୁଇଁ।\n\nଗଢ଼ିଦେବାର୍ ସିଖିଛେଁ,\nରଙ୍ଗ୍ ଲଗେଇ,\nତୋର୍ ମୁହେଁ ହସ୍ ବୁନ୍‌ବାର୍ ସିଖିଛେଁ।\n\n[Chorus - Male Lead]\nମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ,\nମଝି ବାଟେ ହଜିଯିବାକେ ବି ମନା ନାଇଁ।\nଧ୍ରୁବତାରା ବାଟ୍ ଦେଖେଇଦେବା।\n\n[Bridge - Male Lead, Soft Female Responses]\nଆ, ପାହାଡ଼୍ ଚଢ଼୍‌ମା।\nଆ, ଜନ୍ ଦେଖ୍‌ମା।\nବାଦଲ୍ ସାଙ୍ଗେ କାନ୍ଧ୍ ମିଲେଇ,\nବର୍ଷା ହେଇ ଝର୍‌ବାର୍ ମନ୍ତର୍ ସିଖ୍‌ମା।\n\n[Final Chorus - Male and Female Duet]\nମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ।\nତୋର୍ ସପନ୍‌କେ ମୋର୍ ସପନ୍‌ନେ\nଗୁଁଥିଦେବାକେ ବି ମନା ନାଇଁ।\n\n[Soft Outro - Both Voices]\nତୋର୍ ସପନ୍‌କେ ମୋର୍ ସପନ୍‌ନେ...\nଗୁଁଥିଦେବାକେ ବି ମନା ନାଇଁ।",
+  "style": "Sambalpuri folk ballad, gently lilting and unhurried, bamboo-flute replies over lightly played dhol, soft bass and quiet acoustic guitar; instruments sustain through clear breaths between gathering phrases and a fuller pause after the potter declaration. The bridge opens warmly without speeding up, the refrain blooms into quiet communal joy, and the duet outro settles tenderly. Warm youthful male lead with natural Sambalpuri pronunciation, affectionate conversational delivery, male solo opening, verses and first chorus; soft female answering phrases in the bridge; tender close-harmony duet at the end. Female voice stays gentle and secondary until the ending. Use only supplied words.",
+  "source": "kb/poems/i-am-free-to-dream/languages/sambalpuri.md",
+  "source_sha256": "c1aed8a8427c2418c4aac0a99be1f495ee085cca4a548143eb58bf35971d5339",
+  "reference_song_url": "https://suno.com/song/a2b3ded1-b0a2-4e02-917e-66a8b4815ced",
+  "generation_method": "reference-based cover",
+  "settings": {
+    "model": "v6",
+    "mode": "Advanced",
+    "weirdness": 30,
+    "style_influence": 65,
+    "audio_influence": 75,
+    "duration": "Auto",
+    "max_mode": false,
+    "personalize": false,
+    "variety": "Normal",
+    "vocal_gender": "Unselected; male-led soft duet directed in prompt"
+  },
+  "submission_limit": 1,
+  "expected_candidates": 2,
+  "candidates": [
+    {
+      "take": 1,
+      "id": "cf1614ea-90b8-4dfd-9b0e-3dacef8fda45",
+      "url": "https://suno.com/song/cf1614ea-90b8-4dfd-9b0e-3dacef8fda45",
+      "duration": "2:31"
+    },
+    {
+      "take": 2,
+      "id": "0b92fa4b-d03b-4d19-ae55-e8b8570089ca",
+      "url": "https://suno.com/song/0b92fa4b-d03b-4d19-ae55-e8b8570089ca",
+      "duration": "2:32"
+    }
+  ],
+  "selected_candidate": null,
+  "publication_authorized": false,
+  "author_request": "Author explicitly approved reference-based covers as separate duet variations; identical backing is not guaranteed.",
+  "changes": [
+    "Preserved selected source lyric and non-vocal style wording; clarified the secondary female replies and final close harmony."
+  ],
+  "created_at": "2026-09-27T15:41:29.661272+00:00",
+  "input_verified": true,
+  "actual_submissions": 1,
+  "submitted_at": "2026-09-27T15:48:26.318Z",
+  "completed_at": "2026-09-27T15:49:48.300Z",
+  "review_status": "Author listening and take selection pending; no direct listening assessment by the assistant."
+}

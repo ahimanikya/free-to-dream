@@ -1,5 +1,7 @@
 # Production memory
 
+Current review: [soft-answer duet candidates, 27 September 2026](i-am-free-to-dream/duet-review-2026-09-27.md). Eight candidates await author selection; published recordings remain unchanged.
+
 These records let another maintainer resume without the author's laptop or previous chat.
 
 - `i-am-free-to-dream/*/run.json`: historical submitted lyrics, style, settings, candidate IDs, author selections and publication progress recovered on 27 September 2026.

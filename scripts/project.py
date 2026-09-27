@@ -228,6 +228,10 @@ def validate(skip_timing_id=None):
                     raise ValueError('Tracked recordings belong under media/ with a supported extension')
             if item.get('public_url') and not safe_url(item['public_url']):
                 raise ValueError('Public media URL must use HTTPS without embedded credentials')
+            if 'variation' in item and (not isinstance(item['variation'], str) or not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', item['variation'])):
+                raise ValueError('Variation must be a lowercase slug')
+            if 'variation_label' in item and (not item.get('variation') or not isinstance(item['variation_label'], str) or not item['variation_label'].strip()):
+                raise ValueError('Variation label requires a variation and nonempty text')
             if type(item.get('archived', False)) is not bool: raise ValueError('archived must be boolean')
             if ident != skip_timing_id: timed_cues(item)
             if type(item.get('public_preview', False)) is not bool:
@@ -370,10 +374,11 @@ def resource_panel(meta, items):
     content = '<aside id="resources" class="listening compact-listening" aria-label="Listen and watch">'
     if any(not item['publish'] for item, _ in items):
         content += '<p class="media-status">Working recordings · feedback welcome</p>'
-    def card(item, url):
+    def card(item, url, show_title=True):
         label = Path(urlparse(url).path).suffix.lstrip('.').upper()
         title = re.sub(r'^(?:I Am Free to Dream|'+re.escape(meta['language'])+r')\s*[·–—-]\s*', '', item['title'])
-        return f'<div class="recording"><h4>{esc(title)}</h4>{player_markup(item, url)}<div class="recording-links"><a href="{esc(url, quote=True)}" download>Download {label}</a><a href="recording--{item["id"]}.html">Details &amp; share ↗</a></div></div>'
+        title_markup = f'<h4>{esc(title)}</h4>' if show_title else ''
+        return f'<div class="recording">{title_markup}{player_markup(item, url)}<div class="recording-links"><a href="{esc(url, quote=True)}" download>Download {label}</a><a href="recording--{item["id"]}.html">Details &amp; share ↗</a></div></div>'
     for kind, heading, target in [('audio', 'Listen', 'listen'), ('video', 'Watch', 'watch')]:
         current = [(item, url) for item, url in items if item['kind'] == kind and not item.get('archived')]
         older = [(item, url) for item, url in items if item['kind'] == kind and item.get('archived')]
@@ -381,9 +386,19 @@ def resource_panel(meta, items):
         if not current and not older:
             content += '<p class="media-empty">'+('A recording is still to come.' if kind=='audio' else 'A video is still to come.')+'</p>'
         if current:
-            content += card(*current[0])
-            if len(current) > 1:
-                content += f'<details class="more-recordings"><summary>More {kind} versions ({len(current)-1})</summary>' + ''.join(card(*pair) for pair in current[1:]) + '</details>'
+            variations = {}
+            named = any(item.get('variation') for item, _ in current)
+            for pair in current:
+                variations.setdefault(pair[0].get('variation', 'original'), []).append(pair)
+            for variation, takes in variations.items():
+                if named:
+                    label = takes[0][0].get('variation_label', 'Original arrangement' if variation == 'original' else variation.title())
+                    content += f'<section id="{target}-{esc(variation, quote=True)}" class="recording-variation" aria-label="{heading} · {esc(label, quote=True)}"><h3>{esc(label)}</h3>'
+                content += card(*takes[0], show_title=not named)
+                if len(takes) > 1:
+                    content += f'<details class="more-recordings"><summary>More {kind} versions ({len(takes)-1})</summary>' + ''.join(card(*pair) for pair in takes[1:]) + '</details>'
+                if named:
+                    content += '</section>'
         if older:
             content += f'<details class="earlier-recordings"><summary>Earlier {kind} versions ({len(older)})</summary>' + ''.join(card(*pair) for pair in older) + '</details>'
         if kind == 'audio' and current:

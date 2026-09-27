@@ -84,6 +84,8 @@ The shared feeling is calm, soulful joy: affection, wonder and the freedom to dr
 
 **Vocal choice — author-selected soft duet.** The [selected recording](https://suno.com/song/a2b3ded1-b0a2-4e02-917e-66a8b4815ced) is the musical reference. Preserve its Sambalpuri variation when refining the voices. Solo remains the starting point for new arrangements elsewhere; this duet is a deliberate exception.
 
+**Duet refinement — awaiting selection.** The 27 September Cover trial uses that exact recording as its audio reference and retains its lilting pulse, flute replies, lightly played dhol and conversational Sambalpuri delivery in the prompt. Only the vocal direction is clarified: male solo opening, verses and first chorus; brief soft female replies in the invitation; tender close harmony at the end. This develops the conversational idea described above without turning the whole poem into alternating lead verses. The author approved reference-based covers, which may change melody and backing. Check those against the selected source, listen for a gentle secondary female role before the ending, and confirm gathering breaths and the potter pause. The selected recording stays available in Duet while these candidates await review.
+
 **Why and what to check.** A local singer should assess the speech cadence, compact endings and gentle folk pulse, then check whether female replies support the male narrative and whether the final harmony keeps every word clear. Compare the invitation and dream-weaving ending with the solo verses. Confirm the actual performance with timestamps; the author's selection does not replace pronunciation or musician review.
 
 ## Cultural grounding

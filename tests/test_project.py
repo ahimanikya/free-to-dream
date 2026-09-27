@@ -81,6 +81,22 @@ class CollectionTests(unittest.TestCase):
         self.assertIn('ମୋତେ ସପ୍ନ',output)
         self.assertIn('நான் ஒரு குயவன்.\n\nnext line',output)
 
+    def test_variations_remain_separate_current_choices(self):
+        meta={'language':'Tamil','slug':'tamil'}
+        def item(ident, variation=None, archived=False):
+            data={'id':ident,'title':ident,'kind':'audio','publish':False,'archived':archived}
+            if variation: data.update(variation=variation,variation_label=variation.title())
+            return data, 'https://media.example.org/'+ident+'.mp3'
+        html=app.resource_panel(meta,[item('original'),item('duet','duet'),item('duet-old','duet',True)])
+        self.assertIn('id="listen-original"',html)
+        self.assertIn('id="listen-duet"',html)
+        current,older=html.split('<details class="earlier-recordings">')
+        self.assertIn('original.mp3',current)
+        self.assertIn('duet.mp3',current)
+        self.assertNotIn('duet-old.mp3',current)
+        self.assertIn('duet-old.mp3',older)
+        self.assertNotIn('More audio versions',current)
+
     def test_new_upload_is_copied_without_publishing_and_duplicate_id_rejected(self):
         source = self.root/'new take.mp3'; source.write_bytes(b'test-only media payload')
         args = Namespace(language='hindi',id='hindi-test-01',kind='audio',title='Test',file=str(source),url=None)

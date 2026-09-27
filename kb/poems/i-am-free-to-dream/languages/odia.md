@@ -113,6 +113,8 @@ The shared feeling is calm, soulful joy: affection, wonder and the freedom to dr
 
 **What to validate.** Let whole Odia thoughts shape the melody; use brief Odissi-informed turns without fragmenting words. Check whether the cited context supports the chosen influence and whether the musical choices serve the poem. Distinguish a documented practice from our new arrangement. Suggest corrections with the local variety, a source or performance example, and a timestamp when reviewing audio.
 
+The optional duet trial of 27 September keeps the Odia direction above: brief Odissi-informed turns after complete phrases, flute responses and restrained mardala. The second voice answers the mountain-and-moon invitation, then joins the final weaving of dreams. That is a contemporary interpretation of this poem, not a claim that Odia lyric song requires a duet. These are new text-prompt candidates, not covers of the published recording. Before selecting an additional Duet version, check the male voice leads through the first chorus, the female replies stay gentle, every word remains clear, and both the gathering breath and potter pause survive. The original recording remains available.
+
 ## Cultural grounding
 
 Odisha Tourism describes the close relationship between poetry and Odissi music, including the importance of preserving words intact.
