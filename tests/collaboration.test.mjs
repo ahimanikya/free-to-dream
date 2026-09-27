@@ -244,3 +244,79 @@ test('Stop returns to the beginning without advancing; Play resumes and volume r
   await n['index-mute'].emit('click');assert.equal(audio.muted,false);assert.equal(audio.volume,0.4);
   await audio.emit('ended');assert.equal(audio.src,'country.mp3');
 });
+
+const {shuffledTracks,nextInQueue}=await import('../web/index-player.mjs');
+const {cleanEvent,mediaMeter,analyticsAllowed}=await import('../web/engagement.mjs');
+const {classifyIssue,loadPublicIssues}=await import('../web/engagement-dashboard.mjs');
+const {default:triageModule}=await import('../scripts/engagement-triage.cjs');
+
+test('Shuffle preserves the current take and visits each current recording once; repeat modes differ',()=>{
+  const queue=shuffledTracks(testTracks,'en-country',()=>0);
+  assert.equal(queue[0].id,'en-country');assert.equal(new Set(queue.map(t=>t.id)).size,3);
+  assert.equal(queue.some(t=>t.archived),false);
+  const last=queue.at(-1).id;
+  assert.equal(nextInQueue(queue,last,1,'off'),null);
+  assert.equal(nextInQueue(queue,last,1,'all').id,'en-country');
+  assert.equal(nextInQueue(queue,'en-country',1,'one',true).id,'en-country');
+  assert.notEqual(nextInQueue(queue,'en-country',1,'one',false).id,'en-country');
+});
+
+test('Engagement accepts only scoped events, never feedback text, usernames or arbitrary URLs',()=>{
+  assert.deepEqual(cleanEvent('share_intent',{method:'linkedin',recording_id:'odia-audio-01',email:'someone@example.com',feedback:'private',user_id:'abc',language:'odia'}),
+    {name:'share_intent',params:{method:'linkedin',recording_id:'odia-audio-01',language:'odia'}});
+  assert.equal(cleanEvent('made_up'),null);
+  assert.deepEqual(cleanEvent('play_start',{recording_id:'https://example.org?secret=1',language:'<script>'}).params,{});
+});
+
+test('Analytics is off without an ID, consent, or on another host; browser privacy preferences win',()=>{
+  const data={id:'G-ABC1234567',site:'https://example.org/free-to-dream',location:{origin:'https://example.org',pathname:'/free-to-dream/index.html'},consent:'yes'};
+  assert.equal(analyticsAllowed(data),true);
+  for(const change of [{id:''},{consent:'no'},{gpc:true},{dnt:true},{location:{origin:'http://127.0.0.1',pathname:'/free-to-dream/index.html'}},{location:{origin:'https://example.org',pathname:'/other/index.html'}}])assert.equal(analyticsAllowed({...data,...change}),false);
+});
+
+function meterFixture(duration=100){
+  const events=[],listeners={};let wall=0;
+  const media={dataset:{recordingId:'odia-audio-01',language:'odia'},tagName:'AUDIO',duration,currentTime:0,src:'a.mp3',paused:false,playbackRate:1,
+    addEventListener:(name,fn)=>{(listeners[name]??=[]).push(fn);}};
+  const meter=mediaMeter(media,(name,params)=>events.push({name,params}),()=>wall);
+  const fire=name=>{for(const fn of listeners[name]||[])fn();};
+  const step=seconds=>{wall+=seconds*1000;media.currentTime+=seconds;fire('timeupdate');};
+  return {media,meter,events,fire,step};
+}
+test('Listening counts actual playback; pause/resume and seeking do not create plays or completions',()=>{
+  const x=meterFixture();x.fire('playing');x.step(20);x.media.paused=true;x.fire('pause');x.step(40);
+  x.media.paused=false;x.fire('playing');x.step(10);
+  assert.equal(x.events.filter(e=>e.name==='play_start').length,1);
+  assert.equal(x.events.filter(e=>e.name==='play_30s').length,1);
+  x.media.seeking=true;x.media.currentTime=99;x.fire('seeking');x.media.seeking=false;x.fire('seeked');x.step(1);x.fire('ended');
+  assert.equal(x.events.filter(e=>e.name==='listen_complete').length,0);
+  x.media.currentTime=0;x.fire('playing');assert.equal(x.events.filter(e=>e.name==='play_start').length,2);
+});
+test('A complete listening cycle sends each milestone once, and a new track starts fresh',()=>{
+  const x=meterFixture();x.fire('playing');for(let i=0;i<95;i++)x.step(1);
+  assert.equal(x.events.filter(e=>e.name==='listen_complete').length,1);
+  assert.equal(x.events.filter(e=>e.name==='listen_progress').length,3);
+  x.media.dataset.recordingId='tamil-audio-01';x.media.currentTime=0;x.fire('playing');x.step(1);
+  assert.equal(x.meter.seconds(),1);assert.equal(x.events.at(-1).params.recording_id,'tamil-audio-01');
+});
+test('Public feedback pagination excludes PRs, marks partial results and reports rate limits honestly',async()=>{
+  let calls=0;
+  const result=await loadPublicIssues('https://github.com/owner/repo',async()=>({ok:true,headers:{get:()=>++calls<3?'<next>; rel="next"':null},json:async()=>[{number:calls+1,title:'Feedback',labels:[]},{number:99,pull_request:{}}]}),2);
+  assert.equal(result.items.length,2);assert.equal(result.truncated,true);
+  assert.equal(classifyIssue({labels:[]}), 'untriaged');
+  assert.equal(classifyIssue({labels:[{name:'needs-author'}]}),'needs-author');
+  await assert.rejects(()=>loadPublicIssues('https://github.com/owner/repo',async()=>({ok:false,status:403})),/limit/);
+});
+test('Attention routing preserves closed issues and ignores PRs; the latest human reply determines the next turn',()=>{
+  const fn=triageModule.attentionState;
+  assert.equal(fn({state:'open'},null,'owner'),'needs-author');
+  assert.equal(fn({state:'open'},{user:{login:'OWNER'}},'owner'),'awaiting-contributor');
+  assert.equal(fn({state:'open'},{user:{login:'listener'}},'owner'),'needs-author');
+  assert.equal(fn({state:'closed'},{user:{login:'listener'}},'owner'),'closed');
+  assert.equal(fn({state:'open',pull_request:{}},null,'owner'),null);
+});
+test('A contributor-reported social post is explicitly separate from automatic share analytics',()=>{
+  const proposal=buildProposal({...fields,type:'share',shared_post:'https://example.org/my-public-post'});
+  assert.match(proposal.title,/Shared post/);assert.match(proposal.body,/has not verified/);
+  assert.throws(()=>buildProposal({...fields,type:'share',shared_post:'javascript:alert(1)'}));
+});

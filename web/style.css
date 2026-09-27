@@ -378,3 +378,53 @@ header { gap:24px; }
 .public-reference-intro h2 { margin: .6rem 0; }
 .public-reference-intro p { line-height: 1.8; }
 #generation-baseline th { text-align: left; }
+
+/* A familiar listening queue, with the collection's quiet visual character. */
+.index-player .player-icon[aria-pressed="true"] { color:#eed39e; background:#ffffff15; }
+#index-repeat { position:relative; }
+#index-repeat-one { position:absolute; font-size:8px; top:12px; left:15px; background:#173b34; }
+.player-links button { appearance:none; background:none; border:0; color:inherit; font:inherit; padding:4px 0; cursor:pointer; }
+.player-links button[aria-expanded="true"] { color:#eed39e; border-bottom:1px solid #eed39e; }
+.player-drawer { grid-column:1/-1; border-top:1px solid #426157; padding-top:12px; max-height:min(35vh,320px); overflow:auto; overscroll-behavior:contain; }
+.drawer-heading { display:flex; gap:16px; align-items:baseline; justify-content:space-between; }
+.drawer-heading h2 { font:600 15px/1.5 system-ui,sans-serif; margin:0; }
+.drawer-heading span,.player-drawer .small { color:var(--player-muted); font-size:11px; }
+.player-drawer ol { padding-left:24px; margin:8px 0; }
+.player-drawer li { color:var(--player-muted); font-size:12px; padding:2px 0; }
+.player-drawer li button { display:block; width:100%; color:var(--player-text); background:none; border:0; text-align:left; padding:9px 7px; font:inherit; border-radius:6px; cursor:pointer; }
+.player-drawer li button:hover { background:#ffffff12; }
+.player-drawer pre { white-space:pre-wrap; overflow-wrap:anywhere; font:18px/1.85 Georgia,serif; color:#efe3cb; background:none; padding:6px 0; border:0; }
+.player-drawer a { color:#cfddcf; font-size:12px; }
+#index-play-status:empty { display:none; }
+@media(max-width:600px) {
+ .index-player .playlist-controls { gap:10px; }
+ .index-player #index-stop { position:static; margin-left:2px; }
+ .player-links { gap:10px; justify-content:flex-end; }
+ .player-volume { gap:3px; }
+ #index-volume { width:40px; }
+ .player-drawer { max-height:27vh; }
+ .drawer-heading { flex-wrap:wrap; gap:2px; }
+}
+
+.text-button { border:0; background:none; color:inherit; font:inherit; text-decoration:underline; cursor:pointer; padding:0; }
+.analytics-consent { position:fixed; bottom:18px; left:18px; z-index:40; max-width:min(460px,calc(100% - 36px)); padding:20px; background:#fffdf8; border:1px solid var(--line); border-radius:12px; box-shadow:0 8px 40px #173b3428; font-size:13px; }
+.analytics-consent p { margin-top:0; }
+.analytics-consent button { font:inherit; cursor:pointer; padding:8px 10px; background:#eee6d7; border:1px solid var(--line); border-radius:6px; }
+.engagement-intro { max-width:750px; padding:20px 0; }
+.engagement-section { padding:28px 0; border-top:1px solid var(--line); }
+.engagement-section .section-heading { display:flex; align-items:center; justify-content:space-between; gap:20px; }
+.engagement-section h2 { margin:0 0 10px; }
+.status-pill { display:inline-block; border:1px solid var(--line); padding:6px 12px; border-radius:20px; font-size:12px; }
+.engagement-metrics { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; margin:24px 0; }
+.engagement-metrics > * { padding:20px; background:#fffdf888; border:1px solid var(--line); border-radius:10px; text-decoration:none; }
+.engagement-metrics h3 { font:600 17px/1.4 system-ui; margin:0; }
+.engagement-metrics p { font-size:14px; margin-bottom:0; }
+.engagement-metrics strong { display:block; font-size:32px; font-weight:500; }
+.engagement-metrics span { font-size:13px; }
+.feedback-controls { display:flex; align-items:center; gap:24px; flex-wrap:wrap; }
+.feedback-controls label { display:flex; align-items:center; gap:10px; }
+.feedback-controls select { width:auto; margin:0; }
+.feedback-list { padding:0; list-style:none; }
+.feedback-list li { padding:14px 0; border-bottom:1px solid var(--line); }
+.feedback-list p { font-size:12px; margin:6px 0 0; color:var(--muted); }
+@media(max-width:650px) { .engagement-metrics { grid-template-columns:1fr; gap:10px; } .engagement-section .section-heading { flex-wrap:wrap; } }

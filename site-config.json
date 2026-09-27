@@ -18,5 +18,9 @@
       "label": "Poetry blog",
       "url": "https://kabitaprusta.blogspot.com/"
     }
-  ]
+  ],
+  "analytics": {
+    "provider": "none",
+    "measurement_id": ""
+  }
 }

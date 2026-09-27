@@ -124,3 +124,11 @@ The author bio uses background supplied by the author. Profile links are configu
 The collection identity is **World is One — A Poem Without Borders**. The listening player offers Previous and Next across current audio recordings, including alternate styles. After a listener starts a song, the playlist automatically advances and stops at the final track. Pause keeps the current position; Stop returns the current track to the beginning. Language and recording pages offer a Playlist dropdown alongside their inline players. The shared player uses the same dropdown to choose any current track across languages and styles. Back links follow a valid parent page when possible and keep useful destinations for direct visits.
 
 The player shows a single track-title dropdown, icon controls, a keyboard-accessible seek slider, elapsed time, duration, Stop, volume and mute. When it is open, the inline playlist selector is hidden to avoid duplicate lists. A current lyric line follows the recording’s audio clock only when that take has checked SRT timings; otherwise the player links to the poem. Switching tracks clears the previous cues, including late loading responses.
+
+## Engagement and the listening player
+
+The player includes shuffle, repeat off/all/one, an Up next queue, in-player lyric drafts and supported lock-screen/media-key controls. Lyrics stay readable without leaving the song. Native inline players remain available; opening a different full page can interrupt playback, so player detail links open separately.
+
+The [engagement workspace](https://ahimanikya.github.io/free-to-dream/engagement.html) combines reporting setup with a public GitHub feedback inbox. Analytics is **prepared but disconnected** at the owner’s request. Connect a GA4 measurement ID later to collect consented page, listening and sharing events. Share clicks never imply confirmed social posts or identified sharers. [Measurement definitions and setup](kb/guides/engagement.md) · [Privacy](kb/guides/privacy.md).
+
+The contribution-attention workflow labels new issues/replies for the author and marks owner replies as awaiting the contributor. Existing unlabelled issues remain visible for manual triage. It never accepts creative changes or sends replies automatically.

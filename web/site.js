@@ -1,3 +1,4 @@
+import {setupEngagement} from './engagement.mjs';
 import {setupBackNavigation} from './navigation.mjs';
 import {attachLyrics} from './lyrics.mjs';
 import {setupLanguageCarousel} from './carousel.mjs';
@@ -48,13 +49,14 @@ if (form) {
   const recordingId = params.get('recording');
   if (recordingId && /^[a-z0-9-]+$/.test(recordingId)) document.querySelector('#contribution-details').value=`Recording: ${recordingId}\nTimestamp(s): \n\n`;
   function showFields() {
-    for (const [id,visible] of [['recording-fields',type.value==='recording'],['lyric-fields',type.value==='lyrics']]) {
+    for (const [id,visible] of [['recording-fields',type.value==='recording'],['lyric-fields',type.value==='lyrics'],['shared-post-fields',type.value==='share']]) {
       const panel=document.getElementById(id);
       panel.hidden=!visible;
       for (const field of panel.querySelectorAll('input,textarea')) field.disabled=!visible;
     }
     document.querySelector('#recording-credits').required=type.value==='recording';
     document.querySelector('#proposed-phrase').required=type.value==='lyrics';
+    document.querySelector('#shared-post-link').required=type.value==='share';
   }
   showFields();
   type.addEventListener('change',showFields);
@@ -81,6 +83,7 @@ if (form) {
       document.querySelector('#recording-link').setCustomValidity('Use a public HTTPS link without a username or password.');
       form.reportValidity(); return;
     }
+    if(fields.shared_post && !publicMediaURL(fields.shared_post)){document.querySelector('#shared-post-link').setCustomValidity('Use a public HTTPS link without login details.');form.reportValidity();return;}
     fields.languageName=language.selectedOptions[0].textContent;
     currentProposal=buildProposal(fields);
     proposalText.value=`# ${currentProposal.title}\n\n${currentProposal.body}`;
@@ -192,3 +195,6 @@ if (copyLyricsPrompt) copyLyricsPrompt.addEventListener('click', async () => {
 });
 
 setupBackNavigation();
+setupEngagement();
+
+if (document.querySelector("#load-feedback")) import("./engagement-dashboard.mjs").then(({setupEngagementDashboard})=>setupEngagementDashboard());

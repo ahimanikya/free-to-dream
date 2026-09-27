@@ -121,6 +121,25 @@ class CollectionTests(unittest.TestCase):
         digest = app.base64.b64encode(app.hashlib.sha256(payload.encode()).digest()).decode()
         self.assertIn("'sha256-"+digest+"'",text)
 
+    def test_engagement_is_disconnected_and_dashboard_is_not_indexed(self):
+        app.build(False)
+        out=self.root/'site-public'
+        home=(out/'index.html').read_text()
+        self.assertIn('data-analytics-id=""',home)
+        self.assertNotIn('https://www.googletagmanager.com',home)
+        panel=(out/'engagement.html').read_text()
+        self.assertIn('Not connected',panel)
+        self.assertIn('Counts are not loaded yet',panel)
+        self.assertIn('name="robots" content="noindex,follow"',panel)
+        self.assertNotIn('/engagement.html</loc>',(out/'sitemap.xml').read_text())
+        self.assertIn('value="share"',(out/'contribute.html').read_text())
+        config=json.loads((self.root/'site-config.json').read_text())
+        config['analytics']={'provider':'ga4','measurement_id':'G-ABC1234567'}
+        configured=app.shell('Test','',config)
+        self.assertIn('data-analytics-id="G-ABC1234567"',configured)
+        self.assertNotIn('<script src="https://www.googletagmanager.com',configured)
+        self.assertIn('data-analytics-id=""',app.shell('Test','',config,local=True))
+
     def test_release_requires_review_rights_and_https_url(self):
         items = app.records()
         items[0]['publish'] = True
@@ -143,7 +162,7 @@ class CollectionTests(unittest.TestCase):
     def test_variations_remain_separate_current_choices(self):
         meta={'language':'Tamil','slug':'tamil'}
         def item(ident, variation=None, archived=False):
-            data={'id':ident,'title':ident,'kind':'audio','publish':False,'archived':archived}
+            data={'id':ident,'language':'tamil','title':ident,'kind':'audio','publish':False,'archived':archived}
             if variation: data.update(variation=variation,variation_label=variation.title())
             return data, 'https://media.example.org/'+ident+'.mp3'
         html=app.resource_panel(meta,[item('original'),item('duet','duet'),item('duet-old','duet',True)])

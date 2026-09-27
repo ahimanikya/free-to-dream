@@ -13,3 +13,6 @@
 - [A dream others can build on](public-reference.md)
 - [Shared baseline and local overrides](generation-settings.md)
 - [Discovery, search and AI readers](discovery.md)
+
+- [Engagement and feedback](engagement.md)
+- [Privacy and listening statistics](privacy.md)

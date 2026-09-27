@@ -1,9 +1,10 @@
-const kinds = {lyrics:'Lyric suggestion', recording:'Recording submission', feedback:'Listening review', culture:'Musical direction'};
+const kinds = {lyrics:'Lyric suggestion', recording:'Recording submission', feedback:'Listening review', culture:'Musical direction', share:'Shared post'};
 
 export function buildProposal(fields) {
   const kind = kinds[fields.type];
   if (!kind || !/^[a-z0-9-]+$/.test(fields.language || '')) throw new Error('Choose a language and contribution type.');
   if (!fields.title?.trim() || !fields.details?.trim()) throw new Error('Add a title and explain your contribution.');
+  if(fields.type==='share' && !publicMediaURL(fields.shared_post))throw new Error('Add a public HTTPS link to your post.');
   const title = `[${fields.language}] ${kind}: ${fields.title.trim()}`;
   const sections = [
     ['Language', fields.languageName || fields.language],
@@ -15,6 +16,7 @@ export function buildProposal(fields) {
       ['Music, voice and production credits', fields.credits],
       ['Permission to share', 'Please describe your permission to submit this recording, including any third-party material. May visitors download and share this recording on social media with these credits? State any limitations.']
     ] : []),
+    ...(fields.type==='share'?[['Public post (reported by contributor)',fields.shared_post],['Verification','Contributor-reported share. The site has not verified publication or reach.']]:[]),
     ['Notes and reason', fields.details],
     ['Preferred contributor credit', fields.credit],
   ];
