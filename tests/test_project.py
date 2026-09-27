@@ -199,7 +199,7 @@ class CollectionTests(unittest.TestCase):
         shutil.copy2(PROJECT/'catalog/recordings.json', self.root/'catalog/recordings.json')
         app.build(False)
         output = self.root/'site-public'
-        expected = {'odia':(1,6), 'tamil':(1,1), 'telugu':(4,4), 'english':(2,2), 'filipino':(1,1)}
+        expected = {'odia':(1,6), 'tamil':(1,1), 'telugu':(4,4), 'english':(2,2), 'filipino':(1,1), 'malayalam':(1,1), 'italian':(1,1)}
         for language, (audio_count, video_count) in expected.items():
             page=(output/f'poems--i-am-free-to-dream--languages--{language}.html').read_text()
             self.assertEqual(page.count('<audio '), audio_count+1)

@@ -395,5 +395,29 @@
     "published": true,
     "creator": "Ahimanikya Satapathy",
     "permission": "Author requested inclusion in this collection on 2026-09-24."
+  },
+  {
+    "sha256": "e07948081957122a6403e0e956604388cff6b4a418956cc5db48d759185dc016",
+    "local_path": null,
+    "bytes": 3504962,
+    "source_names": [
+      "Sono libero di sognare - Take 1.mp3"
+    ],
+    "role": "working-asset",
+    "published": true,
+    "repo_path": "media/italian/i-am-free-to-dream-italian.mp3",
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/italian-2026-09-26/i-am-free-to-dream-italian.mp3"
+  },
+  {
+    "sha256": "e9e3b431057e1b9834b5b86ea4a083ef282614cc6a952471a9cb9b5fc8f68c40",
+    "local_path": null,
+    "bytes": 78364503,
+    "source_names": [
+      "Sono libero di sognare.mp4"
+    ],
+    "role": "working-asset",
+    "published": true,
+    "repo_path": "media/italian/i-am-free-to-dream-italian.mp4",
+    "public_url": "https://github.com/ahimanikya/free-to-dream/releases/download/italian-2026-09-26/i-am-free-to-dream-italian.mp4"
   }
 ]

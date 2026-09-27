@@ -250,6 +250,26 @@
       "title": "Malayalam video",
       "status": "working",
       "notes": "Full Malayalam soundtrack; the video uses the shared visual sequence fitted to the track duration."
+    },
+    {
+      "repo_path": "media/italian/i-am-free-to-dream-italian.mp3",
+      "sha256": "e07948081957122a6403e0e956604388cff6b4a418956cc5db48d759185dc016",
+      "bytes": 3504962,
+      "source_name": "Sono libero di sognare - Take 1.mp3",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/italian-2026-09-26/i-am-free-to-dream-italian.mp3",
+      "title": "Italian audio",
+      "status": "working",
+      "notes": "Author-selected 2:33 take; native-speaker review remains open."
+    },
+    {
+      "repo_path": "media/italian/i-am-free-to-dream-italian.mp4",
+      "sha256": "e9e3b431057e1b9834b5b86ea4a083ef282614cc6a952471a9cb9b5fc8f68c40",
+      "bytes": 78364503,
+      "source_name": "Sono libero di sognare.mp4",
+      "download_url": "https://github.com/ahimanikya/free-to-dream/releases/download/italian-2026-09-26/i-am-free-to-dream-italian.mp4",
+      "title": "Italian video",
+      "status": "working",
+      "notes": "Author-selected 2:33 take; native-speaker review remains open."
     }
   ],
   "unavailable_originals": [

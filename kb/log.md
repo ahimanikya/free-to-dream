@@ -13,4 +13,6 @@
 
 ## 2026-09-26
 
-- Added the Italian lyric adaptation “Sono libero di sognare,” with an acoustic cantautore style prompt, stanza spacing, the potter pause and language-specific review guidance. There are now 102 language entries: 30 lyric texts and 72 adaptation briefs. Italian recording and native-speaker review remain pending.
+- Added the Italian lyric adaptation “Sono libero di sognare,” with an acoustic cantautore style prompt, stanza spacing, the potter pause and language-specific review guidance. There are now 102 language entries: 30 lyric texts and 72 adaptation briefs. Native-speaker review remains pending.
+
+- Added the author-selected 2:33 Italian recording and matching video as listening previews. The shared visual sequence fits the complete soundtrack without changing the music’s speed or pitch; no unverified lyric timings were added.
