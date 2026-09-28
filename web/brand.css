@@ -362,3 +362,113 @@ article.language-card { height:auto; }
 .art-print-disclosure { border-top:1px solid var(--line); margin-block:28px 20px; }
 .art-print-disclosure > summary { cursor:pointer; padding-block:18px; min-height:48px; font-size:18px; color:var(--ink); }
 .art-print-disclosure > .art-detail-print { border:0; margin:0; padding-block:8px 24px; }
+
+/* Art detail: a viewing room, with the practical details within reach. */
+body:has(.art-focus) .site-header { padding-block:18px; }
+article.art-focus { margin:0 0 24px; }
+.art-view-toolbar { display:flex; align-items:center; justify-content:space-between; gap:12px; padding-block:14px; }
+.art-view-toolbar a,.art-view-toolbar button { min-height:44px; display:inline-flex; align-items:center; gap:8px; font-size:16px; text-decoration:none; }
+.art-view-controls { display:flex; align-items:center; gap:24px; }
+.art-view-controls .art-slideshow-entry { margin:0; }
+.art-view-controls .slideshow-play-link { margin:0; padding:0 4px; }
+.art-focus .art-detail-layout { grid-template-columns:minmax(0,1.35fr) minmax(300px,.8fr); gap:clamp(32px,5vw,80px); align-items:center; }
+.art-focus .art-detail-layout > figure { margin:0; max-width:none; }
+.art-focus .art-detail-layout > figure > .art-wall { padding:12px 24px 8px; background:transparent; }
+.art-focus .art-detail-layout > figure .refined-frame { width:min(100%,520px); height:clamp(560px,calc(100svh - 205px),850px); aspect-ratio:auto; --mat-size:18px; }
+.art-focus .art-detail-layout figcaption { justify-content:center; margin:8px 0 0; }
+.art-focus .art-detail-layout figcaption .art-enlarge { font-size:14px; min-height:36px; }
+.art-focus .art-detail-story { width:100%; max-width:42ch; padding:0; justify-self:start; }
+.art-focus h1 { font:400 clamp(32px,3.2vw,48px)/1.15 Georgia,serif; margin:0 0 12px; }
+.art-focus .art-byline { font-size:14px; color:var(--muted); margin:0 0 24px; }
+.art-focus .art-reflections { font-size:19px; line-height:1.75; }
+.art-focus .art-reflections p { margin-bottom:16px; }
+.art-story-more > summary { font-size:16px; cursor:pointer; min-height:44px; padding-block:8px; color:var(--sea); }
+.art-story-more[open] > summary { margin-bottom:12px; }
+.art-focus .art-reading-note { font-size:13px; margin:8px 0 16px; }
+.art-secondary { margin-top:20px; border-top:1px solid var(--line); }
+.art-focus .art-print-disclosure,.art-focus .original-art-disclosure { border:0; margin:0; padding:0; }
+.art-focus .art-print-disclosure > summary,.art-focus .original-art-disclosure > summary { font:400 16px/1.5 system-ui,sans-serif; padding:12px 0; min-height:44px; color:var(--muted); }
+.art-focus .art-detail-print { grid-template-columns:1fr; gap:14px; margin:0; padding:12px 0 24px; }
+.art-focus .art-detail-print h2 { font-size:25px; margin:8px 0; }
+.art-focus .art-detail-print p { font-size:16px; }
+.art-focus .original-art-disclosure figure { margin:12px 0; }
+.art-focus .original-art-disclosure .art-wall { padding:12px; }
+body:has(.art-focus) .site-footer { margin-top:28px; padding-block:20px; }
+body:has(.art-focus) .footer-main { gap:16px; }
+body:has(.art-focus) .footer-main p,body:has(.art-focus) .footer-main a,body:has(.art-focus) .footer-main button { font-size:13px; }
+body:has(.art-focus) .footer-resources { display:none; }
+@media(max-width:800px) {
+ .art-view-controls { gap:14px; }
+ .art-view-toolbar a,.art-view-toolbar button { font-size:14px; }
+ .art-focus .art-detail-layout { grid-template-columns:1fr; gap:24px; }
+ .art-focus .art-detail-layout > figure > .art-wall { padding:4px 0; }
+ .art-focus .art-detail-layout > figure .refined-frame { width:min(100%,440px); height:clamp(470px,calc(100svh - 175px),700px); --mat-size:12px; }
+ .art-focus .art-detail-story { max-width:55ch; margin-inline:auto; }
+ .art-focus h1 { font-size:34px; }
+ .art-focus .art-reflections { font-size:18px; }
+}
+@media(max-width:440px) {
+ .art-view-controls { gap:12px; }
+ .art-step span { display:none; }
+ .art-view-toolbar .art-step { min-width:36px; justify-content:center; font-size:24px; }
+ .art-view-toolbar .art-return { font-size:13px; }
+ .art-view-toolbar .slideshow-play-link { font-size:13px; gap:5px; }
+}
+
+/* Shared secondary pages: reach the work sooner, keep reading comfortable. */
+.site-header { padding-block:18px; }
+.site-footer { margin-top:32px; padding-block:24px; }
+.site-footer .footer-resources { margin-top:14px; }
+#collection.language-directory { padding-block:28px 40px; }
+.language-directory .section-heading { max-width:850px; }
+.language-directory h1 { font-size:clamp(32px,3.5vw,48px); margin:10px 0; }
+.language-directory .section-heading > p { margin:8px 0 0; }
+.language-directory .filters { margin-top:20px; }
+.language-directory article.language-card { min-height:0; padding:20px; }
+.language-directory .language-card h3 { min-height:0; margin:10px 0 12px; }
+.language-directory .card-poem,.language-directory .card-direction { height:auto; min-height:0; }
+.language-directory .card-action { padding-top:16px; }
+.featured-grid article.language-card { min-height:350px; }
+.featured-grid .language-card h3 { min-height:32px; }
+.portfolio-intro { padding-block:24px; margin-bottom:0; gap:24px; grid-template-columns:1fr 1fr; }
+.portfolio-intro h1 { font-size:clamp(32px,3.5vw,48px); margin:10px 0 0; }
+.portfolio-intro::after { display:none; }
+.portfolio-intro-copy { padding-left:0; border:0; }
+.portfolio-intro-copy > p { font:400 18px/1.6 system-ui,sans-serif; margin:0 0 6px; max-width:48ch; }
+.portfolio-intro-copy .art-slideshow-entry { margin:0; }
+.language-page .language-heading { padding-top:16px; padding-bottom:12px; }
+.language-page .language-heading h1 { margin-block:10px; }
+.language-heading .poet-credit { margin:6px 0 8px; }
+.language-layout { padding-top:24px; }
+.contribution-intro { padding-block:28px 16px; margin-top:0; }
+.contribution-intro h1 { font-size:clamp(32px,3.5vw,48px); max-width:24ch; margin:10px 0 16px; }
+.contribution-intro > p { margin-block:8px 12px; }
+.contribution-how > summary,.recording-contribute > summary { cursor:pointer; min-height:44px; padding-block:10px; color:var(--sea); font-size:16px; }
+.recording-contribute { max-width:840px; margin:0 auto 32px; }
+.recording-contribute .collaborate { margin:0; }
+.recording-detail h1 { font-size:clamp(30px,3vw,42px); margin:10px 0 20px; }
+.art-credits { margin-top:28px; }
+.art-credits-lead h1 { font-size:clamp(32px,3.5vw,48px); margin:10px 0 16px; }
+.reference-reading { margin-top:28px; }
+.reference-reading h1 { margin-top:0; font-size:clamp(30px,3vw,42px); line-height:1.25; }
+.reference-reading h2 { margin-top:28px; }
+.original-poem-page { margin-top:28px; }
+.original-poem-heading { padding-bottom:16px; }
+.original-poem-heading h1 { margin-block:8px; }
+.original-poem-heading p { margin-block:8px; }
+@media(max-width:700px) {
+ .portfolio-intro { grid-template-columns:1fr; gap:12px; }
+ .portfolio-intro-copy > p { font-size:17px; }
+ .language-directory .filters { gap:12px; }
+ .language-page .language-heading { padding-top:12px; }
+ .contribution-intro { padding-top:20px; }
+}
+
+@media(max-width:800px) {
+ .art-focus .art-detail-layout > figure .refined-frame { height:auto; aspect-ratio:3/5; }
+}
+@media(max-width:380px) {
+ .art-view-controls { gap:4px; }
+ .art-view-toolbar { gap:4px; }
+ .art-view-toolbar .art-step { min-width:32px; }
+}

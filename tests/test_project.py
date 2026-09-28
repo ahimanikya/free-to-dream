@@ -137,6 +137,10 @@ class CollectionTests(unittest.TestCase):
             self.assertRegex(detail, r'href="(?:original-)?artworks\.html#'+item['id']+'"')
             self.assertNotIn('art-detail-trail', detail)
             self.assertIn('aria-label="Main navigation"', detail)
+            self.assertIn('aria-label="Artwork navigation"', detail)
+            self.assertIn('id="art-slideshow-start"', detail)
+            self.assertIn('<details class="art-story-more">', detail)
+            self.assertNotIn('class="art-detail-heading"', detail)
             self.assertEqual((self.root/item['master']).read_bytes(), (output/item['master']).read_bytes())
         # Previous/next must follow the visible frame groups, including wraparound.
         displayed_ids = re.findall(r'<figure class="portfolio-card" id="([^"]+)"', gallery)

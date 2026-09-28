@@ -25,11 +25,17 @@ export function setupArtSlideshow(doc = document, win = window) {
   const dialog = doc.querySelector('#art-slideshow');
   const cards = [...doc.querySelectorAll('#art-collection .portfolio-card')];
   const languageMode = dialog?.dataset.slideshowMode === 'language';
-  if (languageMode) {
-    const feature = doc.querySelector('[data-language-art]');
+  const detailFeature = doc.querySelector('[data-detail-slides]');
+  if (languageMode || detailFeature) {
+    const feature = detailFeature || doc.querySelector('[data-language-art]');
     try {
       const choices = JSON.parse(feature.querySelector('[data-art-choices]').textContent);
       const template = feature.querySelector('.art-frame');
+      if (detailFeature?.dataset.originalFirst === 'true') {
+        const card = doc.createElement('div');
+        card.append(doc.querySelector('.art-detail-layout > figure .art-frame').cloneNode(true));
+        cards.push(card);
+      }
       for (const work of choices) {
         const card = doc.createElement('div');
         const frame = template.cloneNode(true);

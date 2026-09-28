@@ -461,7 +461,7 @@ def artist_collection_page(refined=False):
             if group:
                 row, group[:3] = group[:3], []
                 rows.append('<div class="portfolio-row">'+''.join(cards[work['id']] for work in row)+'</div>')
-    heading = 'Art, in<br>another light.' if refined else 'The canvas<br>remembers.'
+    heading = 'Art, in another light.' if refined else 'The canvas remembers.'
     introduction = 'The same feeling, gently refined. Print editions of the original paintings and drawings, each with its story close at hand.' if refined else 'A collection of moments that stayed. Paintings and drawings, each with a story of its own.'
     edition_name = 'REFINED PRINTS' if refined else 'ORIGINAL WORKS'
     edition_switch = '' if refined else '<nav class="art-edition-switch" aria-label="Artwork editions"><a href="artworks.html">Refined prints</a><a href="original-artworks.html" aria-current="page">Original art</a></nav>'
@@ -469,7 +469,7 @@ def artist_collection_page(refined=False):
     slideshow_entry, slideshow_dialog = (ROOT/'web/art-slideshow.html').read_text().split('<dialog', 1)
     slideshow_dialog = '<dialog' + slideshow_dialog
     preparation_note = '<p class="art-preparation-note">AI-assisted cleanup and print preparation. Explore each artwork to compare its original and refined edition.</p>' if refined else ''
-    return f'''<section class="portfolio-intro" id="art-journal" tabindex="-1"><div><div class="eyebrow">ART BY AHIMANIKYA SATAPATHY</div><h1>{heading}</h1></div><div class="portfolio-intro-copy"><p>{introduction}</p><a class="text-link" href="index.html#story">The person behind the work →</a></div></section>{gallery_heading}<section id="art-collection" tabindex="-1" class="portfolio-collection art-index" aria-label="{edition_name.title()} index"><div class="portfolio-grid">{''.join(rows)}</div></section><section class="portfolio-closing"><div><div class="eyebrow">BEYOND THE GALLERY</div><h2>Let a feeling stay.</h2>{slideshow_entry}</div><div><p>I keep prints of The Witness in my Bhubaneswar home, Bangalore home and office. Something made years ago still brings feeling into a room.</p><p>Each artwork opens into a story, with original images and available print editions to explore.</p>{preparation_note}</div></section>{slideshow_dialog}'''
+    return f'''<section class="portfolio-intro" id="art-journal" tabindex="-1"><div><div class="eyebrow">ART BY AHIMANIKYA SATAPATHY</div><h1>{heading}</h1></div><div class="portfolio-intro-copy"><p>{introduction}</p>{slideshow_entry}</div></section>{gallery_heading}<section id="art-collection" tabindex="-1" class="portfolio-collection art-index" aria-label="{edition_name.title()} index"><div class="portfolio-grid">{''.join(rows)}</div></section><section class="portfolio-closing"><div><div class="eyebrow">BEYOND THE GALLERY</div><h2>Let a feeling stay.</h2></div><div><p>I keep prints of The Witness in my Bhubaneswar home, Bangalore home and office. Something made years ago still brings feeling into a room.</p><p>Each artwork opens into a story, with original images and available print editions to explore.</p>{preparation_note}</div></section>{slideshow_dialog}'''
 
 
 
@@ -481,7 +481,9 @@ def artwork_detail_page(item, works):
     variant = 'tall' if item['width'] / item['height'] < .8 else 'wide'
     fills = '<span class="art-edge-fill" aria-hidden="true">' + ''.join(
         f'<span class="art-edge-{side}"></span>' for side in ('left', 'right', 'top', 'bottom')) + '</span>'
-    reflections = ''.join(f'<p>{esc(paragraph)}</p>' for paragraph in item.get('detail_reflections', [item['narrative']]))
+    paragraphs = item.get('detail_reflections', [item['narrative']])
+    reflections = f'<p>{esc(paragraphs[0])}</p>'
+    more_reflections = ''.join(f'<p>{esc(paragraph)}</p>' for paragraph in paragraphs[1:])
     dimensions = f"{item['master_width']:,} × {item['master_height']:,} pixels"
     printing = ''
     if item.get('print_edition'):
@@ -510,18 +512,32 @@ def artwork_detail_page(item, works):
         refined_variant = 'tall'
         screen_image = f'<img src="{esc(ai["file"],quote=True)}" width="{ai["width"]}" height="{ai["height"]}" alt="{title}, refined artwork by Ahimanikya Satapathy">'
         print_markup = screen_print(screen_image, item['label'], item['caption'], item['id'], ai['width'], ai['height'])
-        primary_figure = f'''<figure><a class="art-wall" href="{esc(ai['file'],quote=True)}" aria-label="View full refined print: {title}"><div class="art-frame frame-walnut mat-linen frame-{refined_variant} refined-frame"><div class="art-mat">{print_markup}</div></div></a><figcaption>Refined print edition<a class="art-enlarge" href="{esc(ai['file'],quote=True)}">View full image ↗</a></figcaption></figure>'''
+        primary_figure = f'''<figure><a class="art-wall" href="{esc(ai['file'],quote=True)}" aria-label="View full refined print: {title}"><div class="art-frame frame-walnut mat-linen frame-{refined_variant} refined-frame"><div class="art-mat">{print_markup}</div></div></a><figcaption><a class="art-enlarge" href="{esc(ai['file'],quote=True)}">View full image ↗</a></figcaption></figure>'''
         original_section = f'<details class="original-art-disclosure" id="original"><summary>View original artwork</summary>{original_figure}{original_downloads}</details>'
     gallery_page = 'artworks.html' if ai else 'original-artworks.html'
     works = artwork_display_order(works)
     index = works.index(item)
     previous, following = works[(index-1) % len(works)], works[(index+1) % len(works)]
-    edition_link = '<a href="#refined-download">Print download</a><a href="#original">Original artwork</a>' if ai else '<a href="#print">Original download</a>'
-    return f'''<article class="art-detail"><div class="art-detail-heading"><div class="eyebrow">ART BY AHIMANIKYA SATAPATHY</div><h1>{title}</h1><nav class="art-section-links" aria-label="On this artwork page">{edition_link}</nav></div>
+    slideshow_entry, slideshow_dialog = (ROOT/'web/art-slideshow.html').read_text().split('<dialog', 1)
+    choices = refined_artwork_choices(works)
+    selected = next((work for work in choices if work['id'] == item['id']), choices[0] if choices else None)
+    slides = ''
+    if selected:
+        # The detail slideshow starts with the work being viewed, then follows the collection.
+        position = choices.index(selected)
+        choices = choices[position:] + choices[:position]
+        payload = json.dumps(choices, ensure_ascii=False).replace('<', '\\u003c')
+        preview = f'<img src="{esc(selected["image"],quote=True)}" width="{selected["width"]}" height="{selected["height"]}" alt="{esc(selected["title"],quote=True)}" loading="lazy">'
+        frame = screen_print(preview, selected['title'], selected['caption'], selected['id'], selected['width'], selected['height'])
+        slides = f'<div data-detail-slides data-original-first="{str(not ai).lower()}" hidden><div class="art-frame"><div class="art-mat">{frame}</div></div><script type="application/json" data-art-choices>{payload}</script></div><dialog' + slideshow_dialog
+    else:
+        slideshow_entry = ''
+    reading = f'<details class="art-story-more"><summary>Read the story</summary>{more_reflections}<p class="art-reading-note">A contemporary poetic reading of the original artwork.</p></details>' if more_reflections else ''
+    return f'''<article class="art-detail art-focus">
+<nav class="art-view-toolbar" aria-label="Artwork navigation"><a class="art-return" href="{gallery_page}#{item['id']}">← Art Journal</a><div class="art-view-controls"><a class="art-step" href="artwork--{previous['id']}.html" aria-label="Previous artwork: {esc(previous['label'],quote=True)}" title="{esc(previous['label'],quote=True)}">← <span>Previous</span></a>{slideshow_entry}<a class="art-step" href="artwork--{following['id']}.html" aria-label="Next artwork: {esc(following['label'],quote=True)}" title="{esc(following['label'],quote=True)}"><span>Next</span> →</a></div></nav>
 <div class="art-detail-layout" id="{display_id}">{primary_figure}
-<div class="art-detail-story">{story_phrase}<div class="art-reflections">{reflections}</div><details class="edition-details"><summary>About this reading</summary><p class="art-reading-note">A contemporary poetic reading of the original artwork.</p></details></div></div>
-{ai_section}{original_section}
-<nav class="art-detail-navigation" aria-label="More artwork"><a href="artwork--{previous['id']}.html" aria-label="Previous artwork: {esc(previous['label'],quote=True)}"><span>← PREVIOUS WORK</span><strong>{esc(previous['label'])}</strong></a><a class="return-gallery" href="{gallery_page}#{item['id']}">All artworks</a><a href="artwork--{following['id']}.html" aria-label="Next artwork: {esc(following['label'],quote=True)}"><span>NEXT WORK →</span><strong>{esc(following['label'])}</strong></a></nav></article>'''
+<div class="art-detail-story"><h1>{title}</h1><p class="art-byline">Ahimanikya Satapathy{(' · '+str(item['date'])) if item.get('date') else ''}</p>{story_phrase}<div class="art-reflections">{reflections}{reading}</div><div class="art-secondary">{ai_section}{original_section}</div></div></div>
+{slides}</article>'''
 
 
 def effective_settings_panel(slug, config):
@@ -689,13 +705,14 @@ def shell(title, content, config, local=False, filename='index.html', descriptio
     art_frame_styles = f'<link rel="stylesheet" href="assets/art-frames.css?v={config.get("_asset_version", "1")}">' if filename in ('artworks.html', 'original-artworks.html', 'ai-artworks.html') or filename.startswith('artwork--') or 'data-language-art' in content or 'data-home-art' in content else ''
     if art_frame_styles:
         art_frame_styles += f'<link rel="stylesheet" href="assets/art-caption-layouts.css?v={config.get("_asset_version", "1")}">'
+    footer_credit = 'Ahimanikya Satapathy' if filename.startswith('artwork--') or active_page == 'artworks.html' else 'Original poem © Ahimanikya Satapathy'
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{esc(description, quote=True)}"><meta property="og:title" content="{esc(title, quote=True)} · World is One"><meta property="og:description" content="{esc(description, quote=True)}"><meta property="og:type" content="website">{metadata}
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https:; img-src 'self'{analytics_images}; media-src 'self' https: blob:; style-src 'self'; script-src 'self' 'sha256-{data_hash}'{analytics_script}; object-src 'none'; base-uri 'self'; form-action 'none'">
 <title>{esc(title)} · World is One</title><link rel="stylesheet" href="assets/style.css?v={config.get("_asset_version","1")}">{art_frame_styles}<link rel="stylesheet" href="assets/brand.css?v={config.get("_asset_version","1")}"><link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg?v={config.get("_asset_version","1")}"><meta name="theme-color" content="#195565"><script type="module" src="assets/site.js?v={config.get("_asset_version","1")}"></script></head>
 <body data-analytics-id="{esc(analytics_id,quote=True)}" data-repository="{esc(config.get('repository_url', ''), quote=True)}" data-site-url="{esc(config.get('site_url', ''), quote=True)}">{preview}<a class="skip-link" href="#main-content">Skip to content</a><header class="site-header"><a class="brand" href="index.html"><img src="assets/brand/mark.svg?v={config.get("_asset_version","1")}" alt="" width="44" height="44" aria-hidden="true">WORLD IS ONE<span>A POEM WITHOUT BORDERS</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" hidden><span class="menu-icon" aria-hidden="true"></span><span>Menu</span></button><nav id="site-navigation" class="site-navigation" aria-label="Main navigation">{navigation_links}</nav></header>
-<main id="main-content" tabindex="-1">{content}</main>{(ROOT/"web/index-player.html").read_text() if config.get("_has_audio") else ""}<footer class="site-footer"><div class="footer-main"><p>Original poem © Ahimanikya Satapathy</p><nav aria-label="Site information"><a href="guides--rights.html">Credits &amp; reuse</a><a href="guides--privacy.html">Privacy</a><button id="analytics-settings" type="button" class="text-button" aria-controls="analytics-consent" aria-expanded="false">Cookie settings</button></nav></div><details class="footer-resources"><summary>About this open project</summary><p>Poems, author artwork and project reference text are shared under <a href="guides--rights.html">CC BY 4.0</a>. Recordings have separate terms. AI assistance and preparation details are documented with each work.</p><nav aria-label="Project resources"><a href="guides--artwork.html">Design roots &amp; credits</a><a href="guides--brand.html">Brand assets</a><a href="kb/index.md">Knowledge base</a><a href="reference.json">Reference data</a><a href="engagement.html">Engagement</a></nav></details></footer><aside id="analytics-consent" class="analytics-consent" aria-label="Optional cookies" hidden><p id="analytics-consent-message"></p><div class="action-row"><button type="button" data-analytics-consent="no">Reject optional cookies</button><button type="button" data-analytics-consent="yes">Accept optional cookies</button><a href="guides--privacy.html">Privacy policy</a></div></aside></body></html>'''
+<main id="main-content" tabindex="-1">{content}</main>{(ROOT/"web/index-player.html").read_text() if config.get("_has_audio") else ""}<footer class="site-footer"><div class="footer-main"><p>{footer_credit}</p><nav aria-label="Site information"><a href="guides--rights.html">Credits &amp; reuse</a><a href="guides--privacy.html">Privacy</a><button id="analytics-settings" type="button" class="text-button" aria-controls="analytics-consent" aria-expanded="false">Cookie settings</button></nav></div><details class="footer-resources"><summary>About this open project</summary><p>Poems, author artwork and project reference text are shared under <a href="guides--rights.html">CC BY 4.0</a>. Recordings have separate terms. AI assistance and preparation details are documented with each work.</p><nav aria-label="Project resources"><a href="guides--artwork.html">Design roots &amp; credits</a><a href="guides--brand.html">Brand assets</a><a href="kb/index.md">Knowledge base</a><a href="reference.json">Reference data</a><a href="engagement.html">Engagement</a></nav></details></footer><aside id="analytics-consent" class="analytics-consent" aria-label="Optional cookies" hidden><p id="analytics-consent-message"></p><div class="action-row"><button type="button" data-analytics-consent="no">Reject optional cookies</button><button type="button" data-analytics-consent="yes">Accept optional cookies</button><a href="guides--privacy.html">Privacy policy</a></div></aside></body></html>'''
 
 
 def share_controls(title, filename, config, local=False, media=None, media_url=None):
@@ -941,7 +958,7 @@ def language_content(meta, body, path, items, config, local=False):
 def contribution_page(languages, config):
     options = ''.join(f'<option value="{esc(x["slug"],quote=True)}">{esc(x["language"])}</option>' for x in languages)
     setup = '' if config.get('repository_url') else '<p class="setup-notice">Preview: the GitHub repository has not been connected yet. You can prepare and save a proposal here; submission will open once it is connected.</p>'
-    return f'''<section class="contribution-intro"><div class="eyebrow">ONE POEM. YOUR VOICE.</div><h1>Help a language<br>find its song.</h1><p>Share a better phrase, a listening note, or a new performance. You do not need to edit code.</p><ol class="steps"><li><strong>Prepare</strong><span>Choose a language and describe your contribution.</span></li><li><strong>Submit on GitHub</strong><span>Sign in, attach your file or link, and submit.</span></li><li><strong>Review together</strong><span>Discuss changes; accepted versions receive credits and a place in the collection.</span></li></ol></section>
+    return f'''<section class="contribution-intro"><div class="eyebrow">ONE POEM. YOUR VOICE.</div><h1>Help a language find its song.</h1><p>Share a better phrase, a listening note, or a new performance. You do not need to edit code.</p><details class="contribution-how"><summary>How contributing works</summary><ol class="steps"><li><strong>Prepare</strong><span>Choose a language and describe your contribution.</span></li><li><strong>Submit on GitHub</strong><span>Sign in, attach your file or link, and submit.</span></li><li><strong>Review together</strong><span>Discuss changes; accepted versions receive credits and a place in the collection.</span></li></ol></details></section>
 {setup}<form id="contribution-form" class="contribution-form"><div class="form-grid"><label for="contribution-language">Language<select required id="contribution-language" name="language"><option value="">Choose a language</option>{options}</select></label><label for="contribution-type">I would like to<select id="contribution-type" name="type"><option value="lyrics">Suggest a lyric change</option><option value="recording">Submit my song</option><option value="feedback">Review a recording</option><option value="culture">Suggest a musical direction</option><option value="share">Tell us where I shared the song</option></select></label></div>
 <label for="contribution-title">A short title<input id="contribution-title" name="title" required maxlength="100" placeholder="A more natural phrase, a new acoustic version…"></label>
 <div id="recording-fields" hidden><p class="upload-explainer"><strong>Have an MP3 or M4A recording?</strong> Attach it in the GitHub submission box on the next step. If its format or size is not accepted, paste a public listening link below. Nothing is uploaded from this form.</p><label for="recording-link">Recording link (optional if attaching a file on GitHub)<input type="url" id="recording-link" name="recording_link" placeholder="https://…"></label><label for="recording-credits">Music, voice and production credits<textarea id="recording-credits" name="credits" rows="3" maxlength="2500" placeholder="Who sang, translated or arranged it? Name any AI tools used."></textarea></label></div>
@@ -1039,7 +1056,7 @@ def build(local=False):
                 content += f'<p><a href="timing.html?recording={quote(item["id"])}">Add or adjust timed lyrics →</a></p>'
             content += share_controls(item['title'], filename, config, local, item, url)
             content += f'<p><a href="contribute.html?language={quote(slug)}&amp;type=feedback&amp;recording={quote(item["id"])}">Leave a listening note for this version</a></p></section>'
-            content += collaboration_panel(language_map[slug], config)
+            content += '<details class="recording-contribute"><summary>Suggest a change or share your version</summary>' + collaboration_panel(language_map[slug], config) + '</details>'
             (output/filename).write_text(shell(item['title'], content, config, local, filename, f'{language_map[slug]["language"]} {tag} version of I Am Free to Dream. Listen, share and explore the lyrics.', media=item), encoding='utf-8')
     for path in sorted(KB.rglob('*.md')):
         meta, body = read_concept(path)
@@ -1060,7 +1077,7 @@ def build(local=False):
             description = 'Cultural roots and credits for the site’s decorative icons and illustrations, inspired by Odisha’s Pattachitra and palm-leaf traditions.'
             content = art_credits_content(body, path)
         else:
-            content = '<article>'+render_markdown(body,path)+'</article>'
+            content = '<article class="reference-reading">'+render_markdown(body,path)+'</article>'
         (output / page_name(path)).write_text(shell(title, content, config, local, page_name(path), description=description, language=language_meta, source=str(path.relative_to(ROOT)), canonical_filename=canonical_filename), encoding='utf-8')
     lyric_count = sum(has_lyrics(x) for x in languages)
     cards = {}

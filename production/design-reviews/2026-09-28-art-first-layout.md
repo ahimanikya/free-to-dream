@@ -1,0 +1,9 @@
+# Artwork-first and site-wide space review
+
+The artist’s screenshots showed that oversized titles, repeated links and full-width disclosure rows displaced the art. The new detail template starts with a compact Art Journal / previous / slideshow / next toolbar. The framed artwork is the main visual; its title, first reflection and optional story sit beside it. Print and original-image choices remain available in quiet disclosures. The footer is compact and uses the artist’s name on artwork pages.
+
+Every artwork detail page uses this structure. Its slideshow starts with the current work, including original-only works, then continues through the collection with the shared music playlist. Sources, captions and downloadable print images are unchanged.
+
+Shared page review also reduced gallery and directory introductions, moved the gallery slideshow to its opening, removed fixed excess height from directory cards, tightened language page openings while preserving the pothi, simplified contribution instructions into an optional disclosure and made repeated recording contribution options optional. Reference, original-poem and recording headings now use a restrained reading scale. The homepage keeps its poetic identity and gains the shared compact header/footer and less padded listening cards.
+
+Validation: 32 Python tests and 34 JavaScript tests passed; the artwork integration test was rerun after adding navigation/disclosure assertions. Structural checks pass across 189 generated pages. Exact-width local iframe checks covered ten page types at both 320px and 390px with no horizontal page overflow or unintended off-screen primary controls. Desktop screenshots inspected The Witness and The Gathering, gallery, language and directory pages. Browser verification confirmed artwork slideshow launch, current-work start, pause/close and next-art navigation. Temporary audit fixtures are excluded from the final build.
