@@ -2,7 +2,7 @@
   "language": "bhojpuri",
   "poem": "i-am-free-to-dream",
   "variant": "duet",
-  "stage": "prepared",
+  "stage": "submitted",
   "source": "kb/poems/i-am-free-to-dream/languages/bhojpuri.md",
   "source_sha256": "4a75cad0ce5629ff4d4580b324620f3cc8f2ecf47f3b5928e82a5c68465322d0",
   "title": "सपना देखे के मनाही नइखे — Bhojpuri Duet",
@@ -26,8 +26,21 @@
   "policy_sha256": "517518fe764b604be168337217a872a7befafc0371e3ebbf02b8a9b203decb48",
   "submission_limit": 1,
   "expected_candidates": 2,
-  "actual_submissions": 0,
-  "candidates": [],
+  "actual_submissions": 1,
+  "candidates": [
+    {
+      "take": 1,
+      "id": "6c5c2983-a685-45e8-a09a-84a8459e1beb",
+      "url": "https://suno.com/song/6c5c2983-a685-45e8-a09a-84a8459e1beb",
+      "status": "generating"
+    },
+    {
+      "take": 2,
+      "id": "8980bf5a-b92d-4717-a854-757398432947",
+      "url": "https://suno.com/song/8980bf5a-b92d-4717-a854-757398432947",
+      "status": "generating"
+    }
+  ],
   "selected_candidate": null,
   "publication_authorized": false,
   "review_status": "needs-native-review",
@@ -41,5 +54,7 @@
   "input_verified": true,
   "original_source_sha256": "fc378cdce9b40bddcb64b3140b827e5576aa15cc7294fff17a51ce4ef26e3f5d",
   "input_verified_at": "2026-09-28T20:23:55.215205+00:00",
-  "verification_note": "Suno v6 Advanced; exact lyric paragraphs and style checked; Weirdness 30, Style Influence 65, Max On, Personalize Off, Variety Normal, Duration Auto, gender unselected, no audio reference, full exclusions. One candidate pair authorized. Exact generation charge was not displayed."
+  "verification_note": "Suno v6 Advanced; exact lyric paragraphs and style checked; Weirdness 30, Style Influence 65, Max On, Personalize Off, Variety Normal, Duration Auto, gender unselected, no audio reference, full exclusions. One candidate pair authorized. Exact generation charge was not displayed.",
+  "submission_started_at": "2026-09-28T20:24:21.379664+00:00",
+  "submitted_at": "2026-09-28T20:25:09.545121+00:00"
 }
