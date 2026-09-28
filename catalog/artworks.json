@@ -28,7 +28,8 @@
       "presentation": {
         "frame": "charcoal",
         "mat": "ivory",
-        "note": "Digital display treatment only; original files remain unchanged."
+        "note": "Digital display treatment only; original files remain unchanged.",
+        "detail_layout": "quiet"
       },
       "detail_reflections": [
         "Someone stays long enough for you to stop rehearsing who you ought to be. In that unhurried company, you remember how to be yourself.",

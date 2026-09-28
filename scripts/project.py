@@ -533,10 +533,18 @@ def artwork_detail_page(item, works):
     else:
         slideshow_entry = ''
     reading = f'<details class="art-story-more"><summary>Read the story</summary>{more_reflections}<p class="art-reading-note">A contemporary poetic reading of the original artwork.</p></details>' if more_reflections else ''
-    return f'''<article class="art-detail art-focus">
+    quiet = presentation.get('detail_layout') == 'quiet'
+    if quiet:
+        primary_figure = re.sub(r'<figcaption>.*?</figcaption>', '', primary_figure, flags=re.S)
+        reading = f'<details class="art-story-more"><summary>Story</summary><div class="art-reflections">{reflections}{more_reflections}</div><p class="art-reading-note">A contemporary poetic reading of the original artwork.</p></details>'
+        ai_section = ai_section.replace('<summary>Print &amp; download</summary>', '<summary>Print</summary>')
+        original_section = original_section.replace('<summary>View original artwork</summary>', '<summary>Original</summary>')
+        detail_body = f'<h1 class="visually-hidden">{title}</h1><div class="art-detail-layout" id="{display_id}">{primary_figure}</div><div class="art-quiet-options">{reading}{ai_section}{original_section}</div>'
+    else:
+        detail_body = f'<div class="art-detail-layout" id="{display_id}">{primary_figure}<div class="art-detail-story"><h1>{title}</h1><p class="art-byline">Ahimanikya Satapathy{(" · "+str(item["date"])) if item.get("date") else ""}</p>{story_phrase}<div class="art-reflections">{reflections}{reading}</div><div class="art-secondary">{ai_section}{original_section}</div></div></div>'
+    return f'''<article class="art-detail art-focus{' art-quiet' if quiet else ''}">
 <nav class="art-view-toolbar" aria-label="Artwork navigation"><a class="art-return" href="{gallery_page}#{item['id']}">← Art Journal</a><div class="art-view-controls"><a class="art-step" href="artwork--{previous['id']}.html" aria-label="Previous artwork: {esc(previous['label'],quote=True)}" title="{esc(previous['label'],quote=True)}">← <span>Previous</span></a>{slideshow_entry}<a class="art-step" href="artwork--{following['id']}.html" aria-label="Next artwork: {esc(following['label'],quote=True)}" title="{esc(following['label'],quote=True)}"><span>Next</span> →</a></div></nav>
-<div class="art-detail-layout" id="{display_id}">{primary_figure}
-<div class="art-detail-story"><h1>{title}</h1><p class="art-byline">Ahimanikya Satapathy{(' · '+str(item['date'])) if item.get('date') else ''}</p>{story_phrase}<div class="art-reflections">{reflections}{reading}</div><div class="art-secondary">{ai_section}{original_section}</div></div></div>
+{detail_body}
 {slides}</article>'''
 
 
