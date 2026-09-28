@@ -441,7 +441,7 @@ class CollectionTests(unittest.TestCase):
         shutil.copy2(PROJECT/'catalog/recordings.json', self.root/'catalog/recordings.json')
         app.build(False)
         output = self.root/'site-public'
-        expected = {'odia':(1,6), 'tamil':(1,1), 'telugu':(4,4), 'english':(2,2), 'filipino':(1,1), 'malayalam':(1,1), 'italian':(1,1), 'bengali':(1,1)}
+        expected = {'odia':(1,6), 'tamil':(2,2), 'telugu':(4,4), 'english':(2,2), 'filipino':(1,1), 'malayalam':(1,1), 'italian':(1,1), 'bengali':(1,1)}
         for language, (audio_count, video_count) in expected.items():
             page=(output/f'poems--i-am-free-to-dream--languages--{language}.html').read_text()
             self.assertEqual(page.count('<audio '), audio_count+2)
@@ -461,6 +461,9 @@ class CollectionTests(unittest.TestCase):
                 self.assertIn(f'data-share-url="https://ahimanikya.github.io/free-to-dream/recording--{item["id"]}.html"', detail)
                 self.assertNotIn('PUBLISHED VERSION', detail)
                 self.assertNotIn('data-action="prepare-file"', detail)
+        tamil=(output/'poems--i-am-free-to-dream--languages--tamil.html').read_text()
+        for section in ('listen', 'watch'):
+            self.assertLess(tamil.index(f'id="{section}-solo"'), tamil.index(f'id="{section}-duet"'))
         telugu=(output/'poems--i-am-free-to-dream--languages--telugu.html').read_text()
         self.assertIn('Earlier video versions (3)', telugu)
         hindi=(output/'poems--i-am-free-to-dream--languages--hindi.html').read_text()
