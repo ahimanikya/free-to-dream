@@ -2,7 +2,7 @@
   "language": "bhojpuri",
   "poem": "i-am-free-to-dream",
   "variant": "duet",
-  "stage": "imported",
+  "stage": "published",
   "source": "kb/poems/i-am-free-to-dream/languages/bhojpuri.md",
   "source_sha256": "4a75cad0ce5629ff4d4580b324620f3cc8f2ecf47f3b5928e82a5c68465322d0",
   "title": "सपना देखे के मनाही नइखे — Bhojpuri Duet",
@@ -40,7 +40,7 @@
       "take": 2,
       "id": "8980bf5a-b92d-4717-a854-757398432947",
       "url": "https://suno.com/song/8980bf5a-b92d-4717-a854-757398432947",
-      "status": "selected",
+      "status": "published",
       "duration_display": "2:46",
       "duration_source": "Suno create list"
     }
@@ -92,5 +92,17 @@
     "bhojpuri-duet-audio-01",
     "bhojpuri-duet-video-01"
   ],
-  "page_url": "https://poemwithoutborders.org/poems--i-am-free-to-dream--languages--bhojpuri.html"
+  "page_url": "https://poemwithoutborders.org/poems--i-am-free-to-dream--languages--bhojpuri.html",
+  "published_at": "2026-09-28T20:43:23.366285+00:00",
+  "website_commit": "04cc95e8b30049ffe87f6dbf38c75f03077add48",
+  "publication_verification": {
+    "site_deployment": "success",
+    "deployment_run": 36480690307,
+    "collection_checks": "success",
+    "python_tests": 32,
+    "javascript_tests": 34,
+    "remote_media": "Both returned HTTP 206 with correct byte totals.",
+    "browser_playback": "Audio and video advanced without errors; video pause and seek verified. Live HTTPS page contains both and playlist entry.",
+    "video_dimensions": "720x1280"
+  }
 }
