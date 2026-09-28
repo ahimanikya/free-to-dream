@@ -2,7 +2,7 @@
   "language": "tamil",
   "poem": "i-am-free-to-dream",
   "variant": "duet",
-  "stage": "imported",
+  "stage": "published",
   "source": "kb/poems/i-am-free-to-dream/languages/tamil.md",
   "source_sha256": "e366ef9efff6c411cd7a017eb3ce96d0b1cd24df309527f3963e864b6ebe60bf",
   "title": "கனவு காண எனக்குத் தடையில்லை — Duet",
@@ -39,7 +39,7 @@
       "id": "081ca235-b828-44de-93be-e0b79ed779bb",
       "url": "https://suno.com/song/081ca235-b828-44de-93be-e0b79ed779bb",
       "duration_display": "2:58",
-      "status": "author-selected-download-pending",
+      "status": "published",
       "duration_source": "Suno create list"
     },
     {
@@ -71,7 +71,7 @@
     "identity_check": "Selected song UUID is present in downloaded MP3 metadata.",
     "downloaded": true,
     "video_rendered": true,
-    "published": false
+    "published": true
   },
   "download": {
     "path": "media/tamil/duet/i-am-free-to-dream-tamil-duet-01.mp3",
@@ -99,5 +99,18 @@
   "recording_ids": [
     "tamil-duet-audio-01",
     "tamil-duet-video-01"
-  ]
+  ],
+  "catalog_commit": "d1edef99242e52df6426d6a6e801c2df9e03e4ec",
+  "website_commit": "53be279670f3c188c466b234d28d8269b27e6a79",
+  "publication_verification": {
+    "verified_at": "2026-09-28",
+    "site_deployment": "success",
+    "collection_checks": "success",
+    "live_audio_and_video_panels": true,
+    "remote_media_range_requests": "Both returned HTTP 206 with correct total byte lengths.",
+    "browser_playback": "Both remote audio and video advanced without media errors in the site preview. Video dimensions 720x1280.",
+    "tabs": "Solo is first and initially selected; selecting Duet synchronizes the audio/video panels.",
+    "python_tests": 32,
+    "javascript_tests": 34
+  }
 }
