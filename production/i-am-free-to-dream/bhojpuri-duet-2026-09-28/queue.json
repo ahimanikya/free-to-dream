@@ -30,7 +30,7 @@
     "source_sha256": "517518fe764b604be168337217a872a7befafc0371e3ebbf02b8a9b203decb48"
   },
   "counts": {
-    "prepared": 1
+    "selection-pending": 1
   },
   "entries": [
     {
@@ -43,7 +43,7 @@
       "lyric_status": "Lyric draft",
       "review_status": "needs-native-review",
       "existing_audio": false,
-      "status": "prepared",
+      "status": "selection-pending",
       "lyrics": "[Intro - Male Lead, Soft Female Responses]\nहमरा सपना देखे के मनाही नइखे,\nबीच राह में भटक जाए के मनाही नइखे।\nध्रुवतारा राह देखाई।\n\n[Verse 1 - Male Lead, Gentle Female Answers]\nबटोरत... बटोरत...\nदुनिया के छाती से लगवले बानी—\nएकरा के जोड़े के आस में,\nएकरा के सँवारे के आस में।\n\n[Verse 2 - Male Lead]\nहम कुम्हार बानी।\n\nरूप देवे के सीखले बानी,\nरंग भर के,\nतोहरा मुँह पर हँसी खिलावे के सीखले बानी।\n\n[Chorus - Male Lead, Soft Female Harmony]\nहमरा सपना देखे के मनाही नइखे,\nबीच राह में भटक जाए के मनाही नइखे।\nध्रुवतारा राह देखाई।\n\n[Bridge - Female Solo]\nआवऽ, पहाड़ चढ़ीं।\nआवऽ, चाँद निहारीं।\nबादर से काँधा मिलाके,\nबरखा बन बरसे के मंतर सीखीं।\n\n[Final Chorus - Male and Female Duet]\nहमरा सपना देखे के मनाही नइखे।\nतोहार सपना अपना सपना में\nगूँथे के भी मनाही नइखे।\n\n[Soft Outro - Both Voices, Tender Close Harmony]\nतोहार सपना अपना सपना में...\nगूँथे के भी मनाही नइखे।",
       "style": "Tender Bhojpuri Purabi-inspired acoustic folk duet ballad. Warm youthful male lead from the opening, soft female answering phrases; female solo for the late invitation verse, then tender close-harmony duet in the final refrain and outro. Natural conversational Bhojpuri diction, gently leaning and relaxed phrase endings, restrained ornamentation. Gentle kajri-like lilt, soft dholak swing, expressive sarangi replies, quiet harmonium. Calm soulful joy, affection and wonder; light unhurried rhythm, hopeful returning refrain. Breathe between बटोरत... बटोरत...; pause fully after हम कुम्हार बानी, instruments sustaining beneath. Begin intimately; let the rain-and-cloud bridge bloom warmly without accelerating. Keep answers clear of the lead and use only supplied lyric words. End in peaceful, hopeful dream-weaving contentment. No mournful delivery, driving beat or dramatic crescendo.",
       "settings": "Intended text-prompt settings; verify in Suno before submission.\nPolicy: production/i-am-free-to-dream/settings.json @ 2026-09-27-2\n\nmodel: v6\nmode: Advanced\nweirdness: 30\nstyle_influence: 65\nmax_mode: On\npersonalize: Off\nvariety: Normal\nduration: Auto\nvocal_gender: Unselected; voice directed in the language prompt\naudio_influence: Not applicable without a reference\nexclude_styles: EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals\n\nFor an author-approved reference cover only: audio_influence 75. Attach the exact reference and preserve its approved prompt/lyrics.\nRecord any author-approved settings exception in the run.\n\nUse the existing arranged lyric for comparison. Keep its words, section order and pauses intact; log any later wording changes separately.\n\nStart with the [shared generation baseline](../../../guides/generation-settings.md), then apply documented language or arrangement overrides. Preserve this language’s musical direction and listening checks. Explain each changed control, its musical reason and review status; record the actual settings with the take.\n\nFor the listening review:\n\n1. Ask a fluent speaker to read the opening, gathering line, potter declaration and longest phrase naturally. Compare that phrasing with the sung version.\n2. Check that the local vocal cadence and melodic treatment are audible, and that the regional character comes through beyond instrument names. Use conversational Bhojpuri and gently leaning phrase endings; keep the Purabi colour affectionate and unhurried.\n3. Check the gathering breath and fuller potter pause. Listen for dropped syllables, added words, distorted pronunciation or an accompaniment that forces a sentence to hurry.\n4. Compare the opening, bridge and ending at similar playback volume. The arrangement may grow warmer, but should remain calm, soulful and quietly happy.\n\nKeep the current translation review status until a fluent speaker and singer have reviewed the actual wording and take.",
@@ -62,7 +62,24 @@
       },
       "settings_overrides": [],
       "arrangement": "duet",
-      "candidates": [],
+      "candidates": [
+        {
+          "take": 1,
+          "id": "6c5c2983-a685-45e8-a09a-84a8459e1beb",
+          "url": "https://suno.com/song/6c5c2983-a685-45e8-a09a-84a8459e1beb",
+          "status": "ready-for-review",
+          "duration_display": "2:34",
+          "duration_source": "Suno create list"
+        },
+        {
+          "take": 2,
+          "id": "8980bf5a-b92d-4717-a854-757398432947",
+          "url": "https://suno.com/song/8980bf5a-b92d-4717-a854-757398432947",
+          "status": "ready-for-review",
+          "duration_display": "2:46",
+          "duration_source": "Suno create list"
+        }
+      ],
       "selected_candidate": null,
       "arrangement_changes": [
         "Only arrangement labels changed; sung wording, section order and pauses unchanged.",

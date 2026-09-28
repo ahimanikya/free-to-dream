@@ -2,7 +2,7 @@
   "language": "bhojpuri",
   "poem": "i-am-free-to-dream",
   "variant": "duet",
-  "stage": "submitted",
+  "stage": "selection-pending",
   "source": "kb/poems/i-am-free-to-dream/languages/bhojpuri.md",
   "source_sha256": "4a75cad0ce5629ff4d4580b324620f3cc8f2ecf47f3b5928e82a5c68465322d0",
   "title": "सपना देखे के मनाही नइखे — Bhojpuri Duet",
@@ -32,13 +32,17 @@
       "take": 1,
       "id": "6c5c2983-a685-45e8-a09a-84a8459e1beb",
       "url": "https://suno.com/song/6c5c2983-a685-45e8-a09a-84a8459e1beb",
-      "status": "generating"
+      "status": "ready-for-review",
+      "duration_display": "2:34",
+      "duration_source": "Suno create list"
     },
     {
       "take": 2,
       "id": "8980bf5a-b92d-4717-a854-757398432947",
       "url": "https://suno.com/song/8980bf5a-b92d-4717-a854-757398432947",
-      "status": "generating"
+      "status": "ready-for-review",
+      "duration_display": "2:46",
+      "duration_source": "Suno create list"
     }
   ],
   "selected_candidate": null,
@@ -56,5 +60,7 @@
   "input_verified_at": "2026-09-28T20:23:55.215205+00:00",
   "verification_note": "Suno v6 Advanced; exact lyric paragraphs and style checked; Weirdness 30, Style Influence 65, Max On, Personalize Off, Variety Normal, Duration Auto, gender unselected, no audio reference, full exclusions. One candidate pair authorized. Exact generation charge was not displayed.",
   "submission_started_at": "2026-09-28T20:24:21.379664+00:00",
-  "submitted_at": "2026-09-28T20:25:09.545121+00:00"
+  "submitted_at": "2026-09-28T20:25:09.545121+00:00",
+  "completed_at": "2026-09-28T20:26:52.235088+00:00",
+  "review_note": "No subjective listening or pronunciation assessment claimed. Author to review male-led opening, female solo invitation verse, final close harmony, native diction and pauses."
 }
