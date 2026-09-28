@@ -55,12 +55,154 @@ class CollectionTests(unittest.TestCase):
         for page in output.glob('*.html'):
             text = page.read_text()
             self.assertNotIn('PRIVATE SENTINEL', text)
-            if page.name != 'timing.html': self.assertNotIn('<audio ', text)
+            if page.name != 'timing.html':
+                # The gallery's empty soundtrack control is populated only from the public catalog.
+                checked = re.sub(r'<audio id="slideshow-audio"[^>]*></audio>', '', text)
+                self.assertNotIn('<audio ', checked)
+                for audio_tag in re.findall(r'<audio id="slideshow-audio"[^>]*>', text):
+                    self.assertNotIn('src=', audio_tag)
             links = Links(); links.feed(text)
             for target in links.targets:
                 url = urlparse(target)
                 if not url.scheme and url.path:
                     self.assertTrue((page.parent/unquote(url.path)).is_file(), f'{page.name}: missing {target}')
+
+    def test_four_times_art_downloads_preserve_sources_and_reject_stale_files(self):
+        app.build(False)
+        output = self.root/'site-public'
+        originals = json.loads((self.root/'catalog/artworks.json').read_text())['artworks']
+        refined = json.loads((self.root/'catalog/ai-artworks.json').read_text())['artworks']
+        for item in originals:
+            edition = item['print_edition']
+            page = (output/('artwork--'+item['id']+'.html')).read_text()
+            self.assertIn(edition['file'], page)
+            self.assertTrue(edition['embedded_text'])
+            self.assertEqual(edition['artwork_width'], item['master_width']*4)
+            self.assertEqual(edition['artwork_height'], item['master_height']*4)
+            self.assertEqual((self.root/edition['file']).read_bytes(), (output/edition['file']).read_bytes())
+        for item in refined:
+            if not item.get('source_artwork_id'):
+                continue
+            edition = item['print_download']
+            self.assertTrue(edition['file'].endswith('.jpg'))
+            self.assertEqual(edition['jpeg_subsampling'], 0)
+            self.assertEqual(app.jpeg_dimensions((self.root/edition['file']).read_bytes()), (item['width']*4, item['height']*4))
+            page = (output/('artwork--'+item['source_artwork_id']+'.html')).read_text()
+            self.assertIn(edition['file'], page)
+            self.assertIn('pixels · JPEG', page)
+            self.assertEqual((edition['width'], edition['height']), (item['width']*4, item['height']*4))
+            self.assertEqual((self.root/edition['file']).read_bytes(), (output/edition['file']).read_bytes())
+            self.assertIn('No new artwork detail', (output/('artwork--'+item['source_artwork_id']+'.html')).read_text())
+        manifest = self.root/'catalog/artworks.json'
+        data = json.loads(manifest.read_text())
+        data['artworks'][0]['caption'] += ' A changed caption.'
+        manifest.write_text(json.dumps(data))
+        with self.assertRaisesRegex(ValueError, 'Stale original 4x print source or caption'):
+            app.validate_art_prints()
+        data['artworks'][0]['caption'] = originals[0]['caption']
+        manifest.write_text(json.dumps(data))
+        enlarged = self.root/refined[1]['print_download']['file']
+        enlarged.write_text('version https://git-lfs.github.com/spec/v1\n')
+        with self.assertRaisesRegex(ValueError, '4x print is not hydrated'):
+            app.validate_art_prints()
+
+    def test_canvas_download_preserves_supplied_pdf_and_rejects_lfs_pointer(self):
+        app.build(False)
+        page = (self.root/'site-public/artwork--art-64.html').read_text()
+        source = self.root/'media/prints/ahi-art-canvas-24x48.pdf'
+        published = self.root/'site-public/media/prints/ahi-art-canvas-24x48.pdf'
+        self.assertEqual(source.read_bytes(), published.read_bytes())
+        self.assertIn('Download canvas PDF', page)
+        self.assertIn('72 ppi at 24 × 48 inches', page)
+        self.assertIn('Artwork and print layout by Ahimanikya Satapathy', page)
+        self.assertIn('Download original image', page)
+        source.write_text('version https://git-lfs.github.com/spec/v1\noid sha256:'+'0'*64+'\nsize 16404838\n')
+        with self.assertRaisesRegex(ValueError, 'not hydrated'):
+            app.build(False)
+
+    def test_artwork_galleries_separate_originals_from_verified_ai_images(self):
+        app.build(False)
+        output = self.root/'site-public'
+        works = json.loads((self.root/'catalog/artworks.json').read_text())['artworks']
+        self.assertEqual(len({item['master_sha256'] for item in works}), len(works))
+        gallery = (output/'original-artworks.html').read_text()
+        self.assertEqual(gallery.count('class="portfolio-card"'), len(works))
+        self.assertNotIn('id="art-more"', gallery)
+        self.assertNotIn('data-page-size', gallery)
+        self.assertNotIn('portfolio-narrative', gallery)
+        for item in works:
+            detail_name = 'artwork--'+item['id']+'.html'
+            self.assertIn(detail_name, gallery)
+            detail = (output/detail_name).read_text()
+            self.assertIn(item['master'], detail)
+            self.assertIn(item['detail_reflections'][1], unescape(detail))
+            self.assertRegex(detail, r'href="(?:original-)?artworks\.html#'+item['id']+'"')
+            self.assertNotIn('art-detail-trail', detail)
+            self.assertIn('aria-label="Main navigation"', detail)
+            self.assertEqual((self.root/item['master']).read_bytes(), (output/item['master']).read_bytes())
+        # Previous/next must follow the visible frame groups, including wraparound.
+        displayed_ids = re.findall(r'<figure class="portfolio-card" id="([^"]+)"', gallery)
+        self.assertEqual(displayed_ids, [item['id'] for item in app.artwork_display_order(works)])
+        for position, ident in enumerate(displayed_ids):
+            detail = (output/('artwork--'+ident+'.html')).read_text()
+            previous = displayed_ids[(position-1) % len(displayed_ids)]
+            following = displayed_ids[(position+1) % len(displayed_ids)]
+            self.assertIn(f'href="artwork--{previous}.html" aria-label="Previous artwork:', detail)
+            self.assertIn(f'href="artwork--{following}.html" aria-label="Next artwork:', detail)
+            anchors = set(re.findall(r'\bid="([^"]+)"', detail))
+            for target in re.findall(r'href="#([^"]+)"', detail):
+                self.assertIn(target, anchors, f'{ident}: missing section {target}')
+        art_page = (output/'guides--artwork.html').read_text()
+        self.assertNotIn('media/artworks/art-64.png', art_page)
+        self.assertNotIn('<figure', art_page)
+        self.assertIn('Design roots and credits', art_page)
+        self.assertNotIn('artwork--art-64.html#canvas-edition', art_page)
+        self.assertIn('href="artworks.html"', art_page)
+        self.assertIn('href="guides--brand.html"', art_page)
+        self.assertNotIn('the-witness-poster.png', art_page)
+        self.assertNotIn('AI-generated potter', art_page)
+        self.assertFalse((output/'media/images/the-witness-poster.png').exists())
+        ai_page = (output/'artworks.html').read_text()
+        ai_image = 'media/ai-artworks/the-witness-refined-print-v2.png'
+        self.assertIn(ai_image, ai_page)
+        self.assertNotIn(ai_image, art_page)
+        self.assertNotIn(ai_image, gallery)
+        self.assertIn('AI-assisted cleanup and print preparation', ai_page)
+        editions = json.loads((self.root/'catalog/ai-artworks.json').read_text())['artworks']
+        original_ids = {item['id'] for item in works}
+        refined = [item for item in editions if item.get('source_artwork_id') in original_ids]
+        self.assertEqual(ai_page.count('class="portfolio-card"'), len(refined))
+        self.assertNotIn('id="potter-dream"', ai_page)
+        self.assertNotIn('class="gallery-piece"', ai_page)
+        self.assertIn('assets/art-frames.css', ai_page)
+        self.assertEqual(ai_page.count('refined-frame'), len(refined))
+        self.assertEqual(ai_page.count('data-print-caption'), len(refined))
+        self.assertIn('assets/art-caption-layouts.css', ai_page)
+        screen_css = (output/'assets/art-caption-layouts.css').read_text()
+        for edition in refined:
+            self.assertIn('.screen-art-'+edition['source_artwork_id']+' {', screen_css)
+
+        self.assertNotIn('art-story-arrow', ai_page)
+        for item in refined:
+            self.assertIn(f'href="artwork--{item["source_artwork_id"]}.html#ai-edition"', ai_page)
+        self.assertNotIn('class="art-edition-switch"', ai_page)
+        self.assertNotIn('href="original-artworks.html"', ai_page)
+        self.assertIn('href="original-artworks.html" aria-current="page">Original art', gallery)
+        self.assertIn('href="artworks.html"', gallery)
+        witness_detail = (output/'artwork--art-64.html').read_text()
+        self.assertIn(ai_image, witness_detail)
+        self.assertIn('id="ai-edition"', witness_detail)
+        self.assertIn('REFINED PRINT EDITION', witness_detail)
+        self.assertNotIn('href="ai-artworks.html"', witness_detail)
+        self.assertIn('/media/artworks/art-64.png', gallery)
+        master = self.root/works[0]['master']
+        original = master.read_bytes()
+        master.write_text('version https://git-lfs.github.com/spec/v1\n')
+        with self.assertRaisesRegex(ValueError, 'not hydrated'):
+            app.build(False)
+        master.write_bytes(original+b'changed')
+        with self.assertRaisesRegex(ValueError, 'checksum'):
+            app.build(False)
 
     def test_discovery_exports_truthful_status_sources_and_no_private_recordings(self):
         app.build(False)
@@ -103,7 +245,7 @@ class CollectionTests(unittest.TestCase):
         for url in locations:
             filename = url.rsplit('/',1)[1]
             self.assertTrue((output/filename).is_file())
-            self.assertNotIn(filename, ('timing.html','contribute.html','poems--i-am-free-to-dream--original.html'))
+            self.assertNotIn(filename, ('timing.html','contribute.html'))
         self.assertIn('name="robots" content="noindex,follow"',(output/'timing.html').read_text())
 
     def test_metadata_escapes_untrusted_titles_and_does_not_license_recordings(self):
@@ -300,7 +442,9 @@ class CollectionTests(unittest.TestCase):
         expected = {'odia':(1,6), 'tamil':(1,1), 'telugu':(4,4), 'english':(2,2), 'filipino':(1,1), 'malayalam':(1,1), 'italian':(1,1), 'bengali':(1,1)}
         for language, (audio_count, video_count) in expected.items():
             page=(output/f'poems--i-am-free-to-dream--languages--{language}.html').read_text()
-            self.assertEqual(page.count('<audio '), audio_count+1)
+            self.assertEqual(page.count('<audio '), audio_count+2)
+            self.assertIn('Slideshow with this song', page)
+            self.assertIn('data-slideshow-mode="language"', page)
             self.assertEqual(page.count('id="index-player"'),1)
             self.assertNotIn('id="index-auto"',page)
             self.assertIn('id="index-stop"',page)
@@ -308,7 +452,7 @@ class CollectionTests(unittest.TestCase):
             self.assertIn('Working recordings', page)
             self.assertNotIn('LOCAL REVIEW COPY', page)
             self.assertNotIn('autoplay', page)
-            self.assertEqual(page.count('preload="none"'), audio_count+video_count+1)
+            self.assertEqual(page.count('preload="none"'), audio_count+video_count+2)
             self.assertIn('https://media.githubusercontent.com/media/', page)
             for item in (x for x in app.records() if x['language']==language):
                 detail=(output/f'recording--{item["id"]}.html').read_text()
@@ -350,11 +494,16 @@ class CollectionTests(unittest.TestCase):
             self.assertNotIn('class="audio-cover"',page)
             self.assertNotIn('Timed lyrics are not available',page)
             self.assertIn('class="page-share"',page)
-            self.assertIn('assets/odia-lotus.svg',page)
+            self.assertIn('assets/brand/mark.svg',page)
             self.assertNotIn('<details open',page)
             for target in ['poem-text','listen','watch']:
-                self.assertIn(f'href="#{target}"',page)
                 self.assertIn(f'id="{target}"',page)
+            header = re.search(r'<section class="language-heading">(.*?)</section>', page, re.S)[1]
+            self.assertIn('A poem by Ahimanikya Satapathy</p>', header)
+            self.assertIn('<summary>Share</summary>', header)
+            self.assertNotIn('Adaptation · review welcome', header)
+            self.assertNotIn('Read the original poem', header)
+            self.assertNotIn('href="#poem-text"', header)
             reading=re.search(r'<article id="poem-text".*?</article>',page,re.S)[0]
             self.assertNotRegex(unescape(reading),r'(?m)^\s*\[[^\]\n]+\]\s*$')
             choices=re.search(r'<details id="musical-choices">(.*?)</details>',page,re.S)
@@ -376,16 +525,26 @@ class CollectionTests(unittest.TestCase):
             else:
                 self.assertNotIn('id="copy-lyrics-prompt"',page)
         odia=(output/'poems--i-am-free-to-dream--languages--odia.html').read_text()
-        self.assertIn('Odia · the original',odia)
+        self.assertNotIn('Odia · the original',odia)
+        self.assertIn('Song arrangement',odia)
         self.assertNotIn('How to validate this translation',odia)
         self.assertNotIn('Translation &amp; collaboration',odia)
         self.assertNotIn('needs native review',odia)
-        self.assertIn('<summary>Lyrics prompt · view &amp; copy</summary>',odia)
+        self.assertIn('<summary>Lyrics with song sections</summary>',odia)
         _, original=app.read_concept(app.KB/'poems/i-am-free-to-dream/original.md')
         source=original.split('```text\n')[1].split('\n```')[0]
-        self.assertIn(source,odia)
+        reading = odia.split('id="poem-text"')[1].split('</article>')[0]
+        self.assertIn('ସାଉଁଟି... ସାଉଁଟି...', reading)
+        self.assertEqual(reading.count('ଧୃବତାରା ଖୋଜିଦେବ ରାସ୍ତା'), 2)
+        self.assertEqual(reading.count('ତୁମ ସପ୍ନକୁ ମୋ ସପ୍ନରେ'), 2)
+        self.assertNotIn('[Chorus]', reading)
         alias=(output/'poems--i-am-free-to-dream--original.html').read_text()
-        self.assertIn('Odia · the original',alias)
+        self.assertIn(source,alias)
+        self.assertIn('THE ORIGINAL POEM · ODIA',alias)
+        self.assertIn('https://kabitaprusta.blogspot.com/',alias)
+        self.assertIn('Original poem © Ahimanikya Satapathy',alias)
+        self.assertNotIn('Lyrics with song sections',alias)
+        self.assertNotIn('data-language="odia"',alias)
         self.assertNotIn('How to validate this translation',alias)
         tamil=(output/'poems--i-am-free-to-dream--languages--tamil.html').read_text()
         self.assertIn('<summary>Translation &amp; collaboration</summary>',tamil)
@@ -413,8 +572,9 @@ class CollectionTests(unittest.TestCase):
         self.assertIn('https://www.linkedin.com/in/ahimanikya/',page)
         self.assertIn('https://www.instagram.com/ahimanikya/',page)
         self.assertNotIn('id="search"',page)
-        self.assertIn('media/images/ahimanikya-artwork-1993.png',page)
-        self.assertIn('Artwork by Ahimanikya Satapathy · 1993',page)
+        self.assertIn('data-home-art',page)
+        self.assertIn('media/ai-artworks/the-witness-refined-print-v2.png',page)
+        self.assertNotIn('Artwork by Ahimanikya Satapathy · 1993',page)
         directory=(self.root/'site-public/languages.html').read_text()
         self.assertEqual(directory.count('<article class="language-card"'),len(app.validate()))
         self.assertEqual(directory.count('data-play-recording='),len(playing_languages))

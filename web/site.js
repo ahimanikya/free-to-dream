@@ -1,8 +1,14 @@
+import {setupSiteMenu} from './site-menu.mjs';
+import {setupHomeArt} from './home-art.mjs';
+import {setupMediaTabs} from './media-tabs.mjs';
 import {setupEngagement} from './engagement.mjs';
 import {setupBackNavigation} from './navigation.mjs';
 import {attachLyrics} from './lyrics.mjs';
 import {setupLanguageCarousel} from './carousel.mjs';
+import {setupLanguageArt} from './language-art.mjs';
 import {buildProposal, githubSubmission, publicMediaURL} from './collaboration.mjs';
+
+setupSiteMenu();
 
 const search = document.querySelector('#search');
 const filter = document.querySelector('#filter');
@@ -179,6 +185,8 @@ if (document.querySelector('#index-player')) import('./index-player.mjs').then((
 if (document.querySelector('#timing-workspace')) import('./timing-editor.mjs').then(({setupTimingEditor})=>setupTimingEditor());
 
 setupLanguageCarousel();
+setupLanguageArt();
+setupMediaTabs();
 
 const copyLyricsPrompt = document.querySelector('#copy-lyrics-prompt');
 if (copyLyricsPrompt) copyLyricsPrompt.addEventListener('click', async () => {
@@ -186,7 +194,7 @@ if (copyLyricsPrompt) copyLyricsPrompt.addEventListener('click', async () => {
   const status = document.querySelector('#lyrics-copy-status');
   try {
     await navigator.clipboard.writeText(lyrics.value);
-    status.textContent = 'Lyrics prompt copied, including song sections.';
+    status.textContent = 'Lyrics copied, including song sections.';
   } catch {
     lyrics.focus();
     lyrics.select();
@@ -198,3 +206,46 @@ setupBackNavigation();
 setupEngagement();
 
 if (document.querySelector("#load-feedback")) import("./engagement-dashboard.mjs").then(({setupEngagementDashboard})=>setupEngagementDashboard());
+
+setupHomeArt();
+
+for (const button of document.querySelectorAll('[data-copy-style]')) {
+  button.addEventListener('click', async () => {
+    const block = button.closest('.copyable-style');
+    const text = block.querySelector('code');
+    const status = block.querySelector('.style-copy-status');
+    try {
+      await navigator.clipboard.writeText(text.textContent.trim());
+      status.textContent = 'Style copied.';
+    } catch {
+      const range = document.createRange();
+      range.selectNodeContents(text);
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      status.textContent = 'The style is selected. Use your browser’s copy command.';
+    }
+  });
+}
+
+// Deep links into quiet, collapsed notes must reveal their destination.
+function revealLinkedDetails() {
+  let id;
+  try { id = decodeURIComponent(window.location.hash.slice(1)); } catch { return; }
+  const target = id && document.getElementById(id);
+  if (!target) return;
+  let current = target, opened = false;
+  while (current) {
+    if (current.tagName === 'DETAILS' && !current.open) { current.open = true; opened = true; }
+    current = current.parentElement;
+  }
+  if (opened) requestAnimationFrame(() => target.scrollIntoView({block:'start', behavior:'instant'}));
+}
+window.addEventListener('hashchange', revealLinkedDetails);
+document.addEventListener('click', event => {
+  const link = event.target.closest('a[href^="#"]');
+  if (link && link.hash === window.location.hash) revealLinkedDetails();
+});
+revealLinkedDetails();
+
+if (document.querySelector('#art-slideshow')) import('./art-slideshow.mjs').then(({setupArtSlideshow})=>setupArtSlideshow());

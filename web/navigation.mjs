@@ -42,7 +42,13 @@ export function setupBackNavigation(doc = document, win = window) {
   if (back) {
     const target = backDestination(win.location.href, previous, back.href);
     back.href = target.url;
-    if (target.label) back.textContent = target.label;
+    if (target.label) {
+      if (back.classList.contains('language-back')) {
+        const label = target.label.replace(/^←\s*/, 'Back to ');
+        back.setAttribute('aria-label', label);
+        back.setAttribute('title', label);
+      } else back.textContent = target.label;
+    }
   }
   doc.addEventListener('click', event => {
     const anchor = event.target.closest('a[href]');

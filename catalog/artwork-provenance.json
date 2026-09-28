@@ -1,0 +1,13 @@
+{
+  "selection_policy": "Two separate galleries: unchanged photographs of original artwork, and explicitly labeled AI-generated images. Do not substitute AI reinterpretations for original paintings or imply that new captions are historical inscriptions.",
+  "canvas_pdf": "media/prints/ahi-art-canvas-24x48.pdf",
+  "ai_reinterpretations": [
+    {
+      "filename": "the-witness-poster.png",
+      "sha256": "30a09d1ca8e9a19da1d5a582a36f0eb0abc7d6877a2c9ee208649f59ca266dae",
+      "origin": "AI-generated reinterpretation, confirmed by the artist on 2026-09-27",
+      "decision": "Display only in the AI-generated gallery, separately from the signed original and canvas PDF.",
+      "file": "media/ai-artworks/the-witness-ai-poster.png"
+    }
+  ]
+}

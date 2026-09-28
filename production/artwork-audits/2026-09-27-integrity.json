@@ -1,0 +1,279 @@
+{
+  "date": "2026-09-27",
+  "scope": "All 24 selected original artworks and their 22 current print editions. Superseded editions, unselected workbook archives and independent generated illustrations are outside this comparison.",
+  "standard": "Cleanup may reduce verified paper stains, dust and photographic unevenness. It must not redraw a stroke, invent a feature, clarify intentional ambiguity, change expression, fill ink, alter proportions or regenerate signatures.",
+  "method": "Visual original/current comparisons at preserved aspect ratios, with repeat inspection of sensitive faces; checksum validation of all selected originals/current editions; direct pixel-region verification for three non-generative preparations.",
+  "limits": "Judgments of acceptable drift are curatorial recommendations for the artist, not measured similarity scores. Comparisons use the available digital photographs, not physical works or colour-calibrated scans. Framing/scale, camera perspective and resampling affect appearance. No pixel-identity claim is made for generated editions or enlarged JPEGs. Faint marks cannot be reliably classified as dirt without artist confirmation.",
+  "counts": {
+    "Rework recommended": 8,
+    "Verified original-based": 3,
+    "Artist review": 11,
+    "Original only": 2
+  },
+  "artworks": [
+    {
+      "id": "art-64",
+      "title": "The Witness",
+      "status": "Rework recommended",
+      "observation": "The profile and gaze remain recognisable, but the cheek, eye surround and neck highlights have been re-articulated; some paint transitions are crisper. The replacement paper is acceptable, but repainting internal marks is beyond cleanup.",
+      "recommendation": "Preserve the original painted head and handwritten signature; clean only confidently identified paper defects. Prior artist approval is not revoked by this review.",
+      "original_file": "media/artworks/art-64.png",
+      "original_sha256": "93fdae206005064345eabe4d0f28e710eba1ed0ce57ca15e4bd9e837bbda64b5",
+      "edition_file": "media/ai-artworks/the-witness-refined-print-v2.png",
+      "edition_sha256": "62599e6a938650f08528524332210af69245f32dfcbdd790da68ef80d3322d33"
+    },
+    {
+      "id": "art-22",
+      "title": "The Gathering",
+      "status": "Verified original-based",
+      "observation": "The current v3 artwork region is pixel-identical to the decoded original. The former generated edition is no longer active.",
+      "recommendation": "Keep current edition; retain its soft merging figures.",
+      "original_file": "media/artworks/art-22.jpg",
+      "original_sha256": "7eba3b8dc7c9b7f25533730c9b02de99d5516022d26bc39f39848f1e55ee2009",
+      "edition_file": "media/ai-artworks/art-22-original-prepared-v3.png",
+      "edition_sha256": "b2c79557839e5044066a9c78de9a88cb0e46c5bbeb9a8b9770b12b0dcbdfbd56"
+    },
+    {
+      "id": "art-19",
+      "title": "Inner Moon",
+      "status": "Rework recommended",
+      "observation": "The facial marks and the fine scratched/painted texture around the face and enclosing curve differ. The composition survives, but clearer marks change its delicate expression.",
+      "recommendation": "Return to original facial and scratched marks; avoid resolving ambiguous details.",
+      "original_file": "media/artworks/art-19.jpg",
+      "original_sha256": "8651f826a9d08cb7d2fe3abf01def7e80fb89478d8d23c800ada982a5b422e52",
+      "edition_file": "media/ai-artworks/art-19-refined-print-v2.png",
+      "edition_sha256": "bfcd7f198ccadc34f48cad244901af175d51f1cbf153bf37013df491d14143d3"
+    },
+    {
+      "id": "art-20",
+      "title": "Held",
+      "status": "Artist review",
+      "observation": "The crouched gesture and main paint bands remain close. Interior marks in the torso and limb bands look more sharply articulated, even though the overall rhythm is retained.",
+      "recommendation": "Keep the current artist-approved version pending comparison; do not certify it as background-only cleanup.",
+      "original_file": "media/artworks/art-20.jpg",
+      "original_sha256": "e0b34b7210f3a181dcc550cd5fdcd9e0be8aafd931c331e2202dbdd0e904927a",
+      "edition_file": "media/ai-artworks/held-refinement-v2.png",
+      "edition_sha256": "f896edad6724f18b02da271f203c41410283e726682ed058c7a7b20da0b0e59a"
+    },
+    {
+      "id": "yellow-and-green",
+      "title": "The Pause",
+      "status": "Artist review",
+      "observation": "The bowed gesture and simple shapes are close. Surface grain and some edges differ; handwritten lettering has been regenerated rather than preserved as original pixels.",
+      "recommendation": "No urgent subject correction apparent; check the contour and signature against the original before calling it a faithful cleanup.",
+      "original_file": "media/artworks/yellow-and-green-1993.png",
+      "original_sha256": "ef9db49c3cacb1026e30ba4929cd66a958dd2bea35f6ebaac1f3a8a873847506",
+      "edition_file": "media/ai-artworks/yellow-and-green-refined-print-v1.png",
+      "edition_sha256": "7ab6d8fe530919da20390e32b45b406fdb36bc18c963d9622907ddb125cabc22"
+    },
+    {
+      "id": "art-05",
+      "title": "The Vessel",
+      "status": "Artist review",
+      "observation": "The main silhouette, top opening and sweeping bands are close. Small dry-brush gaps and wash texture differ and appear more distinct.",
+      "recommendation": "A comparatively close result; retain original brush gaps in any further preparation.",
+      "original_file": "media/artworks/art-05.jpg",
+      "original_sha256": "f73818c3c1acaad4cc2ed2c7accbf1578035a1f847de8af1064921c7b8116aa7",
+      "edition_file": "media/ai-artworks/art-05-refined-print-v1.png",
+      "edition_sha256": "dba8b7e8d7c0d35167f0d35281d751ff40dfe08bcd7e0d728343a0181536f795"
+    },
+    {
+      "id": "art-17",
+      "title": "The Hollow",
+      "status": "Verified original-based",
+      "observation": "The current v3 artwork region is pixel-identical to the decoded original, including broken ink and irregular fill.",
+      "recommendation": "Keep current edition.",
+      "original_file": "media/artworks/art-17.jpg",
+      "original_sha256": "7db4e56ed1e2f7245ba34647a2cc9140b685d61e186c9c9e64c1befe66e25507",
+      "edition_file": "media/ai-artworks/art-17-original-prepared-v3.png",
+      "edition_sha256": "a9f64f2ecc17fece4f6e319840510f1e7f5840aafe417f8096f7a44325093322"
+    },
+    {
+      "id": "art-24",
+      "title": "Inner Voices",
+      "status": "Artist review",
+      "observation": "The assembly and interlocking forms remain. Green contours and small facial marks appear firmer, reducing some of the original fading and uncertainty.",
+      "recommendation": "Inspect small faces before approval; do not strengthen faded marks as cleanup.",
+      "original_file": "media/artworks/art-24.jpg",
+      "original_sha256": "8c97ee23864a774d932a3686b712591705338cb5ff25c5f8ee1649f394bce1e9",
+      "edition_file": "media/ai-artworks/art-24-refined-print-v1.png",
+      "edition_sha256": "c80526584f62567630f01fc4f31437fc0a332d796ea295912aebaae8f0d649d6"
+    },
+    {
+      "id": "art-03",
+      "title": "Inward",
+      "status": "Rework recommended",
+      "observation": "The bowed figure remains, but the nose, eyelids and head hatching are more emphatic. Some long contours also look more definite.",
+      "recommendation": "Preserve the original face and charcoal softness. Removing the photographed paper obstruction is a separate decision from redrawing a contour it obscures.",
+      "original_file": "media/artworks/art-03.jpg",
+      "original_sha256": "032312d037e26152a694d0f953c8f739178f5107409c9c8deacb50daeaa5128b",
+      "edition_file": "media/ai-artworks/art-03-refined-print-v1.png",
+      "edition_sha256": "37fa37c274c7902494538d046bbffddcf5eb0189a1dd38c25d03406c2203ed2c"
+    },
+    {
+      "id": "art-30",
+      "title": "Almost",
+      "status": "Artist review",
+      "observation": "The paired birds and near-contact gesture remain. Thin line texture and hatching differ; the surrounding dark ground is more even.",
+      "recommendation": "Removing glare can be acceptable, but retain the original line ends and uncertain fine marks.",
+      "original_file": "media/artworks/art-30.jpg",
+      "original_sha256": "2537a6adc45fbd2e2574ae665dd1adcdc1f1f98117d15b7844af7f66c1ed7e44",
+      "edition_file": "media/ai-artworks/art-30-refined-print-v1.png",
+      "edition_sha256": "07da547194e0820a882793985156572767664fedf485f6d0891da3ed70242ab3"
+    },
+    {
+      "id": "art-07",
+      "title": "Grandmother",
+      "status": "Verified original-based",
+      "observation": "The current v3 drawing region is pixel-identical to the decoded original, preserving the actual expression and hatching.",
+      "recommendation": "Keep current edition.",
+      "original_file": "media/artworks/art-07.jpg",
+      "original_sha256": "c35c991b62f3ae6caabeec1438c6f6b5f640683af4f5e88a7608115a83342fc2",
+      "edition_file": "media/ai-artworks/art-07-original-prepared-v3.png",
+      "edition_sha256": "0235ac4e5ea7743f5fffda78586a86d4c6dbb6233cd0516cb361c76f24369aef"
+    },
+    {
+      "id": "art-29",
+      "title": "Shelter",
+      "status": "Artist review",
+      "observation": "The paired birds, sheltering leaves and diagonal setting remain. Leaf divisions, bird edges and background strokes appear crisper.",
+      "recommendation": "Check that increased clarity has not become invented leaf detail; avoid another generative pass.",
+      "original_file": "media/artworks/art-29.jpg",
+      "original_sha256": "1f19fc5da06e032f96178f235555f9afe708cd05af5884d2848ce37fe18747f6",
+      "edition_file": "media/ai-artworks/art-29-refined-print-v1.png",
+      "edition_sha256": "6cf7d27a8948215ed16e2da55ff3f830cf82295ab9485c9363bdc80e6fa930b4"
+    },
+    {
+      "id": "art-23",
+      "title": "Belonging",
+      "status": "Rework recommended",
+      "observation": "The broad interrelated forms remain, but ochre boundaries and fine paint striations have become stronger and more explicit, especially through the centre and lower portion.",
+      "recommendation": "Keep the original soft wash and stroke hierarchy; do not convert faint paint to assertive detail.",
+      "original_file": "media/artworks/art-23.jpg",
+      "original_sha256": "9a9df62739f154aa36a1294fa8a95794dcef5c983719a24c553b96c248bf05e4",
+      "edition_file": "media/ai-artworks/art-23-refined-print-v1.png",
+      "edition_sha256": "1c092055c392ec917689b606f60f745ed2931d63a5e72275e8e34d7c03d17f77"
+    },
+    {
+      "id": "art-01",
+      "title": "The Offering",
+      "status": "Rework recommended",
+      "observation": "The dance pose remains, but eyes, nose, mouth, finger contours and some ornament lines have been re-drawn more crisply. BAPU lettering is not a pixel-preserved signature.",
+      "recommendation": "Use the original figure and signature; clean only surrounding paper.",
+      "original_file": "media/artworks/art-01.jpg",
+      "original_sha256": "fb3382a7acc618aa55a1828ca74ae975560a3d03dbc383d759a7680d81584dcc",
+      "edition_file": "media/ai-artworks/art-01-refined-print-v1.png",
+      "edition_sha256": "f261de6a1486f76264e39abbdf53e58c6b3f4dd23efb5775cb7cd3a1e1108e94"
+    },
+    {
+      "id": "art-15",
+      "title": "Together",
+      "status": "Artist review",
+      "observation": "The two figures and flowing relationship are close. Some contour thickness, curve endings and fine breaks differ.",
+      "recommendation": "One of the closer compositions; compare thin line joins before accepting as cleanup.",
+      "original_file": "media/artworks/art-15.jpg",
+      "original_sha256": "228322c13229c6a1fe6c7a5d54d88121c40aa3ce78e818399c7df5c6e0538882",
+      "edition_file": "media/ai-artworks/art-15-refined-print-v1.png",
+      "edition_sha256": "6cbee51dc961a2cba8b01ec6dbd07ea6ca875b0d359511fbc1de925863a4be0d"
+    },
+    {
+      "id": "art-47",
+      "title": "Ember",
+      "status": "Rework recommended",
+      "observation": "The silhouette and pose remain, but internal red/blue paint detail is more pronounced and the field is more uniform. Changes within the figure go beyond removing external blemishes.",
+      "recommendation": "Preserve internal paint patches and their softness; do not intensify them to look more detailed.",
+      "original_file": "media/artworks/art-47.jpg",
+      "original_sha256": "c18098eeb8a64c00118be6f037cc910b2f3900f92640bb230c9b147784767adf",
+      "edition_file": "media/ai-artworks/art-47-refined-print-v1.png",
+      "edition_sha256": "aaa67e321501fbc444deb730cb222c70b91f557e9cb7aa89585fbbb520000e99"
+    },
+    {
+      "id": "art-28",
+      "title": "The Balance",
+      "status": "Original only",
+      "observation": "No active generated counterpart exists. Original source checksum matches the catalogue.",
+      "recommendation": "Preserve charcoal smudging and faint figure boundaries; these are not automatically dirt.",
+      "original_file": "media/artworks/art-28.jpg",
+      "original_sha256": "e7a3081c850b51244f1a2b46eb03d1b31e95985ab272fd1eb771a803ced7e0c5",
+      "edition_file": null,
+      "edition_sha256": null
+    },
+    {
+      "id": "art-50",
+      "title": "Unwritten",
+      "status": "Rework recommended",
+      "observation": "The silhouette remains, but the printed substrate lettering and small blue motif have been reconstructed, with differences in local strokes and spacing.",
+      "recommendation": "Treat the printed paper and blue motif as part of the source artwork, not background noise. Preserve them directly.",
+      "original_file": "media/artworks/art-50.jpg",
+      "original_sha256": "a13a54b2aa985fb4dc5bd43ea9bda0b11f0a92a70291005e5a125f0cb348c8ec",
+      "edition_file": "media/ai-artworks/art-50-refined-print-v1.png",
+      "edition_sha256": "ff02e6f4d7a2e8ff5d0e9e498b387a619424d68c98b99da2efed5732e7beffb0"
+    },
+    {
+      "id": "art-14",
+      "title": "Sanctuary",
+      "status": "Artist review",
+      "observation": "The seated form and patterned garment remain close. Small fold/ornament lines and edge texture differ.",
+      "recommendation": "Background cleanup is useful here, but preserve all fine garment marks and ink gaps.",
+      "original_file": "media/artworks/art-14.jpg",
+      "original_sha256": "3a7d91a93a1aecb298cd7c2b89547b8a6f34173e3c34555e44cc10e58032d4b2",
+      "edition_file": "media/ai-artworks/art-14-refined-print-v1.png",
+      "edition_sha256": "00b38703d3670d6ae9b895c9592c7c700d79bdb4b5934c08e578e7542d844b1b"
+    },
+    {
+      "id": "art-25",
+      "title": "The Journey",
+      "status": "Rework recommended",
+      "observation": "The walking figure remains, but facial marks, folds and dark foot/ground strokes are more resolved and locally different.",
+      "recommendation": "Preserve the original facial paint and loose ground strokes; do not fill or sharpen them.",
+      "original_file": "media/artworks/art-25.jpg",
+      "original_sha256": "39fe2a63f681920d564e90d369dce9967c975a54f836af70b5610f7658966493",
+      "edition_file": "media/ai-artworks/art-25-refined-print-v1.png",
+      "edition_sha256": "fad63241e67f873c275a8283faf0ced93315b6ab25977933cf91222ae6fec475"
+    },
+    {
+      "id": "art-27",
+      "title": "Resolve",
+      "status": "Artist review",
+      "observation": "The dynamic cropped form remains. Dense hatch marks and visible paper fibres are more emphatic in places.",
+      "recommendation": "Keep stroke breaks and fibres that belong to the support; do not mistake all texture for noise.",
+      "original_file": "media/artworks/art-27.jpg",
+      "original_sha256": "6fd952a1e23ef5ad35fcd488295440fb22bd5150c6e1f1f08a84a41be16dd490",
+      "edition_file": "media/ai-artworks/art-27-refined-print-v1.png",
+      "edition_sha256": "45bdf89edb978aa6ed0c3ebffcaec1bcaa7ee7e2334066e4d60e00a6e753ba87"
+    },
+    {
+      "id": "art-21",
+      "title": "Remembered",
+      "status": "Original only",
+      "observation": "No active generated counterpart exists. Original source checksum matches the catalogue.",
+      "recommendation": "The faint face/body relationship is essential; do not invent lines to clarify it.",
+      "original_file": "media/artworks/art-21.jpg",
+      "original_sha256": "d13ba19995f608bd5b814eeeceeedaaef38e3a31e86db516291b28b95d634475",
+      "edition_file": null,
+      "edition_sha256": null
+    },
+    {
+      "id": "art-18",
+      "title": "Within Reach",
+      "status": "Artist review",
+      "observation": "The corrected narrow presentation is closer to the original. The merging figures remain, but local blue grain and pale contour passages differ.",
+      "recommendation": "No urgent subject correction apparent. Leave as requested, while recognising that it is not verified background-only cleanup.",
+      "original_file": "media/artworks/art-18.jpg",
+      "original_sha256": "7a99e4d2f4bf2dc171baf463211414874e822252dab2224f795a7acecb99104e",
+      "edition_file": "media/ai-artworks/art-18-refined-print-v2.png",
+      "edition_sha256": "fa23fff4cdf3fbf503edb2e0f69b9a73413b0536b755c19b14bd4ab1f9924152"
+    },
+    {
+      "id": "art-10",
+      "title": "Unwatched",
+      "status": "Artist review",
+      "observation": "The turned-back gesture and flowing hair remain. Hair hatching, fine contour breaks and lower loop/foot lines differ locally.",
+      "recommendation": "Keep the original incomplete lines; do not finish the drawing during cleanup.",
+      "original_file": "media/artworks/art-10.jpg",
+      "original_sha256": "2db9585e1d03fa3856198a451dde4261210efa3359a807aa06cead1a89607b18",
+      "edition_file": "media/ai-artworks/art-10-refined-print-v1.png",
+      "edition_sha256": "108c703cb9d011bea6edc7359d1bd2ea50b844871da3e94a239cc06f7d8201bc"
+    }
+  ]
+}

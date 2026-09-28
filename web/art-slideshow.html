@@ -1,0 +1,19 @@
+<div class="art-slideshow-entry"><button type="button" class="slideshow-play-link" id="art-slideshow-start" hidden><span aria-hidden="true">▶</span> Play slideshow</button></div>
+<dialog class="art-slideshow" id="art-slideshow" aria-labelledby="slideshow-title">
+ <h2 id="slideshow-title" class="visually-hidden">Art slideshow with music from every available language</h2>
+ <div class="slideshow-viewport"><div class="slideshow-viewer">
+ <div class="slideshow-stage art-index" id="slideshow-stage" aria-label="Current artwork"></div>
+ <button type="button" class="slideshow-art-arrow slideshow-art-prev" id="slideshow-art-prev" aria-label="Previous artwork" title="Previous artwork"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+ <button type="button" class="slideshow-art-arrow slideshow-art-next" id="slideshow-art-next" aria-label="Next artwork" title="Next artwork"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+ <div class="slideshow-controls" role="group" aria-label="Slideshow controls">
+  <button type="button" id="slideshow-prev" aria-label="Previous song" title="Previous song"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h2v14H5zM19 5 8 12l11 7z" fill="currentColor"/></svg></button>
+  <button type="button" id="slideshow-toggle" aria-label="Pause slideshow" title="Pause slideshow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z" fill="currentColor"/></svg></button>
+  <button type="button" id="slideshow-next" aria-label="Next song" title="Next song"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 5h2v14h-2zM5 5l11 7L5 19z" fill="currentColor"/></svg></button>
+  <button type="button" id="slideshow-mute" aria-label="Mute music" title="Mute music"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9h4l5-4v14l-5-4H3z" fill="currentColor"/><path class="volume-waves" d="M16 8a6 6 0 0 1 0 8M19 5a10 10 0 0 1 0 14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+  <input type="range" id="slideshow-volume" aria-label="Music volume" min="0" max="100" value="100" step="1">
+  <button type="button" id="slideshow-close" aria-label="Close slideshow" title="Close slideshow" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+ </div>
+ </div></div>
+ <audio id="slideshow-audio" preload="none" hidden></audio>
+ <p class="slideshow-status" id="slideshow-status" role="status" aria-live="polite"></p>
+</dialog>

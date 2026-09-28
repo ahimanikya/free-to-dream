@@ -158,6 +158,7 @@ function playerFixture(load=async()=>testTracks, loadLyrics=async()=>[]) {
     async play(){if(this.blocked)throw Error('Playback blocked');this.paused=false;await this.emit('play');}
     pause(){this.paused=true;this.emit('pause');}
     load(){}
+    focus(){this.focused=true;}
   }
   const ids=['index-player','index-audio','index-playlist','index-track-link','index-play-status','index-previous','index-next','index-stop','index-volume','index-state','index-position','index-close','index-toggle','index-play-icon','index-pause-icon','index-seek','index-elapsed','index-duration','index-mute','index-lyrics-link','index-lyric'];
   const nodes=Object.fromEntries(ids.map(id=>[id,new Element()]));
@@ -181,6 +182,7 @@ test('The playlist automatically advances after starting; navigation and track s
   await n['index-audio'].emit('ended');assert.match(n['index-play-status'].textContent,/end of/);
   await n['index-previous'].emit('click');assert.equal(n['index-audio'].src,'country.mp3');
   await n['index-close'].emit('click');assert.equal(n['index-player'].hidden,true);
+  assert.equal(button.focused,true,'Closing the player returns keyboard focus to its launch button');
 });
 test('Blocked autoplay offers a manual continuation and close cancels a pending catalog request',async()=>{
   const {nodes:n,button,controller}=playerFixture();await controller.ready;
@@ -319,4 +321,43 @@ test('A contributor-reported social post is explicitly separate from automatic s
   const proposal=buildProposal({...fields,type:'share',shared_post:'https://example.org/my-public-post'});
   assert.match(proposal.title,/Shared post/);assert.match(proposal.body,/has not verified/);
   assert.throws(()=>buildProposal({...fields,type:'share',shared_post:'javascript:alert(1)'}));
+});
+
+const {setupMediaTabs} = await import('../web/media-tabs.mjs');
+test('Version tabs sync audio/video, pause hidden players and reveal direct links', () => {
+  const registry = new Map(), events = {}, windowEvents = {};
+  function node(id='') {
+    const n={id, hidden:false, dataset:{}, attrs:{}, handlers:{}, textContent:'', tabIndex:0,
+      setAttribute(k,v){this.attrs[k]=v;}, getAttribute(k){return this.attrs[k];},
+      addEventListener(k,fn){this.handlers[k]=fn;}, focus(){this.focused=true;}, append(){}};
+    if(id) registry.set(id,n);
+    return n;
+  }
+  function group(kind) {
+    const panels=['country','jazz'].map(variation=>{
+      const p=node(`${kind}-${variation}`), heading=node();heading.textContent=variation;
+      p.dataset.variation=variation;p.player={pauses:0,pause(){this.pauses++;}};
+      p.querySelector=()=>heading;p.querySelectorAll=()=>[p.player];p.contains=t=>t===p.player;
+      return p;
+    });
+    const g=node();g.attrs['aria-label']=kind;g.panels=panels;
+    g.querySelectorAll=()=>panels;g.insertBefore=nav=>{g.nav=nav;};return g;
+  }
+  const groups=[group('listen'),group('watch')], buttons=[];
+  const doc={querySelectorAll:()=>groups, createElement(tag){const n=node();if(tag==='button')buttons.push(n);return n;},
+    getElementById:id=>registry.get(id), addEventListener:(k,fn)=>{events[k]=fn;},
+    defaultView:{location:{hash:'#watch-jazz'},addEventListener:(k,fn)=>{windowEvents[k]=fn;}}};
+  setupMediaTabs(doc);
+  assert.deepEqual(groups.map(g=>g.panels.map(p=>p.hidden)),[[true,false],[true,false]]);
+  buttons[0].handlers.click();
+  assert.deepEqual(groups.map(g=>g.panels.map(p=>p.hidden)),[[false,true],[false,true]]);
+  assert.ok(groups[0].panels[1].player.pauses>0);
+  let prevented=false;
+  buttons[0].handlers.keydown({key:'ArrowRight',preventDefault(){prevented=true;}});
+  assert.equal(prevented,true);assert.equal(buttons[1].focused,true);
+  assert.equal(buttons[1].attrs['aria-selected'],'true');assert.equal(buttons[0].tabIndex,-1);
+  events.play({target:groups[1].panels[0].player});
+  assert.deepEqual(groups.map(g=>g.panels.map(p=>p.hidden)),[[false,true],[false,true]]);
+  doc.defaultView.location.hash='#watch-jazz';windowEvents.hashchange();
+  assert.equal(groups[0].panels[1].hidden,false);
 });

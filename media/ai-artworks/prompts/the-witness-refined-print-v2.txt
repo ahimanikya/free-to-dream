@@ -1,0 +1,14 @@
+Use case: precise-object-edit.
+Create a conservative refined print edition of THE WITNESS.
+Image 1 is the original artwork to preserve. Image 2 (Held) is ONLY a print-layout reference: its pale warm ivory paper, understated grain, typography, spacing and quiet presentation. Do not borrow its figure or blue color.
+
+Keep the portrait in image 1 as faithful as possible: exact right-facing upward gaze, eye shape, prominent nose, closed lips, swept hair, long neck, irregular bust silhouette, black and slate-grey painted planes and visible handmade brushwork. Preserve the original facial character and proportions; do not redraw into a polished portrait, invent detail, alter expression, change pose, increase saturation, or smooth the painterly marks. Keep the complete bust including its small base and the original handwritten artist/date inscription at lower right, legible and uncropped. Only very gentle cleanup of incidental photographic unevenness. The entire original composition should remain intact and unstretched.
+
+Match the collection as a portrait 2:3 flat print on light warm ivory paper with subtle grain, much lighter and less yellow than antique parchment. Place the tall original portrait centrally above a restrained caption area with comfortable margins, preserving its tall proportions. No physical frame, mat, wall, mockup or shadows. Do not put new typography over the painting or signature.
+
+Exact typography below the artwork:
+Title, spaced uppercase serif: "THE WITNESS"
+Short thin divider.
+Italic serif caption on two balanced lines, exact wording: "A face turned toward light, holding the silence of time."
+Smaller spaced uppercase artist credit: "AHIMANIKYA SATAPATHY"
+Do not add a separate typeset date; retain 1993 only within the original handwritten inscription. No AI labels in the image. Fidelity to the original takes precedence over aesthetic polish.

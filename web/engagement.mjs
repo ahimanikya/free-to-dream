@@ -88,10 +88,15 @@ export function setupEngagement(doc = document, win = window) {
   const settings=doc.querySelector('#analytics-settings'), banner=doc.querySelector('#analytics-consent');
   const message=doc.querySelector('#analytics-consent-message');
   const eligible=/^G-[A-Z0-9]{6,20}$/.test(id);
-  const updateNotice=()=>{if(message)message.textContent=blocked?'Your browser asks not to be tracked. Analytics is off.':eligible?'Allow optional analytics to help us understand which songs people enjoy? Google Analytics receives page views and listening/share actions. It uses analytics cookies. No advertising features or feedback text are sent.':'Analytics is not connected. No visitor analytics is being collected.';};
+  const updateNotice=()=>{if(message)message.textContent=blocked?'Your browser asks not to be tracked. Analytics is off.':eligible?'Allow optional cookies? These cookies help us understand how people use the site and which songs they enjoy.':'Analytics is not connected. No visitor analytics is being collected.';};
   updateNotice();
   if(banner)banner.hidden=!(eligible&&consent==='unknown'&&!blocked);
-  settings?.addEventListener('click',()=>{updateNotice();banner.hidden=!banner.hidden;});
+  settings?.setAttribute('aria-expanded',String(Boolean(banner&&!banner.hidden)));
+  settings?.addEventListener('click',()=>{
+    updateNotice();banner.hidden=!banner.hidden;
+    settings.setAttribute('aria-expanded',String(!banner.hidden));
+    if(!banner.hidden)banner.querySelector('[data-analytics-consent]')?.focus();
+  });
   for(const button of doc.querySelectorAll('[data-analytics-consent]')) {
     if(button.dataset.analyticsConsent==='yes')button.disabled=!eligible||blocked;
     button.addEventListener('click',()=>{
@@ -105,6 +110,8 @@ export function setupEngagement(doc = document, win = window) {
         for(const name of ['_ga','_ga_'+id.slice(2)])for(const domain of ['',`; Domain=${win.location.hostname}`,`; Domain=.${win.location.hostname}`])doc.cookie=name+'=; Max-Age=0; Path='+path+domain+'; SameSite=Lax';
       }
       banner.hidden=true;
+      settings?.setAttribute('aria-expanded','false');
+      if(banner.contains(doc.activeElement))settings?.focus({preventScroll:true});
     });
   }
   for(const media of doc.querySelectorAll('audio,video')) {

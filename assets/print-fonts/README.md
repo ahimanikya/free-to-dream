@@ -1,0 +1,1 @@
+Liberation Serif, regular and italic, bundled unchanged from LibreOffice. These fonts are used only when preparing captioned original print downloads. The included LibreOffice notices contain the Liberation copyright and license and SIL Open Font License text. They are not licensed as the artist’s artwork.

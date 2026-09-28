@@ -1,0 +1,36 @@
+{
+  "previous_edition": {
+    "id": "art-07-refined",
+    "source_artwork_id": "art-07",
+    "title": "Grandmother — refined print",
+    "file": "media/ai-artworks/art-07-refined-print-v2.png",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "f5577308e210e3ab39673acc04742d92f6b4c1aac85d9e643bc5451266c650a8",
+    "description": "A print edition of the original artwork, with gentle surface cleanup and its poetic caption.",
+    "origin": "AI-assisted cleanup and print preparation. Fine details may differ from the original.",
+    "review_status": "prepared_for_artist_review",
+    "method": "Built-in image-generation tool; original artwork as authority and previous edition as print-layout reference.",
+    "prompt_file": "media/ai-artworks/prompts/art-07-refined-print-v2.txt",
+    "refinement_note": "Second pass toward the original softer facial marks; changes remain subtle and require artist review.",
+    "print_download": {
+      "file": "media/prints/art-07-refined-print-v2-4x.jpg",
+      "width": 4096,
+      "height": 6144,
+      "scale": 4,
+      "method": "Lanczos enlargement; no generated detail or sharpening",
+      "source_sha256": "f5577308e210e3ab39673acc04742d92f6b4c1aac85d9e643bc5451266c650a8",
+      "sha256": "748c8b7bceecc7cd1f6dc2c942b71d9e6c7f9aa1b7da7d8a5b38cc6773596415",
+      "bytes": 4705998,
+      "dpi_metadata": 300,
+      "pillow_version": "12.3.0",
+      "embedded_text": true,
+      "format": "JPEG",
+      "jpeg_quality": 95,
+      "jpeg_subsampling": 0,
+      "colour_profile": "sRGB_assumed_for_untagged_source"
+    }
+  },
+  "reason": "Artist approved direct preparation from original to preserve facial expression.",
+  "date": "2026-09-27"
+}

@@ -1,0 +1,36 @@
+{
+  "date": "2026-09-27",
+  "previous_edition": {
+    "id": "art-22-refined",
+    "source_artwork_id": "art-22",
+    "title": "The Gathering — refined print",
+    "file": "media/ai-artworks/art-22-refined-print-v2.png",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "f2aad9e562024f88c33dbe0d5293328309385a8a9097e405b52caa7fe41d95d0",
+    "description": "A print edition of the original artwork, with gentle surface cleanup and its poetic caption.",
+    "origin": "AI-assisted cleanup and print preparation. Fine details may differ from the original.",
+    "review_status": "prepared_for_artist_review",
+    "method": "Built-in image-generation tool; original artwork as authority and previous edition as print-layout reference.",
+    "prompt_file": "media/ai-artworks/prompts/art-22-refined-print-v2.txt",
+    "refinement_note": "Second pass toward diffuse merging figures; darker printed caption.",
+    "print_download": {
+      "file": "media/prints/art-22-refined-print-v2-4x.jpg",
+      "width": 4096,
+      "height": 6144,
+      "scale": 4,
+      "method": "Lanczos enlargement; no generated detail or sharpening",
+      "source_sha256": "f2aad9e562024f88c33dbe0d5293328309385a8a9097e405b52caa7fe41d95d0",
+      "sha256": "cda2316fbb51fa4fb516570a9fce328b24052fdd730a43c503d141e3efc32539",
+      "bytes": 4740402,
+      "dpi_metadata": 300,
+      "pillow_version": "12.3.0",
+      "embedded_text": true,
+      "format": "JPEG",
+      "jpeg_quality": 95,
+      "jpeg_subsampling": 0,
+      "colour_profile": "sRGB_assumed_for_untagged_source"
+    }
+  },
+  "reason": "Artist approved original-based preparation to preserve paint softness and irregular ink."
+}

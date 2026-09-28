@@ -59,7 +59,7 @@ export function setupIndexPlayer(doc = document, load = () => fetch('assets/list
   const lyricsToggle = doc.querySelector('#index-lyrics-toggle'), fullLyrics = doc.querySelector('#index-full-lyrics');
   const lyricsText = doc.querySelector('#index-lyrics-text'), lyricsNote = doc.querySelector('#index-lyrics-note');
   const share = doc.querySelector('#index-share');
-  let order = [], shuffleOn = false, repeatMode = 'off';
+  let order = [], shuffleOn = false, repeatMode = 'off', launchButton = null;
   const nextTrack = (direction = 1, automatic = false) => current && nextInQueue(order, current.id, direction, repeatMode, automatic);
   const buttons = [...doc.querySelectorAll('[data-play-recording]')];
   const labels = new Map(buttons.map(b => [b, b.getAttribute('aria-label').replace(/^Play /, '')]));
@@ -184,7 +184,7 @@ export function setupIndexPlayer(doc = document, load = () => fetch('assets/list
     player.dataset.playbackToken = String(token); player.dataset.recordingId = item.id; player.dataset.language = item.language;
     player.src = item.url; status.textContent = '';
     if (lyricsText) lyricsText.textContent = (item.draft || '').replace(/^\s*\[[^\]\n]+\]\s*$/gm,'').trim();
-    if (lyricsNote) lyricsNote.textContent = item.draft ? 'Arranged lyric draft · wording may differ from this take. Only checked timestamps drive the live lyric line.' : 'A checked transcript is not available yet. Read the poem page for context.';
+    if (lyricsNote) lyricsNote.textContent = item.draft ? 'Draft lyrics · wording may differ slightly from this recording.' : 'Lyrics aren’t available yet. You can still read the poem.';
     renderQueue(); mediaSession?.setTrack(item);
     seek.style.setProperty('--progress', '0%');
     seek.value = '0'; seek.max = '0'; seek.disabled = true;
@@ -195,6 +195,7 @@ export function setupIndexPlayer(doc = document, load = () => fetch('assets/list
     if (token === request) sync();
   }
   for (const button of buttons) button.addEventListener('click', async () => {
+    launchButton = button;
     const turn = ++intent;
     try {
       await ready;
@@ -225,7 +226,7 @@ export function setupIndexPlayer(doc = document, load = () => fetch('assets/list
     else {
       continuePlayback = true; stopped = false;
       try { await player.play(); if (token === request) status.textContent = ''; }
-      catch { if (token === request && continuePlayback) status.textContent = 'Could not play this track. Try Next or open Track details.'; }
+      catch { if (token === request && continuePlayback) status.textContent = 'Could not play this track. Try Next or open Details.'; }
     }
     sync();
   });
@@ -287,6 +288,7 @@ export function setupIndexPlayer(doc = document, load = () => fetch('assets/list
     player.pause(); player.removeAttribute('src'); player.load();
     mediaSession?.clear();
     panel.hidden = true; for (const picker of pickers) picker.value = ''; sync(); doc.body.classList.remove('has-index-player');
+    launchButton?.focus?.();
   });
   for (const event of ['play', 'pause', 'ended']) player.addEventListener(event, sync);
   player.addEventListener('error', () => {

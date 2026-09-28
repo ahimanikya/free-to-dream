@@ -1,0 +1,6 @@
+Use case: precise-object-edit. Conservative art print refinement, not a new interpretation. Image 1 is the artist's original and sole authority for the artwork itself. Image 2 is the previous print edition, reference only for ivory paper and caption layout. Correct the artwork rectangle to its original narrow ratio of 1236:3197 (width:height), approximately 0.3866. The previous edition widened it. At an artwork height of 1240 pixels its width must be about 480 pixels, centered with broad ivory side margins. Reproduce original art intact with proportional scaling only, keeping all soft blue merging figures, texture, edges and exact composition. Do not redraw, sharpen, crop or clarify anything.
+Create a portrait 2:3 print with the full original composition above a small elegant caption area. Retain original artwork aspect ratio, no cropping or stretching. Very light cleanup only, retaining handmade imperfections. No frame or wall. Match the prior edition's understated serif typography. Exact text below art:
+WITHIN REACH
+An old closeness returns.
+AHIMANIKYA SATAPATHY
+Title letter-spaced uppercase, caption italic, small author credit. Keep all text legible and outside the art. Preserve the emotional ambiguity of the original; no new objects or interpretations.

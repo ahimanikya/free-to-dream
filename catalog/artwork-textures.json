@@ -1,0 +1,1398 @@
+{
+  "purpose": "Separate adjacent image samples cover only the empty left, right, top and bottom gutters. Intact originals remain separate and unmodified.",
+  "scope": "Two consistent inner opening sizes, one per frame variant. Each artwork retains its aspect ratio. Extend sampled background only across real empty gaps, independently on all four sides. Outer frames, cloth mats and double borders remain unchanged.",
+  "method": "Visually select each background per work. Use aligned edge lines for small quiet gaps; use broader adjacent background areas where line stretching creates bands. Remove crossing figures, signatures or photographed boundaries only from derived samples, using recorded background patches from the same artwork. No source artwork is altered.",
+  "textures": [
+    {
+      "id": "art-20",
+      "source": "media/images/art-archive/art-20.jpg",
+      "edges": {
+        "left": {
+          "sample": [
+            0,
+            0,
+            90,
+            1024
+          ],
+          "asset": "media/images/art-textures/art-20-left.svg",
+          "selection_note": "Broader warm paper preserves grain without projecting the bent knee.",
+          "patches": [
+            {
+              "target": [
+                0,
+                325,
+                90,
+                430
+              ],
+              "source": [
+                0,
+                325,
+                25,
+                430
+              ],
+              "reason": "Use adjacent paper at the same vertical position to preserve its warmth without copying the knee."
+            }
+          ]
+        },
+        "right": {
+          "sample": [
+            810,
+            0,
+            99,
+            1024
+          ],
+          "asset": "media/images/art-textures/art-20-right.svg",
+          "selection_note": "Use the pale mottled paper beside the figure.",
+          "patches": [
+            {
+              "target": [
+                0,
+                520,
+                99,
+                75
+              ],
+              "source": [
+                810,
+                630,
+                99,
+                75
+              ],
+              "reason": "Remove the isolated ink fleck from the background extension."
+            }
+          ]
+        },
+        "top": {
+          "sample": [
+            0,
+            0,
+            909,
+            1
+          ],
+          "asset": "media/images/art-textures/art-20-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            0,
+            1023,
+            909,
+            1
+          ],
+          "asset": "media/images/art-textures/art-20-bottom.svg"
+        }
+      },
+      "visual_review": "Use broad, mottled paper samples instead of stripes; exclude the knee and isolated ink fleck from the fills."
+    },
+    {
+      "id": "yellow-and-green",
+      "source": "media/images/ahimanikya-yellow-green-1993.png",
+      "edges": {
+        "left": {
+          "sample": [
+            0,
+            0,
+            64,
+            499
+          ],
+          "asset": "media/images/art-textures/yellow-and-green-left.svg",
+          "selection_note": "Retain the green pigment texture; keep the pale supporting form within the artwork.",
+          "patches": [
+            {
+              "target": [
+                0,
+                342,
+                64,
+                116
+              ],
+              "source": [
+                0,
+                210,
+                64,
+                116
+              ],
+              "reason": "Replace the pale form with nearby green pigment in the fill only."
+            }
+          ]
+        },
+        "right": {
+          "sample": [
+            402,
+            0,
+            48,
+            499
+          ],
+          "asset": "media/images/art-textures/yellow-and-green-right.svg",
+          "selection_note": "A broader pigment sample avoids the striped appearance of an enlarged single line.",
+          "patches": [
+            {
+              "target": [
+                0,
+                20,
+                48,
+                155
+              ],
+              "source": [
+                5,
+                35,
+                48,
+                155
+              ],
+              "reason": "Keep the yellow head out of the background."
+            },
+            {
+              "target": [
+                0,
+                333,
+                48,
+                166
+              ],
+              "source": [
+                5,
+                165,
+                48,
+                166
+              ],
+              "reason": "Replace the pale form and signature with green pigment."
+            }
+          ]
+        },
+        "top": {
+          "sample": [
+            0,
+            0,
+            450,
+            1
+          ],
+          "asset": "media/images/art-textures/yellow-and-green-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            0,
+            498,
+            450,
+            1
+          ],
+          "asset": "media/images/art-textures/yellow-and-green-bottom.svg"
+        }
+      },
+      "visual_review": "Preserve granular green pigment; remove the yellow head, pale supporting form and signature from the extensions."
+    },
+    {
+      "id": "art-05",
+      "source": "media/images/art-archive/art-05.jpg",
+      "edges": {
+        "left": {
+          "sample": [
+            0,
+            0,
+            1,
+            1024
+          ],
+          "asset": "media/images/art-textures/art-05-left.svg"
+        },
+        "right": {
+          "sample": [
+            976,
+            0,
+            1,
+            1024
+          ],
+          "asset": "media/images/art-textures/art-05-right.svg"
+        },
+        "top": {
+          "sample": [
+            0,
+            0,
+            977,
+            1
+          ],
+          "asset": "media/images/art-textures/art-05-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            0,
+            1023,
+            977,
+            1
+          ],
+          "asset": "media/images/art-textures/art-05-bottom.svg"
+        }
+      },
+      "visual_review": "Retain the existing quiet cream-paper fill. More intervention would distract from the curling black form."
+    },
+    {
+      "id": "art-30",
+      "source": "media/images/art-archive/art-30.jpg",
+      "edges": {
+        "left": {
+          "sample": [
+            0,
+            0,
+            1,
+            588
+          ],
+          "asset": "media/images/art-textures/art-30-left.svg"
+        },
+        "right": {
+          "sample": [
+            1334,
+            0,
+            1,
+            588
+          ],
+          "asset": "media/images/art-textures/art-30-right.svg"
+        },
+        "top": {
+          "sample": [
+            5,
+            4,
+            1320,
+            18
+          ],
+          "asset": "media/images/art-textures/art-30-top.svg",
+          "selection_note": "Keep the full adjacent charcoal band. A deeper cut contains bird contours and produces mismatched patches, so retain this shallower grain and soften the fill."
+        },
+        "bottom": {
+          "sample": [
+            5,
+            571,
+            1320,
+            16
+          ],
+          "asset": "media/images/art-textures/art-30-bottom.svg",
+          "selection_note": "Keep the full adjacent charcoal band. A deeper cut contains bird contours and produces mismatched patches, so retain this shallower grain and soften the fill."
+        }
+      },
+      "visual_review": "Tested deeper samples visually; they introduced contour fragments and mismatched dark blocks. Retained the clean shallow charcoal bands with more softness, preserving the original birds and the fixed inner opening."
+    },
+    {
+      "id": "art-07",
+      "source": "media/images/art-archive/art-07.jpg",
+      "edges": {
+        "left": {
+          "sample": [
+            0,
+            0,
+            1,
+            1024
+          ],
+          "asset": "media/images/art-textures/art-07-left.svg",
+          "patches": [
+            {
+              "target": [
+                0,
+                410,
+                1,
+                90
+              ],
+              "source": [
+                832,
+                410,
+                1,
+                90
+              ],
+              "reason": "Replace a crossing garment line with nearby paper."
+            },
+            {
+              "target": [
+                0,
+                850,
+                1,
+                174
+              ],
+              "source": [
+                832,
+                700,
+                1,
+                174
+              ],
+              "reason": "Keep lower garment strokes out of the fill."
+            }
+          ]
+        },
+        "right": {
+          "sample": [
+            837,
+            0,
+            1,
+            1024
+          ],
+          "asset": "media/images/art-textures/art-07-right.svg"
+        },
+        "top": {
+          "sample": [
+            0,
+            0,
+            850,
+            1
+          ],
+          "asset": "media/images/art-textures/art-07-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            0,
+            1023,
+            850,
+            1
+          ],
+          "asset": "media/images/art-textures/art-07-bottom.svg"
+        }
+      },
+      "visual_review": "Retain the light paper treatment and avoid extending garment lines. Preserve the delicate facial drawing."
+    },
+    {
+      "id": "art-29",
+      "source": "media/images/art-archive/art-29.jpg",
+      "edges": {
+        "left": {
+          "sample": [
+            0,
+            0,
+            1,
+            712
+          ],
+          "asset": "media/images/art-textures/art-29-left.svg"
+        },
+        "right": {
+          "sample": [
+            1101,
+            0,
+            1,
+            712
+          ],
+          "asset": "media/images/art-textures/art-29-right.svg"
+        },
+        "top": {
+          "sample": [
+            0,
+            0,
+            1102,
+            1
+          ],
+          "asset": "media/images/art-textures/art-29-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            0,
+            670,
+            1102,
+            1
+          ],
+          "asset": "media/images/art-textures/art-29-bottom.svg",
+          "selection_note": "Avoid the signature at the extreme bottom edge."
+        }
+      },
+      "visual_review": "Retain the directional colour field and the existing sample above the signature; keep feathering slight."
+    },
+    {
+      "id": "art-64",
+      "source": "media/images/art-archive/art-64.jpg",
+      "edges": {
+        "left": {
+          "sample": [
+            0,
+            0,
+            1,
+            3456
+          ],
+          "asset": "media/images/art-textures/art-64-left.svg",
+          "patches": [
+            {
+              "target": [
+                0,
+                790,
+                1,
+                270
+              ],
+              "source": [
+                40,
+                1120,
+                1,
+                270
+              ],
+              "reason": "Avoid hair crossing the left edge."
+            }
+          ]
+        },
+        "right": {
+          "sample": [
+            1727,
+            0,
+            1,
+            3456
+          ],
+          "asset": "media/images/art-textures/art-64-right.svg",
+          "patches": [
+            {
+              "target": [
+                0,
+                1030,
+                1,
+                160
+              ],
+              "source": [
+                1710,
+                1270,
+                1,
+                160
+              ],
+              "reason": "Avoid extending the nose into the background."
+            },
+            {
+              "target": [
+                0,
+                3150,
+                1,
+                260
+              ],
+              "source": [
+                1705,
+                2690,
+                1,
+                260
+              ],
+              "reason": "Avoid repeating the signature and date."
+            }
+          ]
+        },
+        "top": {
+          "sample": [
+            0,
+            0,
+            1728,
+            1
+          ],
+          "asset": "media/images/art-textures/art-64-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            0,
+            3455,
+            1728,
+            1
+          ],
+          "asset": "media/images/art-textures/art-64-bottom.svg"
+        }
+      },
+      "visual_review": "Preserve the restrained paper treatment. Existing hair, nose and signature replacements keep attention on the upward gaze."
+    },
+    {
+      "id": "art-03",
+      "source": "media/images/art-archive/art-03.jpg",
+      "edges": {
+        "left": {
+          "sample": [
+            0,
+            0,
+            1,
+            1160
+          ],
+          "asset": "media/images/art-textures/art-03-left.svg"
+        },
+        "right": {
+          "sample": [
+            676,
+            0,
+            1,
+            1160
+          ],
+          "asset": "media/images/art-textures/art-03-right.svg",
+          "patches": [
+            {
+              "target": [
+                0,
+                0,
+                1,
+                80
+              ],
+              "source": [
+                666,
+                80,
+                1,
+                80
+              ],
+              "reason": "Remove photographed corner beyond the paper."
+            },
+            {
+              "target": [
+                0,
+                170,
+                1,
+                55
+              ],
+              "source": [
+                660,
+                240,
+                1,
+                55
+              ],
+              "reason": "Avoid a crossing contour."
+            },
+            {
+              "target": [
+                0,
+                880,
+                1,
+                280
+              ],
+              "source": [
+                625,
+                640,
+                1,
+                240
+              ],
+              "reason": "Replace arm and page-edge marks with clean aged paper."
+            }
+          ]
+        },
+        "top": {
+          "sample": [
+            0,
+            0,
+            677,
+            1
+          ],
+          "asset": "media/images/art-textures/art-03-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            0,
+            1159,
+            677,
+            1
+          ],
+          "asset": "media/images/art-textures/art-03-bottom.svg"
+        }
+      },
+      "visual_review": "Keep tiny side fills and existing clean-paper substitutions. Preserve all original page wear and marks."
+    },
+    {
+      "id": "art-50",
+      "source": "media/images/art-archive/art-50.jpg",
+      "edges": {
+        "left": {
+          "sample": [
+            8,
+            0,
+            1,
+            1193
+          ],
+          "asset": "media/images/art-textures/art-50-left.svg",
+          "patches": [
+            {
+              "target": [
+                0,
+                0,
+                1,
+                16
+              ],
+              "source": [
+                8,
+                37,
+                1,
+                16
+              ],
+              "reason": "Avoid the torn top edge."
+            },
+            {
+              "target": [
+                0,
+                1160,
+                1,
+                33
+              ],
+              "source": [
+                8,
+                1100,
+                1,
+                33
+              ],
+              "reason": "Avoid the dark photographic bottom edge."
+            }
+          ]
+        },
+        "right": {
+          "sample": [
+            650,
+            0,
+            1,
+            1193
+          ],
+          "asset": "media/images/art-textures/art-50-right.svg",
+          "patches": [
+            {
+              "target": [
+                0,
+                980,
+                1,
+                213
+              ],
+              "source": [
+                650,
+                700,
+                1,
+                213
+              ],
+              "reason": "Replace dark lower margin with nearby printed paper."
+            }
+          ]
+        },
+        "top": {
+          "sample": [
+            0,
+            0,
+            658,
+            1
+          ],
+          "asset": "media/images/art-textures/art-50-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            0,
+            1192,
+            658,
+            1
+          ],
+          "asset": "media/images/art-textures/art-50-bottom.svg"
+        }
+      },
+      "visual_review": "Keep the printed paper identity and the narrow side fills. Avoid new texture that could resemble invented lettering."
+    },
+    {
+      "id": "art-22",
+      "source": "media/images/art-archive/art-22.jpg",
+      "edges": {
+        "left": {
+          "sample": [
+            0,
+            0,
+            1,
+            1131
+          ],
+          "asset": "media/images/art-textures/art-22-left.svg"
+        },
+        "right": {
+          "sample": [
+            694,
+            0,
+            1,
+            1131
+          ],
+          "asset": "media/images/art-textures/art-22-right.svg"
+        },
+        "top": {
+          "sample": [
+            0,
+            6,
+            695,
+            10
+          ],
+          "asset": "media/images/art-textures/art-22-top.svg",
+          "selection_note": "Do not repeat the dark photographed paper boundary into the small gap."
+        },
+        "bottom": {
+          "sample": [
+            0,
+            1110,
+            695,
+            12
+          ],
+          "asset": "media/images/art-textures/art-22-bottom.svg",
+          "selection_note": "Use the painted ground just inside the lower photographed edge."
+        }
+      },
+      "visual_review": "Remove repeated dark photographic borders; keep the ochre figures and small opening extensions quiet."
+    },
+    {
+      "id": "art-19",
+      "source": "media/images/art-archive/art-19.jpg",
+      "edges": {
+        "left": {
+          "sample": [
+            0,
+            0,
+            1,
+            1128
+          ],
+          "asset": "media/images/art-textures/art-19-left.svg"
+        },
+        "right": {
+          "sample": [
+            696,
+            0,
+            1,
+            1128
+          ],
+          "asset": "media/images/art-textures/art-19-right.svg"
+        },
+        "top": {
+          "sample": [
+            0,
+            8,
+            697,
+            12
+          ],
+          "asset": "media/images/art-textures/art-19-top.svg",
+          "selection_note": "Small blue-white pigment sample inside the photographed edge."
+        },
+        "bottom": {
+          "sample": [
+            0,
+            1100,
+            697,
+            15
+          ],
+          "asset": "media/images/art-textures/art-19-bottom.svg",
+          "selection_note": "Avoid magnifying the speckled cut-paper edge into the fill."
+        }
+      },
+      "visual_review": "Soften the speckled paper-edge fill without blurring the energetic blue marks in the original."
+    },
+    {
+      "id": "art-17",
+      "source": "media/images/art-archive/art-17.jpg",
+      "edges": {
+        "left": {
+          "sample": [
+            0,
+            0,
+            1,
+            1089
+          ],
+          "asset": "media/images/art-textures/art-17-left.svg"
+        },
+        "right": {
+          "sample": [
+            721,
+            0,
+            1,
+            1089
+          ],
+          "asset": "media/images/art-textures/art-17-right.svg"
+        },
+        "top": {
+          "sample": [
+            0,
+            0,
+            722,
+            25
+          ],
+          "asset": "media/images/art-textures/art-17-top.svg",
+          "selection_note": "Use a shallow paper band above the contour rather than a single stretched row."
+        },
+        "bottom": {
+          "sample": [
+            0,
+            1075,
+            722,
+            12
+          ],
+          "asset": "media/images/art-textures/art-17-bottom.svg",
+          "selection_note": "Use the quiet lower paper grain, beyond the figure."
+        }
+      },
+      "visual_review": "Use shallow areas of unmarked paper above and below the contour, preserving the deliberate negative space."
+    },
+    {
+      "id": "art-24",
+      "source": "media/images/art-archive/art-24.jpg",
+      "edges": {
+        "left": {
+          "sample": [
+            0,
+            0,
+            1,
+            1138
+          ],
+          "asset": "media/images/art-textures/art-24-left.svg"
+        },
+        "right": {
+          "sample": [
+            690,
+            0,
+            1,
+            1138
+          ],
+          "asset": "media/images/art-textures/art-24-right.svg"
+        },
+        "top": {
+          "sample": [
+            0,
+            0,
+            691,
+            1
+          ],
+          "asset": "media/images/art-textures/art-24-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            0,
+            1137,
+            691,
+            1
+          ],
+          "asset": "media/images/art-textures/art-24-bottom.svg"
+        }
+      },
+      "visual_review": "The narrow extensions already sit quietly with the pale green ground; leave them restrained."
+    },
+    {
+      "id": "art-23",
+      "source": "media/images/art-archive/art-23.jpg",
+      "edges": {
+        "left": {
+          "sample": [
+            0,
+            0,
+            1,
+            1117
+          ],
+          "asset": "media/images/art-textures/art-23-left.svg"
+        },
+        "right": {
+          "sample": [
+            702,
+            0,
+            1,
+            1117
+          ],
+          "asset": "media/images/art-textures/art-23-right.svg"
+        },
+        "top": {
+          "sample": [
+            0,
+            8,
+            703,
+            12
+          ],
+          "asset": "media/images/art-textures/art-23-top.svg",
+          "selection_note": "Keep the dark photographed boundary from becoming an added stripe."
+        },
+        "bottom": {
+          "sample": [
+            0,
+            1085,
+            703,
+            15
+          ],
+          "asset": "media/images/art-textures/art-23-bottom.svg",
+          "selection_note": "Use ochre pigment inside the photograph boundary."
+        }
+      },
+      "visual_review": "Remove replicated photograph-edge stripes while retaining the ochre pigment surface."
+    },
+    {
+      "id": "art-01",
+      "source": "media/images/art-archive/art-01.jpg",
+      "edges": {
+        "left": {
+          "sample": [
+            0,
+            0,
+            1,
+            1024
+          ],
+          "asset": "media/images/art-textures/art-01-left.svg"
+        },
+        "right": {
+          "sample": [
+            769,
+            0,
+            1,
+            1024
+          ],
+          "asset": "media/images/art-textures/art-01-right.svg"
+        },
+        "top": {
+          "sample": [
+            0,
+            4,
+            770,
+            36
+          ],
+          "asset": "media/images/art-textures/art-01-top.svg",
+          "selection_note": "Broader unmarked paper above the headdress."
+        },
+        "bottom": {
+          "sample": [
+            0,
+            890,
+            770,
+            134
+          ],
+          "asset": "media/images/art-textures/art-01-bottom.svg",
+          "selection_note": "Retain warm paper grain below the dancer rather than stretching flecks into lines.",
+          "patches": [
+            {
+              "target": [
+                45,
+                0,
+                530,
+                134
+              ],
+              "source": [
+                550,
+                870,
+                180,
+                134
+              ],
+              "reason": "Replace lower garment and signature in the background sample only."
+            }
+          ]
+        }
+      },
+      "visual_review": "Replace vertically streaked paper below the figure with a broader sample cleaned of garment and signature."
+    },
+    {
+      "id": "art-15",
+      "source": "media/images/art-archive/art-15.jpg",
+      "edges": {
+        "left": {
+          "sample": [
+            0,
+            0,
+            1,
+            1062
+          ],
+          "asset": "media/images/art-textures/art-15-left.svg"
+        },
+        "right": {
+          "sample": [
+            739,
+            0,
+            1,
+            1062
+          ],
+          "asset": "media/images/art-textures/art-15-right.svg"
+        },
+        "top": {
+          "sample": [
+            0,
+            0,
+            740,
+            40
+          ],
+          "asset": "media/images/art-textures/art-15-top.svg",
+          "selection_note": "Unmarked paper above both figures."
+        },
+        "bottom": {
+          "sample": [
+            0,
+            990,
+            740,
+            72
+          ],
+          "asset": "media/images/art-textures/art-15-bottom.svg",
+          "selection_note": "Keep the paper texture in the lower opening.",
+          "patches": [
+            {
+              "target": [
+                510,
+                0,
+                125,
+                72
+              ],
+              "source": [
+                340,
+                980,
+                125,
+                72
+              ],
+              "reason": "Remove the figure contour from the extension."
+            }
+          ]
+        }
+      },
+      "visual_review": "Retain warm paper grain in both gaps; exclude lower figure contours from the fill."
+    },
+    {
+      "id": "art-47",
+      "source": "media/images/art-archive/art-47.jpg",
+      "edges": {
+        "left": {
+          "sample": [
+            0,
+            0,
+            1,
+            1059
+          ],
+          "asset": "media/images/art-textures/art-47-left.svg"
+        },
+        "right": {
+          "sample": [
+            741,
+            0,
+            1,
+            1059
+          ],
+          "asset": "media/images/art-textures/art-47-right.svg"
+        },
+        "top": {
+          "sample": [
+            0,
+            8,
+            742,
+            95
+          ],
+          "asset": "media/images/art-textures/art-47-top.svg",
+          "selection_note": "Retain a broad, quiet red pigment field, avoiding pale vertical streaks."
+        },
+        "bottom": {
+          "sample": [
+            0,
+            890,
+            742,
+            160
+          ],
+          "asset": "media/images/art-textures/art-47-bottom.svg",
+          "selection_note": "Match the red ground without extending the body.",
+          "patches": [
+            {
+              "target": [
+                250,
+                0,
+                395,
+                160
+              ],
+              "source": [
+                10,
+                835,
+                220,
+                160
+              ],
+              "reason": "Replace the body in the display sample with adjacent red paint."
+            }
+          ]
+        }
+      },
+      "visual_review": "Use broader red pigment areas rather than lines; keep the body entirely inside its original image."
+    },
+    {
+      "id": "art-28",
+      "source": "media/images/art-archive/art-28.jpg",
+      "edges": {
+        "left": {
+          "sample": [
+            0,
+            0,
+            1,
+            1043
+          ],
+          "asset": "media/images/art-textures/art-28-left.svg"
+        },
+        "right": {
+          "sample": [
+            752,
+            0,
+            1,
+            1043
+          ],
+          "asset": "media/images/art-textures/art-28-right.svg"
+        },
+        "top": {
+          "sample": [
+            0,
+            24,
+            730,
+            18
+          ],
+          "asset": "media/images/art-textures/art-28-top.svg",
+          "selection_note": "Sample the charcoal background inside the photographed paper boundary."
+        },
+        "bottom": {
+          "sample": [
+            430,
+            960,
+            290,
+            18
+          ],
+          "asset": "media/images/art-textures/art-28-bottom.svg",
+          "selection_note": "Use clear lower-right background rather than extending the bodies and inscription."
+        }
+      },
+      "visual_review": "Retain the existing charcoal-ground samples; soften enough to reduce repetition without making a foggy halo."
+    },
+    {
+      "id": "art-14",
+      "source": "media/images/art-archive/art-14.jpg",
+      "edges": {
+        "left": {
+          "sample": [
+            76,
+            73,
+            212,
+            88
+          ],
+          "asset": "media/images/art-textures/art-14-left.svg",
+          "selection_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+        },
+        "right": {
+          "sample": [
+            76,
+            73,
+            212,
+            88
+          ],
+          "asset": "media/images/art-textures/art-14-right.svg",
+          "selection_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+        },
+        "top": {
+          "sample": [
+            0,
+            0,
+            756,
+            40
+          ],
+          "asset": "media/images/art-textures/art-14-top.svg",
+          "selection_note": "Use the full adjacent paper edge at this side to retain its own tone; no figure lies in this strip."
+        },
+        "bottom": {
+          "sample": [
+            0,
+            1000,
+            756,
+            40
+          ],
+          "asset": "media/images/art-textures/art-14-bottom.svg",
+          "selection_note": "Use the full adjacent paper edge at this side to retain its own tone; no figure lies in this strip."
+        }
+      },
+      "selection_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-25",
+      "source": "media/images/art-archive/art-25.jpg",
+      "edges": {
+        "left": {
+          "sample": [
+            9,
+            100,
+            63,
+            276
+          ],
+          "asset": "media/images/art-textures/art-25-left.svg",
+          "selection_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+        },
+        "right": {
+          "sample": [
+            9,
+            100,
+            63,
+            276
+          ],
+          "asset": "media/images/art-textures/art-25-right.svg",
+          "selection_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+        },
+        "top": {
+          "sample": [
+            9,
+            100,
+            63,
+            276
+          ],
+          "asset": "media/images/art-textures/art-25-top.svg",
+          "selection_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+        },
+        "bottom": {
+          "sample": [
+            9,
+            100,
+            63,
+            276
+          ],
+          "asset": "media/images/art-textures/art-25-bottom.svg",
+          "selection_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+        }
+      },
+      "selection_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-27",
+      "source": "media/images/art-archive/art-27.jpg",
+      "edges": {
+        "left": {
+          "sample": [
+            15,
+            83,
+            244,
+            155
+          ],
+          "asset": "media/images/art-textures/art-27-left.svg",
+          "selection_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+        },
+        "right": {
+          "sample": [
+            15,
+            83,
+            244,
+            155
+          ],
+          "asset": "media/images/art-textures/art-27-right.svg",
+          "selection_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+        },
+        "top": {
+          "sample": [
+            15,
+            83,
+            244,
+            155
+          ],
+          "asset": "media/images/art-textures/art-27-top.svg",
+          "selection_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+        },
+        "bottom": {
+          "sample": [
+            15,
+            83,
+            244,
+            155
+          ],
+          "asset": "media/images/art-textures/art-27-bottom.svg",
+          "selection_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+        }
+      },
+      "selection_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-21",
+      "source": "media/images/art-archive/art-21.jpg",
+      "edges": {
+        "left": {
+          "sample": [
+            28,
+            57,
+            138,
+            136
+          ],
+          "asset": "media/images/art-textures/art-21-left.svg",
+          "selection_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+        },
+        "right": {
+          "sample": [
+            28,
+            57,
+            138,
+            136
+          ],
+          "asset": "media/images/art-textures/art-21-right.svg",
+          "selection_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+        },
+        "top": {
+          "sample": [
+            28,
+            57,
+            138,
+            136
+          ],
+          "asset": "media/images/art-textures/art-21-top.svg",
+          "selection_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+        },
+        "bottom": {
+          "sample": [
+            28,
+            57,
+            138,
+            136
+          ],
+          "asset": "media/images/art-textures/art-21-bottom.svg",
+          "selection_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+        }
+      },
+      "selection_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-18",
+      "source": "media/images/art-archive/art-18.jpg",
+      "edges": {
+        "left": {
+          "sample": [
+            0,
+            0,
+            45,
+            1426
+          ],
+          "asset": "media/images/art-textures/art-18-left.svg",
+          "selection_note": "Full-height adjacent pigment edge keeps the surface aligned with the original; softened only in the empty gutter."
+        },
+        "right": {
+          "sample": [
+            506,
+            0,
+            45,
+            1426
+          ],
+          "asset": "media/images/art-textures/art-18-right.svg",
+          "selection_note": "Full-height adjacent pigment edge keeps the surface aligned with the original; softened only in the empty gutter."
+        },
+        "top": {
+          "sample": [
+            17,
+            171,
+            88,
+            328
+          ],
+          "asset": "media/images/art-textures/art-18-top.svg",
+          "selection_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+        },
+        "bottom": {
+          "sample": [
+            17,
+            171,
+            88,
+            328
+          ],
+          "asset": "media/images/art-textures/art-18-bottom.svg",
+          "selection_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+        }
+      },
+      "selection_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-10",
+      "source": "media/images/art-archive/art-10.jpg",
+      "edges": {
+        "left": {
+          "sample": [
+            23,
+            178,
+            93,
+            653
+          ],
+          "asset": "media/images/art-textures/art-10-left.svg",
+          "selection_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+        },
+        "right": {
+          "sample": [
+            23,
+            178,
+            93,
+            653
+          ],
+          "asset": "media/images/art-textures/art-10-right.svg",
+          "selection_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+        },
+        "top": {
+          "sample": [
+            23,
+            178,
+            93,
+            653
+          ],
+          "asset": "media/images/art-textures/art-10-top.svg",
+          "selection_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+        },
+        "bottom": {
+          "sample": [
+            23,
+            178,
+            93,
+            653
+          ],
+          "asset": "media/images/art-textures/art-10-bottom.svg",
+          "selection_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+        }
+      },
+      "selection_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    }
+  ],
+  "softening": "Background-only softening varies by work: preserve grain in broader samples, use slightly more softness for line-based fills. Original artwork and frame borders remain sharp."
+}

@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Retrieve artwork and print files
+        run: git lfs pull --include="media/prints/*,media/artworks/*,media/ai-artworks/*" --exclude=""
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -18,7 +20,7 @@ jobs:
       - run: python skills/poetry-to-music/scripts/prepare_queue.py --repo .
       - run: python scripts/project.py validate
       - run: python -m unittest discover -s tests -v
-      - run: node --test tests/collaboration.test.mjs
+      - run: node --test tests/*.test.mjs
       - run: python scripts/project.py build
       - name: Check Git LFS media and private-file boundaries
         run: python scripts/check_tracked_files.py

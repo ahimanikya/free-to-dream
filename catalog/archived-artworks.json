@@ -1,0 +1,2839 @@
+{
+  "purpose": "Private archived-art journal. Does not restore works to the public gallery.",
+  "asset_root": "Supply --archive-root pointing to the preserved archive. All asset paths are relative to that folder.",
+  "editorial_direction": "The emotional aftertaste of each work: short titles, memorable phrases and descriptions of the feelings that linger, without inventories of colour or composition.",
+  "artworks": [
+    {
+      "id": "art-25",
+      "label": "The Journey",
+      "previous_display_title": "Golden Walker",
+      "caption": "A little courage, carried far.",
+      "narrative": "You leave with more uncertainty than luggage. Somewhere along the way, a stranger is kind, and the world becomes a place you can keep walking through.",
+      "image": "approved-ranking-bottom-two-removal/media/images/art-archive/art-25.jpg",
+      "master": "approved-ranking-bottom-two-removal/media/artworks/art-25.jpg",
+      "width": 627,
+      "height": 1253,
+      "image_sha256": "8c72c8665ce489dda5d893d555697527e4fa9fefb19e01fa835503fa32a24381",
+      "master_sha256": "39fe2a63f681920d564e90d369dce9967c975a54f836af70b5610f7658966493",
+      "presentation": {
+        "frame": "oak",
+        "mat": "linen",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            9,
+            100,
+            63,
+            276
+          ],
+          "asset": "archive-poetic-review/textures/art-25-left.svg"
+        },
+        "right": {
+          "sample": [
+            9,
+            100,
+            63,
+            276
+          ],
+          "asset": "archive-poetic-review/textures/art-25-right.svg"
+        },
+        "top": {
+          "sample": [
+            9,
+            100,
+            63,
+            276
+          ],
+          "asset": "archive-poetic-review/textures/art-25-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            9,
+            100,
+            63,
+            276
+          ],
+          "asset": "archive-poetic-review/textures/art-25-bottom.svg"
+        }
+      },
+      "selection_note_html": "The covered face, enclosing clothing and concentrated colour give the figure a guarded presence. It adds a distinct human character; the artistic tension is less sustained across the whole picture than in the works ranked above. Archived following the artist’s request to remove two more works from the current ranking. This is a portfolio selection, not a judgment of the work’s intrinsic value.",
+      "status": "restored",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image.",
+      "restored_date": "2026-09-27",
+      "restoration_reason": "A guarded individual presence carries burden, persistence and uncertainty. The work adds a distinct narrative character to the selected portfolio."
+    },
+    {
+      "id": "art-27",
+      "label": "Resolve",
+      "previous_display_title": "Crouching Muscle",
+      "caption": "Still, you find a way.",
+      "narrative": "The difficult day asks for more than you thought you had. You give it one small effort, then another. By evening, something in you knows it can continue.",
+      "image": "approved-ranking-bottom-two-removal/media/images/art-archive/art-27.jpg",
+      "master": "approved-ranking-bottom-two-removal/media/artworks/art-27.jpg",
+      "width": 762,
+      "height": 1032,
+      "image_sha256": "3d223260f67ea15276996f95753e468fabf6c26d19f8843f17426b7207e3f390",
+      "master_sha256": "6fd952a1e23ef5ad35fcd488295440fb22bd5150c6e1f1f08a84a41be16dd490",
+      "presentation": {
+        "frame": "walnut",
+        "mat": "linen",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            15,
+            83,
+            244,
+            155
+          ],
+          "asset": "archive-poetic-review/textures/art-27-left.svg"
+        },
+        "right": {
+          "sample": [
+            15,
+            83,
+            244,
+            155
+          ],
+          "asset": "archive-poetic-review/textures/art-27-right.svg"
+        },
+        "top": {
+          "sample": [
+            15,
+            83,
+            244,
+            155
+          ],
+          "asset": "archive-poetic-review/textures/art-27-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            15,
+            83,
+            244,
+            155
+          ],
+          "asset": "archive-poetic-review/textures/art-27-bottom.svg"
+        }
+      },
+      "selection_note_html": "Directional marks and compressed limbs explore force through the body. The fragment offers a concentrated physical sensation, with a narrower emotional range in my reading. That focus is a legitimate artistic choice. Archived following the artist’s request to remove two more works from the current ranking. This is a portfolio selection, not a judgment of the work’s intrinsic value.",
+      "status": "restored",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image.",
+      "restored_date": "2026-09-27",
+      "restoration_reason": "The compressed body and directional marks make effort tangible. The fragment contributes a physical intensity distinct from the quieter selected works."
+    },
+    {
+      "id": "art-51",
+      "label": "The Threshold",
+      "previous_display_title": "Room and Hand",
+      "caption": "Perhaps the door will open.",
+      "narrative": "You hesitate before asking to be let in. On the other side could be an ordinary room, or the beginning of a life you have been waiting for.",
+      "image": "approved-room-and-hand-removal/media/images/art-archive/art-51.jpg",
+      "master": "approved-room-and-hand-removal/media/artworks/art-51.jpg",
+      "width": 713,
+      "height": 1101,
+      "image_sha256": "aafadccda16a53e789b4e0e5bc238d04eafa76a017685085ccb8b0d074ebeec2",
+      "master_sha256": "0cf145efc16965b85d6da0d316ee1cd482be1a0ac8fb76205cfe5fd3de1ec115",
+      "presentation": {
+        "frame": "walnut",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            214,
+            969,
+            257,
+            88
+          ],
+          "asset": "archive-poetic-review/textures/art-51-left.svg"
+        },
+        "right": {
+          "sample": [
+            214,
+            969,
+            257,
+            88
+          ],
+          "asset": "archive-poetic-review/textures/art-51-right.svg"
+        },
+        "top": {
+          "sample": [
+            214,
+            969,
+            257,
+            88
+          ],
+          "asset": "archive-poetic-review/textures/art-51-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            214,
+            969,
+            257,
+            88
+          ],
+          "asset": "archive-poetic-review/textures/art-51-bottom.svg"
+        }
+      },
+      "selection_note_html": "Artist chose to archive Room and Hand after discussion of the artistic ranking. The editorial assessment found that familiar symbols carried more of its meaning than the formal relationships; this is a subjective curatorial reading, not a claim about the artist’s original intent.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-13",
+      "label": "Elsewhere",
+      "previous_display_title": "Black Walker",
+      "caption": "There is still somewhere to go.",
+      "narrative": "You take a different road without knowing why. A little distance loosens an old certainty. For the first time in days, you are curious about what comes next.",
+      "image": "approved-black-walker-removal/media/images/art-archive/art-13.jpg",
+      "master": "approved-black-walker-removal/media/artworks/art-13.jpg",
+      "width": 711,
+      "height": 1106,
+      "image_sha256": "e52eccdb125840e5981c3005a264016538b22f92a7bf8cb243cfafdc7aa7ffb1",
+      "master_sha256": "25f83e8efb4a1940162a5bc1fe7d212e0ddba93011d15c7fcabd6bf233b99201",
+      "presentation": {
+        "frame": "charcoal",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            21,
+            166,
+            114,
+            387
+          ],
+          "asset": "archive-poetic-review/textures/art-13-left.svg"
+        },
+        "right": {
+          "sample": [
+            21,
+            166,
+            114,
+            387
+          ],
+          "asset": "archive-poetic-review/textures/art-13-right.svg"
+        },
+        "top": {
+          "sample": [
+            21,
+            166,
+            114,
+            387
+          ],
+          "asset": "archive-poetic-review/textures/art-13-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            21,
+            166,
+            114,
+            387
+          ],
+          "asset": "archive-poetic-review/textures/art-13-bottom.svg"
+        }
+      },
+      "selection_note_html": "The stride is clear, but it adds less variation of gesture and negative space than Black Dancer in this selected portfolio. Artist explicitly chose to remove Black Walker after the comparative ranking.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-21",
+      "label": "Remembered",
+      "previous_display_title": "Yellow Spirit",
+      "caption": "A warmth without a name.",
+      "narrative": "Someone comes to mind before you can remember the occasion. Only the happiness has survived intact. You let it stay a while, asking nothing more of memory.",
+      "image": "portfolio-edit-round-5/media/images/art-archive/art-21.jpg",
+      "master": "portfolio-edit-round-5/media/artworks/art-21.jpg",
+      "width": 692,
+      "height": 1135,
+      "image_sha256": "7075ea9b0bc08565357209fe45b1d94c0f7ad3840a3c230825c1cf3bd1d8786e",
+      "master_sha256": "d13ba19995f608bd5b814eeeceeedaaef38e3a31e86db516291b28b95d634475",
+      "presentation": {
+        "frame": "oak",
+        "mat": "linen",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            28,
+            57,
+            138,
+            136
+          ],
+          "asset": "archive-poetic-review/textures/art-21-left.svg"
+        },
+        "right": {
+          "sample": [
+            28,
+            57,
+            138,
+            136
+          ],
+          "asset": "archive-poetic-review/textures/art-21-right.svg"
+        },
+        "top": {
+          "sample": [
+            28,
+            57,
+            138,
+            136
+          ],
+          "asset": "archive-poetic-review/textures/art-21-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            28,
+            57,
+            138,
+            136
+          ],
+          "asset": "archive-poetic-review/textures/art-21-bottom.svg"
+        }
+      },
+      "selection_note_html": "The yellow figure blends into the surrounding wash; Golden Walker gives the portfolio a more legible figure and stronger colour structure.",
+      "status": "restored",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image.",
+      "restored_date": "2026-09-27",
+      "restoration_reason": "The emerging face and elusive body evoke memory that preserves presence without fixing every detail. Ambiguity is an expressive strength."
+    },
+    {
+      "id": "art-18",
+      "label": "Within Reach",
+      "previous_display_title": "Blue Apparition",
+      "caption": "An old closeness returns.",
+      "narrative": "A familiar presence enters an otherwise ordinary moment. You cannot quite say what brought it back. For a while, being alone feels spacious and companionable.",
+      "image": "approved-gallery-removals-round-2/media/images/art-archive/art-18.jpg",
+      "master": "approved-gallery-removals-round-2/media/artworks/art-18.jpg",
+      "width": 551,
+      "height": 1426,
+      "image_sha256": "ee0e8ad3b61ee2c374c98be166a0c69281a85c640b7a2de3f0d05d265f53952f",
+      "master_sha256": "7a99e4d2f4bf2dc171baf463211414874e822252dab2224f795a7acecb99104e",
+      "presentation": {
+        "frame": "charcoal",
+        "mat": "mist",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            17,
+            171,
+            88,
+            328
+          ],
+          "asset": "archive-poetic-review/textures/art-18-left.svg"
+        },
+        "right": {
+          "sample": [
+            17,
+            171,
+            88,
+            328
+          ],
+          "asset": "archive-poetic-review/textures/art-18-right.svg"
+        },
+        "top": {
+          "sample": [
+            17,
+            171,
+            88,
+            328
+          ],
+          "asset": "archive-poetic-review/textures/art-18-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            17,
+            171,
+            88,
+            328
+          ],
+          "asset": "archive-poetic-review/textures/art-18-bottom.svg"
+        }
+      },
+      "selection_note_html": "The available image is grainy and low in contrast, so the pale figure is difficult to distinguish at gallery size.",
+      "status": "restored",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image.",
+      "restored_date": "2026-09-27",
+      "restoration_reason": "Softly interrelated figures give intimacy an inward form, supporting the artist’s explanation of an assembly of people within. Emotional resonance does not depend on sharp separation."
+    },
+    {
+      "id": "art-02",
+      "label": "Unsaid",
+      "previous_display_title": "Watching Face",
+      "caption": "There is more I meant to tell you.",
+      "narrative": "Long after a conversation ends, the honest words arrive. You keep them gently, hoping there will be another afternoon, another chance to begin.",
+      "image": "portfolio-edit-round-5/media/images/art-archive/art-02.jpg",
+      "master": "portfolio-edit-round-5/media/artworks/art-02.jpg",
+      "width": 732,
+      "height": 1074,
+      "image_sha256": "7395aa1ae64c78216864eb36eb45862e30263d5de102837553f0b2728496c65f",
+      "master_sha256": "a2d5b704338105855e705175ff5090f72ffb5e12804bedce0bc1d3d2b8d8d1c2",
+      "presentation": {
+        "frame": "oak",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            22,
+            883,
+            32,
+            71
+          ],
+          "asset": "archive-poetic-review/textures/art-02-left.svg"
+        },
+        "right": {
+          "sample": [
+            22,
+            883,
+            32,
+            71
+          ],
+          "asset": "archive-poetic-review/textures/art-02-right.svg"
+        },
+        "top": {
+          "sample": [
+            22,
+            883,
+            32,
+            71
+          ],
+          "asset": "archive-poetic-review/textures/art-02-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            22,
+            883,
+            32,
+            71
+          ],
+          "asset": "archive-poetic-review/textures/art-02-bottom.svg"
+        }
+      },
+      "selection_note_html": "The cropped, front-facing pencil face has less compositional distinction than the selected portraits.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-04",
+      "label": "The Welcome",
+      "previous_display_title": "Veiled Smile",
+      "caption": "Your arrival has changed the day.",
+      "narrative": "Before you have taken your seat, someone is glad you came. That simple delight releases something in you. You had forgotten how good it feels to be expected.",
+      "image": "portfolio-edit-round-5/media/images/art-archive/art-04.jpg",
+      "master": "portfolio-edit-round-5/media/artworks/art-04.jpg",
+      "width": 759,
+      "height": 1034,
+      "image_sha256": "76bb13e73c6b4f71ab02ce51d99b626ef037decd52199aff8e8e32c6ab8aff7a",
+      "master_sha256": "da89b02fc01a89df76da72304f9ceedc9a847605b400ab0af4e0419fbe81cadd",
+      "presentation": {
+        "frame": "walnut",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            19,
+            83,
+            152,
+            93
+          ],
+          "asset": "archive-poetic-review/textures/art-04-left.svg"
+        },
+        "right": {
+          "sample": [
+            19,
+            83,
+            152,
+            93
+          ],
+          "asset": "archive-poetic-review/textures/art-04-right.svg"
+        },
+        "top": {
+          "sample": [
+            19,
+            83,
+            152,
+            93
+          ],
+          "asset": "archive-poetic-review/textures/art-04-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            19,
+            83,
+            152,
+            93
+          ],
+          "asset": "archive-poetic-review/textures/art-04-bottom.svg"
+        }
+      },
+      "selection_note_html": "The fixed facial features and patterned veil add less expressive range beside The Witness and Grandmother.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-06",
+      "label": "Exultation",
+      "previous_display_title": "Raised Arm",
+      "caption": "Let happiness have its moment.",
+      "narrative": "Good news arrives, and for once you let yourself rejoice without preparing for its loss. The gladness is brief, perhaps. It belongs to you all the same.",
+      "image": "portfolio-edit-round-5/media/images/art-archive/art-06.jpg",
+      "master": "portfolio-edit-round-5/media/artworks/art-06.jpg",
+      "width": 712,
+      "height": 1104,
+      "image_sha256": "bb555b71c93ed1c716f971ef6cebf3fbc835c6e19f76006f0d916280778c68ee",
+      "master_sha256": "6b2a398ed7a141969a02534c45e23df354fd3d3c1920b714d5db8e59efdf60a9",
+      "presentation": {
+        "frame": "oak",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            14,
+            33,
+            285,
+            132
+          ],
+          "asset": "archive-poetic-review/textures/art-06-left.svg"
+        },
+        "right": {
+          "sample": [
+            14,
+            33,
+            285,
+            132
+          ],
+          "asset": "archive-poetic-review/textures/art-06-right.svg"
+        },
+        "top": {
+          "sample": [
+            14,
+            33,
+            285,
+            132
+          ],
+          "asset": "archive-poetic-review/textures/art-06-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            14,
+            33,
+            285,
+            132
+          ],
+          "asset": "archive-poetic-review/textures/art-06-bottom.svg"
+        }
+      },
+      "selection_note_html": "The raised-arm outline overlaps with the more assertive gesture and balance of Black Dancer.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-08",
+      "label": "See You Soon",
+      "previous_display_title": "Waving Body",
+      "caption": "A farewell that leaves room for return.",
+      "narrative": "You part reluctantly, already imagining the next meeting. The conversation continues inside you on the way home. Some goodbyes quietly promise that this is only an interval.",
+      "image": "portfolio-edit-round-5/media/images/art-archive/art-08.jpg",
+      "master": "portfolio-edit-round-5/media/artworks/art-08.jpg",
+      "width": 761,
+      "height": 1032,
+      "image_sha256": "73d7b3515823b36997c608d51728911226365234aa69deda3bbddbead05fe703",
+      "master_sha256": "a31b0e4187b7a551737c2b7936bfba848373f4b6338c43aa76955a46ad5db149",
+      "presentation": {
+        "frame": "oak",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            527,
+            774,
+            105,
+            175
+          ],
+          "asset": "archive-poetic-review/textures/art-08-left.svg"
+        },
+        "right": {
+          "sample": [
+            527,
+            774,
+            105,
+            175
+          ],
+          "asset": "archive-poetic-review/textures/art-08-right.svg"
+        },
+        "top": {
+          "sample": [
+            527,
+            774,
+            105,
+            175
+          ],
+          "asset": "archive-poetic-review/textures/art-08-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            527,
+            774,
+            105,
+            175
+          ],
+          "asset": "archive-poetic-review/textures/art-08-bottom.svg"
+        }
+      },
+      "selection_note_html": "The waving pose is readable but adds less distinct movement than Black Dancer and Carrying Dance.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-09",
+      "label": "At Ease",
+      "previous_display_title": "Blue Torso",
+      "caption": "You owe the world no apology.",
+      "narrative": "An old embarrassment loses its hold. You move through the day with less attention to how you might be judged. The freedom is small, and unexpectedly sweet.",
+      "image": "approved-gallery-removals-round-4/media/images/art-archive/art-09.jpg",
+      "master": "approved-gallery-removals-round-4/media/artworks/art-09.jpg",
+      "width": 609,
+      "height": 1291,
+      "image_sha256": "5d47edcec6f6c78fd70df8b4619a0f889dbdda49718709af8b4bc1d828b123ca",
+      "master_sha256": "a3e1aef584ba9c4e52cdc2c0bfc4ee696641e328fab354fcec22a438527a9410",
+      "presentation": {
+        "frame": "charcoal",
+        "mat": "mist",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            18,
+            129,
+            33,
+            181
+          ],
+          "asset": "archive-poetic-review/textures/art-09-left.svg"
+        },
+        "right": {
+          "sample": [
+            18,
+            129,
+            33,
+            181
+          ],
+          "asset": "archive-poetic-review/textures/art-09-right.svg"
+        },
+        "top": {
+          "sample": [
+            18,
+            129,
+            33,
+            181
+          ],
+          "asset": "archive-poetic-review/textures/art-09-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            18,
+            129,
+            33,
+            181
+          ],
+          "asset": "archive-poetic-review/textures/art-09-bottom.svg"
+        }
+      },
+      "selection_note_html": "The frontal blue outline emphasizes the shape of the torso. In this collection, Crouching Blue and the retained dancers express posture and movement more distinctly; this study adds less to that range. This is a subjective curatorial judgment, not a rejection of minimal or figurative work.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-10",
+      "label": "Unwatched",
+      "previous_display_title": "Back View Dancer",
+      "caption": "Joy, with nobody to impress.",
+      "narrative": "Alone, you do something simply because it pleases you. There is no one to explain it to, no reason to make it better. The pleasure is enough.",
+      "image": "portfolio-edit-round-5/media/images/art-archive/art-10.jpg",
+      "master": "portfolio-edit-round-5/media/artworks/art-10.jpg",
+      "width": 662,
+      "height": 1187,
+      "image_sha256": "706d6f2b36afcf4a7491351cdf5444dd511c57bc6767d542e739f8218fb65834",
+      "master_sha256": "2db9585e1d03fa3856198a451dde4261210efa3359a807aa06cead1a89607b18",
+      "presentation": {
+        "frame": "walnut",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            23,
+            178,
+            93,
+            653
+          ],
+          "asset": "archive-poetic-review/textures/art-10-left.svg"
+        },
+        "right": {
+          "sample": [
+            23,
+            178,
+            93,
+            653
+          ],
+          "asset": "archive-poetic-review/textures/art-10-right.svg"
+        },
+        "top": {
+          "sample": [
+            23,
+            178,
+            93,
+            653
+          ],
+          "asset": "archive-poetic-review/textures/art-10-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            23,
+            178,
+            93,
+            653
+          ],
+          "asset": "archive-poetic-review/textures/art-10-bottom.svg"
+        }
+      },
+      "selection_note_html": "The outlined back-view figure adds less to the gesture sequence than the selected blue crouching form and dancing pair.",
+      "status": "restored",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image.",
+      "restored_date": "2026-09-27",
+      "restoration_reason": "The turned back, flowing hair and lifted feet convey movement enjoyed for itself. The unselfconscious gesture adds bodily freedom and private joy to the collection."
+    },
+    {
+      "id": "art-11",
+      "label": "Familiar",
+      "previous_display_title": "Twin Forms",
+      "caption": "We have laughed here before.",
+      "narrative": "A shared absurdity returns, and both of you begin laughing before the story is told. Years briefly lose their distance. You are easy with each other again.",
+      "image": "portfolio-edit-round-5/media/images/art-archive/art-11.jpg",
+      "master": "portfolio-edit-round-5/media/artworks/art-11.jpg",
+      "width": 809,
+      "height": 1024,
+      "image_sha256": "a92e2f74588c1474f9358039a71503df9de1da372afc16ebae6294bba91ee5ed",
+      "master_sha256": "c5af0e1eee40e971c920565c6ca6c70602b9d2d382d69a66dd7f4bd9fcf6f0f0",
+      "presentation": {
+        "frame": "oak",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            594,
+            860,
+            134,
+            123
+          ],
+          "asset": "archive-poetic-review/textures/art-11-left.svg"
+        },
+        "right": {
+          "sample": [
+            594,
+            860,
+            134,
+            123
+          ],
+          "asset": "archive-poetic-review/textures/art-11-right.svg"
+        },
+        "top": {
+          "sample": [
+            594,
+            860,
+            134,
+            123
+          ],
+          "asset": "archive-poetic-review/textures/art-11-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            594,
+            860,
+            134,
+            123
+          ],
+          "asset": "archive-poetic-review/textures/art-11-bottom.svg"
+        }
+      },
+      "selection_note_html": "The segmented paired figures have a less unified rhythm than the retained Pair of Women and Carrying Dance.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-12",
+      "label": "Poise",
+      "previous_display_title": "Crossed Figure",
+      "caption": "A quiet yes to yourself.",
+      "narrative": "For once, you do not ask permission to take your place. There is no grand announcement. Only the private steadiness of knowing you belong in your own life.",
+      "image": "portfolio-edit-round-5/media/images/art-archive/art-12.jpg",
+      "master": "portfolio-edit-round-5/media/artworks/art-12.jpg",
+      "width": 661,
+      "height": 1188,
+      "image_sha256": "d2810c262c71fcf153ed2893153b01be4e7449d3e3f7451283d2216a758d7ed1",
+      "master_sha256": "2e757b90d5dddd4aa436b9cda2553be59458c31eb95d39eff1397853bd7ea66d",
+      "presentation": {
+        "frame": "walnut",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            13,
+            416,
+            99,
+            238
+          ],
+          "asset": "archive-poetic-review/textures/art-12-left.svg"
+        },
+        "right": {
+          "sample": [
+            13,
+            416,
+            99,
+            238
+          ],
+          "asset": "archive-poetic-review/textures/art-12-right.svg"
+        },
+        "top": {
+          "sample": [
+            13,
+            416,
+            99,
+            238
+          ],
+          "asset": "archive-poetic-review/textures/art-12-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            13,
+            416,
+            99,
+            238
+          ],
+          "asset": "archive-poetic-review/textures/art-12-bottom.svg"
+        }
+      },
+      "selection_note_html": "The symmetric crossed figure repeats the collection’s outlined-body motif with less directional tension than Black Walker.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-14",
+      "label": "Sanctuary",
+      "previous_display_title": "Wrapped Form",
+      "caption": "Nothing is required of you here.",
+      "narrative": "You are welcomed on a day when you have little to offer. No one asks you to brighten the room. Gradually, without effort, you begin to feel better.",
+      "image": "portfolio-edit-round-5/media/images/art-archive/art-14.jpg",
+      "master": "portfolio-edit-round-5/media/artworks/art-14.jpg",
+      "width": 756,
+      "height": 1040,
+      "image_sha256": "6e099bbbab89c9968153d6f29745bde69867e1fc10613b976c97c77f5ea31418",
+      "master_sha256": "3a7d91a93a1aecb298cd7c2b89547b8a6f34173e3c34555e44cc10e58032d4b2",
+      "presentation": {
+        "frame": "oak",
+        "mat": "linen",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            76,
+            73,
+            212,
+            88
+          ],
+          "asset": "archive-poetic-review/textures/art-14-left.svg"
+        },
+        "right": {
+          "sample": [
+            76,
+            73,
+            212,
+            88
+          ],
+          "asset": "archive-poetic-review/textures/art-14-right.svg"
+        },
+        "top": {
+          "sample": [
+            76,
+            73,
+            212,
+            88
+          ],
+          "asset": "archive-poetic-review/textures/art-14-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            76,
+            73,
+            212,
+            88
+          ],
+          "asset": "archive-poetic-review/textures/art-14-bottom.svg"
+        }
+      },
+      "selection_note_html": "The wrapped form overlaps with Dark Oval and Black Vessel, whose silhouettes and negative spaces are more decisive.",
+      "status": "restored",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image.",
+      "restored_date": "2026-09-27",
+      "restoration_reason": "The enclosing form and withheld face sustain a tension between shelter and vulnerability. Its ambiguity leaves room for the viewer’s own feeling."
+    },
+    {
+      "id": "art-16",
+      "label": "Enduring",
+      "previous_display_title": "Grey Monolith",
+      "caption": "Even now, something holds.",
+      "narrative": "Through a season of change, one small habit keeps you company. Its familiarity steadies the day. You discover how much comfort can live in a simple return.",
+      "image": "approved-gallery-removals-round-3/media/images/art-archive/art-16.jpg",
+      "master": "approved-gallery-removals-round-3/media/artworks/art-16.jpg",
+      "width": 607,
+      "height": 1295,
+      "image_sha256": "bcbaf2e34ba49c6c447966d84aeac637d06590efd309d3932ef79c194d5e7246",
+      "master_sha256": "0a9da9ce5e2ff4847cdf2610c42a60d5cd1eb51e0bc3cf32a598495849dabfac",
+      "presentation": {
+        "frame": "walnut",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            516,
+            259,
+            61,
+            648
+          ],
+          "asset": "archive-poetic-review/textures/art-16-left.svg"
+        },
+        "right": {
+          "sample": [
+            516,
+            259,
+            61,
+            648
+          ],
+          "asset": "archive-poetic-review/textures/art-16-right.svg"
+        },
+        "top": {
+          "sample": [
+            516,
+            259,
+            61,
+            648
+          ],
+          "asset": "archive-poetic-review/textures/art-16-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            516,
+            259,
+            61,
+            648
+          ],
+          "asset": "archive-poetic-review/textures/art-16-bottom.svg"
+        }
+      },
+      "selection_note_html": "The grey wash has limited separation from the ruled notebook page; the background ruling competes with the form. Archived as a gallery presentation choice, not a claim that the artwork is unfinished.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-26",
+      "label": "The Weight",
+      "previous_display_title": "Dark Cutout",
+      "caption": "Some things take time to set down.",
+      "narrative": "You have carried a worry so long that its absence feels unfamiliar. Relief arrives slowly. One morning you notice you have begun making plans again.",
+      "image": "portfolio-edit-round-5/media/images/art-archive/art-26.jpg",
+      "master": "portfolio-edit-round-5/media/artworks/art-26.jpg",
+      "width": 732,
+      "height": 1074,
+      "image_sha256": "4fbd5b2d84b3aa73a298cef066fc6dc0114ace798cb76d9446a2445c4205e414",
+      "master_sha256": "df6e91a38299abbdeed225d46589dc226bf965a781ac8c6a58ee45454fc869d6",
+      "presentation": {
+        "frame": "charcoal",
+        "mat": "linen",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            22,
+            43,
+            124,
+            129
+          ],
+          "asset": "archive-poetic-review/textures/art-26-left.svg"
+        },
+        "right": {
+          "sample": [
+            22,
+            43,
+            124,
+            129
+          ],
+          "asset": "archive-poetic-review/textures/art-26-right.svg"
+        },
+        "top": {
+          "sample": [
+            22,
+            43,
+            124,
+            129
+          ],
+          "asset": "archive-poetic-review/textures/art-26-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            22,
+            43,
+            124,
+            129
+          ],
+          "asset": "archive-poetic-review/textures/art-26-bottom.svg"
+        }
+      },
+      "selection_note_html": "The dark cutout has a less legible internal gesture than Crouching Blue and Black Vessel in its available photograph.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-31",
+      "label": "A Glimpse",
+      "previous_display_title": "Sharp Shadow",
+      "caption": "Gone before the feeling leaves.",
+      "narrative": "An encounter lasts only a moment, yet follows you for days. You cannot recover exactly what happened. The strange, delicate pleasure of it remains.",
+      "image": "approved-gallery-removals/media/images/art-archive/art-31.jpg",
+      "master": "approved-gallery-removals/media/artworks/art-31.jpg",
+      "width": 723,
+      "height": 1087,
+      "image_sha256": "2de4a273ba1636671df6858f82f17e8775b5a88ed34ee53fa8f11849f3789383",
+      "master_sha256": "f2ac1e6f1a7b30c9bc5013b9c8e249e9c49d415287a75cecca23d1ab09fb50c2",
+      "presentation": {
+        "frame": "walnut",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            22,
+            217,
+            145,
+            196
+          ],
+          "asset": "archive-poetic-review/textures/art-31-left.svg"
+        },
+        "right": {
+          "sample": [
+            22,
+            217,
+            145,
+            196
+          ],
+          "asset": "archive-poetic-review/textures/art-31-right.svg"
+        },
+        "top": {
+          "sample": [
+            22,
+            217,
+            145,
+            196
+          ],
+          "asset": "archive-poetic-review/textures/art-31-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            22,
+            217,
+            145,
+            196
+          ],
+          "asset": "archive-poetic-review/textures/art-31-bottom.svg"
+        }
+      },
+      "selection_note_html": "The photograph is visibly out of focus; the edges and surface marks cannot be read clearly.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-32",
+      "label": "The Unfinished",
+      "previous_display_title": "Wing Fragment",
+      "caption": "There was more to come.",
+      "narrative": "You return to something left incomplete and find affection where you expected regret. An unfinished beginning can still hold the excitement of the person who made it.",
+      "image": "approved-gallery-removals-round-2/media/images/art-archive/art-32.jpg",
+      "master": "approved-gallery-removals-round-2/media/artworks/art-32.jpg",
+      "width": 1136,
+      "height": 692,
+      "image_sha256": "2236076ecd8b4cd86c18d0e1ad6fa4e2c7a3466b8b1063962922ee0e26bff3d8",
+      "master_sha256": "3aa7c46310ecd3c2cbf7dd75f4d6939ba99b0f18af39474c8c9aced669a5afbe",
+      "presentation": {
+        "frame": "charcoal",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            568,
+            21,
+            284,
+            55
+          ],
+          "asset": "archive-poetic-review/textures/art-32-left.svg"
+        },
+        "right": {
+          "sample": [
+            568,
+            21,
+            284,
+            55
+          ],
+          "asset": "archive-poetic-review/textures/art-32-right.svg"
+        },
+        "top": {
+          "sample": [
+            568,
+            21,
+            284,
+            55
+          ],
+          "asset": "archive-poetic-review/textures/art-32-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            568,
+            21,
+            284,
+            55
+          ],
+          "asset": "archive-poetic-review/textures/art-32-bottom.svg"
+        }
+      },
+      "selection_note_html": "The tight, angled view and soft detail make the form difficult to read. To my eye it has less presence as a standalone gallery piece than the stronger ink works.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-33",
+      "label": "Small Delight",
+      "previous_display_title": "Flower Moths",
+      "caption": "Happiness happens along the way.",
+      "narrative": "Something slight interrupts your hurry. You stop longer than you meant to. The day resumes, carrying a pleasure too small to explain and too welcome to dismiss.",
+      "image": "approved-gallery-removals-round-4/media/images/art-archive/art-33.jpg",
+      "master": "approved-gallery-removals-round-4/media/artworks/art-33.jpg",
+      "width": 1116,
+      "height": 704,
+      "image_sha256": "e60e4a0777beceb20b927ba7e9ce4c8217c2949e7da904f0afe2d19643526364",
+      "master_sha256": "730ab9333f3f977ddbed60b9831a7a2cd1fb49302e06eeffba2b6325720c0112",
+      "presentation": {
+        "frame": "walnut",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            312,
+            620,
+            502,
+            49
+          ],
+          "asset": "archive-poetic-review/textures/art-33-left.svg"
+        },
+        "right": {
+          "sample": [
+            312,
+            620,
+            502,
+            49
+          ],
+          "asset": "archive-poetic-review/textures/art-33-right.svg"
+        },
+        "top": {
+          "sample": [
+            312,
+            620,
+            502,
+            49
+          ],
+          "asset": "archive-poetic-review/textures/art-33-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            312,
+            620,
+            502,
+            49
+          ],
+          "asset": "archive-poetic-review/textures/art-33-bottom.svg"
+        }
+      },
+      "selection_note_html": "The repeated flower-like motifs read primarily as decorative variations. For this selection, Blue Birds and Night Birds offer a clearer relationship between two forms and a stronger sense of atmosphere. This is a subjective curatorial judgment, not a statement of the artist’s intended meaning.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-34",
+      "label": "Becoming",
+      "previous_display_title": "Curved Figure",
+      "caption": "A little more your own.",
+      "narrative": "You recognise yourself in a choice you once would not have dared to make. It feels almost ordinary now. Growing into a life can happen that quietly.",
+      "image": "portfolio-edit-round-5/media/images/art-archive/art-34.jpg",
+      "master": "portfolio-edit-round-5/media/artworks/art-34.jpg",
+      "width": 550,
+      "height": 1429,
+      "image_sha256": "c51ec7d960cf43e68b5987f1a9dc7d0d08ab736d2cacdc437ff34531dee2a749",
+      "master_sha256": "f185cab0fbc44c7e69f5548fd38144aad9c08b49710e1519bb42607d9fdfa5a0",
+      "presentation": {
+        "frame": "walnut",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            467,
+            143,
+            50,
+            857
+          ],
+          "asset": "archive-poetic-review/textures/art-34-left.svg"
+        },
+        "right": {
+          "sample": [
+            467,
+            143,
+            50,
+            857
+          ],
+          "asset": "archive-poetic-review/textures/art-34-right.svg"
+        },
+        "top": {
+          "sample": [
+            467,
+            143,
+            50,
+            857
+          ],
+          "asset": "archive-poetic-review/textures/art-34-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            467,
+            143,
+            50,
+            857
+          ],
+          "asset": "archive-poetic-review/textures/art-34-bottom.svg"
+        }
+      },
+      "selection_note_html": "The narrow curved figure overlaps with the stronger movement and weight expressed by Crouching Muscle.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-35",
+      "label": "Behind the Name",
+      "previous_display_title": "Mask of Eyes",
+      "caption": "Who are you when no one asks?",
+      "narrative": "For a moment, all the names you answer to fall quiet. You meet a self with no introduction prepared. There is relief in leaving a little of yourself undefined.",
+      "image": "portfolio-edit-round-5/media/images/art-archive/art-35.jpg",
+      "master": "portfolio-edit-round-5/media/artworks/art-35.jpg",
+      "width": 818,
+      "height": 1024,
+      "image_sha256": "48de7c754a23ba7f5a9134a8e1e6bb13e159d8d74a48398caca33fd4beabcbf4",
+      "master_sha256": "e15a364319a4990b6cb49f373802736b30085f290aaf207ff9cb231c984a5fcd",
+      "presentation": {
+        "frame": "charcoal",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            730,
+            799,
+            30,
+            102
+          ],
+          "asset": "archive-poetic-review/textures/art-35-left.svg"
+        },
+        "right": {
+          "sample": [
+            730,
+            799,
+            30,
+            102
+          ],
+          "asset": "archive-poetic-review/textures/art-35-right.svg"
+        },
+        "top": {
+          "sample": [
+            730,
+            799,
+            30,
+            102
+          ],
+          "asset": "archive-poetic-review/textures/art-35-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            730,
+            799,
+            30,
+            102
+          ],
+          "asset": "archive-poetic-review/textures/art-35-bottom.svg"
+        }
+      },
+      "selection_note_html": "The mask-like marks provide texture but less clear visual organization than the selected portraits and silhouettes.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-36",
+      "label": "Listening",
+      "previous_display_title": "Tilted Portrait",
+      "caption": "Take your time. I am here.",
+      "narrative": "Someone lets you finish, including the pauses. You hear your own thoughts differently in that patience. A difficult feeling becomes something you can finally share.",
+      "image": "portfolio-edit-round-5/media/images/art-archive/art-36.jpg",
+      "master": "portfolio-edit-round-5/media/artworks/art-36.jpg",
+      "width": 692,
+      "height": 1136,
+      "image_sha256": "4090c188544d755544c8920599e598c5fb046df3bc4876f51b9fc3c3bebb4e01",
+      "master_sha256": "e02bed2ac2ad966cd1e5657857a1a6735ed127512d361696cf37945b4ed1e8cf",
+      "presentation": {
+        "frame": "oak",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            14,
+            738,
+            69,
+            102
+          ],
+          "asset": "archive-poetic-review/textures/art-36-left.svg"
+        },
+        "right": {
+          "sample": [
+            14,
+            738,
+            69,
+            102
+          ],
+          "asset": "archive-poetic-review/textures/art-36-right.svg"
+        },
+        "top": {
+          "sample": [
+            14,
+            738,
+            69,
+            102
+          ],
+          "asset": "archive-poetic-review/textures/art-36-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            14,
+            738,
+            69,
+            102
+          ],
+          "asset": "archive-poetic-review/textures/art-36-bottom.svg"
+        }
+      },
+      "selection_note_html": "The conventional shaded portrait contributes less distinct visual language beside The Witness and Grandmother.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-37",
+      "label": "Composure",
+      "previous_display_title": "Ink Face",
+      "caption": "Your quiet belongs to you.",
+      "narrative": "You let a question pass without offering more than you wish to give. There is a gentle dignity in keeping something private, even among people you love.",
+      "image": "portfolio-edit-round-5/media/images/art-archive/art-37.jpg",
+      "master": "portfolio-edit-round-5/media/artworks/art-37.jpg",
+      "width": 662,
+      "height": 1187,
+      "image_sha256": "df3d1bc69a11f8da360d428ac9abd1c3867ff9c1a6b7fccf2b8e11cd7984673b",
+      "master_sha256": "1ba8d58ffa4451b43707b583359e7c6ea8307f36ea1598177a55843e5dffa9d7",
+      "presentation": {
+        "frame": "walnut",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            589,
+            439,
+            20,
+            76
+          ],
+          "asset": "archive-poetic-review/textures/art-37-left.svg"
+        },
+        "right": {
+          "sample": [
+            589,
+            439,
+            20,
+            76
+          ],
+          "asset": "archive-poetic-review/textures/art-37-right.svg"
+        },
+        "top": {
+          "sample": [
+            589,
+            439,
+            20,
+            76
+          ],
+          "asset": "archive-poetic-review/textures/art-37-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            589,
+            439,
+            20,
+            76
+          ],
+          "asset": "archive-poetic-review/textures/art-37-bottom.svg"
+        }
+      },
+      "selection_note_html": "The bold facial marks are striking, but the surrounding loose lines make it less resolved as a portfolio portrait than The Witness or Grandmother.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-38",
+      "label": "An Hour Away",
+      "previous_display_title": "Reclining Memory",
+      "caption": "Let the world go on a little without you.",
+      "narrative": "For an hour, you let the unfinished things remain unfinished. The relief feels almost like being forgiven. When you return, there is more of you to give.",
+      "image": "portfolio-edit-round-5/media/images/art-archive/art-38.jpg",
+      "master": "portfolio-edit-round-5/media/artworks/art-38.jpg",
+      "width": 1045,
+      "height": 752,
+      "image_sha256": "7259e1ffbdec3e66e84f3a6437e7b1067f85657f79b9552c02861eb4becd694f",
+      "master_sha256": "acd7256bfe6c9cb86fb82c05375180abfc7d4fcc9f260c0eaed0ef10604d4f9e",
+      "presentation": {
+        "frame": "walnut",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            815,
+            511,
+            178,
+            165
+          ],
+          "asset": "archive-poetic-review/textures/art-38-left.svg"
+        },
+        "right": {
+          "sample": [
+            815,
+            511,
+            178,
+            165
+          ],
+          "asset": "archive-poetic-review/textures/art-38-right.svg"
+        },
+        "top": {
+          "sample": [
+            815,
+            511,
+            178,
+            165
+          ],
+          "asset": "archive-poetic-review/textures/art-38-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            815,
+            511,
+            178,
+            165
+          ],
+          "asset": "archive-poetic-review/textures/art-38-bottom.svg"
+        }
+      },
+      "selection_note_html": "The cutout is photographed at a pronounced sideways angle. Preserve this potentially strong narrative work for an orientation and presentation review rather than including the current capture in the tighter portfolio.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-39",
+      "label": "The Distance",
+      "previous_display_title": "Tethered Bull",
+      "caption": "Some part of us is always roaming.",
+      "narrative": "A familiar place holds you, and still you wonder what lies beyond it. Affection and restlessness share the same day. Both have something true to tell you.",
+      "image": "approved-gallery-removals-round-2/media/images/art-archive/art-39.jpg",
+      "master": "approved-gallery-removals-round-2/media/artworks/art-39.jpg",
+      "width": 711,
+      "height": 1105,
+      "image_sha256": "cb492c42faf1b37a298b826a52b76b057eb9b2ef4917df13e39859f9573acff9",
+      "master_sha256": "16a10e86800731aa379151964252d6c04a7fd935acb4bda28a30ea7d756ba952",
+      "presentation": {
+        "frame": "oak",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            427,
+            66,
+            185,
+            133
+          ],
+          "asset": "archive-poetic-review/textures/art-39-left.svg"
+        },
+        "right": {
+          "sample": [
+            427,
+            66,
+            185,
+            133
+          ],
+          "asset": "archive-poetic-review/textures/art-39-right.svg"
+        },
+        "top": {
+          "sample": [
+            427,
+            66,
+            185,
+            133
+          ],
+          "asset": "archive-poetic-review/textures/art-39-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            427,
+            66,
+            185,
+            133
+          ],
+          "asset": "archive-poetic-review/textures/art-39-bottom.svg"
+        }
+      },
+      "selection_note_html": "Several deep folds cut across the animal and draw more attention than the faint pencil lines.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-40",
+      "label": "Enough",
+      "previous_display_title": "Resting Cow",
+      "caption": "The day can be this simple.",
+      "narrative": "Nothing remarkable happens, and you are content. Later, you will try to remember what made the afternoon so good. Perhaps it was the ease of wanting very little.",
+      "image": "approved-gallery-removals/media/images/art-archive/art-40.jpg",
+      "master": "approved-gallery-removals/media/artworks/art-40.jpg",
+      "width": 1182,
+      "height": 665,
+      "image_sha256": "571f9e99c342cec67f294aaaeef8bef7b68d273e9a1d463ca953e92d20058791",
+      "master_sha256": "dfde80e6e86cf7ec635f399f3f6235bd18442fd6529f71713acaecc321afdbd7",
+      "presentation": {
+        "frame": "oak",
+        "mat": "linen",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            41,
+            30,
+            426,
+            47
+          ],
+          "asset": "archive-poetic-review/textures/art-40-left.svg"
+        },
+        "right": {
+          "sample": [
+            41,
+            30,
+            426,
+            47
+          ],
+          "asset": "archive-poetic-review/textures/art-40-right.svg"
+        },
+        "top": {
+          "sample": [
+            41,
+            30,
+            426,
+            47
+          ],
+          "asset": "archive-poetic-review/textures/art-40-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            41,
+            30,
+            426,
+            47
+          ],
+          "asset": "archive-poetic-review/textures/art-40-bottom.svg"
+        }
+      },
+      "selection_note_html": "Faint pencil lines and a strong fold through the centre compete with the cow drawing in this photograph.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-41",
+      "label": "The Vigil",
+      "previous_display_title": "Lantern",
+      "caption": "Someone is waiting for you.",
+      "narrative": "You are late, and a welcome has been kept ready. Years afterward, you remember the waiting more than the journey. Love had stayed awake a little longer.",
+      "image": "portfolio-edit-round-5/media/images/art-archive/art-41.jpg",
+      "master": "portfolio-edit-round-5/media/artworks/art-41.jpg",
+      "width": 614,
+      "height": 1280,
+      "image_sha256": "d0fca069e7b212de47cdd749f12dab12de5808b053622bd637b885021e80ea59",
+      "master_sha256": "165798e2ed9ebacee4c4f1870418a3ca80785c334c46033a20e6e863816bbc05",
+      "presentation": {
+        "frame": "oak",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            544,
+            794,
+            33,
+            282
+          ],
+          "asset": "archive-poetic-review/textures/art-41-left.svg"
+        },
+        "right": {
+          "sample": [
+            544,
+            794,
+            33,
+            282
+          ],
+          "asset": "archive-poetic-review/textures/art-41-right.svg"
+        },
+        "top": {
+          "sample": [
+            544,
+            794,
+            33,
+            282
+          ],
+          "asset": "archive-poetic-review/textures/art-41-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            544,
+            794,
+            33,
+            282
+          ],
+          "asset": "archive-poetic-review/textures/art-41-bottom.svg"
+        }
+      },
+      "selection_note_html": "The isolated lantern reads as an observational object study and is less central to the portfolio’s figure, gesture and relationship themes.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-42",
+      "label": "Looking Back",
+      "previous_display_title": "Turning Back",
+      "caption": "A moment longer, before we go.",
+      "narrative": "You turn back toward a place you are leaving. Nothing there has changed yet. Already, it has begun to mean something different to you.",
+      "image": "portfolio-edit-round-5/media/images/art-archive/art-42.jpg",
+      "master": "portfolio-edit-round-5/media/artworks/art-42.jpg",
+      "width": 556,
+      "height": 1410,
+      "image_sha256": "417e19e35eb977afde2c0bdd5e986ef232d7afa468050ada75e9a3d58ffa7873",
+      "master_sha256": "6c23b78cff0cb884dbd0c289d8323309626e0c03560b41adb616900edb29a2df",
+      "presentation": {
+        "frame": "oak",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            500,
+            169,
+            42,
+            846
+          ],
+          "asset": "archive-poetic-review/textures/art-42-left.svg"
+        },
+        "right": {
+          "sample": [
+            500,
+            169,
+            42,
+            846
+          ],
+          "asset": "archive-poetic-review/textures/art-42-right.svg"
+        },
+        "top": {
+          "sample": [
+            500,
+            169,
+            42,
+            846
+          ],
+          "asset": "archive-poetic-review/textures/art-42-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            500,
+            169,
+            42,
+            846
+          ],
+          "asset": "archive-poetic-review/textures/art-42-bottom.svg"
+        }
+      },
+      "selection_note_html": "The light pencil back-view pose is crossed by a strong fold and repeats gestures represented more clearly in the selected works.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-43",
+      "label": "The Small Gift",
+      "previous_display_title": "Shadow with Vessel",
+      "caption": "I thought you might like this.",
+      "narrative": "Someone remembers a passing wish you had forgotten mentioning. The gift is simple. What moves you is the discovery that you were being listened to.",
+      "image": "portfolio-edit-round-5/media/images/art-archive/art-43.jpg",
+      "master": "portfolio-edit-round-5/media/artworks/art-43.jpg",
+      "width": 933,
+      "height": 1024,
+      "image_sha256": "c43cef1ac3736b8f22a78ecf8eee3905f73f4372494d210119ec0cdab188bc45",
+      "master_sha256": "086f82c7665d84830aae65a437c19e6e7a4b346aafe985f737285692a012044e",
+      "presentation": {
+        "frame": "charcoal",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            33,
+            655,
+            215,
+            225
+          ],
+          "asset": "archive-poetic-review/textures/art-43-left.svg"
+        },
+        "right": {
+          "sample": [
+            33,
+            655,
+            215,
+            225
+          ],
+          "asset": "archive-poetic-review/textures/art-43-right.svg"
+        },
+        "top": {
+          "sample": [
+            33,
+            655,
+            215,
+            225
+          ],
+          "asset": "archive-poetic-review/textures/art-43-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            33,
+            655,
+            215,
+            225
+          ],
+          "asset": "archive-poetic-review/textures/art-43-bottom.svg"
+        }
+      },
+      "selection_note_html": "The heavy black areas obscure the relation between the figure and vessel; Dark Oval has a clearer balance of mass and open space.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-44",
+      "label": "The First Beat",
+      "previous_display_title": "Drum and Crown",
+      "caption": "A little anticipation becomes a gathering.",
+      "narrative": "Something is about to begin. Strangers wait together, sharing an eagerness they have not spoken aloud. Even before the first sound, the evening has brought them closer.",
+      "image": "approved-gallery-removals-round-4/media/images/art-archive/art-44.jpg",
+      "master": "approved-gallery-removals-round-4/media/artworks/art-44.jpg",
+      "width": 826,
+      "height": 1024,
+      "image_sha256": "beef62e91671abda2d308319b6a3fcda2970d4a2ce147a44dc8cb3a0faafca31",
+      "master_sha256": "7875c4793ec09465a8326e2438df58a62741552003a6852eaff67bad2bb323b8",
+      "presentation": {
+        "frame": "walnut",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            58,
+            133,
+            182,
+            256
+          ],
+          "asset": "archive-poetic-review/textures/art-44-left.svg"
+        },
+        "right": {
+          "sample": [
+            58,
+            133,
+            182,
+            256
+          ],
+          "asset": "archive-poetic-review/textures/art-44-right.svg"
+        },
+        "top": {
+          "sample": [
+            58,
+            133,
+            182,
+            256
+          ],
+          "asset": "archive-poetic-review/textures/art-44-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            58,
+            133,
+            182,
+            256
+          ],
+          "asset": "archive-poetic-review/textures/art-44-bottom.svg"
+        }
+      },
+      "selection_note_html": "The isolated cylindrical object and raised circular form read mainly as a study of construction and perspective. It contributes less emotional narrative to this gallery than the retained figures and symbolic interiors. This is a subjective curatorial judgment.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-45",
+      "label": "A Restless Hour",
+      "previous_display_title": "Troubled Face",
+      "caption": "You do not have to solve it tonight.",
+      "narrative": "The same thought returns, asking for an answer you cannot yet give. Eventually you let the question remain. Rest becomes possible before certainty does.",
+      "image": "approved-gallery-removals/media/images/art-archive/art-45.jpg",
+      "master": "approved-gallery-removals/media/artworks/art-45.jpg",
+      "width": 1024,
+      "height": 1000,
+      "image_sha256": "f7a1e7aae630ec415b5f32edc71f6a78e0e35d420a9c8509603af15d87db44af",
+      "master_sha256": "8555560a7886d833ebe58a75068b83a81cdc284f3212fda5b9d236cd03d53a30",
+      "presentation": {
+        "frame": "walnut",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            31,
+            780,
+            195,
+            170
+          ],
+          "asset": "archive-poetic-review/textures/art-45-left.svg"
+        },
+        "right": {
+          "sample": [
+            31,
+            780,
+            195,
+            170
+          ],
+          "asset": "archive-poetic-review/textures/art-45-right.svg"
+        },
+        "top": {
+          "sample": [
+            31,
+            780,
+            195,
+            170
+          ],
+          "asset": "archive-poetic-review/textures/art-45-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            31,
+            780,
+            195,
+            170
+          ],
+          "asset": "archive-poetic-review/textures/art-45-bottom.svg"
+        }
+      },
+      "selection_note_html": "The face is surrounded by pen trials and loose, competing lines. To my eye it reads more as a workbook page than a finished display piece.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-46",
+      "label": "The Familiar",
+      "previous_display_title": "Mug Landscape",
+      "caption": "An ordinary pleasure, faithfully yours.",
+      "narrative": "The day begins with a small ritual you would miss if it vanished. Its comfort asks for no occasion. Repetition has made a modest pleasure feel like home.",
+      "image": "portfolio-edit-round-5/media/images/art-archive/art-46.jpg",
+      "master": "portfolio-edit-round-5/media/artworks/art-46.jpg",
+      "width": 1024,
+      "height": 1012,
+      "image_sha256": "55fee51a54fd288f031affeda6d43597f0ce9c9b5ef5689a4b366b7d22084581",
+      "master_sha256": "794f10fb7594a099e8fbb2b5ed9b7ced1e191bad1c671695dd39c45dd98b8759",
+      "presentation": {
+        "frame": "walnut",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            31,
+            40,
+            97,
+            324
+          ],
+          "asset": "archive-poetic-review/textures/art-46-left.svg"
+        },
+        "right": {
+          "sample": [
+            31,
+            40,
+            97,
+            324
+          ],
+          "asset": "archive-poetic-review/textures/art-46-right.svg"
+        },
+        "top": {
+          "sample": [
+            31,
+            40,
+            97,
+            324
+          ],
+          "asset": "archive-poetic-review/textures/art-46-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            31,
+            40,
+            97,
+            324
+          ],
+          "asset": "archive-poetic-review/textures/art-46-bottom.svg"
+        }
+      },
+      "selection_note_html": "The decorated mug contributes an object exercise rather than a distinct extension of the selected figurative and symbolic work.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-48",
+      "label": "The Empty Room",
+      "previous_display_title": "Black Room",
+      "caption": "A place remembers being loved.",
+      "narrative": "You enter after everyone has gone. A conversation seems close enough to resume. For a moment, the quiet gives back the company it has been keeping.",
+      "image": "portfolio-edit-round-5/media/images/art-archive/art-48.jpg",
+      "master": "portfolio-edit-round-5/media/artworks/art-48.jpg",
+      "width": 1024,
+      "height": 984,
+      "image_sha256": "f0a289b15cf591ad8c195d3221c6610ba62330913629d20961fca4534bd420e1",
+      "master_sha256": "d0a95dd80863738cb1c633705d88ac6e6abd12fbd5c6ce0cc38d693d1ac868ec",
+      "presentation": {
+        "frame": "charcoal",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            51,
+            89,
+            205,
+            78
+          ],
+          "asset": "archive-poetic-review/textures/art-48-left.svg"
+        },
+        "right": {
+          "sample": [
+            51,
+            89,
+            205,
+            78
+          ],
+          "asset": "archive-poetic-review/textures/art-48-right.svg"
+        },
+        "top": {
+          "sample": [
+            51,
+            89,
+            205,
+            78
+          ],
+          "asset": "archive-poetic-review/textures/art-48-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            51,
+            89,
+            205,
+            78
+          ],
+          "asset": "archive-poetic-review/textures/art-48-bottom.svg"
+        }
+      },
+      "selection_note_html": "The rough dark interior repeats a theme communicated more clearly by Room and Hand.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-49",
+      "label": "The Keepsake",
+      "previous_display_title": "Long Handle",
+      "caption": "A whole day returns through a small thing.",
+      "narrative": "You find something you had no reason to save. With it comes a person, a place, a version of yourself. Your hand closes around it more carefully.",
+      "image": "portfolio-edit-round-5/media/images/art-archive/art-49.jpg",
+      "master": "portfolio-edit-round-5/media/artworks/art-49.jpg",
+      "width": 574,
+      "height": 1370,
+      "image_sha256": "c5d34d6aa97923c7a8bfcb7f4388956035d95aa8b9d286c6908845e9b6866cfe",
+      "master_sha256": "5dd61b9109d50de7f82dd9b17096c2ed55f6306e50be22bb9782d0676fb818f2",
+      "presentation": {
+        "frame": "walnut",
+        "mat": "linen",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            459,
+            685,
+            86,
+            479
+          ],
+          "asset": "archive-poetic-review/textures/art-49-left.svg"
+        },
+        "right": {
+          "sample": [
+            459,
+            685,
+            86,
+            479
+          ],
+          "asset": "archive-poetic-review/textures/art-49-right.svg"
+        },
+        "top": {
+          "sample": [
+            459,
+            685,
+            86,
+            479
+          ],
+          "asset": "archive-poetic-review/textures/art-49-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            459,
+            685,
+            86,
+            479
+          ],
+          "asset": "archive-poetic-review/textures/art-49-bottom.svg"
+        }
+      },
+      "selection_note_html": "The elongated narrow form has less legible spatial relationships than the retained figures at portfolio scale.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-53",
+      "label": "Unfolding",
+      "previous_display_title": "Pale Vessel",
+      "caption": "You can take your time.",
+      "narrative": "Something you have kept private is ready to be shared, though only a little. You begin with someone you trust. Their patience makes the next word easier.",
+      "image": "approved-gallery-removals/media/images/art-archive/art-53.jpg",
+      "master": "approved-gallery-removals/media/artworks/art-53.jpg",
+      "width": 654,
+      "height": 1202,
+      "image_sha256": "750742f0cd7dc99d3eea170fd7e716efa850dc53d601fb3023d03d99370ab982",
+      "master_sha256": "8c64ad3b7045ff59769e864a1edf6695ec85abb5c93a4f6ce2002eae4d5a5369",
+      "presentation": {
+        "frame": "oak",
+        "mat": "linen",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            39,
+            361,
+            47,
+            481
+          ],
+          "asset": "archive-poetic-review/textures/art-53-left.svg"
+        },
+        "right": {
+          "sample": [
+            39,
+            361,
+            47,
+            481
+          ],
+          "asset": "archive-poetic-review/textures/art-53-right.svg"
+        },
+        "top": {
+          "sample": [
+            39,
+            361,
+            47,
+            481
+          ],
+          "asset": "archive-poetic-review/textures/art-53-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            39,
+            361,
+            47,
+            481
+          ],
+          "asset": "archive-poetic-review/textures/art-53-bottom.svg"
+        }
+      },
+      "selection_note_html": "This is a distinct pencil study of a form also represented by Dark Oval (17). The ink version has a clearer presence at gallery size.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-54",
+      "label": "The Patient One",
+      "previous_display_title": "Seated Cloak",
+      "caption": "Some company asks for nothing.",
+      "narrative": "You sit together without searching for a subject. The minutes pass easily. Later, you realise how rare it is to be with someone and feel no need to perform.",
+      "image": "approved-gallery-removals-round-3/media/images/art-archive/art-54.jpg",
+      "master": "approved-gallery-removals-round-3/media/artworks/art-54.jpg",
+      "width": 655,
+      "height": 1199,
+      "image_sha256": "8f6523ae2e1fb67c0ee07f27634697ccb97aa87ca2810a6b8bf4415555d67c4c",
+      "master_sha256": "920624b41c66b0a61895a793bc15eb28c16b9e04872c181978f21beca102f8c3",
+      "presentation": {
+        "frame": "oak",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            33,
+            96,
+            98,
+            228
+          ],
+          "asset": "archive-poetic-review/textures/art-54-left.svg"
+        },
+        "right": {
+          "sample": [
+            33,
+            96,
+            98,
+            228
+          ],
+          "asset": "archive-poetic-review/textures/art-54-right.svg"
+        },
+        "top": {
+          "sample": [
+            33,
+            96,
+            98,
+            228
+          ],
+          "asset": "archive-poetic-review/textures/art-54-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            33,
+            96,
+            98,
+            228
+          ],
+          "asset": "archive-poetic-review/textures/art-54-bottom.svg"
+        }
+      },
+      "selection_note_html": "The current photograph is soft and the light pencil detail loses definition against the uneven paper tone. Reconsider if a clearer source becomes available.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-56",
+      "label": "Stillness",
+      "previous_display_title": "Serene Face",
+      "caption": "For once, the mind lets you rest.",
+      "narrative": "The argument you have been carrying grows quiet. Nothing outside has been settled, yet you can meet the day more gently. That small peace is worth returning to.",
+      "image": "portfolio-edit-round-5/media/images/art-archive/art-56.jpg",
+      "master": "portfolio-edit-round-5/media/artworks/art-56.jpg",
+      "width": 773,
+      "height": 1024,
+      "image_sha256": "76ab5ea60946076ab835cec0bd6b6f3bcbce650ad10bcabde6df01dc3e70ea19",
+      "master_sha256": "4a9a45afcf3f629caa1d1b6a6cdb37ee20560b5f0ca9e7e814300fe03cd25ed0",
+      "presentation": {
+        "frame": "oak",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            15,
+            51,
+            155,
+            143
+          ],
+          "asset": "archive-poetic-review/textures/art-56-left.svg"
+        },
+        "right": {
+          "sample": [
+            15,
+            51,
+            155,
+            143
+          ],
+          "asset": "archive-poetic-review/textures/art-56-right.svg"
+        },
+        "top": {
+          "sample": [
+            15,
+            51,
+            155,
+            143
+          ],
+          "asset": "archive-poetic-review/textures/art-56-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            15,
+            51,
+            155,
+            143
+          ],
+          "asset": "archive-poetic-review/textures/art-56-bottom.svg"
+        }
+      },
+      "selection_note_html": "The faint serene portrait contributes less individual presence than the selected Grandmother and The Witness.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-57",
+      "label": "Held Within",
+      "previous_display_title": "Folded Figure",
+      "caption": "There is a place to begin again.",
+      "narrative": "After giving too much of yourself away, you make one small choice for your own comfort. It feels awkward at first. Then it begins to feel like coming home.",
+      "image": "portfolio-edit-round-5/media/images/art-archive/art-57.jpg",
+      "master": "portfolio-edit-round-5/media/artworks/art-57.jpg",
+      "width": 712,
+      "height": 1104,
+      "image_sha256": "0986f0368b507fc1d92cb6c86a5f635920fca6f712b6e4f96dac2c30476b62ab",
+      "master_sha256": "66dc359d65c1b8b64c4fbbaaf3acff95d98c11efcef416cfcbd4318bc38de611",
+      "presentation": {
+        "frame": "walnut",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            570,
+            883,
+            107,
+            132
+          ],
+          "asset": "archive-poetic-review/textures/art-57-left.svg"
+        },
+        "right": {
+          "sample": [
+            570,
+            883,
+            107,
+            132
+          ],
+          "asset": "archive-poetic-review/textures/art-57-right.svg"
+        },
+        "top": {
+          "sample": [
+            570,
+            883,
+            107,
+            132
+          ],
+          "asset": "archive-poetic-review/textures/art-57-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            570,
+            883,
+            107,
+            132
+          ],
+          "asset": "archive-poetic-review/textures/art-57-bottom.svg"
+        }
+      },
+      "selection_note_html": "The folded outlined figure overlaps with Bowed Figure and Dark Oval, which communicate enclosure through a more decisive composition.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-58",
+      "label": "The Unspoken",
+      "previous_display_title": "Geometric Mask",
+      "caption": "You are more than you can explain.",
+      "narrative": "Even with someone close, a little of your experience remains beyond telling. You learn to let that be. Affection can stay curious without needing every answer.",
+      "image": "portfolio-edit-round-5/media/images/art-archive/art-58.jpg",
+      "master": "portfolio-edit-round-5/media/artworks/art-58.jpg",
+      "width": 830,
+      "height": 1024,
+      "image_sha256": "328179f8592bd850296225c61dbeedd8097b8706b4b8d7af3b66a109ab67eef8",
+      "master_sha256": "b0df4df29b4b4b9decffafc6b86e6a8861b6a608e134076227f887b3721d08c8",
+      "presentation": {
+        "frame": "charcoal",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            25,
+            51,
+            166,
+            102
+          ],
+          "asset": "archive-poetic-review/textures/art-58-left.svg"
+        },
+        "right": {
+          "sample": [
+            25,
+            51,
+            166,
+            102
+          ],
+          "asset": "archive-poetic-review/textures/art-58-right.svg"
+        },
+        "top": {
+          "sample": [
+            25,
+            51,
+            166,
+            102
+          ],
+          "asset": "archive-poetic-review/textures/art-58-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            25,
+            51,
+            166,
+            102
+          ],
+          "asset": "archive-poetic-review/textures/art-58-bottom.svg"
+        }
+      },
+      "selection_note_html": "The geometric mask adds another diagrammatic figure, while Black Dancer and Black Walker provide stronger directional movement on the same printed paper.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-59",
+      "label": "The Guardian",
+      "previous_display_title": "Deity with Staff",
+      "caption": "Courage can be borrowed.",
+      "narrative": "You remember someone who once made you feel safe. Their steadiness returns when you need it. A reassurance given years ago still helps you take the next step.",
+      "image": "portfolio-edit-round-5/media/images/art-archive/art-59.jpg",
+      "master": "portfolio-edit-round-5/media/artworks/art-59.jpg",
+      "width": 710,
+      "height": 1107,
+      "image_sha256": "7c7ab0db037a03693031eda0b4282031e44a8b293d979a1f86f24897103028ef",
+      "master_sha256": "45d7c7328b5e766e2425d88c8b384ef26ecc96ece5a7bd50d1fb9f73c7a37d92",
+      "presentation": {
+        "frame": "oak",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            50,
+            133,
+            142,
+            110
+          ],
+          "asset": "archive-poetic-review/textures/art-59-left.svg"
+        },
+        "right": {
+          "sample": [
+            50,
+            133,
+            142,
+            110
+          ],
+          "asset": "archive-poetic-review/textures/art-59-right.svg"
+        },
+        "top": {
+          "sample": [
+            50,
+            133,
+            142,
+            110
+          ],
+          "asset": "archive-poetic-review/textures/art-59-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            50,
+            133,
+            142,
+            110
+          ],
+          "asset": "archive-poetic-review/textures/art-59-bottom.svg"
+        }
+      },
+      "selection_note_html": "The light pencil deity study has less visual presence in the current photograph than the selected drawings and paintings.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-60",
+      "label": "The Wish",
+      "previous_display_title": "Red Ascent",
+      "caption": "Let there be a little more.",
+      "narrative": "You allow yourself to want something again, before you know how it could happen. The wishing itself changes the day. Possibility has found a way back in.",
+      "image": "portfolio-edit-round-5/media/images/art-archive/art-60.jpg",
+      "master": "portfolio-edit-round-5/media/artworks/art-60.jpg",
+      "width": 509,
+      "height": 1545,
+      "image_sha256": "6ed2cda2754a67fb9e222902b3be400685f6eba763f8c19ffbf2cdf692871fe8",
+      "master_sha256": "518d559ff745034c7bc6c21135ccaf69812a301f58a78a3ac652e0e3ba3731f8",
+      "presentation": {
+        "frame": "walnut",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            41,
+            154,
+            168,
+            139
+          ],
+          "asset": "archive-poetic-review/textures/art-60-left.svg"
+        },
+        "right": {
+          "sample": [
+            41,
+            154,
+            168,
+            139
+          ],
+          "asset": "archive-poetic-review/textures/art-60-right.svg"
+        },
+        "top": {
+          "sample": [
+            41,
+            154,
+            168,
+            139
+          ],
+          "asset": "archive-poetic-review/textures/art-60-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            41,
+            154,
+            168,
+            139
+          ],
+          "asset": "archive-poetic-review/textures/art-60-bottom.svg"
+        }
+      },
+      "selection_note_html": "The narrow red outline adds less distinct gesture than the retained Red Shadow Body and Black Dancer.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-61",
+      "label": "The Secret",
+      "previous_display_title": "Red Wrapped Body",
+      "caption": "A small happiness, kept close.",
+      "narrative": "You have good news you are not ready to share. For a while it belongs only to you, making ordinary moments quietly luminous with what is to come.",
+      "image": "approved-gallery-removals-round-3/media/images/art-archive/art-61.jpg",
+      "master": "approved-gallery-removals-round-3/media/artworks/art-61.jpg",
+      "width": 735,
+      "height": 1069,
+      "image_sha256": "52f818910332f3fde66dbce3a983a3188e076f64f8cb0225be0ed1af949e5838",
+      "master_sha256": "cc190ef0b52da90260bcef9e1a484d27a55a0db1bd607c7c89a05fae52dd2e0c",
+      "presentation": {
+        "frame": "walnut",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            588,
+            86,
+            96,
+            214
+          ],
+          "asset": "archive-poetic-review/textures/art-61-left.svg"
+        },
+        "right": {
+          "sample": [
+            588,
+            86,
+            96,
+            214
+          ],
+          "asset": "archive-poetic-review/textures/art-61-right.svg"
+        },
+        "top": {
+          "sample": [
+            588,
+            86,
+            96,
+            214
+          ],
+          "asset": "archive-poetic-review/textures/art-61-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            588,
+            86,
+            96,
+            214
+          ],
+          "asset": "archive-poetic-review/textures/art-61-bottom.svg"
+        }
+      },
+      "selection_note_html": "Prominent handwriting crosses the upper figure and competes with its outline. Archived to favour cleaner presentations in the main gallery.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-62",
+      "label": "Grace",
+      "previous_display_title": "Deity Study",
+      "caption": "An ease you did not have to earn.",
+      "narrative": "A kindness meets you on a day when you feel least deserving of it. You accept it slowly. Long afterward, its generosity changes how you welcome someone else.",
+      "image": "portfolio-edit-round-5/media/images/art-archive/art-62.jpg",
+      "master": "portfolio-edit-round-5/media/artworks/art-62.jpg",
+      "width": 853,
+      "height": 1024,
+      "image_sha256": "ac0ea15db698148e7aedbbb3d42c9d325f142568843c03d0b564f0e8ca0acd04",
+      "master_sha256": "29bd67306b3da95d5c23d0bafb53348ef733f818e5e417f1e7e1faedd28abc63",
+      "presentation": {
+        "frame": "oak",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            34,
+            205,
+            111,
+            184
+          ],
+          "asset": "archive-poetic-review/textures/art-62-left.svg"
+        },
+        "right": {
+          "sample": [
+            34,
+            205,
+            111,
+            184
+          ],
+          "asset": "archive-poetic-review/textures/art-62-right.svg"
+        },
+        "top": {
+          "sample": [
+            34,
+            205,
+            111,
+            184
+          ],
+          "asset": "archive-poetic-review/textures/art-62-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            34,
+            205,
+            111,
+            184
+          ],
+          "asset": "archive-poetic-review/textures/art-62-bottom.svg"
+        }
+      },
+      "selection_note_html": "The faint deity study is better retained as a source study than used to extend the focused portfolio sequence.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-63",
+      "label": "The Dreamer",
+      "previous_display_title": "Blue Cutout",
+      "caption": "There is room for another life within this one.",
+      "narrative": "In the middle of an ordinary afternoon, you imagine doing what you have postponed for years. For a moment the possibility feels close enough to touch. You keep that moment.",
+      "image": "approved-gallery-removals-round-4/media/images/art-archive/art-63.jpg",
+      "master": "approved-gallery-removals-round-4/media/artworks/art-63.jpg",
+      "width": 679,
+      "height": 1158,
+      "image_sha256": "eb1a2342ef361d39bd7228382e3e9572766a5cf2f5a9b83bc90a2ba49d8950d6",
+      "master_sha256": "32dab15adf76170880afe79f7788705ff3ca8a6ae6407d86f006cfa4e41cbb7d",
+      "presentation": {
+        "frame": "charcoal",
+        "mat": "mist",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            598,
+            58,
+            68,
+            579
+          ],
+          "asset": "archive-poetic-review/textures/art-63-left.svg"
+        },
+        "right": {
+          "sample": [
+            598,
+            58,
+            68,
+            579
+          ],
+          "asset": "archive-poetic-review/textures/art-63-right.svg"
+        },
+        "top": {
+          "sample": [
+            598,
+            58,
+            68,
+            579
+          ],
+          "asset": "archive-poetic-review/textures/art-63-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            598,
+            58,
+            68,
+            579
+          ],
+          "asset": "archive-poetic-review/textures/art-63-bottom.svg"
+        }
+      },
+      "selection_note_html": "The pale blue cutout repeats the faceless figure motif with less distinct gesture than the retained Bowed Figure, Folded Figure and Dark Oval. Archived to reduce thematic overlap. This is a subjective curatorial judgment.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-66",
+      "label": "A Passing Thought",
+      "previous_display_title": "Face on ruled paper",
+      "caption": "Even the briefest moment leaves something.",
+      "narrative": "You remember a person whose name has slipped away. A manner, a kindness, an inexplicable familiarity remains. Memory has kept what it needed without asking your permission.",
+      "image": "portfolio-edit-round-5/media/artworks/art-66.jpg",
+      "master": "portfolio-edit-round-5/media/artworks/art-66.jpg",
+      "width": 1959,
+      "height": 2773,
+      "image_sha256": "a73e7b3e95e6be623c43798cefeb84e314462d03cc4ecfeb025e4797849a4bbc",
+      "master_sha256": "a73e7b3e95e6be623c43798cefeb84e314462d03cc4ecfeb025e4797849a4bbc",
+      "presentation": {
+        "frame": "walnut",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            1606,
+            111,
+            294,
+            194
+          ],
+          "asset": "archive-poetic-review/textures/art-66-left.svg"
+        },
+        "right": {
+          "sample": [
+            1606,
+            111,
+            294,
+            194
+          ],
+          "asset": "archive-poetic-review/textures/art-66-right.svg"
+        },
+        "top": {
+          "sample": [
+            1606,
+            111,
+            294,
+            194
+          ],
+          "asset": "archive-poetic-review/textures/art-66-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            1606,
+            111,
+            294,
+            194
+          ],
+          "asset": "archive-poetic-review/textures/art-66-bottom.svg"
+        }
+      },
+      "selection_note_html": "The ruled-paper face reads as a workbook drawing with competing marks; the selected portraits present a more resolved visual statement.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    },
+    {
+      "id": "art-55",
+      "label": "The Unhurried",
+      "previous_display_title": "Back View Dancer II",
+      "caption": "Let the gladness linger.",
+      "narrative": "A happy moment has already passed, but you are in no hurry to leave it. You carry its ease into the next small thing you do.",
+      "image": "photos/IMG_5903.JPG",
+      "master": "photos/IMG_5903.JPG",
+      "width": 2021,
+      "height": 3951,
+      "image_sha256": "21887ef82340e44d6afe166cf977d5be9e28321826e43698f3459b265d09f970",
+      "master_sha256": "21887ef82340e44d6afe166cf977d5be9e28321826e43698f3459b265d09f970",
+      "presentation": {
+        "frame": "walnut",
+        "mat": "ivory",
+        "fill_size": "cover"
+      },
+      "edges": {
+        "left": {
+          "sample": [
+            40,
+            474,
+            344,
+            1580
+          ],
+          "asset": "archive-poetic-review/textures/art-55-left.svg"
+        },
+        "right": {
+          "sample": [
+            40,
+            474,
+            344,
+            1580
+          ],
+          "asset": "archive-poetic-review/textures/art-55-right.svg"
+        },
+        "top": {
+          "sample": [
+            40,
+            474,
+            344,
+            1580
+          ],
+          "asset": "archive-poetic-review/textures/art-55-top.svg"
+        },
+        "bottom": {
+          "sample": [
+            40,
+            474,
+            344,
+            1580
+          ],
+          "asset": "archive-poetic-review/textures/art-55-bottom.svg"
+        }
+      },
+      "selection_note_html": "Attribution is resolved. The back-view line figure remains outside this selection because dance and bodily gesture are already represented by Ritual Dancer, Black Dancer and Carrying Dance. This is a curatorial choice, not an authorship concern.",
+      "status": "archived",
+      "text_status": "Contemporary poetic interpretation; not a claim about biography or original intent.",
+      "background_note": "Use a visually chosen clean background patch from this photograph, scaled proportionally to preserve its grain. Applied only to empty inner gaps; no changes to the source image."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "purpose": "Display-only window above the embedded printed title. The full captioned refined source is enlarged separately for the JPEG print download. Screen titles and captions come from the artwork catalog and are rendered as readable HTML inside the frame.",
+  "art_bottom_fraction": {
+    "art-64": 0.75,
+    "art-20": 0.75,
+    "art-22": 0.883,
+    "art-19": 0.862,
+    "yellow-and-green": 0.775,
+    "art-05": 0.815,
+    "art-17": 0.85,
+    "art-24": 0.86,
+    "art-03": 0.85,
+    "art-30": 0.71,
+    "art-29": 0.837,
+    "art-07": 0.775,
+    "art-23": 0.84,
+    "art-01": 0.835,
+    "art-47": 0.832,
+    "art-15": 0.86,
+    "art-50": 0.815,
+    "art-14": 0.775,
+    "art-25": 0.852,
+    "art-27": 0.835,
+    "art-18": 0.838,
+    "art-10": 0.802
+  }
+}

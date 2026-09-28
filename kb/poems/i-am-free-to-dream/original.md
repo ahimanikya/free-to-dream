@@ -42,3 +42,16 @@ Author-supplied wording; spelling retained.
 
 
 Written during the author’s college years, before 1993, according to the author. The exact composition date has not been established.
+
+
+## Attribution & source
+
+**Original poem © Ahimanikya Satapathy.** Written in Odia; the author's supplied wording and spelling are preserved here.
+
+Published on [Ahimanikya Kabita Prusta](https://kabitaprusta.blogspot.com/), the author's poetry blog. [Read the blog publication](https://kabitaprusta.blogspot.com/2018/11/odia-poem.html).
+
+## Carry the poem forward
+
+This poem is shared in this collection under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Credit Ahimanikya Satapathy, link to this source and the license, and identify your changes when adapting it. [Credits & reuse](../../guides/rights.md).
+
+The song arrangement adds pauses and repetitions for music. The poem above preserves the original form.

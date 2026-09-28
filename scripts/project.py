@@ -290,6 +290,260 @@ def render_markdown(body, path):
 
 
 
+def jpeg_dimensions(data):
+    """Read a JPEG frame header without adding an image dependency to site builds."""
+    if not data.startswith(b'\xff\xd8'):
+        raise ValueError('4x print is not hydrated or is not a JPEG')
+    position = 2
+    while position < len(data):
+        if data[position] != 255:
+            break
+        while position < len(data) and data[position] == 255:
+            position += 1
+        if position >= len(data):
+            break
+        marker = data[position]
+        position += 1
+        if marker in (0xD9, 0xDA):
+            break
+        if marker == 0x01 or 0xD0 <= marker <= 0xD8:
+            continue
+        length = int.from_bytes(data[position:position+2], 'big')
+        if length < 2 or position + length > len(data):
+            break
+        if marker in (0xC0, 0xC1, 0xC2, 0xC3, 0xC5, 0xC6, 0xC7, 0xC9, 0xCA, 0xCB, 0xCD, 0xCE, 0xCF):
+            if length < 8:
+                break
+            height = int.from_bytes(data[position+3:position+5], 'big')
+            width = int.from_bytes(data[position+5:position+7], 'big')
+            if width and height:
+                return width, height
+            break
+        position += length
+    raise ValueError('Missing or malformed JPEG frame header')
+
+
+def validate_art_prints():
+    """Fail before publishing missing, stale or unhydrated enlarged downloads."""
+    for item in json.loads((ROOT/'catalog/ai-artworks.json').read_text())['artworks']:
+        edition = item.get('print_download')
+        if not edition:
+            continue
+        path = confined(edition['file'])
+        if not path.is_relative_to((ROOT/'media/prints').resolve()) or not path.is_file():
+            raise ValueError('Missing 4x print download')
+        data = path.read_bytes()
+        dimensions = jpeg_dimensions(data)
+        expected = (item['width'] * 4, item['height'] * 4)
+        if dimensions != expected or dimensions != (edition['width'], edition['height']) or edition['scale'] != 4:
+            raise ValueError('Incorrect 4x print dimensions')
+        source_hash = hashlib.sha256(confined(item['file']).read_bytes()).hexdigest()
+        if edition['source_sha256'] != item['sha256'] or source_hash != item['sha256']:
+            raise ValueError('Stale 4x print source')
+        if hashlib.sha256(data).hexdigest() != edition['sha256']:
+            raise ValueError('4x print checksum mismatch')
+
+    for item in json.loads((ROOT/'catalog/artworks.json').read_text())['artworks']:
+        edition = item.get('print_edition')
+        if not edition:
+            continue
+        path = confined(edition['file'])
+        if not path.is_relative_to((ROOT/'media/prints').resolve()) or not path.is_file():
+            raise ValueError('Missing original 4x print download')
+        source_data = confined(item['master']).read_bytes()
+        if source_data.startswith(b'version https://git-lfs.github.com/spec/v1'):
+            raise ValueError('Original artwork source is not hydrated')
+        source_hash = hashlib.sha256(source_data).hexdigest()
+        if source_hash != item['master_sha256']:
+            raise ValueError('Original artwork source checksum mismatch')
+        layout_key = hashlib.sha256(json.dumps([item['master_sha256'], item['label'], item['caption'], ('original-caption-wide-v2' if item['master_width'] > item['master_height'] else 'original-caption-v1')], ensure_ascii=False).encode()).hexdigest()
+        if source_hash != edition['source_sha256'] or source_hash != item['master_sha256'] or layout_key != edition['layout_key']:
+            raise ValueError('Stale original 4x print source or caption')
+        data = path.read_bytes()
+        if jpeg_dimensions(data) != (edition['width'], edition['height']):
+            raise ValueError('Incorrect original 4x print dimensions')
+        if hashlib.sha256(data).hexdigest() != edition['sha256']:
+            raise ValueError('Original 4x print checksum mismatch')
+        if edition['scale'] != 4 or (edition['artwork_width'], edition['artwork_height']) != (item['master_width']*4, item['master_height']*4):
+            raise ValueError('Incorrect original 4x artwork dimensions')
+
+
+def ai_artwork_page():
+    works = json.loads((ROOT/'catalog/ai-artworks.json').read_text())['artworks']
+    for item in works:
+        asset = confined(item['file'])
+        if not asset.is_relative_to((ROOT/'media').resolve()) or not asset.is_file():
+            raise ValueError('Missing AI artwork source')
+        with asset.open('rb') as stream:
+            if stream.read(80).startswith(b'version https://git-lfs.github.com/spec/v1'):
+                raise ValueError('AI artwork source is not hydrated. Retrieve the Git LFS artwork files.')
+        if hashlib.sha256(asset.read_bytes()).hexdigest() != item['sha256']:
+            raise ValueError('AI artwork source does not match its recorded checksum')
+    return artist_collection_page(refined=True)
+
+
+
+
+def artwork_display_order(works):
+    tall = [work for work in works if work['width'] / work['height'] < .8]
+    wide = [work for work in works if work['width'] / work['height'] >= .8]
+    ordered = []
+    while tall or wide:
+        for group in (tall, wide):
+            ordered.extend(group[:3])
+            del group[:3]
+    return ordered
+
+
+def art_credits_content(body, path):
+    lead, sections = body.split('## Design roots and credits', 1)
+    credits, collection = sections.split('## The artist’s collection', 1)
+    return '<article class="art-credits"><div class="art-credits-lead"><div class="eyebrow">THE ROOTS OF THE DESIGN</div>' + render_markdown(lead,path) + '</div><div class="art-credits-body">' + render_markdown('## Design roots and credits'+credits,path) + '</div><section class="art-credits-collection">' + render_markdown('## The artist’s collection'+collection,path) + '</section></article>'
+
+
+def screen_print(image_markup, title, caption, ident, width, height):
+    cuts = json.loads((ROOT/'catalog/artwork-screen-layouts.json').read_text())['art_bottom_fraction']
+    bottom = cuts[ident]
+    if not 0 < bottom < 1:
+        raise ValueError('Invalid screen artwork boundary')
+    ratio = width / (height * bottom)
+    return f'<div class="screen-print-paper"><div class="screen-art-space"><div class="screen-art-crop screen-art-{esc(ident,quote=True)}">{image_markup}</div></div><div class="screen-print-caption"><h2 data-print-title>{esc(title)}</h2><p data-print-caption>{esc(caption)}</p><span>Ahimanikya Satapathy</span></div></div>'
+
+
+def artist_collection_page(refined=False):
+    data = json.loads((ROOT/'catalog/artworks.json').read_text())
+    works = data['artworks']
+    if refined:
+        editions = {edition['source_artwork_id']: edition for edition in json.loads((ROOT/'catalog/ai-artworks.json').read_text())['artworks'] if edition.get('source_artwork_id')}
+        works = [{**work, 'image': editions[work['id']]['file'], 'width': editions[work['id']]['width'], 'height': editions[work['id']]['height']} for work in works if work['id'] in editions]
+    cards = {}
+    for item in works:
+        asset = confined(item['image'])
+        master = confined(item['master'])
+        if not any(asset.is_relative_to((ROOT/folder).resolve()) for folder in ('media/images', 'media/artworks', 'media/ai-artworks')) or not asset.is_file():
+            raise ValueError('Missing artwork preview')
+        if not master.is_relative_to((ROOT/'media/artworks').resolve()) or not master.is_file():
+            raise ValueError('Missing full-size artwork source')
+        with master.open('rb') as stream:
+            if stream.read(80).startswith(b'version https://git-lfs.github.com/spec/v1'):
+                raise ValueError('Artwork source is not hydrated. Retrieve the Git LFS artwork files.')
+        if hashlib.sha256(master.read_bytes()).hexdigest() != item['master_sha256']:
+            raise ValueError('Artwork source does not match its recorded checksum')
+        url = esc(str(asset.relative_to(ROOT.resolve())),quote=True)
+        detail_url = 'artwork--'+esc(item['id'],quote=True)+'.html'+('#ai-edition' if refined else '#original-image')
+        label = esc(item['label'])
+        caption = f'<p class="portfolio-caption">{esc(item["caption"])}</p>' if item.get('caption') else ''
+        ratio = item['width'] / item['height']
+        proportion = 'tall' if ratio < .8 else 'wide'
+        presentation = item.get('presentation', {})
+        finish = 'walnut'
+        mat = 'linen'
+        if finish not in ('oak', 'walnut', 'charcoal') or mat not in ('ivory', 'linen', 'mist'):
+            raise ValueError('Unknown artwork frame or mat finish')
+        edge_fill = '<span class="art-edge-fill" aria-hidden="true"><span class="art-edge-left"></span><span class="art-edge-right"></span><span class="art-edge-top"></span><span class="art-edge-bottom"></span></span>'
+        frame_style = ''  # Print geometry is defined by the external screen-layout stylesheet.
+        treatment = 'refined-frame' if refined else 'cloth-'+esc(item['id'], quote=True)
+        if refined:
+            edge_fill = ''
+        image_label = 'refined print of artwork by' if refined else 'artwork by'
+        image_markup = f'<img src="{url}" width="{item["width"]}" height="{item["height"]}" loading="lazy" alt="{label}, {image_label} Ahimanikya Satapathy">'
+        if refined:
+            inner = screen_print(image_markup, item['label'], item['caption'], item['id'], item['width'], item['height'])
+        else:
+            treatment = 'original-print-frame'
+            inner = f'<div class="original-print-paper"><div class="original-print-image">{image_markup}</div><div class="original-print-caption"><h2>{label}</h2><p>{esc(item.get("caption", ""))}</p><span>Ahimanikya Satapathy</span></div></div>'
+        cards[item['id']] = f'''<figure class="portfolio-card" id="{esc(item['id'],quote=True)}"><a class="art-wall" href="{detail_url}" aria-label="Read about {label}"><div class="art-frame frame-{finish} mat-{mat} frame-{proportion} {treatment}"{frame_style}><div class="art-mat">{inner}</div></div></a></figure>'''
+    tall = [work for work in works if work['width'] / work['height'] < .8]
+    wide = [work for work in works if work['width'] / work['height'] >= .8]
+    rows = []
+    while tall or wide:
+        for group in (tall, wide):
+            if group:
+                row, group[:3] = group[:3], []
+                rows.append('<div class="portfolio-row">'+''.join(cards[work['id']] for work in row)+'</div>')
+    heading = 'Art, in<br>another light.' if refined else 'The canvas<br>remembers.'
+    introduction = 'The same feeling, gently refined. Print editions of the original paintings and drawings, each with its story close at hand.' if refined else 'A collection of moments that stayed. Paintings and drawings, each with a story of its own.'
+    edition_name = 'REFINED PRINTS' if refined else 'ORIGINAL WORKS'
+    edition_switch = '' if refined else '<nav class="art-edition-switch" aria-label="Artwork editions"><a href="artworks.html">Refined prints</a><a href="original-artworks.html" aria-current="page">Original art</a></nav>'
+    gallery_heading = '' if refined else f'<div class="gallery-threshold">{edition_switch}<span class="art-count">{len(works):02d} {edition_name}</span></div>'
+    slideshow_entry, slideshow_dialog = (ROOT/'web/art-slideshow.html').read_text().split('<dialog', 1)
+    slideshow_dialog = '<dialog' + slideshow_dialog
+    preparation_note = '<p class="art-preparation-note">AI-assisted cleanup and print preparation. Explore each artwork to compare its original and refined edition.</p>' if refined else ''
+    return f'''<section class="portfolio-intro" id="art-journal" tabindex="-1"><div><div class="eyebrow">ART BY AHIMANIKYA SATAPATHY</div><h1>{heading}</h1></div><div class="portfolio-intro-copy"><p>{introduction}</p><a class="text-link" href="index.html#story">The person behind the work →</a></div></section>{gallery_heading}<section id="art-collection" tabindex="-1" class="portfolio-collection art-index" aria-label="{edition_name.title()} index"><div class="portfolio-grid">{''.join(rows)}</div></section><section class="portfolio-closing"><div><div class="eyebrow">BEYOND THE GALLERY</div><h2>Let a feeling stay.</h2>{slideshow_entry}</div><div><p>I keep prints of The Witness in my Bhubaneswar home, Bangalore home and office. Something made years ago still brings feeling into a room.</p><p>Each artwork opens into a story, with original images and available print editions to explore.</p>{preparation_note}</div></section>{slideshow_dialog}'''
+
+
+
+def artwork_detail_page(item, works):
+    title = esc(item['label'])
+    master = esc(item['master'], quote=True)
+    image = esc(item['image'], quote=True)
+    presentation = item.get('presentation', {})
+    variant = 'tall' if item['width'] / item['height'] < .8 else 'wide'
+    fills = '<span class="art-edge-fill" aria-hidden="true">' + ''.join(
+        f'<span class="art-edge-{side}"></span>' for side in ('left', 'right', 'top', 'bottom')) + '</span>'
+    reflections = ''.join(f'<p>{esc(paragraph)}</p>' for paragraph in item.get('detail_reflections', [item['narrative']]))
+    dimensions = f"{item['master_width']:,} × {item['master_height']:,} pixels"
+    printing = ''
+    if item.get('print_edition'):
+        edition = item['print_edition']
+        printing += f'<a class="button" href="{esc(edition["file"],quote=True)}" download>Download original 4× print ↓</a><p class="small">{edition["width"]:,} × {edition["height"]:,} pixels · {esc(edition["method_label"])}. {esc(edition["note"])}</p>'
+    canvas_section = canvas_edition_content(item['canvas_edition']) if item.get('canvas_edition') else ''
+    ai = next((work for work in json.loads((ROOT/'catalog/ai-artworks.json').read_text())['artworks'] if work.get('source_artwork_id') == item['id']), None)
+    ai_section = ''
+    if ai:
+        download = ai.get('print_download', ai)
+        download_format = 'JPEG' if ai.get('print_download') else 'PNG'
+        download_label = 'Download 4× print image ↓' if ai.get('print_download') else 'Download refined print ↓'
+        print_notes = ''
+        if ai.get('print_download'):
+            print_notes = '<p class="small">Enlarged 4× in width and height, with the title, poetic caption and artist credit embedded. Gentle resampling preserves the composition; it does not add new detail. For a large canvas, check a sample with your printer.</p>'
+        ai_label = "REFINEMENT PREVIEW" if ai.get("review_status") == "awaiting_artist_review" else "REFINED PRINT EDITION"
+        ai_section = f'''<section class="art-detail-print" id="refined-download" aria-labelledby="ai-edition-title"><div><div class="eyebrow">{ai_label}</div><h2 id="ai-edition-title">Keep what moves you.</h2><p>The artwork, its poetic line and artist credit, ready to download together.</p></div><div><a class="button" href="{esc(download['file'],quote=True)}" download>{download_label}</a><details class="edition-details"><summary>About this edition &amp; printing</summary><p>{esc(ai['description'])}</p><p class="small">{esc(ai['origin'])}</p><p class="small">{download['width']:,} × {download['height']:,} pixels · {download_format}. Choose a print size with your printer using these dimensions.</p>{print_notes}</details></div></section>'''
+
+    original_figure = f'''<figure id="original-image"><a class="art-wall" href="{master}" aria-label="View full-resolution original: {title}"><div class="art-frame frame-{presentation.get('frame','walnut')} mat-{presentation.get('mat','ivory')} frame-{variant} cloth-{item['id']}"><div class="art-mat"><div class="art-window">{fills}<img src="{image}" width="{item['width']}" height="{item['height']}" alt="{title}, original artwork by Ahimanikya Satapathy"></div></div></div></a><figcaption>Original artwork · Ahimanikya Satapathy{(' · '+str(item['date'])) if item.get('date') else ''}<a class="art-enlarge" href="{master}">View full image ↗</a></figcaption></figure>'''
+    original_downloads = f'''<section class="art-detail-print" id="print"><div><div class="eyebrow">THE ORIGINAL</div><h2>Keep what moves you.</h2><p>Download the artwork for a print of your own. Keep its proportions and signature; the frame shown here is for display.</p></div><div><a class="button" href="{master}" download>Download original image ↓</a><p class="small">{dimensions} · original file, unchanged</p>{printing}<p class="small">For a large canvas, ask your printer to check a sample at the intended size. <a href="guides--rights.html">Attribution and reuse →</a></p></div></section>'''
+    display_id = 'ai-edition' if ai else 'original'
+    primary_figure = original_figure
+    original_section = original_downloads
+    if ai:
+        refined_variant = 'tall'
+        screen_image = f'<img src="{esc(ai["file"],quote=True)}" width="{ai["width"]}" height="{ai["height"]}" alt="{title}, refined artwork by Ahimanikya Satapathy">'
+        print_markup = screen_print(screen_image, item['label'], item['caption'], item['id'], ai['width'], ai['height'])
+        primary_figure = f'''<figure><a class="art-wall" href="{esc(ai['file'],quote=True)}" aria-label="View full refined print: {title}"><div class="art-frame frame-walnut mat-linen frame-{refined_variant} refined-frame"><div class="art-mat">{print_markup}</div></div></a><figcaption>Refined print edition<a class="art-enlarge" href="{esc(ai['file'],quote=True)}">View full image ↗</a></figcaption></figure>'''
+        original_section = f'<details class="original-art-disclosure" id="original"><summary>View original artwork</summary>{original_figure}{original_downloads}{canvas_section}</details>'
+        canvas_section = ''
+    gallery_page = 'artworks.html' if ai else 'original-artworks.html'
+    works = artwork_display_order(works)
+    index = works.index(item)
+    previous, following = works[(index-1) % len(works)], works[(index+1) % len(works)]
+    edition_link = '<a href="#refined-download">Print download</a><a href="#original">Original artwork</a>' if ai else '<a href="#print">Original download</a>'
+    canvas_link = '<a href="#canvas-edition">Canvas edition ↙</a>' if canvas_section else ''
+    return f'''<article class="art-detail"><div class="art-detail-heading"><div class="eyebrow">ART BY AHIMANIKYA SATAPATHY</div><h1>{title}</h1><nav class="art-section-links" aria-label="On this artwork page">{edition_link}{canvas_link}</nav></div>
+<div class="art-detail-layout" id="{display_id}">{primary_figure}
+<div class="art-detail-story"><p class="art-detail-phrase">{esc(item['caption'])}</p><div class="art-reflections">{reflections}</div><details class="edition-details"><summary>About this reading</summary><p class="art-reading-note">A contemporary poetic reading of the original artwork.</p></details></div></div>
+{ai_section}{original_section}
+{canvas_section}<nav class="art-detail-navigation" aria-label="More artwork"><a href="artwork--{previous['id']}.html" aria-label="Previous artwork: {esc(previous['label'],quote=True)}"><span>← PREVIOUS WORK</span><strong>{esc(previous['label'])}</strong></a><a class="return-gallery" href="{gallery_page}#{item['id']}">All artworks</a><a href="artwork--{following['id']}.html" aria-label="Next artwork: {esc(following['label'],quote=True)}"><span>NEXT WORK →</span><strong>{esc(following['label'])}</strong></a></nav></article>'''
+
+
+def canvas_edition_content(printing):
+    ident = 'canvas'
+    def image_url(filename):
+        asset = confined(filename)
+        if not asset.is_file() or not asset.is_relative_to((ROOT/'media').resolve()):
+            raise ValueError('Canvas preview must be an existing public image')
+        return esc(str(asset.relative_to(ROOT.resolve())), quote=True)
+    pdf = confined(printing['file'])
+    if not pdf.is_relative_to((ROOT/'media/prints').resolve()) or pdf.suffix.lower() != '.pdf' or not pdf.is_file():
+        raise ValueError('Print edition must be an existing public PDF')
+    with pdf.open('rb') as stream:
+        if stream.read(5) != b'%PDF-':
+            raise ValueError('Print PDF is not hydrated. Run git lfs pull --include="media/prints/*.pdf" --exclude=""')
+    pdf_url = esc(str(pdf.relative_to(ROOT.resolve())), quote=True)
+    preview = image_url(printing['preview'])
+    print_panel = f'''<section class="canvas-edition" aria-labelledby="{ident}-canvas-title"><a class="canvas-preview" href="{pdf_url}" aria-label="View the canvas print PDF"><img src="{preview}" width="750" height="1500" loading="lazy" alt="Canvas print layout of the portrait with the artist’s original signature, without the poster caption"></a><div><div class="eyebrow">THE EDITION THE ARTIST LIVES WITH</div><h3 id="{ident}-canvas-title">{esc(printing['label'])}</h3><p>Prepared for cloth canvas, and used by Ahimanikya for the prints in his two homes and office. The signed artwork fills the page.</p><p class="canvas-credit">{esc(printing['credit'])}</p><div class="action-row"><a class="button" href="{pdf_url}" download>Download canvas PDF ↓</a><a class="text-link" href="{pdf_url}">View PDF ↗</a></div><p class="art-edition-note">PDF · {printing['size_mb']} MB · {printing['width_inches']} × {printing['height_inches']} inches · supplied file, unchanged</p><details><summary>Before you print</summary><p>The embedded image is {printing['pixels_wide']:,} × {printing['pixels_high']:,} pixels: 72 ppi at 24 × 48 inches. This is the artist-prepared edition the artist has used successfully on cloth canvas. Preserve its proportions and signature; ask your printer about canvas wrap margins.</p></details></div></section>'''
+    return print_panel.replace('<section class="canvas-edition"', '<section class="canvas-edition" id="canvas-edition"')
+
+
 def effective_settings_panel(slug, config):
     policy = config.get('_settings_policy')
     if not policy:
@@ -318,8 +572,16 @@ def page_metadata(title, description, config, filename, language=None, media=Non
     graph = [{'@type':'WebSite', '@id':site_id, 'url':base, 'name':'World is One — A Poem Without Borders', 'creator':{'@id':author_id}},
              {'@type':'Person', '@id':author_id, 'name':config.get('author', 'Ahimanikya Satapathy'),
               'sameAs':[x['url'] for x in config.get('author_links', []) if safe_url(x.get('url',''))]}, page]
-    if filename in ('index.html', 'languages.html'):
+    if filename in ('index.html', 'languages.html', 'artworks.html', 'original-artworks.html', 'ai-artworks.html'):
         page['@type'] = 'CollectionPage'
+    if config.get('_artwork'):
+        art = config['_artwork']
+        page['mainEntity'] = {'@type':'VisualArtwork', 'name':art['label'], 'image':base+art['master'], 'creator':{'@id':author_id}, 'license':CONTENT_LICENSE, 'description':art['caption']}
+    if filename == 'poems--i-am-free-to-dream--original.html':
+        source_meta, _ = read_concept(KB/'poems/i-am-free-to-dream/original.md')
+        work = {'@type':'CreativeWork', '@id':canonical+'#poem', 'url':canonical+'#poem-text', 'name':source_meta['title'], 'author':{'@id':author_id}, 'inLanguage':'or', 'genre':'Poetry', 'license':CONTENT_LICENSE, 'isAccessibleForFree':True, 'creativeWorkStatus':'Author-supplied original', 'citation':[item['resource'] for item in source_meta.get('sources',[]) if safe_url(item.get('resource',''))]}
+        page['mainEntity'] = {'@id':work['@id']}
+        graph.append(work)
     if language:
         page['about'] = {'@type':'Language', 'name':language['language']}
         if has_lyrics(language):
@@ -329,8 +591,10 @@ def page_metadata(title, description, config, filename, language=None, media=Non
                     'license':CONTENT_LICENSE, 'isAccessibleForFree':True}
             if language['slug'] == 'odia':
                 work['author'] = {'@id':author_id}
+                work['creativeWorkStatus'] = 'Song arrangement; author-source'
+                work['isBasedOn'] = {'@id':base+'poems--i-am-free-to-dream--original.html#poem'}
             else:
-                work['isBasedOn'] = {'@type':'CreativeWork', '@id':base+'poems--i-am-free-to-dream--languages--odia.html#poem', 'name':'I Am Free to Dream', 'author':{'@id':author_id}}
+                work['isBasedOn'] = {'@type':'CreativeWork', '@id':base+'poems--i-am-free-to-dream--original.html#poem', 'name':'I Am Free to Dream', 'author':{'@id':author_id}}
             page['mainEntity'] = {'@id':work['@id']}
             graph.append(work)
     if media and publicly_available(media) and safe_url(media.get('public_url','')):
@@ -420,7 +684,9 @@ def shell(title, content, config, local=False, filename='index.html', descriptio
     metadata = ''
     if config.get('site_url'):
         canonical = config['site_url'].rstrip('/') + '/' + (canonical_filename or filename)
-        cover = config['site_url'].rstrip('/') + '/media/images/cover.png'
+        cover_image = 'media/artworks/art-64.png' if filename in ('artworks.html', 'original-artworks.html', 'ai-artworks.html') else 'media/images/cover.png'
+        cover_image = config.get('_artwork', {}).get('image', cover_image)
+        cover = config['site_url'].rstrip('/') + '/' + cover_image
         metadata = f'<link rel="canonical" href="{esc(canonical, quote=True)}"><meta property="og:url" content="{esc(canonical, quote=True)}"><meta property="og:image" content="{esc(cover, quote=True)}"><meta name="twitter:card" content="summary_large_image">'
     if local or filename in ('timing.html', 'contribute.html', 'engagement.html'):
         metadata += '<meta name="robots" content="noindex,follow">'
@@ -437,13 +703,19 @@ def shell(title, content, config, local=False, filename='index.html', descriptio
         metadata += f'<meta property="og:{kind}" content="{esc(source, quote=True)}"><meta property="og:{kind}:secure_url" content="{esc(source, quote=True)}">'
         if mime and mime.startswith(kind + '/'):
             metadata += f'<meta property="og:{kind}:type" content="{esc(mime, quote=True)}">'
+    navigation_items = [('index.html', 'Home'), ('languages.html', 'Languages'), ('artworks.html', 'Art Journal'), ('poems--i-am-free-to-dream--original.html', 'Original poem'), ('guides--public-reference.html', 'Reference'), ('contribute.html', 'Contribute')]
+    active_page = 'artworks.html' if filename.startswith('artwork--') or filename in ('ai-artworks.html', 'original-artworks.html') else ('languages.html' if language else filename)
+    navigation_links = ''.join(f'<a href="{href}"' + (' aria-current="page"' if href == active_page else '') + f'>{label}</a>' for href, label in navigation_items)
+    art_frame_styles = f'<link rel="stylesheet" href="assets/art-frames.css?v={config.get("_asset_version", "1")}">' if filename in ('artworks.html', 'original-artworks.html', 'ai-artworks.html') or filename.startswith('artwork--') or 'data-language-art' in content or 'data-home-art' in content else ''
+    if art_frame_styles:
+        art_frame_styles += f'<link rel="stylesheet" href="assets/art-caption-layouts.css?v={config.get("_asset_version", "1")}">'
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{esc(description, quote=True)}"><meta property="og:title" content="{esc(title, quote=True)} · World is One"><meta property="og:description" content="{esc(description, quote=True)}"><meta property="og:type" content="website">{metadata}
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https:; img-src 'self'{analytics_images}; media-src 'self' https: blob:; style-src 'self'; script-src 'self' 'sha256-{data_hash}'{analytics_script}; object-src 'none'; base-uri 'self'; form-action 'none'">
-<title>{esc(title)} · World is One</title><link rel="stylesheet" href="assets/style.css?v={config.get("_asset_version","1")}"><script type="module" src="assets/site.js?v={config.get("_asset_version","1")}"></script></head>
-<body data-analytics-id="{esc(analytics_id,quote=True)}" data-repository="{esc(config.get('repository_url', ''), quote=True)}" data-site-url="{esc(config.get('site_url', ''), quote=True)}">{preview}<header><a class="brand" href="index.html"><img src="assets/odia-lotus.svg" alt="" width="38" height="38" aria-hidden="true">WORLD IS ONE<span>A POEM WITHOUT BORDERS</span></a><nav aria-label="Main navigation"><a href="languages.html">Languages</a><a href="poems--i-am-free-to-dream--original.html">The poem</a><a href="guides--public-reference.html">Reference</a><a href="contribute.html">Contribute</a></nav></header>
-<main>{content}</main>{(ROOT/"web/index-player.html").read_text() if config.get("_has_audio") else ""}<footer>Original poem © Ahimanikya Satapathy · AI-assisted adaptations and generated recordings are identified on their pages.<br><a href="guides--rights.html">Credits &amp; rights</a> · <a href="guides--artwork.html">Art of the site</a> · <a href="contribute.html?type=recording">Submit your version</a> · <a href="kb/index.md">Knowledge base</a> · <a href="reference.json">Reference data</a> · <a href="engagement.html">Engagement</a> · <a href="guides--privacy.html">Privacy</a> · <button id="analytics-settings" type="button" class="text-button">Analytics preferences</button><br>Poem, author artwork &amp; project reference text: <a href="guides--rights.html">CC BY 4.0</a> · Recordings have separate terms.</footer><aside id="analytics-consent" class="analytics-consent" aria-label="Optional analytics" hidden><p id="analytics-consent-message"></p><div class="action-row"><button type="button" data-analytics-consent="no">Keep analytics off</button><button type="button" data-analytics-consent="yes">Allow analytics</button><a href="guides--privacy.html">Privacy details</a></div></aside></body></html>'''
+<title>{esc(title)} · World is One</title><link rel="stylesheet" href="assets/style.css?v={config.get("_asset_version","1")}">{art_frame_styles}<link rel="stylesheet" href="assets/brand.css?v={config.get("_asset_version","1")}"><link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg?v={config.get("_asset_version","1")}"><meta name="theme-color" content="#195565"><script type="module" src="assets/site.js?v={config.get("_asset_version","1")}"></script></head>
+<body data-analytics-id="{esc(analytics_id,quote=True)}" data-repository="{esc(config.get('repository_url', ''), quote=True)}" data-site-url="{esc(config.get('site_url', ''), quote=True)}">{preview}<a class="skip-link" href="#main-content">Skip to content</a><header class="site-header"><a class="brand" href="index.html"><img src="assets/brand/mark.svg?v={config.get("_asset_version","1")}" alt="" width="44" height="44" aria-hidden="true">WORLD IS ONE<span>A POEM WITHOUT BORDERS</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" hidden><span class="menu-icon" aria-hidden="true"></span><span>Menu</span></button><nav id="site-navigation" class="site-navigation" aria-label="Main navigation">{navigation_links}</nav></header>
+<main id="main-content" tabindex="-1">{content}</main>{(ROOT/"web/index-player.html").read_text() if config.get("_has_audio") else ""}<footer class="site-footer"><div class="footer-main"><p>Original poem © Ahimanikya Satapathy</p><nav aria-label="Site information"><a href="guides--rights.html">Credits &amp; reuse</a><a href="guides--privacy.html">Privacy</a><button id="analytics-settings" type="button" class="text-button" aria-controls="analytics-consent" aria-expanded="false">Cookie settings</button></nav></div><details class="footer-resources"><summary>About this open project</summary><p>Poems, author artwork and project reference text are shared under <a href="guides--rights.html">CC BY 4.0</a>. Recordings have separate terms. AI assistance and preparation details are documented with each work.</p><nav aria-label="Project resources"><a href="guides--artwork.html">Design roots &amp; credits</a><a href="guides--brand.html">Brand assets</a><a href="kb/index.md">Knowledge base</a><a href="reference.json">Reference data</a><a href="engagement.html">Engagement</a></nav></details></footer><aside id="analytics-consent" class="analytics-consent" aria-label="Optional cookies" hidden><p id="analytics-consent-message"></p><div class="action-row"><button type="button" data-analytics-consent="no">Reject optional cookies</button><button type="button" data-analytics-consent="yes">Accept optional cookies</button><a href="guides--privacy.html">Privacy policy</a></div></aside></body></html>'''
 
 
 def share_controls(title, filename, config, local=False, media=None, media_url=None):
@@ -542,7 +814,7 @@ def resource_panel(meta, items):
             for variation, takes in variations.items():
                 if named:
                     label = takes[0][0].get('variation_label', 'Original arrangement' if variation == 'original' else variation.title())
-                    content += f'<section id="{target}-{esc(variation, quote=True)}" class="recording-variation" aria-label="{heading} · {esc(label, quote=True)}"><h3>{esc(label)}</h3>'
+                    content += f'<section id="{target}-{esc(variation, quote=True)}" class="recording-variation" data-variation="{esc(variation, quote=True)}" aria-label="{heading} · {esc(label, quote=True)}"><h3>{esc(label)}</h3>'
                 content += card(*takes[0], show_title=not named)
                 if len(takes) > 1:
                     content += f'<details class="more-recordings"><summary>More {kind} versions ({len(takes)-1})</summary>' + ''.join(card(*pair) for pair in takes[1:]) + '</details>'
@@ -558,6 +830,72 @@ def resource_panel(meta, items):
     return content + '</aside>'
 
 
+def refined_artwork_choices(works=None):
+    if works is None:
+        works = json.loads((ROOT/'catalog/artworks.json').read_text())['artworks']
+    editions = {edition['source_artwork_id']: edition for edition in json.loads((ROOT/'catalog/ai-artworks.json').read_text())['artworks'] if edition.get('source_artwork_id')}
+    cuts = json.loads((ROOT/'catalog/artwork-screen-layouts.json').read_text())['art_bottom_fraction']
+    choices = []
+    for work in works:
+        edition = editions.get(work['id'])
+        if not edition:
+            continue
+        choices.append({'id':work['id'], 'title':work['label'], 'image':edition['file'],
+                        'page':'artwork--'+work['id']+'.html#ai-edition',
+                        'width':edition['width'], 'height':edition['height'], 'date':None,
+                        'caption':work['caption'], 'art_bottom':cuts[work['id']],
+                        'frame':'walnut', 'mat':'linen',
+                        'variant':'tall'})
+    return choices
+
+
+def homepage_art(works):
+    choices = refined_artwork_choices(works)
+    def figure(css, preferred, fallback):
+        work = next((item for item in choices if item['id'] == preferred), choices[fallback % len(choices)])
+        fixed = f' data-home-art-fixed="{esc(work["id"],quote=True)}"' if css == 'author-artwork' else ''
+        image_markup = f'''<img data-home-art-image src="{esc(work['image'],quote=True)}" width="{work['width']}" height="{work['height']}" loading="lazy" decoding="async" alt="{esc(work['title'],quote=True)}, refined print of artwork by Ahimanikya Satapathy">'''
+        print_markup = screen_print(image_markup, work['title'], work['caption'], work['id'], work['width'], work['height'])
+        return f'''<figure class="{css}" data-home-art{fixed}><a class="art-wall" data-home-art-link href="{esc(work['page'],quote=True)}" aria-label="Read about {esc(work['title'],quote=True)}"><div data-home-art-frame class="art-frame frame-{work['frame']} mat-{work['mat']} frame-{work['variant']} refined-frame"><div class="art-mat">{print_markup}</div></div></a></figure>'''
+    if not choices:
+        return '', '', ''
+    payload = json.dumps(choices,ensure_ascii=False).replace('<', '\\u003c')
+    return figure('reference-artwork','yellow-and-green',1), figure('author-artwork','art-64',0), f'<script type="application/json" data-home-art-choices>{payload}</script>'
+
+
+def language_artwork(slug, with_slideshow=False):
+    """A refined print companion linked to its original artwork's detail page."""
+    choices = refined_artwork_choices()
+    if not choices:
+        return ''
+    # Stable, varied fallback when JavaScript is unavailable.
+    chosen = choices[int(hashlib.sha256(slug.encode()).hexdigest()[:8], 16) % len(choices)]
+    payload = json.dumps(choices, ensure_ascii=False).replace('<', '\\u003c')
+    title = esc(chosen['title'])
+    image_markup = f'''<img data-art-image src="{esc(chosen['image'],quote=True)}" width="{chosen['width']}" height="{chosen['height']}" loading="lazy" decoding="async" alt="{title}, refined print of artwork by Ahimanikya Satapathy">'''
+    print_markup = screen_print(image_markup, chosen['title'], chosen['caption'], chosen['id'], chosen['width'], chosen['height'])
+    slideshow_entry, slideshow_dialog = '', ''
+    if with_slideshow:
+        slideshow_entry, slideshow_dialog = (ROOT/'web/art-slideshow.html').read_text().split('<dialog', 1)
+        slideshow_entry = slideshow_entry.replace('Play slideshow', 'Slideshow with this song')
+        slideshow_dialog = '<dialog data-slideshow-mode="language"' + slideshow_dialog
+        slideshow_dialog = slideshow_dialog.replace('Art slideshow with music from every available language', 'Art slideshow with this song')
+    return f'''<section id="language-art" class="language-art" aria-labelledby="language-art-title" data-language-art>
+<p class="art-companion-label">Another kind of poem</p>
+<figure><a class="art-wall" data-art-link href="{esc(chosen['page'],quote=True)}" aria-label="Read about {title} in the Art Journal">
+<div data-art-frame class="art-frame frame-{chosen['frame']} mat-{chosen['mat']} frame-{chosen['variant']} refined-frame"><div class="art-mat">{print_markup}</div></div></a>
+<figcaption class="visually-hidden"><span id="language-art-title">{title}</span></figcaption></figure>
+{slideshow_entry}<script type="application/json" data-art-choices>{payload}</script></section>{slideshow_dialog}'''
+
+
+def original_poem_page(meta, body, path):
+    poem = re.search(r'```(?:text)?\n(.*?)\n```', body, re.S)
+    if not poem:
+        raise ValueError('Original poem text is missing')
+    notes = body[poem.end():].strip()
+    return f'''<article class="original-poem-page"><section class="original-poem-heading"><div class="eyebrow">THE ORIGINAL POEM · ODIA</div><h1 lang="or">{esc(meta['title'])}</h1><p class="original-poem-byline">By {esc(meta['author'])}</p><p class="original-poem-intro">The words that began <em>I Am Free to Dream</em>—before the music, and before its journey into other languages.</p></section><div class="original-poem-layout"><div id="poem-text" class="original-poem-text" lang="or"><pre><code>{esc(poem[1])}</code></pre></div><aside class="original-poem-attribution" aria-label="Attribution and source">{render_markdown(notes,path)}</aside></div><nav class="original-poem-next" aria-label="Continue exploring"><a class="button" href="poems--i-am-free-to-dream--languages--odia.html">Listen in Odia</a><a class="text-link" href="languages.html">Explore other languages →</a></nav></article>'''
+
+
 def language_content(meta, body, path, items, config, local=False):
     """A reading surface with the full source notes available on demand."""
     slug = meta['slug']
@@ -565,15 +903,13 @@ def language_content(meta, body, path, items, config, local=False):
     parts = re.split(r'(?m)^## (.+)\n', body)
     sections = [(parts[i], parts[i+1].split('\n---\n')[0].strip()) for i in range(1, len(parts), 2)]
     by_heading = dict(sections)
-    language_name = 'Odia · the original' if original else meta['language']
-    status = 'Original poem' if original else ('Adaptation · review welcome' if has_lyrics(meta) else meta['lyric_status'])
-    source_link = '' if original else '<a href="poems--i-am-free-to-dream--languages--odia.html">Read the Odia original ↗</a>'
-    header = f'<section class="language-heading"><div class="eyebrow">{esc(language_name)}</div><h1 dir="auto">{esc(meta["title"])}</h1><p class="poet-credit">A poem by Ahimanikya Satapathy <span aria-hidden="true">·</span> {esc(status)}</p><div class="reading-links"><a href="#poem-text">Read</a><a href="#listen">Listen</a><a href="#watch">Watch</a>{source_link}</div><details class="page-share"><summary>Share this poem</summary>{share_controls(meta["language"]+" · "+meta["title"], page_name(path), config, local)}</details></section>'
-    if original:
-        _, source_body = read_concept(KB/'poems/i-am-free-to-dream/original.md')
-        poem = re.search(r'```(?:text)?\n(.*?)\n```', source_body, re.S)
-        primary = '```text\n'+poem[1]+'\n```' if poem else source_body
-    elif has_lyrics(meta) and 'Poem / arranged lyrics' in by_heading:
+    language_name = meta['language']
+    status = 'Song arrangement' if original else ('Adaptation · review welcome' if has_lyrics(meta) else meta['lyric_status'])
+    source_link = '<a href="poems--i-am-free-to-dream--original.html">Read the original poem ↗</a>'
+    back_url, back_label = 'languages.html', 'Back to languages'
+    media_links = ''.join(f'<a href="#{target}">{label}</a>' for kind, target, label in [('audio', 'listen', 'Listen'), ('video', 'watch', 'Watch')] if any(item['kind'] == kind for item, _ in items))
+    header = f'<section class="language-heading"><div class="language-label"><a class="back language-back" href="{back_url}" aria-label="{back_label}" title="{back_label}"><span aria-hidden="true">←</span></a><div class="eyebrow">{esc(language_name)}</div></div><h1 dir="auto" lang="{TEXT_LANGUAGES.get(slug, "en") if has_lyrics(meta) else "en"}">{esc(meta["title"])}</h1><p class="poet-credit">A poem by Ahimanikya Satapathy</p><div class="language-actions">{media_links}<details class="page-share"><summary>Share</summary>{share_controls(meta["language"]+" · "+meta["title"], page_name(path), config, local)}</details></div></section>'
+    if has_lyrics(meta) and 'Poem / arranged lyrics' in by_heading:
         primary = re.sub(r'(?m)^[ \t]*\[[^\]\n]+\][ \t]*\n?', '', by_heading['Poem / arranged lyrics'])
     elif meta['lyric_status'] == 'Transcription pending':
         primary = 'Listen to this version while we prepare a checked transcription of the words sung. A fluent speaker can help bring the text to this page.'
@@ -584,21 +920,28 @@ def language_content(meta, body, path, items, config, local=False):
         primary_html = primary_html.replace('<pre>', '<pre dir="rtl">')
     if has_lyrics(meta) and slug in TEXT_LANGUAGES:
         primary_html = f'<div lang="{TEXT_LANGUAGES[slug]}">{primary_html}</div>'
-    reading = f'<article id="poem-text" class="poem-reading"><h2 class="reading-caption">Read</h2>{primary_html}<a class="poem-download" href="kb/poems/i-am-free-to-dream/languages/{quote(slug)}.md" download>Download poem &amp; notes ↓</a></article>'
-    content = header + '<div class="language-layout">'+reading+resource_panel(meta, items)+'</div>'
+    reading = f'<article id="poem-text" class="poem-reading"><h2 class="reading-caption visually-hidden">Read</h2>{primary_html}<a class="poem-download" href="kb/poems/i-am-free-to-dream/languages/{quote(slug)}.md" download>Download poem &amp; notes ↓</a></article>'
+    content = header + '<div class="language-layout">'+reading+'<div class="language-sidebar">'+resource_panel(meta, items)+language_artwork(slug, any(item['kind'] == 'audio' and not item.get('archived') for item, _ in items))+'</div></div>'
     content += '<section class="language-notes" aria-label="About this version">'
     prompt = re.search(r'```(?:text)?\n(.*?)\n```', by_heading.get('Poem / arranged lyrics', ''), re.S)
     if prompt:
         direction = 'rtl' if slug in ('arabic','urdu','sindhi','kashmiri','balti') else 'auto'
-        content += f'<details class="lyrics-prompt"><summary>Lyrics prompt · view &amp; copy</summary><div class="detail-body"><label for="lyrics-prompt-text">Lyrics with song sections</label><textarea id="lyrics-prompt-text" rows="16" readonly dir="{direction}">{esc(prompt[1])}</textarea><button type="button" id="copy-lyrics-prompt">Copy lyrics prompt</button><p id="lyrics-copy-status" class="small" role="status" aria-live="polite"></p></div></details>'
+        content += f'<details class="lyrics-prompt"><summary>Lyrics with song sections</summary><div class="detail-body"><label for="lyrics-prompt-text">Lyrics with song sections</label><textarea id="lyrics-prompt-text" rows="16" readonly dir="{direction}" lang="{TEXT_LANGUAGES.get(slug, "en")}">{esc(prompt[1])}</textarea><button type="button" id="copy-lyrics-prompt">Copy lyrics</button><p id="lyrics-copy-status" class="small" role="status" aria-live="polite"></p></div></details>'
     reason_names = {'Why this musical direction', 'Arrangement decisions and review', 'Cultural grounding'}
     reasons = '\n\n'.join('## '+heading+'\n\n'+text for heading,text in sections if heading in reason_names)
     if reasons:
-        content += '<details id="musical-choices"><summary>Why this version sounds this way</summary><div class="detail-body">'+render_markdown(reasons,path)+f'<p><a class="text-link" href="contribute.html?language={quote(slug)}&amp;type=culture">Review these musical choices →</a></p></div></details>'
+        content += '<details id="musical-choices"><summary>Why this version sounds this way</summary><div class="detail-body">'+f'<p class="version-context">{esc(status)} · {source_link}</p>'+render_markdown(reasons,path)+f'<p><a class="text-link" href="contribute.html?language={quote(slug)}&amp;type=culture">Review these musical choices →</a></p></div></details>'
     music_names = {'Voice, rhythm and arrangement','Emotional shape','Style prompt','Working settings and listening checks','Musical direction'}
-    music = '\n\n'.join('## '+heading+'\n\n'+text for heading,text in sections if heading in music_names)
-    if music:
-        content += '<details><summary>Musical direction &amp; style prompt</summary><div class="detail-body">'+render_markdown(music,path)+'</div></details>'
+    music_parts = []
+    for heading, text in sections:
+        if heading not in music_names:
+            continue
+        rendered = render_markdown('## '+heading+'\n\n'+text, path)
+        if heading == 'Style prompt':
+            rendered = re.sub(r'(<pre><code[^>]*>.*?</code></pre>)', lambda match: '<div class="copyable-style"><button type="button" data-copy-style>Copy style</button>'+match[1]+'<p class="style-copy-status small" role="status" aria-live="polite"></p></div>', rendered, flags=re.S)
+        music_parts.append(rendered)
+    if music_parts:
+        content += '<details><summary>Musical direction &amp; style prompt</summary><div class="detail-body">'+''.join(music_parts)+'</div></details>'
     if not original:
         extra = '\n\n'.join('## '+heading+'\n\n'+text for heading,text in sections if heading not in music_names | reason_names and heading != 'Poem / arranged lyrics')
         content += '<details id="translation-check"><summary>Translation &amp; collaboration</summary><div class="detail-body">'+translation_check_panel(meta).replace('id="translation-check"','id="translation-reference"')+render_markdown(extra,path)+'</div></details>'
@@ -612,13 +955,13 @@ def language_content(meta, body, path, items, config, local=False):
     if original and config.get('preferred_odia_suno_url'):
         action += f'<a href="{esc(config["preferred_odia_suno_url"],quote=True)}">Selected take on Suno ↗</a>'
     content += f'<div class="quiet-contribute"><h2>{contributor}</h2><div class="reading-links">{action}</div></div></section>'
-    return f'<a class="back" href="languages.html">← All languages</a><div class="language-page" data-language="{esc(slug,quote=True)}">'+content+'</div>'
+    return f'<div class="language-page" data-language="{esc(slug,quote=True)}">'+content+'</div>'
 
 
 def contribution_page(languages, config):
     options = ''.join(f'<option value="{esc(x["slug"],quote=True)}">{esc(x["language"])}</option>' for x in languages)
     setup = '' if config.get('repository_url') else '<p class="setup-notice">Preview: the GitHub repository has not been connected yet. You can prepare and save a proposal here; submission will open once it is connected.</p>'
-    return f'''<section class="contribution-intro"><a class="back" href="languages.html">← Browse languages</a><div class="eyebrow">ONE POEM. YOUR VOICE.</div><h1>Help a language<br>find its song.</h1><p>Share a better phrase, a listening note, or a new performance. You do not need to edit code.</p><ol class="steps"><li><strong>Prepare</strong><span>Choose a language and describe your contribution.</span></li><li><strong>Submit on GitHub</strong><span>Sign in, attach your file or link, and submit.</span></li><li><strong>Review together</strong><span>Discuss changes; accepted versions receive credits and a place in the collection.</span></li></ol></section>
+    return f'''<section class="contribution-intro"><div class="eyebrow">ONE POEM. YOUR VOICE.</div><h1>Help a language<br>find its song.</h1><p>Share a better phrase, a listening note, or a new performance. You do not need to edit code.</p><ol class="steps"><li><strong>Prepare</strong><span>Choose a language and describe your contribution.</span></li><li><strong>Submit on GitHub</strong><span>Sign in, attach your file or link, and submit.</span></li><li><strong>Review together</strong><span>Discuss changes; accepted versions receive credits and a place in the collection.</span></li></ol></section>
 {setup}<form id="contribution-form" class="contribution-form"><div class="form-grid"><label for="contribution-language">Language<select required id="contribution-language" name="language"><option value="">Choose a language</option>{options}</select></label><label for="contribution-type">I would like to<select id="contribution-type" name="type"><option value="lyrics">Suggest a lyric change</option><option value="recording">Submit my song</option><option value="feedback">Review a recording</option><option value="culture">Suggest a musical direction</option><option value="share">Tell us where I shared the song</option></select></label></div>
 <label for="contribution-title">A short title<input id="contribution-title" name="title" required maxlength="100" placeholder="A more natural phrase, a new acoustic version…"></label>
 <div id="recording-fields" hidden><p class="upload-explainer"><strong>Have an MP3 or M4A recording?</strong> Attach it in the GitHub submission box on the next step. If its format or size is not accepted, paste a public listening link below. Nothing is uploaded from this form.</p><label for="recording-link">Recording link (optional if attaching a file on GitHub)<input type="url" id="recording-link" name="recording_link" placeholder="https://…"></label><label for="recording-credits">Music, voice and production credits<textarea id="recording-credits" name="credits" rows="3" maxlength="2500" placeholder="Who sang, translated or arranged it? Name any AI tools used."></textarea></label></div>
@@ -638,7 +981,7 @@ def engagement_page(config):
     analytics_property = str(config.get('analytics',{}).get('property_id',''))
     report_url = f'https://analytics.google.com/analytics/web/#/a{analytics_account}p{analytics_property}/reports/intelligenthome' if analytics_account.isdigit() and analytics_property.isdigit() else 'https://analytics.google.com/'
     analytics = ('Configured · reporting begins after visitor consent. Confirm collection in GA4 Realtime.' if connected else 'Not connected · tracking is prepared, but no visitor analytics is being collected.')
-    return f'''<a class="back" href="index.html">← Home</a><section class="engagement-intro"><div class="eyebrow">LISTEN. LEARN. RESPOND.</div><h1>Care for the conversation.</h1><p>Understand what people listen to, and give their contributions the attention they deserve.</p><p class="small">This page is public. Private analytics reports stay in your analytics account; only public GitHub feedback is shown here.</p></section>
+    return f'''<section class="engagement-intro"><div class="eyebrow">LISTEN. LEARN. RESPOND.</div><h1>Care for the conversation.</h1><p>Understand what people listen to, and give their contributions the attention they deserve.</p><p class="small">This page is public. Private analytics reports stay in your analytics account; only public GitHub feedback is shown here.</p></section>
 <section class="engagement-section"><div class="section-heading"><h2>Listening &amp; discovery</h2><span class="status-pill">{'Analytics configured' if connected else 'Not connected'}</span></div><p>{analytics}</p><div class="engagement-metrics"><article><h3>Visits</h3><p>Page views by language, traffic source and date.</p></article><article><h3>Listening</h3><p>Starts, 30-second listens and 90% completion, separated by recording.</p></article><article><h3>Sharing</h3><p>Share-button clicks and download clicks. These do not confirm a social post.</p></article></div><div class="action-row"><a class="button secondary" href="{esc(report_url,quote=True)}" target="_blank" rel="noopener">Open private analytics ↗</a><a href="guides--engagement.html">Measurement guide &amp; reports</a></div><p class="small">Counts start when an account is connected and visitors opt in. There is no backfilled listening history and no public counter pretending to be a total.</p></section>
 <section class="engagement-section"><div class="section-heading"><h2>Your feedback inbox</h2><a href="{esc(query('is:issue is:open'),quote=True)}" target="_blank" rel="noopener">Open GitHub inbox ↗</a></div><div class="engagement-metrics"><a href="{esc(query('is:issue is:open label:needs-author'),quote=True)}"><strong data-feedback-count="needs-author">—</strong><span>Needs your reply</span></a><a href="{esc(query('is:issue is:open label:awaiting-contributor'),quote=True)}"><strong data-feedback-count="awaiting-contributor">—</strong><span>Waiting for contributor</span></a><a href="{esc(query('is:issue is:open -label:needs-author -label:awaiting-contributor'),quote=True)}"><strong data-feedback-count="untriaged">—</strong><span>Not yet triaged</span></a></div><div class="feedback-controls"><button class="button" id="load-feedback" type="button">Load / refresh public feedback</button><label for="feedback-filter">Show<select id="feedback-filter"><option value="all">All open feedback</option><option value="needs-author">Needs your reply</option><option value="awaiting-contributor">Waiting for contributor</option><option value="untriaged">Not yet triaged</option></select></label></div><p id="feedback-status" role="status">Load feedback to see a current snapshot. Counts are not loaded yet.</p><ul id="feedback-list" class="feedback-list"></ul><p>Reply, assign, label and close issues on GitHub. New issues and contributor replies receive <strong>needs-author</strong>; your reply changes that to <strong>awaiting-contributor</strong>. Closing an issue clears the attention labels. Pull requests remain in their own review queue.</p><div class="action-row"><a href="{repo}/pulls" target="_blank" rel="noopener">Review proposed changes ↗</a><a href="{esc(query('is:issue is:closed'),quote=True)}" target="_blank" rel="noopener">Resolved conversations ↗</a><a href="{esc(query('is:issue "Shared post"'),quote=True)}" target="_blank" rel="noopener">Contributor-reported shares ↗</a></div></section>
 <section class="engagement-section"><h2>Who shared the dream?</h2><p>A share button cannot tell us who published a social post or who saw it. People can choose to link their own public post through a GitHub contribution. Those reports carry their GitHub name and remain separate from anonymous analytics.</p><a href="contribute.html?type=share">Tell us where you shared a song →</a></section>'''
@@ -646,6 +989,12 @@ def engagement_page(config):
 
 def build(local=False):
     languages = validate()
+    validate_art_prints()
+    # Fail before copying assets if a required print file is only an LFS pointer.
+    for printing in (ROOT/'media/prints').glob('*.pdf'):
+        with printing.open('rb') as stream:
+            if stream.read(5) != b'%PDF-':
+                raise ValueError('Print PDF is not hydrated. Retrieve the Git LFS print files.')
     config = json.loads((ROOT / 'site-config.json').read_text())
     config['_settings_policy'] = music_queue.settings_policy(ROOT, 'i-am-free-to-dream')
     config['_has_audio'] = any(item['kind']=='audio' and (publicly_available(item) or (local and item.get('repo_path'))) for item in records())
@@ -653,7 +1002,17 @@ def build(local=False):
     if output.exists(): shutil.rmtree(output)
     output.mkdir()
     shutil.copytree(ROOT / 'web', output / 'assets', ignore=shutil.ignore_patterns('*.html'))
-    asset_version = hashlib.sha256(b''.join(p.read_bytes() for p in sorted((ROOT/'web').iterdir()) if p.is_file())).hexdigest()[:12]
+    screen_cuts = json.loads((ROOT/'catalog/artwork-screen-layouts.json').read_text())['art_bottom_fraction']
+    screen_editions = json.loads((ROOT/'catalog/ai-artworks.json').read_text())['artworks']
+    screen_css = []
+    for edition in screen_editions:
+        ident = edition.get('source_artwork_id')
+        if ident in screen_cuts:
+            ratio = edition['width'] / edition['height']
+            screen_css.append(f'.screen-art-{ident} {{ --crop-ratio:{ratio / screen_cuts[ident]}; --source-ratio:{ratio}; }}')
+    (output/'assets/art-caption-layouts.css').write_text('\n'.join(screen_css)+'\n')
+
+    asset_version = hashlib.sha256(b''.join(p.read_bytes() for p in sorted((ROOT/'web').rglob('*')) if p.is_file())).hexdigest()[:12]
     config['_asset_version'] = asset_version
     for asset in (output/'assets').iterdir():
         if asset.suffix in ('.js','.mjs'):
@@ -699,7 +1058,7 @@ def build(local=False):
             tag = item['kind']
             poster = ' playsinline poster="media/images/cover.png"' if tag == 'video' else ''
             credits = ''.join(f'<dt>{esc(key.replace("_", " ").title())}</dt><dd>{esc(value)}</dd>' for key,value in item.get('credits',{}).items())
-            content = f'<a class="back" href="{page_name(LANGUAGES/(slug+".md"))}">← All {esc(language_map[slug]["language"])} versions and lyrics</a><section class="recording-detail"><div class="eyebrow">{esc(language_map[slug]["language"])} · {esc(recording_label(item))}</div><h1>{esc(item["title"])}</h1>{player_markup(item, url)}<p>{esc(item["notes"])}</p><dl class="credits">{credits}</dl>'
+            content = f'<section class="recording-detail"><div class="eyebrow">{esc(language_map[slug]["language"])} · {esc(recording_label(item))}</div><h1>{esc(item["title"])}</h1>{player_markup(item, url)}<details class="recording-context"><summary>About this recording</summary><p>{esc(item["notes"])}</p><dl class="credits">{credits}</dl></details>'
             if tag == 'audio':
                 if not item.get('archived'): content += playlist_picker()
                 content += f'<p><a href="timing.html?recording={quote(item["id"])}">Add or adjust timed lyrics →</a></p>'
@@ -713,16 +1072,20 @@ def build(local=False):
         description, language_meta, canonical_filename = None, None, None
         if path.parent == LANGUAGES and path.name != 'index.md':
             language_meta = meta
-            stage = 'original poem' if meta['slug']=='odia' else 'adaptation draft' if has_lyrics(meta) else 'adaptation brief'
+            stage = 'song arrangement' if meta['slug']=='odia' else 'adaptation draft' if has_lyrics(meta) else 'adaptation brief'
             title = f'{meta["language"]}: I Am Free to Dream — {meta["title"]}'
             description = f'{meta["language"]} {stage} of I Am Free to Dream. Read the text, explore local musical choices and available recordings. Review status: {meta["review_status"]}.'
             content = language_content(meta, body, path, available.get(meta['slug'], []), config, local)
         elif path == KB/'poems/i-am-free-to-dream/original.md':
-            canonical_filename = 'poems--i-am-free-to-dream--languages--odia.html'
-            odia_meta, odia_body = read_concept(LANGUAGES/'odia.md')
-            content = language_content(odia_meta, odia_body, LANGUAGES/'odia.md', available.get('odia', []), config, local).replace('<a class="back" href="languages.html">← All languages</a>', '<a class="back" href="index.html">← Home</a>')
+            description = 'The original Odia poem by Ahimanikya Satapathy, with author attribution, its Kabita Prusta source and reuse credits.'
+            content = original_poem_page(meta, body, path)
+        elif path == KB/'guides/brand.md':
+            content = '<article class="brand-guide">'+render_markdown(body,path).replace('<p>World is One. A Poem Without Borders.</p>', '<img class="brand-board" src="assets/brand/social-card.svg" width="1200" height="630" alt="World is One: the original lotus seal with poetic typography and earthy colours">')+'</article>'
+        elif path == KB/'guides/artwork.md':
+            description = 'Cultural roots and credits for the site’s decorative icons and illustrations, inspired by Odisha’s Pattachitra and palm-leaf traditions.'
+            content = art_credits_content(body, path)
         else:
-            content = '<a class="back" href="index.html">← Home</a><article>'+render_markdown(body,path)+'</article>'
+            content = '<article>'+render_markdown(body,path)+'</article>'
         (output / page_name(path)).write_text(shell(title, content, config, local, page_name(path), description=description, language=language_meta, source=str(path.relative_to(ROOT)), canonical_filename=canonical_filename), encoding='utf-8')
     lyric_count = sum(has_lyrics(x) for x in languages)
     cards = {}
@@ -745,7 +1108,7 @@ def build(local=False):
             seconds = int(record.get('duration_seconds',0))
             duration = f'{seconds//60}:{seconds%60:02}' if seconds else ''
             play = f'<button class="card-play" type="button" data-play-recording="{record["id"]}" aria-label="Play {esc(item["language"],quote=True)}" aria-pressed="false"><span class="play-label">▶ Play</span> <span>{duration}</span></button>'
-        cards[slug] = f'''<article class="language-card" data-search="{esc(item['language']+' '+item['title']+' '+direction, quote=True)}" data-status="{status}" data-listen="{str(listening).lower()}"><div class="card-top"><span>{item['collection_order']:03d}</span><span>{esc(readiness)}</span></div><h3><a href="{page}">{esc(item['language'])}</a></h3><p class="card-poem" dir="auto">{esc(item['title'])}</p><p class="card-direction">{esc(direction)}</p><p class="card-availability">{availability}</p><div class="card-bottom">{play}<a href="{page}">Read &amp; explore ↗</a></div></article>'''
+        cards[slug] = f'''<article class="language-card" data-search="{esc(item['language']+' '+item['title']+' '+direction, quote=True)}" data-status="{status}" data-listen="{str(listening).lower()}"><div class="card-top"><span>{item['collection_order']:03d}</span><span>{esc(readiness)}</span></div><h3><a href="{page}">{esc(item['language'])}</a></h3><p class="card-poem" dir="auto" lang="{TEXT_LANGUAGES.get(slug, "en") if has_lyrics(item) else "en"}">{esc(item['title'])}</p><p class="card-direction">{esc(direction)}</p><p class="card-availability">{availability}</p><div class="card-bottom">{play}<a href="{page}" aria-label="Read and explore {esc(item['language'], quote=True)}">Read &amp; explore ↗</a></div></article>'''
     audio_catalog = []
     for slug, entries in available.items():
         _, body = read_concept(LANGUAGES/(slug+'.md'))
@@ -755,21 +1118,31 @@ def build(local=False):
             if record['kind']!='audio': continue
             audio_catalog.append({'id':record['id'],'language':slug,'language_name':language_map[slug]['language'],'title':record['title'],'url':url,'page':f'recording--{record["id"]}.html','duration_seconds':record.get('duration_seconds'),'draft':draft[1] if draft else '', 'archived':record.get('archived',False), 'srt_url':f'media/lyrics/{record["id"]}.srt' if record.get('timed_lyrics') else None, 'lyrics_url':f'media/lyrics/{record["id"]}.json' if record.get('timed_lyrics') else None, 'lyric_page':page_name(LANGUAGES/(slug+'.md'))+'#poem-text'})
     (output/'assets/listening.json').write_text(json.dumps(audio_catalog,ensure_ascii=False),encoding='utf-8')
+    (output/'original-artworks.html').write_text(shell('Original art by Ahimanikya Satapathy', artist_collection_page(), config, local, 'original-artworks.html', 'Original paintings and drawings by Ahimanikya Satapathy, with poetic lines and reflections.'), encoding='utf-8')
+    refined_gallery = ai_artwork_page()
+    (output/'artworks.html').write_text(shell('Art by Ahimanikya Satapathy', refined_gallery, config, local, 'artworks.html', 'Refined print editions of Ahimanikya Satapathy’s art, with original works available to explore.'), encoding='utf-8')
+    selected_artworks = json.loads((ROOT/'catalog/artworks.json').read_text())['artworks']
+    for artwork in selected_artworks:
+        filename = 'artwork--'+artwork['id']+'.html'
+        art_config = dict(config, _artwork=artwork)
+        (output/filename).write_text(shell(artwork['label'], artwork_detail_page(artwork, selected_artworks), art_config, local, filename, artwork['caption']+' Original artwork by Ahimanikya Satapathy, with a poetic reflection and print downloads.'), encoding='utf-8')
+    (output/'ai-artworks.html').write_text(shell('Refined prints by Ahimanikya Satapathy', refined_gallery, config, local, 'ai-artworks.html', 'Art by Ahimanikya Satapathy, with refined print editions and links to the originals.', canonical_filename='artworks.html'), encoding='utf-8')
     (output/'engagement.html').write_text(shell('Engagement and feedback', engagement_page(config), config, local, 'engagement.html'),encoding='utf-8')
     (output/'timing.html').write_text(shell('Time the lyrics', (ROOT/'web/timing.html').read_text(), config, local, 'timing.html'),encoding='utf-8')
-    directory = f'''<section id="collection" class="language-directory"><div class="section-heading"><a class="back" href="index.html">← Home</a><div class="eyebrow">THE LIVING COLLECTION</div><h1>Find your language.</h1><p>Explore all {len(languages)} language journeys. Listen, read, or help an adaptation find its natural voice.</p></div><div class="filters"><label for="search">Search languages or titles<input id="search" type="search" placeholder="Try Odia, Tamil, Sanskrit…"></label><label for="filter">Show<select id="filter"><option value="all">All languages</option><option value="listen">Ready to listen</option><option value="lyrics">Lyrics available</option><option value="brief">Adaptation briefs</option></select></label></div><p id="result-count" role="status" aria-live="polite">{len(languages)} languages</p><div class="language-grid">{''.join(cards.values())}</div><p id="no-results" hidden>No matching language. Try another name or clear the filter.</p></section>'''
+    directory = f'''<section id="collection" class="language-directory"><div class="section-heading"><div class="eyebrow">THE LIVING COLLECTION</div><h1>Find your language.</h1><p>Explore all {len(languages)} language journeys. Listen, read, or help an adaptation find its natural voice.</p></div><div class="filters"><label for="search">Search languages or titles<input id="search" type="search" placeholder="Try Odia, Tamil, Sanskrit…"></label><label for="filter">Show<select id="filter"><option value="all">All languages</option><option value="listen">Ready to listen</option><option value="lyrics">Lyrics available</option><option value="brief">Adaptation briefs</option></select></label></div><p id="result-count" role="status" aria-live="polite">{len(languages)} languages</p><div class="language-grid">{''.join(cards.values())}</div><p id="no-results" hidden>No matching language. Try another name or clear the filter.</p></section>'''
     (output/'languages.html').write_text(shell('Explore the languages', directory, config, local, 'languages.html'), encoding='utf-8')
     featured_slugs = ['odia', 'english', 'tamil', 'telugu', 'filipino', 'sambalpuri']
     journey_order = [slug for slug in featured_slugs if slug in cards] + [slug for slug in cards if slug not in featured_slugs]
     featured = ''.join(cards[slug] for slug in journey_order)
     author_links = ''.join(f'<a href="{esc(link["url"],quote=True)}" target="_blank" rel="noopener noreferrer">{esc(link["label"])} ↗</a>' for link in config.get('author_links',[]) if safe_url(link.get('url','')))
+    reference_art, invitation_art, home_art_choices = homepage_art(selected_artworks)
     content = f'''<section class="hero"><div><div class="eyebrow">FROM A COLLEGE NOTEBOOK, INTO THE WORLD</div><h1>I am free<br>to <em>dream.</em></h1><p class="original-title" lang="or">ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ</p><p class="intro">Creativity has always been part of my life—in the organisations I shape, the software I build, the poems I write, and the spaces I create. This Odia poem from my college years is now finding its melody, and new voices across languages.</p><div class="action-row"><a class="button" href="#collection">Find a voice ↓</a><a class="text-link" href="#story">The story behind the song →</a></div><p class="byline">A poem by Ahimanikya Satapathy</p></div><figure class="dream-artwork"><img src="media/images/cover.png" width="1254" height="1254" alt="A potter shaping a clay vessel that opens into a moonlit mountain landscape"><figcaption>Shaping a little world. Leaving room for a dream.</figcaption></figure></section>
 <section class="stats" aria-label="Collection status"><div><strong>{len(languages)}</strong><span>language journeys</span></div><div><strong>{lyric_count}</strong><span>original &amp; adapted texts</span></div><div><strong>{len(languages)-lyric_count}</strong><span>texts awaiting contributions</span></div><div><strong>{len(available)}</strong><span>languages with {'local media' if local else 'playable media'}</span></div></section>
-<section id="collection" class="featured-collection"><div class="featured-heading"><div><div class="eyebrow">FOLLOW THE THREAD</div><h2>Hear the dream travel.</h2><p class="collection-intro">Listen where a song has begun. Help another language find its voice.</p></div><div class="collection-actions"><a class="text-link" href="languages.html">All {len(languages)} languages →</a><div class="card-scroll-controls" hidden><button type="button" id="cards-previous" aria-label="Previous set of languages" aria-controls="featured-cards">←</button><button type="button" id="cards-next" aria-label="Next set of languages" aria-controls="featured-cards">→</button></div></div></div><div id="featured-cards" class="language-grid featured-grid" role="region" aria-label="Language journeys, scroll horizontally" aria-roledescription="carousel" tabindex="0">{featured}</div><p id="carousel-status" class="visually-hidden" role="status" aria-live="polite"></p></section>
+<section id="collection" class="featured-collection"><div class="featured-heading"><div><div class="eyebrow">FOLLOW THE THREAD</div><h2>Hear the dream travel.</h2><p class="collection-intro">Listen where a song has begun. Help another language find its voice.</p></div><div class="collection-actions"><a class="text-link" href="languages.html">All {len(languages)} languages →</a><div class="card-scroll-controls" hidden><button type="button" id="cards-previous" aria-label="Previous set of languages" aria-controls="featured-cards">←</button><button type="button" id="cards-next" aria-label="Next set of languages" aria-controls="featured-cards">→</button></div></div></div><a class="carousel-skip" href="#story">Skip language cards</a><div id="featured-cards" class="language-grid featured-grid" role="region" aria-label="Language journeys, scroll horizontally" aria-roledescription="carousel" tabindex="0">{featured}</div><p id="carousel-status" class="visually-hidden" role="status" aria-live="polite"></p></section>
 <section class="origin-story" id="story" aria-labelledby="story-title"><div class="story-copy"><div class="eyebrow"><span class="north-star" aria-hidden="true">✧</span> WHERE THE DREAM BEGAN</div><h2 id="story-title">The canvas changes.<br>The dream stays.</h2><p>I’ve always nurtured creativity in whatever I do. Shaping an organisation, building software, writing a poem or creating a space all come from the same impulse: to give an idea a form that people can experience.</p><p>A space can speak its own language. I’ve tried to make my office a place that makes people happy. Poetry reaches people in another way, carrying feelings that can bring us closer.</p><p>This poem began in Odia during my college years, before 1993. I later shared my writing on <a href="https://kabitaprusta.blogspot.com/">Ahimanikya Kabita Prusta</a>. With help from AI, the poem has found a new form in music and video. This page invites you to bring your language, your voice and your care to it—so the feeling can travel further.</p></div><aside class="author-bio" aria-labelledby="author-name"><div class="eyebrow">THE PERSON BEHIND THE POEM</div><h3 id="author-name">Ahimanikya Satapathy</h3><p>I’m an entrepreneur, technologist, poet and artist. Creativity runs through how I work and live: designing organisations, building software, writing poems and shaping spaces.</p><p>The form matters less to me than keeping that creativity alive. My college-era poems, my artwork from 1993, and this shared musical experiment are expressions of the same continuing creative life.</p><nav class="author-links" aria-label="Connect with Ahimanikya">{author_links}</nav></aside></section>
-<section class="public-reference-intro"><div class="eyebrow">A DREAM OTHERS CAN BUILD ON</div><h2>Let the feeling travel further.</h2><p>For poets, musicians and filmmakers: explore the words, cultural choices and production notes. Adapt the poem in your own way, with credit and care. The shared baseline leaves room for every language to find its voice.</p><a class="text-link" href="guides--public-reference.html">Explore the open reference →</a></section>
+<section class="public-reference-intro" id="open-reference" aria-labelledby="reference-title">{reference_art}<div class="reference-copy"><div class="eyebrow">A DREAM OTHERS CAN BUILD ON</div><h2 id="reference-title">Let the feeling travel further.</h2><p>For poets, musicians and filmmakers: explore the words, cultural choices and production notes. Adapt the poem in your own way, with credit and care. The shared baseline leaves room for every language to find its voice.</p><a class="text-link" href="guides--public-reference.html">Explore the open reference →</a></div></section>
 <div class="dream-thread" aria-hidden="true"><span>✧</span></div><blockquote class="dream-quote"><p>“free to weave your dreams with mine.”</p><cite>From the English adaptation of <em>I Am Free to Dream</em></cite></blockquote>
-<section class="invitation" id="invitation"><div class="invitation-copy"><div class="eyebrow">THIS IS AN INVITATION</div><h2>A language is a living culture.</h2><p>Bring the language you call home. Offer a phrase that feels more natural, share a listening note, or sing the poem in your own way. We’ll shape each version together, with care and credit for every contribution.</p><div class="action-row"><a class="button" href="contribute.html">Suggest a change →</a><a class="button secondary" href="contribute.html?type=recording">Submit your version →</a></div></div><figure class="author-artwork"><a href="media/images/ahimanikya-artwork-1993.png" aria-label="View the full artwork by Ahimanikya Satapathy"><img src="media/images/ahimanikya-artwork-1993.png" width="347" height="640" alt="Hand-painted profile looking upward, in charcoal and blue-grey tones on cream paper; signed by Ahimanikya Satapathy, 1993"></a><figcaption>Artwork by Ahimanikya Satapathy · 1993</figcaption></figure></section>'''
+<section class="invitation" id="invitation"><div class="invitation-copy"><div class="eyebrow">THIS IS AN INVITATION</div><h2>A language is a living culture.</h2><p>Bring the language you call home. Offer a phrase that feels more natural, share a listening note, or sing the poem in your own way. We’ll shape each version together, with care and credit for every contribution.</p><div class="action-row"><a class="button" href="contribute.html">Suggest a change →</a><a class="button secondary" href="contribute.html?type=recording">Submit your version →</a></div></div>{invitation_art}</section>{home_art_choices}'''
     (output / 'index.html').write_text(shell('I Am Free to Dream', content, config, local), encoding='utf-8')
     export_reference(output, languages, config, local)
     (output / '.nojekyll').touch()

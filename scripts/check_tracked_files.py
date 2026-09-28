@@ -9,11 +9,11 @@ for name in filter(None, names):
     path = root / name
     if name.startswith(('local-assets/', '.venv/', 'site/', 'site-public/')):
         errors.append(name)
-    elif path.suffix.lower() in {'.mp3','.mp4','.wav','.m4a','.ogg','.mov','.webm'}:
+    elif (name.startswith(('media/prints/', 'media/artworks/', 'media/ai-artworks/')) and path.suffix.lower() in {'.png', '.jpg', '.jpeg', '.pdf'}) or path.suffix.lower() in {'.mp3','.mp4','.wav','.m4a','.ogg','.mov','.webm'}:
         # Check the index, not the hydrated working file, which can be large.
         size = int(subprocess.check_output(['git','cat-file','-s',':'+name], cwd=root))
         if not name.startswith('media/') or size > 256:
-            errors.append(name + ' (recordings must use Git LFS under media/)')
+            errors.append(name + ' (media must use Git LFS under media/)')
             continue
         pointer = subprocess.check_output(['git','show',':'+name], cwd=root)
         if not re.fullmatch(rb'version https://git-lfs.github.com/spec/v1\noid sha256:[0-9a-f]{64}\nsize [1-9][0-9]*\n', pointer):
@@ -24,4 +24,4 @@ for name in filter(None, names):
     elif path.is_file() and path.stat().st_size > 10 * 1024 * 1024:
         errors.append(name)
 if errors: raise SystemExit('Fix tracked files: ' + ', '.join(errors))
-print('Tracked recordings use Git LFS; private archives and oversized ordinary blobs are excluded.')
+print('Tracked recordings, artwork masters and print files use Git LFS; private archives and oversized ordinary blobs are excluded.')

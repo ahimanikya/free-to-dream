@@ -1,25 +1,27 @@
 ---
 type: Project guide
 title: Art of the site
-status: draft
+status: stable
 ---
 # Art of the site
 
-The site's paper tones, fine leaf borders, lotus roundel and palm-leaf manuscript illustration are original digital drawings created for this collection. Their visual references are Odisha’s Pattachitra painting and palm-leaf engraving traditions. They are contemporary decorative interpretations, not reproductions of historic artifacts or works attributed to traditional artisans.
+The poem began in Odisha. A little of that place lives in the site’s quiet ornaments, leaving room for the words, music and art.
 
-The ornaments stay at the edges of the reading experience. The poem remains the centre. The AI-generated potter artwork opens the homepage and remains the video poster and social preview; it is not repeated as a resource card or audio thumbnail on every language page.
+## Design roots and credits
 
-The decorative SVG assets are stored in `web/odia-border.svg`, `web/odia-lotus.svg` and `web/odia-manuscript.svg`. They require no external image requests. The existing collection artwork retains its separate credits in the media folder.
+The decorative lotus, leaf borders and palm-leaf manuscript illustration draw inspiration from Odisha’s Pattachitra painting and palm-leaf engraving traditions.
 
-## The author’s artwork
+These are contemporary digital drawings made for this site. They are separate from Ahimanikya Satapathy’s original artworks and are not reproductions of historical artifacts or works by traditional artisans.
 
-The invitation section pairs its text with an original artwork supplied by Ahimanikya Satapathy, signed and dated 1993. It is displayed in full, including the signature, with a separate credit. The uploaded image is preserved unchanged at `media/images/ahimanikya-artwork-1993.png`; it is not an AI-generated illustration. The author requested its inclusion in this collection and now offers this published artwork under [CC BY 4.0](rights.md), with attribution.
+The collection keeps its original lotus seal, a contemporary drawing in harmony with these quiet ornaments. The site’s laterite, sea-blue and warm straw palette follows the artist’s Odisha reference. [Explore the identity and download brand assets](brand.md).
 
-The supplied image is 347 × 640 pixels. Keep the original artwork or a higher-resolution scan for a future printed edition. This website uses the supplied image without inventing additional detail.
-
-## Cultural references
+Cultural references:
 
 - [Odisha Tourism — Raghurajpur](https://odishatourism.gov.in/content/tourism/en/discover/attractions/arts-crafts/raghurajpur.html): the village’s Pattachitra painting tradition.
-- [Government of Odisha — Patta Chitra](https://www.odisha.gov.in/en/odisha-tourism/patta-chitra): fine line work and painted palm-leaf books.
+- [Government of Odisha — Patta Chitra](https://www.odisha.gov.in/en/odisha-tourism/patta-chitra): painting and palm-leaf traditions.
 
-These references inform the design; they do not imply endorsement or artisan authorship of the site's drawings.
+These sources acknowledge the design’s cultural roots; they do not imply endorsement. [Credits and reuse terms](rights.md).
+
+## The artist’s collection
+
+[The Art Journal](artworks.html) brings the paintings and drawings together with their poetic lines. Open a work to read its story, see its original image or download a print edition. The original source files remain unchanged.

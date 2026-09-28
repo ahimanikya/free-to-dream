@@ -1,0 +1,205 @@
+/* Display-only framing. The original image and downloadable file stay untouched. */
+.art-wall {
+  --frame-size: 12px;
+  --mat-size: clamp(20px, 3vw, 36px);
+  display: grid;
+  place-items: center;
+  grid-template-columns: minmax(0, 1fr);
+  min-width: 0;
+  min-height: 644px;
+  padding: clamp(30px, 4vw, 52px);
+  --wall-background:
+    radial-gradient(ellipse at 25% 8%, #fffdf6cc, transparent 65%),
+    repeating-linear-gradient(0deg, #8d796503 0 1px, transparent 1px 4px),
+    #e9e3d7;
+  background: var(--wall-background);
+  box-shadow: inset 0 1px 0 #fff9, inset 0 -1px 0 #b0a48c22;
+  text-decoration: none;
+}
+.art-wall:focus-visible { outline: 3px solid #926944; outline-offset: 5px; }
+.art-frame {
+  --wood: #604431;
+  --wood-light: #997253;
+  --wood-dark: #35271e;
+  --mat: #eee5d3;
+  --fillet: #b9a485;
+  --cloth-weave:
+    repeating-linear-gradient(0deg, #ffffff0e 0 .65px, #382a150b .65px 1.3px, transparent 1.3px 3px),
+    repeating-linear-gradient(90deg, #ffffff0e 0 .7px, #382a150b .7px 1.4px, transparent 1.4px 3.5px),
+    repeating-linear-gradient(7deg, transparent 0 8px, #fff1 8px 9px, transparent 9px 14px);
+  box-sizing: border-box;
+  position: relative;
+  width: 480px;
+  aspect-ratio: 4 / 3;
+  max-width: 100%;
+  min-width: 0;
+  padding: var(--frame-size);
+  border: 1px solid var(--wood-dark);
+  background:
+    repeating-radial-gradient(ellipse at 12% 130%, transparent 0 5px, #1b0e071a 6px 7px, transparent 8px 15px),
+    repeating-linear-gradient(92deg, transparent 0 3px, #ffffff0a 3px 4px, #0000000c 4px 5px, transparent 5px 8px),
+    linear-gradient(135deg, var(--wood-light), var(--wood) 24%, var(--wood-dark) 75%, var(--wood));
+  box-shadow: 1px 2px 2px #2c201b33, 5px 10px 12px #2c201b29, 13px 23px 29px -12px #2c201b52, inset 1px 1px 0 #ffffff59, inset -1px -1px 0 #0005;
+}
+.frame-tall { width: 360px; aspect-ratio: 2 / 3; }
+.frame-wide { width: 480px; aspect-ratio: 4 / 3; }
+/* Landscape rows need wall space proportionate to their shorter frames. */
+.art-wall:has(.frame-wide) { min-height:0; height:auto; }
+.frame-oak { --wood: #ad8456; --wood-light: #dfbc83; --wood-dark: #77563a; }
+.frame-charcoal { --wood: #343936; --wood-light: #68716a; --wood-dark: #191e1b; }
+.frame-walnut { --wood: #604431; --wood-light: #997253; --wood-dark: #35271e; }
+.mat-ivory { --mat: #f4efdf; --fillet: #c8bda4; }
+.mat-linen { --mat: #e6dcc5; --fillet: #aa9876; }
+.mat-mist { --mat: #e0e5df; --fillet: #97a89e; }
+.art-mat {
+  container-type: size;
+  position: absolute;
+  inset: var(--frame-size);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+  box-sizing: border-box;
+  padding: var(--mat-size);
+  padding-bottom: calc(var(--mat-size) * 1.16);
+  background: var(--cloth-weave), var(--mat);
+  box-shadow: inset 0 0 0 1px #fff7, 0 0 0 1px #241a1599, 0 2px 4px #241a1566;
+}
+.art-window {
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  justify-self: center;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: block;
+  min-width: 0;
+  min-height: 0;
+  padding: 3px;
+  border: 1px solid var(--fillet);
+  background: transparent;
+  box-shadow: 0 0 0 3px var(--mat), 0 0 0 4px var(--fillet), inset 1px 2px 3px #291f1a26;
+}
+.art-window img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 0;
+  aspect-ratio: auto;
+}
+@media (max-width: 700px) {
+  .art-wall { --frame-size: 9px; --mat-size: 18px; min-height: 540px; }
+}
+
+
+
+/* Extend only real gaps. Ignore subpixel rounding where the art meets the border. */
+/* One-pixel source edge lines extend outward into each inner gutter. */
+/* Stretch perpendicular to the edge, keeping the entire edge aligned; feather only the join. */
+.art-edge-fill { position:absolute; inset:3px; container-type:size; pointer-events:none; z-index:1; }
+.art-edge-fill span { position:absolute; display:block; overflow:hidden; background-repeat:no-repeat; background-size:0 0; }
+/* Soften only the sampled fill. Extra paint space prevents a blurred rim;
+   content-box positioning preserves alignment with the original edge. */
+.art-edge-fill span::before {
+  content:"";
+  position:absolute;
+  inset:-4px;
+  padding:4px;
+  background-image:inherit;
+  background-position:center;
+  background-origin:content-box;
+  background-size:var(--fill-size, 100% 100%);
+  background-repeat:no-repeat;
+  filter:blur(var(--fill-softness, 1.25px));
+}
+.art-edge-left, .art-edge-right {
+  --gap: max(0px, calc((100cqw - 100cqh * var(--art-ratio)) / 2 - .125px));
+  --feather: min(var(--join-softness, 2px), var(--gap));
+  top:0; bottom:0; width:calc(var(--gap) + var(--feather));
+}
+.art-edge-left { left:0; background-image:var(--edge-left); background-position:right center;
+  -webkit-mask-image:linear-gradient(to right, #000 calc(100% - var(--feather)), #000d calc(100% - var(--feather) * .75), #0008 calc(100% - var(--feather) * .5), #0002 calc(100% - var(--feather) * .25), transparent);
+  mask-image:linear-gradient(to right, #000 calc(100% - var(--feather)), #000d calc(100% - var(--feather) * .75), #0008 calc(100% - var(--feather) * .5), #0002 calc(100% - var(--feather) * .25), transparent);
+}
+.art-edge-right { right:0; background-image:var(--edge-right); background-position:left center;
+  -webkit-mask-image:linear-gradient(to left, #000 calc(100% - var(--feather)), #000d calc(100% - var(--feather) * .75), #0008 calc(100% - var(--feather) * .5), #0002 calc(100% - var(--feather) * .25), transparent);
+  mask-image:linear-gradient(to left, #000 calc(100% - var(--feather)), #000d calc(100% - var(--feather) * .75), #0008 calc(100% - var(--feather) * .5), #0002 calc(100% - var(--feather) * .25), transparent);
+}
+.art-edge-top, .art-edge-bottom {
+  --gap: max(0px, calc((100cqh - 100cqw / var(--art-ratio)) / 2 - .125px));
+  --feather: min(var(--join-softness, 2px), var(--gap));
+  left:0; right:0; height:calc(var(--gap) + var(--feather));
+}
+.art-edge-top { top:0; background-image:var(--edge-top); background-position:center bottom;
+  -webkit-mask-image:linear-gradient(to bottom, #000 calc(100% - var(--feather)), #000d calc(100% - var(--feather) * .75), #0008 calc(100% - var(--feather) * .5), #0002 calc(100% - var(--feather) * .25), transparent);
+  mask-image:linear-gradient(to bottom, #000 calc(100% - var(--feather)), #000d calc(100% - var(--feather) * .75), #0008 calc(100% - var(--feather) * .5), #0002 calc(100% - var(--feather) * .25), transparent);
+}
+.art-edge-bottom { bottom:0; background-image:var(--edge-bottom); background-position:center top;
+  -webkit-mask-image:linear-gradient(to top, #000 calc(100% - var(--feather)), #000d calc(100% - var(--feather) * .75), #0008 calc(100% - var(--feather) * .5), #0002 calc(100% - var(--feather) * .25), transparent);
+  mask-image:linear-gradient(to top, #000 calc(100% - var(--feather)), #000d calc(100% - var(--feather) * .75), #0008 calc(100% - var(--feather) * .5), #0002 calc(100% - var(--feather) * .25), transparent);
+}
+.frame-tall .art-window { background:transparent; }
+
+/* The Witness also has narrow side gutters despite its tall frame. */
+
+
+
+/* Inner openings stay identical within each frame-size variant. */
+
+/* Original aspect ratios determine gaps, not the fixed inner opening. */
+.cloth-art-64 { --art-ratio: 0.500000000000; --edge-left: url("../media/images/art-textures/art-64-left.svg?v=artistic-care-2"); --edge-right: url("../media/images/art-textures/art-64-right.svg?v=artistic-care-2"); --edge-top: url("../media/images/art-textures/art-64-top.svg?v=artistic-care-2"); --edge-bottom: url("../media/images/art-textures/art-64-bottom.svg?v=artistic-care-2"); }
+.cloth-art-22 { --art-ratio: 0.614500442087; --edge-left: url("../media/images/art-textures/art-22-left.svg?v=artistic-care-2"); --edge-right: url("../media/images/art-textures/art-22-right.svg?v=artistic-care-2"); --edge-top: url("../media/images/art-textures/art-22-top.svg?v=artistic-care-2"); --edge-bottom: url("../media/images/art-textures/art-22-bottom.svg?v=artistic-care-2"); }
+.cloth-art-19 { --art-ratio: 0.617907801418; --edge-left: url("../media/images/art-textures/art-19-left.svg?v=artistic-care-2"); --edge-right: url("../media/images/art-textures/art-19-right.svg?v=artistic-care-2"); --edge-top: url("../media/images/art-textures/art-19-top.svg?v=artistic-care-2"); --edge-bottom: url("../media/images/art-textures/art-19-bottom.svg?v=artistic-care-2"); }
+.cloth-art-20 { --art-ratio: 0.887695312500; --edge-left: url("../media/images/art-textures/art-20-left.svg?v=artistic-care-2"); --edge-right: url("../media/images/art-textures/art-20-right.svg?v=artistic-care-2"); --edge-top: url("../media/images/art-textures/art-20-top.svg?v=artistic-care-2"); --edge-bottom: url("../media/images/art-textures/art-20-bottom.svg?v=artistic-care-2"); }
+.cloth-yellow-and-green { --art-ratio: 0.901803607214; --edge-left: url("../media/images/art-textures/yellow-and-green-left.svg?v=artistic-care-2"); --edge-right: url("../media/images/art-textures/yellow-and-green-right.svg?v=artistic-care-2"); --edge-top: url("../media/images/art-textures/yellow-and-green-top.svg?v=artistic-care-2"); --edge-bottom: url("../media/images/art-textures/yellow-and-green-bottom.svg?v=artistic-care-2"); }
+.cloth-art-05 { --art-ratio: 0.954101562500; --edge-left: url("../media/images/art-textures/art-05-left.svg?v=artistic-care-2"); --edge-right: url("../media/images/art-textures/art-05-right.svg?v=artistic-care-2"); --edge-top: url("../media/images/art-textures/art-05-top.svg?v=artistic-care-2"); --edge-bottom: url("../media/images/art-textures/art-05-bottom.svg?v=artistic-care-2"); }
+.cloth-art-17 { --art-ratio: 0.662993572084; --edge-left: url("../media/images/art-textures/art-17-left.svg?v=artistic-care-2"); --edge-right: url("../media/images/art-textures/art-17-right.svg?v=artistic-care-2"); --edge-top: url("../media/images/art-textures/art-17-top.svg?v=artistic-care-2"); --edge-bottom: url("../media/images/art-textures/art-17-bottom.svg?v=artistic-care-2"); }
+.cloth-art-24 { --art-ratio: 0.607205623902; --edge-left: url("../media/images/art-textures/art-24-left.svg?v=artistic-care-2"); --edge-right: url("../media/images/art-textures/art-24-right.svg?v=artistic-care-2"); --edge-top: url("../media/images/art-textures/art-24-top.svg?v=artistic-care-2"); --edge-bottom: url("../media/images/art-textures/art-24-bottom.svg?v=artistic-care-2"); }
+.cloth-art-03 { --art-ratio: 0.583620689655; --edge-left: url("../media/images/art-textures/art-03-left.svg?v=artistic-care-2"); --edge-right: url("../media/images/art-textures/art-03-right.svg?v=artistic-care-2"); --edge-top: url("../media/images/art-textures/art-03-top.svg?v=artistic-care-2"); --edge-bottom: url("../media/images/art-textures/art-03-bottom.svg?v=artistic-care-2"); }
+.cloth-art-30 { --art-ratio: 2.270408163265; --edge-left: url("../media/images/art-textures/art-30-left.svg?v=artistic-care-2"); --edge-right: url("../media/images/art-textures/art-30-right.svg?v=artistic-care-2"); --edge-top: url("../media/images/art-textures/art-30-top.svg?v=artistic-care-2"); --edge-bottom: url("../media/images/art-textures/art-30-bottom.svg?v=artistic-care-2"); }
+.cloth-art-07 { --art-ratio: 0.830078125000; --edge-left: url("../media/images/art-textures/art-07-left.svg?v=artistic-care-2"); --edge-right: url("../media/images/art-textures/art-07-right.svg?v=artistic-care-2"); --edge-top: url("../media/images/art-textures/art-07-top.svg?v=artistic-care-2"); --edge-bottom: url("../media/images/art-textures/art-07-bottom.svg?v=artistic-care-2"); }
+.cloth-art-29 { --art-ratio: 1.547752808989; --edge-left: url("../media/images/art-textures/art-29-left.svg?v=artistic-care-2"); --edge-right: url("../media/images/art-textures/art-29-right.svg?v=artistic-care-2"); --edge-top: url("../media/images/art-textures/art-29-top.svg?v=artistic-care-2"); --edge-bottom: url("../media/images/art-textures/art-29-bottom.svg?v=artistic-care-2"); }
+.cloth-art-23 { --art-ratio: 0.629364368845; --edge-left: url("../media/images/art-textures/art-23-left.svg?v=artistic-care-2"); --edge-right: url("../media/images/art-textures/art-23-right.svg?v=artistic-care-2"); --edge-top: url("../media/images/art-textures/art-23-top.svg?v=artistic-care-2"); --edge-bottom: url("../media/images/art-textures/art-23-bottom.svg?v=artistic-care-2"); }
+.cloth-art-01 { --art-ratio: 0.751953125000; --edge-left: url("../media/images/art-textures/art-01-left.svg?v=artistic-care-2"); --edge-right: url("../media/images/art-textures/art-01-right.svg?v=artistic-care-2"); --edge-top: url("../media/images/art-textures/art-01-top.svg?v=artistic-care-2"); --edge-bottom: url("../media/images/art-textures/art-01-bottom.svg?v=artistic-care-2"); }
+.cloth-art-15 { --art-ratio: 0.696798493409; --edge-left: url("../media/images/art-textures/art-15-left.svg?v=artistic-care-2"); --edge-right: url("../media/images/art-textures/art-15-right.svg?v=artistic-care-2"); --edge-top: url("../media/images/art-textures/art-15-top.svg?v=artistic-care-2"); --edge-bottom: url("../media/images/art-textures/art-15-bottom.svg?v=artistic-care-2"); }
+.cloth-art-47 { --art-ratio: 0.700661000944; --edge-left: url("../media/images/art-textures/art-47-left.svg?v=artistic-care-2"); --edge-right: url("../media/images/art-textures/art-47-right.svg?v=artistic-care-2"); --edge-top: url("../media/images/art-textures/art-47-top.svg?v=artistic-care-2"); --edge-bottom: url("../media/images/art-textures/art-47-bottom.svg?v=artistic-care-2"); }
+.cloth-art-28 { --art-ratio: 0.721955896453; --edge-left: url("../media/images/art-textures/art-28-left.svg?v=artistic-care-2"); --edge-right: url("../media/images/art-textures/art-28-right.svg?v=artistic-care-2"); --edge-top: url("../media/images/art-textures/art-28-top.svg?v=artistic-care-2"); --edge-bottom: url("../media/images/art-textures/art-28-bottom.svg?v=artistic-care-2"); }
+.cloth-art-50 { --art-ratio: 0.551550712490; --edge-left: url("../media/images/art-textures/art-50-left.svg?v=artistic-care-2"); --edge-right: url("../media/images/art-textures/art-50-right.svg?v=artistic-care-2"); --edge-top: url("../media/images/art-textures/art-50-top.svg?v=artistic-care-2"); --edge-bottom: url("../media/images/art-textures/art-50-bottom.svg?v=artistic-care-2"); }
+
+/* Visual adjustments follow each work’s surface, not a uniform blur pass. */
+.cloth-art-20 { --fill-softness: 0.7px; --join-softness: 3px; }
+.cloth-yellow-and-green { --fill-softness: 0.7px; --join-softness: 3px; }
+.cloth-art-30 { --fill-softness: 2px; --join-softness: 3px; }
+.cloth-art-17 { --fill-softness: 0.65px; --join-softness: 2px; }
+.cloth-art-01 { --fill-softness: 0.8px; --join-softness: 3px; }
+.cloth-art-15 { --fill-softness: 0.8px; --join-softness: 2px; }
+.cloth-art-47 { --fill-softness: 0.65px; --join-softness: 3px; }
+.cloth-art-50 { --fill-softness: 0.65px; --join-softness: 1.5px; }
+.cloth-art-28 { --fill-softness: 1px; --join-softness: 2px; }
+
+/* Restored originals use their reviewed clean background samples. */
+.cloth-art-14 {--art-ratio:0.726923076923;--fill-size:100% 100%;--fill-softness:1.1px;--edge-left:url("../media/images/art-textures/art-14-left.svg");--edge-right:url("../media/images/art-textures/art-14-right.svg");--edge-top:url("../media/images/art-textures/art-14-top.svg");--edge-bottom:url("../media/images/art-textures/art-14-bottom.svg");}
+.cloth-art-25 {--art-ratio:0.500399042298;--fill-size:cover;--fill-softness:1.1px;--edge-left:url("../media/images/art-textures/art-25-left.svg");--edge-right:url("../media/images/art-textures/art-25-right.svg");--edge-top:url("../media/images/art-textures/art-25-top.svg");--edge-bottom:url("../media/images/art-textures/art-25-bottom.svg");}
+.cloth-art-27 {--art-ratio:0.738372093023;--fill-size:cover;--fill-softness:1.1px;--edge-left:url("../media/images/art-textures/art-27-left.svg");--edge-right:url("../media/images/art-textures/art-27-right.svg");--edge-top:url("../media/images/art-textures/art-27-top.svg");--edge-bottom:url("../media/images/art-textures/art-27-bottom.svg");}
+
+/* Artist-selected restorations: memory, inward closeness and private joy. */
+.cloth-art-21 {--art-ratio:0.609691629956;--fill-size:cover;--fill-softness:1.1px;--edge-left:url("../media/images/art-textures/art-21-left.svg");--edge-right:url("../media/images/art-textures/art-21-right.svg");--edge-top:url("../media/images/art-textures/art-21-top.svg");--edge-bottom:url("../media/images/art-textures/art-21-bottom.svg");}
+.cloth-art-18 {--art-ratio:0.386395511921;--fill-size:100% 100%;--fill-softness:2px;--edge-left:url("../media/images/art-textures/art-18-left.svg");--edge-right:url("../media/images/art-textures/art-18-right.svg");--edge-top:url("../media/images/art-textures/art-18-top.svg");--edge-bottom:url("../media/images/art-textures/art-18-bottom.svg");}
+.cloth-art-10 {--art-ratio:0.557708508846;--fill-size:cover;--fill-softness:1.1px;--edge-left:url("../media/images/art-textures/art-10-left.svg");--edge-right:url("../media/images/art-textures/art-10-right.svg");--edge-top:url("../media/images/art-textures/art-10-top.svg");--edge-bottom:url("../media/images/art-textures/art-10-bottom.svg");}
+
+/* The Witness retains its approved fixed opening and sampled background.
+   Artist-approved fuller openings also include Ember, Remembered, The Gathering,
+   Held, Grandmother, The Offering and Together.
+   For the other works, fit only the inner opening to the original. The two outer frame sizes stay
+   fixed; the woven-cloth mount absorbs the unused space on either axis.
+   The mat is the size container. Allow for the opening's padding and border. */
+.art-frame:not(.cloth-art-64, .cloth-art-47, .cloth-art-21, .cloth-art-22, .cloth-art-20, .cloth-art-07, .cloth-art-01, .cloth-art-15) .art-window {
+  box-sizing:border-box;
+  width:min(100%, calc((100cqh - 8px) * var(--art-ratio) + 8px));
+  height:auto;
+}
+.art-frame:not(.cloth-art-64, .cloth-art-47, .cloth-art-21, .cloth-art-22, .cloth-art-20, .cloth-art-07, .cloth-art-01, .cloth-art-15) .art-window img { height:auto; max-height:none; aspect-ratio:var(--art-ratio); }
+.art-frame:not(.cloth-art-64, .cloth-art-47, .cloth-art-21, .cloth-art-22, .cloth-art-20, .cloth-art-07, .cloth-art-01, .cloth-art-15) .art-edge-fill { display:none; }

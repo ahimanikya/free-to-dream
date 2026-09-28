@@ -1,0 +1,101 @@
+{
+  "lighthouse_version": "13.5.0",
+  "runs": {
+    "home-mobile": {
+      "before": {
+        "scores": {
+          "performance": 80,
+          "accessibility": 100,
+          "best-practices": 92,
+          "seo": 100,
+          "agentic-browsing": 89
+        },
+        "lcp_seconds": 3.4,
+        "cls": 0.186
+      },
+      "after": {
+        "scores": {
+          "performance": 83,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 100,
+          "agentic-browsing": 89
+        },
+        "lcp_seconds": 2.98,
+        "cls": 0.186
+      }
+    },
+    "english-mobile": {
+      "before": {
+        "scores": {
+          "performance": 90,
+          "accessibility": 100,
+          "best-practices": 92,
+          "seo": 100,
+          "agentic-browsing": 89
+        },
+        "lcp_seconds": 2.03,
+        "cls": 0.183
+      },
+      "after": {
+        "scores": {
+          "performance": 86,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 100,
+          "agentic-browsing": 89
+        },
+        "lcp_seconds": 2.7,
+        "cls": 0.183
+      }
+    },
+    "artwork-mobile": {
+      "before": {
+        "scores": {
+          "performance": 65,
+          "accessibility": 100,
+          "best-practices": 92,
+          "seo": 100,
+          "agentic-browsing": 89
+        },
+        "lcp_seconds": 24.6,
+        "cls": 0.186
+      },
+      "after": {
+        "scores": {
+          "performance": 65,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 100,
+          "agentic-browsing": 89
+        },
+        "lcp_seconds": 24.69,
+        "cls": 0.186
+      }
+    },
+    "home-desktop": {
+      "before": {
+        "scores": {
+          "performance": 100,
+          "accessibility": 100,
+          "best-practices": 92,
+          "seo": 100,
+          "agentic-browsing": 100
+        },
+        "lcp_seconds": 0.66,
+        "cls": 0
+      },
+      "after": {
+        "scores": {
+          "performance": 99,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 100,
+          "agentic-browsing": 100
+        },
+        "lcp_seconds": 0.79,
+        "cls": 0
+      }
+    }
+  }
+}
