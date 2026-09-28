@@ -62,10 +62,19 @@
   },
   "history_note": "Migrated production snapshot; reconcile with current direction and catalog before resuming. No new generation authorized.",
   "author_classification": {
-    "confirmed_at": "2026-09-28",
-    "variation": "duet",
+    "updated_at": "2026-09-28",
+    "variation": "solo",
     "source_url": "https://suno.com/s/o55DLRbtHsKXCmcM",
-    "note": "Author confirms the already published take is a duet. Historical male-voice prompt/settings are intent, not a verified solo performance. Existing MP3 and matching MP4 retained; no duplicate media needed.",
-    "primary_solo_request": "Keep a separate solo as primary when identified; awaiting its source link."
-  }
+    "note": "Author corrected the prior duet classification to solo and requested the label be updated. Keep this existing audio/video pair as primary; no separate solo link is pending. Classification follows author direction, not an assistant listening assessment."
+  },
+  "classification_history": [
+    {
+      "confirmed_at": "2026-09-28",
+      "variation": "duet",
+      "source_url": "https://suno.com/s/o55DLRbtHsKXCmcM",
+      "note": "Author confirms the already published take is a duet. Historical male-voice prompt/settings are intent, not a verified solo performance. Existing MP3 and matching MP4 retained; no duplicate media needed.",
+      "primary_solo_request": "Keep a separate solo as primary when identified; awaiting its source link.",
+      "superseded": true
+    }
+  ]
 }
