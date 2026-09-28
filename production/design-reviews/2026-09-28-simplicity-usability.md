@@ -6,7 +6,7 @@ Reviewed home, language directory, English, Tamil and Hindi language pages, Art 
 - Languages without recordings now show one clear invitation instead of separate empty audio and video sections. Existing section links remain valid.
 - Artwork details avoid repeating the poetic caption already displayed in the frame. Print downloads show their format and size.
 - Refined print/download sections start collapsed on every artwork detail page. Direct download-section links reveal them automatically. Original artwork remains available on demand.
-- Hid The Witness canvas PDF panel and removed its guide link, retaining the source file and image downloads.
+- Archived The Witness canvas PDF, preview and metadata under media/archive, excluded from site builds. Removed its special panel, styles and guide link; image downloads follow the shared artwork template.
 - Slideshow shows the current song, supports left/right keyboard artwork navigation, and carries the current playback position when opened from a language page while its song is playing in the collection player.
 - Portrait slideshows use the phone height; short landscape screens place the caption beside the art. Controls have reserved space below the caption.
 

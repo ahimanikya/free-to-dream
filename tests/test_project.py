@@ -106,19 +106,17 @@ class CollectionTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, '4x print is not hydrated'):
             app.validate_art_prints()
 
-    def test_canvas_download_preserves_supplied_pdf_and_rejects_lfs_pointer(self):
+    def test_archived_canvas_is_preserved_but_not_published(self):
         app.build(False)
         page = (self.root/'site-public/artwork--art-64.html').read_text()
-        source = self.root/'media/prints/ahi-art-canvas-24x48.pdf'
-        published = self.root/'site-public/media/prints/ahi-art-canvas-24x48.pdf'
-        self.assertEqual(source.read_bytes(), published.read_bytes())
-        self.assertNotIn('Download canvas PDF', page)
+        archive = self.root/'media/archive/the-witness-canvas'
+        self.assertTrue((archive/'ahi-art-canvas-24x48.pdf').is_file())
+        self.assertFalse((self.root/'site-public/media/archive').exists())
+        self.assertFalse((self.root/'site-public/media/prints/ahi-art-canvas-24x48.pdf').exists())
+        self.assertNotIn('canvas-edition', page)
         self.assertNotIn('View PDF', page)
         self.assertIn('<details class="art-print-disclosure" id="refined-download">', page)
         self.assertIn('Download original image', page)
-        source.write_text('version https://git-lfs.github.com/spec/v1\noid sha256:'+'0'*64+'\nsize 16404838\n')
-        with self.assertRaisesRegex(ValueError, 'not hydrated'):
-            app.build(False)
 
     def test_artwork_galleries_separate_originals_from_verified_ai_images(self):
         app.build(False)

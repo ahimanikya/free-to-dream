@@ -487,7 +487,6 @@ def artwork_detail_page(item, works):
     if item.get('print_edition'):
         edition = item['print_edition']
         printing += f'<a class="button" href="{esc(edition["file"],quote=True)}" download>Download original 4× print ↓</a><p class="small">{edition["width"]:,} × {edition["height"]:,} pixels · {esc(edition["method_label"])}. {esc(edition["note"])}</p>'
-    canvas_section = canvas_edition_content(item['canvas_edition']) if item.get('canvas_edition') and item['canvas_edition'].get('visible', True) else ''
     ai = next((work for work in json.loads((ROOT/'catalog/ai-artworks.json').read_text())['artworks'] if work.get('source_artwork_id') == item['id']), None)
     ai_section = ''
     if ai:
@@ -512,38 +511,17 @@ def artwork_detail_page(item, works):
         screen_image = f'<img src="{esc(ai["file"],quote=True)}" width="{ai["width"]}" height="{ai["height"]}" alt="{title}, refined artwork by Ahimanikya Satapathy">'
         print_markup = screen_print(screen_image, item['label'], item['caption'], item['id'], ai['width'], ai['height'])
         primary_figure = f'''<figure><a class="art-wall" href="{esc(ai['file'],quote=True)}" aria-label="View full refined print: {title}"><div class="art-frame frame-walnut mat-linen frame-{refined_variant} refined-frame"><div class="art-mat">{print_markup}</div></div></a><figcaption>Refined print edition<a class="art-enlarge" href="{esc(ai['file'],quote=True)}">View full image ↗</a></figcaption></figure>'''
-        original_section = f'<details class="original-art-disclosure" id="original"><summary>View original artwork</summary>{original_figure}{original_downloads}{canvas_section}</details>'
-        canvas_section = ''
+        original_section = f'<details class="original-art-disclosure" id="original"><summary>View original artwork</summary>{original_figure}{original_downloads}</details>'
     gallery_page = 'artworks.html' if ai else 'original-artworks.html'
     works = artwork_display_order(works)
     index = works.index(item)
     previous, following = works[(index-1) % len(works)], works[(index+1) % len(works)]
     edition_link = '<a href="#refined-download">Print download</a><a href="#original">Original artwork</a>' if ai else '<a href="#print">Original download</a>'
-    canvas_link = '<a href="#canvas-edition">Canvas edition ↙</a>' if canvas_section else ''
-    return f'''<article class="art-detail"><div class="art-detail-heading"><div class="eyebrow">ART BY AHIMANIKYA SATAPATHY</div><h1>{title}</h1><nav class="art-section-links" aria-label="On this artwork page">{edition_link}{canvas_link}</nav></div>
+    return f'''<article class="art-detail"><div class="art-detail-heading"><div class="eyebrow">ART BY AHIMANIKYA SATAPATHY</div><h1>{title}</h1><nav class="art-section-links" aria-label="On this artwork page">{edition_link}</nav></div>
 <div class="art-detail-layout" id="{display_id}">{primary_figure}
 <div class="art-detail-story">{story_phrase}<div class="art-reflections">{reflections}</div><details class="edition-details"><summary>About this reading</summary><p class="art-reading-note">A contemporary poetic reading of the original artwork.</p></details></div></div>
 {ai_section}{original_section}
-{canvas_section}<nav class="art-detail-navigation" aria-label="More artwork"><a href="artwork--{previous['id']}.html" aria-label="Previous artwork: {esc(previous['label'],quote=True)}"><span>← PREVIOUS WORK</span><strong>{esc(previous['label'])}</strong></a><a class="return-gallery" href="{gallery_page}#{item['id']}">All artworks</a><a href="artwork--{following['id']}.html" aria-label="Next artwork: {esc(following['label'],quote=True)}"><span>NEXT WORK →</span><strong>{esc(following['label'])}</strong></a></nav></article>'''
-
-
-def canvas_edition_content(printing):
-    ident = 'canvas'
-    def image_url(filename):
-        asset = confined(filename)
-        if not asset.is_file() or not asset.is_relative_to((ROOT/'media').resolve()):
-            raise ValueError('Canvas preview must be an existing public image')
-        return esc(str(asset.relative_to(ROOT.resolve())), quote=True)
-    pdf = confined(printing['file'])
-    if not pdf.is_relative_to((ROOT/'media/prints').resolve()) or pdf.suffix.lower() != '.pdf' or not pdf.is_file():
-        raise ValueError('Print edition must be an existing public PDF')
-    with pdf.open('rb') as stream:
-        if stream.read(5) != b'%PDF-':
-            raise ValueError('Print PDF is not hydrated. Run git lfs pull --include="media/prints/*.pdf" --exclude=""')
-    pdf_url = esc(str(pdf.relative_to(ROOT.resolve())), quote=True)
-    preview = image_url(printing['preview'])
-    print_panel = f'''<section class="canvas-edition" aria-labelledby="{ident}-canvas-title"><a class="canvas-preview" href="{pdf_url}" aria-label="View the canvas print PDF"><img src="{preview}" width="750" height="1500" loading="lazy" alt="Canvas print layout of the portrait with the artist’s original signature, without the poster caption"></a><div><div class="eyebrow">THE EDITION THE ARTIST LIVES WITH</div><h3 id="{ident}-canvas-title">{esc(printing['label'])}</h3><p>Prepared for cloth canvas, and used by Ahimanikya for the prints in his two homes and office. The signed artwork fills the page.</p><p class="canvas-credit">{esc(printing['credit'])}</p><div class="action-row"><a class="button" href="{pdf_url}" download>Download canvas PDF ↓</a><a class="text-link" href="{pdf_url}">View PDF ↗</a></div><p class="art-edition-note">PDF · {printing['size_mb']} MB · {printing['width_inches']} × {printing['height_inches']} inches · supplied file, unchanged</p><details><summary>Before you print</summary><p>The embedded image is {printing['pixels_wide']:,} × {printing['pixels_high']:,} pixels: 72 ppi at 24 × 48 inches. This is the artist-prepared edition the artist has used successfully on cloth canvas. Preserve its proportions and signature; ask your printer about canvas wrap margins.</p></details></div></section>'''
-    return print_panel.replace('<section class="canvas-edition"', '<section class="canvas-edition" id="canvas-edition"')
+<nav class="art-detail-navigation" aria-label="More artwork"><a href="artwork--{previous['id']}.html" aria-label="Previous artwork: {esc(previous['label'],quote=True)}"><span>← PREVIOUS WORK</span><strong>{esc(previous['label'])}</strong></a><a class="return-gallery" href="{gallery_page}#{item['id']}">All artworks</a><a href="artwork--{following['id']}.html" aria-label="Next artwork: {esc(following['label'],quote=True)}"><span>NEXT WORK →</span><strong>{esc(following['label'])}</strong></a></nav></article>'''
 
 
 def effective_settings_panel(slug, config):
@@ -992,11 +970,6 @@ def engagement_page(config):
 def build(local=False):
     languages = validate()
     validate_art_prints()
-    # Fail before copying assets if a required print file is only an LFS pointer.
-    for printing in (ROOT/'media/prints').glob('*.pdf'):
-        with printing.open('rb') as stream:
-            if stream.read(5) != b'%PDF-':
-                raise ValueError('Print PDF is not hydrated. Retrieve the Git LFS print files.')
     config = json.loads((ROOT / 'site-config.json').read_text())
     config['_settings_policy'] = music_queue.settings_policy(ROOT, 'i-am-free-to-dream')
     config['_has_audio'] = any(item['kind']=='audio' and (publicly_available(item) or (local and item.get('repo_path'))) for item in records())
@@ -1022,7 +995,7 @@ def build(local=False):
 
     # Only explicitly authorized previews/releases are embedded remotely.
     # Never ship archive binaries or unhydrated pointers in the Pages build.
-    shutil.copytree(ROOT / 'media', output / 'media', ignore=shutil.ignore_patterns(*(f'*{ext}' for ext in MEDIA_EXTENSIONS), '*.srt', '*.vtt'))
+    shutil.copytree(ROOT / 'media', output / 'media', ignore=shutil.ignore_patterns('archive', *(f'*{ext}' for ext in MEDIA_EXTENSIONS), '*.srt', '*.vtt'))
     shutil.copytree(KB, output / 'kb')
     # Validate override language keys before rendering public policy summaries.
     known = {item['slug'] for item in languages}

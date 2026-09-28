@@ -9,7 +9,7 @@ for name in filter(None, names):
     path = root / name
     if name.startswith(('local-assets/', '.venv/', 'site/', 'site-public/')):
         errors.append(name)
-    elif (name.startswith(('media/prints/', 'media/artworks/', 'media/ai-artworks/')) and path.suffix.lower() in {'.png', '.jpg', '.jpeg', '.pdf'}) or path.suffix.lower() in {'.mp3','.mp4','.wav','.m4a','.ogg','.mov','.webm'}:
+    elif (name.startswith(('media/prints/', 'media/artworks/', 'media/ai-artworks/', 'media/archive/')) and path.suffix.lower() in {'.png', '.jpg', '.jpeg', '.pdf'}) or path.suffix.lower() in {'.mp3','.mp4','.wav','.m4a','.ogg','.mov','.webm'}:
         # Check the index, not the hydrated working file, which can be large.
         size = int(subprocess.check_output(['git','cat-file','-s',':'+name], cwd=root))
         if not name.startswith('media/') or size > 256:

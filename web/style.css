@@ -502,16 +502,6 @@ article.art-gallery { max-width:none; margin:12px 0 64px; }
 
 .reference-artwork figcaption a, .author-artwork figcaption a { display:inline-flex; align-items:center; min-height:32px; font-size:11px; }
 
-.canvas-edition { grid-column:1/-1; display:grid; grid-template-columns:160px minmax(0,1fr); gap:32px; padding:28px; background:#e9ecdf; border:1px solid var(--line); border-radius:6px; align-items:center; }
-.canvas-edition .canvas-preview { display:block; max-width:160px; padding:8px; background:var(--white); border:1px solid var(--line); }
-.canvas-edition img { display:block; width:100%; height:auto; max-height:none; }
-.canvas-edition h3 { font:400 29px/1.25 Georgia,serif; margin:10px 0 16px; }
-.canvas-edition p { font-size:15px; color:var(--muted); line-height:1.8; }
-.canvas-edition .canvas-credit, .canvas-edition .art-edition-note { font-size:12px; }
-.canvas-edition details { margin-top:16px; font-size:13px; }
-.canvas-edition summary { cursor:pointer; text-underline-offset:4px; }
-@media(max-width:600px) { .canvas-edition { grid-template-columns:1fr; padding:22px; gap:22px; } .canvas-edition .canvas-preview { justify-self:center; } }
-
 /* A quiet, curated gallery; full images keep their original proportions. */
 .portfolio-intro { max-width:790px; padding:20px 0 42px; }
 .portfolio-intro h1 { font:400 clamp(44px,6vw,76px)/1.12 Georgia,serif; letter-spacing:-.035em; }
@@ -650,7 +640,7 @@ main:has(.art-index) > .back { margin:18px 0 8px; }
 .art-detail-navigation span { font-size:9px; letter-spacing:.15em; color:var(--muted); }
 .art-detail-navigation strong { font:400 24px/1.5 Georgia,serif; margin-top:6px; }
 .art-detail-navigation .return-gallery { font-size:12px; text-decoration:underline; }
-#original,#print,#ai-edition,#canvas-edition { scroll-margin-top:24px; }
+#original,#print,#ai-edition { scroll-margin-top:24px; }
 article.art-credits { display:grid; grid-template-columns:.85fr 1.3fr; gap:80px; max-width:none; margin:54px 0 72px; }
 .art-credits-lead h1 { font:400 clamp(44px,5vw,64px)/1.1 Georgia,serif; margin:20px 0; letter-spacing:-.035em; }
 .art-credits-lead > p { font:400 21px/1.7 Georgia,serif; color:var(--muted); }

@@ -1,6 +1,6 @@
 {
   "selection_policy": "Two separate galleries: unchanged photographs of original artwork, and explicitly labeled AI-generated images. Do not substitute AI reinterpretations for original paintings or imply that new captions are historical inscriptions.",
-  "canvas_pdf": "media/prints/ahi-art-canvas-24x48.pdf",
+  "canvas_pdf": "media/archive/the-witness-canvas/ahi-art-canvas-24x48.pdf",
   "ai_reinterpretations": [
     {
       "filename": "the-witness-poster.png",
