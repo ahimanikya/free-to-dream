@@ -490,3 +490,31 @@ body:has(.art-focus) .footer-resources { display:none; }
  .art-quiet .art-detail-layout > figure .refined-frame { width:min(100%,440px); height:auto; aspect-ratio:3/5; }
  .art-quiet .art-detail-layout > figure > .art-wall { padding-inline:0; }
 }
+
+/* Approved poetic assets: use ornaments at pauses, never behind the words. */
+.origin-story { border-top:0; }
+.origin-story::before { top:-14px; width:min(280px,70%); height:48px; background:url('brand/quiet-thread.svg') center/contain no-repeat; opacity:.8; }
+/* The quote already carries the wave and star; avoid a second divider above it. */
+.dream-thread { display:none; }
+.poem-end-thread { width:min(240px,75%); height:48px; margin:4px 0 12px; background:url('brand/quiet-thread.svg') center/contain no-repeat; pointer-events:none; }
+.poem-reading:has(.poem-end-thread) pre { margin-bottom:12px; }
+.portfolio-closing { position:relative; border-top:0; }
+.portfolio-closing::before { content:""; position:absolute; top:-18px; left:0; width:min(300px,75%); height:48px; background:url('brand/quiet-thread.svg') center/contain no-repeat; pointer-events:none; }
+.original-poem-heading { position:relative; }
+.original-poem-heading::after { content:""; position:absolute; top:8px; right:0; width:122px; height:100px; background:url('odia-manuscript.svg') center/contain no-repeat; opacity:.8; pointer-events:none; }
+.reference-reading > h1::after,.contribution-intro > h1::after { content:""; display:block; width:72px; height:9px; margin-top:14px; background:url('odia-border.svg') center/72px 9px no-repeat; opacity:.5; pointer-events:none; }
+.art-focus .art-detail-layout > figure > .art-wall { background:radial-gradient(ellipse at 50% 45%,#fffdf680 0%,#f9f1e060 32%,#e9ddc51c 70%,transparent 85%); }
+/* Keep the warm paper, lotus, walnut and linen as the existing visual foundation. */
+#index-seek::-webkit-slider-runnable-track,#index-volume::-webkit-slider-runnable-track { background:linear-gradient(to right,var(--straw) var(--progress),#467886 var(--progress)); }
+#index-seek::-moz-range-track,#index-volume::-moz-range-track { background:linear-gradient(to right,var(--straw) var(--progress),#467886 var(--progress)); }
+.index-player .player-icon[aria-pressed="true"] { color:#e8c58a; }
+.index-player .playback-dot { background:#e8c58a; }
+@media(min-width:701px) {
+ .original-poem-heading { padding-right:146px; }
+}
+@media(max-width:700px) {
+ .original-poem-heading::after { width:60px; height:48px; top:-5px; }
+ .original-poem-heading > .eyebrow { padding-right:72px; min-height:40px; }
+ .original-poem-heading h1 { margin-top:8px; }
+ .poem-end-thread { width:min(200px,70%); height:40px; }
+}

@@ -898,7 +898,7 @@ def original_poem_page(meta, body, path):
     if not poem:
         raise ValueError('Original poem text is missing')
     notes = body[poem.end():].strip()
-    return f'''<article class="original-poem-page"><section class="original-poem-heading"><div class="eyebrow">THE ORIGINAL POEM · ODIA</div><h1 lang="or">{esc(meta['title'])}</h1><p class="original-poem-byline">By {esc(meta['author'])}</p><p class="original-poem-intro">The words that began <em>I Am Free to Dream</em>—before the music, and before its journey into other languages.</p></section><div class="original-poem-layout"><div id="poem-text" class="original-poem-text" lang="or"><pre><code>{esc(poem[1])}</code></pre></div><aside class="original-poem-attribution" aria-label="Attribution and source">{render_markdown(notes,path)}</aside></div><nav class="original-poem-next" aria-label="Continue exploring"><a class="button" href="poems--i-am-free-to-dream--languages--odia.html">Listen in Odia</a><a class="text-link" href="languages.html">Explore other languages →</a></nav></article>'''
+    return f'''<article class="original-poem-page"><section class="original-poem-heading"><div class="eyebrow">THE ORIGINAL POEM · ODIA</div><h1 lang="or">{esc(meta['title'])}</h1><p class="original-poem-byline">By {esc(meta['author'])}</p><p class="original-poem-intro">The words that began <em>I Am Free to Dream</em>—before the music, and before its journey into other languages.</p></section><div class="original-poem-layout"><div id="poem-text" class="original-poem-text" lang="or"><pre><code>{esc(poem[1])}</code></pre><div class="poem-end-thread" aria-hidden="true"></div></div><aside class="original-poem-attribution" aria-label="Attribution and source">{render_markdown(notes,path)}</aside></div><nav class="original-poem-next" aria-label="Continue exploring"><a class="button" href="poems--i-am-free-to-dream--languages--odia.html">Listen in Odia</a><a class="text-link" href="languages.html">Explore other languages →</a></nav></article>'''
 
 
 def language_content(meta, body, path, items, config, local=False):
@@ -925,7 +925,8 @@ def language_content(meta, body, path, items, config, local=False):
         primary_html = primary_html.replace('<pre>', '<pre dir="rtl">')
     if has_lyrics(meta) and slug in TEXT_LANGUAGES:
         primary_html = f'<div lang="{TEXT_LANGUAGES[slug]}">{primary_html}</div>'
-    reading = f'<article id="poem-text" class="poem-reading"><h2 class="reading-caption visually-hidden">Read</h2>{primary_html}<a class="poem-download" href="kb/poems/i-am-free-to-dream/languages/{quote(slug)}.md" download>Download poem &amp; notes ↓</a></article>'
+    poem_ornament = '<div class="poem-end-thread" aria-hidden="true"></div>' if '<pre>' in primary_html or '<pre ' in primary_html else ''
+    reading = f'<article id="poem-text" class="poem-reading"><h2 class="reading-caption visually-hidden">Read</h2>{primary_html}{poem_ornament}<a class="poem-download" href="kb/poems/i-am-free-to-dream/languages/{quote(slug)}.md" download>Download poem &amp; notes ↓</a></article>'
     content = header + '<div class="language-layout">'+reading+'<div class="language-sidebar">'+resource_panel(meta, items)+language_artwork(slug, any(item['kind'] == 'audio' and not item.get('archived') for item, _ in items))+'</div></div>'
     content += '<section class="language-notes" aria-label="About this version">'
     prompt = re.search(r'```(?:text)?\n(.*?)\n```', by_heading.get('Poem / arranged lyrics', ''), re.S)
