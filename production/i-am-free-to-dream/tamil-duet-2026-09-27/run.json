@@ -2,7 +2,7 @@
   "language": "tamil",
   "poem": "i-am-free-to-dream",
   "variant": "duet",
-  "stage": "selection-pending",
+  "stage": "download-pending",
   "source": "kb/poems/i-am-free-to-dream/languages/tamil.md",
   "source_sha256": "e366ef9efff6c411cd7a017eb3ce96d0b1cd24df309527f3963e864b6ebe60bf",
   "title": "கனவு காண எனக்குத் தடையில்லை — Duet",
@@ -22,8 +22,8 @@
   },
   "submission_limit": 1,
   "expected_candidates": 2,
-  "selected_candidate": null,
-  "publication_authorized": false,
+  "selected_candidate": "081ca235-b828-44de-93be-e0b79ed779bb",
+  "publication_authorized": true,
   "changes": [
     "Section directions only; sung words unchanged",
     "Tamil-specific duet style"
@@ -39,7 +39,7 @@
       "id": "081ca235-b828-44de-93be-e0b79ed779bb",
       "url": "https://suno.com/song/081ca235-b828-44de-93be-e0b79ed779bb",
       "duration_display": "2:58",
-      "status": "ready-for-review",
+      "status": "author-selected-download-pending",
       "duration_source": "Suno create list"
     },
     {
@@ -51,5 +51,26 @@
       "duration_source": "Suno create list"
     }
   ],
-  "history_note": "Migrated production snapshot; reconcile with current direction and catalog before resuming. No new generation authorized."
+  "history_note": "Migrated production snapshot; reconcile with current direction and catalog before resuming. No new generation authorized.",
+  "selected_at": "2026-09-28",
+  "selected_by": "author",
+  "selected_shared_url": "https://suno.com/s/Rwk6CWgd7U89ftyp",
+  "publication_plan": {
+    "variation": "duet",
+    "variation_label": "Duet",
+    "preserve_primary_audio": "tamil-audio-01",
+    "preserve_primary_video": "tamil-video-01",
+    "presentation": "Solo and Duet tabs for audio and video, with Solo first and selected by default.",
+    "audio_path": "media/tamil/duet/i-am-free-to-dream-tamil-duet-01.mp3",
+    "video_path": "media/tamil/duet/i-am-free-to-dream-tamil-duet-01.mp4",
+    "next_step": "Obtain the selected MP3 through a permitted download or an author-supplied copy, verify identity, render the matching shared-visual video, then register and publish both."
+  },
+  "download_status": {
+    "state": "blocked",
+    "reason": "The normal Suno download control reports downloads unavailable. No matching take was found among existing local MP3 copies.",
+    "attempted_at": "2026-09-28",
+    "downloaded": false,
+    "video_rendered": false,
+    "published": false
+  }
 }
