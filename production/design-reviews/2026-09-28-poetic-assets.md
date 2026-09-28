@@ -9,3 +9,7 @@ Applied the author-approved visual board using the existing lotus, wave/thread, 
 - Reference and contribution headings receive one short leaf detail.
 - Collection-player progress uses straw gold against sea blue; pressed controls retain a distinguishable warm accent.
 - Existing paper, wooden frames, cloth insets and lotus remain intact. No new animations or generated images.
+
+## Palette and page consistency
+
+Documented all eight interface base colours, three listening accents and five frame-material colours in the public brand guide, portable README and palette JSON. Extended the restrained heading leaf to the brand guide, design roots and language directory. Rebuilt the downloadable kit with the updated references and existing thread, leaf and manuscript SVGs. Utility tools remain undecorated within their working area.

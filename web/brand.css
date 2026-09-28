@@ -502,7 +502,7 @@ body:has(.art-focus) .footer-resources { display:none; }
 .portfolio-closing::before { content:""; position:absolute; top:-18px; left:0; width:min(300px,75%); height:48px; background:url('brand/quiet-thread.svg') center/contain no-repeat; pointer-events:none; }
 .original-poem-heading { position:relative; }
 .original-poem-heading::after { content:""; position:absolute; top:8px; right:0; width:122px; height:100px; background:url('odia-manuscript.svg') center/contain no-repeat; opacity:.8; pointer-events:none; }
-.reference-reading > h1::after,.contribution-intro > h1::after { content:""; display:block; width:72px; height:9px; margin-top:14px; background:url('odia-border.svg') center/72px 9px no-repeat; opacity:.5; pointer-events:none; }
+.reference-reading > h1::after,.contribution-intro > h1::after,.brand-guide > h1::after,.art-credits-lead > h1::after,.language-directory .section-heading > h1::after { content:""; display:block; width:72px; height:9px; margin-top:14px; background:url('odia-border.svg') center/72px 9px no-repeat; opacity:.5; pointer-events:none; }
 .art-focus .art-detail-layout > figure > .art-wall { background:radial-gradient(ellipse at 50% 45%,#fffdf680 0%,#f9f1e060 32%,#e9ddc51c 70%,transparent 85%); }
 /* Keep the warm paper, lotus, walnut and linen as the existing visual foundation. */
 #index-seek::-webkit-slider-runnable-track,#index-volume::-webkit-slider-runnable-track { background:linear-gradient(to right,var(--straw) var(--progress),#467886 var(--progress)); }

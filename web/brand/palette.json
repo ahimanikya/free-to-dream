@@ -5,5 +5,14 @@
   "paper": "#F7F0E3",
   "ink": "#233C40",
   "muted": "#62665F",
-  "line": "#DCD1BE"
+  "line": "#DCD1BE",
+  "white": "#FFFCF5",
+  "player-track": "#467886",
+  "player-muted": "#C3D4D7",
+  "player-highlight": "#E8C58A",
+  "wood": "#604431",
+  "wood-light": "#997253",
+  "wood-dark": "#35271E",
+  "linen": "#E6DCC5",
+  "fillet": "#AA9876"
 }

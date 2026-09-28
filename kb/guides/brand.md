@@ -23,7 +23,30 @@ The palette follows Ahimanikya’s reference to Odisha’s natural materials: �
 | Sea | #195565 | Navigation, player and actions |
 | Warm straw | #C69B52 | Petal accents and quiet decoration |
 | Paper | #F7F0E3 | Reading background |
-| Ink | #233C40 | Body text |
+| Ink | #233C40 | Headings and body text |
+| Warm white | #FFFCF5 | Light surfaces and paper highlights |
+| Muted ink | #62665F | Secondary descriptions |
+| Fine line | #DCD1BE | Dividers and quiet boundaries |
+
+### The listening colours
+
+| Colour | Value | Role |
+| --- | --- | --- |
+| Soft sea | #467886 | Unplayed progress track and player border |
+| Mist | #C3D4D7 | Secondary text on the sea-blue player |
+| Light gold | #E8C58A | Active player controls and playing indicator |
+
+### The frame colours
+
+| Colour | Value | Role |
+| --- | --- | --- |
+| Walnut | #604431 | Wooden frame |
+| Warm wood | #997253 | Frame highlights |
+| Deep wood | #35271E | Frame shadow |
+| Linen | #E6DCC5 | Woven-cloth inset |
+| Antique gold | #AA9876 | Fine inner frame edge |
+
+These are the base colours. Paper grain, wood grain, cloth and soft light use subtle transparent layers; the artwork retains its own background and colour. Straw and fine-line colours are decorative, not colours for small text on paper.
 
 ## Assets to carry the feeling
 
@@ -36,12 +59,28 @@ The palette follows Ahimanikya’s reference to Odisha’s natural materials: �
 - [Social card — editable SVG](assets/brand/social-card.svg)
 - [Colour values — JSON](assets/brand/palette.json)
 - [Usage notes](assets/brand/README.md)
+- [Flowing thread and star](assets/brand/quiet-thread.svg)
+- [Leaf border](assets/odia-border.svg)
+- [Palm-leaf manuscript](assets/odia-manuscript.svg)
 
 The SVGs scale without losing sharpness. The social card is 1200 × 630; export it as a PNG for social platforms. The wordmark uses live Georgia and Arial type; outline the text in a design editor when exact reproduction matters.
 
 ## A quiet place to stay
 
 A little paper grain. A fine line like an engraving. A frame that gives an image room to breathe. The site should feel welcoming even when you stop reading and simply listen. The heritage detail stays at the edges; the poem and artwork keep the centre.
+
+## Where the details belong
+
+| Page | Artistic touch |
+| --- | --- |
+| Home | Lotus identity, flowing thread at the story transition, a quiet star beside the poem |
+| Language pages | Palm-leaf reading detail and one flowing thread after the poem; sea-blue listening controls |
+| Original poem | Palm-leaf manuscript beside the heading, flowing thread after the poem |
+| Art Journal and artwork pages | Wooden frames, woven cloth, soft gallery light; a wave at the journal’s closing |
+| Language directory, guides and contribution page | One small leaf detail beneath the main heading |
+| Recording pages | Shared paper, lotus and border; the player remains the focus |
+
+Use one ornament at a pause, not behind words or over art. Keep decorative details still and outside keyboard navigation. Leave working areas such as lyric timing tools clear. These are contemporary motifs inspired by Odisha’s visual traditions; their sources are described in [Design roots and credits](artwork.md).
 
 ## Give the work room
 
