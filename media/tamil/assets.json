@@ -18,5 +18,25 @@
     "title": "Tamil video",
     "status": "working",
     "notes": ""
+  },
+  {
+    "repo_path": "media/tamil/duet/i-am-free-to-dream-tamil-duet-01.mp3",
+    "sha256": "9e05c58f954b53af6c44a55737e2cf29d174066e5c8d31bae735162663e795a3",
+    "bytes": 4129594,
+    "source_name": "i-am-free-to-dream-tamil-duet-01.mp3",
+    "download_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/f01c427df238096140d2fd44887d6509ebc2e72b/media/tamil/duet/i-am-free-to-dream-tamil-duet-01.mp3",
+    "title": "Tamil duet audio",
+    "status": "working",
+    "notes": "Author-selected additional duet; primary solo preserved. Fluent-speaker review remains open."
+  },
+  {
+    "repo_path": "media/tamil/duet/i-am-free-to-dream-tamil-duet-01.mp4",
+    "sha256": "04cfd0ab415fb362542d5cd2fffe9db3e4737d689d9bef8d31fe9f917cd7bd6f",
+    "bytes": 87028780,
+    "source_name": "i-am-free-to-dream-tamil-duet-01.mp4",
+    "download_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/f01c427df238096140d2fd44887d6509ebc2e72b/media/tamil/duet/i-am-free-to-dream-tamil-duet-01.mp4",
+    "title": "Tamil duet video",
+    "status": "working",
+    "notes": "Author-selected additional duet; primary solo preserved. Fluent-speaker review remains open."
   }
 ]

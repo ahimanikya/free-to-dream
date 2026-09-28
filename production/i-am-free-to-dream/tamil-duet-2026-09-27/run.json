@@ -2,7 +2,7 @@
   "language": "tamil",
   "poem": "i-am-free-to-dream",
   "variant": "duet",
-  "stage": "download-pending",
+  "stage": "imported",
   "source": "kb/poems/i-am-free-to-dream/languages/tamil.md",
   "source_sha256": "e366ef9efff6c411cd7a017eb3ce96d0b1cd24df309527f3963e864b6ebe60bf",
   "title": "கனவு காண எனக்குத் தடையில்லை — Duet",
@@ -66,11 +66,38 @@
     "next_step": "Obtain the selected MP3 through a permitted download or an author-supplied copy, verify identity, render the matching shared-visual video, then register and publish both."
   },
   "download_status": {
-    "state": "blocked",
-    "reason": "The normal Suno download control reports downloads unavailable. No matching take was found among existing local MP3 copies.",
-    "attempted_at": "2026-09-28",
-    "downloaded": false,
-    "video_rendered": false,
+    "state": "downloaded",
+    "method": "Suno normal MP3 download control",
+    "identity_check": "Selected song UUID is present in downloaded MP3 metadata.",
+    "downloaded": true,
+    "video_rendered": true,
     "published": false
-  }
+  },
+  "download": {
+    "path": "media/tamil/duet/i-am-free-to-dream-tamil-duet-01.mp3",
+    "bytes": 4129594,
+    "sha256": "9e05c58f954b53af6c44a55737e2cf29d174066e5c8d31bae735162663e795a3"
+  },
+  "media_commit": "f01c427df238096140d2fd44887d6509ebc2e72b",
+  "video_validation": {
+    "full_decode": "passed",
+    "audio_sha256": "9e05c58f954b53af6c44a55737e2cf29d174066e5c8d31bae735162663e795a3",
+    "source_audio_seconds": 177.64,
+    "output_audio_seconds": 177.64275,
+    "video_source_sha256": "3c18cfe26a4e86efcd9a8a02c581e09a384bd05ba526291c168bd018f92447ed",
+    "video_time_factor": 0.986614829214107,
+    "audio_correlation": 0.9999724900058431,
+    "output_bytes": 87028780,
+    "output_sha256": "04cfd0ab415fb362542d5cd2fffe9db3e4737d689d9bef8d31fe9f917cd7bd6f"
+  },
+  "visual_frames_reviewed": [
+    "opening",
+    "middle",
+    "ending"
+  ],
+  "page_url": "https://ahimanikya.github.io/free-to-dream/poems--i-am-free-to-dream--languages--tamil.html",
+  "recording_ids": [
+    "tamil-duet-audio-01",
+    "tamil-duet-video-01"
+  ]
 }

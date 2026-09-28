@@ -330,7 +330,9 @@
     "preview_authorization": "Author requested embedded audio and video on each language page on 2026-09-24.",
     "allow_file_sharing": false,
     "archived": false,
-    "duration_seconds": 152.04
+    "duration_seconds": 152.04,
+    "variation": "solo",
+    "variation_label": "Solo"
   },
   {
     "id": "tamil-video-01",
@@ -354,7 +356,9 @@
     "archived": false,
     "public_preview": true,
     "preview_authorization": "Author requested embedded audio and video on each language page on 2026-09-24.",
-    "allow_file_sharing": false
+    "allow_file_sharing": false,
+    "variation": "solo",
+    "variation_label": "Solo"
   },
   {
     "id": "telugu-audio-v4",
@@ -757,5 +761,71 @@
     "audio_recording_id": "sambalpuri-audio-01",
     "variation": "duet",
     "variation_label": "Duet"
+  },
+  {
+    "id": "tamil-duet-audio-01",
+    "language": "tamil",
+    "poem": "i-am-free-to-dream",
+    "kind": "audio",
+    "title": "கனவு காண எனக்குத் தடையில்லை · Duet",
+    "local_path": null,
+    "repo_path": "media/tamil/duet/i-am-free-to-dream-tamil-duet-01.mp3",
+    "public_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/f01c427df238096140d2fd44887d6509ebc2e72b/media/tamil/duet/i-am-free-to-dream-tamil-duet-01.mp3",
+    "publish": false,
+    "public_preview": true,
+    "preview_authorization": "Author selected this duet on 2026-09-28 and requested audio/video publication as an additional variation while preserving the primary solo.",
+    "review_status": "needs-review",
+    "rights_status": "release-details-to-confirm",
+    "allow_file_sharing": false,
+    "archived": false,
+    "duration_seconds": 177.64,
+    "source_url": "https://suno.com/song/081ca235-b828-44de-93be-e0b79ed779bb",
+    "variation": "duet",
+    "variation_label": "Duet",
+    "notes": "Author-selected soft-answer Tamil duet. Fluent-speaker review remains open.",
+    "credits": {
+      "poem": "Ahimanikya Satapathy",
+      "music_and_vocals": "Generated using Suno AI"
+    },
+    "generation_settings": {
+      "model": "v6",
+      "mode": "Advanced",
+      "weirdness": 30,
+      "style_influence": 65,
+      "duration": "Auto",
+      "max_mode": false,
+      "personalize": false,
+      "variety": "Normal",
+      "vocal_gender": "Unselected; duet directed in lyrics and style",
+      "exclude_styles": ""
+    }
+  },
+  {
+    "id": "tamil-duet-video-01",
+    "language": "tamil",
+    "poem": "i-am-free-to-dream",
+    "kind": "video",
+    "title": "கனவு காண எனக்குத் தடையில்லை · Duet",
+    "local_path": null,
+    "repo_path": "media/tamil/duet/i-am-free-to-dream-tamil-duet-01.mp4",
+    "public_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/f01c427df238096140d2fd44887d6509ebc2e72b/media/tamil/duet/i-am-free-to-dream-tamil-duet-01.mp4",
+    "publish": false,
+    "public_preview": true,
+    "preview_authorization": "Author selected this duet on 2026-09-28 and requested audio/video publication as an additional variation while preserving the primary solo.",
+    "review_status": "needs-review",
+    "rights_status": "release-details-to-confirm",
+    "allow_file_sharing": false,
+    "archived": false,
+    "duration_seconds": 177.64,
+    "source_url": "https://suno.com/song/081ca235-b828-44de-93be-e0b79ed779bb",
+    "variation": "duet",
+    "variation_label": "Duet",
+    "notes": "Author-selected soft-answer Tamil duet. Fluent-speaker review remains open. Shared visuals fit the full soundtrack at its original speed and pitch.",
+    "credits": {
+      "poem": "Ahimanikya Satapathy",
+      "music_and_vocals": "Generated using Suno AI",
+      "visuals": "Shared visual source created using Melodicpal"
+    },
+    "audio_recording_id": "tamil-duet-audio-01"
   }
 ]
