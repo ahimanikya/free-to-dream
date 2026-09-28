@@ -462,14 +462,14 @@ def artist_collection_page(refined=False):
                 row, group[:3] = group[:3], []
                 rows.append('<div class="portfolio-row">'+''.join(cards[work['id']] for work in row)+'</div>')
     heading = 'Art, in another light.' if refined else 'The canvas remembers.'
-    introduction = 'The same feeling, gently refined. Print editions of the original paintings and drawings, each with its story close at hand.' if refined else 'A collection of moments that stayed. Paintings and drawings, each with a story of its own.'
+    introduction = '' if refined else '<p>A collection of moments that stayed. Paintings and drawings, each with a story of its own.</p>'
     edition_name = 'REFINED PRINTS' if refined else 'ORIGINAL WORKS'
     edition_switch = '' if refined else '<nav class="art-edition-switch" aria-label="Artwork editions"><a href="artworks.html">Refined prints</a><a href="original-artworks.html" aria-current="page">Original art</a></nav>'
     gallery_heading = '' if refined else f'<div class="gallery-threshold">{edition_switch}<span class="art-count">{len(works):02d} {edition_name}</span></div>'
     slideshow_entry, slideshow_dialog = (ROOT/'web/art-slideshow.html').read_text().split('<dialog', 1)
     slideshow_dialog = '<dialog' + slideshow_dialog
     preparation_note = '<p class="art-preparation-note">AI-assisted cleanup and print preparation. Explore each artwork to compare its original and refined edition.</p>' if refined else ''
-    return f'''<section class="portfolio-intro" id="art-journal" tabindex="-1"><div><div class="eyebrow">ART BY AHIMANIKYA SATAPATHY</div><h1>{heading}</h1></div><div class="portfolio-intro-copy"><p>{introduction}</p>{slideshow_entry}</div></section>{gallery_heading}<section id="art-collection" tabindex="-1" class="portfolio-collection art-index" aria-label="{edition_name.title()} index"><div class="portfolio-grid">{''.join(rows)}</div></section><section class="portfolio-closing"><div><div class="eyebrow">BEYOND THE GALLERY</div><h2>Let a feeling stay.</h2></div><div><p>I keep prints of The Witness in my Bhubaneswar home, Bangalore home and office. Something made years ago still brings feeling into a room.</p><p>Each artwork opens into a story, with original images and available print editions to explore.</p>{preparation_note}</div></section>{slideshow_dialog}'''
+    return f'''<section class="portfolio-intro" id="art-journal" tabindex="-1"><div><div class="eyebrow">ART BY AHIMANIKYA SATAPATHY</div><h1>{heading}</h1></div><div class="portfolio-intro-copy">{introduction}{slideshow_entry}</div></section>{gallery_heading}<section id="art-collection" tabindex="-1" class="portfolio-collection art-index" aria-label="{edition_name.title()} index"><div class="portfolio-grid">{''.join(rows)}</div></section><section class="portfolio-closing"><div><div class="eyebrow">BEYOND THE GALLERY</div><h2>Let a feeling stay.</h2></div><div><p>I keep prints of The Witness in my Bhubaneswar home, Bangalore home and office. Something made years ago still brings feeling into a room.</p><p>Each artwork opens into a story, with original images and available print editions to explore.</p>{preparation_note}</div></section>{slideshow_dialog}'''
 
 
 
