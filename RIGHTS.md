@@ -22,7 +22,7 @@ Future text, guide, prompt and code contributions must explicitly agree to the a
 
 Suggested credit for an adaptation:
 
-> Based on “I Am Free to Dream” / “ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ” by Ahimanikya Satapathy, World is One — A Poem Without Borders. Source: https://ahimanikya.github.io/free-to-dream/ · CC BY 4.0: https://creativecommons.org/licenses/by/4.0/ · Adapted by [your name]; changes: [describe].
+> Based on “I Am Free to Dream” / “ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ” by Ahimanikya Satapathy, World is One — A Poem Without Borders. Source: https://poemwithoutborders.org/ · CC BY 4.0: https://creativecommons.org/licenses/by/4.0/ · Adapted by [your name]; changes: [describe].
 
 Retain named translator, artist and reviewer credits where supplied. For research or production notes, cite the individual language page, its source revision/hash and your access date. Credit does not turn an unchecked draft into a verified translation.
 

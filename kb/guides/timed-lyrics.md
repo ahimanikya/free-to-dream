@@ -9,7 +9,7 @@ An SRT is a text file containing lyrics and their start/end times. It does not c
 
 ## Use the timing workspace
 
-Open **Time the lyrics** from a recording’s detail page or a language page, or open the [timing workspace](https://ahimanikya.github.io/free-to-dream/timing.html).
+Open **Time the lyrics** from a recording’s detail page or a language page, or open the [timing workspace](https://poemwithoutborders.org/timing.html).
 
 1. Choose the exact take. Country, jazz and regenerated tracks each need their own timing file.
 2. Paste the words actually sung, one line per row. **Use song draft** provides editable text where available; check its words and repetitions against the audio before using it.

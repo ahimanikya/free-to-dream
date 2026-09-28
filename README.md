@@ -47,7 +47,7 @@ Language pages put the poem beside compact audio/video players. Sharing, musical
 
 Original decorative drawings reference Odisha’s Pattachitra and palm-leaf traditions. The original-art and AI-image galleries are kept separate. The collection cover remains on the home page, video posters and social previews.
 
-The index cards show lyric status, musical direction, current audio/video availability and a play button where audio exists. A shared player offers alternate takes without leaving the index. The [timing workspace](https://ahimanikya.github.io/free-to-dream/timing.html) lets contributors mark or correct lyric cues and export an SRT for review.
+The index cards show lyric status, musical direction, current audio/video availability and a play button where audio exists. A shared player offers alternate takes without leaving the index. The [timing workspace](https://poemwithoutborders.org/timing.html) lets contributors mark or correct lyric cues and export an SRT for review.
 
 ## Audio-first collection
 
@@ -129,7 +129,7 @@ The player shows a single track-title dropdown, icon controls, a keyboard-access
 
 The player includes shuffle, repeat off/all/one, an Up next queue, in-player lyric drafts and supported lock-screen/media-key controls. Lyrics stay readable without leaving the song. Native inline players remain available; opening a different full page can interrupt playback, so player detail links open separately.
 
-The [engagement workspace](https://ahimanikya.github.io/free-to-dream/engagement.html) combines reporting setup with a public GitHub feedback inbox. A dedicated **World is One** GA4 account is connected for consented page, listening and sharing events. The tag stays off until a visitor opts in. Share clicks never imply confirmed social posts or identified sharers. [Measurement definitions and setup](kb/guides/engagement.md) · [Privacy](kb/guides/privacy.md).
+The [engagement workspace](https://poemwithoutborders.org/engagement.html) combines reporting setup with a public GitHub feedback inbox. A dedicated **World is One** GA4 account is connected for consented page, listening and sharing events. The tag stays off until a visitor opts in. Share clicks never imply confirmed social posts or identified sharers. [Measurement definitions and setup](kb/guides/engagement.md) · [Privacy](kb/guides/privacy.md).
 
 The contribution-attention workflow labels new issues/replies for the author and marks owner replies as awaiting the contributor. Existing unlabelled issues remain visible for manual triage. It never accepts creative changes or sends replies automatically.
 

@@ -24,7 +24,7 @@ The examples show decisions, not universal rules. This is an evolving community 
 
 ## Read, download and cite
 
-The website presents readable HTML; every language’s Markdown contains the full lyric prompt, cultural reasoning and review notes. The generated [reference data](https://ahimanikya.github.io/free-to-dream/reference.json) lists all entries, readiness, intended settings, adopted overrides, source hashes and authorized current media. [llms.txt](https://ahimanikya.github.io/free-to-dream/llms.txt) is a compact discovery index for tools that support it. Neither file certifies translation quality.
+The website presents readable HTML; every language’s Markdown contains the full lyric prompt, cultural reasoning and review notes. The generated [reference data](https://poemwithoutborders.org/reference.json) lists all entries, readiness, intended settings, adopted overrides, source hashes and authorized current media. [llms.txt](https://poemwithoutborders.org/llms.txt) is a compact discovery index for tools that support it. Neither file certifies translation quality.
 
 Cite the language page, Ahimanikya Satapathy as the original poet, named contributors, and the Git revision or Markdown SHA-256. Include your access date. The [repository history](https://github.com/ahimanikya/free-to-dream/commits/main/) preserves changes; generated data includes the build’s source revision when Git is available. The shared baseline is dated and model-specific, so future producers can understand the conditions rather than copy stale controls.
 
@@ -34,4 +34,4 @@ Author-controlled poems, artwork and reference material are offered under **CC B
 
 ## Make the work discoverable
 
-The site provides page-specific descriptions, canonical URLs, structured data, a [sitemap](https://ahimanikya.github.io/free-to-dream/sitemap.xml), native-language poem tags and linked Markdown. See [discovery and indexing](discovery.md) for how this works and what remains outside our control.
+The site provides page-specific descriptions, canonical URLs, structured data, a [sitemap](https://poemwithoutborders.org/sitemap.xml), native-language poem tags and linked Markdown. See [discovery and indexing](discovery.md) for how this works and what remains outside our control.
