@@ -330,6 +330,26 @@
       "title": "Tamil duet video",
       "status": "working",
       "notes": "Author-selected additional duet; primary solo preserved. Fluent-speaker review remains open."
+    },
+    {
+      "repo_path": "media/bhojpuri/duet/i-am-free-to-dream-bhojpuri-duet-01.mp3",
+      "sha256": "20a111af054cfafc2f47b8225285cd4f42a2f46cd93d40509d7b7ce22eb0c442",
+      "bytes": 3960857,
+      "source_name": "i-am-free-to-dream-bhojpuri-duet-01.mp3",
+      "download_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/704afc0c34ee3d731a77d5c4b2913c8edf592a50/media/bhojpuri/duet/i-am-free-to-dream-bhojpuri-duet-01.mp3",
+      "title": "Bhojpuri duet audio",
+      "status": "working",
+      "notes": "Author-selected Take 2; native-speaker review remains open."
+    },
+    {
+      "repo_path": "media/bhojpuri/duet/i-am-free-to-dream-bhojpuri-duet-01.mp4",
+      "sha256": "b8927cce85c5ece386492f585f482677c8daabbe39cd10a70c1d42d8443f7c31",
+      "bytes": 83084211,
+      "source_name": "i-am-free-to-dream-bhojpuri-duet-01.mp4",
+      "download_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/704afc0c34ee3d731a77d5c4b2913c8edf592a50/media/bhojpuri/duet/i-am-free-to-dream-bhojpuri-duet-01.mp4",
+      "title": "Bhojpuri duet video",
+      "status": "working",
+      "notes": "Author-selected Take 2; native-speaker review remains open."
     }
   ],
   "unavailable_originals": [

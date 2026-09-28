@@ -491,5 +491,29 @@
     "published": true,
     "repo_path": "media/tamil/duet/i-am-free-to-dream-tamil-duet-01.mp4",
     "public_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/f01c427df238096140d2fd44887d6509ebc2e72b/media/tamil/duet/i-am-free-to-dream-tamil-duet-01.mp4"
+  },
+  {
+    "sha256": "20a111af054cfafc2f47b8225285cd4f42a2f46cd93d40509d7b7ce22eb0c442",
+    "local_path": null,
+    "bytes": 3960857,
+    "source_names": [
+      "i-am-free-to-dream-bhojpuri-duet-01.mp3"
+    ],
+    "role": "working-asset",
+    "published": true,
+    "repo_path": "media/bhojpuri/duet/i-am-free-to-dream-bhojpuri-duet-01.mp3",
+    "public_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/704afc0c34ee3d731a77d5c4b2913c8edf592a50/media/bhojpuri/duet/i-am-free-to-dream-bhojpuri-duet-01.mp3"
+  },
+  {
+    "sha256": "b8927cce85c5ece386492f585f482677c8daabbe39cd10a70c1d42d8443f7c31",
+    "local_path": null,
+    "bytes": 83084211,
+    "source_names": [
+      "i-am-free-to-dream-bhojpuri-duet-01.mp4"
+    ],
+    "role": "working-asset",
+    "published": true,
+    "repo_path": "media/bhojpuri/duet/i-am-free-to-dream-bhojpuri-duet-01.mp4",
+    "public_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/704afc0c34ee3d731a77d5c4b2913c8edf592a50/media/bhojpuri/duet/i-am-free-to-dream-bhojpuri-duet-01.mp4"
   }
 ]

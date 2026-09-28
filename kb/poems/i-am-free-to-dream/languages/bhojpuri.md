@@ -33,41 +33,41 @@ music_review_status: musician-review-pending
 ## Poem / arranged lyrics
 
 ```text
-[Intro]
+[Intro - Male Lead, Soft Female Responses]
 हमरा सपना देखे के मनाही नइखे,
 बीच राह में भटक जाए के मनाही नइखे।
 ध्रुवतारा राह देखाई।
 
-[Verse 1]
+[Verse 1 - Male Lead, Gentle Female Answers]
 बटोरत... बटोरत...
 दुनिया के छाती से लगवले बानी—
 एकरा के जोड़े के आस में,
 एकरा के सँवारे के आस में।
 
-[Verse 2]
+[Verse 2 - Male Lead]
 हम कुम्हार बानी।
 
 रूप देवे के सीखले बानी,
 रंग भर के,
 तोहरा मुँह पर हँसी खिलावे के सीखले बानी।
 
-[Chorus]
+[Chorus - Male Lead, Soft Female Harmony]
 हमरा सपना देखे के मनाही नइखे,
 बीच राह में भटक जाए के मनाही नइखे।
 ध्रुवतारा राह देखाई।
 
-[Bridge]
+[Bridge - Female Solo]
 आवऽ, पहाड़ चढ़ीं।
 आवऽ, चाँद निहारीं।
 बादर से काँधा मिलाके,
 बरखा बन बरसे के मंतर सीखीं।
 
-[Final Chorus]
+[Final Chorus - Male and Female Duet]
 हमरा सपना देखे के मनाही नइखे।
 तोहार सपना अपना सपना में
 गूँथे के भी मनाही नइखे।
 
-[Soft Outro]
+[Soft Outro - Both Voices, Tender Close Harmony]
 तोहार सपना अपना सपना में...
 गूँथे के भी मनाही नइखे।
 ```
@@ -80,17 +80,17 @@ The shared feeling is calm, soulful joy: affection, wonder and the freedom to dr
 
 ## Arrangement decisions and review
 
-**Status — proposed setting for the lyric draft.** The reasoning on this page is a creative direction to test with a fluent singer and musician, not a verified description of a recording.
+**Status — author-selected recording; fluent-speaker and musician review pending.** The musical reasoning describes our intended setting, not a claim that every detail has been independently verified in the recording.
 
-**Vocal choice — solo by default.** One lead keeps the poem’s first-person voice and long thoughts connected. Any second voice, shared refrain or harmony suggested in the arrangement notes is an optional variation to discuss with the author before generation; it is not required by the language.
+**Vocal choice — author-selected duet.** A male lead carries the opening and early verses with soft female replies. The female voice takes the invitation verse alone, and both voices join for the ending. This vocal arrangement was chosen for this recording; it is not required by the language.
 
 **What to validate.** Use conversational Bhojpuri and gently leaning phrase endings; keep the Purabi colour affectionate and unhurried. Check whether the cited context supports the chosen influence and whether the musical choices serve the poem. Distinguish a documented practice from our new arrangement. Suggest corrections with the local variety, a source or performance example, and a timestamp when reviewing audio.
 
 ## Duet variation
 
-**Author-selected direction, 28 September 2026; listening review pending.** The male voice leads from the opening with soft female replies. The invitation verse ("आवऽ, पहाड़ चढ़ीं…") becomes a female solo near the end; both voices join in the final dream-weaving refrain and outro. This is a contemporary creative choice: the invitation becomes an exchange between two people. It is not a claim that Bhojpuri songs require a duet.
+**Author-selected Take 2, 28 September 2026; fluent-speaker review pending.** The male voice leads from the opening with soft female replies. The invitation verse ("आवऽ, पहाड़ चढ़ीं…") becomes a female solo near the end; both voices join in the final dream-weaving refrain and outro. This is a contemporary creative choice: the invitation becomes an exchange between two people. It is not a claim that Bhojpuri songs require a duet.
 
-The Purabi-inspired phrasing, gentle kajri-like lilt, light dholak, sarangi and harmonium remain the musical foundation. Sung wording, pauses and section order are unchanged. Review whether the male lead remains clear, the female invitation gets its own space, and the ending feels quietly joyful. The shared generation controls remain unchanged.
+The Purabi-inspired phrasing, gentle kajri-like lilt, light dholak, sarangi and harmonium remain the musical foundation. Sung wording, pauses and section order are unchanged. Review whether the male lead remains clear, the female invitation gets its own space, and the ending feels quietly joyful. The shared generation controls remain unchanged: v6 Advanced, Weirdness 30, Style Influence 65, Max Mode on. [Selected recording on Suno](https://suno.com/song/8980bf5a-b92d-4717-a854-757398432947).
 
 ## Cultural grounding
 
@@ -115,7 +115,7 @@ A sarangi answer follows the opening. The gathering lines gain a small rhythmic 
 ## Style prompt
 
 ```text
-Tender Bhojpuri Purabi-inspired acoustic folk ballad, warm conversational male vocals and natural Bhojpuri diction. Gentle kajri-like lilt, soft dholak, expressive sarangi answers and quiet harmonium. Relaxed phrase endings, restrained ornamentation, a hopeful returning refrain. Breathe between बटोरत... बटोरत... and pause fully after हम कुम्हार बानी. Instruments sustain beneath the silence. Begin intimately, let the rain-and-cloud bridge bloom, and settle into a soft dream-weaving ending. Keep the rhythm light and the lyrical feeling affectionate. Use conversational Bhojpuri and gently leaning phrase endings; keep the Purabi colour affectionate and unhurried. Warm youthful delivery; calm, soulful joy, affection and wonder. Keep the pace unhurried throughout; finish with peaceful hope. No mournful delivery, driving beat or dramatic crescendo.
+Tender Bhojpuri Purabi-inspired acoustic folk duet ballad. Warm youthful male lead from the opening, soft female answering phrases; female solo for the late invitation verse, then tender close-harmony duet in the final refrain and outro. Natural conversational Bhojpuri diction, gently leaning and relaxed phrase endings, restrained ornamentation. Gentle kajri-like lilt, soft dholak swing, expressive sarangi replies, quiet harmonium. Calm soulful joy, affection and wonder; light unhurried rhythm, hopeful returning refrain. Breathe between बटोरत... बटोरत...; pause fully after हम कुम्हार बानी, instruments sustaining beneath. Begin intimately; let the rain-and-cloud bridge bloom warmly without accelerating. Keep answers clear of the lead and use only supplied lyric words. End in peaceful, hopeful dream-weaving contentment. No mournful delivery, driving beat or dramatic crescendo.
 ```
 
 ## Working settings and listening checks
