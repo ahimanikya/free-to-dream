@@ -45,7 +45,8 @@
         "height_inches": 48,
         "pixels_wide": 1728,
         "pixels_high": 3456,
-        "size_mb": 16.4
+        "size_mb": 16.4,
+        "visible": false
       },
       "print_edition": {
         "file": "media/prints/art-64-original-captioned-4x.jpg",

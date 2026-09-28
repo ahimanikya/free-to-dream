@@ -337,3 +337,28 @@ article.language-card { height:auto; }
 /* Restore the palm-leaf pothi beside the language heading. */
 .language-page .language-heading::after { display:block; opacity:.8; pointer-events:none; }
 @media(min-width:701px) { .language-page .language-heading { padding-right:164px; } }
+
+/* Quiet usability refinements: clear file size and a single current-song line. */
+.print-file-hint { margin:8px 0 14px; font-size:15px; color:var(--muted); }
+.slideshow-track { position:absolute; bottom:78px; left:24px; right:24px; margin:0; font:14px/1.4 system-ui,sans-serif; color:#302b23; text-align:center; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; pointer-events:none; }
+.slideshow-track:empty { display:none; }
+.slideshow-stage .screen-print-caption,.slideshow-stage .original-print-caption { padding-bottom:96px; }
+/* Landscape phones need a wider presentation, not a tiny portrait and clipped controls. */
+@media(max-height:540px) and (min-width:541px) {
+ .slideshow-viewer { width:min(100cqw,960px); height:100cqh; aspect-ratio:auto; }
+ .slideshow-stage.art-index .art-frame { height:100%; aspect-ratio:auto; --mat-size:10px; }
+ .slideshow-stage .screen-print-paper { grid-template-columns:minmax(0,1fr) minmax(190px,.8fr); grid-template-rows:minmax(0,1fr); gap:12px; padding-bottom:72px; }
+ .slideshow-stage .screen-print-caption { padding:8px; align-self:center; }
+ .slideshow-stage.art-index .screen-print-caption h2 { font-size:22px; }
+ .slideshow-stage.art-index .screen-print-caption p { font-size:20px; }
+ .slideshow-track { bottom:74px; }
+}
+@media(max-width:600px) {
+ .slideshow-viewer { width:100cqw; height:100cqh; aspect-ratio:auto; }
+ .slideshow-stage.art-index .art-frame { height:100%; aspect-ratio:auto; --mat-size:10px; }
+}
+
+/* Keep print choices available without interrupting the artwork story. */
+.art-print-disclosure { border-top:1px solid var(--line); margin-block:28px 20px; }
+.art-print-disclosure > summary { cursor:pointer; padding-block:18px; min-height:48px; font-size:18px; color:var(--ink); }
+.art-print-disclosure > .art-detail-print { border:0; margin:0; padding-block:8px 24px; }

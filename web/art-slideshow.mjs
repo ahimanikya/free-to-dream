@@ -11,6 +11,15 @@ export function slideshowPlaylist(items) {
     return true;
   }).sort((a,b) => Number(b.language === 'odia') - Number(a.language === 'odia'));
 }
+// Use the active version and preserve its playback position, even in the collection player.
+export function languagePlaybackSource(players, collectionPlayer) {
+  const matched = collectionPlayer && !collectionPlayer.paused
+    ? players.find(player => player.dataset.recordingId === collectionPlayer.dataset.recordingId) : null;
+  if (matched) return {recording:matched, playback:collectionPlayer};
+  const source = players.find(player => !player.paused)
+    || players.find(player => !player.closest('[hidden]') && !player.closest('details:not([open])'));
+  return source ? {recording:source, playback:source} : null;
+}
 export function setupArtSlideshow(doc = document, win = window) {
   const launch = doc.querySelector('#art-slideshow-start');
   const dialog = doc.querySelector('#art-slideshow');
@@ -70,6 +79,10 @@ export function setupArtSlideshow(doc = document, win = window) {
     audio.dataset.language = track.language;
     audio.src = track.url;
     audio.title = `${track.title} · ${track.language}`;
+    const name = track.language_name || track.language.charAt(0).toUpperCase() + track.language.slice(1);
+    const label = doc.querySelector('#slideshow-track');
+    label.textContent = `${name} · ${track.title}`;
+    label.title = label.textContent;
   }
   async function changeTrack(direction) {
     const request = ++session;
@@ -107,7 +120,7 @@ export function setupArtSlideshow(doc = document, win = window) {
     try { await audio.play(); }
     catch {
       if (dialog.open && request === session)
-        status.textContent = 'Music could not start. Stop and start the slideshow to try again.';
+        status.textContent = 'Music could not start. Pause and resume to try again.';
     }
   }
   function stop() {
@@ -120,14 +133,14 @@ export function setupArtSlideshow(doc = document, win = window) {
   launch.addEventListener('click', () => {
     if (languageMode) {
       const sources = [...doc.querySelectorAll('.language-sidebar audio[data-recording-id]')];
-      const source = sources.find(player => !player.paused)
-        || sources.find(player => !player.closest('[hidden]') && !player.closest('details:not([open])'));
-      if (!source) return;
+      const selected = languagePlaybackSource(sources, doc.querySelector('#index-audio'));
+      if (!selected) return;
+      const {recording:source, playback} = selected;
       playlist = [{id:source.dataset.recordingId, language:source.dataset.language,
         title:source.getAttribute('aria-label') || 'Current song', url:source.currentSrc || source.src}];
-      pendingStart = source.currentTime || 0;
-      audio.volume = source.volume;
-      audio.muted = source.muted;
+      pendingStart = playback.currentTime || 0;
+      audio.volume = playback.volume;
+      audio.muted = playback.muted;
       updateVolume();
     }
     for (const player of doc.querySelectorAll('audio,video')) if (player !== audio) player.pause();
@@ -152,6 +165,10 @@ export function setupArtSlideshow(doc = document, win = window) {
   stage.tabIndex = 0;
   stage.addEventListener('click', togglePlayback);
   stage.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      show(index + (event.key === 'ArrowRight' ? 1 : -1));
+    }
     if ((event.key === 'Enter' || event.key === ' ') && !event.repeat) {
       event.preventDefault();
       togglePlayback();

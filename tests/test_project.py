@@ -112,9 +112,9 @@ class CollectionTests(unittest.TestCase):
         source = self.root/'media/prints/ahi-art-canvas-24x48.pdf'
         published = self.root/'site-public/media/prints/ahi-art-canvas-24x48.pdf'
         self.assertEqual(source.read_bytes(), published.read_bytes())
-        self.assertIn('Download canvas PDF', page)
-        self.assertIn('72 ppi at 24 × 48 inches', page)
-        self.assertIn('Artwork and print layout by Ahimanikya Satapathy', page)
+        self.assertNotIn('Download canvas PDF', page)
+        self.assertNotIn('View PDF', page)
+        self.assertIn('<details class="art-print-disclosure" id="refined-download">', page)
         self.assertIn('Download original image', page)
         source.write_text('version https://git-lfs.github.com/spec/v1\noid sha256:'+'0'*64+'\nsize 16404838\n')
         with self.assertRaisesRegex(ValueError, 'not hydrated'):
@@ -462,8 +462,9 @@ class CollectionTests(unittest.TestCase):
         telugu=(output/'poems--i-am-free-to-dream--languages--telugu.html').read_text()
         self.assertIn('Earlier video versions (3)', telugu)
         hindi=(output/'poems--i-am-free-to-dream--languages--hindi.html').read_text()
-        self.assertIn('A recording is still to come.',hindi)
-        self.assertIn('A video is still to come.',hindi)
+        self.assertIn('This language is waiting for its first recording.',hindi)
+        self.assertNotIn('aria-label="Watch"',hindi)
+        self.assertNotIn('A video is still to come.',hindi)
         self.assertNotIn('<video ', hindi)
         self.assertFalse((output/'media/recordings').exists())
 

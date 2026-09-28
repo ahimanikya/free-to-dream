@@ -8,7 +8,6 @@
 - [Timed lyrics for each recording](timed-lyrics.md) — SRT, WebVTT and version matching.
 - [Original artwork](artworks.html) — selected photographs of the artist’s work.
 - [Art of the site](artwork.md) — decorative design, cultural roots and credits.
-- [The Witness · canvas print](artwork--art-64.html#canvas-edition) — the artist-used print edition.
 
 - [From language to song and video](music-pipeline.md) — author selection, MP3 download, MP4 creation and publication.
 

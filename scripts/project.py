@@ -487,21 +487,23 @@ def artwork_detail_page(item, works):
     if item.get('print_edition'):
         edition = item['print_edition']
         printing += f'<a class="button" href="{esc(edition["file"],quote=True)}" download>Download original 4× print ↓</a><p class="small">{edition["width"]:,} × {edition["height"]:,} pixels · {esc(edition["method_label"])}. {esc(edition["note"])}</p>'
-    canvas_section = canvas_edition_content(item['canvas_edition']) if item.get('canvas_edition') else ''
+    canvas_section = canvas_edition_content(item['canvas_edition']) if item.get('canvas_edition') and item['canvas_edition'].get('visible', True) else ''
     ai = next((work for work in json.loads((ROOT/'catalog/ai-artworks.json').read_text())['artworks'] if work.get('source_artwork_id') == item['id']), None)
     ai_section = ''
     if ai:
         download = ai.get('print_download', ai)
         download_format = 'JPEG' if ai.get('print_download') else 'PNG'
         download_label = 'Download 4× print image ↓' if ai.get('print_download') else 'Download refined print ↓'
+        file_hint = f'{download_format} · {download["bytes"] / 1024 / 1024:.1f} MB' if download.get('bytes') else download_format
         print_notes = ''
         if ai.get('print_download'):
             print_notes = '<p class="small">Enlarged 4× in width and height, with the title, poetic caption and artist credit embedded. Gentle resampling preserves the composition; it does not add new detail. For a large canvas, check a sample with your printer.</p>'
         ai_label = "REFINEMENT PREVIEW" if ai.get("review_status") == "awaiting_artist_review" else "REFINED PRINT EDITION"
-        ai_section = f'''<section class="art-detail-print" id="refined-download" aria-labelledby="ai-edition-title"><div><div class="eyebrow">{ai_label}</div><h2 id="ai-edition-title">Keep what moves you.</h2><p>The artwork, its poetic line and artist credit, ready to download together.</p></div><div><a class="button" href="{esc(download['file'],quote=True)}" download>{download_label}</a><details class="edition-details"><summary>About this edition &amp; printing</summary><p>{esc(ai['description'])}</p><p class="small">{esc(ai['origin'])}</p><p class="small">{download['width']:,} × {download['height']:,} pixels · {download_format}. Choose a print size with your printer using these dimensions.</p>{print_notes}</details></div></section>'''
+        ai_section = f'''<details class="art-print-disclosure" id="refined-download"><summary>Print &amp; download</summary><section class="art-detail-print" aria-labelledby="ai-edition-title"><div><div class="eyebrow">{ai_label}</div><h2 id="ai-edition-title">Keep what moves you.</h2><p>The artwork, its poetic line and artist credit, ready to download together.</p></div><div><a class="button" href="{esc(download['file'],quote=True)}" download>{download_label}</a><p class="print-file-hint">{file_hint}</p><details class="edition-details"><summary>About this edition &amp; printing</summary><p>{esc(ai['description'])}</p><p class="small">{esc(ai['origin'])}</p><p class="small">{download['width']:,} × {download['height']:,} pixels · {download_format}. Choose a print size with your printer using these dimensions.</p>{print_notes}</details></div></section></details>'''
 
     original_figure = f'''<figure id="original-image"><a class="art-wall" href="{master}" aria-label="View full-resolution original: {title}"><div class="art-frame frame-{presentation.get('frame','walnut')} mat-{presentation.get('mat','ivory')} frame-{variant} cloth-{item['id']}"><div class="art-mat"><div class="art-window">{fills}<img src="{image}" width="{item['width']}" height="{item['height']}" alt="{title}, original artwork by Ahimanikya Satapathy"></div></div></div></a><figcaption>Original artwork · Ahimanikya Satapathy{(' · '+str(item['date'])) if item.get('date') else ''}<a class="art-enlarge" href="{master}">View full image ↗</a></figcaption></figure>'''
     original_downloads = f'''<section class="art-detail-print" id="print"><div><div class="eyebrow">THE ORIGINAL</div><h2>Keep what moves you.</h2><p>Download the artwork for a print of your own. Keep its proportions and signature; the frame shown here is for display.</p></div><div><a class="button" href="{master}" download>Download original image ↓</a><p class="small">{dimensions} · original file, unchanged</p>{printing}<p class="small">For a large canvas, ask your printer to check a sample at the intended size. <a href="guides--rights.html">Attribution and reuse →</a></p></div></section>'''
+    story_phrase = '' if ai else f'<p class="art-detail-phrase">{esc(item["caption"])}</p>'
     display_id = 'ai-edition' if ai else 'original'
     primary_figure = original_figure
     original_section = original_downloads
@@ -520,7 +522,7 @@ def artwork_detail_page(item, works):
     canvas_link = '<a href="#canvas-edition">Canvas edition ↙</a>' if canvas_section else ''
     return f'''<article class="art-detail"><div class="art-detail-heading"><div class="eyebrow">ART BY AHIMANIKYA SATAPATHY</div><h1>{title}</h1><nav class="art-section-links" aria-label="On this artwork page">{edition_link}{canvas_link}</nav></div>
 <div class="art-detail-layout" id="{display_id}">{primary_figure}
-<div class="art-detail-story"><p class="art-detail-phrase">{esc(item['caption'])}</p><div class="art-reflections">{reflections}</div><details class="edition-details"><summary>About this reading</summary><p class="art-reading-note">A contemporary poetic reading of the original artwork.</p></details></div></div>
+<div class="art-detail-story">{story_phrase}<div class="art-reflections">{reflections}</div><details class="edition-details"><summary>About this reading</summary><p class="art-reading-note">A contemporary poetic reading of the original artwork.</p></details></div></div>
 {ai_section}{original_section}
 {canvas_section}<nav class="art-detail-navigation" aria-label="More artwork"><a href="artwork--{previous['id']}.html" aria-label="Previous artwork: {esc(previous['label'],quote=True)}"><span>← PREVIOUS WORK</span><strong>{esc(previous['label'])}</strong></a><a class="return-gallery" href="{gallery_page}#{item['id']}">All artworks</a><a href="artwork--{following['id']}.html" aria-label="Next artwork: {esc(following['label'],quote=True)}"><span>NEXT WORK →</span><strong>{esc(following['label'])}</strong></a></nav></article>'''
 
@@ -792,6 +794,8 @@ def playlist_picker():
 
 
 def resource_panel(meta, items):
+    if not items:
+        return f'<aside id="resources" class="listening compact-listening" aria-label="Recording status"><span id="listen"></span><span id="watch"></span><p class="media-empty">This language is waiting for its first recording.</p><a class="text-link" href="contribute.html?language={quote(meta["slug"])}&amp;type=recording">Share a recording →</a></aside>'
     content = '<aside id="resources" class="listening compact-listening" aria-label="Listen and watch">'
     if any(not item['publish'] for item, _ in items):
         content += '<p class="media-status">Working recordings · feedback welcome</p>'
@@ -803,9 +807,9 @@ def resource_panel(meta, items):
     for kind, heading, target in [('audio', 'Listen', 'listen'), ('video', 'Watch', 'watch')]:
         current = [(item, url) for item, url in items if item['kind'] == kind and not item.get('archived')]
         older = [(item, url) for item, url in items if item['kind'] == kind and item.get('archived')]
-        content += f'<section id="{target}" class="media-group" aria-label="{heading}"><h2>{heading}</h2>'
         if not current and not older:
-            content += '<p class="media-empty">'+('A recording is still to come.' if kind=='audio' else 'A video is still to come.')+'</p>'
+            continue
+        content += f'<section id="{target}" class="media-group" aria-label="{heading}"><h2>{heading}</h2>'
         if current:
             variations = {}
             named = any(item.get('variation') for item, _ in current)
@@ -825,8 +829,6 @@ def resource_panel(meta, items):
         if kind == 'audio' and current:
             content += playlist_picker()
         content += '</section>'
-    if not items:
-        content += f'<a class="text-link" href="contribute.html?language={quote(meta["slug"])}&amp;type=recording">Share a recording →</a>'
     return content + '</aside>'
 
 
