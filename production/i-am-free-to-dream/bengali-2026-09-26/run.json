@@ -60,5 +60,12 @@
     "output_bytes": 81270809,
     "output_sha256": "8eef15b3bef9c0cd68d019f78b1a404a5f205933d89563e517616ec1449a90d6"
   },
-  "history_note": "Migrated production snapshot; reconcile with current direction and catalog before resuming. No new generation authorized."
+  "history_note": "Migrated production snapshot; reconcile with current direction and catalog before resuming. No new generation authorized.",
+  "author_classification": {
+    "confirmed_at": "2026-09-28",
+    "variation": "duet",
+    "source_url": "https://suno.com/s/o55DLRbtHsKXCmcM",
+    "note": "Author confirms the already published take is a duet. Historical male-voice prompt/settings are intent, not a verified solo performance. Existing MP3 and matching MP4 retained; no duplicate media needed.",
+    "primary_solo_request": "Keep a separate solo as primary when identified; awaiting its source link."
+  }
 }

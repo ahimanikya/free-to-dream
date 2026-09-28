@@ -641,13 +641,13 @@
     "language": "bengali",
     "poem": "i-am-free-to-dream",
     "kind": "audio",
-    "title": "স্বপ্ন দেখতে আমার মানা নেই",
+    "title": "স্বপ্ন দেখতে আমার মানা নেই · Duet",
     "local_path": null,
     "repo_path": "media/bengali/i-am-free-to-dream-bengali.mp3",
     "publish": false,
     "review_status": "needs-review",
     "rights_status": "release-details-to-confirm",
-    "notes": "Author-selected Take 2. Shared for listening and feedback; native-speaker review remains open.",
+    "notes": "Author-selected Take 2. Shared for listening and feedback; native-speaker review remains open. Author confirmed this exact recording is a duet on 2026-09-28; the original generation prompt is retained as historical intent.",
     "credits": {
       "poem": "Ahimanikya Satapathy",
       "music_and_vocals": "Generated using Suno AI"
@@ -669,20 +669,22 @@
       "variety": "Normal",
       "max_mode": false,
       "personalize": false
-    }
+    },
+    "variation": "duet",
+    "variation_label": "Duet"
   },
   {
     "id": "bengali-video-01",
     "language": "bengali",
     "poem": "i-am-free-to-dream",
     "kind": "video",
-    "title": "স্বপ্ন দেখতে আমার মানা নেই",
+    "title": "স্বপ্ন দেখতে আমার মানা নেই · Duet",
     "local_path": null,
     "repo_path": "media/bengali/i-am-free-to-dream-bengali.mp4",
     "publish": false,
     "review_status": "needs-review",
     "rights_status": "release-details-to-confirm",
-    "notes": "Video with author-selected Bengali Take 2. Shared visuals fit the full soundtrack at its original speed and pitch. Native-speaker review remains open.",
+    "notes": "Video with author-selected Bengali Take 2. Shared visuals fit the full soundtrack at its original speed and pitch. Native-speaker review remains open. Author confirmed this exact recording is a duet on 2026-09-28; the original generation prompt is retained as historical intent.",
     "credits": {
       "poem": "Ahimanikya Satapathy",
       "music_and_vocals": "Generated using Suno AI",
@@ -695,7 +697,9 @@
     "archived": false,
     "duration_seconds": 160.8,
     "source_url": "https://suno.com/song/b216df41-663e-4df3-a465-616fdcb03544",
-    "audio_recording_id": "bengali-audio-01"
+    "audio_recording_id": "bengali-audio-01",
+    "variation": "duet",
+    "variation_label": "Duet"
   },
   {
     "id": "sambalpuri-audio-01",
