@@ -86,6 +86,12 @@ The shared feeling is calm, soulful joy: affection, wonder and the freedom to dr
 
 **What to validate.** Use conversational Bhojpuri and gently leaning phrase endings; keep the Purabi colour affectionate and unhurried. Check whether the cited context supports the chosen influence and whether the musical choices serve the poem. Distinguish a documented practice from our new arrangement. Suggest corrections with the local variety, a source or performance example, and a timestamp when reviewing audio.
 
+## Duet variation
+
+**Author-selected direction, 28 September 2026; listening review pending.** The male voice leads from the opening with soft female replies. The invitation verse ("आवऽ, पहाड़ चढ़ीं…") becomes a female solo near the end; both voices join in the final dream-weaving refrain and outro. This is a contemporary creative choice: the invitation becomes an exchange between two people. It is not a claim that Bhojpuri songs require a duet.
+
+The Purabi-inspired phrasing, gentle kajri-like lilt, light dholak, sarangi and harmonium remain the musical foundation. Sung wording, pauses and section order are unchanged. Review whether the male lead remains clear, the female invitation gets its own space, and the ending feels quietly joyful. The shared generation controls remain unchanged.
+
 ## Cultural grounding
 
 NCPA’s monsoon programme identifies kajri and related folk forms with the emotional world of rain, separation and union.
