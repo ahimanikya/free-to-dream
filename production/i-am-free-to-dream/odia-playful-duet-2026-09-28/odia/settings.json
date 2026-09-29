@@ -1,0 +1,24 @@
+{
+  "status": "verified-and-submitted",
+  "settings": {
+    "model": "v6",
+    "mode": "Advanced",
+    "weirdness": 30,
+    "style_influence": 65,
+    "max_mode": true,
+    "personalize": false,
+    "variety": "Normal",
+    "duration": "Auto",
+    "vocal_gender": "Unselected; voice directed in the language prompt",
+    "audio_influence": null,
+    "exclude_styles": "EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals"
+  },
+  "policy_source": "production/i-am-free-to-dream/settings.json",
+  "policy_revision": "2026-09-27-2",
+  "policy_sha256": "517518fe764b604be168337217a872a7befafc0371e3ebbf02b8a9b203decb48",
+  "reference_cover_overrides": {
+    "audio_influence": 75
+  },
+  "applied_overrides": [],
+  "arrangement": "duet"
+}

@@ -1,0 +1,68 @@
+{
+  "poem": "i-am-free-to-dream",
+  "language": "odia",
+  "variant": "duet",
+  "stage": "selection-pending",
+  "source": "kb/poems/i-am-free-to-dream/languages/odia.md",
+  "source_sha256": "c99baef6480ae2d1cdc7ea8d30a06452ea9bc101f688dfd10a4c706358b9c091",
+  "title": "ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ — Playful Odia Duet",
+  "lyrics": "[Intro - Male Lead, Soft Female Responses]\nମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ\nମନା ନାହିଁ ମଝି ରାସ୍ତାରେ ହଜି ଜିବାକୁ\nଧୃବତାରା ଖୋଜିଦେବ ରାସ୍ତା ।\n\n[Verse 1 - Male Lead, Playful Female Answers]\nସାଉଁଟି... ସାଉଁଟି...\nଜାବୁଡି ଧରିଛି ସଂସାରକୁ\nଜୋଡି ଦେବାର ଆଶାରେ,\nସଜେଇ ଦେବାର ଆଶାରେ ।\n\n[Verse 2 - Male Lead, Gentle Female Harmony]\nକୁଂଭକାର ମୁଁ ।\n\nଗଠିଦେବା ସିଖିଛି\nରଂଗେଈ ଦେଈ,\nତୁମ ମୁଖରେ ହସ ବୁଣିବା ସିଖିଛି ।\n\n[Chorus - Male Lead, Warm Female Replies]\nମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ\nମନା ନାହିଁ ମଝି ରାସ୍ତାରେ ହଜି ଜିବାକୁ\nଧୃବତାରା ଖୋଜିଦେବ ରାସ୍ତା ।\n\n[Bridge - Female Solo, Joyful Invitation]\nଆସ ପାହାଡ ଚଢିବା\nଆସ ଜନ୍ହ ଦେଖିବା\nବାଦଲ ସାଂଗେ କାଂଧ ମିଳେଈ\nଝଡିବାର ମଂତ୍ର ସିଖିବା ।\n\n[Final Chorus - Male and Female Duet]\nମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ ।\nମନା ନାହିଁ ଗୁଂଥିଦେବାକୁ\nତୁମ ସପ୍ନକୁ ମୋ ସପ୍ନରେ ।\n\n[Soft Outro - Both Voices, Tender Close Harmony]\nମନା ନାହିଁ ଗୁଂଥିଦେବାକୁ\nତୁମ ସପ୍ନକୁ ମୋ ସପ୍ନରେ ।",
+  "style": "Odia indie-folk duet ballad, quiet joy, affection and playful togetherness. Warm youthful male lead from the opening with soft female answering phrases; smiling conversational exchanges and gentle teasing through the verses, clear complete words, natural Odia diction and spacious phrasing. Female solo for the late mountain-and-moon invitation verse; both voices unite in tender close harmony for the final dream-weaving refrain and outro. Fingerpicked acoustic guitar, mellow bamboo flute responses, restrained mardala, warm sustained bass; brief delicate Odissi-informed melodic turns. Sparse opening, gradually blooming warmth, a light unhurried flowing lilt. Let playfulness come from vocal exchanges, keeping the pace calm and soulful. Distinct breath between ସାଉଁଟି... ସାଉଁଟି...; fuller pause after କୁଂଭକାର ମୁଁ, instruments sustaining underneath. Keep replies clear of the lead; use only supplied lyric words. Peaceful, happy ending.",
+  "settings": {
+    "model": "v6",
+    "mode": "Advanced",
+    "weirdness": 30,
+    "style_influence": 65,
+    "max_mode": true,
+    "personalize": false,
+    "variety": "Normal",
+    "duration": "Auto",
+    "vocal_gender": "Unselected; voice directed in the language prompt",
+    "audio_influence": null,
+    "exclude_styles": "EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals"
+  },
+  "policy_source": "production/i-am-free-to-dream/settings.json",
+  "policy_revision": "2026-09-27-2",
+  "policy_sha256": "517518fe764b604be168337217a872a7befafc0371e3ebbf02b8a9b203decb48",
+  "submission_limit": 1,
+  "expected_candidates": 2,
+  "actual_submissions": 1,
+  "candidates": [
+    {
+      "take": 1,
+      "id": "a600d4d2-ae90-4b90-a4f5-bc6331e2fa85",
+      "url": "https://suno.com/song/a600d4d2-ae90-4b90-a4f5-bc6331e2fa85",
+      "status": "ready-for-review",
+      "duration_display": "2:38",
+      "duration_source": "Suno create list"
+    },
+    {
+      "take": 2,
+      "id": "34443712-5c8f-4960-8b99-c6b89d77f8c0",
+      "url": "https://suno.com/song/34443712-5c8f-4960-8b99-c6b89d77f8c0",
+      "status": "ready-for-review",
+      "duration_display": "2:26",
+      "duration_source": "Suno create list"
+    }
+  ],
+  "selected_candidate": null,
+  "publication_authorized": false,
+  "created_at": "2026-09-29T02:38:59.492724+00:00",
+  "author_request": "Mix female voice like Bhojpuri, more fun together and playful.",
+  "changes": [
+    "Author-directed vocal override: male lead with soft female replies from the opening, playful conversational verses, female solo invitation bridge and shared ending.",
+    "Preserve sung Odia words, section order, gathering breaths and potter pause.",
+    "Retain Odia phrasing, Odissi-informed turns, guitar, flute, restrained mardala and bass; do not transfer Bhojpuri instruments or genre.",
+    "Keep unhurried soulful pace; playfulness through vocal expression and interaction rather than a faster dance arrangement."
+  ],
+  "vocal_arrangement_reference": "production/i-am-free-to-dream/bhojpuri-duet-2026-09-28/run.json",
+  "audio_reference": null,
+  "input_verified": true,
+  "input_verified_at": "2026-09-29T02:40:34.593665+00:00",
+  "verification_note": "Exact lyrics/style/title/exclusions checked in Suno Advanced v6. Weirdness 30, Style Influence 65, Max On, Personalize Off, Normal Variety, Auto Duration, no gender selected, no audio reference. Account and allowance checked; exact charge not displayed.",
+  "submission_started_at": "2026-09-29T02:40:34.593999+00:00",
+  "submitted_at": "2026-09-29T02:41:07.119560+00:00",
+  "completed_at": "2026-09-29T02:42:55.169460+00:00",
+  "review_status": "Author listening and selection pending; no direct listening assessment by the assistant.",
+  "documented_source_sha256": "5d1b809c40a7630f691f678bf75edca91592c592f894735bc5d46fbdc10a75ec"
+}
