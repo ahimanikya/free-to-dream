@@ -965,5 +965,72 @@
       "visuals": "Shared visual source created using Melodicpal"
     },
     "audio_recording_id": "odia-duet-audio-01"
+  },
+  {
+    "id": "bhojpuri-playful-audio-01",
+    "language": "bhojpuri",
+    "poem": "i-am-free-to-dream",
+    "kind": "audio",
+    "title": "सपना देखे के मनाही नइखे · Playful",
+    "local_path": null,
+    "repo_path": "media/bhojpuri/playful/i-am-free-to-dream-bhojpuri-playful-01.mp3",
+    "public_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/55bd83b7ea02369b9cd33694c709c315fa8ac29a/media/bhojpuri/playful/i-am-free-to-dream-bhojpuri-playful-01.mp3",
+    "publish": false,
+    "public_preview": true,
+    "preview_authorization": "Author selected Take 1 as an additional Playful tab on 2026-09-28.",
+    "review_status": "needs-review",
+    "rights_status": "release-details-to-confirm",
+    "allow_file_sharing": false,
+    "archived": false,
+    "duration_seconds": 154.36,
+    "source_url": "https://suno.com/song/6c5c2983-a685-45e8-a09a-84a8459e1beb",
+    "variation": "playful",
+    "variation_label": "Playful",
+    "notes": "Author-selected Take 1, labeled Playful at the author’s request. Fluent-speaker review remains open.",
+    "credits": {
+      "poem": "Ahimanikya Satapathy",
+      "music_and_vocals": "Generated using Suno AI"
+    },
+    "generation_settings": {
+      "model": "v6",
+      "mode": "Advanced",
+      "weirdness": 30,
+      "style_influence": 65,
+      "max_mode": true,
+      "personalize": false,
+      "variety": "Normal",
+      "duration": "Auto",
+      "vocal_gender": "Unselected; voice directed in the language prompt",
+      "audio_influence": null,
+      "exclude_styles": "EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals"
+    }
+  },
+  {
+    "id": "bhojpuri-playful-video-01",
+    "language": "bhojpuri",
+    "poem": "i-am-free-to-dream",
+    "kind": "video",
+    "title": "सपना देखे के मनाही नइखे · Playful",
+    "local_path": null,
+    "repo_path": "media/bhojpuri/playful/i-am-free-to-dream-bhojpuri-playful-01.mp4",
+    "public_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/55bd83b7ea02369b9cd33694c709c315fa8ac29a/media/bhojpuri/playful/i-am-free-to-dream-bhojpuri-playful-01.mp4",
+    "publish": false,
+    "public_preview": true,
+    "preview_authorization": "Author selected Take 1 as an additional Playful tab on 2026-09-28.",
+    "review_status": "needs-review",
+    "rights_status": "release-details-to-confirm",
+    "allow_file_sharing": false,
+    "archived": false,
+    "duration_seconds": 154.36,
+    "source_url": "https://suno.com/song/6c5c2983-a685-45e8-a09a-84a8459e1beb",
+    "variation": "playful",
+    "variation_label": "Playful",
+    "notes": "Author-selected Take 1, labeled Playful at the author’s request. Fluent-speaker review remains open. Shared visuals fit the complete soundtrack at its original speed and pitch.",
+    "credits": {
+      "poem": "Ahimanikya Satapathy",
+      "music_and_vocals": "Generated using Suno AI",
+      "visuals": "Shared visual source created using Melodicpal"
+    },
+    "audio_recording_id": "bhojpuri-playful-audio-01"
   }
 ]

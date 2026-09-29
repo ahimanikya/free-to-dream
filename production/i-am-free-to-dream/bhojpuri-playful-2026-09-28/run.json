@@ -23,7 +23,7 @@
   "policy_revision": "2026-09-27-2",
   "policy_sha256": "517518fe764b604be168337217a872a7befafc0371e3ebbf02b8a9b203decb48",
   "variant": "playful",
-  "stage": "rendered",
+  "stage": "publication-prepared",
   "generation_run": "production/i-am-free-to-dream/bhojpuri-duet-2026-09-28/run.json",
   "selected_candidate": "6c5c2983-a685-45e8-a09a-84a8459e1beb",
   "selected_take": 1,
@@ -55,5 +55,11 @@
     "opening",
     "middle",
     "ending"
-  ]
+  ],
+  "media_commit": "55bd83b7ea02369b9cd33694c709c315fa8ac29a",
+  "recording_ids": [
+    "bhojpuri-playful-audio-01",
+    "bhojpuri-playful-video-01"
+  ],
+  "page_url": "https://poemwithoutborders.org/poems--i-am-free-to-dream--languages--bhojpuri.html"
 }

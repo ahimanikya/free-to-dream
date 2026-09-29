@@ -441,7 +441,7 @@ class CollectionTests(unittest.TestCase):
         shutil.copy2(PROJECT/'catalog/recordings.json', self.root/'catalog/recordings.json')
         app.build(False)
         output = self.root/'site-public'
-        expected = {'odia':(2,7), 'tamil':(2,2), 'telugu':(4,4), 'english':(2,2), 'filipino':(1,1), 'malayalam':(1,1), 'italian':(1,1), 'bengali':(1,1)}
+        expected = {'odia':(2,7), 'tamil':(2,2), 'telugu':(4,4), 'english':(2,2), 'filipino':(1,1), 'malayalam':(1,1), 'italian':(1,1), 'bengali':(1,1), 'bhojpuri':(2,2)}
         for language, (audio_count, video_count) in expected.items():
             page=(output/f'poems--i-am-free-to-dream--languages--{language}.html').read_text()
             self.assertEqual(page.count('<audio '), audio_count+2)
@@ -465,6 +465,9 @@ class CollectionTests(unittest.TestCase):
             page=(output/f'poems--i-am-free-to-dream--languages--{language}.html').read_text()
             for section in ('listen', 'watch'):
                 self.assertLess(page.index(f'id="{section}-solo"'), page.index(f'id="{section}-duet"'))
+        bhojpuri=(output/'poems--i-am-free-to-dream--languages--bhojpuri.html').read_text()
+        for section in ('listen', 'watch'):
+            self.assertLess(bhojpuri.index(f'id="{section}-duet"'), bhojpuri.index(f'id="{section}-playful"'))
         telugu=(output/'poems--i-am-free-to-dream--languages--telugu.html').read_text()
         self.assertIn('Earlier video versions (3)', telugu)
         hindi=(output/'poems--i-am-free-to-dream--languages--hindi.html').read_text()

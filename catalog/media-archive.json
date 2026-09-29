@@ -370,6 +370,26 @@
       "title": "Odia duet video",
       "status": "working",
       "notes": "Author-selected Take 1; detailed performance review remains open."
+    },
+    {
+      "repo_path": "media/bhojpuri/playful/i-am-free-to-dream-bhojpuri-playful-01.mp3",
+      "sha256": "01f2b5e118358b1f529dceaf0bee9e286e99c06b69c42a8e52f189817d2969a9",
+      "bytes": 3848003,
+      "source_name": "i-am-free-to-dream-bhojpuri-playful-01.mp3",
+      "download_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/55bd83b7ea02369b9cd33694c709c315fa8ac29a/media/bhojpuri/playful/i-am-free-to-dream-bhojpuri-playful-01.mp3",
+      "title": "Bhojpuri playful audio",
+      "status": "working",
+      "notes": "Author-selected Take 1; fluent-speaker review remains open."
+    },
+    {
+      "repo_path": "media/bhojpuri/playful/i-am-free-to-dream-bhojpuri-playful-01.mp4",
+      "sha256": "24966ea3d8ae7ca2589dc770b81f55f8b55d4dd973759ca9c63571ce90dcb325",
+      "bytes": 78938154,
+      "source_name": "i-am-free-to-dream-bhojpuri-playful-01.mp4",
+      "download_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/55bd83b7ea02369b9cd33694c709c315fa8ac29a/media/bhojpuri/playful/i-am-free-to-dream-bhojpuri-playful-01.mp4",
+      "title": "Bhojpuri playful video",
+      "status": "working",
+      "notes": "Author-selected Take 1; fluent-speaker review remains open."
     }
   ],
   "unavailable_originals": [

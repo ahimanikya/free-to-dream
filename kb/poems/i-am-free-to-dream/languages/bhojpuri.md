@@ -92,6 +92,12 @@ The shared feeling is calm, soulful joy: affection, wonder and the freedom to dr
 
 The Purabi-inspired phrasing, gentle kajri-like lilt, light dholak, sarangi and harmonium remain the musical foundation. Sung wording, pauses and section order are unchanged. Review whether the male lead remains clear, the female invitation gets its own space, and the ending feels quietly joyful. The shared generation controls remain unchanged: v6 Advanced, Weirdness 30, Style Influence 65, Max Mode on. [Selected recording on Suno](https://suno.com/song/8980bf5a-b92d-4717-a854-757398432947).
 
+## Playful variation
+
+**Author-selected Take 1 — Playful.** The author chose [this take](https://suno.com/s/qP9U9kr5lLH4D8vX) for its playful feeling. It is available as a second Playful tab alongside the existing Duet (Take 2), which remains the default. Both came from the same generation pair: the submitted lyrics, vocal directions and settings are unchanged. This is an alternate performance, not a new translation or a separate traditional genre.
+
+The intended Purabi-inspired phrasing, kajri-like lilt, dholak, sarangi and harmonium remain the foundation. The invitation and dream-weaving lines allow a feeling of shared affection; “Playful” records the author’s listening response. Fluent-speaker and musician review remains welcome, especially for clear words in the replies, the gathering breaths and the pause after the potter declaration.
+
 ## Cultural grounding
 
 NCPA’s monsoon programme identifies kajri and related folk forms with the emotional world of rain, separation and union.
