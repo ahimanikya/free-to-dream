@@ -107,5 +107,7 @@
     "remote_media": "Both returned HTTP 206 with expected byte totals.",
     "browser_playback": "Live HTTPS audio and video advanced without errors. Solo/Duet tabs synchronize and Solo remains first. Duet is included in the playlist.",
     "video_dimensions": "720x1280"
-  }
+  },
+  "archived": true,
+  "archive_note": "Author requested archiving this Duet in favor of the selected Bhojpuri-reference Playful variation on 2026-09-28. Media preserved."
 }

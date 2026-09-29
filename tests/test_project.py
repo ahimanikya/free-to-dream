@@ -441,7 +441,7 @@ class CollectionTests(unittest.TestCase):
         shutil.copy2(PROJECT/'catalog/recordings.json', self.root/'catalog/recordings.json')
         app.build(False)
         output = self.root/'site-public'
-        expected = {'odia':(2,7), 'tamil':(2,2), 'telugu':(4,4), 'english':(2,2), 'filipino':(1,1), 'malayalam':(1,1), 'italian':(1,1), 'bengali':(1,1), 'bhojpuri':(2,2)}
+        expected = {'odia':(3,8), 'sambalpuri':(2,2), 'tamil':(2,2), 'telugu':(4,4), 'english':(2,2), 'filipino':(1,1), 'malayalam':(1,1), 'italian':(1,1), 'bengali':(1,1), 'bhojpuri':(2,2)}
         for language, (audio_count, video_count) in expected.items():
             page=(output/f'poems--i-am-free-to-dream--languages--{language}.html').read_text()
             self.assertEqual(page.count('<audio '), audio_count+2)
@@ -461,13 +461,24 @@ class CollectionTests(unittest.TestCase):
                 self.assertIn(f'data-share-url="https://poemwithoutborders.org/recording--{item["id"]}.html"', detail)
                 self.assertNotIn('PUBLISHED VERSION', detail)
                 self.assertNotIn('data-action="prepare-file"', detail)
-        for language in ('tamil', 'odia'):
+        for language, variation in (('tamil', 'duet'), ('odia', 'playful')):
             page=(output/f'poems--i-am-free-to-dream--languages--{language}.html').read_text()
             for section in ('listen', 'watch'):
-                self.assertLess(page.index(f'id="{section}-solo"'), page.index(f'id="{section}-duet"'))
+                self.assertLess(page.index(f'id="{section}-solo"'), page.index(f'id="{section}-{variation}"'))
         bhojpuri=(output/'poems--i-am-free-to-dream--languages--bhojpuri.html').read_text()
         for section in ('listen', 'watch'):
             self.assertLess(bhojpuri.index(f'id="{section}-duet"'), bhojpuri.index(f'id="{section}-playful"'))
+        sambalpuri=(output/'poems--i-am-free-to-dream--languages--sambalpuri.html').read_text()
+        for section in ('listen', 'watch'):
+            self.assertLess(sambalpuri.index(f'id="{section}-duet"'), sambalpuri.index(f'id="{section}-playful"'))
+        odia=(output/'poems--i-am-free-to-dream--languages--odia.html').read_text()
+        self.assertNotIn('id="listen-duet"', odia)
+        self.assertNotIn('id="watch-duet"', odia)
+        self.assertIn('recording--odia-duet-audio-01.html', odia)
+        tracks=json.loads((output/'assets/listening.json').read_text())
+        track_ids={track['id'] for track in tracks if not track.get('archived')}
+        self.assertTrue({'odia-playful-audio-01', 'sambalpuri-playful-audio-01'} <= track_ids)
+        self.assertNotIn('odia-duet-audio-01', track_ids)
         telugu=(output/'poems--i-am-free-to-dream--languages--telugu.html').read_text()
         self.assertIn('Earlier video versions (3)', telugu)
         hindi=(output/'poems--i-am-free-to-dream--languages--hindi.html').read_text()

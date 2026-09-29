@@ -2,7 +2,7 @@
   "poem": "i-am-free-to-dream",
   "language": "odia",
   "variant": "bhojpuri-reference-duet",
-  "stage": "rendered",
+  "stage": "imported",
   "source": "kb/poems/i-am-free-to-dream/languages/odia.md",
   "source_sha256": "220741b63405245f4f367abacffe2d580e23d4410e03c66164c2f92ccaf4c5b5",
   "title": "ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ — Bhojpuri Tune Duet",
@@ -111,5 +111,12 @@
     "ending"
   ],
   "review_status": "Author-selected; detailed fluent-speaker review remains open",
-  "variation_label": "Playful"
+  "variation_label": "Playful",
+  "media_commit": "39efd491bf4ee58c80790d0e041c1e2905ccc440",
+  "recording_ids": [
+    "odia-playful-audio-01",
+    "odia-playful-video-01"
+  ],
+  "page_url": "https://poemwithoutborders.org/poems--i-am-free-to-dream--languages--odia.html",
+  "selection_note": "Author requests Playful tab. Archive previous Odia Duet; retain Solo as default."
 }

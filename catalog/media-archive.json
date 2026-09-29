@@ -358,8 +358,8 @@
       "source_name": "i-am-free-to-dream-odia-duet-01.mp3",
       "download_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/43aae9e52860880021dc8fd2a0d84f0dcf9d9bef/media/odia/duet/i-am-free-to-dream-odia-duet-01.mp3",
       "title": "Odia duet audio",
-      "status": "working",
-      "notes": "Author-selected Take 1; detailed performance review remains open."
+      "status": "historical-draft",
+      "notes": "Author-selected playful Odia duet, Take 1. Detailed diction and performance review remains open. Archived at the author’s request on 2026-09-28 after selecting the new Playful variation."
     },
     {
       "repo_path": "media/odia/duet/i-am-free-to-dream-odia-duet-01.mp4",
@@ -368,8 +368,8 @@
       "source_name": "i-am-free-to-dream-odia-duet-01.mp4",
       "download_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/43aae9e52860880021dc8fd2a0d84f0dcf9d9bef/media/odia/duet/i-am-free-to-dream-odia-duet-01.mp4",
       "title": "Odia duet video",
-      "status": "working",
-      "notes": "Author-selected Take 1; detailed performance review remains open."
+      "status": "historical-draft",
+      "notes": "Author-selected playful Odia duet, Take 1. Detailed diction and performance review remains open. Shared visuals fit the complete soundtrack at its original speed and pitch. Archived at the author’s request on 2026-09-28 after selecting the new Playful variation."
     },
     {
       "repo_path": "media/bhojpuri/playful/i-am-free-to-dream-bhojpuri-playful-01.mp3",
@@ -390,6 +390,46 @@
       "title": "Bhojpuri playful video",
       "status": "working",
       "notes": "Author-selected Take 1; fluent-speaker review remains open."
+    },
+    {
+      "repo_path": "media/sambalpuri/playful/i-am-free-to-dream-sambalpuri-playful-01.mp3",
+      "sha256": "0849ea11f982566a7c29f4961c2ec1be973179633e3b9395cb972125d1b289c8",
+      "bytes": 3811915,
+      "source_name": "i-am-free-to-dream-sambalpuri-playful-01.mp3",
+      "download_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/39efd491bf4ee58c80790d0e041c1e2905ccc440/media/sambalpuri/playful/i-am-free-to-dream-sambalpuri-playful-01.mp3",
+      "title": "Sambalpuri playful audio",
+      "status": "working",
+      "notes": "Author-selected Take 1; detailed performance review remains open."
+    },
+    {
+      "repo_path": "media/sambalpuri/playful/i-am-free-to-dream-sambalpuri-playful-01.mp4",
+      "sha256": "6592d264e190515217137c8c508cee3317060e4246c0ea2ae80a866a0d445790",
+      "bytes": 80730619,
+      "source_name": "i-am-free-to-dream-sambalpuri-playful-01.mp4",
+      "download_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/39efd491bf4ee58c80790d0e041c1e2905ccc440/media/sambalpuri/playful/i-am-free-to-dream-sambalpuri-playful-01.mp4",
+      "title": "Sambalpuri playful video",
+      "status": "working",
+      "notes": "Author-selected Take 1; detailed performance review remains open."
+    },
+    {
+      "repo_path": "media/odia/playful/i-am-free-to-dream-odia-playful-01.mp3",
+      "sha256": "9adf6aa81b76500a861fdcdb2180e0bc694e53734524dfb81e8d9cba23d078a2",
+      "bytes": 4023268,
+      "source_name": "i-am-free-to-dream-odia-playful-01.mp3",
+      "download_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/39efd491bf4ee58c80790d0e041c1e2905ccc440/media/odia/playful/i-am-free-to-dream-odia-playful-01.mp3",
+      "title": "Odia playful audio",
+      "status": "working",
+      "notes": "Author-selected Take 1; detailed performance review remains open."
+    },
+    {
+      "repo_path": "media/odia/playful/i-am-free-to-dream-odia-playful-01.mp4",
+      "sha256": "ceb109ac5efb62eb2c406c19ea2c28d1e73064e166c6ee61937e2001dbab76fd",
+      "bytes": 82185171,
+      "source_name": "i-am-free-to-dream-odia-playful-01.mp4",
+      "download_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/39efd491bf4ee58c80790d0e041c1e2905ccc440/media/odia/playful/i-am-free-to-dream-odia-playful-01.mp4",
+      "title": "Odia playful video",
+      "status": "working",
+      "notes": "Author-selected Take 1; detailed performance review remains open."
     }
   ],
   "unavailable_originals": [

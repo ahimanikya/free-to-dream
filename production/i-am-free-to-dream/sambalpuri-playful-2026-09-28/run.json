@@ -2,7 +2,7 @@
   "poem": "i-am-free-to-dream",
   "language": "sambalpuri",
   "variant": "playful",
-  "stage": "rendered",
+  "stage": "imported",
   "source": "kb/poems/i-am-free-to-dream/languages/sambalpuri.md",
   "source_sha256": "35c3ada9b202386f239a481e244685f329549012c12df128cbb78bb12a15164b",
   "title": "ମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ — Playful Sambalpuri Duet",
@@ -92,5 +92,12 @@
     "middle",
     "ending"
   ],
-  "variation_label": "Playful"
+  "variation_label": "Playful",
+  "media_commit": "39efd491bf4ee58c80790d0e041c1e2905ccc440",
+  "recording_ids": [
+    "sambalpuri-playful-audio-01",
+    "sambalpuri-playful-video-01"
+  ],
+  "page_url": "https://poemwithoutborders.org/poems--i-am-free-to-dream--languages--sambalpuri.html",
+  "selection_note": "Author requests Playful tab. Retain current Duet as default."
 }
