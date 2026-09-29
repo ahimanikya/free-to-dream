@@ -2,7 +2,7 @@
   "poem": "i-am-free-to-dream",
   "language": "sambalpuri",
   "variant": "playful",
-  "stage": "prepared",
+  "stage": "submitted",
   "source": "kb/poems/i-am-free-to-dream/languages/sambalpuri.md",
   "source_sha256": "35c3ada9b202386f239a481e244685f329549012c12df128cbb78bb12a15164b",
   "title": "ମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ — Playful Sambalpuri Duet",
@@ -29,8 +29,21 @@
   "vocal_arrangement_reference": "https://suno.com/song/6c5c2983-a685-45e8-a09a-84a8459e1beb",
   "submission_limit": 1,
   "expected_candidates": 2,
-  "actual_submissions": 0,
-  "candidates": [],
+  "actual_submissions": 1,
+  "candidates": [
+    {
+      "take": 1,
+      "id": "bb66e241-9208-415d-84b1-f4e149291243",
+      "url": "https://suno.com/song/bb66e241-9208-415d-84b1-f4e149291243",
+      "status": "generating"
+    },
+    {
+      "take": 2,
+      "id": "d2b2001d-dd81-42db-b84a-826db564aa2e",
+      "url": "https://suno.com/song/d2b2001d-dd81-42db-b84a-826db564aa2e",
+      "status": "generating"
+    }
+  ],
   "selected_candidate": null,
   "publication_authorized": false,
   "created_at": "2026-09-29T04:34:24.575744+00:00",
@@ -40,5 +53,10 @@
     "Male lead with soft playful female replies from the opening, female invitation verse and shared closing harmony.",
     "Use existing selected Sambalpuri audio as Cover reference under the previously approved reference-based workflow; melody and backing may vary.",
     "Shared settings baseline with approved cover Audio Influence 75; no Bhojpuri genre or instruments transferred."
-  ]
+  ],
+  "input_verified": true,
+  "input_verified_at": "2026-09-29T04:38:45.538447+00:00",
+  "verification_note": "Exact lyric paragraphs, style, title and exclusions verified in Suno v6 Advanced. Cover reference a2b3ded1-b0a2-4e02-917e-66a8b4815ced verified. Weirdness 30, Style Influence 65, Audio Influence 75, Max On, Personalize Off, Variety Normal, Duration Auto, gender unselected. Account and allowance checked; exact generation charge not displayed.",
+  "submission_started_at": "2026-09-29T04:38:45.538596+00:00",
+  "submitted_at": "2026-09-29T04:39:19.645951+00:00"
 }
