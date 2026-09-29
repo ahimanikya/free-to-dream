@@ -1,0 +1,69 @@
+{
+  "schema_version": 2,
+  "poem": "i-am-free-to-dream",
+  "prepared_at": "2026-09-29T05:40:26.829977+00:00",
+  "settings_policy": {
+    "schema_version": 1,
+    "poem": "i-am-free-to-dream",
+    "revision": "2026-09-27-2",
+    "scope": "A starting point for future I Am Free to Dream recordings. Language and arrangement overrides preserve local musical choices; historical actual settings remain unchanged.",
+    "defaults": {
+      "model": "v6",
+      "mode": "Advanced",
+      "weirdness": 30,
+      "style_influence": 65,
+      "max_mode": true,
+      "personalize": false,
+      "variety": "Normal",
+      "duration": "Auto",
+      "vocal_gender": "Unselected; voice directed in the language prompt",
+      "audio_influence": null,
+      "exclude_styles": "EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals"
+    },
+    "reference_cover_overrides": {
+      "audio_influence": 75
+    },
+    "exception_rule": "Inherit baseline, then adopted language overrides, then adopted language/arrangement overrides. Document changed controls, musical reason, decision reference and review status. Proposed comparisons do not apply automatically. Per-run author directions take precedence and must be recorded. This policy does not authorize generation credits.",
+    "language_overrides": {},
+    "arrangement_overrides": {},
+    "source": "production/i-am-free-to-dream/settings.json",
+    "source_sha256": "517518fe764b604be168337217a872a7befafc0371e3ebbf02b8a9b203decb48"
+  },
+  "counts": {
+    "prepared": 1
+  },
+  "entries": [
+    {
+      "language": "odia",
+      "language_name": "Odia",
+      "title": "ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ — Bhojpuri Tune Duet",
+      "order": 1,
+      "source": "kb/poems/i-am-free-to-dream/languages/odia.md",
+      "source_sha256": "220741b63405245f4f367abacffe2d580e23d4410e03c66164c2f92ccaf4c5b5",
+      "lyric_status": "Original",
+      "review_status": "author-source",
+      "existing_audio": true,
+      "status": "prepared",
+      "lyrics": "[Intro - Male Lead, Soft Female Responses]\nମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ\nମନା ନାହିଁ ମଝି ରାସ୍ତାରେ ହଜି ଜିବାକୁ\nଧୃବତାରା ଖୋଜିଦେବ ରାସ୍ତା ।\n\n[Verse 1 - Male Lead, Gentle Female Answers]\nସାଉଁଟି... ସାଉଁଟି...\nଜାବୁଡି ଧରିଛି ସଂସାରକୁ\nଜୋଡି ଦେବାର ଆଶାରେ,\nସଜେଇ ଦେବାର ଆଶାରେ ।\n\n[Verse 2 - Male Lead]\nକୁଂଭକାର ମୁଁ ।\n\nଗଠିଦେବା ସିଖିଛି\nରଂଗେଈ ଦେଈ,\nତୁମ ମୁଖରେ ହସ ବୁଣିବା ସିଖିଛି ।\n\n[Chorus - Male Lead, Soft Female Harmony]\nମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ\nମନା ନାହିଁ ମଝି ରାସ୍ତାରେ ହଜି ଜିବାକୁ\nଧୃବତାରା ଖୋଜିଦେବ ରାସ୍ତା ।\n\n[Bridge - Female Solo]\nଆସ ପାହାଡ ଚଢିବା\nଆସ ଜନ୍ହ ଦେଖିବା\nବାଦଲ ସାଂଗେ କାଂଧ ମିଳେଈ\nଝଡିବାର ମଂତ୍ର ସିଖିବା ।\n\n[Final Chorus - Male and Female Duet]\nମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ ।\nମନା ନାହିଁ ଗୁଂଥିଦେବାକୁ\nତୁମ ସପ୍ନକୁ ମୋ ସପ୍ନରେ ।\n\n[Soft Outro - Both Voices, Tender Close Harmony]\nମନା ନାହିଁ ଗୁଂଥିଦେବାକୁ\nତୁମ ସପ୍ନକୁ ମୋ ସପ୍ନରେ ।",
+      "style": "Sing the supplied Odia lyrics to the reference song, closely following its melody, rhythmic feel, arrangement and playful male-female exchanges. Purabi-inspired acoustic folk duet ballad with soft dholak swing, expressive sarangi replies and quiet harmonium. Warm youthful male lead from the opening, light affectionate female answers; female solo invitation verse, then close-harmony final refrain and outro. Clear natural Odia pronunciation and complete words; fit syllables gently to the tune. Keep the reference’s relaxed phrase endings, restrained ornamentation and gentle kajri-like lilt. Calm soulful joy and playful togetherness at an unhurried pace. Breathe between ସାଉଁଟି... ସାଉଁଟି...; pause fully after କୁଂଭକାର ମୁଁ with instruments sustaining beneath. Let the invitation bloom without accelerating. Use only the supplied Odia words. Peaceful, hopeful ending.",
+      "settings": "Reference cover using selected Bhojpuri Playful recording; verify all controls.\nmodel: v6\nmode: Advanced\nweirdness: 30\nstyle_influence: 65\nmax_mode: True\npersonalize: False\nvariety: Normal\nduration: Auto\nvocal_gender: Unselected; voice directed in the language prompt\naudio_influence: 75\nexclude_styles: EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals\n",
+      "generation_settings": {
+        "model": "v6",
+        "mode": "Advanced",
+        "weirdness": 30,
+        "style_influence": 65,
+        "max_mode": true,
+        "personalize": false,
+        "variety": "Normal",
+        "duration": "Auto",
+        "vocal_gender": "Unselected; voice directed in the language prompt",
+        "audio_influence": 75,
+        "exclude_styles": "EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals"
+      },
+      "settings_overrides": [],
+      "arrangement": "playful",
+      "candidates": [],
+      "selected_candidate": null
+    }
+  ]
+}
