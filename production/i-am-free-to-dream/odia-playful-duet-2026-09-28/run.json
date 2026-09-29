@@ -2,7 +2,7 @@
   "poem": "i-am-free-to-dream",
   "language": "odia",
   "variant": "duet",
-  "stage": "publication-prepared",
+  "stage": "published",
   "source": "kb/poems/i-am-free-to-dream/languages/odia.md",
   "source_sha256": "c99baef6480ae2d1cdc7ea8d30a06452ea9bc101f688dfd10a4c706358b9c091",
   "title": "ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ — Playful Odia Duet",
@@ -32,7 +32,7 @@
       "take": 1,
       "id": "a600d4d2-ae90-4b90-a4f5-bc6331e2fa85",
       "url": "https://suno.com/song/a600d4d2-ae90-4b90-a4f5-bc6331e2fa85",
-      "status": "ready-for-review",
+      "status": "published",
       "duration_display": "2:38",
       "duration_source": "Suno create list"
     },
@@ -95,5 +95,17 @@
     "odia-duet-audio-01",
     "odia-duet-video-01"
   ],
-  "page_url": "https://poemwithoutborders.org/poems--i-am-free-to-dream--languages--odia.html"
+  "page_url": "https://poemwithoutborders.org/poems--i-am-free-to-dream--languages--odia.html",
+  "published_at": "2026-09-29T04:10:04.271939+00:00",
+  "website_commit": "ece89c14e59b3ea53b698b5accfc2591a639303c",
+  "publication_verification": {
+    "site_deployment": "success",
+    "deployment_run": 36520053164,
+    "collection_checks": "success",
+    "python_tests": 32,
+    "javascript_tests": 34,
+    "remote_media": "Both returned HTTP 206 with expected byte totals.",
+    "browser_playback": "Live HTTPS audio and video advanced without errors. Solo/Duet tabs synchronize and Solo remains first. Duet is included in the playlist.",
+    "video_dimensions": "720x1280"
+  }
 }
