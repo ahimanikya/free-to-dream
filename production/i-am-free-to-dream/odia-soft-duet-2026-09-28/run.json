@@ -2,7 +2,7 @@
   "poem": "i-am-free-to-dream",
   "language": "odia",
   "variant": "duet",
-  "stage": "submitted",
+  "stage": "selection-pending",
   "source": "kb/poems/i-am-free-to-dream/languages/odia.md",
   "source_sha256": "c99baef6480ae2d1cdc7ea8d30a06452ea9bc101f688dfd10a4c706358b9c091",
   "title": "ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ — Odia Soft Duet",
@@ -32,13 +32,17 @@
       "take": 1,
       "id": "6ef6a15e-46f6-4fe1-b4de-4146ad705f0f",
       "url": "https://suno.com/song/6ef6a15e-46f6-4fe1-b4de-4146ad705f0f",
-      "status": "generating"
+      "status": "ready-for-review",
+      "duration_display": "2:48",
+      "duration_source": "Suno create list"
     },
     {
       "take": 2,
       "id": "e261bc7f-aecc-4077-9ab5-5f6ff27ebc41",
       "url": "https://suno.com/song/e261bc7f-aecc-4077-9ab5-5f6ff27ebc41",
-      "status": "generating"
+      "status": "ready-for-review",
+      "duration_display": "3:00",
+      "duration_source": "Suno create list"
     }
   ],
   "selected_candidate": null,
@@ -58,5 +62,7 @@
   "input_verified_at": "2026-09-29T02:22:25.588196+00:00",
   "verification_note": "Exact lyrics, style, title and exclusions verified in Suno Advanced v6. Weirdness 30, Style Influence 65, Max Mode On, Personalize Off, Variety Normal, Duration Auto, Vocal Gender unselected, no audio reference. Account and available allowance checked in UI; exact charge not shown.",
   "submission_started_at": "2026-09-29T02:22:25.588327+00:00",
-  "submitted_at": "2026-09-29T02:23:05.214728+00:00"
+  "submitted_at": "2026-09-29T02:23:05.214728+00:00",
+  "completed_at": "2026-09-29T02:24:29.044513+00:00",
+  "review_status": "Author listening and take selection pending; no direct listening assessment by the assistant."
 }
