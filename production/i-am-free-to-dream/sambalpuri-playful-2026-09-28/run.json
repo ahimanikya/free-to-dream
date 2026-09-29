@@ -2,7 +2,7 @@
   "poem": "i-am-free-to-dream",
   "language": "sambalpuri",
   "variant": "playful",
-  "stage": "submitted",
+  "stage": "selection-pending",
   "source": "kb/poems/i-am-free-to-dream/languages/sambalpuri.md",
   "source_sha256": "35c3ada9b202386f239a481e244685f329549012c12df128cbb78bb12a15164b",
   "title": "ମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ — Playful Sambalpuri Duet",
@@ -35,13 +35,17 @@
       "take": 1,
       "id": "bb66e241-9208-415d-84b1-f4e149291243",
       "url": "https://suno.com/song/bb66e241-9208-415d-84b1-f4e149291243",
-      "status": "generating"
+      "status": "ready-for-review",
+      "duration_display": "2:40",
+      "duration_source": "Suno create list"
     },
     {
       "take": 2,
       "id": "d2b2001d-dd81-42db-b84a-826db564aa2e",
       "url": "https://suno.com/song/d2b2001d-dd81-42db-b84a-826db564aa2e",
-      "status": "generating"
+      "status": "ready-for-review",
+      "duration_display": "2:38",
+      "duration_source": "Suno create list"
     }
   ],
   "selected_candidate": null,
@@ -58,5 +62,8 @@
   "input_verified_at": "2026-09-29T04:38:45.538447+00:00",
   "verification_note": "Exact lyric paragraphs, style, title and exclusions verified in Suno v6 Advanced. Cover reference a2b3ded1-b0a2-4e02-917e-66a8b4815ced verified. Weirdness 30, Style Influence 65, Audio Influence 75, Max On, Personalize Off, Variety Normal, Duration Auto, gender unselected. Account and allowance checked; exact generation charge not displayed.",
   "submission_started_at": "2026-09-29T04:38:45.538596+00:00",
-  "submitted_at": "2026-09-29T04:39:19.645951+00:00"
+  "submitted_at": "2026-09-29T04:39:19.645951+00:00",
+  "completed_at": "2026-09-29T04:40:23.639483+00:00",
+  "review_status": "Author listening and selection pending; no direct listening assessment by the assistant.",
+  "documented_source_sha256": "217e6db155e7901f16be0e69a33e5a4fb0fc52e99f12edeb6e8b525937c321cd"
 }
