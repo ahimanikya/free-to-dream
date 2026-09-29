@@ -2,7 +2,7 @@
   "poem": "i-am-free-to-dream",
   "language": "odia",
   "variant": "bhojpuri-reference-duet",
-  "stage": "submitted",
+  "stage": "selection-pending",
   "source": "kb/poems/i-am-free-to-dream/languages/odia.md",
   "source_sha256": "220741b63405245f4f367abacffe2d580e23d4410e03c66164c2f92ccaf4c5b5",
   "title": "ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ — Bhojpuri Tune Duet",
@@ -35,13 +35,15 @@
       "take": 1,
       "song_id": "ef8c816a-36f9-47d7-932b-3b95955be2a9",
       "url": "https://suno.com/song/ef8c816a-36f9-47d7-932b-3b95955be2a9",
-      "status": "generating"
+      "status": "ready",
+      "duration_display": "2:44"
     },
     {
       "take": 2,
       "song_id": "f8d4af78-4cad-4c1c-924e-9e46ca365966",
       "url": "https://suno.com/song/f8d4af78-4cad-4c1c-924e-9e46ca365966",
-      "status": "generating"
+      "status": "ready",
+      "duration_display": "2:22"
     }
   ],
   "selected_candidate": null,
@@ -79,5 +81,7 @@
     "account_and_allowance_verified": true,
     "exact_credit_charge": "Not displayed before submission"
   },
-  "submitted_at": "2026-09-29T05:48:08.896768+00:00"
+  "submitted_at": "2026-09-29T05:48:08.896768+00:00",
+  "ready_at": "2026-09-29T05:49:16.210649+00:00",
+  "review_note": "Suno displays completed V6 Cover candidates with durations. No direct listening judgment made; author review required for melody retention, complete Odia pronunciation, duet exchanges and pauses."
 }
