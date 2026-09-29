@@ -1,0 +1,62 @@
+{
+  "poem": "i-am-free-to-dream",
+  "language": "odia",
+  "variant": "duet",
+  "stage": "submitted",
+  "source": "kb/poems/i-am-free-to-dream/languages/odia.md",
+  "source_sha256": "c99baef6480ae2d1cdc7ea8d30a06452ea9bc101f688dfd10a4c706358b9c091",
+  "title": "ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ — Odia Soft Duet",
+  "lyrics": "[Intro - Male Solo]\nମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ\nମନା ନାହିଁ ମଝି ରାସ୍ତାରେ ହଜି ଜିବାକୁ\nଧୃବତାରା ଖୋଜିଦେବ ରାସ୍ତା ।\n\n[Verse 1 - Male Solo]\nସାଉଁଟି... ସାଉଁଟି...\nଜାବୁଡି ଧରିଛି ସଂସାରକୁ\nଜୋଡି ଦେବାର ଆଶାରେ,\nସଜେଇ ଦେବାର ଆଶାରେ ।\n\n[Verse 2 - Male Solo]\nକୁଂଭକାର ମୁଁ ।\n\nଗଠିଦେବା ସିଖିଛି\nରଂଗେଈ ଦେଈ,\nତୁମ ମୁଖରେ ହସ ବୁଣିବା ସିଖିଛି ।\n\n[Chorus - Male Solo]\nମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ\nମନା ନାହିଁ ମଝି ରାସ୍ତାରେ ହଜି ଜିବାକୁ\nଧୃବତାରା ଖୋଜିଦେବ ରାସ୍ତା ।\n\n[Bridge - Male Lead, Soft Female Answering Phrases]\nଆସ ପାହାଡ ଚଢିବା\nଆସ ଜନ୍ହ ଦେଖିବା\nବାଦଲ ସାଂଗେ କାଂଧ ମିଳେଈ\nଝଡିବାର ମଂତ୍ର ସିଖିବା ।\n\n[Final Chorus - Tender Male and Female Close Harmony]\nମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ ।\nମନା ନାହିଁ ଗୁଂଥିଦେବାକୁ\nତୁମ ସପ୍ନକୁ ମୋ ସପ୍ନରେ ।\n\n[Soft Outro - Tender Male and Female Close Harmony]\nମନା ନାହିଁ ଗୁଂଥିଦେବାକୁ\nତୁମ ସପ୍ନକୁ ମୋ ସପ୍ନରେ ।",
+  "style": "Odia indie-folk ballad with quiet joy, affection and wonder. Warm youthful male lead, natural Odia diction, complete words and spacious phrasing. Male-led opening, verses and first refrain; soft female answering phrases enter at “ଆସ ପାହାଡ ଚଢିବା,” then tender close harmony in the final dream-weaving refrain. Fingerpicked acoustic guitar, mellow bamboo flute responses, restrained mardala and warm sustained bass. Brief, delicate Odissi-informed melodic turns. Sparse opening, gradually blooming warmth without increasing pace. Leave a distinct breath between “ସାଉଁଟି… ସାଉଁଟି…” and a fuller pause after “କୁଂଭକାର ମୁଁ,” with soft instruments sustaining underneath. An unhurried flowing pulse and a peaceful, hopeful outro; the female voice gently complements the male lead.",
+  "settings": {
+    "model": "v6",
+    "mode": "Advanced",
+    "weirdness": 30,
+    "style_influence": 65,
+    "max_mode": true,
+    "personalize": false,
+    "variety": "Normal",
+    "duration": "Auto",
+    "vocal_gender": "Unselected; voice directed in the language prompt",
+    "audio_influence": null,
+    "exclude_styles": "EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals"
+  },
+  "policy_source": "production/i-am-free-to-dream/settings.json",
+  "policy_revision": "2026-09-27-2",
+  "policy_sha256": "517518fe764b604be168337217a872a7befafc0371e3ebbf02b8a9b203decb48",
+  "submission_limit": 1,
+  "expected_candidates": 2,
+  "actual_submissions": 1,
+  "candidates": [
+    {
+      "take": 1,
+      "id": "6ef6a15e-46f6-4fe1-b4de-4146ad705f0f",
+      "url": "https://suno.com/song/6ef6a15e-46f6-4fe1-b4de-4146ad705f0f",
+      "status": "generating"
+    },
+    {
+      "take": 2,
+      "id": "e261bc7f-aecc-4077-9ab5-5f6ff27ebc41",
+      "url": "https://suno.com/song/e261bc7f-aecc-4077-9ab5-5f6ff27ebc41",
+      "status": "generating"
+    }
+  ],
+  "selected_candidate": null,
+  "publication_authorized": false,
+  "created_at": "2026-09-29T02:20:13.504997+00:00",
+  "author_request": "Make Odia Duet, using the soft-answer Odia prompt discussed immediately beforehand.",
+  "changes": [
+    "Only vocal section labels changed; sung text, stanza order and pauses preserved.",
+    "Male-led opening, verses and first refrain; gentle female replies at mountain invitation, final close-harmony duet.",
+    "Odia phrasing, delicate Odissi-informed turns, flute responses and restrained mardala retained; no audio reference attached."
+  ],
+  "preexisting_today_candidates": [
+    "609666a1-1551-41dd-9ba1-66b6897eb4db",
+    "f1069741-2113-4a01-8c6e-57fd734cf5e3"
+  ],
+  "input_verified": true,
+  "input_verified_at": "2026-09-29T02:22:25.588196+00:00",
+  "verification_note": "Exact lyrics, style, title and exclusions verified in Suno Advanced v6. Weirdness 30, Style Influence 65, Max Mode On, Personalize Off, Variety Normal, Duration Auto, Vocal Gender unselected, no audio reference. Account and available allowance checked in UI; exact charge not shown.",
+  "submission_started_at": "2026-09-29T02:22:25.588327+00:00",
+  "submitted_at": "2026-09-29T02:23:05.214728+00:00"
+}
