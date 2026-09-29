@@ -350,6 +350,26 @@
       "title": "Bhojpuri duet video",
       "status": "working",
       "notes": "Author-selected Take 2; native-speaker review remains open."
+    },
+    {
+      "repo_path": "media/odia/duet/i-am-free-to-dream-odia-duet-01.mp3",
+      "sha256": "8a635e80891acb7e269e1f84a184d771cd7a95a6f92cb24045d438c9604d1bd6",
+      "bytes": 3751044,
+      "source_name": "i-am-free-to-dream-odia-duet-01.mp3",
+      "download_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/43aae9e52860880021dc8fd2a0d84f0dcf9d9bef/media/odia/duet/i-am-free-to-dream-odia-duet-01.mp3",
+      "title": "Odia duet audio",
+      "status": "working",
+      "notes": "Author-selected Take 1; detailed performance review remains open."
+    },
+    {
+      "repo_path": "media/odia/duet/i-am-free-to-dream-odia-duet-01.mp4",
+      "sha256": "96fcfcbe6a70cfa0eb6c4f800e1e25fcff1557eecdfe106868ea5651b7f04574",
+      "bytes": 80094500,
+      "source_name": "i-am-free-to-dream-odia-duet-01.mp4",
+      "download_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/43aae9e52860880021dc8fd2a0d84f0dcf9d9bef/media/odia/duet/i-am-free-to-dream-odia-duet-01.mp4",
+      "title": "Odia duet video",
+      "status": "working",
+      "notes": "Author-selected Take 1; detailed performance review remains open."
     }
   ],
   "unavailable_originals": [

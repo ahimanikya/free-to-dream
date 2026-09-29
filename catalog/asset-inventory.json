@@ -515,5 +515,29 @@
     "published": true,
     "repo_path": "media/bhojpuri/duet/i-am-free-to-dream-bhojpuri-duet-01.mp4",
     "public_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/704afc0c34ee3d731a77d5c4b2913c8edf592a50/media/bhojpuri/duet/i-am-free-to-dream-bhojpuri-duet-01.mp4"
+  },
+  {
+    "sha256": "8a635e80891acb7e269e1f84a184d771cd7a95a6f92cb24045d438c9604d1bd6",
+    "local_path": null,
+    "bytes": 3751044,
+    "source_names": [
+      "i-am-free-to-dream-odia-duet-01.mp3"
+    ],
+    "role": "working-asset",
+    "published": true,
+    "repo_path": "media/odia/duet/i-am-free-to-dream-odia-duet-01.mp3",
+    "public_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/43aae9e52860880021dc8fd2a0d84f0dcf9d9bef/media/odia/duet/i-am-free-to-dream-odia-duet-01.mp3"
+  },
+  {
+    "sha256": "96fcfcbe6a70cfa0eb6c4f800e1e25fcff1557eecdfe106868ea5651b7f04574",
+    "local_path": null,
+    "bytes": 80094500,
+    "source_names": [
+      "i-am-free-to-dream-odia-duet-01.mp4"
+    ],
+    "role": "working-asset",
+    "published": true,
+    "repo_path": "media/odia/duet/i-am-free-to-dream-odia-duet-01.mp4",
+    "public_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/43aae9e52860880021dc8fd2a0d84f0dcf9d9bef/media/odia/duet/i-am-free-to-dream-odia-duet-01.mp4"
   }
 ]

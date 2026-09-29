@@ -21,7 +21,9 @@
     "preview_authorization": "Author requested embedded audio and video on each language page on 2026-09-24.",
     "allow_file_sharing": false,
     "archived": false,
-    "duration_seconds": 180.0
+    "duration_seconds": 180.0,
+    "variation": "solo",
+    "variation_label": "Solo"
   },
   {
     "id": "english-audio-country",
@@ -190,7 +192,9 @@
     "public_preview": true,
     "preview_authorization": "Author requested embedded audio and video on each language page on 2026-09-24.",
     "allow_file_sharing": false,
-    "archived": false
+    "archived": false,
+    "variation": "solo",
+    "variation_label": "Solo"
   },
   {
     "id": "odia-video-v1",
@@ -894,5 +898,72 @@
       "visuals": "Shared visual source created using Melodicpal"
     },
     "audio_recording_id": "bhojpuri-duet-audio-01"
+  },
+  {
+    "id": "odia-duet-audio-01",
+    "language": "odia",
+    "poem": "i-am-free-to-dream",
+    "kind": "audio",
+    "title": "ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ · Duet",
+    "local_path": null,
+    "repo_path": "media/odia/duet/i-am-free-to-dream-odia-duet-01.mp3",
+    "public_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/43aae9e52860880021dc8fd2a0d84f0dcf9d9bef/media/odia/duet/i-am-free-to-dream-odia-duet-01.mp3",
+    "publish": false,
+    "public_preview": true,
+    "preview_authorization": "Author selected the playful Odia duet Take 1 and requested publication as an additional Duet tab on 2026-09-28.",
+    "review_status": "needs-review",
+    "rights_status": "release-details-to-confirm",
+    "allow_file_sharing": false,
+    "archived": false,
+    "duration_seconds": 157.6,
+    "source_url": "https://suno.com/song/a600d4d2-ae90-4b90-a4f5-bc6331e2fa85",
+    "variation": "duet",
+    "variation_label": "Duet",
+    "notes": "Author-selected playful Odia duet, Take 1. Detailed diction and performance review remains open.",
+    "credits": {
+      "poem": "Ahimanikya Satapathy",
+      "music_and_vocals": "Generated using Suno AI"
+    },
+    "generation_settings": {
+      "model": "v6",
+      "mode": "Advanced",
+      "weirdness": 30,
+      "style_influence": 65,
+      "max_mode": true,
+      "personalize": false,
+      "variety": "Normal",
+      "duration": "Auto",
+      "vocal_gender": "Unselected; voice directed in the language prompt",
+      "audio_influence": null,
+      "exclude_styles": "EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals"
+    }
+  },
+  {
+    "id": "odia-duet-video-01",
+    "language": "odia",
+    "poem": "i-am-free-to-dream",
+    "kind": "video",
+    "title": "ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ · Duet",
+    "local_path": null,
+    "repo_path": "media/odia/duet/i-am-free-to-dream-odia-duet-01.mp4",
+    "public_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/43aae9e52860880021dc8fd2a0d84f0dcf9d9bef/media/odia/duet/i-am-free-to-dream-odia-duet-01.mp4",
+    "publish": false,
+    "public_preview": true,
+    "preview_authorization": "Author selected the playful Odia duet Take 1 and requested publication as an additional Duet tab on 2026-09-28.",
+    "review_status": "needs-review",
+    "rights_status": "release-details-to-confirm",
+    "allow_file_sharing": false,
+    "archived": false,
+    "duration_seconds": 157.6,
+    "source_url": "https://suno.com/song/a600d4d2-ae90-4b90-a4f5-bc6331e2fa85",
+    "variation": "duet",
+    "variation_label": "Duet",
+    "notes": "Author-selected playful Odia duet, Take 1. Detailed diction and performance review remains open. Shared visuals fit the complete soundtrack at its original speed and pitch.",
+    "credits": {
+      "poem": "Ahimanikya Satapathy",
+      "music_and_vocals": "Generated using Suno AI",
+      "visuals": "Shared visual source created using Melodicpal"
+    },
+    "audio_recording_id": "odia-duet-audio-01"
   }
 ]

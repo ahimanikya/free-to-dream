@@ -2,7 +2,7 @@
   "poem": "i-am-free-to-dream",
   "language": "odia",
   "variant": "duet",
-  "stage": "rendered",
+  "stage": "publication-prepared",
   "source": "kb/poems/i-am-free-to-dream/languages/odia.md",
   "source_sha256": "c99baef6480ae2d1cdc7ea8d30a06452ea9bc101f688dfd10a4c706358b9c091",
   "title": "ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ — Playful Odia Duet",
@@ -89,5 +89,11 @@
     "opening",
     "middle",
     "ending"
-  ]
+  ],
+  "media_commit": "43aae9e52860880021dc8fd2a0d84f0dcf9d9bef",
+  "recording_ids": [
+    "odia-duet-audio-01",
+    "odia-duet-video-01"
+  ],
+  "page_url": "https://poemwithoutborders.org/poems--i-am-free-to-dream--languages--odia.html"
 }
