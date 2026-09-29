@@ -2,7 +2,7 @@
   "poem": "i-am-free-to-dream",
   "language": "sambalpuri",
   "variant": "playful",
-  "stage": "imported",
+  "stage": "published",
   "source": "kb/poems/i-am-free-to-dream/languages/sambalpuri.md",
   "source_sha256": "35c3ada9b202386f239a481e244685f329549012c12df128cbb78bb12a15164b",
   "title": "ମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ — Playful Sambalpuri Duet",
@@ -35,7 +35,7 @@
       "take": 1,
       "id": "bb66e241-9208-415d-84b1-f4e149291243",
       "url": "https://suno.com/song/bb66e241-9208-415d-84b1-f4e149291243",
-      "status": "ready-for-review",
+      "status": "selected-published",
       "duration_display": "2:40",
       "duration_source": "Suno create list"
     },
@@ -99,5 +99,18 @@
     "sambalpuri-playful-video-01"
   ],
   "page_url": "https://poemwithoutborders.org/poems--i-am-free-to-dream--languages--sambalpuri.html",
-  "selection_note": "Author requests Playful tab. Retain current Duet as default."
+  "selection_note": "Author requests Playful tab. Retain current Duet as default.",
+  "published_at": "2026-09-29T06:12:14.561750+00:00",
+  "website_commit": "3903378e5048bde9470d434c5df6019f43ec8fdd",
+  "publication_verification": {
+    "site_deployment": "success",
+    "deployment_run": 36529467359,
+    "collection_checks": "success",
+    "checks_run": 36529467477,
+    "python_tests": 32,
+    "remote_media": "Both media URLs return HTTP 206 with expected byte totals.",
+    "browser_playback": "Live HTTPS audio and video advanced without errors and paused correctly. Playful tabs synchronized; existing primary variation retained.",
+    "video_dimensions": "720x1280",
+    "playlist": "Playful active; previous Odia Duet archived and excluded from active playback."
+  }
 }

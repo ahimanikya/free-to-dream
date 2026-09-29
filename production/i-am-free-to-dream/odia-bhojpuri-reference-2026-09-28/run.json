@@ -2,7 +2,7 @@
   "poem": "i-am-free-to-dream",
   "language": "odia",
   "variant": "bhojpuri-reference-duet",
-  "stage": "imported",
+  "stage": "published",
   "source": "kb/poems/i-am-free-to-dream/languages/odia.md",
   "source_sha256": "220741b63405245f4f367abacffe2d580e23d4410e03c66164c2f92ccaf4c5b5",
   "title": "ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ — Bhojpuri Tune Duet",
@@ -35,7 +35,7 @@
       "take": 1,
       "song_id": "ef8c816a-36f9-47d7-932b-3b95955be2a9",
       "url": "https://suno.com/song/ef8c816a-36f9-47d7-932b-3b95955be2a9",
-      "status": "ready",
+      "status": "selected-published",
       "duration_display": "2:44"
     },
     {
@@ -83,7 +83,7 @@
   },
   "submitted_at": "2026-09-29T05:48:08.896768+00:00",
   "ready_at": "2026-09-29T05:49:16.210649+00:00",
-  "review_note": "Suno displays completed V6 Cover candidates with durations. No direct listening judgment made; author review required for melody retention, complete Odia pronunciation, duet exchanges and pauses.",
+  "review_note": "Author selected Take 1 as perfect. Detailed independent diction review remains open.",
   "selected_take": 1,
   "selection_url": "https://suno.com/s/jsxJnlnhJu8eeEuI",
   "selected_by": "author",
@@ -118,5 +118,18 @@
     "odia-playful-video-01"
   ],
   "page_url": "https://poemwithoutborders.org/poems--i-am-free-to-dream--languages--odia.html",
-  "selection_note": "Author requests Playful tab. Archive previous Odia Duet; retain Solo as default."
+  "selection_note": "Author requests Playful tab. Archive previous Odia Duet; retain Solo as default.",
+  "published_at": "2026-09-29T06:12:14.563010+00:00",
+  "website_commit": "3903378e5048bde9470d434c5df6019f43ec8fdd",
+  "publication_verification": {
+    "site_deployment": "success",
+    "deployment_run": 36529467359,
+    "collection_checks": "success",
+    "checks_run": 36529467477,
+    "python_tests": 32,
+    "remote_media": "Both media URLs return HTTP 206 with expected byte totals.",
+    "browser_playback": "Live HTTPS audio and video advanced without errors and paused correctly. Playful tabs synchronized; existing primary variation retained.",
+    "video_dimensions": "720x1280",
+    "playlist": "Playful active; previous Odia Duet archived and excluded from active playback."
+  }
 }
