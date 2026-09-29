@@ -1,0 +1,30 @@
+Intended reference-cover settings; verify in Suno before submission.
+Policy: production/i-am-free-to-dream/settings.json @ 2026-09-27-2
+
+model: v6
+mode: Advanced
+weirdness: 30
+style_influence: 65
+max_mode: On
+personalize: Off
+variety: Normal
+duration: Auto
+vocal_gender: Unselected; voice directed in the language prompt
+audio_influence: 75
+exclude_styles: EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals
+
+For an author-approved reference cover only: audio_influence 75. Attach the exact reference and preserve its approved prompt/lyrics.
+Record any author-approved settings exception in the run.
+
+Use the existing arranged lyric for comparison. Keep its words, section order and pauses intact; log any later wording changes separately.
+
+Start with the [shared generation baseline](../../../guides/generation-settings.md), then apply documented language or arrangement overrides. Preserve this language’s musical direction and listening checks. Explain each changed control, its musical reason and review status; record the actual settings with the take.
+
+For the listening review:
+
+1. Ask a fluent speaker to read the opening, gathering line, potter declaration and longest phrase naturally. Compare that phrasing with the sung version.
+2. Check that the local vocal cadence and melodic treatment are audible, and that the regional character comes through beyond instrument names. Let whole Odia thoughts shape the melody; use brief Odissi-informed turns without fragmenting words.
+3. Check the gathering breath and fuller potter pause. Listen for dropped syllables, added words, distorted pronunciation or an accompaniment that forces a sentence to hurry.
+4. Compare the opening, bridge and ending at similar playback volume. The arrangement may grow warmer, but should remain calm, soulful and quietly happy.
+
+The Odia source remains the author’s text; the musical arrangement awaits listening review.
