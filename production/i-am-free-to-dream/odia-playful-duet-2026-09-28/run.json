@@ -2,7 +2,7 @@
   "poem": "i-am-free-to-dream",
   "language": "odia",
   "variant": "duet",
-  "stage": "selection-pending",
+  "stage": "rendered",
   "source": "kb/poems/i-am-free-to-dream/languages/odia.md",
   "source_sha256": "c99baef6480ae2d1cdc7ea8d30a06452ea9bc101f688dfd10a4c706358b9c091",
   "title": "ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ — Playful Odia Duet",
@@ -45,8 +45,8 @@
       "duration_source": "Suno create list"
     }
   ],
-  "selected_candidate": null,
-  "publication_authorized": false,
+  "selected_candidate": "a600d4d2-ae90-4b90-a4f5-bc6331e2fa85",
+  "publication_authorized": true,
   "created_at": "2026-09-29T02:38:59.492724+00:00",
   "author_request": "Mix female voice like Bhojpuri, more fun together and playful.",
   "changes": [
@@ -63,6 +63,31 @@
   "submission_started_at": "2026-09-29T02:40:34.593999+00:00",
   "submitted_at": "2026-09-29T02:41:07.119560+00:00",
   "completed_at": "2026-09-29T02:42:55.169460+00:00",
-  "review_status": "Author listening and selection pending; no direct listening assessment by the assistant.",
-  "documented_source_sha256": "5d1b809c40a7630f691f678bf75edca91592c592f894735bc5d46fbdc10a75ec"
+  "review_status": "needs-native-review",
+  "documented_source_sha256": "5d1b809c40a7630f691f678bf75edca91592c592f894735bc5d46fbdc10a75ec",
+  "selected_by": "author",
+  "selected_at": "2026-09-29T04:00:09.364982+00:00",
+  "selection_url": "https://suno.com/s/kEAP5ViPnR2QypoF",
+  "download": {
+    "path": "media/odia/duet/i-am-free-to-dream-odia-duet-01.mp3",
+    "bytes": 3751044,
+    "sha256": "8a635e80891acb7e269e1f84a184d771cd7a95a6f92cb24045d438c9604d1bd6",
+    "identity_check": "Selected take UUID verified in MP3 metadata."
+  },
+  "video_validation": {
+    "full_decode": "passed",
+    "audio_sha256": "8a635e80891acb7e269e1f84a184d771cd7a95a6f92cb24045d438c9604d1bd6",
+    "source_audio_seconds": 157.6,
+    "output_audio_seconds": 157.61075,
+    "video_source_sha256": "3c18cfe26a4e86efcd9a8a02c581e09a384bd05ba526291c168bd018f92447ed",
+    "video_time_factor": 0.8753124132185504,
+    "audio_correlation": 0.9999265137229877,
+    "output_bytes": 80094500,
+    "output_sha256": "96fcfcbe6a70cfa0eb6c4f800e1e25fcff1557eecdfe106868ea5651b7f04574"
+  },
+  "visual_frames_reviewed": [
+    "opening",
+    "middle",
+    "ending"
+  ]
 }
