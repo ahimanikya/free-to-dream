@@ -2,7 +2,7 @@
   "poem": "i-am-free-to-dream",
   "language": "odia",
   "variant": "conversational-duet",
-  "stage": "submitted",
+  "stage": "selection-pending",
   "source": "kb/poems/i-am-free-to-dream/languages/odia.md",
   "source_sha256": "401f4316a11800237b726fc42cd0ecf10f599ea67bdfa414631adfe130696c5f",
   "title": "ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ — Smiling Odia Duet",
@@ -34,13 +34,17 @@
       "take": 1,
       "id": "19d9771c-758c-4d04-8989-f792b0d9e785",
       "url": "https://suno.com/song/19d9771c-758c-4d04-8989-f792b0d9e785",
-      "status": "generating"
+      "status": "ready-for-review",
+      "duration_display": "2:48",
+      "readiness_evidence": "Suno completed candidate card displays duration, artwork, Play control, V6 and COVER labels."
     },
     {
       "take": 2,
       "id": "4c7877ad-97a5-47df-80b2-58d9db6e66c0",
       "url": "https://suno.com/song/4c7877ad-97a5-47df-80b2-58d9db6e66c0",
-      "status": "generating"
+      "status": "ready-for-review",
+      "duration_display": "2:56",
+      "readiness_evidence": "Suno completed candidate card displays duration, artwork, Play control, V6 and COVER labels."
     }
   ],
   "selected_candidate": null,
@@ -83,5 +87,7 @@
     "exclude_styles": "EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals"
   },
   "verification_note": "Signed-in account and available allowance checked in normal UI. Exact per-submission charge not displayed. Exact lyrics including paragraph breaks, title, style, exclusions, reference UUID, v6 Advanced and every applicable control verified.",
-  "submitted_at": "2026-09-29T05:35:11.448586+00:00"
+  "submitted_at": "2026-09-29T05:35:11.448586+00:00",
+  "completed_at": "2026-09-29T05:36:03.379775+00:00",
+  "review_note": "Awaiting author listening and selection. No acoustic quality claims, downloads or publication of either candidate."
 }
