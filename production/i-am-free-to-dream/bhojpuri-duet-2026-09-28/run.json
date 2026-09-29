@@ -32,9 +32,11 @@
       "take": 1,
       "id": "6c5c2983-a685-45e8-a09a-84a8459e1beb",
       "url": "https://suno.com/song/6c5c2983-a685-45e8-a09a-84a8459e1beb",
-      "status": "ready-for-review",
+      "status": "published",
       "duration_display": "2:34",
-      "duration_source": "Suno create list"
+      "duration_source": "Suno create list",
+      "variation": "playful",
+      "publication_record": "production/i-am-free-to-dream/bhojpuri-playful-2026-09-28/run.json"
     },
     {
       "take": 2,

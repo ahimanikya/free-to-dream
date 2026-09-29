@@ -23,7 +23,7 @@
   "policy_revision": "2026-09-27-2",
   "policy_sha256": "517518fe764b604be168337217a872a7befafc0371e3ebbf02b8a9b203decb48",
   "variant": "playful",
-  "stage": "publication-prepared",
+  "stage": "published",
   "generation_run": "production/i-am-free-to-dream/bhojpuri-duet-2026-09-28/run.json",
   "selected_candidate": "6c5c2983-a685-45e8-a09a-84a8459e1beb",
   "selected_take": 1,
@@ -61,5 +61,17 @@
     "bhojpuri-playful-audio-01",
     "bhojpuri-playful-video-01"
   ],
-  "page_url": "https://poemwithoutborders.org/poems--i-am-free-to-dream--languages--bhojpuri.html"
+  "page_url": "https://poemwithoutborders.org/poems--i-am-free-to-dream--languages--bhojpuri.html",
+  "published_at": "2026-09-29T04:24:38.816854+00:00",
+  "website_commit": "0ac5a136f8c1d64b5ee4c63eb187d3178dc5adc9",
+  "publication_verification": {
+    "site_deployment": "success",
+    "deployment_run": 36521118564,
+    "collection_checks": "success",
+    "python_tests": 32,
+    "javascript_tests": 34,
+    "remote_media": "Both returned HTTP 206 with expected byte totals.",
+    "browser_playback": "Live HTTPS audio and video advanced without errors and paused correctly. Duet/Playful tabs synchronize, Duet remains first, and Playful is in the playlist.",
+    "video_dimensions": "720x1280"
+  }
 }
