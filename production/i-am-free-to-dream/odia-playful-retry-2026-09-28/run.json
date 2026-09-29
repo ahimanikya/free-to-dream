@@ -2,7 +2,7 @@
   "poem": "i-am-free-to-dream",
   "language": "odia",
   "variant": "playful",
-  "stage": "prepared",
+  "stage": "submitted",
   "source": "kb/poems/i-am-free-to-dream/languages/odia.md",
   "source_sha256": "7446b00ebaff625957636d27672b99b01b0ed60465f2d78dc018474cb2a6688b",
   "title": "ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ — Playful Duet II",
@@ -28,8 +28,21 @@
   "generation_method": "reference-based cover",
   "submission_limit": 1,
   "expected_candidates": 2,
-  "actual_submissions": 0,
-  "candidates": [],
+  "actual_submissions": 1,
+  "candidates": [
+    {
+      "take": 1,
+      "id": "f85be1d4-5abe-4d62-9524-75e2c7e52d42",
+      "url": "https://suno.com/song/f85be1d4-5abe-4d62-9524-75e2c7e52d42",
+      "status": "generating"
+    },
+    {
+      "take": 2,
+      "id": "1fbe6ebb-f6fb-415a-aa07-a4ce59c6c7ce",
+      "url": "https://suno.com/song/1fbe6ebb-f6fb-415a-aa07-a4ce59c6c7ce",
+      "status": "generating"
+    }
+  ],
   "selected_candidate": null,
   "publication_authorized": false,
   "created_at": "2026-09-29T05:10:13.714421+00:00",
@@ -55,5 +68,6 @@
     "audio_influence": 75,
     "exclude_styles": "EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals"
   },
-  "verification_note": "Normal signed-in UI: account and available allowance checked. Exact per-submission charge not displayed. Exact lyric paragraphs, title, style, exclusions, v6 Advanced, all applicable controls and attached reference UUID verified before one Create submission."
+  "verification_note": "Normal signed-in UI: account and available allowance checked. Exact per-submission charge not displayed. Exact lyric paragraphs, title, style, exclusions, v6 Advanced, all applicable controls and attached reference UUID verified before one Create submission.",
+  "submitted_at": "2026-09-29T05:16:16.167063+00:00"
 }
