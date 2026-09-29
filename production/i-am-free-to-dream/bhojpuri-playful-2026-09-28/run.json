@@ -1,0 +1,59 @@
+{
+  "poem": "i-am-free-to-dream",
+  "language": "bhojpuri",
+  "source": "kb/poems/i-am-free-to-dream/languages/bhojpuri.md",
+  "source_sha256": "4a75cad0ce5629ff4d4580b324620f3cc8f2ecf47f3b5928e82a5c68465322d0",
+  "title": "सपना देखे के मनाही नइखे — Bhojpuri Duet",
+  "lyrics": "[Intro - Male Lead, Soft Female Responses]\nहमरा सपना देखे के मनाही नइखे,\nबीच राह में भटक जाए के मनाही नइखे।\nध्रुवतारा राह देखाई।\n\n[Verse 1 - Male Lead, Gentle Female Answers]\nबटोरत... बटोरत...\nदुनिया के छाती से लगवले बानी—\nएकरा के जोड़े के आस में,\nएकरा के सँवारे के आस में।\n\n[Verse 2 - Male Lead]\nहम कुम्हार बानी।\n\nरूप देवे के सीखले बानी,\nरंग भर के,\nतोहरा मुँह पर हँसी खिलावे के सीखले बानी।\n\n[Chorus - Male Lead, Soft Female Harmony]\nहमरा सपना देखे के मनाही नइखे,\nबीच राह में भटक जाए के मनाही नइखे।\nध्रुवतारा राह देखाई।\n\n[Bridge - Female Solo]\nआवऽ, पहाड़ चढ़ीं।\nआवऽ, चाँद निहारीं।\nबादर से काँधा मिलाके,\nबरखा बन बरसे के मंतर सीखीं।\n\n[Final Chorus - Male and Female Duet]\nहमरा सपना देखे के मनाही नइखे।\nतोहार सपना अपना सपना में\nगूँथे के भी मनाही नइखे।\n\n[Soft Outro - Both Voices, Tender Close Harmony]\nतोहार सपना अपना सपना में...\nगूँथे के भी मनाही नइखे।",
+  "style": "Tender Bhojpuri Purabi-inspired acoustic folk duet ballad. Warm youthful male lead from the opening, soft female answering phrases; female solo for the late invitation verse, then tender close-harmony duet in the final refrain and outro. Natural conversational Bhojpuri diction, gently leaning and relaxed phrase endings, restrained ornamentation. Gentle kajri-like lilt, soft dholak swing, expressive sarangi replies, quiet harmonium. Calm soulful joy, affection and wonder; light unhurried rhythm, hopeful returning refrain. Breathe between बटोरत... बटोरत...; pause fully after हम कुम्हार बानी, instruments sustaining beneath. Begin intimately; let the rain-and-cloud bridge bloom warmly without accelerating. Keep answers clear of the lead and use only supplied lyric words. End in peaceful, hopeful dream-weaving contentment. No mournful delivery, driving beat or dramatic crescendo.",
+  "settings": {
+    "model": "v6",
+    "mode": "Advanced",
+    "weirdness": 30,
+    "style_influence": 65,
+    "max_mode": true,
+    "personalize": false,
+    "variety": "Normal",
+    "duration": "Auto",
+    "vocal_gender": "Unselected; voice directed in the language prompt",
+    "audio_influence": null,
+    "exclude_styles": "EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals"
+  },
+  "policy_source": "production/i-am-free-to-dream/settings.json",
+  "policy_revision": "2026-09-27-2",
+  "policy_sha256": "517518fe764b604be168337217a872a7befafc0371e3ebbf02b8a9b203decb48",
+  "variant": "playful",
+  "stage": "rendered",
+  "generation_run": "production/i-am-free-to-dream/bhojpuri-duet-2026-09-28/run.json",
+  "selected_candidate": "6c5c2983-a685-45e8-a09a-84a8459e1beb",
+  "selected_take": 1,
+  "selection_url": "https://suno.com/s/qP9U9kr5lLH4D8vX",
+  "publication_authorized": true,
+  "selected_by": "author",
+  "selected_at": "2026-09-29T04:15:54.335528+00:00",
+  "review_status": "needs-native-review",
+  "selection_note": "Author describes Take 1 as playful and requests a second Playful tab, retaining the existing Duet Take 2.",
+  "download": {
+    "path": "media/bhojpuri/playful/i-am-free-to-dream-bhojpuri-playful-01.mp3",
+    "bytes": 3848003,
+    "sha256": "01f2b5e118358b1f529dceaf0bee9e286e99c06b69c42a8e52f189817d2969a9",
+    "identity_check": "Selected take UUID verified in MP3 metadata."
+  },
+  "source_url": "https://suno.com/song/6c5c2983-a685-45e8-a09a-84a8459e1beb",
+  "video_validation": {
+    "full_decode": "passed",
+    "audio_sha256": "01f2b5e118358b1f529dceaf0bee9e286e99c06b69c42a8e52f189817d2969a9",
+    "source_audio_seconds": 154.36,
+    "output_audio_seconds": 154.368,
+    "video_source_sha256": "3c18cfe26a4e86efcd9a8a02c581e09a384bd05ba526291c168bd018f92447ed",
+    "video_time_factor": 0.8573174118300473,
+    "audio_correlation": 0.9998841364117746,
+    "output_bytes": 78938154,
+    "output_sha256": "24966ea3d8ae7ca2589dc770b81f55f8b55d4dd973759ca9c63571ce90dcb325"
+  },
+  "visual_frames_reviewed": [
+    "opening",
+    "middle",
+    "ending"
+  ]
+}
