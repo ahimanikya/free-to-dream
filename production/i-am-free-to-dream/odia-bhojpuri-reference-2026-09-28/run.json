@@ -2,7 +2,7 @@
   "poem": "i-am-free-to-dream",
   "language": "odia",
   "variant": "bhojpuri-reference-duet",
-  "stage": "downloaded",
+  "stage": "rendered",
   "source": "kb/poems/i-am-free-to-dream/languages/odia.md",
   "source_sha256": "220741b63405245f4f367abacffe2d580e23d4410e03c66164c2f92ccaf4c5b5",
   "title": "ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ — Bhojpuri Tune Duet",
@@ -93,5 +93,23 @@
     "bytes": 4023268,
     "sha256": "9adf6aa81b76500a861fdcdb2180e0bc694e53734524dfb81e8d9cba23d078a2",
     "identity_check": "Selected take UUID verified in downloaded MP3 metadata."
-  }
+  },
+  "video_validation": {
+    "full_decode": "passed",
+    "audio_sha256": "9adf6aa81b76500a861fdcdb2180e0bc694e53734524dfb81e8d9cba23d078a2",
+    "source_audio_seconds": 164.2,
+    "output_audio_seconds": 164.20275,
+    "video_source_sha256": "3c18cfe26a4e86efcd9a8a02c581e09a384bd05ba526291c168bd018f92447ed",
+    "video_time_factor": 0.9119688975284642,
+    "audio_correlation": 0.999907816920243,
+    "output_bytes": 82185171,
+    "output_sha256": "ceb109ac5efb62eb2c406c19ea2c28d1e73064e166c6ee61937e2001dbab76fd"
+  },
+  "visual_frames_reviewed": [
+    "opening",
+    "middle",
+    "ending"
+  ],
+  "review_status": "Author-selected; detailed fluent-speaker review remains open",
+  "variation_label": "Playful"
 }

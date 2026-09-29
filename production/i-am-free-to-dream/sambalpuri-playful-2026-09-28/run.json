@@ -2,7 +2,7 @@
   "poem": "i-am-free-to-dream",
   "language": "sambalpuri",
   "variant": "playful",
-  "stage": "downloaded",
+  "stage": "rendered",
   "source": "kb/poems/i-am-free-to-dream/languages/sambalpuri.md",
   "source_sha256": "35c3ada9b202386f239a481e244685f329549012c12df128cbb78bb12a15164b",
   "title": "ମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ — Playful Sambalpuri Duet",
@@ -64,7 +64,7 @@
   "submission_started_at": "2026-09-29T04:38:45.538596+00:00",
   "submitted_at": "2026-09-29T04:39:19.645951+00:00",
   "completed_at": "2026-09-29T04:40:23.639483+00:00",
-  "review_status": "Author listening and selection pending; no direct listening assessment by the assistant.",
+  "review_status": "Author-selected; detailed fluent-speaker review remains open",
   "documented_source_sha256": "217e6db155e7901f16be0e69a33e5a4fb0fc52e99f12edeb6e8b525937c321cd",
   "selected_take": 1,
   "selection_url": "https://suno.com/s/pDhyN2HXWkCd8Fer",
@@ -75,5 +75,22 @@
     "bytes": 3811915,
     "sha256": "0849ea11f982566a7c29f4961c2ec1be973179633e3b9395cb972125d1b289c8",
     "identity_check": "Selected take UUID verified in downloaded MP3 metadata."
-  }
+  },
+  "video_validation": {
+    "full_decode": "passed",
+    "audio_sha256": "0849ea11f982566a7c29f4961c2ec1be973179633e3b9395cb972125d1b289c8",
+    "source_audio_seconds": 159.6,
+    "output_audio_seconds": 159.616,
+    "video_source_sha256": "3c18cfe26a4e86efcd9a8a02c581e09a384bd05ba526291c168bd018f92447ed",
+    "video_time_factor": 0.886420438767009,
+    "audio_correlation": 0.9998974424033072,
+    "output_bytes": 80730619,
+    "output_sha256": "6592d264e190515217137c8c508cee3317060e4246c0ea2ae80a866a0d445790"
+  },
+  "visual_frames_reviewed": [
+    "opening",
+    "middle",
+    "ending"
+  ],
+  "variation_label": "Playful"
 }
