@@ -1,0 +1,69 @@
+{
+  "schema_version": 2,
+  "poem": "i-am-free-to-dream",
+  "prepared_at": "2026-09-29T05:30:12.413346+00:00",
+  "settings_policy": {
+    "schema_version": 1,
+    "poem": "i-am-free-to-dream",
+    "revision": "2026-09-27-2",
+    "scope": "A starting point for future I Am Free to Dream recordings. Language and arrangement overrides preserve local musical choices; historical actual settings remain unchanged.",
+    "defaults": {
+      "model": "v6",
+      "mode": "Advanced",
+      "weirdness": 30,
+      "style_influence": 65,
+      "max_mode": true,
+      "personalize": false,
+      "variety": "Normal",
+      "duration": "Auto",
+      "vocal_gender": "Unselected; voice directed in the language prompt",
+      "audio_influence": null,
+      "exclude_styles": "EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals"
+    },
+    "reference_cover_overrides": {
+      "audio_influence": 75
+    },
+    "exception_rule": "Inherit baseline, then adopted language overrides, then adopted language/arrangement overrides. Document changed controls, musical reason, decision reference and review status. Proposed comparisons do not apply automatically. Per-run author directions take precedence and must be recorded. This policy does not authorize generation credits.",
+    "language_overrides": {},
+    "arrangement_overrides": {},
+    "source": "production/i-am-free-to-dream/settings.json",
+    "source_sha256": "517518fe764b604be168337217a872a7befafc0371e3ebbf02b8a9b203decb48"
+  },
+  "counts": {
+    "prepared": 1
+  },
+  "entries": [
+    {
+      "language": "odia",
+      "language_name": "Odia",
+      "title": "ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ — Smiling Odia Duet",
+      "order": 1,
+      "source": "kb/poems/i-am-free-to-dream/languages/odia.md",
+      "source_sha256": "401f4316a11800237b726fc42cd0ecf10f599ea67bdfa414631adfe130696c5f",
+      "lyric_status": "Original",
+      "review_status": "author-source",
+      "existing_audio": true,
+      "status": "prepared",
+      "lyrics": "[Intro - Male Lead, Warm Confident Invitation]\nମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ\nମନା ନାହିଁ ମଝି ରାସ୍ତାରେ ହଜି ଜିବାକୁ\nଧୃବତାରା ଖୋଜିଦେବ ରାସ୍ତା ।\n\n[Verse 1 - Playful Exchange]\n[Male]\nସାଉଁଟି...\n[Female Answer]\nସାଉଁଟି...\n[Male Lead]\nଜାବୁଡି ଧରିଛି ସଂସାରକୁ\nଜୋଡି ଦେବାର ଆଶାରେ,\nସଜେଇ ଦେବାର ଆଶାରେ ।\n\n[Verse 2 - Male Solo, Complete Thought]\nକୁଂଭକାର ମୁଁ ।\n\nଗଠିଦେବା ସିଖିଛି\nରଂଗେଈ ଦେଈ,\nତୁମ ମୁଖରେ ହସ ବୁଣିବା ସିଖିଛି ।\n\n[Chorus - Male Lead, Female Answer on Final Line]\nମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ\nମନା ନାହିଁ ମଝି ରାସ୍ତାରେ ହଜି ଜିବାକୁ\nଧୃବତାରା ଖୋଜିଦେବ ରାସ୍ତା ।\n\n[Bridge - Female Solo, Inviting Him Along]\nଆସ ପାହାଡ ଚଢିବା\nଆସ ଜନ୍ହ ଦେଖିବା\nବାଦଲ ସାଂଗେ କାଂଧ ମିଳେଈ\nଝଡିବାର ମଂତ୍ର ସିଖିବା ।\n\n[Final Chorus - Both Voices, Shared Delight]\nମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ ।\nମନା ନାହିଁ ଗୁଂଥିଦେବାକୁ\nତୁମ ସପ୍ନକୁ ମୋ ସପ୍ନରେ ।\n\n[Outro - Both Voices, Warm Full-Voiced Close Harmony]\nମନା ନାହିଁ ଗୁଂଥିଦେବାକୁ\nତୁମ ସପ୍ନକୁ ମୋ ସପ୍ନରେ ।",
+      "style": "Odia indie-folk duet with the conversational charm of vintage Odia light songs. Warm youthful male lead, affectionate confidence and a smile in the phrasing; a clear expressive female voice responds with playful curiosity. Sing as two people enjoying each other. Male sings the first gathering phrase, female answers the second after a breath. Male alone completes the potter stanza, with a full pause after କୁଂଭକାର ମୁଁ. Female leads the mountain-and-moon invitation; both join in a joyful close-harmony ending. Natural Odia speech rhythm, clear complete words, brief delicate Odissi-informed turns. Fingerpicked acoustic guitar, bamboo flute replies, lightly played mardala, warm sustained bass. Relaxed buoyant lilt, spacious intimate mix, gradual warmth without speeding up. Tender but fully voiced. Use only supplied words; leave room for each reply. Let instruments sustain beneath the pauses.",
+      "settings": "Reference cover; verify every control before submission.\nmodel: v6\nmode: Advanced\nweirdness: 30\nstyle_influence: 65\nmax_mode: True\npersonalize: False\nvariety: Normal\nduration: Auto\nvocal_gender: Unselected; voice directed in the language prompt\naudio_influence: 75\nexclude_styles: EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals\n",
+      "generation_settings": {
+        "model": "v6",
+        "mode": "Advanced",
+        "weirdness": 30,
+        "style_influence": 65,
+        "max_mode": true,
+        "personalize": false,
+        "variety": "Normal",
+        "duration": "Auto",
+        "vocal_gender": "Unselected; voice directed in the language prompt",
+        "audio_influence": 75,
+        "exclude_styles": "EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals"
+      },
+      "settings_overrides": [],
+      "arrangement": "playful",
+      "candidates": [],
+      "selected_candidate": null
+    }
+  ]
+}

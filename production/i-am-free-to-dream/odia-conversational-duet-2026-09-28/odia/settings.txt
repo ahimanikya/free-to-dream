@@ -1,0 +1,12 @@
+Reference cover; verify every control before submission.
+model: v6
+mode: Advanced
+weirdness: 30
+style_influence: 65
+max_mode: True
+personalize: False
+variety: Normal
+duration: Auto
+vocal_gender: Unselected; voice directed in the language prompt
+audio_influence: 75
+exclude_styles: EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals

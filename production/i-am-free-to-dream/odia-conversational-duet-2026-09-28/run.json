@@ -1,0 +1,73 @@
+{
+  "poem": "i-am-free-to-dream",
+  "language": "odia",
+  "variant": "conversational-duet",
+  "stage": "prepared",
+  "source": "kb/poems/i-am-free-to-dream/languages/odia.md",
+  "source_sha256": "401f4316a11800237b726fc42cd0ecf10f599ea67bdfa414631adfe130696c5f",
+  "title": "ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ — Smiling Odia Duet",
+  "lyrics": "[Intro - Male Lead, Warm Confident Invitation]\nମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ\nମନା ନାହିଁ ମଝି ରାସ୍ତାରେ ହଜି ଜିବାକୁ\nଧୃବତାରା ଖୋଜିଦେବ ରାସ୍ତା ।\n\n[Verse 1 - Playful Exchange]\n[Male]\nସାଉଁଟି...\n[Female Answer]\nସାଉଁଟି...\n[Male Lead]\nଜାବୁଡି ଧରିଛି ସଂସାରକୁ\nଜୋଡି ଦେବାର ଆଶାରେ,\nସଜେଇ ଦେବାର ଆଶାରେ ।\n\n[Verse 2 - Male Solo, Complete Thought]\nକୁଂଭକାର ମୁଁ ।\n\nଗଠିଦେବା ସିଖିଛି\nରଂଗେଈ ଦେଈ,\nତୁମ ମୁଖରେ ହସ ବୁଣିବା ସିଖିଛି ।\n\n[Chorus - Male Lead, Female Answer on Final Line]\nମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ\nମନା ନାହିଁ ମଝି ରାସ୍ତାରେ ହଜି ଜିବାକୁ\nଧୃବତାରା ଖୋଜିଦେବ ରାସ୍ତା ।\n\n[Bridge - Female Solo, Inviting Him Along]\nଆସ ପାହାଡ ଚଢିବା\nଆସ ଜନ୍ହ ଦେଖିବା\nବାଦଲ ସାଂଗେ କାଂଧ ମିଳେଈ\nଝଡିବାର ମଂତ୍ର ସିଖିବା ।\n\n[Final Chorus - Both Voices, Shared Delight]\nମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ ।\nମନା ନାହିଁ ଗୁଂଥିଦେବାକୁ\nତୁମ ସପ୍ନକୁ ମୋ ସପ୍ନରେ ।\n\n[Outro - Both Voices, Warm Full-Voiced Close Harmony]\nମନା ନାହିଁ ଗୁଂଥିଦେବାକୁ\nତୁମ ସପ୍ନକୁ ମୋ ସପ୍ନରେ ।",
+  "style": "Odia indie-folk duet with the conversational charm of vintage Odia light songs. Warm youthful male lead, affectionate confidence and a smile in the phrasing; a clear expressive female voice responds with playful curiosity. Sing as two people enjoying each other. Male sings the first gathering phrase, female answers the second after a breath. Male alone completes the potter stanza, with a full pause after କୁଂଭକାର ମୁଁ. Female leads the mountain-and-moon invitation; both join in a joyful close-harmony ending. Natural Odia speech rhythm, clear complete words, brief delicate Odissi-informed turns. Fingerpicked acoustic guitar, bamboo flute replies, lightly played mardala, warm sustained bass. Relaxed buoyant lilt, spacious intimate mix, gradual warmth without speeding up. Tender but fully voiced. Use only supplied words; leave room for each reply. Let instruments sustain beneath the pauses.",
+  "settings": {
+    "model": "v6",
+    "mode": "Advanced",
+    "weirdness": 30,
+    "style_influence": 65,
+    "max_mode": true,
+    "personalize": false,
+    "variety": "Normal",
+    "duration": "Auto",
+    "vocal_gender": "Unselected; voice directed in the language prompt",
+    "audio_influence": 75,
+    "exclude_styles": "EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals"
+  },
+  "policy_source": "production/i-am-free-to-dream/settings.json",
+  "policy_revision": "2026-09-27-2",
+  "policy_sha256": "517518fe764b604be168337217a872a7befafc0371e3ebbf02b8a9b203decb48",
+  "reference_song_url": "https://suno.com/song/a600d4d2-ae90-4b90-a4f5-bc6331e2fa85",
+  "generation_method": "reference-based cover",
+  "submission_limit": 1,
+  "expected_candidates": 2,
+  "actual_submissions": 0,
+  "candidates": [],
+  "selected_candidate": null,
+  "publication_authorized": false,
+  "created_at": "2026-09-29T05:31:22.061799+00:00",
+  "author_request": "Try one more time after studying playful Akshaya Mohanty references.",
+  "changes": [
+    "Sung words and order unchanged; male and female divide the two gathering phrases with a breath.",
+    "Male completes the potter stanza alone; female leads the invitation; shared full-voiced ending.",
+    "Reduce repeated hushed/soft constraints; seek conversational confidence while retaining unhurried Odia musical direction.",
+    "Use the selected Odia duet as reference, not a third-party recording; exact melody/backing preservation is not guaranteed."
+  ],
+  "research": {
+    "basis": "Published lyric structures and label descriptions, not direct acoustic analysis.",
+    "inspiration": [
+      "Alo Mani",
+      "Kabata Kholila Priye",
+      "Khoka Bhai Geeta"
+    ],
+    "sources": [
+      "https://www.youtube.com/watch?v=Ha5gdGUovhU",
+      "https://sonichits.com/video/Akshaya_Mohanty/Kabata_Kholila_Priye",
+      "https://www.shazam.com/song/1347385011/khoka-bhai-geeta"
+    ],
+    "interpretation": "Apply responsive conversational structure and character to the author’s unchanged poem; no borrowed lyrics, melody or voice cloning."
+  },
+  "input_verified": true,
+  "verified_at": "2026-09-29T05:34:09.229181+00:00",
+  "actual_settings": {
+    "model": "v6",
+    "mode": "Advanced",
+    "weirdness": 30,
+    "style_influence": 65,
+    "max_mode": true,
+    "personalize": false,
+    "variety": "Normal",
+    "duration": "Auto",
+    "vocal_gender": "Unselected; voice directed in the language prompt",
+    "audio_influence": 75,
+    "exclude_styles": "EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals"
+  },
+  "verification_note": "Signed-in account and available allowance checked in normal UI. Exact per-submission charge not displayed. Exact lyrics including paragraph breaks, title, style, exclusions, reference UUID, v6 Advanced and every applicable control verified."
+}
