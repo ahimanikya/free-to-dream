@@ -2,7 +2,7 @@
   "poem": "i-am-free-to-dream",
   "language": "odia",
   "variant": "bhojpuri-reference-duet",
-  "stage": "selection-pending",
+  "stage": "downloaded",
   "source": "kb/poems/i-am-free-to-dream/languages/odia.md",
   "source_sha256": "220741b63405245f4f367abacffe2d580e23d4410e03c66164c2f92ccaf4c5b5",
   "title": "ମୋତେ ସପ୍ନ ଦେଖିବାକୁ ମନା ନାହିଁ — Bhojpuri Tune Duet",
@@ -46,8 +46,8 @@
       "duration_display": "2:22"
     }
   ],
-  "selected_candidate": null,
-  "publication_authorized": false,
+  "selected_candidate": "ef8c816a-36f9-47d7-932b-3b95955be2a9",
+  "publication_authorized": true,
   "created_at": "2026-09-29T05:41:23.592487+00:00",
   "author_request": "Earlier Odia approach did not work; try the same tune as Sambalpuri or Bhojpuri.",
   "changes": [
@@ -83,5 +83,15 @@
   },
   "submitted_at": "2026-09-29T05:48:08.896768+00:00",
   "ready_at": "2026-09-29T05:49:16.210649+00:00",
-  "review_note": "Suno displays completed V6 Cover candidates with durations. No direct listening judgment made; author review required for melody retention, complete Odia pronunciation, duet exchanges and pauses."
+  "review_note": "Suno displays completed V6 Cover candidates with durations. No direct listening judgment made; author review required for melody retention, complete Odia pronunciation, duet exchanges and pauses.",
+  "selected_take": 1,
+  "selection_url": "https://suno.com/s/jsxJnlnhJu8eeEuI",
+  "selected_by": "author",
+  "selected_at": "2026-09-29T05:58:49.132411+00:00",
+  "download": {
+    "path": "media/odia/playful/i-am-free-to-dream-odia-playful-01.mp3",
+    "bytes": 4023268,
+    "sha256": "9adf6aa81b76500a861fdcdb2180e0bc694e53734524dfb81e8d9cba23d078a2",
+    "identity_check": "Selected take UUID verified in downloaded MP3 metadata."
+  }
 }

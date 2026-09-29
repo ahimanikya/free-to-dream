@@ -2,7 +2,7 @@
   "poem": "i-am-free-to-dream",
   "language": "sambalpuri",
   "variant": "playful",
-  "stage": "selection-pending",
+  "stage": "downloaded",
   "source": "kb/poems/i-am-free-to-dream/languages/sambalpuri.md",
   "source_sha256": "35c3ada9b202386f239a481e244685f329549012c12df128cbb78bb12a15164b",
   "title": "ମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ — Playful Sambalpuri Duet",
@@ -48,8 +48,8 @@
       "duration_source": "Suno create list"
     }
   ],
-  "selected_candidate": null,
-  "publication_authorized": false,
+  "selected_candidate": "bb66e241-9208-415d-84b1-f4e149291243",
+  "publication_authorized": true,
   "created_at": "2026-09-29T04:34:24.575744+00:00",
   "author_request": "Playful Sambalpuri version with female mixing like the selected Bhojpuri performance.",
   "changes": [
@@ -65,5 +65,15 @@
   "submitted_at": "2026-09-29T04:39:19.645951+00:00",
   "completed_at": "2026-09-29T04:40:23.639483+00:00",
   "review_status": "Author listening and selection pending; no direct listening assessment by the assistant.",
-  "documented_source_sha256": "217e6db155e7901f16be0e69a33e5a4fb0fc52e99f12edeb6e8b525937c321cd"
+  "documented_source_sha256": "217e6db155e7901f16be0e69a33e5a4fb0fc52e99f12edeb6e8b525937c321cd",
+  "selected_take": 1,
+  "selection_url": "https://suno.com/s/pDhyN2HXWkCd8Fer",
+  "selected_by": "author",
+  "selected_at": "2026-09-29T05:58:49.107003+00:00",
+  "download": {
+    "path": "media/sambalpuri/playful/i-am-free-to-dream-sambalpuri-playful-01.mp3",
+    "bytes": 3811915,
+    "sha256": "0849ea11f982566a7c29f4961c2ec1be973179633e3b9395cb972125d1b289c8",
+    "identity_check": "Selected take UUID verified in downloaded MP3 metadata."
+  }
 }
