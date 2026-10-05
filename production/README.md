@@ -17,3 +17,7 @@ For each new run use `production/<poem>/<unique-run-id>/run.json`. Retain exact 
 Never commit passwords, cookies, tokens, account screenshots, balances, personal download paths or private copyright evidence. Use ignored `local-assets/` only for disposable work and private evidence, with a separately managed private backup if it must be retained. These files are not required to build the site or resume documented production.
 
 The migrated snapshots preserve known facts; they are not listening evaluations. Original local account and quota evidence was deliberately excluded. Unselected candidates remain links hosted by Suno, not archived audio; download/archive only when authorized and permitted.
+
+## Translation review
+
+[Source-compared review, 5 October 2026](translation-reviews/2026-10-05/README.md) records all 29 existing base lyric drafts, three focused revisions and the 72 pending adaptation briefs. Before/after texts and source hashes are preserved. This is a same-assistant text review; native-speaker and take-specific sung reviews remain open.

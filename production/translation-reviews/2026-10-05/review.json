@@ -1,0 +1,2591 @@
+{
+  "manifest": {
+    "date": "2026-10-05",
+    "scope": "Poem Without Borders repository: I Am Free to Dream language collection",
+    "mode": "Source-based Human Natural / Poetic Natural editorial comparison of existing song adaptations; musical structures preserved",
+    "source": {
+      "path": "kb/poems/i-am-free-to-dream/original.md",
+      "sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "hash_algorithm": "SHA-256 of exact UTF-8 file bytes"
+    },
+    "intent": "Intimate permission to dream, lose the road, gather and shape a world, invite companionship and weave dreams together; quiet joy, without adding promises or explanatory morals.",
+    "meaning_authority": "Author-supplied original.md; existing meaning.md and author directions. The rain reading is an existing contextual interpretation; blooming smiles are expressly permitted by the meaning guide.",
+    "counts": {
+      "language_pages_screened": 102,
+      "complete_target_lyrics_read": 29,
+      "original_odia_preserved": 1,
+      "pending_target_adaptations": 72,
+      "target_drafts_revised": 3,
+      "meaning_scaffolds_corrected": 72,
+      "independent_fluent_reviews_performed": 0,
+      "recording_lyrics_changed": 0
+    },
+    "not_in_scope": [
+      "Kabita Live",
+      "Singhasan",
+      "Separate unpublished Kabita Prusta English anthology outside the website collection"
+    ],
+    "limits": [
+      "Review covers the 29 current base language-page lyrics, not every historical Suno submission.",
+      "No audio was heard or acoustically evaluated. Variant-specific sung words, timings and pronunciation remain unverified.",
+      "No fluent speaker or author has approved these revisions. All existing native-review statuses remain.",
+      "All 72 adaptation briefs remain pending. Their English scaffolds must not be submitted as translated lyrics.",
+      "Dialect and specialist questions in individual records remain unresolved; no speculative word replacements were made."
+    ],
+    "inventory": [
+      {
+        "slug": "adi",
+        "language": "Adi",
+        "path": "kb/poems/i-am-free-to-dream/languages/adi.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "4181cbfb2b44e0668389983c113f0f8822b6a1b6e5abf523922d8245383b3d04",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "0082dd2702109ef119e4fa8bce960373153dae1fbc610e4737082f260d8a1324"
+      },
+      {
+        "slug": "ahirani",
+        "language": "Ahirani",
+        "path": "kb/poems/i-am-free-to-dream/languages/ahirani.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "ed130ed7484567aea9a173ff3744d43cd2d21a5002f889443fb730e0d4990fcb",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "9265ba905f820e7fd7f1f0c43e6827d81995e819fe0c55f448ff23f8d089c513"
+      },
+      {
+        "slug": "angika",
+        "language": "Angika",
+        "path": "kb/poems/i-am-free-to-dream/languages/angika.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "341ce0f5c30204458210e324a2489d49407e7698826b3948346db8c0d2bc8df4",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "cc86549e0b6657a64a9cca5163e6adc63ac5a926f5ad1ee936683c263ae96716"
+      },
+      {
+        "slug": "ao",
+        "language": "Ao",
+        "path": "kb/poems/i-am-free-to-dream/languages/ao.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "9af34b67ce5c7fee10aee437f93acb017bbb943ffc011a8f85100910cae52ce5",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "0a9a1b4863d1d6e91b0feef3fffb88f2e670ddbe5caf22ca0270692dbbf8db79"
+      },
+      {
+        "slug": "apatani",
+        "language": "Apatani",
+        "path": "kb/poems/i-am-free-to-dream/languages/apatani.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "55ac6137a7257662f2f990b913263e7b93b943dca48b064fc0c34d8b1ed6e299",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "179a2d12407a3d85eafec16ae51b2150156b0311133be8d6e0b101726362297e"
+      },
+      {
+        "slug": "arabic",
+        "language": "Arabic — Modern Standard Arabic",
+        "path": "kb/poems/i-am-free-to-dream/languages/arabic.md",
+        "lyric_status": "Lyric draft",
+        "review_status": "needs-native-review",
+        "before_sha256": "6fd390c02102578dafa0b8fb966e02941d2debabe6f604d84f54019583a4c0ff",
+        "catalogued_audio_ids": [],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "6fd390c02102578dafa0b8fb966e02941d2debabe6f604d84f54019583a4c0ff"
+      },
+      {
+        "slug": "assamese",
+        "language": "Assamese",
+        "path": "kb/poems/i-am-free-to-dream/languages/assamese.md",
+        "lyric_status": "Lyric draft",
+        "review_status": "needs-native-review",
+        "before_sha256": "ebfc596795a0e4b9af364202217a754c6e477f19d6a0aedec116503cee76f85b",
+        "catalogued_audio_ids": [],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "ebfc596795a0e4b9af364202217a754c6e477f19d6a0aedec116503cee76f85b"
+      },
+      {
+        "slug": "awadhi",
+        "language": "Awadhi",
+        "path": "kb/poems/i-am-free-to-dream/languages/awadhi.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "fb10d0b9c3678d844125d331bf6ec5b2fb4e61224ede9ad074c654e78a35551d",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "d83cecf2dca1b09265e526fd28ba51b2ff8200f8bf05e377055e6bd3a21b5042"
+      },
+      {
+        "slug": "badaga",
+        "language": "Badaga",
+        "path": "kb/poems/i-am-free-to-dream/languages/badaga.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "482c767a40750df5f1325532ca68242f27d1e4cc2d0e0a281b209633c983ada0",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "33fd5527529d76eda224dccf4ad500346890f061724f91b9c358257e54f141ec"
+      },
+      {
+        "slug": "bagheli",
+        "language": "Bagheli",
+        "path": "kb/poems/i-am-free-to-dream/languages/bagheli.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "2d9451fef84589dbaf3b51366cd6987f49ea4914c9dba5fcc8a199efde969de2",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "6c3cd57f2a7616780e62b94e82a2d802fbfbb2b6ad2d480c2594e756c1acf208"
+      },
+      {
+        "slug": "balti",
+        "language": "Balti",
+        "path": "kb/poems/i-am-free-to-dream/languages/balti.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "c8f53062136afb9e90cc957a5c274676461d5e06aabb6d8dd99486fdae8fe799",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "6509a554cf836ba76518d5cc6823a586d4fe9aa4fbc2fcdd5148323d77f4252a"
+      },
+      {
+        "slug": "bengali",
+        "language": "Bengali",
+        "path": "kb/poems/i-am-free-to-dream/languages/bengali.md",
+        "lyric_status": "Lyric draft",
+        "review_status": "needs-native-review",
+        "before_sha256": "e8fdb7a7fb4a233a4d3b9ef980014a85caffe5b9a79a56e6fcdc515f5a690c5d",
+        "catalogued_audio_ids": [
+          "bengali-audio-01"
+        ],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "e8fdb7a7fb4a233a4d3b9ef980014a85caffe5b9a79a56e6fcdc515f5a690c5d"
+      },
+      {
+        "slug": "bhili",
+        "language": "Bhili — variety to be selected",
+        "path": "kb/poems/i-am-free-to-dream/languages/bhili.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "7e7abc0f4268f4bcdc3d52101af9cf95e4062b4bc5ebac830e92a371646fd423",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "2c1d156eb1799d1a05be898ba506c22b92a0151e651df32f1b5b3f699b81591c"
+      },
+      {
+        "slug": "bhojpuri",
+        "language": "Bhojpuri",
+        "path": "kb/poems/i-am-free-to-dream/languages/bhojpuri.md",
+        "lyric_status": "Lyric draft",
+        "review_status": "needs-native-review",
+        "before_sha256": "d4f6f89025dce0cd30dc2d955712313685750f0ed81ea634b3d1d5c7bed2f03a",
+        "catalogued_audio_ids": [
+          "bhojpuri-duet-audio-01",
+          "bhojpuri-playful-audio-01"
+        ],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "d4f6f89025dce0cd30dc2d955712313685750f0ed81ea634b3d1d5c7bed2f03a"
+      },
+      {
+        "slug": "bodo",
+        "language": "Bodo",
+        "path": "kb/poems/i-am-free-to-dream/languages/bodo.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "281dc92483253fb69b5371ec7e45930275cc574863f9fce5869944e11602bb10",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "abb4ac3b88b58c2ad245da4b4e474a75023cdbc7077e4ee33c5f8bab493d3019"
+      },
+      {
+        "slug": "braj",
+        "language": "Braj Bhasha",
+        "path": "kb/poems/i-am-free-to-dream/languages/braj.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "e7b52f0c0d96fe4ef11f7c95376d3fc2263c157dbfd2487b904f6dd1c0124593",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "9fa3d882a9c19fec5ddb11a3d84074b1972f260d5213bc6805026c5e40922dcb"
+      },
+      {
+        "slug": "bundeli",
+        "language": "Bundeli",
+        "path": "kb/poems/i-am-free-to-dream/languages/bundeli.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "4589677caf463be65497d7772a59dd8b42971469c4c722fbe5014dbcdd8112c3",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "1c12b2d9c8ee6ea9305e4057f4d83797aa553c19ed8602a6b0d342891c9fb05e"
+      },
+      {
+        "slug": "car-nicobarese",
+        "language": "Car Nicobarese",
+        "path": "kb/poems/i-am-free-to-dream/languages/car-nicobarese.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "dc75714b2292c948421fc3327c387d9f4ffca4c6f7d4e291ad6a5fa2672b0914",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "020310bf6a03280b70d8adf080d9e1fa5fb345d10a1ab2ae175940ddbd01e675"
+      },
+      {
+        "slug": "chakma",
+        "language": "Chakma",
+        "path": "kb/poems/i-am-free-to-dream/languages/chakma.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "9f90b4f46d86d0062815631f7475c288b71c5393e7210b9d5b0bb20858c32d0c",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "6742da622f6ad4c3ecb8afa314d6fdb344d393248b1953b776dcb059442c9b08"
+      },
+      {
+        "slug": "chhattisgarhi",
+        "language": "Chhattisgarhi",
+        "path": "kb/poems/i-am-free-to-dream/languages/chhattisgarhi.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "9f402beb6d926a72205ce0682ddef40402e78518f48c9f49bcabc256204e062a",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "8d03625bd7d51c48bceed9194741d48c93b168c0633608cc630afd98a97f7b30"
+      },
+      {
+        "slug": "dimasa",
+        "language": "Dimasa",
+        "path": "kb/poems/i-am-free-to-dream/languages/dimasa.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "84ecbd5479be987dd671e8f9396b5d2f99e7fd0595d4891a43605a766db4fa9e",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "a78a910c54ccac577c376d9e63b8fa4229918bdf09036f6531ceb6f6b6113049"
+      },
+      {
+        "slug": "dogri",
+        "language": "Dogri",
+        "path": "kb/poems/i-am-free-to-dream/languages/dogri.md",
+        "lyric_status": "Lyric draft",
+        "review_status": "needs-native-review",
+        "before_sha256": "cf990244f730a9f4117f36eb8a8a4ae3906dbc1ee26970f6d80d0e4aa6c03729",
+        "catalogued_audio_ids": [],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "cf990244f730a9f4117f36eb8a8a4ae3906dbc1ee26970f6d80d0e4aa6c03729"
+      },
+      {
+        "slug": "english",
+        "language": "English",
+        "path": "kb/poems/i-am-free-to-dream/languages/english.md",
+        "lyric_status": "English adaptation",
+        "review_status": "needs-native-review",
+        "before_sha256": "005db4d0d17cef8de7c2e24e0a7092a82e8fef352bb49832bda73cdd57b06c34",
+        "catalogued_audio_ids": [
+          "english-audio-country",
+          "english-audio-jazz"
+        ],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "005db4d0d17cef8de7c2e24e0a7092a82e8fef352bb49832bda73cdd57b06c34"
+      },
+      {
+        "slug": "filipino",
+        "language": "Filipino / Tagalog",
+        "path": "kb/poems/i-am-free-to-dream/languages/filipino.md",
+        "lyric_status": "Lyric draft",
+        "review_status": "needs-native-review",
+        "before_sha256": "96d48264191bd436af769bdf7ac599b015d5444c525ba7118ddde03aabc68c96",
+        "catalogued_audio_ids": [
+          "filipino-audio-01"
+        ],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "96d48264191bd436af769bdf7ac599b015d5444c525ba7118ddde03aabc68c96"
+      },
+      {
+        "slug": "french",
+        "language": "French",
+        "path": "kb/poems/i-am-free-to-dream/languages/french.md",
+        "lyric_status": "Lyric draft",
+        "review_status": "needs-native-review",
+        "before_sha256": "c36291fd2a94f408f158631ccebac207acfbd4f4613d09e3ee1c5cdc565eeb4f",
+        "catalogued_audio_ids": [],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "3c54a27c624ce7057dc8285bcfefeefa78e18f28f55daaf9494ea7de6a8a0d03"
+      },
+      {
+        "slug": "galo",
+        "language": "Galo",
+        "path": "kb/poems/i-am-free-to-dream/languages/galo.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "bcc468e833689386df681b5527f763bb6e3cf19224a02466cea9c48c9521270a",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "60ef08c316d6a916e3b9ff4f93769a2735ebf0da4d299ddf48f3892f393f4fe0"
+      },
+      {
+        "slug": "garhwali",
+        "language": "Garhwali",
+        "path": "kb/poems/i-am-free-to-dream/languages/garhwali.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "54a3ead4b7a1c6c3f2af947785e8fad43af18f7ec7be519b1863df8ae1124f3d",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "8ae404ec5c5ab1f9baf801f021c1e8f4496089064f5c1bfcb6ffaf1097deac75"
+      },
+      {
+        "slug": "garo",
+        "language": "Garo",
+        "path": "kb/poems/i-am-free-to-dream/languages/garo.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "ecc7f8e789a675416e093bc2ce7de80db030063fd89f24635e9b801ed2af7467",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "0787f49542dc1706b5478f72f132ca2bf2a96b164960d504abacbd065689ffd9"
+      },
+      {
+        "slug": "gojri",
+        "language": "Gojri",
+        "path": "kb/poems/i-am-free-to-dream/languages/gojri.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "440505597e0c5d473deafc458186b449da9e92fbdc4ee34d6be76e4f3b450103",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "0063eb1db6e8a906259bd21b6ebd93392eccf64de7153c01b5a6969d952669b0"
+      },
+      {
+        "slug": "gondi",
+        "language": "Gondi",
+        "path": "kb/poems/i-am-free-to-dream/languages/gondi.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "6fccddaf354b307d1177582ee087e2c959aab723120b75414675a14fe15e5a77",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "da7f540137971b2ba63047e8a1a7576e117ecb865af299bd3d359eba14542811"
+      },
+      {
+        "slug": "gujarati",
+        "language": "Gujarati",
+        "path": "kb/poems/i-am-free-to-dream/languages/gujarati.md",
+        "lyric_status": "Lyric draft",
+        "review_status": "needs-native-review",
+        "before_sha256": "21aff43fbfc26bb780deb0d807b41a80fb5906f7d6e7833c15bff0d0f5bd62e9",
+        "catalogued_audio_ids": [],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "21aff43fbfc26bb780deb0d807b41a80fb5906f7d6e7833c15bff0d0f5bd62e9"
+      },
+      {
+        "slug": "halbi",
+        "language": "Halbi",
+        "path": "kb/poems/i-am-free-to-dream/languages/halbi.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "9bc59324e396b9d33448817bf912bce27310550f9f4fc8a3b5fe77ea10825a1e",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "3a72afcca8b7f1ab69c692afaf681cf0c15e78a73cb0f622a9a500189249e5d4"
+      },
+      {
+        "slug": "haryanvi",
+        "language": "Haryanvi",
+        "path": "kb/poems/i-am-free-to-dream/languages/haryanvi.md",
+        "lyric_status": "Lyric draft",
+        "review_status": "needs-native-review",
+        "before_sha256": "8f9a7c332a217b7aacbac84ae8f48b37085de845b8934a89c805f9d6122ec1ec",
+        "catalogued_audio_ids": [],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "8f9a7c332a217b7aacbac84ae8f48b37085de845b8934a89c805f9d6122ec1ec"
+      },
+      {
+        "slug": "hindi",
+        "language": "Hindi",
+        "path": "kb/poems/i-am-free-to-dream/languages/hindi.md",
+        "lyric_status": "Lyric draft",
+        "review_status": "needs-native-review",
+        "before_sha256": "745dfc9055b838b3bfdddf3eb16268f247a2635af651cef236bf3efc5b10b069",
+        "catalogued_audio_ids": [],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "745dfc9055b838b3bfdddf3eb16268f247a2635af651cef236bf3efc5b10b069"
+      },
+      {
+        "slug": "ho",
+        "language": "Ho",
+        "path": "kb/poems/i-am-free-to-dream/languages/ho.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "1b9d049b382e064d14bb98e44197feea3e69b4cf8a3460bedbe6da9d9501a666",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "bb45dc5aafb28c7517129e9f49fb3c88da330aa7d3458e6f8a2b2f25afd09441"
+      },
+      {
+        "slug": "italian",
+        "language": "Italian",
+        "path": "kb/poems/i-am-free-to-dream/languages/italian.md",
+        "lyric_status": "Lyric draft",
+        "review_status": "needs-native-review",
+        "before_sha256": "1a6c506476a9a2e498d52a902f44ab512054f75a6f7e1e3d76d8f2de57a61c78",
+        "catalogued_audio_ids": [
+          "italian-audio-01"
+        ],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "1a6c506476a9a2e498d52a902f44ab512054f75a6f7e1e3d76d8f2de57a61c78"
+      },
+      {
+        "slug": "jeseri",
+        "language": "Jeseri / Dweep Bhasha",
+        "path": "kb/poems/i-am-free-to-dream/languages/jeseri.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "ef1dce91454b8939dfe360e31de4a8e011401c8511e895a31e235bc63d4e0fd9",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "95dbbade0f4d41522fda61f4de6cfcf778d7c7a191caae1aceade404066aeff2"
+      },
+      {
+        "slug": "kangri",
+        "language": "Kangri",
+        "path": "kb/poems/i-am-free-to-dream/languages/kangri.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "c5826396c4d26a3bcfc3983312569dd850d117bd6ccf1d89358807cead72cb81",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "54cdcc0f1c2cbdcef2ed45917be11dc747fb4df61c7188a3adc0d2cbf3566bd9"
+      },
+      {
+        "slug": "kannada",
+        "language": "Kannada",
+        "path": "kb/poems/i-am-free-to-dream/languages/kannada.md",
+        "lyric_status": "Lyric draft",
+        "review_status": "needs-native-review",
+        "before_sha256": "c41803bcca45fe36aedf7a68fc329892ec23c26695386b77e57abb7f5965c2f8",
+        "catalogued_audio_ids": [],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "ceff79f27f3fa239f6e6d71df126a572499ddf79cd7c06561d17677faa5412a1"
+      },
+      {
+        "slug": "karbi",
+        "language": "Karbi",
+        "path": "kb/poems/i-am-free-to-dream/languages/karbi.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "f25f254c13a66ac44d946df82421b5be29501c154488b087fc72726fcde48307",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "9fd6e2f6b90c2cf868eb8e654ccf767bb53222b13230818967d79e617127f231"
+      },
+      {
+        "slug": "kashmiri",
+        "language": "Kashmiri",
+        "path": "kb/poems/i-am-free-to-dream/languages/kashmiri.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "7b7affd0dd2e44a081f22c4d1e5e2df0558811e74f17fccbb0ee04fef547fa1c",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "6455eecebe0d887bebfba208b6e699e51196b9b0b8c5c7c64ba2f2c6b66c60c8"
+      },
+      {
+        "slug": "kharia",
+        "language": "Kharia",
+        "path": "kb/poems/i-am-free-to-dream/languages/kharia.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "95bd69a4145b8c6a7bf55e7497e6b171722d8e9abc294b224a45504278cf06a2",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "6bfc3412ed9efefeaf001339846945840f319fedce061ab9da7f37d49575fdbb"
+      },
+      {
+        "slug": "khasi",
+        "language": "Khasi",
+        "path": "kb/poems/i-am-free-to-dream/languages/khasi.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "3139f9602f99e7a0deb8300ef745065cee6bf5f6af78f9038456b55488bf69d7",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "4e4605eb11aa2184a58ee10d37d7ed11862891a0bf32eaf526cfb7053bd8b87f"
+      },
+      {
+        "slug": "khortha",
+        "language": "Khortha",
+        "path": "kb/poems/i-am-free-to-dream/languages/khortha.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "9576cc61e0ff5b143161a667d34ef5f0c23aeb21f3b72240d4bd6b6927b7a3fc",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "a0b48d4e69a89a1f40b6fefb5d691d319c1275e4287585cb3c46ae17b7c3f142"
+      },
+      {
+        "slug": "kodava",
+        "language": "Kodava",
+        "path": "kb/poems/i-am-free-to-dream/languages/kodava.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "3621dff7e8c25ffdf627f8805b44a418a4a9ced71a70c6f4e4bded748d2ffb7f",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "f02e63f1927689a40f30e10efecdc9f23673cb3b3784c42eb7070fb35520f123"
+      },
+      {
+        "slug": "kokborok",
+        "language": "Kokborok",
+        "path": "kb/poems/i-am-free-to-dream/languages/kokborok.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "cd14c084457df53c8b15c644e2ef76329e0ab32bec1dac6e5ca40c31cf7b4f7c",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "d6ff8f9df185a85027bf0884bd021a6a2e0207e9db1d9e03ce6fe99fec6b79eb"
+      },
+      {
+        "slug": "konkani",
+        "language": "Konkani",
+        "path": "kb/poems/i-am-free-to-dream/languages/konkani.md",
+        "lyric_status": "Lyric draft",
+        "review_status": "needs-native-review",
+        "before_sha256": "2f5d8f17a32522eb261f26dec198eff80a2fe72565c171e9dc121593cb040f9d",
+        "catalogued_audio_ids": [],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "2f5d8f17a32522eb261f26dec198eff80a2fe72565c171e9dc121593cb040f9d"
+      },
+      {
+        "slug": "konyak",
+        "language": "Konyak",
+        "path": "kb/poems/i-am-free-to-dream/languages/konyak.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "6443798f53524f0c9839943453dc0b8a55cd6d87130c35701ac63f5d7235d6ac",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "13e8cfd0ea9b4c95f9629330107e8114babfbabf4c1623ffec1c345172287f22"
+      },
+      {
+        "slug": "korku",
+        "language": "Korku",
+        "path": "kb/poems/i-am-free-to-dream/languages/korku.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "5605ba1696903a92a88ad25b3388c85b65ab51091641b874067de35933b7f2e9",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "ce9183f78eb61453a3dd312e8e9ddefff7c1508cf1815bc34bf24e0fe840c144"
+      },
+      {
+        "slug": "koya",
+        "language": "Koya",
+        "path": "kb/poems/i-am-free-to-dream/languages/koya.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "8cd8e126388a4c2643e89f9dd1b3a19b4a87f046898e4eed7ef6ec33dd093bd6",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "127d2e678f04b3d11d586332a7c47bf0a33425d9ae74b3c6c520921d46a4eac6"
+      },
+      {
+        "slug": "kui",
+        "language": "Kui",
+        "path": "kb/poems/i-am-free-to-dream/languages/kui.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "c3b109c17f955755c5a7b12513d57c20b484e0a89b36a8dd1aaab25dabd9a8d2",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "803c2c1e59053861b2249f2c4829e81b8ade9039a8846c3c8dc91cb8ef60f97c"
+      },
+      {
+        "slug": "kumaoni",
+        "language": "Kumaoni",
+        "path": "kb/poems/i-am-free-to-dream/languages/kumaoni.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "659de3e0993f0d2a324fbb1039481e491502e78c2bbbc8ec2adfb2dfe905b149",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "5a8053cd6851dd61600c4c36d9f2ba2a11567ff0251bc1a1ff6248e438276351"
+      },
+      {
+        "slug": "kurmali",
+        "language": "Kurmali",
+        "path": "kb/poems/i-am-free-to-dream/languages/kurmali.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "ed2efc12265ff29a2a5e8b44377c7151e42daafada60cb76f6e25789cb7a1e60",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "17d85dc69d904ad36b6044f674ff59bcbc4f3da8dfbdedd5f2e34bf78d0eb263"
+      },
+      {
+        "slug": "kurukh",
+        "language": "Kurukh",
+        "path": "kb/poems/i-am-free-to-dream/languages/kurukh.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "28fc147316925505045f8f20be920089ff2db16dfc336cc79f14149859126740",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "3607c3bc52e72e91b5f0ffa8b077a21acee475490d8f2fe691b9c8851424af9c"
+      },
+      {
+        "slug": "kutchi",
+        "language": "Kutchi",
+        "path": "kb/poems/i-am-free-to-dream/languages/kutchi.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "609a561804e0e341632d28e27e9cf82760e6525c8f9a8c185c93348e1d0407ad",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "8223cd55a45d155fe2726ee70e393a3d956c5d8636114df1b8263e0de5a9a269"
+      },
+      {
+        "slug": "kuvi",
+        "language": "Kuvi",
+        "path": "kb/poems/i-am-free-to-dream/languages/kuvi.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "7c4a0d4cd89921c9f924c2e28d302a1ff70d7f307dd66078aa31070fe5a629e0",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "6113484f84fff07abc659979b809a84fc9ba1e494a547ac739ee323cc1634b7d"
+      },
+      {
+        "slug": "ladakhi",
+        "language": "Ladakhi",
+        "path": "kb/poems/i-am-free-to-dream/languages/ladakhi.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "d6f4263868e34a995408d350014df12517b54b829c0e8577775695638204df1d",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "3f5088c53105d763f9512e12c6e110e2a01f5b3d4f3d57d6ad0cd91597bd0dd9"
+      },
+      {
+        "slug": "lambadi",
+        "language": "Lambadi / Banjara",
+        "path": "kb/poems/i-am-free-to-dream/languages/lambadi.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "9ad912256d1b2bfc1a8befb01756466f20fd3303675f6de3efadc02ef445ed4c",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "f3a7fdcc0a484ca1acbeb032cef3dcfc3c11c3e5a294cadc5753e37ef3d209b6"
+      },
+      {
+        "slug": "lepcha",
+        "language": "Lepcha",
+        "path": "kb/poems/i-am-free-to-dream/languages/lepcha.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "dd55a17d85c1da179985eed96000e638520b99351fdc58706a94ad87873b0e10",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "17693541a901fb1893962300159d0da1e8d84af89907165bb26f4e8dc6cc5f8e"
+      },
+      {
+        "slug": "limbu",
+        "language": "Limbu",
+        "path": "kb/poems/i-am-free-to-dream/languages/limbu.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "b3fd4b66d4060b1dd59485fe217eb77a01ef7fdc0c6e8759037414ab8be28042",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "67c6b7898643a5cc096b5ba05cf47a0a8427d60039b5a7f9f6e053e3870d4a5a"
+      },
+      {
+        "slug": "lotha",
+        "language": "Lotha",
+        "path": "kb/poems/i-am-free-to-dream/languages/lotha.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "519d224a94d1d40e52f5f90a706c2f4e141c98e79e2ee7a33a946036a592cdb3",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "a309056c810e6e5b3c8f35958754c3a41b30ea58b2a4b8f8e0e8626bb81201de"
+      },
+      {
+        "slug": "magahi",
+        "language": "Magahi",
+        "path": "kb/poems/i-am-free-to-dream/languages/magahi.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "e95d89ac99a875a353aa61e7d5c91d212508c78ebcdc181b613872c0259b2b46",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "0e9530eb81978eea4d21d26d84f850d944c7ac41b1ac2402677fb2fe27ffc261"
+      },
+      {
+        "slug": "mahl",
+        "language": "Mahl",
+        "path": "kb/poems/i-am-free-to-dream/languages/mahl.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "4f6864b45b2c102b8f0829b5eac424ec661518ccb513491bb1cc133394dbb6c5",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "c0e4611ff71d3974b08de1b6720229872f38aed369e695032d162c3e182d285f"
+      },
+      {
+        "slug": "maithili",
+        "language": "Maithili",
+        "path": "kb/poems/i-am-free-to-dream/languages/maithili.md",
+        "lyric_status": "Lyric draft",
+        "review_status": "needs-native-review",
+        "before_sha256": "8fcb624651365c8ccbaf17c910b16bcc4b4fc50033db2ac9dd6340947cec6ea5",
+        "catalogued_audio_ids": [],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "8fcb624651365c8ccbaf17c910b16bcc4b4fc50033db2ac9dd6340947cec6ea5"
+      },
+      {
+        "slug": "malayalam",
+        "language": "Malayalam",
+        "path": "kb/poems/i-am-free-to-dream/languages/malayalam.md",
+        "lyric_status": "Lyric draft",
+        "review_status": "needs-native-review",
+        "before_sha256": "00a8b3f3194644e7462e64b8beb7e4454b09a83dfd2326c1cc6ac0a599a5239d",
+        "catalogued_audio_ids": [
+          "malayalam-audio-01"
+        ],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "00a8b3f3194644e7462e64b8beb7e4454b09a83dfd2326c1cc6ac0a599a5239d"
+      },
+      {
+        "slug": "malvi",
+        "language": "Malvi",
+        "path": "kb/poems/i-am-free-to-dream/languages/malvi.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "5c8681008100887537e8bda828266fd61aeb80e6de4109fd1d1e2ae00b85cd97",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "ac915727a65c5aedf67d2ccbe48f9ecf29874806deb3dad6e5a38c6160fefda2"
+      },
+      {
+        "slug": "mandarin",
+        "language": "Mandarin Chinese",
+        "path": "kb/poems/i-am-free-to-dream/languages/mandarin.md",
+        "lyric_status": "Lyric draft",
+        "review_status": "needs-native-review",
+        "before_sha256": "9489a8266bc7bb29b19c02a8220828d62b34d7564d46f627dc6fe7b349f052ed",
+        "catalogued_audio_ids": [],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "9489a8266bc7bb29b19c02a8220828d62b34d7564d46f627dc6fe7b349f052ed"
+      },
+      {
+        "slug": "manipuri",
+        "language": "Manipuri (Meitei)",
+        "path": "kb/poems/i-am-free-to-dream/languages/manipuri.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "2b218c134f7d33a04094867c2723f0c38227ee812d65281f0a1df9d4ea65eb46",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "6b742d18373b63b088c6a9808083bd812d3037848ddfa29b6cc50a55ff88c4b0"
+      },
+      {
+        "slug": "marathi",
+        "language": "Marathi",
+        "path": "kb/poems/i-am-free-to-dream/languages/marathi.md",
+        "lyric_status": "Lyric draft",
+        "review_status": "needs-native-review",
+        "before_sha256": "34e639f9084d7ade802714bcf22c440e307f7bfdf6da76b5804ddc697d72fe5a",
+        "catalogued_audio_ids": [],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "ac65c9997394511b69899cdec1a3f4f670ea337afe8e20b35d0f1f59891b4c52"
+      },
+      {
+        "slug": "marwari",
+        "language": "Marwari",
+        "path": "kb/poems/i-am-free-to-dream/languages/marwari.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "ba54e0704932a4a70f10b291d72b2203de88dce3e592e57d4b8a4d5217cd97d0",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "11bf1e0e09a1d21c7633c950914a638c712032b9a2c9c69594b6d64c0330ea92"
+      },
+      {
+        "slug": "mewari",
+        "language": "Mewari",
+        "path": "kb/poems/i-am-free-to-dream/languages/mewari.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "739d755629db5ded00a4d2ac645d04667b881e85b9efea6ca1e87b63a7f9d07b",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "2e1379543fdb9af09e1dccd0b32ddf4c655c4bc78ab71c0ab4430d6d47997617"
+      },
+      {
+        "slug": "mising",
+        "language": "Mising",
+        "path": "kb/poems/i-am-free-to-dream/languages/mising.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "a99bd4620caece400077b07df93f75e5dace934368d435c8aea8e9cc28163f1c",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "6c3345d8b5eb5c4f3733f413810feeb1df119405dee5f16b16c1bc4987720397"
+      },
+      {
+        "slug": "mizo",
+        "language": "Mizo",
+        "path": "kb/poems/i-am-free-to-dream/languages/mizo.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "3f9f06c44f7aaee1359389340f767a0ce7d365e8f174d06b6a6198a0f7e1db90",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "97cc78eebd9519757ecc0e66840bda62141af690d69238bb6312c344ad9db8aa"
+      },
+      {
+        "slug": "mundari",
+        "language": "Mundari",
+        "path": "kb/poems/i-am-free-to-dream/languages/mundari.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "e436f5db8b9f3833b8178879d61c2ebea29d0b11df82d7390e36f986ca57206e",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "6bf9c714ea53cd4c802675bd0f6cc0e329a8b6c8a981ae88a9f8015192055d7b"
+      },
+      {
+        "slug": "nagpuri",
+        "language": "Nagpuri / Sadri",
+        "path": "kb/poems/i-am-free-to-dream/languages/nagpuri.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "74bf6be95f0bd2305920b003fc9f0e7789bebcb6c169335914ceb064ba83df21",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "78a6b8145009df97cd5123ec37d5a22e1ea84412f3434291f0057e6da935c2c3"
+      },
+      {
+        "slug": "nepali",
+        "language": "Nepali",
+        "path": "kb/poems/i-am-free-to-dream/languages/nepali.md",
+        "lyric_status": "Lyric draft",
+        "review_status": "needs-native-review",
+        "before_sha256": "b7807a870dd47ea49bc8005d1406dda3a51a077d9bec5968033fc406b111f1dd",
+        "catalogued_audio_ids": [],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "b7807a870dd47ea49bc8005d1406dda3a51a077d9bec5968033fc406b111f1dd"
+      },
+      {
+        "slug": "nimadi",
+        "language": "Nimadi",
+        "path": "kb/poems/i-am-free-to-dream/languages/nimadi.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "c1d9205a8b1a40090d04353d7a938b7fbb21084d531ee6c8246b12fff7586cc2",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "56a5213ea688030a1d96132bad560fd5f830d1dfb39ef051a252a840ecd5b574"
+      },
+      {
+        "slug": "nyishi",
+        "language": "Nyishi",
+        "path": "kb/poems/i-am-free-to-dream/languages/nyishi.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "546cc3d1afc6223b5026f2c01caa7c33fce1ca503726066b88f9653dc115758c",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "d9413bee15730cbb120bbc0066c061d1d1bf864cf92fe8a06220598a7630261d"
+      },
+      {
+        "slug": "odia",
+        "language": "Odia",
+        "path": "kb/poems/i-am-free-to-dream/languages/odia.md",
+        "lyric_status": "Original",
+        "review_status": "author-source",
+        "before_sha256": "8c3abdb0563e14999164f50bc81c612886d9bc95bfa9fab16dd7969bd3cb430a",
+        "catalogued_audio_ids": [
+          "odia-audio-01",
+          "odia-duet-audio-01",
+          "odia-playful-audio-01"
+        ],
+        "coverage": "Author source / arranged source; preserved, not counted as a translation.",
+        "after_sha256": "8c3abdb0563e14999164f50bc81c612886d9bc95bfa9fab16dd7969bd3cb430a"
+      },
+      {
+        "slug": "pnar",
+        "language": "Pnar",
+        "path": "kb/poems/i-am-free-to-dream/languages/pnar.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "668f01ee06287768e12578695f5feceee6c3312aea31e1bac16736a4fb18c76d",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "3c85150d350474816fe0e4829602d4b15600045b25ddc2957f8855c94e7be858"
+      },
+      {
+        "slug": "portuguese",
+        "language": "Portuguese — Brazilian setting",
+        "path": "kb/poems/i-am-free-to-dream/languages/portuguese.md",
+        "lyric_status": "Lyric draft",
+        "review_status": "needs-native-review",
+        "before_sha256": "0e0eeaae8c448d2a9f424b4f32d811bc25946f4cb2dacf24362153c7e16c61d6",
+        "catalogued_audio_ids": [],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "0e0eeaae8c448d2a9f424b4f32d811bc25946f4cb2dacf24362153c7e16c61d6"
+      },
+      {
+        "slug": "punjabi",
+        "language": "Punjabi",
+        "path": "kb/poems/i-am-free-to-dream/languages/punjabi.md",
+        "lyric_status": "Lyric draft",
+        "review_status": "needs-native-review",
+        "before_sha256": "9a2f8184b4d93657b9c450398259fec0580b64fb072b5adff02104f7f51df136",
+        "catalogued_audio_ids": [],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "9a2f8184b4d93657b9c450398259fec0580b64fb072b5adff02104f7f51df136"
+      },
+      {
+        "slug": "rabha",
+        "language": "Rabha",
+        "path": "kb/poems/i-am-free-to-dream/languages/rabha.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "672404204d48bab970bceea36ed38fe575da2a9b299b3c98c096581e225bc5f1",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "75ad89b5b085b97b574eb1cfd5b698e6161c5e3ffe7898d0740401ee0405f9d8"
+      },
+      {
+        "slug": "rajbanshi",
+        "language": "Rajbanshi",
+        "path": "kb/poems/i-am-free-to-dream/languages/rajbanshi.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "49f51cd92f3595ebe793732148a79e2fd246975113255ca026874307c24ed711",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "b2b7b7505fa1473b31d54267d8020d0c63330fdaf32fb3895dd7700d08c24bbd"
+      },
+      {
+        "slug": "sambalpuri",
+        "language": "Sambalpuri",
+        "path": "kb/poems/i-am-free-to-dream/languages/sambalpuri.md",
+        "lyric_status": "Lyric draft",
+        "review_status": "needs-native-review",
+        "before_sha256": "7b94a0b53be0ac6f3c3ab73b2fc1b8fc511d9c13e4d1fcbb8f750c990bd412cf",
+        "catalogued_audio_ids": [
+          "sambalpuri-audio-01",
+          "sambalpuri-playful-audio-01"
+        ],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "7b94a0b53be0ac6f3c3ab73b2fc1b8fc511d9c13e4d1fcbb8f750c990bd412cf"
+      },
+      {
+        "slug": "sanskrit",
+        "language": "Sanskrit",
+        "path": "kb/poems/i-am-free-to-dream/languages/sanskrit.md",
+        "lyric_status": "Lyric draft",
+        "review_status": "needs-native-review",
+        "before_sha256": "4d47f9e939b690b3e34933da9cfc8285dc0f73c7878e0d6198b50ec4029d19a5",
+        "catalogued_audio_ids": [],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "4d47f9e939b690b3e34933da9cfc8285dc0f73c7878e0d6198b50ec4029d19a5"
+      },
+      {
+        "slug": "santali",
+        "language": "Santali",
+        "path": "kb/poems/i-am-free-to-dream/languages/santali.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "c7294d1ee84131b27e47f3c24203f3b27a4aa1bbca4546f5408d91b0563a9312",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "427827de6decacec0478234f7699bc39c5b114602eaa81c00d94ec53aba61918"
+      },
+      {
+        "slug": "saurashtra",
+        "language": "Saurashtra",
+        "path": "kb/poems/i-am-free-to-dream/languages/saurashtra.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "9e1d8087be95cfafb21852a9c5ea5802c03908f135805ca831e8650d6f74e6f0",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "7de52762ddaa3cc423111ebc412626f314abad37de8b4a5015d2acf641ca6c17"
+      },
+      {
+        "slug": "sikkimese-bhutia",
+        "language": "Sikkimese Bhutia",
+        "path": "kb/poems/i-am-free-to-dream/languages/sikkimese-bhutia.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "0f56da48d8bc48671a70ca1457a1f7fd94bed879e5a56cda4db1572fe29362db",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "b0e8c12e3d1bc15c8f16e156ac6212e04eb2046ead71d825345eaa68cf02a22d"
+      },
+      {
+        "slug": "sindhi",
+        "language": "Sindhi",
+        "path": "kb/poems/i-am-free-to-dream/languages/sindhi.md",
+        "lyric_status": "Lyric draft",
+        "review_status": "needs-native-review",
+        "before_sha256": "fffa6a896494de69d385185dd63503c0474f0422db30de9fc8cb048ea98804b8",
+        "catalogued_audio_ids": [],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "fffa6a896494de69d385185dd63503c0474f0422db30de9fc8cb048ea98804b8"
+      },
+      {
+        "slug": "sora",
+        "language": "Sora / Saora",
+        "path": "kb/poems/i-am-free-to-dream/languages/sora.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "948dc4832b3d2f0ef0e536a279641cac9cf796e15d27e609451a9daeb8724abe",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "edc4a8a0df1df19a7f4bbf8e2d4e9df7364c86b99a295dd721938ed898747873"
+      },
+      {
+        "slug": "spanish",
+        "language": "Spanish",
+        "path": "kb/poems/i-am-free-to-dream/languages/spanish.md",
+        "lyric_status": "Lyric draft",
+        "review_status": "needs-native-review",
+        "before_sha256": "24b5dc51952d7d2438da9b08d040648ef7751a7c7a2ac935515b65fe04e8ce9c",
+        "catalogued_audio_ids": [],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "24b5dc51952d7d2438da9b08d040648ef7751a7c7a2ac935515b65fe04e8ce9c"
+      },
+      {
+        "slug": "sumi",
+        "language": "Sumi",
+        "path": "kb/poems/i-am-free-to-dream/languages/sumi.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "c4a88a1ffca0c01808a549b761cb5ffa33e229df559c9364c32a31379ee2125c",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "f0e8533f5fc21c00a0877736a31ca989e8a35c430917dce553296b6bba55c297"
+      },
+      {
+        "slug": "surjapuri",
+        "language": "Surjapuri",
+        "path": "kb/poems/i-am-free-to-dream/languages/surjapuri.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "130d88fa7165e8d2f8508f13c44e0da3a2d4b8212dab15868c729d56acd533da",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "ea01d123c5b40fba02d7bed6491415d42584d690b6334cdc3d86bca432d3f67f"
+      },
+      {
+        "slug": "swahili",
+        "language": "Swahili / Kiswahili",
+        "path": "kb/poems/i-am-free-to-dream/languages/swahili.md",
+        "lyric_status": "Lyric draft",
+        "review_status": "needs-native-review",
+        "before_sha256": "883ce0b63f61302858495f35575fff74446afa3e4b408a720c5109ae4592dc67",
+        "catalogued_audio_ids": [],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "883ce0b63f61302858495f35575fff74446afa3e4b408a720c5109ae4592dc67"
+      },
+      {
+        "slug": "tamil",
+        "language": "Tamil",
+        "path": "kb/poems/i-am-free-to-dream/languages/tamil.md",
+        "lyric_status": "Lyric draft",
+        "review_status": "needs-native-review",
+        "before_sha256": "2d657b0f3d8280798edf655052b3c0e290bec23392e0509e4f1f684717155a24",
+        "catalogued_audio_ids": [
+          "tamil-audio-01",
+          "tamil-duet-audio-01"
+        ],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "2d657b0f3d8280798edf655052b3c0e290bec23392e0509e4f1f684717155a24"
+      },
+      {
+        "slug": "tangkhul",
+        "language": "Tangkhul",
+        "path": "kb/poems/i-am-free-to-dream/languages/tangkhul.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "b0176dca57791fa7b5c90ac17a555f1c4db05e0a839b6400bb0af47619867cd1",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "08a811d9aff1d29f17c523a6d96c806ed552c7885c83112e5710229d0735d6fd"
+      },
+      {
+        "slug": "telugu",
+        "language": "Telugu",
+        "path": "kb/poems/i-am-free-to-dream/languages/telugu.md",
+        "lyric_status": "Lyric draft",
+        "review_status": "needs-native-review",
+        "before_sha256": "3b5749062cf75f39f4dc846c2305b84e81833fe20f520a9a158f91915e860a65",
+        "catalogued_audio_ids": [
+          "telugu-audio-v4",
+          "telugu-audio-v1",
+          "telugu-audio-v2",
+          "telugu-audio-v3"
+        ],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "3b5749062cf75f39f4dc846c2305b84e81833fe20f520a9a158f91915e860a65"
+      },
+      {
+        "slug": "tenyidie",
+        "language": "Tenyidie",
+        "path": "kb/poems/i-am-free-to-dream/languages/tenyidie.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "2af2c663b59e285fd756f1ddef48bf4110c3c5ca5fcf7d9571f514bdb1783b88",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "9bec03f3e52b0288bc29c64134801be3f53f8c427a6fb593e86a667817c1d9ce"
+      },
+      {
+        "slug": "tulu",
+        "language": "Tulu",
+        "path": "kb/poems/i-am-free-to-dream/languages/tulu.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "fda28c94231ca8798419b35a4ed1a0ed8e347281abacc2ef31c399da2549a973",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "4a9ffd73884de1831ada34050f400ff8c2e5ebc2bc275bdbd4030601328a2964"
+      },
+      {
+        "slug": "urdu",
+        "language": "Urdu",
+        "path": "kb/poems/i-am-free-to-dream/languages/urdu.md",
+        "lyric_status": "Lyric draft",
+        "review_status": "needs-native-review",
+        "before_sha256": "11b4cc3b1a056362c508b45e84cb392be85621047cffde056f899860f7d265b7",
+        "catalogued_audio_ids": [],
+        "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+        "after_sha256": "11b4cc3b1a056362c508b45e84cb392be85621047cffde056f899860f7d265b7"
+      },
+      {
+        "slug": "warli",
+        "language": "Warli",
+        "path": "kb/poems/i-am-free-to-dream/languages/warli.md",
+        "lyric_status": "Adaptation pending",
+        "review_status": "needs-native-review",
+        "before_sha256": "37f215227fe54361f63d820ada40ebab23856acc2fb97e9456ee39993fa25d63",
+        "catalogued_audio_ids": [],
+        "coverage": "Pending brief screened; no target-language literary review claimed.",
+        "after_sha256": "199eeb03b29a4a25153f251ba2205b464793f166f0533656e02b13751cfbbd5d"
+      }
+    ],
+    "changes": [
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/adi.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "4181cbfb2b44e0668389983c113f0f8822b6a1b6e5abf523922d8245383b3d04",
+        "after_sha256": "0082dd2702109ef119e4fa8bce960373153dae1fbc610e4737082f260d8a1324"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/ahirani.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "ed130ed7484567aea9a173ff3744d43cd2d21a5002f889443fb730e0d4990fcb",
+        "after_sha256": "9265ba905f820e7fd7f1f0c43e6827d81995e819fe0c55f448ff23f8d089c513"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/angika.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "341ce0f5c30204458210e324a2489d49407e7698826b3948346db8c0d2bc8df4",
+        "after_sha256": "cc86549e0b6657a64a9cca5163e6adc63ac5a926f5ad1ee936683c263ae96716"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/ao.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "9af34b67ce5c7fee10aee437f93acb017bbb943ffc011a8f85100910cae52ce5",
+        "after_sha256": "0a9a1b4863d1d6e91b0feef3fffb88f2e670ddbe5caf22ca0270692dbbf8db79"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/apatani.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "55ac6137a7257662f2f990b913263e7b93b943dca48b064fc0c34d8b1ed6e299",
+        "after_sha256": "179a2d12407a3d85eafec16ae51b2150156b0311133be8d6e0b101726362297e"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/awadhi.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "fb10d0b9c3678d844125d331bf6ec5b2fb4e61224ede9ad074c654e78a35551d",
+        "after_sha256": "d83cecf2dca1b09265e526fd28ba51b2ff8200f8bf05e377055e6bd3a21b5042"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/badaga.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "482c767a40750df5f1325532ca68242f27d1e4cc2d0e0a281b209633c983ada0",
+        "after_sha256": "33fd5527529d76eda224dccf4ad500346890f061724f91b9c358257e54f141ec"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/bagheli.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "2d9451fef84589dbaf3b51366cd6987f49ea4914c9dba5fcc8a199efde969de2",
+        "after_sha256": "6c3cd57f2a7616780e62b94e82a2d802fbfbb2b6ad2d480c2594e756c1acf208"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/balti.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "c8f53062136afb9e90cc957a5c274676461d5e06aabb6d8dd99486fdae8fe799",
+        "after_sha256": "6509a554cf836ba76518d5cc6823a586d4fe9aa4fbc2fcdd5148323d77f4252a"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/bhili.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "7e7abc0f4268f4bcdc3d52101af9cf95e4062b4bc5ebac830e92a371646fd423",
+        "after_sha256": "2c1d156eb1799d1a05be898ba506c22b92a0151e651df32f1b5b3f699b81591c"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/bodo.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "281dc92483253fb69b5371ec7e45930275cc574863f9fce5869944e11602bb10",
+        "after_sha256": "abb4ac3b88b58c2ad245da4b4e474a75023cdbc7077e4ee33c5f8bab493d3019"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/braj.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "e7b52f0c0d96fe4ef11f7c95376d3fc2263c157dbfd2487b904f6dd1c0124593",
+        "after_sha256": "9fa3d882a9c19fec5ddb11a3d84074b1972f260d5213bc6805026c5e40922dcb"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/bundeli.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "4589677caf463be65497d7772a59dd8b42971469c4c722fbe5014dbcdd8112c3",
+        "after_sha256": "1c12b2d9c8ee6ea9305e4057f4d83797aa553c19ed8602a6b0d342891c9fb05e"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/car-nicobarese.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "dc75714b2292c948421fc3327c387d9f4ffca4c6f7d4e291ad6a5fa2672b0914",
+        "after_sha256": "020310bf6a03280b70d8adf080d9e1fa5fb345d10a1ab2ae175940ddbd01e675"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/chakma.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "9f90b4f46d86d0062815631f7475c288b71c5393e7210b9d5b0bb20858c32d0c",
+        "after_sha256": "6742da622f6ad4c3ecb8afa314d6fdb344d393248b1953b776dcb059442c9b08"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/chhattisgarhi.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "9f402beb6d926a72205ce0682ddef40402e78518f48c9f49bcabc256204e062a",
+        "after_sha256": "8d03625bd7d51c48bceed9194741d48c93b168c0633608cc630afd98a97f7b30"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/dimasa.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "84ecbd5479be987dd671e8f9396b5d2f99e7fd0595d4891a43605a766db4fa9e",
+        "after_sha256": "a78a910c54ccac577c376d9e63b8fa4229918bdf09036f6531ceb6f6b6113049"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/french.md",
+        "kind": "target-lyric",
+        "reason": "Restore the explicit midway setting in the intro and chorus; no recorded French track is catalogued.",
+        "before_sha256": "c36291fd2a94f408f158631ccebac207acfbd4f4613d09e3ee1c5cdc565eeb4f",
+        "after_sha256": "3c54a27c624ce7057dc8285bcfefeefa78e18f28f55daaf9494ea7de6a8a0d03"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/galo.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "bcc468e833689386df681b5527f763bb6e3cf19224a02466cea9c48c9521270a",
+        "after_sha256": "60ef08c316d6a916e3b9ff4f93769a2735ebf0da4d299ddf48f3892f393f4fe0"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/garhwali.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "54a3ead4b7a1c6c3f2af947785e8fad43af18f7ec7be519b1863df8ae1124f3d",
+        "after_sha256": "8ae404ec5c5ab1f9baf801f021c1e8f4496089064f5c1bfcb6ffaf1097deac75"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/garo.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "ecc7f8e789a675416e093bc2ce7de80db030063fd89f24635e9b801ed2af7467",
+        "after_sha256": "0787f49542dc1706b5478f72f132ca2bf2a96b164960d504abacbd065689ffd9"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/gojri.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "440505597e0c5d473deafc458186b449da9e92fbdc4ee34d6be76e4f3b450103",
+        "after_sha256": "0063eb1db6e8a906259bd21b6ebd93392eccf64de7153c01b5a6969d952669b0"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/gondi.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "6fccddaf354b307d1177582ee087e2c959aab723120b75414675a14fe15e5a77",
+        "after_sha256": "da7f540137971b2ba63047e8a1a7576e117ecb865af299bd3d359eba14542811"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/halbi.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "9bc59324e396b9d33448817bf912bce27310550f9f4fc8a3b5fe77ea10825a1e",
+        "after_sha256": "3a72afcca8b7f1ab69c692afaf681cf0c15e78a73cb0f622a9a500189249e5d4"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/ho.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "1b9d049b382e064d14bb98e44197feea3e69b4cf8a3460bedbe6da9d9501a666",
+        "after_sha256": "bb45dc5aafb28c7517129e9f49fb3c88da330aa7d3458e6f8a2b2f25afd09441"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/jeseri.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "ef1dce91454b8939dfe360e31de4a8e011401c8511e895a31e235bc63d4e0fd9",
+        "after_sha256": "95dbbade0f4d41522fda61f4de6cfcf778d7c7a191caae1aceade404066aeff2"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/kangri.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "c5826396c4d26a3bcfc3983312569dd850d117bd6ccf1d89358807cead72cb81",
+        "after_sha256": "54cdcc0f1c2cbdcef2ed45917be11dc747fb4df61c7188a3adc0d2cbf3566bd9"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/kannada.md",
+        "kind": "target-lyric",
+        "reason": "Restore an explicit repeated gathering verb, also updating its quoted style direction; no recorded Kannada track is catalogued.",
+        "before_sha256": "c41803bcca45fe36aedf7a68fc329892ec23c26695386b77e57abb7f5965c2f8",
+        "after_sha256": "ceff79f27f3fa239f6e6d71df126a572499ddf79cd7c06561d17677faa5412a1"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/karbi.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "f25f254c13a66ac44d946df82421b5be29501c154488b087fc72726fcde48307",
+        "after_sha256": "9fd6e2f6b90c2cf868eb8e654ccf767bb53222b13230818967d79e617127f231"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/kashmiri.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "7b7affd0dd2e44a081f22c4d1e5e2df0558811e74f17fccbb0ee04fef547fa1c",
+        "after_sha256": "6455eecebe0d887bebfba208b6e699e51196b9b0b8c5c7c64ba2f2c6b66c60c8"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/kharia.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "95bd69a4145b8c6a7bf55e7497e6b171722d8e9abc294b224a45504278cf06a2",
+        "after_sha256": "6bfc3412ed9efefeaf001339846945840f319fedce061ab9da7f37d49575fdbb"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/khasi.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "3139f9602f99e7a0deb8300ef745065cee6bf5f6af78f9038456b55488bf69d7",
+        "after_sha256": "4e4605eb11aa2184a58ee10d37d7ed11862891a0bf32eaf526cfb7053bd8b87f"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/khortha.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "9576cc61e0ff5b143161a667d34ef5f0c23aeb21f3b72240d4bd6b6927b7a3fc",
+        "after_sha256": "a0b48d4e69a89a1f40b6fefb5d691d319c1275e4287585cb3c46ae17b7c3f142"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/kodava.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "3621dff7e8c25ffdf627f8805b44a418a4a9ced71a70c6f4e4bded748d2ffb7f",
+        "after_sha256": "f02e63f1927689a40f30e10efecdc9f23673cb3b3784c42eb7070fb35520f123"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/kokborok.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "cd14c084457df53c8b15c644e2ef76329e0ab32bec1dac6e5ca40c31cf7b4f7c",
+        "after_sha256": "d6ff8f9df185a85027bf0884bd021a6a2e0207e9db1d9e03ce6fe99fec6b79eb"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/konyak.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "6443798f53524f0c9839943453dc0b8a55cd6d87130c35701ac63f5d7235d6ac",
+        "after_sha256": "13e8cfd0ea9b4c95f9629330107e8114babfbabf4c1623ffec1c345172287f22"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/korku.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "5605ba1696903a92a88ad25b3388c85b65ab51091641b874067de35933b7f2e9",
+        "after_sha256": "ce9183f78eb61453a3dd312e8e9ddefff7c1508cf1815bc34bf24e0fe840c144"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/koya.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "8cd8e126388a4c2643e89f9dd1b3a19b4a87f046898e4eed7ef6ec33dd093bd6",
+        "after_sha256": "127d2e678f04b3d11d586332a7c47bf0a33425d9ae74b3c6c520921d46a4eac6"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/kui.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "c3b109c17f955755c5a7b12513d57c20b484e0a89b36a8dd1aaab25dabd9a8d2",
+        "after_sha256": "803c2c1e59053861b2249f2c4829e81b8ade9039a8846c3c8dc91cb8ef60f97c"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/kumaoni.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "659de3e0993f0d2a324fbb1039481e491502e78c2bbbc8ec2adfb2dfe905b149",
+        "after_sha256": "5a8053cd6851dd61600c4c36d9f2ba2a11567ff0251bc1a1ff6248e438276351"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/kurmali.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "ed2efc12265ff29a2a5e8b44377c7151e42daafada60cb76f6e25789cb7a1e60",
+        "after_sha256": "17d85dc69d904ad36b6044f674ff59bcbc4f3da8dfbdedd5f2e34bf78d0eb263"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/kurukh.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "28fc147316925505045f8f20be920089ff2db16dfc336cc79f14149859126740",
+        "after_sha256": "3607c3bc52e72e91b5f0ffa8b077a21acee475490d8f2fe691b9c8851424af9c"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/kutchi.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "609a561804e0e341632d28e27e9cf82760e6525c8f9a8c185c93348e1d0407ad",
+        "after_sha256": "8223cd55a45d155fe2726ee70e393a3d956c5d8636114df1b8263e0de5a9a269"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/kuvi.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "7c4a0d4cd89921c9f924c2e28d302a1ff70d7f307dd66078aa31070fe5a629e0",
+        "after_sha256": "6113484f84fff07abc659979b809a84fc9ba1e494a547ac739ee323cc1634b7d"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/ladakhi.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "d6f4263868e34a995408d350014df12517b54b829c0e8577775695638204df1d",
+        "after_sha256": "3f5088c53105d763f9512e12c6e110e2a01f5b3d4f3d57d6ad0cd91597bd0dd9"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/lambadi.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "9ad912256d1b2bfc1a8befb01756466f20fd3303675f6de3efadc02ef445ed4c",
+        "after_sha256": "f3a7fdcc0a484ca1acbeb032cef3dcfc3c11c3e5a294cadc5753e37ef3d209b6"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/lepcha.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "dd55a17d85c1da179985eed96000e638520b99351fdc58706a94ad87873b0e10",
+        "after_sha256": "17693541a901fb1893962300159d0da1e8d84af89907165bb26f4e8dc6cc5f8e"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/limbu.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "b3fd4b66d4060b1dd59485fe217eb77a01ef7fdc0c6e8759037414ab8be28042",
+        "after_sha256": "67c6b7898643a5cc096b5ba05cf47a0a8427d60039b5a7f9f6e053e3870d4a5a"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/lotha.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "519d224a94d1d40e52f5f90a706c2f4e141c98e79e2ee7a33a946036a592cdb3",
+        "after_sha256": "a309056c810e6e5b3c8f35958754c3a41b30ea58b2a4b8f8e0e8626bb81201de"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/magahi.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "e95d89ac99a875a353aa61e7d5c91d212508c78ebcdc181b613872c0259b2b46",
+        "after_sha256": "0e9530eb81978eea4d21d26d84f850d944c7ac41b1ac2402677fb2fe27ffc261"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/mahl.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "4f6864b45b2c102b8f0829b5eac424ec661518ccb513491bb1cc133394dbb6c5",
+        "after_sha256": "c0e4611ff71d3974b08de1b6720229872f38aed369e695032d162c3e182d285f"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/malvi.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "5c8681008100887537e8bda828266fd61aeb80e6de4109fd1d1e2ae00b85cd97",
+        "after_sha256": "ac915727a65c5aedf67d2ccbe48f9ecf29874806deb3dad6e5a38c6160fefda2"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/manipuri.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "2b218c134f7d33a04094867c2723f0c38227ee812d65281f0a1df9d4ea65eb46",
+        "after_sha256": "6b742d18373b63b088c6a9808083bd812d3037848ddfa29b6cc50a55ff88c4b0"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/marathi.md",
+        "kind": "target-lyric",
+        "reason": "Restore the explicit halfway setting in the intro and chorus; no recorded Marathi track is catalogued.",
+        "before_sha256": "34e639f9084d7ade802714bcf22c440e307f7bfdf6da76b5804ddc697d72fe5a",
+        "after_sha256": "ac65c9997394511b69899cdec1a3f4f670ea337afe8e20b35d0f1f59891b4c52"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/marwari.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "ba54e0704932a4a70f10b291d72b2203de88dce3e592e57d4b8a4d5217cd97d0",
+        "after_sha256": "11bf1e0e09a1d21c7633c950914a638c712032b9a2c9c69594b6d64c0330ea92"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/mewari.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "739d755629db5ded00a4d2ac645d04667b881e85b9efea6ca1e87b63a7f9d07b",
+        "after_sha256": "2e1379543fdb9af09e1dccd0b32ddf4c655c4bc78ab71c0ab4430d6d47997617"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/mising.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "a99bd4620caece400077b07df93f75e5dace934368d435c8aea8e9cc28163f1c",
+        "after_sha256": "6c3345d8b5eb5c4f3733f413810feeb1df119405dee5f16b16c1bc4987720397"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/mizo.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "3f9f06c44f7aaee1359389340f767a0ce7d365e8f174d06b6a6198a0f7e1db90",
+        "after_sha256": "97cc78eebd9519757ecc0e66840bda62141af690d69238bb6312c344ad9db8aa"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/mundari.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "e436f5db8b9f3833b8178879d61c2ebea29d0b11df82d7390e36f986ca57206e",
+        "after_sha256": "6bf9c714ea53cd4c802675bd0f6cc0e329a8b6c8a981ae88a9f8015192055d7b"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/nagpuri.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "74bf6be95f0bd2305920b003fc9f0e7789bebcb6c169335914ceb064ba83df21",
+        "after_sha256": "78a6b8145009df97cd5123ec37d5a22e1ea84412f3434291f0057e6da935c2c3"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/nimadi.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "c1d9205a8b1a40090d04353d7a938b7fbb21084d531ee6c8246b12fff7586cc2",
+        "after_sha256": "56a5213ea688030a1d96132bad560fd5f830d1dfb39ef051a252a840ecd5b574"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/nyishi.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "546cc3d1afc6223b5026f2c01caa7c33fce1ca503726066b88f9653dc115758c",
+        "after_sha256": "d9413bee15730cbb120bbc0066c061d1d1bf864cf92fe8a06220598a7630261d"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/pnar.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "668f01ee06287768e12578695f5feceee6c3312aea31e1bac16736a4fb18c76d",
+        "after_sha256": "3c85150d350474816fe0e4829602d4b15600045b25ddc2957f8855c94e7be858"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/rabha.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "672404204d48bab970bceea36ed38fe575da2a9b299b3c98c096581e225bc5f1",
+        "after_sha256": "75ad89b5b085b97b574eb1cfd5b698e6161c5e3ffe7898d0740401ee0405f9d8"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/rajbanshi.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "49f51cd92f3595ebe793732148a79e2fd246975113255ca026874307c24ed711",
+        "after_sha256": "b2b7b7505fa1473b31d54267d8020d0c63330fdaf32fb3895dd7700d08c24bbd"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/santali.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "c7294d1ee84131b27e47f3c24203f3b27a4aa1bbca4546f5408d91b0563a9312",
+        "after_sha256": "427827de6decacec0478234f7699bc39c5b114602eaa81c00d94ec53aba61918"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/saurashtra.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "9e1d8087be95cfafb21852a9c5ea5802c03908f135805ca831e8650d6f74e6f0",
+        "after_sha256": "7de52762ddaa3cc423111ebc412626f314abad37de8b4a5015d2acf641ca6c17"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/sikkimese-bhutia.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "0f56da48d8bc48671a70ca1457a1f7fd94bed879e5a56cda4db1572fe29362db",
+        "after_sha256": "b0e8c12e3d1bc15c8f16e156ac6212e04eb2046ead71d825345eaa68cf02a22d"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/sora.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "948dc4832b3d2f0ef0e536a279641cac9cf796e15d27e609451a9daeb8724abe",
+        "after_sha256": "edc4a8a0df1df19a7f4bbf8e2d4e9df7364c86b99a295dd721938ed898747873"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/sumi.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "c4a88a1ffca0c01808a549b761cb5ffa33e229df559c9364c32a31379ee2125c",
+        "after_sha256": "f0e8533f5fc21c00a0877736a31ca989e8a35c430917dce553296b6bba55c297"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/surjapuri.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "130d88fa7165e8d2f8508f13c44e0da3a2d4b8212dab15868c729d56acd533da",
+        "after_sha256": "ea01d123c5b40fba02d7bed6491415d42584d690b6334cdc3d86bca432d3f67f"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/tangkhul.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "b0176dca57791fa7b5c90ac17a555f1c4db05e0a839b6400bb0af47619867cd1",
+        "after_sha256": "08a811d9aff1d29f17c523a6d96c806ed552c7885c83112e5710229d0735d6fd"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/tenyidie.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "2af2c663b59e285fd756f1ddef48bf4110c3c5ca5fcf7d9571f514bdb1783b88",
+        "after_sha256": "9bec03f3e52b0288bc29c64134801be3f53f8c427a6fb593e86a667817c1d9ce"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/tulu.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "fda28c94231ca8798419b35a4ed1a0ed8e347281abacc2ef31c399da2549a973",
+        "after_sha256": "4a9ffd73884de1831ada34050f400ff8c2e5ebc2bc275bdbd4030601328a2964"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/languages/warli.md",
+        "kind": "scaffold",
+        "reason": "Restore midway in the English meaning scaffold; this is not a target-language translation.",
+        "before_sha256": "37f215227fe54361f63d820ada40ebab23856acc2fb97e9456ee39993fa25d63",
+        "after_sha256": "199eeb03b29a4a25153f251ba2205b464793f166f0533656e02b13751cfbbd5d"
+      },
+      {
+        "path": "kb/poems/i-am-free-to-dream/meaning.md",
+        "kind": "meaning-guide",
+        "reason": "Make the source midpoint explicit in the shared meaning reference. Preserve the historical Kashmiri machine-input sentences verbatim.",
+        "before_sha256": "05bb4649a4fa005e94faffb8c140d18580190d48b23d9b26d506ee37adc31754",
+        "after_sha256": "b1e0e0f2801b7eca7f82f6089b40d70e33aed5c068da69a9932e586a7137e577"
+      }
+    ]
+  },
+  "languages": [
+    {
+      "slug": "arabic",
+      "language": "Arabic — Modern Standard Arabic",
+      "path": "kb/poems/i-am-free-to-dream/languages/arabic.md",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "before_sha256": "6fd390c02102578dafa0b8fb966e02941d2debabe6f604d84f54019583a4c0ff",
+      "catalogued_audio_ids": [],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "The opening retains personal permission, losing the way midway, and the North Star. It does not turn permission into a command to dream.",
+        "The gathering is repeated; the world is pressed to the chest; ألمّ شتاته gives joining a scattered whole an intelligible Arabic expression.",
+        "خزّاف keeps the potter. Clay is an explicit inference from that trade. أزرع ابتسامة preserves sowing a smile.",
+        "The invitation, mountains, moon and shoulders beside clouds remain. سرّ الهطول مطراً renders the rain-mantra as a secret of falling rain, without introducing worship.",
+        "أنسج أحلامك في أحلامي preserves whose dreams enter whose."
+      ],
+      "decision": "Retain. The poetic images are intelligible; no clear meaning repair identified in this reading.",
+      "follow_up": "A fluent Modern Standard Arabic reader should check the gathering breath and the idiom of كتفاً إلى كتف مع الغيوم. Selective vocalization should follow an actual pronunciation review, not a blanket addition.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro]\nلي أن أحلم،\nولي أن أضلّ في منتصف الطريق،\nونجم الشمال يدلّني على الدرب.\n\n[Verse 1]\nأجمع... أجمع...\nهذا العالم وأضمّه إلى صدري،\nعلى أمل أن ألمّ شتاته،\nعلى أمل أن أزيده جمالاً.\n\n[Verse 2]\nأنا خزّاف.\n\nتعلّمت أن أشكّل الطين،\nوأن ألوّنه،\nوأن أزرع ابتسامة\nعلى وجهك.\n\n[Chorus]\nلي أن أحلم،\nولي أن أضلّ في منتصف الطريق،\nونجم الشمال يدلّني على الدرب.\n\n[Bridge]\nهيّا نصعد الجبال،\nهيّا نتأمّل القمر،\nكتفاً إلى كتف مع الغيوم،\nلنتعلّم سرّ الهطول مطراً.\n\n[Final Chorus]\nلي أن أحلم،\nولي أن أنسج\nأحلامك في أحلامي.\n\n[Soft Outro]\nلي أن أنسج...\nأحلامك في أحلامي.\n",
+      "after_lyrics": "[Intro]\nلي أن أحلم،\nولي أن أضلّ في منتصف الطريق،\nونجم الشمال يدلّني على الدرب.\n\n[Verse 1]\nأجمع... أجمع...\nهذا العالم وأضمّه إلى صدري،\nعلى أمل أن ألمّ شتاته،\nعلى أمل أن أزيده جمالاً.\n\n[Verse 2]\nأنا خزّاف.\n\nتعلّمت أن أشكّل الطين،\nوأن ألوّنه،\nوأن أزرع ابتسامة\nعلى وجهك.\n\n[Chorus]\nلي أن أحلم،\nولي أن أضلّ في منتصف الطريق،\nونجم الشمال يدلّني على الدرب.\n\n[Bridge]\nهيّا نصعد الجبال،\nهيّا نتأمّل القمر،\nكتفاً إلى كتف مع الغيوم،\nلنتعلّم سرّ الهطول مطراً.\n\n[Final Chorus]\nلي أن أحلم،\nولي أن أنسج\nأحلامك في أحلامي.\n\n[Soft Outro]\nلي أن أنسج...\nأحلامك في أحلامي.\n",
+      "after_sha256": "6fd390c02102578dafa0b8fb966e02941d2debabe6f604d84f54019583a4c0ff",
+      "changed": false,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    },
+    {
+      "slug": "assamese",
+      "language": "Assamese",
+      "path": "kb/poems/i-am-free-to-dream/languages/assamese.md",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "before_sha256": "ebfc596795a0e4b9af364202217a754c6e477f19d6a0aedec116503cee76f85b",
+      "catalogued_audio_ids": [],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "মাজবাটত keeps midway; the star remains the guide.",
+        "বুটলি repeats the collecting action before the close embrace and the two hopes.",
+        "কুমাৰ retains the potter; হাঁহি ফুলাবলৈ uses the project-permitted blooming-smile adaptation.",
+        "The mountain, moon, shoulder and rain-mantra sequence survives in the invitation.",
+        "The ending joins your dreams with mine without adding a promise of fulfilment."
+      ],
+      "decision": "Retain; do not replace Assamese forms with Bengali cognates.",
+      "follow_up": "Native Assamese review: ৰঙেৰে বোলাই as a hanging participial phrase, and the breath and idiom of বৰষুণ হৈ সৰাৰ. No replacement is asserted here.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro]\nসপোন দেখাত মোৰ বাধা নাই,\nমাজবাটত হেৰাই যাবলৈও বাধা নাই।\nধ্ৰুৱতৰাই বাট দেখুৱাব।\n\n[Verse 1]\nবুটলি... বুটলি...\nপৃথিৱীখন বুকুত আঁকোৱালি লৈছোঁ—\nজোৰা লগোৱাৰ আশাৰে,\nসজাই তোলাৰ আশাৰে।\n\n[Verse 2]\nমই এজন কুমাৰ।\n\nগঢ় দিবলৈ শিকিছোঁ,\nৰঙেৰে বোলাই,\nতোমাৰ মুখত হাঁহি ফুলাবলৈ শিকিছোঁ।\n\n[Chorus]\nসপোন দেখাত মোৰ বাধা নাই,\nমাজবাটত হেৰাই যাবলৈও বাধা নাই।\nধ্ৰুৱতৰাই বাট দেখুৱাব।\n\n[Bridge]\nআহা, পাহাৰ বগাওঁ।\nআহা, জোন চাওঁ।\nডাৱৰৰ স'তে কান্ধ মিলাই,\nবৰষুণ হৈ সৰাৰ মন্ত্ৰ শিকোঁ।\n\n[Final Chorus]\nসপোন দেখাত মোৰ বাধা নাই।\nতোমাৰ সপোন মোৰ সপোনৰ স'তে\nগাঁথিবলৈও বাধা নাই।\n\n[Soft Outro]\nতোমাৰ সপোন মোৰ সপোনৰ স'তে...\nগাঁথিবলৈও বাধা নাই।\n",
+      "after_lyrics": "[Intro]\nসপোন দেখাত মোৰ বাধা নাই,\nমাজবাটত হেৰাই যাবলৈও বাধা নাই।\nধ্ৰুৱতৰাই বাট দেখুৱাব।\n\n[Verse 1]\nবুটলি... বুটলি...\nপৃথিৱীখন বুকুত আঁকোৱালি লৈছোঁ—\nজোৰা লগোৱাৰ আশাৰে,\nসজাই তোলাৰ আশাৰে।\n\n[Verse 2]\nমই এজন কুমাৰ।\n\nগঢ় দিবলৈ শিকিছোঁ,\nৰঙেৰে বোলাই,\nতোমাৰ মুখত হাঁহি ফুলাবলৈ শিকিছোঁ।\n\n[Chorus]\nসপোন দেখাত মোৰ বাধা নাই,\nমাজবাটত হেৰাই যাবলৈও বাধা নাই।\nধ্ৰুৱতৰাই বাট দেখুৱাব।\n\n[Bridge]\nআহা, পাহাৰ বগাওঁ।\nআহা, জোন চাওঁ।\nডাৱৰৰ স'তে কান্ধ মিলাই,\nবৰষুণ হৈ সৰাৰ মন্ত্ৰ শিকোঁ।\n\n[Final Chorus]\nসপোন দেখাত মোৰ বাধা নাই।\nতোমাৰ সপোন মোৰ সপোনৰ স'তে\nগাঁথিবলৈও বাধা নাই।\n\n[Soft Outro]\nতোমাৰ সপোন মোৰ সপোনৰ স'তে...\nগাঁথিবলৈও বাধা নাই।\n",
+      "after_sha256": "ebfc596795a0e4b9af364202217a754c6e477f19d6a0aedec116503cee76f85b",
+      "changed": false,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    },
+    {
+      "slug": "bengali",
+      "language": "Bengali",
+      "path": "kb/poems/i-am-free-to-dream/languages/bengali.md",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "before_sha256": "e8fdb7a7fb4a233a4d3b9ef980014a85caffe5b9a79a56e6fcdc515f5a690c5d",
+      "catalogued_audio_ids": [
+        "bengali-audio-01"
+      ],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "The opening preserves permission and becoming lost on the way; পথের মাঝে keeps the road's middle.",
+        "কুড়িয়ে and বুকে জড়িয়ে রেখেছি preserve gathering and sustained closeness, followed by joining and adorning.",
+        "কুমোর is the potter; হাসি ফোটাতে is the permitted blooming-smile adaptation.",
+        "The invitation keeps all four images and the rain-mantra.",
+        "স্বপ্ন আমার স্বপ্নের সঙ্গে বুনে gives weaving together rather than explicitly into; this is a small lyrical choice, not a reversal of participants."
+      ],
+      "decision": "Retain the recorded lyric. No confident corrective rewrite is warranted by this text review.",
+      "follow_up": "A Bengali reader can assess the fragment রঙে রাঙিয়ে and whether সঙ্গে বুনে is the desired ending. Any later textual change must be reconciled with the recording.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro]\nস্বপ্ন দেখতে আমার মানা নেই,\nপথের মাঝে হারিয়ে যেতেও মানা নেই।\nধ্রুবতারা পথ দেখাবে।\n\n[Verse 1]\nকুড়িয়ে... কুড়িয়ে...\nসংসারটাকে বুকে জড়িয়ে রেখেছি—\nজুড়ে দেওয়ার আশায়,\nসাজিয়ে দেওয়ার আশায়।\n\n[Verse 2]\nআমি এক কুমোর।\n\nগড়ে তুলতে শিখেছি,\nরঙে রাঙিয়ে,\nতোমার মুখে হাসি ফোটাতে শিখেছি।\n\n[Chorus]\nস্বপ্ন দেখতে আমার মানা নেই,\nপথের মাঝে হারিয়ে যেতেও মানা নেই।\nধ্রুবতারা পথ দেখাবে।\n\n[Bridge]\nএসো, পাহাড়ে উঠি।\nএসো, চাঁদ দেখি।\nমেঘের সঙ্গে কাঁধ মিলিয়ে,\nবৃষ্টি হয়ে ঝরার মন্ত্র শিখি।\n\n[Final Chorus]\nস্বপ্ন দেখতে আমার মানা নেই।\nতোমার স্বপ্ন আমার স্বপ্নের সঙ্গে\nবুনে দিতেও মানা নেই।\n\n[Soft Outro]\nতোমার স্বপ্ন আমার স্বপ্নের সঙ্গে...\nবুনে দিতেও মানা নেই।\n",
+      "after_lyrics": "[Intro]\nস্বপ্ন দেখতে আমার মানা নেই,\nপথের মাঝে হারিয়ে যেতেও মানা নেই।\nধ্রুবতারা পথ দেখাবে।\n\n[Verse 1]\nকুড়িয়ে... কুড়িয়ে...\nসংসারটাকে বুকে জড়িয়ে রেখেছি—\nজুড়ে দেওয়ার আশায়,\nসাজিয়ে দেওয়ার আশায়।\n\n[Verse 2]\nআমি এক কুমোর।\n\nগড়ে তুলতে শিখেছি,\nরঙে রাঙিয়ে,\nতোমার মুখে হাসি ফোটাতে শিখেছি।\n\n[Chorus]\nস্বপ্ন দেখতে আমার মানা নেই,\nপথের মাঝে হারিয়ে যেতেও মানা নেই।\nধ্রুবতারা পথ দেখাবে।\n\n[Bridge]\nএসো, পাহাড়ে উঠি।\nএসো, চাঁদ দেখি।\nমেঘের সঙ্গে কাঁধ মিলিয়ে,\nবৃষ্টি হয়ে ঝরার মন্ত্র শিখি।\n\n[Final Chorus]\nস্বপ্ন দেখতে আমার মানা নেই।\nতোমার স্বপ্ন আমার স্বপ্নের সঙ্গে\nবুনে দিতেও মানা নেই।\n\n[Soft Outro]\nতোমার স্বপ্ন আমার স্বপ্নের সঙ্গে...\nবুনে দিতেও মানা নেই।\n",
+      "after_sha256": "e8fdb7a7fb4a233a4d3b9ef980014a85caffe5b9a79a56e6fcdc515f5a690c5d",
+      "changed": false,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    },
+    {
+      "slug": "bhojpuri",
+      "language": "Bhojpuri",
+      "path": "kb/poems/i-am-free-to-dream/languages/bhojpuri.md",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "before_sha256": "d4f6f89025dce0cd30dc2d955712313685750f0ed81ea634b3d1d5c7bed2f03a",
+      "catalogued_audio_ids": [
+        "bhojpuri-duet-audio-01",
+        "bhojpuri-playful-audio-01"
+      ],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "हमरा and बीच राह keep the speaker and road relationship. The female bridge is an approved arrangement, not an extra character in the source.",
+        "बटोरत and छाती से लगवले retain gathering and holding the world close, then its joining and beautifying.",
+        "कुम्हार preserves the role; हँसी खिलावे uses the accepted blooming smile.",
+        "The female invitation retains mountain, moon, cloud shoulders and rain-mantra.",
+        "तोहार सपना अपना सपना में keeps the addressee's dreams entering the speaking voice's dreams."
+      ],
+      "decision": "Retain the selected duet arrangement and words.",
+      "follow_up": "Bhojpuri review should address local register and respectful/intimate forms such as आवऽ, चढ़ीं and बानी together. Do not normalize them into Hindi or infer a grammatical fault merely from their mixture. Check each released variation against its own submitted lyrics separately.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro - Male Lead, Soft Female Responses]\nहमरा सपना देखे के मनाही नइखे,\nबीच राह में भटक जाए के मनाही नइखे।\nध्रुवतारा राह देखाई।\n\n[Verse 1 - Male Lead, Gentle Female Answers]\nबटोरत... बटोरत...\nदुनिया के छाती से लगवले बानी—\nएकरा के जोड़े के आस में,\nएकरा के सँवारे के आस में।\n\n[Verse 2 - Male Lead]\nहम कुम्हार बानी।\n\nरूप देवे के सीखले बानी,\nरंग भर के,\nतोहरा मुँह पर हँसी खिलावे के सीखले बानी।\n\n[Chorus - Male Lead, Soft Female Harmony]\nहमरा सपना देखे के मनाही नइखे,\nबीच राह में भटक जाए के मनाही नइखे।\nध्रुवतारा राह देखाई।\n\n[Bridge - Female Solo]\nआवऽ, पहाड़ चढ़ीं।\nआवऽ, चाँद निहारीं।\nबादर से काँधा मिलाके,\nबरखा बन बरसे के मंतर सीखीं।\n\n[Final Chorus - Male and Female Duet]\nहमरा सपना देखे के मनाही नइखे।\nतोहार सपना अपना सपना में\nगूँथे के भी मनाही नइखे।\n\n[Soft Outro - Both Voices, Tender Close Harmony]\nतोहार सपना अपना सपना में...\nगूँथे के भी मनाही नइखे।\n",
+      "after_lyrics": "[Intro - Male Lead, Soft Female Responses]\nहमरा सपना देखे के मनाही नइखे,\nबीच राह में भटक जाए के मनाही नइखे।\nध्रुवतारा राह देखाई।\n\n[Verse 1 - Male Lead, Gentle Female Answers]\nबटोरत... बटोरत...\nदुनिया के छाती से लगवले बानी—\nएकरा के जोड़े के आस में,\nएकरा के सँवारे के आस में।\n\n[Verse 2 - Male Lead]\nहम कुम्हार बानी।\n\nरूप देवे के सीखले बानी,\nरंग भर के,\nतोहरा मुँह पर हँसी खिलावे के सीखले बानी।\n\n[Chorus - Male Lead, Soft Female Harmony]\nहमरा सपना देखे के मनाही नइखे,\nबीच राह में भटक जाए के मनाही नइखे।\nध्रुवतारा राह देखाई।\n\n[Bridge - Female Solo]\nआवऽ, पहाड़ चढ़ीं।\nआवऽ, चाँद निहारीं।\nबादर से काँधा मिलाके,\nबरखा बन बरसे के मंतर सीखीं।\n\n[Final Chorus - Male and Female Duet]\nहमरा सपना देखे के मनाही नइखे।\nतोहार सपना अपना सपना में\nगूँथे के भी मनाही नइखे।\n\n[Soft Outro - Both Voices, Tender Close Harmony]\nतोहार सपना अपना सपना में...\nगूँथे के भी मनाही नइखे।\n",
+      "after_sha256": "d4f6f89025dce0cd30dc2d955712313685750f0ed81ea634b3d1d5c7bed2f03a",
+      "changed": false,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    },
+    {
+      "slug": "dogri",
+      "language": "Dogri",
+      "path": "kb/poems/i-am-free-to-dream/languages/dogri.md",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "before_sha256": "cf990244f730a9f4117f36eb8a8a4ae3906dbc1ee26970f6d80d0e4aa6c03729",
+      "catalogued_audio_ids": [],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "अद्ध बाटै names the halfway setting and ध्रुव तारा remains the guide.",
+        "The repeated gathering, world held to the chest, and joining/beautifying hopes are represented.",
+        "कुम्हार keeps the maker and हस्सी खिड़ाना is the allowed flowering-smile choice.",
+        "The bridge retains climbing, moon-gazing, cloud shoulders and rain-mantra.",
+        "The ending retains your dreams woven into the speaker's own dreams."
+      ],
+      "decision": "Retain provisionally; semantic coverage is present, but this is not a Dogri fluency clearance.",
+      "follow_up": "Prioritize a Dogri literary reader for हिक्कै कन्नै, दिक्खचै/चढ़चै and the agreement in दुनिया गी ... रक्खी ऐ. Their naturalness should not be decided by Hindi resemblance.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro]\nमिगी सपने दिक्खने दी मनाही नेईं,\nअद्ध बाटै च भुल्ली जाने दी बी मनाही नेईं।\nध्रुव तारा रस्ता दस्सग।\n\n[Verse 1]\nबटोरदे... बटोरदे...\nदुनिया गी हिक्कै कन्नै लाई रक्खी ऐ—\nजोड़ने दी आस च,\nसजाने दी आस च।\n\n[Verse 2]\nमैं इक कुम्हार आं।\n\nरूप देना सिक्खेआ ऐ,\nरंग भरियै,\nतेरे मुंहै पर हस्सी खिड़ाना सिक्खेआ ऐ।\n\n[Chorus]\nमिगी सपने दिक्खने दी मनाही नेईं,\nअद्ध बाटै च भुल्ली जाने दी बी मनाही नेईं।\nध्रुव तारा रस्ता दस्सग।\n\n[Bridge]\nआ, पहाड़ चढ़चै।\nआ, चन्न दिक्खचै।\nबद्दलें कन्नै मोढा लाईयै,\nबरखा बनियै बरसने दा मंतर सिक्खचै।\n\n[Final Chorus]\nमिगी सपने दिक्खने दी मनाही नेईं।\nतेरे सपने अपने सपनें च\nपरोने दी बी मनाही नेईं।\n\n[Soft Outro]\nतेरे सपने अपने सपनें च...\nपरोने दी बी मनाही नेईं।\n",
+      "after_lyrics": "[Intro]\nमिगी सपने दिक्खने दी मनाही नेईं,\nअद्ध बाटै च भुल्ली जाने दी बी मनाही नेईं।\nध्रुव तारा रस्ता दस्सग।\n\n[Verse 1]\nबटोरदे... बटोरदे...\nदुनिया गी हिक्कै कन्नै लाई रक्खी ऐ—\nजोड़ने दी आस च,\nसजाने दी आस च।\n\n[Verse 2]\nमैं इक कुम्हार आं।\n\nरूप देना सिक्खेआ ऐ,\nरंग भरियै,\nतेरे मुंहै पर हस्सी खिड़ाना सिक्खेआ ऐ।\n\n[Chorus]\nमिगी सपने दिक्खने दी मनाही नेईं,\nअद्ध बाटै च भुल्ली जाने दी बी मनाही नेईं।\nध्रुव तारा रस्ता दस्सग।\n\n[Bridge]\nआ, पहाड़ चढ़चै।\nआ, चन्न दिक्खचै।\nबद्दलें कन्नै मोढा लाईयै,\nबरखा बनियै बरसने दा मंतर सिक्खचै।\n\n[Final Chorus]\nमिगी सपने दिक्खने दी मनाही नेईं।\nतेरे सपने अपने सपनें च\nपरोने दी बी मनाही नेईं।\n\n[Soft Outro]\nतेरे सपने अपने सपनें च...\nपरोने दी बी मनाही नेईं।\n",
+      "after_sha256": "cf990244f730a9f4117f36eb8a8a4ae3906dbc1ee26970f6d80d0e4aa6c03729",
+      "changed": false,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    },
+    {
+      "slug": "english",
+      "language": "English",
+      "path": "kb/poems/i-am-free-to-dream/languages/english.md",
+      "lyric_status": "English adaptation",
+      "review_status": "needs-native-review",
+      "before_sha256": "005db4d0d17cef8de7c2e24e0a7092a82e8fef352bb49832bda73cdd57b06c34",
+      "catalogued_audio_ids": [
+        "english-audio-country",
+        "english-audio-jazz"
+      ],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "The affirmative freedom refrain carries the Odia permission naturally. 'Free to lose my way' omits the explicit midway setting.",
+        "'Piece by piece' avoids the author-disliked repeated 'Gathering, gathering'; gathering into the arms and the two hopes remain.",
+        "Potter, form, colour and sowing a smile survive without a replacement grander creator.",
+        "Mountains, moon and shoulders beside clouds remain; 'learn to fall as rain' condenses the mantra to an action.",
+        "'Thread by thread' is a musical addition, and 'with mine' is weaving together rather than explicitly into mine. Both belong to the established adaptation."
+      ],
+      "decision": "Retain the author-selected country/jazz lyric as expressly directed in its language page. These are documented song choices, not grounds to silently rewrite the published words.",
+      "follow_up": "If a separate literary edition is wanted, consider 'free to lose my way midway' only in a fresh full-line revision; it is not applied to this song. Keep the North Star and the ordinary potter.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro — softly]\nI am free to dream,\nfree to lose my way.\nThe North Star will lead me on.\n\n[Verse 1]\nPiece by piece,\nI gather the world into my arms,\nhoping to mend it,\nhoping to make it beautiful.\n\n[Verse 2]\nI am a potter.\n\nI've learned to give things form,\nto bring them colour,\nto sow a smile upon your face.\n\n[Chorus]\nI am free to dream,\nfree to lose my way.\nThe North Star will lead me on.\nI am free to dream.\n\n[Bridge — gently rising]\nCome, let's climb the mountains.\nCome, let's watch the moon.\nShoulder to shoulder with the clouds,\nlet's learn to fall as rain.\n\n[Final Chorus]\nI am free to dream,\nfree to weave your dreams with mine.\nThread by thread,\nyour dreams with mine.\nI am free to dream.\n\n[Soft Outro]\nYour dreams with mine…\nI am free to dream.\n",
+      "after_lyrics": "[Intro — softly]\nI am free to dream,\nfree to lose my way.\nThe North Star will lead me on.\n\n[Verse 1]\nPiece by piece,\nI gather the world into my arms,\nhoping to mend it,\nhoping to make it beautiful.\n\n[Verse 2]\nI am a potter.\n\nI've learned to give things form,\nto bring them colour,\nto sow a smile upon your face.\n\n[Chorus]\nI am free to dream,\nfree to lose my way.\nThe North Star will lead me on.\nI am free to dream.\n\n[Bridge — gently rising]\nCome, let's climb the mountains.\nCome, let's watch the moon.\nShoulder to shoulder with the clouds,\nlet's learn to fall as rain.\n\n[Final Chorus]\nI am free to dream,\nfree to weave your dreams with mine.\nThread by thread,\nyour dreams with mine.\nI am free to dream.\n\n[Soft Outro]\nYour dreams with mine…\nI am free to dream.\n",
+      "after_sha256": "005db4d0d17cef8de7c2e24e0a7092a82e8fef352bb49832bda73cdd57b06c34",
+      "changed": false,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    },
+    {
+      "slug": "filipino",
+      "language": "Filipino / Tagalog",
+      "path": "kb/poems/i-am-free-to-dream/languages/filipino.md",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "before_sha256": "96d48264191bd436af769bdf7ac599b015d5444c525ba7118ddde03aabc68c96",
+      "catalogued_audio_ids": [
+        "filipino-audio-01"
+      ],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "Malaya akong mangarap is an affirmative freedom opening. Sa gitna ng paglalakbay and Tala sa Hilaga retain the journey's middle and North Star, despite a rearranged intro.",
+        "Tinitipon and Yakap kong mahigpit keep gathering and the close embrace, followed by the two hopes.",
+        "Magpapalayok and magpunla ng ngiti retain the potter and sowing a smile.",
+        "Mountains, moon and rain remain. Makisabay sa mga ulap conveys accompanying or moving with clouds, but the shoulder-to-shoulder image is no longer explicit.",
+        "The final chorus keeps dreams woven into dreams. Dahan-dahan adds slowness in the outro, a musical choice rather than source wording."
+      ],
+      "decision": "Retain recorded words; flag the cloud line for a considered Filipino revision rather than supplying an unverified literal shoulder calque.",
+      "follow_up": "Ask a Filipino poet for a natural shoulder-to-shoulder cloud line that fits the existing phrase length. Confirm it before any replacement recording or revised displayed lyric.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro]\nMalaya akong mangarap\nMalaya akong mangarap\n\n[Verse 1]\nMaaari ring maligaw\nSa gitna ng paglalakbay\nAng Tala sa Hilaga\nAng magtuturo ng daan\n\n[Verse 2]\nTinitipon…\nTinitipon…\nYakap kong mahigpit ang mundo\nSa pag-asang pagdugtungin\nSa pag-asang pagandahin\n\n[Chorus]\nMalaya akong mangarap\nKahit maligaw sa daan\nMay talang aakay sa akin\nMalaya akong mangarap\n\n[Verse 3]\nAko'y magpapalayok.\n\nNatutuhan kong humubog\nAt magbigay ng kulay\nNatutuhan kong magpunla\nNg ngiti sa iyong mukha\n\n[Bridge]\nHalika, akyatin natin ang bundok\nHalika, pagmasdan natin ang buwan\nMakisabay sa mga ulap\nMatuto tayong bumuhos\nGaya ng ulan\n\n[Final Chorus]\nMalaya akong mangarap\nMalaya kong maihahabi\nAng pangarap mo sa pangarap ko\nMalaya akong mangarap\n\n[Outro]\nAng pangarap mo…\nSa pangarap ko…\nDahan-dahan kong ihahabi\n",
+      "after_lyrics": "[Intro]\nMalaya akong mangarap\nMalaya akong mangarap\n\n[Verse 1]\nMaaari ring maligaw\nSa gitna ng paglalakbay\nAng Tala sa Hilaga\nAng magtuturo ng daan\n\n[Verse 2]\nTinitipon…\nTinitipon…\nYakap kong mahigpit ang mundo\nSa pag-asang pagdugtungin\nSa pag-asang pagandahin\n\n[Chorus]\nMalaya akong mangarap\nKahit maligaw sa daan\nMay talang aakay sa akin\nMalaya akong mangarap\n\n[Verse 3]\nAko'y magpapalayok.\n\nNatutuhan kong humubog\nAt magbigay ng kulay\nNatutuhan kong magpunla\nNg ngiti sa iyong mukha\n\n[Bridge]\nHalika, akyatin natin ang bundok\nHalika, pagmasdan natin ang buwan\nMakisabay sa mga ulap\nMatuto tayong bumuhos\nGaya ng ulan\n\n[Final Chorus]\nMalaya akong mangarap\nMalaya kong maihahabi\nAng pangarap mo sa pangarap ko\nMalaya akong mangarap\n\n[Outro]\nAng pangarap mo…\nSa pangarap ko…\nDahan-dahan kong ihahabi\n",
+      "after_sha256": "96d48264191bd436af769bdf7ac599b015d5444c525ba7118ddde03aabc68c96",
+      "changed": false,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    },
+    {
+      "slug": "french",
+      "language": "French",
+      "path": "kb/poems/i-am-free-to-dream/languages/french.md",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "before_sha256": "c36291fd2a94f408f158631ccebac207acfbd4f4613d09e3ee1c5cdc565eeb4f",
+      "catalogued_audio_ids": [],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "The refrain is natural French permission/freedom. 'En chemin' means along the way and drops the source's midway detail; change it to 'à mi-chemin' in intro and chorus.",
+        "Je recueille ... le monde et le serre contre moi retains gathering and holding close. The shared subject after et is valid; do not invent a missing-pronoun error.",
+        "Potier, giving form/colour and semer un sourire keep the source's creative acts.",
+        "The invitation preserves mountain, moon and cloud shoulders. Secret and tomber en pluie are poetic renderings of the rain-mantra.",
+        "Tisser tes rêves dans les miens retains the inward weaving direction."
+      ],
+      "decision": "Apply the limited midway fidelity edit. Keep the rest.",
+      "follow_up": "French sung review remains open, particularly Épaule contre épaule avec les nuages. Potier selects a male speaker for the current male-led arrangement; it does not prove the original speaker's gender.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro]\nJe suis libre de rêver,\nde me perdre en chemin.\nL’étoile Polaire me guidera.\n\n[Verse 1]\nJe recueille... je recueille...\nle monde et le serre contre moi,\ndans l’espoir de le rassembler,\ndans l’espoir de l’embellir.\n\n[Verse 2]\nJe suis potier.\n\nJ’ai appris à donner forme,\nà donner des couleurs,\nà semer un sourire\nsur ton visage.\n\n[Chorus]\nJe suis libre de rêver,\nde me perdre en chemin.\nL’étoile Polaire me guidera.\n\n[Bridge]\nViens, gravissons les montagnes.\nViens, regardons la lune.\nÉpaule contre épaule avec les nuages,\napprenons le secret\nde tomber en pluie.\n\n[Final Chorus]\nJe suis libre de rêver,\nlibre de tisser\ntes rêves dans les miens.\n\n[Soft Outro]\nLibre de tisser...\ntes rêves dans les miens.\n",
+      "after_lyrics": "[Intro]\nJe suis libre de rêver,\nde me perdre à mi-chemin.\nL’étoile Polaire me guidera.\n\n[Verse 1]\nJe recueille... je recueille...\nle monde et le serre contre moi,\ndans l’espoir de le rassembler,\ndans l’espoir de l’embellir.\n\n[Verse 2]\nJe suis potier.\n\nJ’ai appris à donner forme,\nà donner des couleurs,\nà semer un sourire\nsur ton visage.\n\n[Chorus]\nJe suis libre de rêver,\nde me perdre à mi-chemin.\nL’étoile Polaire me guidera.\n\n[Bridge]\nViens, gravissons les montagnes.\nViens, regardons la lune.\nÉpaule contre épaule avec les nuages,\napprenons le secret\nde tomber en pluie.\n\n[Final Chorus]\nJe suis libre de rêver,\nlibre de tisser\ntes rêves dans les miens.\n\n[Soft Outro]\nLibre de tisser...\ntes rêves dans les miens.\n",
+      "after_sha256": "3c54a27c624ce7057dc8285bcfefeefa78e18f28f55daaf9494ea7de6a8a0d03",
+      "changed": true,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    },
+    {
+      "slug": "gujarati",
+      "language": "Gujarati",
+      "path": "kb/poems/i-am-free-to-dream/languages/gujarati.md",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "before_sha256": "21aff43fbfc26bb780deb0d807b41a80fb5906f7d6e7833c15bff0d0f5bd62e9",
+      "catalogued_audio_ids": [],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "અધવચ્ચે explicitly retains midway; the star guides.",
+        "વીણતાં repeats collecting; હૈયે વળગાડી retains the embrace and the hopes remain.",
+        "કુંભાર, shaping and colouring remain; સ્મિત ખીલવતાં is the allowed blooming adaptation.",
+        "The invitation keeps hills, moon, shoulder contact with clouds, and learning rain's mantra.",
+        "The ending keeps the addressee's dreams woven into the speaker's."
+      ],
+      "decision": "Retain. The masculine શીખ્યો belongs to this male-led adaptation, not to a source-established gender.",
+      "follow_up": "Gujarati speaker to check the collected-world participle and સપનાં/સપનામાં number in context. Do not import Hindi agreement or mechanically force every dream noun into the same surface form.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro]\nમને સપનાં જોવાની મનાઈ નથી,\nઅધવચ્ચે રસ્તો ભૂલી જવાની પણ મનાઈ નથી.\nધ્રુવતારો રસ્તો બતાવશે.\n\n[Verse 1]\nવીણતાં... વીણતાં...\nદુનિયાને હૈયે વળગાડી છે—\nજોડી દેવાની આશામાં,\nસજાવી દેવાની આશામાં.\n\n[Verse 2]\nહું એક કુંભાર છું.\n\nઆકાર આપતાં શીખ્યો છું,\nરંગો પૂરીને,\nતારા ચહેરા પર સ્મિત ખીલવતાં શીખ્યો છું.\n\n[Chorus]\nમને સપનાં જોવાની મનાઈ નથી,\nઅધવચ્ચે રસ્તો ભૂલી જવાની પણ મનાઈ નથી.\nધ્રુવતારો રસ્તો બતાવશે.\n\n[Bridge]\nચાલ, પહાડ ચઢીએ.\nચાલ, ચાંદ નિહાળીએ.\nવાદળો સાથે ખભો મિલાવી,\nવરસાદ બની વરસવાનો મંત્ર શીખીએ.\n\n[Final Chorus]\nમને સપનાં જોવાની મનાઈ નથી.\nતારાં સપનાં મારાં સપનામાં\nગૂંથવાની પણ મનાઈ નથી.\n\n[Soft Outro]\nતારાં સપનાં મારાં સપનામાં...\nગૂંથવાની પણ મનાઈ નથી.\n",
+      "after_lyrics": "[Intro]\nમને સપનાં જોવાની મનાઈ નથી,\nઅધવચ્ચે રસ્તો ભૂલી જવાની પણ મનાઈ નથી.\nધ્રુવતારો રસ્તો બતાવશે.\n\n[Verse 1]\nવીણતાં... વીણતાં...\nદુનિયાને હૈયે વળગાડી છે—\nજોડી દેવાની આશામાં,\nસજાવી દેવાની આશામાં.\n\n[Verse 2]\nહું એક કુંભાર છું.\n\nઆકાર આપતાં શીખ્યો છું,\nરંગો પૂરીને,\nતારા ચહેરા પર સ્મિત ખીલવતાં શીખ્યો છું.\n\n[Chorus]\nમને સપનાં જોવાની મનાઈ નથી,\nઅધવચ્ચે રસ્તો ભૂલી જવાની પણ મનાઈ નથી.\nધ્રુવતારો રસ્તો બતાવશે.\n\n[Bridge]\nચાલ, પહાડ ચઢીએ.\nચાલ, ચાંદ નિહાળીએ.\nવાદળો સાથે ખભો મિલાવી,\nવરસાદ બની વરસવાનો મંત્ર શીખીએ.\n\n[Final Chorus]\nમને સપનાં જોવાની મનાઈ નથી.\nતારાં સપનાં મારાં સપનામાં\nગૂંથવાની પણ મનાઈ નથી.\n\n[Soft Outro]\nતારાં સપનાં મારાં સપનામાં...\nગૂંથવાની પણ મનાઈ નથી.\n",
+      "after_sha256": "21aff43fbfc26bb780deb0d807b41a80fb5906f7d6e7833c15bff0d0f5bd62e9",
+      "changed": false,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    },
+    {
+      "slug": "haryanvi",
+      "language": "Haryanvi",
+      "path": "kb/poems/i-am-free-to-dream/languages/haryanvi.md",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "before_sha256": "8f9a7c332a217b7aacbac84ae8f48b37085de845b8934a89c805f9d6122ec1ec",
+      "catalogued_audio_ids": [],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "मनाही कोन्या and बीच रस्ते retain freedom and the middle of the road.",
+        "समेट कै and छाती तै ला राखी retain collecting and holding; the two hopes remain.",
+        "कुम्हार keeps the potter and हँसी खिलाणी is the allowed blooming smile.",
+        "The invitation retains mountain, moon, shoulders with clouds and rain-mantra.",
+        "पिरोण keeps threading dreams into dreams."
+      ],
+      "decision": "Retain provisionally; do not replace the local forms with standard Hindi.",
+      "follow_up": "Native Haryanvi review of register, देणा/खिलाणी agreement, and सपन्यां is still needed. Semantic readability by a related-language reader is not dialect validation.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro]\nमन्नै सपने देखण की मनाही कोन्या,\nबीच रस्ते भटकण की भी मनाही कोन्या।\nध्रुवतारा राह दिखावैगा।\n\n[Verse 1]\nसमेट कै... समेट कै...\nदुनिया नै छाती तै ला राखी सै—\nजोड़ण की आस में,\nसजावण की आस में।\n\n[Verse 2]\nमैं एक कुम्हार सूँ।\n\nआकार देणा सीख लिया सै,\nरंग भर कै,\nतेरे चेहरे पै हँसी खिलाणी सीख ली सै।\n\n[Chorus]\nमन्नै सपने देखण की मनाही कोन्या,\nबीच रस्ते भटकण की भी मनाही कोन्या।\nध्रुवतारा राह दिखावैगा।\n\n[Bridge]\nआ, पहाड़ चढ़ां।\nआ, चाँद नै देखां।\nबादलां तै कंधा मिला कै,\nबरखा बण कै बरसण का मंतर सीखां।\n\n[Final Chorus]\nमन्नै सपने देखण की मनाही कोन्या।\nतेरे सपन्यां नै मेरे सपन्यां में\nपिरोण की भी मनाही कोन्या।\n\n[Soft Outro]\nतेरे सपन्यां नै मेरे सपन्यां में...\nपिरोण की भी मनाही कोन्या।\n",
+      "after_lyrics": "[Intro]\nमन्नै सपने देखण की मनाही कोन्या,\nबीच रस्ते भटकण की भी मनाही कोन्या।\nध्रुवतारा राह दिखावैगा।\n\n[Verse 1]\nसमेट कै... समेट कै...\nदुनिया नै छाती तै ला राखी सै—\nजोड़ण की आस में,\nसजावण की आस में।\n\n[Verse 2]\nमैं एक कुम्हार सूँ।\n\nआकार देणा सीख लिया सै,\nरंग भर कै,\nतेरे चेहरे पै हँसी खिलाणी सीख ली सै।\n\n[Chorus]\nमन्नै सपने देखण की मनाही कोन्या,\nबीच रस्ते भटकण की भी मनाही कोन्या।\nध्रुवतारा राह दिखावैगा।\n\n[Bridge]\nआ, पहाड़ चढ़ां।\nआ, चाँद नै देखां।\nबादलां तै कंधा मिला कै,\nबरखा बण कै बरसण का मंतर सीखां।\n\n[Final Chorus]\nमन्नै सपने देखण की मनाही कोन्या।\nतेरे सपन्यां नै मेरे सपन्यां में\nपिरोण की भी मनाही कोन्या।\n\n[Soft Outro]\nतेरे सपन्यां नै मेरे सपन्यां में...\nपिरोण की भी मनाही कोन्या।\n",
+      "after_sha256": "8f9a7c332a217b7aacbac84ae8f48b37085de845b8934a89c805f9d6122ec1ec",
+      "changed": false,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    },
+    {
+      "slug": "hindi",
+      "language": "Hindi",
+      "path": "kb/poems/i-am-free-to-dream/languages/hindi.md",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "before_sha256": "745dfc9055b838b3bfdddf3eb16268f247a2635af651cef236bf3efc5b10b069",
+      "catalogued_audio_ids": [],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "Personal permission, बीच राह and the guiding star all remain.",
+        "समेटते repeats gathering; दुनिया को सीने से लगा रखा है keeps holding it close and both hopes.",
+        "Potter, shaping and colour remain. मुस्कान खिलाना is explicitly allowed by the meaning guide; do not call it a mistranslation merely because the original sows.",
+        "The four invitation images and मंत्र remain. There is no need to make the passage more devotional.",
+        "तुम्हारे सपनों को अपने सपनों में पिरोने retains threading the addressee's dreams into the speaker's."
+      ],
+      "decision": "Retain. No clear correction identified; a more Sanskritized version would not improve fidelity.",
+      "follow_up": "The colour participle can be assessed in performance for a complete thought. This review does not establish sung diction or pause quality.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro]\nमुझे सपने देखने की मनाही नहीं,\nबीच राह में खो जाने की भी मनाही नहीं।\nध्रुवतारा राह दिखाएगा।\n\n[Verse 1]\nसमेटते... समेटते...\nदुनिया को सीने से लगा रखा है—\nजोड़ देने की आस में,\nसँवार देने की आस में।\n\n[Verse 2]\nमैं एक कुम्हार हूँ।\n\nआकार देना सीखा है,\nरंगों से सजाकर,\nतुम्हारे चेहरे पर मुस्कान खिलाना सीखा है।\n\n[Chorus]\nमुझे सपने देखने की मनाही नहीं,\nबीच राह में खो जाने की भी मनाही नहीं।\nध्रुवतारा राह दिखाएगा।\n\n[Bridge]\nआओ, पहाड़ चढ़ें।\nआओ, चाँद निहारें।\nबादलों से कंधा मिलाकर,\nबारिश बन बरसने का मंत्र सीखें।\n\n[Final Chorus]\nमुझे सपने देखने की मनाही नहीं।\nतुम्हारे सपनों को अपने सपनों में\nपिरोने की भी मनाही नहीं।\n\n[Soft Outro]\nतुम्हारे सपनों को अपने सपनों में...\nपिरोने की भी मनाही नहीं।\n",
+      "after_lyrics": "[Intro]\nमुझे सपने देखने की मनाही नहीं,\nबीच राह में खो जाने की भी मनाही नहीं।\nध्रुवतारा राह दिखाएगा।\n\n[Verse 1]\nसमेटते... समेटते...\nदुनिया को सीने से लगा रखा है—\nजोड़ देने की आस में,\nसँवार देने की आस में।\n\n[Verse 2]\nमैं एक कुम्हार हूँ।\n\nआकार देना सीखा है,\nरंगों से सजाकर,\nतुम्हारे चेहरे पर मुस्कान खिलाना सीखा है।\n\n[Chorus]\nमुझे सपने देखने की मनाही नहीं,\nबीच राह में खो जाने की भी मनाही नहीं।\nध्रुवतारा राह दिखाएगा।\n\n[Bridge]\nआओ, पहाड़ चढ़ें।\nआओ, चाँद निहारें।\nबादलों से कंधा मिलाकर,\nबारिश बन बरसने का मंत्र सीखें।\n\n[Final Chorus]\nमुझे सपने देखने की मनाही नहीं।\nतुम्हारे सपनों को अपने सपनों में\nपिरोने की भी मनाही नहीं।\n\n[Soft Outro]\nतुम्हारे सपनों को अपने सपनों में...\nपिरोने की भी मनाही नहीं।\n",
+      "after_sha256": "745dfc9055b838b3bfdddf3eb16268f247a2635af651cef236bf3efc5b10b069",
+      "changed": false,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    },
+    {
+      "slug": "italian",
+      "language": "Italian",
+      "path": "kb/poems/i-am-free-to-dream/languages/italian.md",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "before_sha256": "1a6c506476a9a2e498d52a902f44ab512054f75a6f7e1e3d76d8f2de57a61c78",
+      "catalogued_audio_ids": [
+        "italian-audio-01"
+      ],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "A metà del cammino preserves midway and Stella Polare remains the guide.",
+        "Raccolgo repeats gathering; stringo a me is a close embrace; joining and making beautiful remain hopes.",
+        "Vasaio, form, colour and seminare un sorriso retain the creative sequence.",
+        "Fianco a fianco uses side by side rather than literal shoulders; it naturally preserves companionship with clouds. Mountain, moon and rain remain.",
+        "Intrecciare i tuoi sogni ai miei preserves interweaving, with the established refrain repetitions."
+      ],
+      "decision": "Retain the selected recording's words.",
+      "follow_up": "Libero and vasaio choose a masculine speaking voice for this arrangement. A female-led alternative would need its own agreement pass; do not infer the beloved's gender.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro]\nSono libero di sognare,\ndi perdermi a metà del cammino.\nLa Stella Polare mi guiderà.\n\n[Verse 1]\nRaccolgo… raccolgo…\nil mondo, e lo stringo a me,\ncon la speranza di unirlo,\ndi renderlo più bello.\n\n[Verse 2]\nSono un vasaio.\n\nHo imparato a dare forma,\na dare colore,\na seminare un sorriso\nsul tuo viso.\n\n[Chorus]\nSono libero di sognare,\ndi perdermi a metà del cammino.\nLa Stella Polare mi guiderà.\nSono libero di sognare.\n\n[Bridge]\nVieni, saliamo sulle montagne.\nVieni, guardiamo la luna.\nFianco a fianco con le nuvole,\nimpariamo il segreto\ndi cadere come pioggia.\n\n[Final Chorus]\nSono libero di sognare,\nlibero di intrecciare\ni tuoi sogni ai miei.\nSono libero di sognare.\n\n[Soft Outro]\nI tuoi sogni…\nintrecciati ai miei.\n",
+      "after_lyrics": "[Intro]\nSono libero di sognare,\ndi perdermi a metà del cammino.\nLa Stella Polare mi guiderà.\n\n[Verse 1]\nRaccolgo… raccolgo…\nil mondo, e lo stringo a me,\ncon la speranza di unirlo,\ndi renderlo più bello.\n\n[Verse 2]\nSono un vasaio.\n\nHo imparato a dare forma,\na dare colore,\na seminare un sorriso\nsul tuo viso.\n\n[Chorus]\nSono libero di sognare,\ndi perdermi a metà del cammino.\nLa Stella Polare mi guiderà.\nSono libero di sognare.\n\n[Bridge]\nVieni, saliamo sulle montagne.\nVieni, guardiamo la luna.\nFianco a fianco con le nuvole,\nimpariamo il segreto\ndi cadere come pioggia.\n\n[Final Chorus]\nSono libero di sognare,\nlibero di intrecciare\ni tuoi sogni ai miei.\nSono libero di sognare.\n\n[Soft Outro]\nI tuoi sogni…\nintrecciati ai miei.\n",
+      "after_sha256": "1a6c506476a9a2e498d52a902f44ab512054f75a6f7e1e3d76d8f2de57a61c78",
+      "changed": false,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    },
+    {
+      "slug": "kannada",
+      "language": "Kannada",
+      "path": "kb/poems/i-am-free-to-dream/languages/kannada.md",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "before_sha256": "c41803bcca45fe36aedf7a68fc329892ec23c26695386b77e57abb7f5965c2f8",
+      "catalogued_audio_ids": [],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "ನಡುದಾರಿಯಲ್ಲಿ keeps the middle of the road and the star guides.",
+        "ಒಂದೊಂದಾಗಿ means one by one, but the next line moves straight to embracing the world; no collecting verb is stated. Restore a repeated collecting action with ಕೂಡಿಸುತ್ತಾ... ಕೂಡಿಸುತ್ತಾ....",
+        "ಕುಂಬಾರ keeps the potter; shaping and colour remain; ನಗು ಅರಳಿಸಲು is the allowed blooming-smile adaptation.",
+        "Mountain, moon, cloud shoulders and rain-mantra remain in the invitation.",
+        "ಹೆಣೆಯಲೂ keeps weaving the addressee's dreams with the speaker's."
+      ],
+      "decision": "Apply the gathering repair in the lyric and its exact quoted style instruction, retaining the breath. Keep the rest.",
+      "follow_up": "The revised collecting verb needs a native Kannada poetic/cadence review before recording. This is a targeted model revision, not a fluent-speaker certification.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro]\nಕನಸು ಕಾಣಲು ನನಗೆ ತಡೆಯಿಲ್ಲ,\nನಡುದಾರಿಯಲ್ಲಿ ಕಳೆದುಹೋಗಲೂ ತಡೆಯಿಲ್ಲ.\nಧ್ರುವತಾರೆ ದಾರಿ ತೋರುತ್ತದೆ.\n\n[Verse 1]\nಒಂದೊಂದಾಗಿ... ಒಂದೊಂದಾಗಿ...\nಜಗತ್ತನ್ನು ಎದೆಗಪ್ಪಿಕೊಂಡಿದ್ದೇನೆ—\nಕೂಡಿಸುವ ಆಸೆಯಿಂದ,\nಅಂದಗೊಳಿಸುವ ಆಸೆಯಿಂದ.\n\n[Verse 2]\nನಾನೊಬ್ಬ ಕುಂಬಾರ.\n\nರೂಪ ಕೊಡಲು ಕಲಿತಿದ್ದೇನೆ,\nಬಣ್ಣ ಹಚ್ಚಿ,\nನಿನ್ನ ಮೊಗದಲ್ಲಿ ನಗು ಅರಳಿಸಲು ಕಲಿತಿದ್ದೇನೆ.\n\n[Chorus]\nಕನಸು ಕಾಣಲು ನನಗೆ ತಡೆಯಿಲ್ಲ,\nನಡುದಾರಿಯಲ್ಲಿ ಕಳೆದುಹೋಗಲೂ ತಡೆಯಿಲ್ಲ.\nಧ್ರುವತಾರೆ ದಾರಿ ತೋರುತ್ತದೆ.\n\n[Bridge]\nಬಾ, ಬೆಟ್ಟ ಏರೋಣ.\nಬಾ, ಚಂದಿರನ ನೋಡೋಣ.\nಮೋಡಗಳೊಡನೆ ಹೆಗಲು ಸೇರಿಸಿ,\nಮಳೆಯಾಗಿ ಸುರಿಯುವ ಮಂತ್ರ ಕಲಿಯೋಣ.\n\n[Final Chorus]\nಕನಸು ಕಾಣಲು ನನಗೆ ತಡೆಯಿಲ್ಲ.\nನಿನ್ನ ಕನಸುಗಳನ್ನು ನನ್ನ ಕನಸುಗಳೊಂದಿಗೆ\nಹೆಣೆಯಲೂ ತಡೆಯಿಲ್ಲ.\n\n[Soft Outro]\nನಿನ್ನ ಕನಸುಗಳನ್ನು ನನ್ನ ಕನಸುಗಳೊಂದಿಗೆ...\nಹೆಣೆಯಲೂ ತಡೆಯಿಲ್ಲ.\n",
+      "after_lyrics": "[Intro]\nಕನಸು ಕಾಣಲು ನನಗೆ ತಡೆಯಿಲ್ಲ,\nನಡುದಾರಿಯಲ್ಲಿ ಕಳೆದುಹೋಗಲೂ ತಡೆಯಿಲ್ಲ.\nಧ್ರುವತಾರೆ ದಾರಿ ತೋರುತ್ತದೆ.\n\n[Verse 1]\nಕೂಡಿಸುತ್ತಾ... ಕೂಡಿಸುತ್ತಾ...\nಜಗತ್ತನ್ನು ಎದೆಗಪ್ಪಿಕೊಂಡಿದ್ದೇನೆ—\nಕೂಡಿಸುವ ಆಸೆಯಿಂದ,\nಅಂದಗೊಳಿಸುವ ಆಸೆಯಿಂದ.\n\n[Verse 2]\nನಾನೊಬ್ಬ ಕುಂಬಾರ.\n\nರೂಪ ಕೊಡಲು ಕಲಿತಿದ್ದೇನೆ,\nಬಣ್ಣ ಹಚ್ಚಿ,\nನಿನ್ನ ಮೊಗದಲ್ಲಿ ನಗು ಅರಳಿಸಲು ಕಲಿತಿದ್ದೇನೆ.\n\n[Chorus]\nಕನಸು ಕಾಣಲು ನನಗೆ ತಡೆಯಿಲ್ಲ,\nನಡುದಾರಿಯಲ್ಲಿ ಕಳೆದುಹೋಗಲೂ ತಡೆಯಿಲ್ಲ.\nಧ್ರುವತಾರೆ ದಾರಿ ತೋರುತ್ತದೆ.\n\n[Bridge]\nಬಾ, ಬೆಟ್ಟ ಏರೋಣ.\nಬಾ, ಚಂದಿರನ ನೋಡೋಣ.\nಮೋಡಗಳೊಡನೆ ಹೆಗಲು ಸೇರಿಸಿ,\nಮಳೆಯಾಗಿ ಸುರಿಯುವ ಮಂತ್ರ ಕಲಿಯೋಣ.\n\n[Final Chorus]\nಕನಸು ಕಾಣಲು ನನಗೆ ತಡೆಯಿಲ್ಲ.\nನಿನ್ನ ಕನಸುಗಳನ್ನು ನನ್ನ ಕನಸುಗಳೊಂದಿಗೆ\nಹೆಣೆಯಲೂ ತಡೆಯಿಲ್ಲ.\n\n[Soft Outro]\nನಿನ್ನ ಕನಸುಗಳನ್ನು ನನ್ನ ಕನಸುಗಳೊಂದಿಗೆ...\nಹೆಣೆಯಲೂ ತಡೆಯಿಲ್ಲ.\n",
+      "after_sha256": "ceff79f27f3fa239f6e6d71df126a572499ddf79cd7c06561d17677faa5412a1",
+      "changed": true,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    },
+    {
+      "slug": "konkani",
+      "language": "Konkani",
+      "path": "kb/poems/i-am-free-to-dream/languages/konkani.md",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "before_sha256": "2f5d8f17a32522eb261f26dec198eff80a2fe72565c171e9dc121593cb040f9d",
+      "catalogued_audio_ids": [],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "The freedom, straying and star are represented, but वाटेर वाट gives on-the-road wording without an explicit midway marker.",
+        "वेंचून and काळजाशी धरला preserve gathering and close holding; joining and beautifying remain hopes.",
+        "कुंभार remains the potter; flowering laughter/smile is the permitted lyrical choice.",
+        "The invitation keeps mountains, moon, cloud shoulders and rain-mantra.",
+        "गुंफपाकय retains the final weaving into the speaker's dreams."
+      ],
+      "decision": "Retain provisionally. A midway repair should be made in the chosen Konkani variety rather than by importing Marathi or Hindi wording.",
+      "follow_up": "Prioritize a Devanagari Konkani reader: confirm verb forms शिकलां, the address/invitation, and a natural midway phrase. Do not claim these forms are incorrect without that review.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro]\nम्हाका सपनां पळोवपाक मनाय ना,\nवाटेर वाट चुकपाकय मनाय ना.\nध्रुवतारो वाट दाखयतलो.\n\n[Verse 1]\nवेंचून... वेंचून...\nसंवसाराक काळजाशी धरला—\nजोडपाच्या आस्तेन,\nसोबीत करपाच्या आस्तेन.\n\n[Verse 2]\nहांव एक कुंभार.\n\nआकार दिवपाक शिकलां,\nरंग भरून,\nतुज्या तोंडार हांसो फुलोवपाक शिकलां.\n\n[Chorus]\nम्हाका सपनां पळोवपाक मनाय ना,\nवाटेर वाट चुकपाकय मनाय ना.\nध्रुवतारो वाट दाखयतलो.\n\n[Bridge]\nये, दोंगर चडूंया.\nये, चंद्र पळोवूंया.\nढगांक खांदो लावून,\nपावस जावन पडपाचो मंत्र शिकूंया.\n\n[Final Chorus]\nम्हाका सपनां पळोवपाक मनाय ना.\nतुजीं सपनां म्हज्या सपनांत\nगुंफपाकय मनाय ना.\n\n[Soft Outro]\nतुजीं सपनां म्हज्या सपनांत...\nगुंफपाकय मनाय ना.\n",
+      "after_lyrics": "[Intro]\nम्हाका सपनां पळोवपाक मनाय ना,\nवाटेर वाट चुकपाकय मनाय ना.\nध्रुवतारो वाट दाखयतलो.\n\n[Verse 1]\nवेंचून... वेंचून...\nसंवसाराक काळजाशी धरला—\nजोडपाच्या आस्तेन,\nसोबीत करपाच्या आस्तेन.\n\n[Verse 2]\nहांव एक कुंभार.\n\nआकार दिवपाक शिकलां,\nरंग भरून,\nतुज्या तोंडार हांसो फुलोवपाक शिकलां.\n\n[Chorus]\nम्हाका सपनां पळोवपाक मनाय ना,\nवाटेर वाट चुकपाकय मनाय ना.\nध्रुवतारो वाट दाखयतलो.\n\n[Bridge]\nये, दोंगर चडूंया.\nये, चंद्र पळोवूंया.\nढगांक खांदो लावून,\nपावस जावन पडपाचो मंत्र शिकूंया.\n\n[Final Chorus]\nम्हाका सपनां पळोवपाक मनाय ना.\nतुजीं सपनां म्हज्या सपनांत\nगुंफपाकय मनाय ना.\n\n[Soft Outro]\nतुजीं सपनां म्हज्या सपनांत...\nगुंफपाकय मनाय ना.\n",
+      "after_sha256": "2f5d8f17a32522eb261f26dec198eff80a2fe72565c171e9dc121593cb040f9d",
+      "changed": false,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    },
+    {
+      "slug": "maithili",
+      "language": "Maithili",
+      "path": "kb/poems/i-am-free-to-dream/languages/maithili.md",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "before_sha256": "8fcb624651365c8ccbaf17c910b16bcc4b4fc50033db2ac9dd6340947cec6ea5",
+      "catalogued_audio_ids": [],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "आध बाटमे keeps halfway and the North Star guides.",
+        "समेटैत and छातीसँ लगा रखने keep gathering and holding close, followed by the two hopes.",
+        "कुम्हार preserves the role; हँसी फुलाएब is the allowed blooming-smile adaptation.",
+        "The invitation preserves mountain, moon, cloud shoulders and rain-mantra.",
+        "अहाँक सपना अपन सपनामे retains whose dreams are woven into whose; अहाँ maintains respectful address."
+      ],
+      "decision": "Retain provisionally; preserve Maithili rather than smoothing into Hindi.",
+      "follow_up": "Native review of सजेबाक, the invitation's verb endings and the chosen respectful register remains open. These are questions, not confirmed errors.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro]\nहमरा सपना देखबाक मनाही नहि अछि,\nआध बाटमे हेरा जाएबाक सेहो मनाही नहि अछि।\nध्रुवतारा बाट देखाओत।\n\n[Verse 1]\nसमेटैत... समेटैत...\nसंसारकेँ छातीसँ लगा रखने छी—\nजोड़बाक आसमे,\nसजेबाक आसमे।\n\n[Verse 2]\nहम एकटा कुम्हार छी।\n\nआकार देब सीखने छी,\nरंग भरि कऽ,\nअहाँक मुँहपर हँसी फुलाएब सीखने छी।\n\n[Chorus]\nहमरा सपना देखबाक मनाही नहि अछि,\nआध बाटमे हेरा जाएबाक सेहो मनाही नहि अछि।\nध्रुवतारा बाट देखाओत।\n\n[Bridge]\nआउ, पहाड़ चढ़ी।\nआउ, चान देखि।\nमेघसँ कान्ह मिला कऽ,\nबरखा बनि बरसबाक मंत्र सीखी।\n\n[Final Chorus]\nहमरा सपना देखबाक मनाही नहि अछि।\nअहाँक सपना अपन सपनामे\nगूँथबाक सेहो मनाही नहि अछि।\n\n[Soft Outro]\nअहाँक सपना अपन सपनामे...\nगूँथबाक सेहो मनाही नहि अछि।\n",
+      "after_lyrics": "[Intro]\nहमरा सपना देखबाक मनाही नहि अछि,\nआध बाटमे हेरा जाएबाक सेहो मनाही नहि अछि।\nध्रुवतारा बाट देखाओत।\n\n[Verse 1]\nसमेटैत... समेटैत...\nसंसारकेँ छातीसँ लगा रखने छी—\nजोड़बाक आसमे,\nसजेबाक आसमे।\n\n[Verse 2]\nहम एकटा कुम्हार छी।\n\nआकार देब सीखने छी,\nरंग भरि कऽ,\nअहाँक मुँहपर हँसी फुलाएब सीखने छी।\n\n[Chorus]\nहमरा सपना देखबाक मनाही नहि अछि,\nआध बाटमे हेरा जाएबाक सेहो मनाही नहि अछि।\nध्रुवतारा बाट देखाओत।\n\n[Bridge]\nआउ, पहाड़ चढ़ी।\nआउ, चान देखि।\nमेघसँ कान्ह मिला कऽ,\nबरखा बनि बरसबाक मंत्र सीखी।\n\n[Final Chorus]\nहमरा सपना देखबाक मनाही नहि अछि।\nअहाँक सपना अपन सपनामे\nगूँथबाक सेहो मनाही नहि अछि।\n\n[Soft Outro]\nअहाँक सपना अपन सपनामे...\nगूँथबाक सेहो मनाही नहि अछि।\n",
+      "after_sha256": "8fcb624651365c8ccbaf17c910b16bcc4b4fc50033db2ac9dd6340947cec6ea5",
+      "changed": false,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    },
+    {
+      "slug": "malayalam",
+      "language": "Malayalam",
+      "path": "kb/poems/i-am-free-to-dream/languages/malayalam.md",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "before_sha256": "00a8b3f3194644e7462e64b8beb7e4454b09a83dfd2326c1cc6ac0a599a5239d",
+      "catalogued_audio_ids": [
+        "malayalam-audio-01"
+      ],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "പാതിവഴിയിൽ keeps halfway; the star guides.",
+        "പെറുക്കി repeats gathering and മാറോടണച്ചിരിക്കുന്നു holds the world to the chest; both hopes remain.",
+        "കുശവൻ is the potter; പുഞ്ചിരി വിരിയിക്കാൻ is the permitted blooming smile.",
+        "നിലാവ് evokes moonlight rather than naming the moon alone, a natural local poetic choice. Mountains, cloud shoulders and rain-mantra remain.",
+        "ഇഴചേർക്കാനും retains the intertwining of dreams."
+      ],
+      "decision": "Retain the selected recording's lyric.",
+      "follow_up": "The shifts between നിൻ and നിന്റെ are literary short/full forms, not automatically a register error. A fluent Malayalam reader should check the long potter sentence in the sung phrase.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro]\nസ്വപ്നം കാണാൻ എനിക്ക് വിലക്കില്ല,\nപാതിവഴിയിൽ വഴിതെറ്റാനും വിലക്കില്ല.\nധ്രുവനക്ഷത്രം വഴി കാട്ടും.\n\n[Verse 1]\nപെറുക്കി... പെറുക്കി...\nലോകത്തെ മാറോടണച്ചിരിക്കുന്നു—\nഒന്നുചേർക്കാമെന്ന പ്രതീക്ഷയിൽ,\nഅണിയിച്ചൊരുക്കാമെന്ന പ്രതീക്ഷയിൽ.\n\n[Verse 2]\nഞാനൊരു കുശവൻ.\n\nരൂപം നൽകാൻ പഠിച്ചിട്ടുണ്ട്,\nനിറങ്ങൾ ചാർത്തി,\nനിൻ മുഖത്ത് പുഞ്ചിരി വിരിയിക്കാൻ പഠിച്ചിട്ടുണ്ട്.\n\n[Chorus]\nസ്വപ്നം കാണാൻ എനിക്ക് വിലക്കില്ല,\nപാതിവഴിയിൽ വഴിതെറ്റാനും വിലക്കില്ല.\nധ്രുവനക്ഷത്രം വഴി കാട്ടും.\n\n[Bridge]\nവാ, മല കയറാം.\nവാ, നിലാവ് കാണാം.\nമേഘങ്ങളോട് തോൾ ചേർത്ത്,\nമഴയായി പെയ്യാൻ മന്ത്രം പഠിക്കാം.\n\n[Final Chorus]\nസ്വപ്നം കാണാൻ എനിക്ക് വിലക്കില്ല.\nനിന്റെ സ്വപ്നങ്ങളെ എന്റെ സ്വപ്നങ്ങളോട്\nഇഴചേർക്കാനും വിലക്കില്ല.\n\n[Soft Outro]\nനിന്റെ സ്വപ്നങ്ങളെ എന്റെ സ്വപ്നങ്ങളോട്...\nഇഴചേർക്കാനും വിലക്കില്ല.\n",
+      "after_lyrics": "[Intro]\nസ്വപ്നം കാണാൻ എനിക്ക് വിലക്കില്ല,\nപാതിവഴിയിൽ വഴിതെറ്റാനും വിലക്കില്ല.\nധ്രുവനക്ഷത്രം വഴി കാട്ടും.\n\n[Verse 1]\nപെറുക്കി... പെറുക്കി...\nലോകത്തെ മാറോടണച്ചിരിക്കുന്നു—\nഒന്നുചേർക്കാമെന്ന പ്രതീക്ഷയിൽ,\nഅണിയിച്ചൊരുക്കാമെന്ന പ്രതീക്ഷയിൽ.\n\n[Verse 2]\nഞാനൊരു കുശവൻ.\n\nരൂപം നൽകാൻ പഠിച്ചിട്ടുണ്ട്,\nനിറങ്ങൾ ചാർത്തി,\nനിൻ മുഖത്ത് പുഞ്ചിരി വിരിയിക്കാൻ പഠിച്ചിട്ടുണ്ട്.\n\n[Chorus]\nസ്വപ്നം കാണാൻ എനിക്ക് വിലക്കില്ല,\nപാതിവഴിയിൽ വഴിതെറ്റാനും വിലക്കില്ല.\nധ്രുവനക്ഷത്രം വഴി കാട്ടും.\n\n[Bridge]\nവാ, മല കയറാം.\nവാ, നിലാവ് കാണാം.\nമേഘങ്ങളോട് തോൾ ചേർത്ത്,\nമഴയായി പെയ്യാൻ മന്ത്രം പഠിക്കാം.\n\n[Final Chorus]\nസ്വപ്നം കാണാൻ എനിക്ക് വിലക്കില്ല.\nനിന്റെ സ്വപ്നങ്ങളെ എന്റെ സ്വപ്നങ്ങളോട്\nഇഴചേർക്കാനും വിലക്കില്ല.\n\n[Soft Outro]\nനിന്റെ സ്വപ്നങ്ങളെ എന്റെ സ്വപ്നങ്ങളോട്...\nഇഴചേർക്കാനും വിലക്കില്ല.\n",
+      "after_sha256": "00a8b3f3194644e7462e64b8beb7e4454b09a83dfd2326c1cc6ac0a599a5239d",
+      "changed": false,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    },
+    {
+      "slug": "mandarin",
+      "language": "Mandarin Chinese",
+      "path": "kb/poems/i-am-free-to-dream/languages/mandarin.md",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "before_sha256": "9489a8266bc7bb29b19c02a8220828d62b34d7564d46f627dc6fe7b349f052ed",
+      "catalogued_audio_ids": [],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "The freedom construction is clear and 半途 preserves midway; 北极星 is retained.",
+        "一点一点 repeats the gradual collecting, with 收拢 explicitly gathering and 紧紧抱在怀里 holding tight. Both hopes remain.",
+        "陶匠, shaping, colour and 种下一抹微笑 retain potter and sowing.",
+        "Mountains, moon and shoulders with clouds remain. The rain line omits the mantra/secret and adds 轻轻, gently: a musical softening, not literal source wording.",
+        "织进我的梦里 keeps the dreams woven into the speaker's."
+      ],
+      "decision": "Retain. Do not turn every musical condensation into a defect.",
+      "follow_up": "For a future closer literary version, consider whether to restore learning rain's secret. Have a Mandarin poet assess it in the whole bridge rather than adding explanatory language to this song.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro]\n我有做梦的自由，\n也有半途迷路的自由。\n北极星会为我指路。\n\n[Verse 1]\n一点一点……一点一点……\n我把世界收拢，紧紧抱在怀里，\n盼着把它拼合，\n盼着让它美丽。\n\n[Verse 2]\n我是一名陶匠。\n\n我学会了塑形，\n学会了着色，\n学会在你的脸上，\n种下一抹微笑。\n\n[Chorus]\n我有做梦的自由，\n也有半途迷路的自由。\n北极星会为我指路。\n\n[Bridge]\n来吧，我们去爬山，\n来吧，我们去看月亮。\n和云朵肩并着肩，\n学会化作雨，轻轻落下。\n\n[Final Chorus]\n我有做梦的自由，\n也有这样的自由——\n把你的梦，\n织进我的梦里。\n\n[Soft Outro]\n把你的梦……\n织进我的梦里。\n",
+      "after_lyrics": "[Intro]\n我有做梦的自由，\n也有半途迷路的自由。\n北极星会为我指路。\n\n[Verse 1]\n一点一点……一点一点……\n我把世界收拢，紧紧抱在怀里，\n盼着把它拼合，\n盼着让它美丽。\n\n[Verse 2]\n我是一名陶匠。\n\n我学会了塑形，\n学会了着色，\n学会在你的脸上，\n种下一抹微笑。\n\n[Chorus]\n我有做梦的自由，\n也有半途迷路的自由。\n北极星会为我指路。\n\n[Bridge]\n来吧，我们去爬山，\n来吧，我们去看月亮。\n和云朵肩并着肩，\n学会化作雨，轻轻落下。\n\n[Final Chorus]\n我有做梦的自由，\n也有这样的自由——\n把你的梦，\n织进我的梦里。\n\n[Soft Outro]\n把你的梦……\n织进我的梦里。\n",
+      "after_sha256": "9489a8266bc7bb29b19c02a8220828d62b34d7564d46f627dc6fe7b349f052ed",
+      "changed": false,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    },
+    {
+      "slug": "marathi",
+      "language": "Marathi",
+      "path": "kb/poems/i-am-free-to-dream/languages/marathi.md",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "before_sha256": "34e639f9084d7ade802714bcf22c440e307f7bfdf6da76b5804ddc697d72fe5a",
+      "catalogued_audio_ids": [],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "वाटेत means on the way, dropping the explicit halfway position. Restore अर्ध्या वाटेत in the intro and chorus.",
+        "वेचत and उराशी कवटाळलं retain gathering and holding close; joining and adorning remain hopes.",
+        "कुंभार is retained and हसू फुलवायला is the allowed blooming-smile choice.",
+        "The invitation keeps mountain, moon, cloud shoulders and rain-mantra.",
+        "गुंफायलाही retains weaving into the speaker's dreams."
+      ],
+      "decision": "Apply the limited halfway repair. Keep the regional lyric character.",
+      "follow_up": "शिकलो selects a masculine speaker for this arrangement. Native Marathi cadence review of the slightly lengthened refrain remains open.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro]\nस्वप्नं पाहायला मला मनाई नाही,\nवाटेत हरवायलाही मनाई नाही.\nध्रुवतारा वाट दाखवेल.\n\n[Verse 1]\nवेचत... वेचत...\nसारं जग उराशी कवटाळलं आहे—\nजोडून द्यायच्या आशेने,\nसजवून द्यायच्या आशेने.\n\n[Verse 2]\nमी एक कुंभार.\n\nआकार द्यायला शिकलो आहे,\nरंग भरून,\nतुझ्या चेहऱ्यावर हसू फुलवायला शिकलो आहे.\n\n[Chorus]\nस्वप्नं पाहायला मला मनाई नाही,\nवाटेत हरवायलाही मनाई नाही.\nध्रुवतारा वाट दाखवेल.\n\n[Bridge]\nचल, डोंगर चढूया.\nचल, चंद्र पाहूया.\nढगांच्या खांद्याला खांदा लावून,\nपाऊस होऊन बरसण्याचा मंत्र शिकूया.\n\n[Final Chorus]\nस्वप्नं पाहायला मला मनाई नाही.\nतुझी स्वप्नं माझ्या स्वप्नांत\nगुंफायलाही मनाई नाही.\n\n[Soft Outro]\nतुझी स्वप्नं माझ्या स्वप्नांत...\nगुंफायलाही मनाई नाही.\n",
+      "after_lyrics": "[Intro]\nस्वप्नं पाहायला मला मनाई नाही,\nअर्ध्या वाटेत हरवायलाही मनाई नाही.\nध्रुवतारा वाट दाखवेल.\n\n[Verse 1]\nवेचत... वेचत...\nसारं जग उराशी कवटाळलं आहे—\nजोडून द्यायच्या आशेने,\nसजवून द्यायच्या आशेने.\n\n[Verse 2]\nमी एक कुंभार.\n\nआकार द्यायला शिकलो आहे,\nरंग भरून,\nतुझ्या चेहऱ्यावर हसू फुलवायला शिकलो आहे.\n\n[Chorus]\nस्वप्नं पाहायला मला मनाई नाही,\nअर्ध्या वाटेत हरवायलाही मनाई नाही.\nध्रुवतारा वाट दाखवेल.\n\n[Bridge]\nचल, डोंगर चढूया.\nचल, चंद्र पाहूया.\nढगांच्या खांद्याला खांदा लावून,\nपाऊस होऊन बरसण्याचा मंत्र शिकूया.\n\n[Final Chorus]\nस्वप्नं पाहायला मला मनाई नाही.\nतुझी स्वप्नं माझ्या स्वप्नांत\nगुंफायलाही मनाई नाही.\n\n[Soft Outro]\nतुझी स्वप्नं माझ्या स्वप्नांत...\nगुंफायलाही मनाई नाही.\n",
+      "after_sha256": "ac65c9997394511b69899cdec1a3f4f670ea337afe8e20b35d0f1f59891b4c52",
+      "changed": true,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    },
+    {
+      "slug": "nepali",
+      "language": "Nepali",
+      "path": "kb/poems/i-am-free-to-dream/languages/nepali.md",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "before_sha256": "b7807a870dd47ea49bc8005d1406dda3a51a077d9bec5968033fc406b111f1dd",
+      "catalogued_audio_ids": [],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "बीच बाटोमै and the guiding star preserve the opening relation.",
+        "बटुल्दै repeats gathering and छातीमा अँगालेको holds the world close, with the two hopes.",
+        "कुमाले, form and colour remain; मुस्कान फुलाउन is the allowed blooming smile.",
+        "Mountain, moon, cloud shoulders and rain-mantra remain.",
+        "उन्न carries stringing/weaving the addressee's dreams with the speaker's."
+      ],
+      "decision": "Retain. No confident textual repair identified in this reading.",
+      "follow_up": "A Nepali literary reader should assess छातीमा अँगालेको and सपनासँग उन्न as full phrases, including their sung cadence. These are review priorities, not established mistakes.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro]\nमलाई सपना देख्न मनाही छैन,\nबीच बाटोमै हराउन पनि मनाही छैन।\nध्रुवताराले बाटो देखाउनेछ।\n\n[Verse 1]\nबटुल्दै... बटुल्दै...\nसंसारलाई छातीमा अँगालेको छु—\nजोड्ने आशामा,\nसजाउने आशामा।\n\n[Verse 2]\nम एक कुमाले हुँ।\n\nआकार दिन सिकेको छु,\nरङ भरेर,\nतिम्रो मुहारमा मुस्कान फुलाउन सिकेको छु।\n\n[Chorus]\nमलाई सपना देख्न मनाही छैन,\nबीच बाटोमै हराउन पनि मनाही छैन।\nध्रुवताराले बाटो देखाउनेछ।\n\n[Bridge]\nआऊ, पहाड चढौँ।\nआऊ, जून हेरौँ।\nबादलसँग काँध मिलाएर,\nवर्षा बनी झर्ने मन्त्र सिकौँ।\n\n[Final Chorus]\nमलाई सपना देख्न मनाही छैन।\nतिम्रा सपना मेरा सपनासँग\nउन्न पनि मनाही छैन।\n\n[Soft Outro]\nतिम्रा सपना मेरा सपनासँग...\nउन्न पनि मनाही छैन।\n",
+      "after_lyrics": "[Intro]\nमलाई सपना देख्न मनाही छैन,\nबीच बाटोमै हराउन पनि मनाही छैन।\nध्रुवताराले बाटो देखाउनेछ।\n\n[Verse 1]\nबटुल्दै... बटुल्दै...\nसंसारलाई छातीमा अँगालेको छु—\nजोड्ने आशामा,\nसजाउने आशामा।\n\n[Verse 2]\nम एक कुमाले हुँ।\n\nआकार दिन सिकेको छु,\nरङ भरेर,\nतिम्रो मुहारमा मुस्कान फुलाउन सिकेको छु।\n\n[Chorus]\nमलाई सपना देख्न मनाही छैन,\nबीच बाटोमै हराउन पनि मनाही छैन।\nध्रुवताराले बाटो देखाउनेछ।\n\n[Bridge]\nआऊ, पहाड चढौँ।\nआऊ, जून हेरौँ।\nबादलसँग काँध मिलाएर,\nवर्षा बनी झर्ने मन्त्र सिकौँ।\n\n[Final Chorus]\nमलाई सपना देख्न मनाही छैन।\nतिम्रा सपना मेरा सपनासँग\nउन्न पनि मनाही छैन।\n\n[Soft Outro]\nतिम्रा सपना मेरा सपनासँग...\nउन्न पनि मनाही छैन।\n",
+      "after_sha256": "b7807a870dd47ea49bc8005d1406dda3a51a077d9bec5968033fc406b111f1dd",
+      "changed": false,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    },
+    {
+      "slug": "portuguese",
+      "language": "Portuguese — Brazilian setting",
+      "path": "kb/poems/i-am-free-to-dream/languages/portuguese.md",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "before_sha256": "0e0eeaae8c448d2a9f424b4f32d811bc25946f4cb2dacf24362153c7e16c61d6",
+      "catalogued_audio_ids": [],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "No meio do caminho preserves midway and the Pole Star guides.",
+        "Recolho repeats gathering; joining its parts makes the implied gathering understandable. The embrace is retained, though less explicitly tight.",
+        "Oleiro and semear um sorriso keep potter and sowing. Barro is an explicit inference from the trade.",
+        "The mountain/moon/cloud-shoulder sequence remains; segredo renders mantra without adding a religious frame.",
+        "Entrelaçar seus sonhos nos meus keeps the inward weaving direction."
+      ],
+      "decision": "Retain the broadly Brazilian phrasing; no systematic switch to European Portuguese.",
+      "follow_up": "Check Vem with seu in the intended Brazilian voice; it is not automatically an error to repair by imposing another variety. A Portuguese poet can assess the collecting refrain before recording.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro]\nSou livre para sonhar,\npara me perder no meio do caminho.\nA Estrela Polar vai me guiar.\n\n[Verse 1]\nRecolho... recolho...\no mundo e o abraço,\nna esperança de juntar suas partes,\nna esperança de deixá-lo mais belo.\n\n[Verse 2]\nSou oleiro.\n\nAprendi a dar forma ao barro,\na cobri-lo de cor,\na semear um sorriso\nno seu rosto.\n\n[Chorus]\nSou livre para sonhar,\npara me perder no meio do caminho.\nA Estrela Polar vai me guiar.\n\n[Bridge]\nVem, vamos subir montanhas.\nVem, vamos olhar a lua.\nOmbro a ombro com as nuvens,\nvamos aprender o segredo\nde cair como chuva.\n\n[Final Chorus]\nSou livre para sonhar,\nlivre para entrelaçar\nseus sonhos nos meus.\n\n[Soft Outro]\nLivre para entrelaçar...\nseus sonhos nos meus.\n",
+      "after_lyrics": "[Intro]\nSou livre para sonhar,\npara me perder no meio do caminho.\nA Estrela Polar vai me guiar.\n\n[Verse 1]\nRecolho... recolho...\no mundo e o abraço,\nna esperança de juntar suas partes,\nna esperança de deixá-lo mais belo.\n\n[Verse 2]\nSou oleiro.\n\nAprendi a dar forma ao barro,\na cobri-lo de cor,\na semear um sorriso\nno seu rosto.\n\n[Chorus]\nSou livre para sonhar,\npara me perder no meio do caminho.\nA Estrela Polar vai me guiar.\n\n[Bridge]\nVem, vamos subir montanhas.\nVem, vamos olhar a lua.\nOmbro a ombro com as nuvens,\nvamos aprender o segredo\nde cair como chuva.\n\n[Final Chorus]\nSou livre para sonhar,\nlivre para entrelaçar\nseus sonhos nos meus.\n\n[Soft Outro]\nLivre para entrelaçar...\nseus sonhos nos meus.\n",
+      "after_sha256": "0e0eeaae8c448d2a9f424b4f32d811bc25946f4cb2dacf24362153c7e16c61d6",
+      "changed": false,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    },
+    {
+      "slug": "punjabi",
+      "language": "Punjabi",
+      "path": "kb/poems/i-am-free-to-dream/languages/punjabi.md",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "before_sha256": "9a2f8184b4d93657b9c450398259fec0580b64fb072b5adff02104f7f51df136",
+      "catalogued_audio_ids": [],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "ਅੱਧ ਰਾਹੇ keeps halfway; the star guides.",
+        "ਸਮੇਟਦਿਆਂ and ਹਿੱਕ ਨਾਲ ਲਾਇਆ ਹੋਇਆ retain gathering and holding close; both hopes remain.",
+        "ਘੁਮਿਆਰ keeps the potter; ਹਾਸਾ ਖਿੜਾਉਣਾ is the allowed blooming smile.",
+        "The invitation retains mountains, moon, cloud shoulders and rain-mantra.",
+        "ਪਰੋਣ keeps threading the beloved's dreams into the speaker's."
+      ],
+      "decision": "Retain the existing Gurmukhi lyric.",
+      "follow_up": "A Punjabi reader should assess the contemporary register across ਹਾਂ/ਏ and the potter wording. Do not replace Punjabi vocabulary just because a Hindi cognate seems more familiar.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro]\nਮੈਨੂੰ ਸੁਪਨੇ ਵੇਖਣ ਦੀ ਮਨਾਹੀ ਨਹੀਂ,\nਅੱਧ ਰਾਹੇ ਗੁਆਚ ਜਾਣ ਦੀ ਵੀ ਮਨਾਹੀ ਨਹੀਂ।\nਧਰੂ ਤਾਰਾ ਰਾਹ ਵਿਖਾਵੇਗਾ।\n\n[Verse 1]\nਸਮੇਟਦਿਆਂ... ਸਮੇਟਦਿਆਂ...\nਦੁਨੀਆ ਨੂੰ ਹਿੱਕ ਨਾਲ ਲਾਇਆ ਹੋਇਆ ਏ—\nਇਸ ਨੂੰ ਜੋੜਨ ਦੀ ਆਸ ਵਿੱਚ,\nਇਸ ਨੂੰ ਸਜਾਉਣ ਦੀ ਆਸ ਵਿੱਚ।\n\n[Verse 2]\nਮੈਂ ਇੱਕ ਘੁਮਿਆਰ ਹਾਂ।\n\nਰੂਪ ਦੇਣਾ ਸਿੱਖ ਲਿਆ ਏ,\nਰੰਗ ਭਰ ਕੇ,\nਤੇਰੇ ਮੁੱਖ ਉੱਤੇ ਹਾਸਾ ਖਿੜਾਉਣਾ ਸਿੱਖ ਲਿਆ ਏ।\n\n[Chorus]\nਮੈਨੂੰ ਸੁਪਨੇ ਵੇਖਣ ਦੀ ਮਨਾਹੀ ਨਹੀਂ,\nਅੱਧ ਰਾਹੇ ਗੁਆਚ ਜਾਣ ਦੀ ਵੀ ਮਨਾਹੀ ਨਹੀਂ।\nਧਰੂ ਤਾਰਾ ਰਾਹ ਵਿਖਾਵੇਗਾ।\n\n[Bridge]\nਆ, ਪਹਾੜ ਚੜ੍ਹੀਏ।\nਆ, ਚੰਨ ਨਿਹਾਰੀਏ।\nਬੱਦਲਾਂ ਨਾਲ ਮੋਢਾ ਜੋੜ ਕੇ,\nਮੀਂਹ ਬਣ ਵਰ੍ਹਨ ਦਾ ਮੰਤਰ ਸਿੱਖੀਏ।\n\n[Final Chorus]\nਮੈਨੂੰ ਸੁਪਨੇ ਵੇਖਣ ਦੀ ਮਨਾਹੀ ਨਹੀਂ।\nਤੇਰੇ ਸੁਪਨੇ ਆਪਣੇ ਸੁਪਨਿਆਂ ਵਿੱਚ\nਪਰੋਣ ਦੀ ਵੀ ਮਨਾਹੀ ਨਹੀਂ।\n\n[Soft Outro]\nਤੇਰੇ ਸੁਪਨੇ ਆਪਣੇ ਸੁਪਨਿਆਂ ਵਿੱਚ...\nਪਰੋਣ ਦੀ ਵੀ ਮਨਾਹੀ ਨਹੀਂ।\n",
+      "after_lyrics": "[Intro]\nਮੈਨੂੰ ਸੁਪਨੇ ਵੇਖਣ ਦੀ ਮਨਾਹੀ ਨਹੀਂ,\nਅੱਧ ਰਾਹੇ ਗੁਆਚ ਜਾਣ ਦੀ ਵੀ ਮਨਾਹੀ ਨਹੀਂ।\nਧਰੂ ਤਾਰਾ ਰਾਹ ਵਿਖਾਵੇਗਾ।\n\n[Verse 1]\nਸਮੇਟਦਿਆਂ... ਸਮੇਟਦਿਆਂ...\nਦੁਨੀਆ ਨੂੰ ਹਿੱਕ ਨਾਲ ਲਾਇਆ ਹੋਇਆ ਏ—\nਇਸ ਨੂੰ ਜੋੜਨ ਦੀ ਆਸ ਵਿੱਚ,\nਇਸ ਨੂੰ ਸਜਾਉਣ ਦੀ ਆਸ ਵਿੱਚ।\n\n[Verse 2]\nਮੈਂ ਇੱਕ ਘੁਮਿਆਰ ਹਾਂ।\n\nਰੂਪ ਦੇਣਾ ਸਿੱਖ ਲਿਆ ਏ,\nਰੰਗ ਭਰ ਕੇ,\nਤੇਰੇ ਮੁੱਖ ਉੱਤੇ ਹਾਸਾ ਖਿੜਾਉਣਾ ਸਿੱਖ ਲਿਆ ਏ।\n\n[Chorus]\nਮੈਨੂੰ ਸੁਪਨੇ ਵੇਖਣ ਦੀ ਮਨਾਹੀ ਨਹੀਂ,\nਅੱਧ ਰਾਹੇ ਗੁਆਚ ਜਾਣ ਦੀ ਵੀ ਮਨਾਹੀ ਨਹੀਂ।\nਧਰੂ ਤਾਰਾ ਰਾਹ ਵਿਖਾਵੇਗਾ।\n\n[Bridge]\nਆ, ਪਹਾੜ ਚੜ੍ਹੀਏ।\nਆ, ਚੰਨ ਨਿਹਾਰੀਏ।\nਬੱਦਲਾਂ ਨਾਲ ਮੋਢਾ ਜੋੜ ਕੇ,\nਮੀਂਹ ਬਣ ਵਰ੍ਹਨ ਦਾ ਮੰਤਰ ਸਿੱਖੀਏ।\n\n[Final Chorus]\nਮੈਨੂੰ ਸੁਪਨੇ ਵੇਖਣ ਦੀ ਮਨਾਹੀ ਨਹੀਂ।\nਤੇਰੇ ਸੁਪਨੇ ਆਪਣੇ ਸੁਪਨਿਆਂ ਵਿੱਚ\nਪਰੋਣ ਦੀ ਵੀ ਮਨਾਹੀ ਨਹੀਂ।\n\n[Soft Outro]\nਤੇਰੇ ਸੁਪਨੇ ਆਪਣੇ ਸੁਪਨਿਆਂ ਵਿੱਚ...\nਪਰੋਣ ਦੀ ਵੀ ਮਨਾਹੀ ਨਹੀਂ।\n",
+      "after_sha256": "9a2f8184b4d93657b9c450398259fec0580b64fb072b5adff02104f7f51df136",
+      "changed": false,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    },
+    {
+      "slug": "sambalpuri",
+      "language": "Sambalpuri",
+      "path": "kb/poems/i-am-free-to-dream/languages/sambalpuri.md",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "before_sha256": "7b94a0b53be0ac6f3c3ab73b2fc1b8fc511d9c13e4d1fcbb8f750c990bd412cf",
+      "catalogued_audio_ids": [
+        "sambalpuri-audio-01",
+        "sambalpuri-playful-audio-01"
+      ],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "ମଝି ବାଟେ retains midway; the star shows the way.",
+        "ସାଉଁଟି is repeated with the agreed breath; ଜାବ୍‌ଡ଼ି ଧରିଛେଁ retains the close embrace and both hopes.",
+        "କୁମ୍ଭାର୍ ମୁଇଁ keeps the potter and full pause. ହସ୍ ବୁନ୍‌ବାର୍ retains sowing rather than replacing it with generic happiness.",
+        "The invitation keeps mountain, moon, cloud shoulders and rain-mantra in locally inflected forms.",
+        "ତୋର୍ ସପନ୍‌କେ ମୋର୍ ସପନ୍‌ନେ preserves the final direction of weaving."
+      ],
+      "decision": "Retain the author-selected local wording and limited vocal directions; do not normalize it to standard Odia.",
+      "follow_up": "A Sambalpuri/Kosali reader should validate the chosen regional forms and spelling, including ଦେଖେଇଦେବା and ଝର୍‌ବାର୍. The solo and playful releases still need take-specific sung-text checks; this base-page reading is not that check.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro - Male Solo]\nମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ,\nମଝି ବାଟେ ହଜିଯିବାକେ ବି ମନା ନାଇଁ।\nଧ୍ରୁବତାରା ବାଟ୍ ଦେଖେଇଦେବା।\n\n[Verse 1 - Male Solo]\nସାଉଁଟି... ସାଉଁଟି...\nସଂସାର୍‌କେ ଜାବ୍‌ଡ଼ି ଧରିଛେଁ—\nଜୁଡ଼ିଦେବାର୍ ଆଶାନେ,\nସଜେଇଦେବାର୍ ଆଶାନେ।\n\n[Verse 2 - Male Solo]\nକୁମ୍ଭାର୍ ମୁଇଁ।\n\nଗଢ଼ିଦେବାର୍ ସିଖିଛେଁ,\nରଙ୍ଗ୍ ଲଗେଇ,\nତୋର୍ ମୁହେଁ ହସ୍ ବୁନ୍‌ବାର୍ ସିଖିଛେଁ।\n\n[Chorus - Male Lead]\nମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ,\nମଝି ବାଟେ ହଜିଯିବାକେ ବି ମନା ନାଇଁ।\nଧ୍ରୁବତାରା ବାଟ୍ ଦେଖେଇଦେବା।\n\n[Bridge - Male Lead, Soft Female Responses]\nଆ, ପାହାଡ଼୍ ଚଢ଼୍‌ମା।\nଆ, ଜନ୍ ଦେଖ୍‌ମା।\nବାଦଲ୍ ସାଙ୍ଗେ କାନ୍ଧ୍ ମିଲେଇ,\nବର୍ଷା ହେଇ ଝର୍‌ବାର୍ ମନ୍ତର୍ ସିଖ୍‌ମା।\n\n[Final Chorus - Male and Female Duet]\nମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ।\nତୋର୍ ସପନ୍‌କେ ମୋର୍ ସପନ୍‌ନେ\nଗୁଁଥିଦେବାକେ ବି ମନା ନାଇଁ।\n\n[Soft Outro - Both Voices]\nତୋର୍ ସପନ୍‌କେ ମୋର୍ ସପନ୍‌ନେ...\nଗୁଁଥିଦେବାକେ ବି ମନା ନାଇଁ।\n",
+      "after_lyrics": "[Intro - Male Solo]\nମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ,\nମଝି ବାଟେ ହଜିଯିବାକେ ବି ମନା ନାଇଁ।\nଧ୍ରୁବତାରା ବାଟ୍ ଦେଖେଇଦେବା।\n\n[Verse 1 - Male Solo]\nସାଉଁଟି... ସାଉଁଟି...\nସଂସାର୍‌କେ ଜାବ୍‌ଡ଼ି ଧରିଛେଁ—\nଜୁଡ଼ିଦେବାର୍ ଆଶାନେ,\nସଜେଇଦେବାର୍ ଆଶାନେ।\n\n[Verse 2 - Male Solo]\nକୁମ୍ଭାର୍ ମୁଇଁ।\n\nଗଢ଼ିଦେବାର୍ ସିଖିଛେଁ,\nରଙ୍ଗ୍ ଲଗେଇ,\nତୋର୍ ମୁହେଁ ହସ୍ ବୁନ୍‌ବାର୍ ସିଖିଛେଁ।\n\n[Chorus - Male Lead]\nମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ,\nମଝି ବାଟେ ହଜିଯିବାକେ ବି ମନା ନାଇଁ।\nଧ୍ରୁବତାରା ବାଟ୍ ଦେଖେଇଦେବା।\n\n[Bridge - Male Lead, Soft Female Responses]\nଆ, ପାହାଡ଼୍ ଚଢ଼୍‌ମା।\nଆ, ଜନ୍ ଦେଖ୍‌ମା।\nବାଦଲ୍ ସାଙ୍ଗେ କାନ୍ଧ୍ ମିଲେଇ,\nବର୍ଷା ହେଇ ଝର୍‌ବାର୍ ମନ୍ତର୍ ସିଖ୍‌ମା।\n\n[Final Chorus - Male and Female Duet]\nମତେ ସପନ୍ ଦେଖ୍‌ବାକେ ମନା ନାଇଁ।\nତୋର୍ ସପନ୍‌କେ ମୋର୍ ସପନ୍‌ନେ\nଗୁଁଥିଦେବାକେ ବି ମନା ନାଇଁ।\n\n[Soft Outro - Both Voices]\nତୋର୍ ସପନ୍‌କେ ମୋର୍ ସପନ୍‌ନେ...\nଗୁଁଥିଦେବାକେ ବି ମନା ନାଇଁ।\n",
+      "after_sha256": "7b94a0b53be0ac6f3c3ab73b2fc1b8fc511d9c13e4d1fcbb8f750c990bd412cf",
+      "changed": false,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    },
+    {
+      "slug": "sanskrit",
+      "language": "Sanskrit",
+      "path": "kb/poems/i-am-free-to-dream/languages/sanskrit.md",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "before_sha256": "4d47f9e939b690b3e34933da9cfc8285dc0f73c7878e0d6198b50ec4029d19a5",
+      "catalogued_audio_ids": [],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "मार्गाद् विचलितुम् says to stray from the path, but no longer specifies midway. Permission and guiding star remain.",
+        "सञ्चित्य repeats gathering; दृढमालिङ्गितं preserves the strong embrace. The two compound hope phrases retain joining and adornment.",
+        "कुम्भकार and स्मितं वप्तुं preserve potter and sowing. शिक्षितोऽहम् chooses a masculine speaker in this arrangement.",
+        "The bridge intends an invitation to two people and preserves mountain, moon, shoulder and rain-mantra.",
+        "गुम्फितुम् with तव ... मम स्वप्नेषु retains the weaving direction."
+      ],
+      "decision": "Retain provisionally; do not perform speculative Sanskrit grammar repairs.",
+      "follow_up": "Prioritize a Sanskrit specialist for सहांसं संयोज्य, dual invitation forms आरोहाव/पश्याव/शिक्षावहै, and a natural midway restoration. Their presence is not itself proof of a grammatical defect. No strict metrical form was claimed or tested.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro]\nस्वप्नान् द्रष्टुं न मे निषेधः,\nमार्गाद् विचलितुमपि न मे निषेधः।\nध्रुवतारा मे मार्गं दर्शयिष्यति।\n\n[Verse 1]\nसञ्चित्य... सञ्चित्य...\nजगदिदं दृढमालिङ्गितं मया—\nसन्धानाशया,\nअलङ्करणाशया।\n\n[Verse 2]\nकुम्भकारोऽहम्।\n\nरूपं दातुं शिक्षितोऽहम्,\nवर्णैरलङ्कृत्य,\nतव मुखे स्मितं वप्तुं शिक्षितोऽहम्।\n\n[Chorus]\nस्वप्नान् द्रष्टुं न मे निषेधः,\nमार्गाद् विचलितुमपि न मे निषेधः।\nध्रुवतारा मे मार्गं दर्शयिष्यति।\n\n[Bridge]\nएहि, पर्वतमारोहाव।\nएहि, चन्द्रं पश्याव।\nमेघैः सहांसं संयोज्य,\nवर्षणमन्त्रं शिक्षावहै।\n\n[Final Chorus]\nस्वप्नान् द्रष्टुं न मे निषेधः।\nतव स्वप्नान् मम स्वप्नेषु\nगुम्फितुमपि न मे निषेधः।\n\n[Soft Outro]\nतव स्वप्नान् मम स्वप्नेषु...\nगुम्फितुमपि न मे निषेधः।\n",
+      "after_lyrics": "[Intro]\nस्वप्नान् द्रष्टुं न मे निषेधः,\nमार्गाद् विचलितुमपि न मे निषेधः।\nध्रुवतारा मे मार्गं दर्शयिष्यति।\n\n[Verse 1]\nसञ्चित्य... सञ्चित्य...\nजगदिदं दृढमालिङ्गितं मया—\nसन्धानाशया,\nअलङ्करणाशया।\n\n[Verse 2]\nकुम्भकारोऽहम्।\n\nरूपं दातुं शिक्षितोऽहम्,\nवर्णैरलङ्कृत्य,\nतव मुखे स्मितं वप्तुं शिक्षितोऽहम्।\n\n[Chorus]\nस्वप्नान् द्रष्टुं न मे निषेधः,\nमार्गाद् विचलितुमपि न मे निषेधः।\nध्रुवतारा मे मार्गं दर्शयिष्यति।\n\n[Bridge]\nएहि, पर्वतमारोहाव।\nएहि, चन्द्रं पश्याव।\nमेघैः सहांसं संयोज्य,\nवर्षणमन्त्रं शिक्षावहै।\n\n[Final Chorus]\nस्वप्नान् द्रष्टुं न मे निषेधः।\nतव स्वप्नान् मम स्वप्नेषु\nगुम्फितुमपि न मे निषेधः।\n\n[Soft Outro]\nतव स्वप्नान् मम स्वप्नेषु...\nगुम्फितुमपि न मे निषेधः।\n",
+      "after_sha256": "4d47f9e939b690b3e34933da9cfc8285dc0f73c7878e0d6198b50ec4029d19a5",
+      "changed": false,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    },
+    {
+      "slug": "sindhi",
+      "language": "Sindhi",
+      "path": "kb/poems/i-am-free-to-dream/languages/sindhi.md",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "before_sha256": "fffa6a896494de69d385185dd63503c0474f0422db30de9fc8cb048ea98804b8",
+      "catalogued_audio_ids": [],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "اڌ واٽ retains halfway; قطب تارو keeps the star.",
+        "Repeated gathering and holding the world to the chest survive alongside the two hopes.",
+        "ڪنڀر preserves the potter; the flowering smile is an allowed adaptation.",
+        "The invitation retains mountains, moon, cloud shoulders and rain-mantra.",
+        "اُڻڻ preserves weaving the addressee's dreams into the speaker's own."
+      ],
+      "decision": "Retain provisionally; semantic comparison does not certify Sindhi idiom.",
+      "follow_up": "Native Sindhi review of ميڙيندي, agreement in لائي رکيو اٿم and the weaving verb is needed. Preserve the Sindhi script rather than normalizing it to Urdu.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro]\nمون کي خواب ڏسڻ جي منع ناهي،\nاڌ واٽ ۾ وڃائجي وڃڻ جي به منع ناهي.\nقطب تارو واٽ ڏيکاريندو.\n\n[Verse 1]\nميڙيندي... ميڙيندي...\nدنيا کي سيني سان لائي رکيو اٿم—\nان کي جوڙڻ جي آس ۾،\nان کي سنوارڻ جي آس ۾.\n\n[Verse 2]\nمان هڪ ڪنڀر آهيان.\n\nشڪل ڏيڻ سکيو اٿم،\nرنگ ڀري،\nتنهنجي مُک تي مُرڪ ڦُلائڻ سکيو اٿم.\n\n[Chorus]\nمون کي خواب ڏسڻ جي منع ناهي،\nاڌ واٽ ۾ وڃائجي وڃڻ جي به منع ناهي.\nقطب تارو واٽ ڏيکاريندو.\n\n[Bridge]\nاچ، جبل چڙهون.\nاچ، چنڊ ڏسون.\nڪڪرن سان ڪلهو ملائي،\nمينهن بڻجي وسڻ جو منتر سکون.\n\n[Final Chorus]\nمون کي خواب ڏسڻ جي منع ناهي.\nتنهنجا خواب پنهنجن خوابن ۾\nاُڻڻ جي به منع ناهي.\n\n[Soft Outro]\nتنهنجا خواب پنهنجن خوابن ۾...\nاُڻڻ جي به منع ناهي.\n",
+      "after_lyrics": "[Intro]\nمون کي خواب ڏسڻ جي منع ناهي،\nاڌ واٽ ۾ وڃائجي وڃڻ جي به منع ناهي.\nقطب تارو واٽ ڏيکاريندو.\n\n[Verse 1]\nميڙيندي... ميڙيندي...\nدنيا کي سيني سان لائي رکيو اٿم—\nان کي جوڙڻ جي آس ۾،\nان کي سنوارڻ جي آس ۾.\n\n[Verse 2]\nمان هڪ ڪنڀر آهيان.\n\nشڪل ڏيڻ سکيو اٿم،\nرنگ ڀري،\nتنهنجي مُک تي مُرڪ ڦُلائڻ سکيو اٿم.\n\n[Chorus]\nمون کي خواب ڏسڻ جي منع ناهي،\nاڌ واٽ ۾ وڃائجي وڃڻ جي به منع ناهي.\nقطب تارو واٽ ڏيکاريندو.\n\n[Bridge]\nاچ، جبل چڙهون.\nاچ، چنڊ ڏسون.\nڪڪرن سان ڪلهو ملائي،\nمينهن بڻجي وسڻ جو منتر سکون.\n\n[Final Chorus]\nمون کي خواب ڏسڻ جي منع ناهي.\nتنهنجا خواب پنهنجن خوابن ۾\nاُڻڻ جي به منع ناهي.\n\n[Soft Outro]\nتنهنجا خواب پنهنجن خوابن ۾...\nاُڻڻ جي به منع ناهي.\n",
+      "after_sha256": "fffa6a896494de69d385185dd63503c0474f0422db30de9fc8cb048ea98804b8",
+      "changed": false,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    },
+    {
+      "slug": "spanish",
+      "language": "Spanish",
+      "path": "kb/poems/i-am-free-to-dream/languages/spanish.md",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "before_sha256": "24b5dc51952d7d2438da9b08d040648ef7751a7c7a2ac935515b65fe04e8ce9c",
+      "catalogued_audio_ids": [],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "A mitad del camino explicitly retains midway; the Pole Star guides.",
+        "Recojo and abrazo preserve gathering and embracing; joining and beautifying are hopes, not completed achievements.",
+        "Alfarero and sembrar una sonrisa keep potter and sowing. Barro makes the trade's material explicit.",
+        "The invitation retains mountains, moon and shoulders beside clouds; secreto is a natural condensation of the rain-mantra.",
+        "Entretejer tus sueños con los míos retains mutual weaving without reversing the participants."
+      ],
+      "decision": "Retain; no clear corrective rewrite is needed.",
+      "follow_up": "The repeated Recojo is intentionally fragmentary until its object arrives. Native poetic and sung review can assess it without deleting the gathering breath. Alfarero follows the male-led arrangement.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro]\nSoy libre de soñar,\nde perderme a mitad del camino.\nLa Estrella Polar me guiará.\n\n[Verse 1]\nRecojo... recojo...\nel mundo y lo abrazo,\ncon la esperanza de unirlo,\nde hacerlo más hermoso.\n\n[Verse 2]\nSoy alfarero.\n\nAprendí a dar forma al barro,\na llenarlo de color,\na sembrar una sonrisa\nen tu rostro.\n\n[Chorus]\nSoy libre de soñar,\nde perderme a mitad del camino.\nLa Estrella Polar me guiará.\n\n[Bridge]\nVen, subamos las montañas.\nVen, miremos la luna.\nHombro a hombro con las nubes,\naprendamos el secreto\nde caer como lluvia.\n\n[Final Chorus]\nSoy libre de soñar,\nlibre de entretejer\ntus sueños con los míos.\n\n[Soft Outro]\nLibre de entretejer...\ntus sueños con los míos.\n",
+      "after_lyrics": "[Intro]\nSoy libre de soñar,\nde perderme a mitad del camino.\nLa Estrella Polar me guiará.\n\n[Verse 1]\nRecojo... recojo...\nel mundo y lo abrazo,\ncon la esperanza de unirlo,\nde hacerlo más hermoso.\n\n[Verse 2]\nSoy alfarero.\n\nAprendí a dar forma al barro,\na llenarlo de color,\na sembrar una sonrisa\nen tu rostro.\n\n[Chorus]\nSoy libre de soñar,\nde perderme a mitad del camino.\nLa Estrella Polar me guiará.\n\n[Bridge]\nVen, subamos las montañas.\nVen, miremos la luna.\nHombro a hombro con las nubes,\naprendamos el secreto\nde caer como lluvia.\n\n[Final Chorus]\nSoy libre de soñar,\nlibre de entretejer\ntus sueños con los míos.\n\n[Soft Outro]\nLibre de entretejer...\ntus sueños con los míos.\n",
+      "after_sha256": "24b5dc51952d7d2438da9b08d040648ef7751a7c7a2ac935515b65fe04e8ce9c",
+      "changed": false,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    },
+    {
+      "slug": "swahili",
+      "language": "Swahili / Kiswahili",
+      "path": "kb/poems/i-am-free-to-dream/languages/swahili.md",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "before_sha256": "883ce0b63f61302858495f35575fff74446afa3e4b408a720c5109ae4592dc67",
+      "catalogued_audio_ids": [],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "The opening retains freedom and getting lost, but njiani says on the way rather than explicitly midway. The North Star is retained as a source image.",
+        "Naukusanya repeats gathering; naukumbatia holds the world, followed by joining and beautifying hopes.",
+        "Mfinyanzi and kupanda tabasamu preserve potter and sowing a smile.",
+        "Mountains, moon and cloud shoulders remain; siri renders the rain-mantra as a secret.",
+        "Ndoto zako ndani ya ndoto zangu keeps the addressee's dreams inside the speaker's."
+      ],
+      "decision": "Retain provisionally; do not replace the North Star to relocate the poem geographically.",
+      "follow_up": "A Kiswahili reader should propose a natural midway phrase and check noun-class agreement/verb prefixes in the gathering stanza and kuzisuka ndoto. No speculative prefix correction is applied.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro]\nNiko huru kuota ndoto,\nhuru kupotea njiani.\nNyota ya Kaskazini itanionyesha njia.\n\n[Verse 1]\nNaukusanya... naukusanya...\nnaukumbatia ulimwengu,\nnikitumaini kuuunganisha,\nnikitumaini kuupamba.\n\n[Verse 2]\nMimi ni mfinyanzi.\n\nNimejifunza kuufinyanga udongo,\nkuupamba kwa rangi,\nna kupanda tabasamu\nusoni pako.\n\n[Chorus]\nNiko huru kuota ndoto,\nhuru kupotea njiani.\nNyota ya Kaskazini itanionyesha njia.\n\n[Bridge]\nNjoo, tupande milima.\nNjoo, tuutazame mwezi.\nBega kwa bega na mawingu,\ntujifunze siri\nya kudondoka kama mvua.\n\n[Final Chorus]\nNiko huru kuota ndoto,\nhuru kuzisuka ndoto zako\nndani ya ndoto zangu.\n\n[Soft Outro]\nNdoto zako...\nndani ya ndoto zangu.\n",
+      "after_lyrics": "[Intro]\nNiko huru kuota ndoto,\nhuru kupotea njiani.\nNyota ya Kaskazini itanionyesha njia.\n\n[Verse 1]\nNaukusanya... naukusanya...\nnaukumbatia ulimwengu,\nnikitumaini kuuunganisha,\nnikitumaini kuupamba.\n\n[Verse 2]\nMimi ni mfinyanzi.\n\nNimejifunza kuufinyanga udongo,\nkuupamba kwa rangi,\nna kupanda tabasamu\nusoni pako.\n\n[Chorus]\nNiko huru kuota ndoto,\nhuru kupotea njiani.\nNyota ya Kaskazini itanionyesha njia.\n\n[Bridge]\nNjoo, tupande milima.\nNjoo, tuutazame mwezi.\nBega kwa bega na mawingu,\ntujifunze siri\nya kudondoka kama mvua.\n\n[Final Chorus]\nNiko huru kuota ndoto,\nhuru kuzisuka ndoto zako\nndani ya ndoto zangu.\n\n[Soft Outro]\nNdoto zako...\nndani ya ndoto zangu.\n",
+      "after_sha256": "883ce0b63f61302858495f35575fff74446afa3e4b408a720c5109ae4592dc67",
+      "changed": false,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    },
+    {
+      "slug": "tamil",
+      "language": "Tamil",
+      "path": "kb/poems/i-am-free-to-dream/languages/tamil.md",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "before_sha256": "2d657b0f3d8280798edf655052b3c0e290bec23392e0509e4f1f684717155a24",
+      "catalogued_audio_ids": [
+        "tamil-audio-01",
+        "tamil-duet-audio-01"
+      ],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "நடுவழியில் retains midway and the star guides; title/opening word order differs naturally without changing meaning.",
+        "சிறிது சிறிதாய்ச் சேர்த்து conveys gathering bit by bit; இறுக அணைத்திருக்கிறேன் holds the world tightly and both hopes survive.",
+        "The potter declaration retains its separate breath; புன்னகை விதைக்க keeps sowing a smile.",
+        "The bridge keeps mountain, moon, cloud shoulders and rain-mantra.",
+        "பின்னிச் சேர்க்க retains weaving the addressee's dreams with the speaker's."
+      ],
+      "decision": "Retain the existing Tamil words and blank line after the potter. Do not force the chosen tune into a new line length.",
+      "follow_up": "A fluent listener should check the complete delivery of புன்னகை விதைக்கக் கற்றிருக்கிறேன் in each selected take. This text review has not heard or certified the solo or duet.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro]\nஎனக்குக் கனவு காணத் தடையில்லை,\nநடுவழியில் தொலைந்து போகவும் தடையில்லை.\nதுருவ நட்சத்திரம் வழிகாட்டும்.\n\n[Verse 1]\nசிறிது சிறிதாய்ச் சேர்த்து,\nஉலகை இறுக அணைத்திருக்கிறேன்—\nஅதை ஒன்றுசேர்க்கும் நம்பிக்கையில்,\nஅழகுபடுத்தும் நம்பிக்கையில்.\n\n[Verse 2]\nநான் ஒரு குயவன்.\n\nஉருவம் தரக் கற்றிருக்கிறேன்,\nவண்ணம் தீட்டி,\nஉன் முகத்தில் புன்னகை விதைக்கக் கற்றிருக்கிறேன்.\n\n[Chorus]\nஎனக்குக் கனவு காணத் தடையில்லை,\nநடுவழியில் தொலைந்து போகவும் தடையில்லை.\nதுருவ நட்சத்திரம் வழிகாட்டும்.\n\n[Bridge]\nவா, மலை ஏறுவோம்.\nவா, நிலவைப் பார்ப்போம்.\nமேகங்களோடு தோள் சேர்த்து,\nமழையாய்ப் பொழியும் மந்திரம் கற்போம்.\n\n[Final Chorus]\nஎனக்குக் கனவு காணத் தடையில்லை.\nஉன் கனவுகளை என் கனவுகளோடு\nபின்னிச் சேர்க்கவும் தடையில்லை.\n\n[Soft Outro]\nஉன் கனவுகளை என் கனவுகளோடு...\nபின்னிச் சேர்க்கவும் தடையில்லை.\n",
+      "after_lyrics": "[Intro]\nஎனக்குக் கனவு காணத் தடையில்லை,\nநடுவழியில் தொலைந்து போகவும் தடையில்லை.\nதுருவ நட்சத்திரம் வழிகாட்டும்.\n\n[Verse 1]\nசிறிது சிறிதாய்ச் சேர்த்து,\nஉலகை இறுக அணைத்திருக்கிறேன்—\nஅதை ஒன்றுசேர்க்கும் நம்பிக்கையில்,\nஅழகுபடுத்தும் நம்பிக்கையில்.\n\n[Verse 2]\nநான் ஒரு குயவன்.\n\nஉருவம் தரக் கற்றிருக்கிறேன்,\nவண்ணம் தீட்டி,\nஉன் முகத்தில் புன்னகை விதைக்கக் கற்றிருக்கிறேன்.\n\n[Chorus]\nஎனக்குக் கனவு காணத் தடையில்லை,\nநடுவழியில் தொலைந்து போகவும் தடையில்லை.\nதுருவ நட்சத்திரம் வழிகாட்டும்.\n\n[Bridge]\nவா, மலை ஏறுவோம்.\nவா, நிலவைப் பார்ப்போம்.\nமேகங்களோடு தோள் சேர்த்து,\nமழையாய்ப் பொழியும் மந்திரம் கற்போம்.\n\n[Final Chorus]\nஎனக்குக் கனவு காணத் தடையில்லை.\nஉன் கனவுகளை என் கனவுகளோடு\nபின்னிச் சேர்க்கவும் தடையில்லை.\n\n[Soft Outro]\nஉன் கனவுகளை என் கனவுகளோடு...\nபின்னிச் சேர்க்கவும் தடையில்லை.\n",
+      "after_sha256": "2d657b0f3d8280798edf655052b3c0e290bec23392e0509e4f1f684717155a24",
+      "changed": false,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    },
+    {
+      "slug": "telugu",
+      "language": "Telugu",
+      "path": "kb/poems/i-am-free-to-dream/languages/telugu.md",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "before_sha256": "3b5749062cf75f39f4dc846c2305b84e81833fe20f520a9a158f91915e860a65",
+      "catalogued_audio_ids": [
+        "telugu-audio-v4",
+        "telugu-audio-v1",
+        "telugu-audio-v2",
+        "telugu-audio-v3"
+      ],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "నడిదారిలో retains midway. దారి తప్పినా makes the permission 'even if I lose my way', a slight conditional recasting that preserves allowance rather than forbidding loss.",
+        "ఏరుకుంటూ repeats gathering and గుండెలకు హత్తుకున్నాను holds the world close, followed by both hopes.",
+        "కుమ్మరిని preserves the potter; చిరునవ్వులు పూయించడం is the allowed blooming-smile adaptation.",
+        "The invitation retains hills, the affectionate జాబిల్లి moon, cloud shoulders and rain-mantra.",
+        "అల్లుకోవడానికి keeps weaving the addressee's dreams with the speaker's."
+      ],
+      "decision": "Retain the selected text; do not flatten జాబిల్లి into a mechanically literal moon term.",
+      "follow_up": "Keep recorded pauses and the full potter declaration. A fluent sung-delivery review is still separate from this semantic reading.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro]\nకలలు కనడానికి నాకు అడ్డులేదు,\nనడిదారిలో దారి తప్పినా అడ్డులేదు.\nధ్రువతార దారి చూపుతుంది.\n\n[Verse 1]\nఏరుకుంటూ... ఏరుకుంటూ...\nలోకాన్ని గుండెలకు హత్తుకున్నాను—\nఒక్కటిగా కలపాలనే ఆశతో,\nఅందంగా మలచాలనే ఆశతో.\n\n[Verse 2]\nనేనొక కుమ్మరిని.\n\nరూపం ఇవ్వడం నేర్చుకున్నాను,\nరంగులద్ది,\nనీ ముఖాన చిరునవ్వులు పూయించడం నేర్చుకున్నాను.\n\n[Chorus]\nకలలు కనడానికి నాకు అడ్డులేదు,\nనడిదారిలో దారి తప్పినా అడ్డులేదు.\nధ్రువతార దారి చూపుతుంది.\n\n[Bridge]\nరా, కొండలెక్కుదాం.\nరా, జాబిల్లిని చూద్దాం.\nమేఘాలతో భుజం కలిపి,\nవానై కురిసే మంత్రం నేర్చుకుందాం.\n\n[Final Chorus]\nకలలు కనడానికి నాకు అడ్డులేదు.\nనీ కలలను నా కలలతో\nఅల్లుకోవడానికి కూడా అడ్డులేదు.\n\n[Soft Outro]\nనీ కలలను నా కలలతో...\nఅల్లుకోవడానికి అడ్డులేదు.\n",
+      "after_lyrics": "[Intro]\nకలలు కనడానికి నాకు అడ్డులేదు,\nనడిదారిలో దారి తప్పినా అడ్డులేదు.\nధ్రువతార దారి చూపుతుంది.\n\n[Verse 1]\nఏరుకుంటూ... ఏరుకుంటూ...\nలోకాన్ని గుండెలకు హత్తుకున్నాను—\nఒక్కటిగా కలపాలనే ఆశతో,\nఅందంగా మలచాలనే ఆశతో.\n\n[Verse 2]\nనేనొక కుమ్మరిని.\n\nరూపం ఇవ్వడం నేర్చుకున్నాను,\nరంగులద్ది,\nనీ ముఖాన చిరునవ్వులు పూయించడం నేర్చుకున్నాను.\n\n[Chorus]\nకలలు కనడానికి నాకు అడ్డులేదు,\nనడిదారిలో దారి తప్పినా అడ్డులేదు.\nధ్రువతార దారి చూపుతుంది.\n\n[Bridge]\nరా, కొండలెక్కుదాం.\nరా, జాబిల్లిని చూద్దాం.\nమేఘాలతో భుజం కలిపి,\nవానై కురిసే మంత్రం నేర్చుకుందాం.\n\n[Final Chorus]\nకలలు కనడానికి నాకు అడ్డులేదు.\nనీ కలలను నా కలలతో\nఅల్లుకోవడానికి కూడా అడ్డులేదు.\n\n[Soft Outro]\nనీ కలలను నా కలలతో...\nఅల్లుకోవడానికి అడ్డులేదు.\n",
+      "after_sha256": "3b5749062cf75f39f4dc846c2305b84e81833fe20f520a9a158f91915e860a65",
+      "changed": false,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    },
+    {
+      "slug": "urdu",
+      "language": "Urdu",
+      "path": "kb/poems/i-am-free-to-dream/languages/urdu.md",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "before_sha256": "11b4cc3b1a056362c508b45e84cb392be85621047cffde056f899860f7d265b7",
+      "catalogued_audio_ids": [],
+      "coverage": "Complete base lyric read against all five source stanzas; same-assistant review.",
+      "observations": [
+        "Personal permission, بیچ راہ and the guiding star remain. The opening's inversion is a poetic word-order choice, not automatically a grammatical error.",
+        "سمیٹتے and سینے سے لگا رکھا retain gathering and holding the world close; both hopes remain.",
+        "کمہار, صورت گری, colour and مسکراہٹ بونا retain potter and sowing.",
+        "The invitation retains mountain, moon, cloud shoulders and منتر. The culturally retained word need not be replaced with an Islamic devotional term.",
+        "پرونا keeps threading the addressee's dreams into the speaker's own."
+      ],
+      "decision": "Retain; avoid a bureaucratic ممانعت rewrite solely to regularize the refrain.",
+      "follow_up": "A fluent Urdu poetry reader should assess خواب دیکھنا مجھے منع نہیں in the intended nazm register and the participial line رنگ بھر کر. Do not automatically Persianize a plain intimate voice.",
+      "source_path": "kb/poems/i-am-free-to-dream/original.md",
+      "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+      "before_lyrics": "[Intro]\nخواب دیکھنا مجھے منع نہیں،\nبیچ راہ میں کھو جانا بھی منع نہیں۔\nقطبی تارا راہ دکھائے گا۔\n\n[Verse 1]\nسمیٹتے... سمیٹتے...\nدنیا کو سینے سے لگا رکھا ہے—\nاسے جوڑنے کی آس میں،\nاسے سنوارنے کی آس میں۔\n\n[Verse 2]\nمیں ایک کمہار ہوں۔\n\nصورت گری سیکھی ہے،\nرنگ بھر کر،\nتمہارے چہرے پر مسکراہٹ بونا سیکھا ہے۔\n\n[Chorus]\nخواب دیکھنا مجھے منع نہیں،\nبیچ راہ میں کھو جانا بھی منع نہیں۔\nقطبی تارا راہ دکھائے گا۔\n\n[Bridge]\nآؤ، پہاڑ چڑھیں۔\nآؤ، چاند کو دیکھیں۔\nبادلوں سے کندھا ملا کر،\nبارش بن کے برسنے کا منتر سیکھیں۔\n\n[Final Chorus]\nخواب دیکھنا مجھے منع نہیں۔\nتمہارے خواب اپنے خوابوں میں\nپرونا بھی منع نہیں۔\n\n[Soft Outro]\nتمہارے خواب اپنے خوابوں میں...\nپرونا بھی منع نہیں۔\n",
+      "after_lyrics": "[Intro]\nخواب دیکھنا مجھے منع نہیں،\nبیچ راہ میں کھو جانا بھی منع نہیں۔\nقطبی تارا راہ دکھائے گا۔\n\n[Verse 1]\nسمیٹتے... سمیٹتے...\nدنیا کو سینے سے لگا رکھا ہے—\nاسے جوڑنے کی آس میں،\nاسے سنوارنے کی آس میں۔\n\n[Verse 2]\nمیں ایک کمہار ہوں۔\n\nصورت گری سیکھی ہے،\nرنگ بھر کر،\nتمہارے چہرے پر مسکراہٹ بونا سیکھا ہے۔\n\n[Chorus]\nخواب دیکھنا مجھے منع نہیں،\nبیچ راہ میں کھو جانا بھی منع نہیں۔\nقطبی تارا راہ دکھائے گا۔\n\n[Bridge]\nآؤ، پہاڑ چڑھیں۔\nآؤ، چاند کو دیکھیں۔\nبادلوں سے کندھا ملا کر،\nبارش بن کے برسنے کا منتر سیکھیں۔\n\n[Final Chorus]\nخواب دیکھنا مجھے منع نہیں۔\nتمہارے خواب اپنے خوابوں میں\nپرونا بھی منع نہیں۔\n\n[Soft Outro]\nتمہارے خواب اپنے خوابوں میں...\nپرونا بھی منع نہیں۔\n",
+      "after_sha256": "11b4cc3b1a056362c508b45e84cb392be85621047cffde056f899860f7d265b7",
+      "changed": false,
+      "reviewer": "same-assistant",
+      "independent_fluent_review": false,
+      "author_approval_of_revision": false,
+      "review_status_after": "needs-native-review"
+    }
+  ]
+}
