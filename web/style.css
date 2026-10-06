@@ -814,3 +814,18 @@ article.art-credits { display:grid; grid-template-columns:.85fr 1.3fr; gap:80px;
 .original-poem-attribution h2 { font:400 23px/1.3 Georgia,serif; margin-top:26px; color:var(--ink); }
 .original-poem-next { align-items:center; flex-wrap:wrap; gap:20px; margin-top:32px; padding-top:24px; border-top:1px solid var(--line); }
 @media(max-width:760px) { .original-poem-layout { grid-template-columns:1fr; gap:32px; } .original-poem-attribution { padding-top:24px; border-top:1px solid var(--line); } .original-poem-text code { font-size:18px; } }
+
+/* Quiet track tools: generous targets, compact icons, details on demand. */
+.index-player .player-links { flex:0 1 auto; gap:6px; flex-wrap:nowrap; }
+.index-player .player-links .player-icon { width:40px; height:40px; min-height:40px; padding:10px; border:0; text-decoration:none; }
+.index-player .player-links .player-icon[aria-expanded="true"] { color:#eed39e; background:#ffffff15; }
+#index-favourite[aria-pressed="true"] svg { fill:currentColor; }
+.index-player .player-drawer .small { font-size:13px; margin:8px 0; }
+.index-player .player-drawer li { font-size:14px; }
+.index-player .player-drawer a { font-size:14px; min-height:40px; display:inline-flex; align-items:center; }
+.index-player .player-drawer button { min-height:44px; }
+@media(max-width:600px) {
+ .index-player .player-meta { justify-content:center; gap:0 12px; }
+ .index-player .player-volume { flex:1 1 100%; justify-content:center; }
+ .index-player .player-links { flex:0 1 auto; gap:6px; justify-content:center; }
+}

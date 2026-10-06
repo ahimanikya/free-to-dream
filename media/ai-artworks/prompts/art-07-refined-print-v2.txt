@@ -1,0 +1,6 @@
+Use case: precise-object-edit. Conservative art print refinement, not a new interpretation. Image 1 is the artist's original and sole authority for the artwork itself. Image 2 is the previous print edition, reference only for ivory paper and caption layout. Restore the original portrait's gentler, softer eye and mouth marks. Preserve the precise face geometry, age, imperfect smile, gaze, nose ring, veil and every loose drawn gesture. Do not invent or deepen hatching, beautify, change emotion or turn it into a new portrait.
+Create a portrait 2:3 print with the full original composition above a small elegant caption area. Retain original artwork aspect ratio, no cropping or stretching. Very light cleanup only, retaining handmade imperfections. No frame or wall. Match the prior edition's understated serif typography. Exact text below art:
+GRANDMOTHER
+Some love still asks if you have eaten.
+AHIMANIKYA SATAPATHY
+Title letter-spaced uppercase, caption italic, small author credit. Keep all text legible and outside the art. Preserve the emotional ambiguity of the original; no new objects or interpretations.

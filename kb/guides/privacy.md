@@ -23,6 +23,6 @@ A contributor may voluntarily report their own public social post. The project l
 
 ## Other requests and storage
 
-Public songs and videos are fetched from their indicated media hosts when the browser loads them. Those hosts and GitHub Pages receive normal web requests independently of optional analytics. Your browser keeps navigation state and your analytics preference locally. The listening interface has no account login or private analytics credentials embedded in it.
+Public songs and videos are fetched from their indicated media hosts when the browser loads them. Those hosts and GitHub Pages receive normal web requests independently of optional analytics. Your browser keeps navigation state, your analytics preference and any songs you save as favourites locally. Favourites stay on that browser and are not sent as ratings or analytics. Tap a saved song’s heart again to remove it. The listening interface has no account login or private analytics credentials embedded in it.
 
 Questions or correction requests can be raised through the [GitHub repository](https://github.com/ahimanikya/free-to-dream/issues). Do not post private information in a public issue.

@@ -148,7 +148,7 @@ function playerFixture(load=async()=>testTracks, loadLyrics=async()=>[]) {
   class Element {
     constructor(){this.listeners={};this.attributes={};this.dataset={};this.classList={contains:()=>false,toggle(){},add(){},remove(){}};this.options=[];this.style={setProperty(){}};this.volume=1;this.parentElement={};this.paused=true;this.checked=false;this.hidden=true;this.textContent='';}
     addEventListener(name,fn){(this.listeners[name]??=[]).push(fn);}
-    async emit(name){for(const fn of this.listeners[name]||[])await fn({});}
+    async emit(name,event={}){for(const fn of this.listeners[name]||[])await fn(event);}
     setAttribute(k,v){this.attributes[k]=v;}
     getAttribute(k){return this.attributes[k];}
     removeAttribute(k){delete this[k];delete this.attributes[k];}
@@ -160,7 +160,7 @@ function playerFixture(load=async()=>testTracks, loadLyrics=async()=>[]) {
     load(){}
     focus(){this.focused=true;}
   }
-  const ids=['index-player','index-audio','index-playlist','index-track-link','index-play-status','index-previous','index-next','index-stop','index-volume','index-state','index-position','index-close','index-toggle','index-play-icon','index-pause-icon','index-seek','index-elapsed','index-duration','index-mute','index-lyrics-link','index-lyric'];
+  const ids=['index-player','index-audio','index-playlist','index-track-link','index-play-status','index-previous','index-next','index-stop','index-volume','index-state','index-position','index-close','index-toggle','index-play-icon','index-pause-icon','index-seek','index-elapsed','index-duration','index-mute','index-lyrics-link','index-lyric','index-favourite','index-favourites-list','index-feedback','index-more-toggle','index-more','index-queue-toggle','index-queue','index-queue-list','index-queue-mode','index-lyrics-toggle','index-full-lyrics'];
   const nodes=Object.fromEntries(ids.map(id=>[id,new Element()]));
   const button=new Element();button.dataset.playRecording='or';button.attributes['aria-label']='Play Odia';
   const doc={querySelector:q=>nodes[q.slice(1)],querySelectorAll:q=>q==='[data-playlist]'?[nodes['index-playlist']]:[button],createElement:()=>new Element(),body:new Element()};
@@ -360,4 +360,44 @@ test('Version tabs sync audio/video, pause hidden players and reveal direct link
   assert.deepEqual(groups.map(g=>g.panels.map(p=>p.hidden)),[[false,true],[false,true]]);
   doc.defaultView.location.hash='#watch-jazz';windowEvents.hashchange();
   assert.equal(groups[0].panels[1].hidden,false);
+});
+
+
+import {createFavourites} from '../web/player-favourites.mjs';
+test('Personal favourites survive reload, toggle off, and handle corrupt or blocked storage', () => {
+  const values = new Map();
+  const storage = {getItem:key=>values.get(key), setItem:(key,value)=>values.set(key,value)};
+  const first = createFavourites(storage);
+  assert.deepEqual(first.toggle('or'), {saved:true, persisted:true});
+  const restored = createFavourites(storage);
+  assert.equal(restored.has('or'), true);
+  restored.toggle('or'); assert.equal(createFavourites(storage).has('or'), false);
+  assert.equal(createFavourites({getItem:()=>'{bad'}).has('or'), false);
+  assert.equal(createFavourites({getItem:()=>'[null,{},1,"or"]'}).has('or'), true);
+  const blocked = createFavourites({getItem(){throw Error();},setItem(){throw Error();}});
+  assert.deepEqual(blocked.toggle('or'), {saved:true,persisted:false});
+  assert.equal(blocked.has('or'), true);
+});
+test('Track tools follow the current recording, favourites replay, and Escape closes drawers without stopping music', async () => {
+  const {nodes:n,button,controller}=playerFixture();await controller.ready;await button.emit('click');
+  assert.match(n['index-feedback'].href,/language=odia&type=feedback&recording=or/);
+  await n['index-favourite'].emit('click');
+  assert.equal(n['index-favourite'].getAttribute('aria-pressed'),'true');
+  await n['index-more-toggle'].emit('click');
+  assert.equal(n['index-more'].hidden,false);
+  assert.equal(n['index-favourites-list'].options[0].options[0].textContent,'Odia · Odia song');
+  await n['index-next'].emit('click');
+  assert.equal(n['index-favourite'].getAttribute('aria-pressed'),'false');
+  assert.match(n['index-feedback'].href,/recording=en-country/);
+  await n['index-favourites-list'].options[0].options[0].emit('click');
+  assert.equal(n['index-audio'].src,'or.mp3');
+  await n['index-queue-toggle'].emit('click');
+  assert.equal(n['index-more'].hidden,true);assert.equal(n['index-queue'].hidden,false);
+  await n['index-player'].emit('keydown',{key:'Escape',preventDefault(){}});
+  assert.equal(n['index-queue'].hidden,true);assert.equal(n['index-queue-toggle'].focused,true);
+  assert.equal(n['index-audio'].paused,false);
+  await n['index-favourite'].emit('click');
+  assert.match(n['index-favourites-list'].options[0].textContent,/Tap the heart/);
+  await n['index-more-toggle'].emit('click');await n['index-close'].emit('click');
+  assert.equal(n['index-more'].hidden,true);
 });

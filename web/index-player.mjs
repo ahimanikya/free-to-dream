@@ -1,3 +1,4 @@
+import {createFavourites} from './player-favourites.mjs';
 import {setupMediaSession} from './media-session.mjs';
 import {lyricAt} from './lyrics.mjs';
 // Current takes only: keep the published catalog order, including alternate styles.
@@ -59,6 +60,14 @@ export function setupIndexPlayer(doc = document, load = () => fetch('assets/list
   const lyricsToggle = doc.querySelector('#index-lyrics-toggle'), fullLyrics = doc.querySelector('#index-full-lyrics');
   const lyricsText = doc.querySelector('#index-lyrics-text'), lyricsNote = doc.querySelector('#index-lyrics-note');
   const share = doc.querySelector('#index-share');
+  const favourite = doc.querySelector('#index-favourite'), favouritesList = doc.querySelector('#index-favourites-list');
+  const feedback = doc.querySelector('#index-feedback');
+  const moreToggle = doc.querySelector('#index-more-toggle'), morePanel = doc.querySelector('#index-more');
+  let storage;
+  try { storage = doc.defaultView?.localStorage; } catch { /* Storage can be unavailable. */ }
+  const favourites = createFavourites(storage);
+  const drawers = [[queueToggle, queuePanel], [lyricsToggle, fullLyrics], [moreToggle, morePanel]];
+
   let order = [], shuffleOn = false, repeatMode = 'off', launchButton = null;
   const nextTrack = (direction = 1, automatic = false) => current && nextInQueue(order, current.id, direction, repeatMode, automatic);
   const buttons = [...doc.querySelectorAll('[data-play-recording]')];
@@ -124,6 +133,7 @@ export function setupIndexPlayer(doc = document, load = () => fetch('assets/list
     }
     previous.disabled = !current;
     next.disabled = !current || !nextTrack();
+    syncFavourite();
     mediaSession?.sync();
   };
   function renderQueue() {
@@ -142,16 +152,58 @@ export function setupIndexPlayer(doc = document, load = () => fetch('assets/list
     }
     if (!upcoming.length) { const row = doc.createElement('li'); row.textContent = 'End of the queue. Turn on Repeat all to keep listening.'; queueList.append(row); }
   }
-  function toggleDrawer(which) {
-    const show = which.hidden;
-    if (queuePanel) queuePanel.hidden = true;
-    if (fullLyrics) fullLyrics.hidden = true;
-    which.hidden = !show;
-    queueToggle?.setAttribute('aria-expanded', String(!queuePanel.hidden));
-    lyricsToggle?.setAttribute('aria-expanded', String(!fullLyrics.hidden));
+  function closeDrawers() {
+    for (const [button, drawer] of drawers) {
+      if (drawer) drawer.hidden = true;
+      button?.setAttribute('aria-expanded', 'false');
+    }
   }
+  function toggleDrawer(which) {
+    if (!which) return;
+    const show = which.hidden;
+    closeDrawers();
+    if (show) {
+      which.hidden = false;
+      drawers.find(([, drawer]) => drawer === which)?.[0]?.setAttribute('aria-expanded', 'true');
+    }
+  }
+  function syncFavourite() {
+    if (!favourite) return;
+    const saved = Boolean(current && favourites.has(current.id));
+    favourite.disabled = !current;
+    favourite.setAttribute('aria-pressed', String(saved));
+    favourite.setAttribute('aria-label', saved ? 'Remove from favourites' : 'Save to favourites');
+    favourite.title = saved ? 'Remove from favourites' : 'Save to favourites';
+  }
+  function renderFavourites() {
+    if (!favouritesList) return;
+    favouritesList.replaceChildren();
+    const saved = playlistTracks(items).filter(t => favourites.has(t.id));
+    for (const take of saved) {
+      const row = doc.createElement('li'), button = doc.createElement('button');
+      button.type = 'button'; button.textContent = take.language_name + ' · ' + take.title;
+      button.addEventListener('click', () => { ++intent; start(take); });
+      row.append(button); favouritesList.append(row);
+    }
+    if (!saved.length) {
+      const row = doc.createElement('li'); row.textContent = 'Tap the heart on a song you love to find it here.';
+      favouritesList.append(row);
+    }
+  }
+  favourite?.addEventListener('click', () => {
+    if (!current) return;
+    const result = favourites.toggle(current.id);
+    status.textContent = result.saved ? (result.persisted ? 'Saved to your favourites on this browser.' : 'Saved for this visit. Browser storage is unavailable.') : 'Removed from your favourites.';
+    syncFavourite(); renderFavourites();
+  });
   queueToggle?.addEventListener('click', () => {renderQueue(); toggleDrawer(queuePanel);});
   lyricsToggle?.addEventListener('click', () => toggleDrawer(fullLyrics));
+  moreToggle?.addEventListener('click', () => {renderFavourites(); toggleDrawer(morePanel);});
+  panel.addEventListener('keydown', event => {
+    if (event.key !== 'Escape') return;
+    const open = drawers.find(([, drawer]) => drawer && !drawer.hidden);
+    if (open) { event.preventDefault(); closeDrawers(); open[0]?.focus?.(); }
+  });
   shuffle?.addEventListener('click', () => {
     shuffleOn = !shuffleOn; order = shuffleOn ? shuffledTracks(items, current?.id) : playlistTracks(items);
     shuffle.setAttribute('aria-pressed',String(shuffleOn)); shuffle.setAttribute('aria-label','Shuffle '+(shuffleOn?'on':'off'));
@@ -177,6 +229,8 @@ export function setupIndexPlayer(doc = document, load = () => fetch('assets/list
     const token = ++request;
     current = item; continuePlayback = true; stopped = false; panel.hidden = false; doc.body.classList.add('has-index-player');
     link.href = item.page;
+    if (feedback) feedback.href = 'contribute.html?' + new URLSearchParams({language:item.language, type:'feedback', recording:item.id});
+    renderFavourites();
     lyricsLink.href = item.lyric_page || 'poems--i-am-free-to-dream--languages--' + item.language + '.html#poem-text';
     lyricsLink.textContent = 'Read lyrics';
     cues = []; lyric.textContent = ''; lyric.hidden = true;
@@ -287,7 +341,7 @@ export function setupIndexPlayer(doc = document, load = () => fetch('assets/list
     ++intent; ++request; continuePlayback = false; stopped = false; current = null; cues = []; lyric.textContent = ''; lyric.hidden = true;
     player.pause(); player.removeAttribute('src'); player.load();
     mediaSession?.clear();
-    panel.hidden = true; for (const picker of pickers) picker.value = ''; sync(); doc.body.classList.remove('has-index-player');
+    closeDrawers(); panel.hidden = true; for (const picker of pickers) picker.value = ''; sync(); doc.body.classList.remove('has-index-player');
     launchButton?.focus?.();
   });
   for (const event of ['play', 'pause', 'ended']) player.addEventListener(event, sync);
