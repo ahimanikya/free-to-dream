@@ -1,0 +1,34 @@
+{
+  "issue": "https://github.com/ahimanikya/free-to-dream/issues/1",
+  "contributor": {
+    "github": "codevk",
+    "display_name": "Vikash Kumar"
+  },
+  "language": "Bhojpuri",
+  "poem": "i-am-free-to-dream",
+  "status": "author-adopted-applied-for-publication",
+  "feedback_scope": "One recurring line, not approval or review of the whole translation",
+  "source_line": "ମନା ନାହିଁ ମଝି ରାସ୍ତାରେ ହଜି ଜିବାକୁ",
+  "current_wording": "बीच राह में भटक जाए के मनाही नइखे।",
+  "suggested_wording": "बीच राह में हेरा जाए के मनाही नइखे।",
+  "contributor_reason": "“ହଜି ଜିବାକୁ” means closer to “हेरा जाए” captures that meaning better.",
+  "source_path": "kb/poems/i-am-free-to-dream/original.md",
+  "source_sha256": "df4463aa69fd6df21c351e79bac54c0e9ce616eb97f3948315d1190a8806cca6",
+  "current_page_path": "kb/poems/i-am-free-to-dream/languages/bhojpuri.md",
+  "current_page_sha256": "d4f6f89025dce0cd30dc2d955712313685750f0ed81ea634b3d1d5c7bed2f03a",
+  "locations": [
+    "Intro",
+    "Chorus"
+  ],
+  "assessment": "The source speaks of becoming lost. The current wandering/straying wording remains understandable in the road context; the contributor proposes a more direct regional expression for becoming lost. Recommend the proposed line for the next lyric revision, subject to author adoption and confirmation of the exact Bhojpuri form in the intended variety.",
+  "review_evidence": "Source and both textual occurrences compared by the assistant. Exact local wording supplied by the contributor; no independent whole-poem fluent review or sung evaluation performed. Limited dictionary search did not independently establish this exact Bhojpuri phrase.",
+  "author_adopted": true,
+  "applied_to_base_page": true,
+  "applied_to_historical_production": false,
+  "audio_regenerated": false,
+  "issue_comment_posted": false,
+  "issue_closed": false,
+  "author_direction": "publish it",
+  "revised_page_sha256": "eead0a29d16e120997946f1e1251450f9bee8bb284a9eb35a6f92ece995cc571",
+  "published": false
+}

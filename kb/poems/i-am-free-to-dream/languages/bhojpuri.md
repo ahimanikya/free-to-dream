@@ -35,7 +35,7 @@ music_review_status: musician-review-pending
 ```text
 [Intro - Male Lead, Soft Female Responses]
 हमरा सपना देखे के मनाही नइखे,
-बीच राह में भटक जाए के मनाही नइखे।
+बीच राह में हेरा जाए के मनाही नइखे।
 ध्रुवतारा राह देखाई।
 
 [Verse 1 - Male Lead, Gentle Female Answers]
@@ -53,7 +53,7 @@ music_review_status: musician-review-pending
 
 [Chorus - Male Lead, Soft Female Harmony]
 हमरा सपना देखे के मनाही नइखे,
-बीच राह में भटक जाए के मनाही नइखे।
+बीच राह में हेरा जाए के मनाही नइखे।
 ध्रुवतारा राह देखाई।
 
 [Bridge - Female Solo]
@@ -71,6 +71,8 @@ music_review_status: musician-review-pending
 तोहार सपना अपना सपना में...
 गूँथे के भी मनाही नइखे।
 ```
+
+Lyric updated with [Vikash Kumar’s suggestion](https://github.com/ahimanikya/free-to-dream/issues/1): **हेरा जाए** brings the line closer to the Odia **ହଜି ଜିବାକୁ** (to become lost). The existing Duet and Playful recordings retain **भटक जाए**.
 
 ## Why this musical direction
 
