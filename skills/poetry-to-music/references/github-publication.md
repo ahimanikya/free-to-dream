@@ -1,7 +1,7 @@
 # Publish selected recordings
 
 Repository: `https://github.com/ahimanikya/free-to-dream`
-Site: `https://poemwithoutborders.org/`
+Site: `https://kabitawithoutborders.org/`
 
 - Source lyrics/styles: `kb/poems/<poem>/languages/<language>.md`
 - Catalog: `catalog/recordings.json`
