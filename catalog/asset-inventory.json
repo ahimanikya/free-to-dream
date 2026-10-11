@@ -611,5 +611,29 @@
     "published": true,
     "repo_path": "media/odia/playful/i-am-free-to-dream-odia-playful-01.mp4",
     "public_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/39efd491bf4ee58c80790d0e041c1e2905ccc440/media/odia/playful/i-am-free-to-dream-odia-playful-01.mp4"
+  },
+  {
+    "sha256": "a1c51856005fd180fbaae110d15443a4bb75de4824a7b09795c8accfad44a853",
+    "local_path": null,
+    "bytes": 4427893,
+    "source_names": [
+      "i-am-free-to-dream-marathi-01.mp3"
+    ],
+    "role": "working-asset",
+    "published": true,
+    "repo_path": "media/marathi/i-am-free-to-dream-marathi-01.mp3",
+    "public_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/00a952af76806523fa8b937f8beddc79a9ec7353/media/marathi/i-am-free-to-dream-marathi-01.mp3"
+  },
+  {
+    "sha256": "21bdc5a0274928466b3b71d82084acc30ad94a47257a200d2fc19e94e8541954",
+    "local_path": null,
+    "bytes": 88681047,
+    "source_names": [
+      "i-am-free-to-dream-marathi-01.mp4"
+    ],
+    "role": "working-asset",
+    "published": true,
+    "repo_path": "media/marathi/i-am-free-to-dream-marathi-01.mp4",
+    "public_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/00a952af76806523fa8b937f8beddc79a9ec7353/media/marathi/i-am-free-to-dream-marathi-01.mp4"
   }
 ]

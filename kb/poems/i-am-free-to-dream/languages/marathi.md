@@ -80,7 +80,7 @@ The shared feeling is calm, soulful joy: affection, wonder and the freedom to dr
 
 ## Arrangement decisions and review
 
-**Status — proposed setting for the lyric draft.** The reasoning on this page is a creative direction to test with a fluent singer and musician, not a verified description of a recording.
+**Status — author-selected recording.** Track 1 was selected for publication on 12 October 2026, using the intimate bhavgeet direction below. The [selected take](https://suno.com/song/4dc5c24e-69a8-407a-bfee-c43a3a6d1d8f) and its matching video are available to listen to and watch. Selection records the author’s preference; fluent-speaker and musician review remain open. The notes below describe the intended arrangement.
 
 **Vocal choice — solo by default.** One lead keeps the poem’s first-person voice and long thoughts connected. Any second voice, shared refrain or harmony suggested in the arrangement notes is an optional variation to discuss with the author before generation; it is not required by the language.
 

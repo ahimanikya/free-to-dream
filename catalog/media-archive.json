@@ -430,6 +430,26 @@
       "title": "Odia playful video",
       "status": "working",
       "notes": "Author-selected Take 1; detailed performance review remains open."
+    },
+    {
+      "repo_path": "media/marathi/i-am-free-to-dream-marathi-01.mp3",
+      "sha256": "a1c51856005fd180fbaae110d15443a4bb75de4824a7b09795c8accfad44a853",
+      "bytes": 4427893,
+      "source_name": "i-am-free-to-dream-marathi-01.mp3",
+      "download_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/00a952af76806523fa8b937f8beddc79a9ec7353/media/marathi/i-am-free-to-dream-marathi-01.mp3",
+      "title": "Marathi audio",
+      "status": "working",
+      "notes": "Author-selected Track 1; fluent-speaker review remains open."
+    },
+    {
+      "repo_path": "media/marathi/i-am-free-to-dream-marathi-01.mp4",
+      "sha256": "21bdc5a0274928466b3b71d82084acc30ad94a47257a200d2fc19e94e8541954",
+      "bytes": 88681047,
+      "source_name": "i-am-free-to-dream-marathi-01.mp4",
+      "download_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/00a952af76806523fa8b937f8beddc79a9ec7353/media/marathi/i-am-free-to-dream-marathi-01.mp4",
+      "title": "Marathi video",
+      "status": "working",
+      "notes": "Author-selected Track 1; fluent-speaker review remains open."
     }
   ],
   "unavailable_originals": [

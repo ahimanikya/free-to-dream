@@ -3,7 +3,7 @@
   "poem": "i-am-free-to-dream",
   "language": "marathi",
   "arrangement": "solo-bhavgeet",
-  "stage": "rendered",
+  "stage": "publication-pending",
   "prepared_at": "2026-10-11T16:34:05.662397+00:00",
   "authorization": "Author requested Marathi audio in Suno, then site publication after selecting a track. One candidate pair only.",
   "source_path": "kb/poems/i-am-free-to-dream/languages/marathi.md",
@@ -67,7 +67,22 @@
     }
   ],
   "selected_candidate": "4dc5c24e-69a8-407a-bfee-c43a3a6d1d8f",
-  "publication": "MP3 and matching MP4 ready; media upload in progress.",
+  "publication": {
+    "media_commit": "00a952af76806523fa8b937f8beddc79a9ec7353",
+    "media_uploaded": true,
+    "audio_recording_id": "marathi-audio-01",
+    "video_recording_id": "marathi-video-01",
+    "page_url": "https://kabitawithoutborders.org/poems--i-am-free-to-dream--languages--marathi.html",
+    "status": "Media uploaded and public byte-range streaming verified; site update ready for deployment.",
+    "validation": {
+      "collection": "passed",
+      "python_tests": 32,
+      "node_tests": 36,
+      "build": "passed",
+      "direct_audio_range_http": 206,
+      "direct_video_range_http": 206
+    }
+  },
   "translation_review_status": "needs-native-review",
   "submitted_at": "2026-10-11T16:34:31.929231+00:00",
   "submission_count": 1,
