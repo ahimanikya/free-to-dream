@@ -1,0 +1,69 @@
+{
+  "schema_version": 2,
+  "poem": "i-am-free-to-dream",
+  "prepared_at": "2026-10-11T16:30:04.033721+00:00",
+  "settings_policy": {
+    "schema_version": 1,
+    "poem": "i-am-free-to-dream",
+    "revision": "2026-09-27-2",
+    "scope": "A starting point for future I Am Free to Dream recordings. Language and arrangement overrides preserve local musical choices; historical actual settings remain unchanged.",
+    "defaults": {
+      "model": "v6",
+      "mode": "Advanced",
+      "weirdness": 30,
+      "style_influence": 65,
+      "max_mode": true,
+      "personalize": false,
+      "variety": "Normal",
+      "duration": "Auto",
+      "vocal_gender": "Unselected; voice directed in the language prompt",
+      "audio_influence": null,
+      "exclude_styles": "EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals"
+    },
+    "reference_cover_overrides": {
+      "audio_influence": 75
+    },
+    "exception_rule": "Inherit baseline, then adopted language overrides, then adopted language/arrangement overrides. Document changed controls, musical reason, decision reference and review status. Proposed comparisons do not apply automatically. Per-run author directions take precedence and must be recorded. This policy does not authorize generation credits.",
+    "language_overrides": {},
+    "arrangement_overrides": {},
+    "source": "production/i-am-free-to-dream/settings.json",
+    "source_sha256": "517518fe764b604be168337217a872a7befafc0371e3ebbf02b8a9b203decb48"
+  },
+  "counts": {
+    "prepared": 1
+  },
+  "entries": [
+    {
+      "language": "marathi",
+      "language_name": "Marathi",
+      "title": "स्वप्नं पाहायला मला मनाई नाही",
+      "order": 9,
+      "source": "kb/poems/i-am-free-to-dream/languages/marathi.md",
+      "source_sha256": "ac65c9997394511b69899cdec1a3f4f670ea337afe8e20b35d0f1f59891b4c52",
+      "lyric_status": "Lyric draft",
+      "review_status": "needs-native-review",
+      "existing_audio": false,
+      "status": "prepared",
+      "lyrics": "[Intro]\nस्वप्नं पाहायला मला मनाई नाही,\nअर्ध्या वाटेत हरवायलाही मनाई नाही.\nध्रुवतारा वाट दाखवेल.\n\n[Verse 1]\nवेचत... वेचत...\nसारं जग उराशी कवटाळलं आहे—\nजोडून द्यायच्या आशेने,\nसजवून द्यायच्या आशेने.\n\n[Verse 2]\nमी एक कुंभार.\n\nआकार द्यायला शिकलो आहे,\nरंग भरून,\nतुझ्या चेहऱ्यावर हसू फुलवायला शिकलो आहे.\n\n[Chorus]\nस्वप्नं पाहायला मला मनाई नाही,\nअर्ध्या वाटेत हरवायलाही मनाई नाही.\nध्रुवतारा वाट दाखवेल.\n\n[Bridge]\nचल, डोंगर चढूया.\nचल, चंद्र पाहूया.\nढगांच्या खांद्याला खांदा लावून,\nपाऊस होऊन बरसण्याचा मंत्र शिकूया.\n\n[Final Chorus]\nस्वप्नं पाहायला मला मनाई नाही.\nतुझी स्वप्नं माझ्या स्वप्नांत\nगुंफायलाही मनाई नाही.\n\n[Soft Outro]\nतुझी स्वप्नं माझ्या स्वप्नांत...\nगुंफायलाही मनाई नाही.",
+      "style": "Tender Marathi bhavgeet with warm intimate male vocals and clear natural diction. Poetry-led melody, compact expressive phrases, slow gentle lilt. Soft piano, harmonium, a lyrical violin and delicate tabla. Separate वेचत... वेचत... with a breath; pause fully after मी एक कुंभार. Instruments sustain under the silence. Sparse opening, warmer successive verses, a wider melodic rise at the mountain-and-moon bridge, and a close tender ending on गुंफायलाही मनाई नाही. Keep ornamentation restrained and emotion in the words. Let Marathi speech accents guide compact melodic phrases; open the refrain warmly without theatrical projection. Warm youthful delivery; calm, soulful joy, affection and wonder. Keep the pace unhurried throughout; finish with peaceful hope. No mournful delivery, driving beat or dramatic crescendo.",
+      "settings": "Intended text-prompt settings; verify in Suno before submission.\nPolicy: production/i-am-free-to-dream/settings.json @ 2026-09-27-2\n\nmodel: v6\nmode: Advanced\nweirdness: 30\nstyle_influence: 65\nmax_mode: On\npersonalize: Off\nvariety: Normal\nduration: Auto\nvocal_gender: Unselected; voice directed in the language prompt\naudio_influence: Not applicable without a reference\nexclude_styles: EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals\n\nFor an author-approved reference cover only: audio_influence 75. Attach the exact reference and preserve its approved prompt/lyrics.\nRecord any author-approved settings exception in the run.\n\nUse the existing arranged lyric for comparison. Keep its words, section order and pauses intact; log any later wording changes separately.\n\nStart with the [shared generation baseline](../../../guides/generation-settings.md), then apply documented language or arrangement overrides. Preserve this language’s musical direction and listening checks. Explain each changed control, its musical reason and review status; record the actual settings with the take.\n\nFor the listening review:\n\n1. Ask a fluent speaker to read the opening, gathering line, potter declaration and longest phrase naturally. Compare that phrasing with the sung version.\n2. Check that the local vocal cadence and melodic treatment are audible, and that the regional character comes through beyond instrument names. Let Marathi speech accents guide compact melodic phrases; open the refrain warmly without theatrical projection.\n3. Check the gathering breath and fuller potter pause. Listen for dropped syllables, added words, distorted pronunciation or an accompaniment that forces a sentence to hurry.\n4. Compare the opening, bridge and ending at similar playback volume. The arrangement may grow warmer, but should remain calm, soulful and quietly happy.\n\nKeep the current translation review status until a fluent speaker and singer have reviewed the actual wording and take.",
+      "generation_settings": {
+        "model": "v6",
+        "mode": "Advanced",
+        "weirdness": 30,
+        "style_influence": 65,
+        "max_mode": true,
+        "personalize": false,
+        "variety": "Normal",
+        "duration": "Auto",
+        "vocal_gender": "Unselected; voice directed in the language prompt",
+        "audio_influence": null,
+        "exclude_styles": "EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals"
+      },
+      "settings_overrides": [],
+      "arrangement": null,
+      "candidates": [],
+      "selected_candidate": null
+    }
+  ]
+}

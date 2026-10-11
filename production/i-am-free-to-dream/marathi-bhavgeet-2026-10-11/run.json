@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "poem": "i-am-free-to-dream",
+  "language": "marathi",
+  "arrangement": "solo-bhavgeet",
+  "stage": "selection-pending",
+  "prepared_at": "2026-10-11T16:34:05.662397+00:00",
+  "authorization": "Author requested Marathi audio in Suno, then site publication after selecting a track. One candidate pair only.",
+  "source_path": "kb/poems/i-am-free-to-dream/languages/marathi.md",
+  "source_sha256": "ac65c9997394511b69899cdec1a3f4f670ea337afe8e20b35d0f1f59891b4c52",
+  "title": "स्वप्नं पाहायला मला मनाई नाही — Marathi",
+  "lyrics": "[Intro]\nस्वप्नं पाहायला मला मनाई नाही,\nअर्ध्या वाटेत हरवायलाही मनाई नाही.\nध्रुवतारा वाट दाखवेल.\n\n[Verse 1]\nवेचत... वेचत...\nसारं जग उराशी कवटाळलं आहे—\nजोडून द्यायच्या आशेने,\nसजवून द्यायच्या आशेने.\n\n[Verse 2]\nमी एक कुंभार.\n\nआकार द्यायला शिकलो आहे,\nरंग भरून,\nतुझ्या चेहऱ्यावर हसू फुलवायला शिकलो आहे.\n\n[Chorus]\nस्वप्नं पाहायला मला मनाई नाही,\nअर्ध्या वाटेत हरवायलाही मनाई नाही.\nध्रुवतारा वाट दाखवेल.\n\n[Bridge]\nचल, डोंगर चढूया.\nचल, चंद्र पाहूया.\nढगांच्या खांद्याला खांदा लावून,\nपाऊस होऊन बरसण्याचा मंत्र शिकूया.\n\n[Final Chorus]\nस्वप्नं पाहायला मला मनाई नाही.\nतुझी स्वप्नं माझ्या स्वप्नांत\nगुंफायलाही मनाई नाही.\n\n[Soft Outro]\nतुझी स्वप्नं माझ्या स्वप्नांत...\nगुंफायलाही मनाई नाही.",
+  "style": "Tender Marathi bhavgeet with warm intimate male vocals and clear natural diction. Poetry-led melody, compact expressive phrases, slow gentle lilt. Soft piano, harmonium, a lyrical violin and delicate tabla. Separate वेचत... वेचत... with a breath; pause fully after मी एक कुंभार. Instruments sustain under the silence. Sparse opening, warmer successive verses, a wider melodic rise at the mountain-and-moon bridge, and a close tender ending on गुंफायलाही मनाई नाही. Keep ornamentation restrained and emotion in the words. Let Marathi speech accents guide compact melodic phrases; open the refrain warmly without theatrical projection. Warm youthful delivery; calm, soulful joy, affection and wonder. Keep the pace unhurried throughout; finish with peaceful hope. No mournful delivery, driving beat or dramatic crescendo.",
+  "intended_settings": {
+    "status": "prepared-not-submitted",
+    "settings": {
+      "model": "v6",
+      "mode": "Advanced",
+      "weirdness": 30,
+      "style_influence": 65,
+      "max_mode": true,
+      "personalize": false,
+      "variety": "Normal",
+      "duration": "Auto",
+      "vocal_gender": "Unselected; voice directed in the language prompt",
+      "audio_influence": null,
+      "exclude_styles": "EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals"
+    },
+    "policy_source": "production/i-am-free-to-dream/settings.json",
+    "policy_revision": "2026-09-27-2",
+    "policy_sha256": "517518fe764b604be168337217a872a7befafc0371e3ebbf02b8a9b203decb48",
+    "reference_cover_overrides": {
+      "audio_influence": 75
+    },
+    "applied_overrides": [],
+    "arrangement": null
+  },
+  "actual_settings": {
+    "model": "v6",
+    "mode": "Advanced",
+    "weirdness": 30,
+    "style_influence": 65,
+    "max_mode": true,
+    "personalize": false,
+    "variety": "Normal",
+    "duration": "Auto",
+    "vocal_gender": "Unselected; voice directed in the language prompt",
+    "audio_influence": null,
+    "exclude_styles": "EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals"
+  },
+  "settings_verification": "Verified in the signed-in Suno creation UI before submission; lyric paragraphs including blank lines match the prepared packet. No reference audio or voice attached.",
+  "credit_cost": "Not displayed in current create form; one bounded pair using the adopted Max Mode baseline.",
+  "candidates": [
+    {
+      "take": 1,
+      "id": "4dc5c24e-69a8-407a-bfee-c43a3a6d1d8f",
+      "url": "https://suno.com/song/4dc5c24e-69a8-407a-bfee-c43a3a6d1d8f",
+      "status": "generated",
+      "duration_display": "3:03"
+    },
+    {
+      "take": 2,
+      "id": "11400c96-e0f0-4e8b-bf07-7647b653c444",
+      "url": "https://suno.com/song/11400c96-e0f0-4e8b-bf07-7647b653c444",
+      "status": "generated",
+      "duration_display": "3:02"
+    }
+  ],
+  "selected_candidate": null,
+  "publication": "Awaiting author selection; no media downloaded or published.",
+  "translation_review_status": "needs-native-review",
+  "submitted_at": "2026-10-11T16:34:31.929231+00:00",
+  "submission_count": 1,
+  "intended_candidate_count": 2,
+  "generated_at": "2026-10-11T16:35:57.327493+00:00",
+  "verification": "Both candidate song links, v6 labels, artwork and durations displayed in Suno. No listening-quality or native-pronunciation approval inferred."
+}
