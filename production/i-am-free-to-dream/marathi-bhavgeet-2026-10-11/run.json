@@ -3,7 +3,7 @@
   "poem": "i-am-free-to-dream",
   "language": "marathi",
   "arrangement": "solo-bhavgeet",
-  "stage": "publication-pending",
+  "stage": "published",
   "prepared_at": "2026-10-11T16:34:05.662397+00:00",
   "authorization": "Author requested Marathi audio in Suno, then site publication after selecting a track. One candidate pair only.",
   "source_path": "kb/poems/i-am-free-to-dream/languages/marathi.md",
@@ -73,7 +73,7 @@
     "audio_recording_id": "marathi-audio-01",
     "video_recording_id": "marathi-video-01",
     "page_url": "https://kabitawithoutborders.org/poems--i-am-free-to-dream--languages--marathi.html",
-    "status": "Media uploaded and public byte-range streaming verified; site update ready for deployment.",
+    "status": "Published and live audio/video playback verified.",
     "validation": {
       "collection": "passed",
       "python_tests": 32,
@@ -81,6 +81,26 @@
       "build": "passed",
       "direct_audio_range_http": 206,
       "direct_video_range_http": 206
+    },
+    "site_commit": "504ab2af6738abfd5170d6f58e1108f8d1df1c56",
+    "deployment_url": "https://github.com/ahimanikya/free-to-dream/actions/runs/38167628975",
+    "deployment_result": "success",
+    "collection_check_url": "https://github.com/ahimanikya/free-to-dream/actions/runs/38167628947",
+    "collection_check_result": "success",
+    "live_verification": {
+      "date": "2026-10-12",
+      "audio": {
+        "duration_seconds": 183.2,
+        "observed_playback_seconds": 21.683142,
+        "ready_state": 4
+      },
+      "video": {
+        "duration_seconds": 183.2,
+        "observed_playback_seconds": 18.188101,
+        "ready_state": 4
+      },
+      "playlist": "Marathi entry confirmed in live playlist selector",
+      "players_left_paused": true
     }
   },
   "translation_review_status": "needs-native-review",
