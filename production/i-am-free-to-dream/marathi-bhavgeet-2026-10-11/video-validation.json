@@ -1,0 +1,11 @@
+{
+  "full_decode": "passed",
+  "audio_sha256": "a1c51856005fd180fbaae110d15443a4bb75de4824a7b09795c8accfad44a853",
+  "source_audio_seconds": 183.2,
+  "output_audio_seconds": 183.21075,
+  "video_source_sha256": "3c18cfe26a4e86efcd9a8a02c581e09a384bd05ba526291c168bd018f92447ed",
+  "video_time_factor": 1.0174951402388224,
+  "audio_correlation": 0.9999596742323348,
+  "output_bytes": 88681047,
+  "output_sha256": "21bdc5a0274928466b3b71d82084acc30ad94a47257a200d2fc19e94e8541954"
+}

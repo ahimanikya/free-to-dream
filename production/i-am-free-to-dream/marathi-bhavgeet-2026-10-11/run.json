@@ -3,7 +3,7 @@
   "poem": "i-am-free-to-dream",
   "language": "marathi",
   "arrangement": "solo-bhavgeet",
-  "stage": "selection-pending",
+  "stage": "rendered",
   "prepared_at": "2026-10-11T16:34:05.662397+00:00",
   "authorization": "Author requested Marathi audio in Suno, then site publication after selecting a track. One candidate pair only.",
   "source_path": "kb/poems/i-am-free-to-dream/languages/marathi.md",
@@ -66,12 +66,36 @@
       "duration_display": "3:02"
     }
   ],
-  "selected_candidate": null,
-  "publication": "Awaiting author selection; no media downloaded or published.",
+  "selected_candidate": "4dc5c24e-69a8-407a-bfee-c43a3a6d1d8f",
+  "publication": "MP3 and matching MP4 ready; media upload in progress.",
   "translation_review_status": "needs-native-review",
   "submitted_at": "2026-10-11T16:34:31.929231+00:00",
   "submission_count": 1,
   "intended_candidate_count": 2,
   "generated_at": "2026-10-11T16:35:57.327493+00:00",
-  "verification": "Both candidate song links, v6 labels, artwork and durations displayed in Suno. No listening-quality or native-pronunciation approval inferred."
+  "verification": "Both candidate song links, v6 labels, artwork and durations displayed in Suno. No listening-quality or native-pronunciation approval inferred.",
+  "selection": {
+    "date": "2026-10-12",
+    "take": 1,
+    "source_url": "https://suno.com/s/l4JOcxb2VzRfRo9z",
+    "authorization": "Author selected Track 1 and requested publication to the site."
+  },
+  "download": {
+    "repo_path": "media/marathi/i-am-free-to-dream-marathi-01.mp3",
+    "bytes": 4427893,
+    "sha256": "a1c51856005fd180fbaae110d15443a4bb75de4824a7b09795c8accfad44a853",
+    "take_id_verified_in_mp3_metadata": true,
+    "full_decode": "passed"
+  },
+  "render": {
+    "video_repo_path": "media/marathi/i-am-free-to-dream-marathi-01.mp4",
+    "source_repo_path": "media/odia/source/melodicpal-original.mp4",
+    "validation_report": "production/i-am-free-to-dream/marathi-bhavgeet-2026-10-11/video-validation.json",
+    "frames_reviewed": [
+      "opening",
+      "middle",
+      "ending"
+    ],
+    "review": "Frames inspected; shared visuals intact, no lyric overlays or lip-sync assertion."
+  }
 }
