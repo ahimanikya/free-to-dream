@@ -458,7 +458,7 @@ class CollectionTests(unittest.TestCase):
             self.assertIn('https://media.githubusercontent.com/media/', page)
             for item in (x for x in app.records() if x['language']==language):
                 detail=(output/f'recording--{item["id"]}.html').read_text()
-                self.assertIn(f'data-share-url="https://poemwithoutborders.org/recording--{item["id"]}.html"', detail)
+                self.assertIn(f'data-share-url="https://kabitawithoutborders.org/recording--{item["id"]}.html"', detail)
                 self.assertNotIn('PUBLISHED VERSION', detail)
                 self.assertNotIn('data-action="prepare-file"', detail)
         for language, variation in (('tamil', 'duet'), ('odia', 'playful')):
