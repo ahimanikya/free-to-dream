@@ -441,7 +441,7 @@ class CollectionTests(unittest.TestCase):
         shutil.copy2(PROJECT/'catalog/recordings.json', self.root/'catalog/recordings.json')
         app.build(False)
         output = self.root/'site-public'
-        expected = {'odia':(3,8), 'sambalpuri':(2,2), 'tamil':(2,2), 'telugu':(4,4), 'english':(2,2), 'filipino':(1,1), 'malayalam':(1,1), 'italian':(1,1), 'bengali':(1,1), 'bhojpuri':(2,2)}
+        expected = {'odia':(3,8), 'sambalpuri':(2,2), 'tamil':(2,2), 'telugu':(4,4), 'english':(2,2), 'filipino':(1,1), 'malayalam':(1,1), 'italian':(1,1), 'bengali':(1,1), 'bhojpuri':(2,2), 'hindi':(1,1)}
         for language, (audio_count, video_count) in expected.items():
             page=(output/f'poems--i-am-free-to-dream--languages--{language}.html').read_text()
             self.assertEqual(page.count('<audio '), audio_count+2)
@@ -482,10 +482,13 @@ class CollectionTests(unittest.TestCase):
         telugu=(output/'poems--i-am-free-to-dream--languages--telugu.html').read_text()
         self.assertIn('Earlier video versions (3)', telugu)
         hindi=(output/'poems--i-am-free-to-dream--languages--hindi.html').read_text()
-        self.assertIn('This language is waiting for its first recording.',hindi)
-        self.assertNotIn('aria-label="Watch"',hindi)
-        self.assertNotIn('A video is still to come.',hindi)
-        self.assertNotIn('<video ', hindi)
+        self.assertNotIn('This language is waiting for its first recording.',hindi)
+        self.assertIn('hindi-solo-audio-01', track_ids)
+        self.assertIn('recording--hindi-solo-video-01.html', hindi)
+        pending=(output/'poems--i-am-free-to-dream--languages--gujarati.html').read_text()
+        self.assertIn('This language is waiting for its first recording.',pending)
+        self.assertNotIn('aria-label="Watch"',pending)
+        self.assertNotIn('<video ', pending)
         self.assertFalse((output/'media/recordings').exists())
 
     def test_public_preview_requires_explicit_authorization_without_faking_approval(self):
