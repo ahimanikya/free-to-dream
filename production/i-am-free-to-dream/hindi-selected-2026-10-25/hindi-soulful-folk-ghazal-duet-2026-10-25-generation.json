@@ -1,0 +1,29 @@
+{
+  "status": "generated-awaiting-user-selection",
+  "date": "2026-10-25",
+  "user_direction": "Same style but duet, that is all",
+  "style_source": "hindi-soulful-folk-ghazal-2026-10-25",
+  "lyrics": "[Intro - Male solo]\nमुझे सपने देखने की मनाही नहीं,\nबीच राह में खो जाने की भी मनाही नहीं।\nध्रुवतारा राह दिखाएगा।\n\n[Verse 1 - Male solo]\nसमेटते... समेटते...\nदुनिया को सीने से लगा रखा है—\nजोड़ देने की आस में,\nसँवार देने की आस में।\n\n[Verse 2 - Male solo]\nमैं एक कुम्हार हूँ।\n\nआकार देना सीखा है,\nरंगों से सजाकर,\nतुम्हारे चेहरे पर मुस्कान खिलाना सीखा है।\n\n[Chorus - Male solo]\nमुझे सपने देखने की मनाही नहीं,\nबीच राह में खो जाने की भी मनाही नहीं।\nध्रुवतारा राह दिखाएगा।\n\n[Bridge - Male lead, soft female answering phrases]\nआओ, पहाड़ चढ़ें।\nआओ, चाँद निहारें।\nबादलों से कंधा मिलाकर,\nबारिश बन बरसने का मंत्र सीखें।\n\n[Final Chorus - Tender male-female close harmony]\nमुझे सपने देखने की मनाही नहीं।\nतुम्हारे सपनों को अपने सपनों में\nपिरोने की भी मनाही नहीं।\n\n[Soft Outro - Male-female duet]\nतुम्हारे सपनों को अपने सपनों में...\nपिरोने की भी मनाही नहीं।",
+  "style": "Soulful Hindi ghazal blended with earthy acoustic folk. Warm male-female duet, fully sung in a comfortable middle register, clear rounded tone, supported resonance, natural Hindi diction. Tender and emotionally present, with restrained meend and a simple memorable melody. Smooth connected phrases; quiet unobtrusive inhalations kept low in the mix. Gentle unhurried six-beat dadra sway, soft tabla, warm harmonium and lightly plucked acoustic guitar. Sparse sarangi replies only between vocal phrases. Keep accompaniment low and spacious, giving a soft physical pulse beneath the words. Let the two समेटते phrases remain distinct; hold a meaningful pause after मैं एक कुम्हार हूँ while harmonium softly sustains. Open the mountain-and-moon invitation with wonder; end the dream-weaving lines with affection and peaceful hope. Preserve all supplied words and stanza order. Clean balanced vocal recording at a natural distance, with subtle room warmth.",
+  "exclude_styles": "audible gasps, exaggerated inhalations, breathy vocals, whispering, ASMR, mouth clicks, spoken recitation, choir, EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals",
+  "audio_reference": null,
+  "settings": {
+    "model": "v6",
+    "weirdness": 30,
+    "style_influence": 65
+  },
+  "changes": "Only vocal arrangement and corresponding exclusions changed; sung words retained.",
+  "authorization": "User approved one candidate pair using existing Suno credits on 2026-10-25",
+  "candidates": [
+    {
+      "url": "https://suno.com/song/efc5a2f2-68cc-4ac5-b29c-450caeba8ba3",
+      "duration": "3:08",
+      "displayed_style": "मुझे सपने देखने की मनाही नहीं — Soulful Folk Ghazal Duet\nV6\nGhazal, gentle unhurried six-beat dadra sway; close-mic male-female duet in a comfortable middle register, clear rounded tone, supported resonance, natural Hindi diction, restrained meend, hushed and dry up front; soft tabla, warm harmonium, lightly plucked acoustic guitar, sparse sarangi replies between phrases; simple memorable melody, low spacious accompaniment, clean balanced vocals at a natural distance with subtle room warmth, ‑audible gasps, ‑exaggerated inhalations, ‑breathy vocals, ‑whispering, ‑ASMR, ‑mouth clicks, ‑spoken recitation, ‑choir, ‑EDM, ‑heavy dance beats, ‑aggressive percussion, ‑theatrical belting, ‑excessive vocal runs, ‑vocoder, ‑chopped vocals\nShare\nPublish"
+    },
+    {
+      "url": "https://suno.com/song/3646fe90-aef5-4da1-8a65-a4f50e089c56",
+      "duration": "2:56",
+      "displayed_style": "मुझे सपने देखने की मनाही नहीं — Soulful Folk Ghazal Duet\nV6\nGhazal with acoustic folk: soft tabla, warm harmonium, lightly plucked acoustic guitar, sparse sarangi replies between vocal phrases; clean balanced natural-distance vocals, subtle room warmth, low spacious accompaniment; gentle unhurried six-beat dadra sway; clear rounded male-female duet in a comfortable middle register, supported resonance, restrained meend, clipped rhythmic staccato phrasing with doubled hooks, smooth connected lines, distinct repeated phrases and a meaningful pause over sustained harmonium, ‑audible gasps, ‑exaggerated inhalations, ‑breathy vocals, ‑whispering, ‑ASMR, ‑mouth clicks, ‑spoken recitation, ‑choir, ‑EDM, ‑heavy dance beats, ‑aggressive percussion, ‑theatrical belting, ‑excessive vocal runs, ‑vocoder, ‑chopped vocals\nShare\nPublish"
+    }
+  ]
+}

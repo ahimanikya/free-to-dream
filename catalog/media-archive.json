@@ -450,6 +450,26 @@
       "title": "Marathi video",
       "status": "working",
       "notes": "Author-selected Track 1; fluent-speaker review remains open."
+    },
+    {
+      "repo_path": "media/hindi/solo/i-am-free-to-dream-hindi-solo-01.mp3",
+      "sha256": "90fe4f39e06e1880574e697a210eab69fa431c867fec9dbc96fa4befbad49f34",
+      "bytes": 5376848,
+      "source_name": "i-am-free-to-dream-hindi-solo-01.mp3",
+      "download_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/b73e8534caeb29e5cd64714857de8aba0da9dfc8/media/hindi/solo/i-am-free-to-dream-hindi-solo-01.mp3",
+      "title": "Hindi solo audio",
+      "status": "working",
+      "notes": "Author-selected ghazal-inspired solo; fluent-speaker and detailed performance review remain open."
+    },
+    {
+      "repo_path": "media/hindi/solo/i-am-free-to-dream-hindi-solo-01.mp4",
+      "sha256": "4d6464b163662d6316854f540d8f401397dc15b79fc0f4b3436a88b35c0787fc",
+      "bytes": 100125044,
+      "source_name": "i-am-free-to-dream-hindi-solo-01.mp4",
+      "download_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/b73e8534caeb29e5cd64714857de8aba0da9dfc8/media/hindi/solo/i-am-free-to-dream-hindi-solo-01.mp4",
+      "title": "Hindi solo video",
+      "status": "working",
+      "notes": "Author-selected ghazal-inspired solo; fluent-speaker and detailed performance review remain open. Shared visuals fit the complete soundtrack at its original speed and pitch."
     }
   ],
   "unavailable_originals": [

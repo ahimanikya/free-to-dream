@@ -134,3 +134,13 @@ Preserved AI-assisted lyric draft. Have a fluent reader check idiom, grammatical
 ---
 
 Collection prepared 22 September 2026. Original poem: Ahimanikya Satapathy. Translation drafts are AI-assisted except the author’s Odia source. Musical direction updated 23 September 2026. These language-specific arrangements remain proposals, not verified performances.
+
+## Author-selected recordings — 25 October 2026
+
+The author selected [the ghazal-inspired solo](https://suno.com/song/4b414473-1f91-414e-bdfb-6881021a1e71) and [the soulful folk-ghazal duet](https://suno.com/song/efc5a2f2-68cc-4ac5-b29c-450caeba8ba3) for the regular shared video on Kabita Without Borders. These are contemporary settings of the same Hindi adaptation, not a claim that its text follows formal ghazal structure. The earlier geet proposal remains documented above.
+
+The solo direction uses one warm voice, restrained meend, sparse harmonium, sarangi replies and a gentle dadra feel to keep the first-person thoughts connected. The duet direction adds earthy acoustic folk colour and light guitar, with male-led verses, soft female answers at the invitation and a tender shared ending. This optional second voice serves the poem’s move from my dreams to our dreams. It is a creative choice for this poem, not a general rule about Hindi singing.
+
+The selected duet is a separate generation using the same requested style; it is not an audio-preserving edit of the solo. Its ordinary MP3 download is currently blocked by Suno’s download allowance, so its local video and site player remain pending. The source link above identifies the exact selected take.
+
+Author selection does not close fluent-speaker or musician review. Check natural Hindi diction, complete words, the two gathering phrases, the potter pause, gentle accompaniment and the intended vocal handover against each exact recording. No timed lyric captions or lip-sync accuracy are claimed. Full original-speed audio accompanies the existing shared visuals. Production provenance is retained in `production/i-am-free-to-dream/hindi-selected-2026-10-25/`.

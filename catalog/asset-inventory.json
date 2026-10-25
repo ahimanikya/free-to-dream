@@ -635,5 +635,29 @@
     "published": true,
     "repo_path": "media/marathi/i-am-free-to-dream-marathi-01.mp4",
     "public_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/00a952af76806523fa8b937f8beddc79a9ec7353/media/marathi/i-am-free-to-dream-marathi-01.mp4"
+  },
+  {
+    "sha256": "90fe4f39e06e1880574e697a210eab69fa431c867fec9dbc96fa4befbad49f34",
+    "local_path": null,
+    "bytes": 5376848,
+    "source_names": [
+      "i-am-free-to-dream-hindi-solo-01.mp3"
+    ],
+    "role": "working-asset",
+    "published": true,
+    "repo_path": "media/hindi/solo/i-am-free-to-dream-hindi-solo-01.mp3",
+    "public_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/b73e8534caeb29e5cd64714857de8aba0da9dfc8/media/hindi/solo/i-am-free-to-dream-hindi-solo-01.mp3"
+  },
+  {
+    "sha256": "4d6464b163662d6316854f540d8f401397dc15b79fc0f4b3436a88b35c0787fc",
+    "local_path": null,
+    "bytes": 100125044,
+    "source_names": [
+      "i-am-free-to-dream-hindi-solo-01.mp4"
+    ],
+    "role": "working-asset",
+    "published": true,
+    "repo_path": "media/hindi/solo/i-am-free-to-dream-hindi-solo-01.mp4",
+    "public_url": "https://media.githubusercontent.com/media/ahimanikya/free-to-dream/b73e8534caeb29e5cd64714857de8aba0da9dfc8/media/hindi/solo/i-am-free-to-dream-hindi-solo-01.mp4"
   }
 ]

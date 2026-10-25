@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-25",
+  "language": "hindi",
+  "authorization": "Author requested regular shared video on Kabita Without Borders for both selected solo and duet; separate Project Odisha slideshow for Facebook and Instagram.",
+  "solo": {
+    "source_url": "https://suno.com/song/4b414473-1f91-414e-bdfb-6881021a1e71",
+    "stage": "imported-awaiting-live-verification",
+    "audio_repo_path": "media/hindi/solo/i-am-free-to-dream-hindi-solo-01.mp3",
+    "media_commit": "b73e8534caeb29e5cd64714857de8aba0da9dfc8",
+    "video_repo_path": "media/hindi/solo/i-am-free-to-dream-hindi-solo-01.mp4",
+    "validation": "solo-video-validation.json"
+  },
+  "duet": {
+    "source_url": "https://suno.com/song/efc5a2f2-68cc-4ac5-b29c-450caeba8ba3",
+    "stage": "download-pending",
+    "blocker": "Normal Suno download control reports exhausted download allowance; no purchase or bypass attempted.",
+    "resume": "Download the selected MP3 when permitted, verify take ID, render shared visuals and publish alongside solo. Do not regenerate."
+  },
+  "review_status": "Author-selected; fluent-speaker and detailed performance review remain open."
+}

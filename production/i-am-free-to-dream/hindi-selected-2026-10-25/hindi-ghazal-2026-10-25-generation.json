@@ -1,0 +1,68 @@
+{
+  "poem": "i-am-free-to-dream",
+  "language": "hindi",
+  "lyrics": "[Intro]\nमुझे सपने देखने की मनाही नहीं,\nबीच राह में खो जाने की भी मनाही नहीं।\nध्रुवतारा राह दिखाएगा।\n\n[Verse 1]\nसमेटते... समेटते...\nदुनिया को सीने से लगा रखा है—\nजोड़ देने की आस में,\nसँवार देने की आस में।\n\n[Verse 2]\nमैं एक कुम्हार हूँ।\n\nआकार देना सीखा है,\nरंगों से सजाकर,\nतुम्हारे चेहरे पर मुस्कान खिलाना सीखा है।\n\n[Chorus]\nमुझे सपने देखने की मनाही नहीं,\nबीच राह में खो जाने की भी मनाही नहीं।\nध्रुवतारा राह दिखाएगा।\n\n[Bridge]\nआओ, पहाड़ चढ़ें।\nआओ, चाँद निहारें।\nबादलों से कंधा मिलाकर,\nबारिश बन बरसने का मंत्र सीखें।\n\n[Final Chorus]\nमुझे सपने देखने की मनाही नहीं।\nतुम्हारे सपनों को अपने सपनों में\nपिरोने की भी मनाही नहीं।\n\n[Soft Outro]\nतुम्हारे सपनों को अपने सपनों में...\nपिरोने की भी मनाही नहीं।",
+  "source": "kb/poems/i-am-free-to-dream/languages/hindi.md",
+  "source_sha256": "745dfc9055b838b3bfdddf3eb16268f247a2635af651cef236bf3efc5b10b069",
+  "settings_policy": {
+    "schema_version": 1,
+    "poem": "i-am-free-to-dream",
+    "revision": "2026-09-27-2",
+    "scope": "A starting point for future I Am Free to Dream recordings. Language and arrangement overrides preserve local musical choices; historical actual settings remain unchanged.",
+    "defaults": {
+      "model": "v6",
+      "mode": "Advanced",
+      "weirdness": 30,
+      "style_influence": 65,
+      "max_mode": true,
+      "personalize": false,
+      "variety": "Normal",
+      "duration": "Auto",
+      "vocal_gender": "Unselected; voice directed in the language prompt",
+      "audio_influence": null,
+      "exclude_styles": "EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals"
+    },
+    "reference_cover_overrides": {
+      "audio_influence": 75
+    },
+    "exception_rule": "Inherit baseline, then adopted language overrides, then adopted language/arrangement overrides. Document changed controls, musical reason, decision reference and review status. Proposed comparisons do not apply automatically. Per-run author directions take precedence and must be recorded. This policy does not authorize generation credits.",
+    "language_overrides": {},
+    "arrangement_overrides": {},
+    "source": "production/i-am-free-to-dream/settings.json",
+    "source_sha256": "517518fe764b604be168337217a872a7befafc0371e3ebbf02b8a9b203decb48"
+  },
+  "actual_settings": {
+    "model": "v6",
+    "mode": "Advanced",
+    "weirdness": 30,
+    "style_influence": 65,
+    "max_mode": true,
+    "personalize": false,
+    "variety": "Normal",
+    "duration": "Auto",
+    "vocal_gender": "Unselected; voice directed in the language prompt",
+    "audio_influence": null,
+    "exclude_styles": "EDM, heavy dance beats, aggressive percussion, theatrical belting, excessive vocal runs, vocoder, chopped vocals"
+  },
+  "review_status": "needs-native-review",
+  "stage": "selection-pending",
+  "title": "मुझे सपने देखने की मनाही नहीं — Ghazal",
+  "style": "Intimate ghazal-inspired setting of this Hindi poem. One warm youthful male solo voice, fully sung, clear natural Hindi diction, close and conversational yet melodically flowing. Shape complete thoughts with restrained meend and delicate murki; let the returning refrain settle gently. Sparse harmonium, soft sarangi replies, delicate tabla in a slow six-beat dadra feel, quiet tanpura. Flexible vocal phrasing with space around the words; instruments answer only between phrases. Separate समेटते... समेटते... with gathering breaths; a full suspended pause after मैं एक कुम्हार हूँ, tabla silent beneath it. Begin with voice and harmonium, open the mountain-and-moon passage warmly, then soften into the final dream-weaving lines. Calm soulful joy, affection, wonder and peaceful hope, never mournful. Preserve all supplied words and stanza order. No spoken recitation, backing singers, duet, dramatic crescendo or theatrical belting.",
+  "authorization": "User requested: Try gazhal style. One candidate pair.",
+  "candidates": [
+    {
+      "id": "7236b56a-301d-4daa-923a-d049b6049cd2",
+      "url": "https://suno.com/song/7236b56a-301d-4daa-923a-d049b6049cd2"
+    },
+    {
+      "id": "4b414473-1f91-414e-bdfb-6881021a1e71",
+      "url": "https://suno.com/song/4b414473-1f91-414e-bdfb-6881021a1e71"
+    }
+  ],
+  "selected_candidate": null,
+  "arrangement": "ghazal-inspired",
+  "rationale": "Author-requested contemporary musical interpretation; unchanged Hindi poem, no claim that the lyric is a formally structured ghazal. Solo melodic delivery and restrained ornament keep the first-person thoughts connected; sarangi replies and sparse accompaniment leave space for the words. Review sung diction, gathering breath, potter pause and hopeful emotion. No listening assessment yet.",
+  "submission_count_confirmed": 0,
+  "blocker": "Automatic approval review rejected Create before execution, requiring explicit approval for additional credit consumption on the separate ghazal pair.",
+  "reconciliation": "Two ghazal takes subsequently visible in UI; successful submission actor and timing unconfirmed."
+}
