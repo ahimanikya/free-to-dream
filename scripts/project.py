@@ -572,7 +572,7 @@ def page_metadata(title, description, config, filename, language=None, media=Non
     site_id, author_id = base + '#website', base + '#author'
     canonical = base + filename
     page = {'@type':'WebPage', '@id':canonical + '#page', 'url':canonical, 'name':title,
-            'description':description, 'inLanguage':'en', 'isPartOf':{'@id':site_id}}
+            'description':description, 'inLanguage':config.get('_page_language', 'en'), 'isPartOf':{'@id':site_id}}
     graph = [{'@type':'WebSite', '@id':site_id, 'url':base, 'name':'World is One — A Poem Without Borders', 'creator':{'@id':author_id}},
              {'@type':'Person', '@id':author_id, 'name':config.get('author', 'Ahimanikya Satapathy'),
               'sameAs':[x['url'] for x in config.get('author_links', []) if safe_url(x.get('url',''))]}, page]
@@ -1146,16 +1146,29 @@ def build(local=False):
 <section class="invitation" id="invitation"><div class="invitation-copy"><div class="eyebrow">THIS IS AN INVITATION</div><h2>A language is a living culture.</h2><p>Bring the language you call home. Offer a phrase that feels more natural, share a listening note, or sing the poem in your own way. We’ll shape each version together, with care and credit for every contribution.</p><div class="action-row"><a class="button" href="contribute.html">Suggest a change →</a><a class="button secondary" href="contribute.html?type=recording">Submit your version →</a></div></div>{invitation_art}</section>{home_art_choices}'''
     article_route = 'thirty-languages-and-the-journey-of-a-poem.html'
     article_title = 'Thirty languages and the journey of a poem'
-    article_body = (ROOT/'web/translation-article.html').read_text()
-    article_config = dict(config, _has_audio=False)
-    article_page = shell(article_title, article_body, article_config, local, article_route,
-                         'How population, literary traditions and thoughtful translation can guide a multilingual poetry collection.')
-    article_page = article_page.replace('media/images/cover.png', 'assets/articles/thirty-languages/poetry-across-languages-hero-6385f3ba41-1672.webp')
-    article_page = article_page.replace('</head>', '<link rel="stylesheet" href="assets/translation-article.css?v='+asset_version+'"></head>')
-    article_page = article_page.replace('<body ', '<body class="article-page" ', 1)
-    article_page = article_page.replace('<main id="main-content"', '<main class="essay" id="main-content"', 1)
-    (output/article_route).write_text(article_page, encoding='utf-8')
-    content = content.replace('Explore the open reference →</a>', 'Explore the open reference →</a><p><a href="'+article_route+'">Read the essay: '+article_title+'</a></p>')
+    article_editions = [
+        ('en', article_route, article_title, 'translation-article.html',
+         'How population, literary traditions and human-guided AI translation can help a poem reach new readers.'),
+        ('or', 'thirty-languages-and-the-journey-of-a-poem-odia.html', 'ତିରିଶଟି ଭାଷା ଓ ଗୋଟିଏ କବିତାର ଯାତ୍ରା', 'translation-article-or.html',
+         'ଭାଷା, ସାହିତ୍ୟ ପରମ୍ପରା ଓ ମଣିଷର ମାର୍ଗଦର୍ଶନରେ ଏଆଇ ସହାୟତାରେ କବିତା ଅନୁବାଦକୁ ନେଇ ଏକ ଆଲୋଚନା।')]
+    for code, route, title, source_file, description in article_editions:
+        article_body = (ROOT/'web'/source_file).read_text()
+        links = ''.join('<a href="'+other_route+'" lang="'+lang+'" hreflang="'+lang+'"'+(' aria-current="page"' if lang == code else '')+'>'+('ଓଡ଼ିଆ' if lang == 'or' else 'English')+'</a>' for lang, other_route, *_ in article_editions)
+        switch = '<nav class="article-languages" aria-label="'+('ଲେଖାର ଭାଷା' if code == 'or' else 'Article language')+'">'+links+'</nav>'
+        article_body = article_body.replace('</header>', switch+'</header>', 1)
+        article_config = dict(config, _has_audio=False, _page_language=code)
+        article_page = shell(title, article_body, article_config, local, route, description)
+        alternates = ''.join('<link rel="alternate" hreflang="'+lang+'" href="'+config['site_url'].rstrip('/')+'/'+other_route+'">' for lang, other_route, *_ in article_editions)
+        article_page = article_page.replace('media/images/cover.png', 'assets/articles/thirty-languages/poetry-across-languages-hero-6385f3ba41-1672.webp')
+        article_page = article_page.replace('</head>', alternates+'<link rel="stylesheet" href="assets/translation-article.css?v='+asset_version+'"></head>')
+        article_page = article_page.replace('<body ', '<body class="article-page" ', 1)
+        if code == 'or':
+            article_page = article_page.replace('<html lang="en">', '<html lang="or">', 1)
+            ui = {'Skip to content':'ଲେଖାକୁ ଯାଆନ୍ତୁ', 'Home':'ମୂଳପୃଷ୍ଠା', 'Languages':'ଭାଷା', 'Art Journal':'ଚିତ୍ରକଳା', 'Original poem':'ମୂଳ କବିତା', 'Reference':'ସନ୍ଦର୍ଭ', 'Contribute':'ଯୋଗଦାନ', 'Menu':'ମେନୁ', 'Credits &amp; reuse':'ଶ୍ରେୟ ଓ ପୁନଃବ୍ୟବହାର', 'Privacy':'ଗୋପନୀୟତା', 'Cookie settings':'କୁକି ସେଟିଂ', 'About this open project':'ଏହି ମୁକ୍ତ ପ୍ରକଳ୍ପ ବିଷୟରେ'}
+            for english, translated in ui.items():
+                article_page = article_page.replace('>'+english+'<', '>'+translated+'<')
+        (output/route).write_text(article_page, encoding='utf-8')
+    content = content.replace('Explore the open reference →</a>', 'Explore the open reference →</a><p>Read the essay: <a href="'+article_route+'">English</a> · <a href="thirty-languages-and-the-journey-of-a-poem-odia.html" lang="or">ଓଡ଼ିଆ</a></p>')
     (output / 'index.html').write_text(shell('I Am Free to Dream', content, config, local), encoding='utf-8')
     export_reference(output, languages, config, local)
     (output / '.nojekyll').touch()

@@ -1,0 +1,16 @@
+{
+  "source_language": "en",
+  "target_language": "or",
+  "mode": "Human Natural / Reflective Prose",
+  "source_sha256": "176ab0b3c0af219eccda92d979dd134c4041545d3b81d2f6037c364377d23413",
+  "target_sha256": "e1feaf8e486eb4cf4abed56fdf7e97acc0d8f2127edfb9c3396dd3babea097a0",
+  "scope": "Entire article, section titles, captions, tables, notes, alt text. Existing infographic lettering and CSV column labels stay English; complete Odia HTML tables provided.",
+  "checks": "120 text units translated; all source sections retained; author-supplied saying preserved; tables and citations retained. AI self-review only; no independent fluent-reader review claimed.",
+  "publication_authorization": "User requested publishing latest saved draft in Odia and English on 2026-11-03.",
+  "validation": {
+    "table_values_identical": true,
+    "section_ids_identical": true,
+    "links_identical": true,
+    "original_odia_saying_preserved": true
+  }
+}

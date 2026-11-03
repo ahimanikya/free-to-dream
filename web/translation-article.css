@@ -76,3 +76,14 @@
 }
 
 .article-page .journey-article h1{font-size:clamp(2.75rem,1.5rem + 3vw,4.25rem)}
+
+.article-languages{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin:1.5rem auto 0;font:1rem/1.6 system-ui,sans-serif}
+.article-languages a{padding:.5rem 1rem;border:1px solid var(--line);border-radius:3px;text-decoration:none}
+.article-languages a[aria-current="page"]{background:var(--ink);color:var(--paper)}
+.article-page:lang(or){--article-display:"PWB Odia",serif;--article-reading:"PWB Odia",serif}
+.article-page:lang(or) .journey-article h1{font-size:clamp(2rem,1.3rem + 2.5vw,3.25rem);line-height:1.6;letter-spacing:normal}
+.article-page:lang(or) .journey-article :is(h2,p,figcaption,summary){line-height:1.9;letter-spacing:normal}
+.article-page:lang(or) .journey-article :is(.eyebrow,.reading-time,summary,th,td,caption,.article-contents nav){font-family:"PWB Odia",serif}
+.article-page:lang(or) .journey-article h2{font-size:2rem}
+.journey-article .article-languages a{display:inline-flex;align-items:center;justify-content:center;margin:0;min-height:48px;font:1rem/1.8 system-ui,sans-serif}
+.journey-article .article-languages a[lang="or"]{font-family:"PWB Odia",serif}
