@@ -1144,6 +1144,18 @@ def build(local=False):
 <section class="public-reference-intro" id="open-reference" aria-labelledby="reference-title">{reference_art}<div class="reference-copy"><div class="eyebrow">A DREAM OTHERS CAN BUILD ON</div><h2 id="reference-title">Let the feeling travel further.</h2><p>For poets, musicians and filmmakers: explore the words, cultural choices and production notes. Adapt the poem in your own way, with credit and care. The shared baseline leaves room for every language to find its voice.</p><a class="text-link" href="guides--public-reference.html">Explore the open reference →</a></div></section>
 <div class="dream-thread" aria-hidden="true"><span>✧</span></div><blockquote class="dream-quote"><p>“free to weave your dreams with mine.”</p><cite>From the English adaptation of <em>I Am Free to Dream</em></cite></blockquote>
 <section class="invitation" id="invitation"><div class="invitation-copy"><div class="eyebrow">THIS IS AN INVITATION</div><h2>A language is a living culture.</h2><p>Bring the language you call home. Offer a phrase that feels more natural, share a listening note, or sing the poem in your own way. We’ll shape each version together, with care and credit for every contribution.</p><div class="action-row"><a class="button" href="contribute.html">Suggest a change →</a><a class="button secondary" href="contribute.html?type=recording">Submit your version →</a></div></div>{invitation_art}</section>{home_art_choices}'''
+    article_route = 'thirty-languages-and-the-journey-of-a-poem.html'
+    article_title = 'Thirty languages and the journey of a poem'
+    article_body = (ROOT/'web/translation-article.html').read_text()
+    article_config = dict(config, _has_audio=False)
+    article_page = shell(article_title, article_body, article_config, local, article_route,
+                         'How population, literary traditions and thoughtful translation can guide a multilingual poetry collection.')
+    article_page = article_page.replace('media/images/cover.png', 'assets/articles/thirty-languages/poetry-across-languages-hero-6385f3ba41-1672.webp')
+    article_page = article_page.replace('</head>', '<link rel="stylesheet" href="assets/translation-article.css?v='+asset_version+'"></head>')
+    article_page = article_page.replace('<body ', '<body class="article-page" ', 1)
+    article_page = article_page.replace('<main id="main-content"', '<main class="essay" id="main-content"', 1)
+    (output/article_route).write_text(article_page, encoding='utf-8')
+    content = content.replace('Explore the open reference →</a>', 'Explore the open reference →</a><p><a href="'+article_route+'">Read the essay: '+article_title+'</a></p>')
     (output / 'index.html').write_text(shell('I Am Free to Dream', content, config, local), encoding='utf-8')
     export_reference(output, languages, config, local)
     (output / '.nojekyll').touch()
