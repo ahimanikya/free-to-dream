@@ -1168,7 +1168,8 @@ def build(local=False):
             for english, translated in ui.items():
                 article_page = article_page.replace('>'+english+'<', '>'+translated+'<')
         (output/route).write_text(article_page, encoding='utf-8')
-    content = content.replace('Explore the open reference →</a>', 'Explore the open reference →</a><p>Read the essay: <a href="'+article_route+'">English</a> · <a href="thirty-languages-and-the-journey-of-a-poem-odia.html" lang="or">ଓଡ଼ିଆ</a></p>')
+    content = content.replace('<section class="origin-story"', (ROOT/'web/home-translation-feature.html').read_text()+'<section class="origin-story"', 1)
+    content = content.replace('The story behind the song →</a>', 'The story behind the song →</a><a class="text-link" href="#translation-essay">On translation ↓</a>', 1)
     (output / 'index.html').write_text(shell('I Am Free to Dream', content, config, local), encoding='utf-8')
     export_reference(output, languages, config, local)
     (output / '.nojekyll').touch()

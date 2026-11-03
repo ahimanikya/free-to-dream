@@ -518,3 +518,22 @@ body:has(.art-focus) .footer-resources { display:none; }
  .original-poem-heading h1 { margin-top:8px; }
  .poem-end-thread { width:min(200px,70%); height:40px; }
 }
+
+/* Homepage essay feature: independent links for both language editions. */
+.translation-feature{container:translation-feature / inline-size;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:2rem;row-gap:1.25rem;max-width:none;margin:1rem 0 3rem;padding:2rem;border:1px solid var(--line);background:var(--white);border-radius:4px;scroll-margin-top:1.5rem}
+.translation-feature>*{grid-column:1/-1;min-width:0}
+.translation-feature>img{width:100%;height:auto;aspect-ratio:1672/941;object-fit:contain;border-radius:3px;align-self:center}
+.translation-feature hgroup{margin:0}
+.translation-feature .eyebrow{margin:0 0 .75rem}
+.translation-feature h2{margin:0;font-size:clamp(2rem,1.5rem + 1.6vw,3rem);line-height:1.12;text-wrap:balance}
+.translation-feature .translation-feature-odia{margin:1rem 0 0;font-size:1.125rem;line-height:1.8;color:var(--muted)}
+.translation-feature>p{margin:0;font-size:1.0625rem;line-height:1.7;color:var(--muted);max-width:48rem}
+.translation-feature>footer{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem;padding:0;border:0;text-align:start}
+.translation-feature>footer .button{display:inline-flex;gap:.5rem;align-items:center;justify-content:center;margin:0;min-height:48px;font-size:1rem;line-height:1.6}
+@container translation-feature (min-width:760px){
+ .translation-feature>img{grid-column:1/6;grid-row:1/4}
+ .translation-feature>hgroup{grid-column:6/-1;grid-row:1}
+ .translation-feature>p{grid-column:6/-1;grid-row:2}
+ .translation-feature>footer{grid-column:6/-1;grid-row:3}
+}
+@media(max-width:600px){.translation-feature{padding:1.25rem;column-gap:1rem}.translation-feature>footer{align-items:stretch}.translation-feature>footer .button{flex:1 1 12rem}}
